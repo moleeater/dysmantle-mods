@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="Cargo Drone" />
+    <node id="tags" value="POINT_OF_INTEREST" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,PERMANENT,SOLID,INDESTRUCTIBLE" />
+    <node id="physics_material" value="METAL" />
+    <node id="mass" value="100" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="1" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="200" />
+    <node id="dampening_factor_on_ground" value="8" />
+    <node id="dampening_factor_on_air" value="8" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.5" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="500" />
+    <node id="friend_avoidance_radius" value="30" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="100" />
+    <node id="max_hit_points" value="100" />
+    <node id="damage_type_accept_mask" value="" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="stage" type="STAGE" />
+    <node id="travel_to_entrance_id" type="STRING" />
+    <node id="path" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|false|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}}" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENTRYWAY" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleDrone">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="door_closed" skeleton_animation="models/animations/cargo-drone-rig-door_closed.anim" bone_group_id="DoorOnly" wrap_mode="LOOP" />
+    <node id="door_closing"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/cargo-drone-rig-door_closing.anim"
+     bone_group_id="DoorOnly"
+     event_0_trigger_time="0"
+     event_0_id="sfx-servo"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/drone-door-servo|Q|}}"
+    />
+
+    <node id="door_opening"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/cargo-drone-rig-door_opening.anim"
+     bone_group_id="DoorOnly"
+     event_0_trigger_time="0.7"
+     event_0_id="sfx-servo"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/drone-door-servo|Q|}}"
+    />
+
+    <node id="door_open" animation_controller="Playback" skeleton_animation="models/animations/cargo-drone-rig-door_open.anim" bone_group_id="DoorOnly" wrap_mode="LOOP" />
+    <node id="propellers_start"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/cargo-drone-rig-propellers_start.anim"
+     bone_group_id="PropellersOnly"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/drone-engine-start|Q|}}"
+    />
+
+    <node id="propellers_stop"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/cargo-drone-rig-propellers_stop.anim"
+     bone_group_id="PropellersOnly"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/drone-engine-stop|Q|}}"
+    />
+
+    <node id="propellers_run"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/cargo-drone-rig-propellers_run.anim"
+     bone_group_id="PropellersOnly"
+     sound_scape="sound-scapes/drone-propeller-loop.xml"
+     wrap_mode="LOOP"
+    />
+
+    <node id="landed" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="allow_static_caching" value="false" />
+    <node id="model" value="models/objects/cargo-drone_low.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="use"
+        interaction_0_script_to_test_if_interaction_is_available="function Dot(u, v)&#10;{&#10;&#9;return u[0] * v[0] + u[1] * v[1];&#10;}&#10;&#10;function Distance(a, b)&#10;{&#10;&#9;local v = [a[0] - b[0], a[1] - b[1]];&#10;&#9;return sqrt(Dot(v, v));&#10;}&#10;&#10;function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;if (!IAP_IsItemPurchased(&#34;DLC2&#34;))&#10;&#9;&#9;return false;&#10;&#10;&#9;local drone_pos = StageObject_GetPosition(so_self);&#10;&#9;local door_pos = StageObject_GetPositionWithOffset(so_self, -60, 0, 0);&#10;&#9;local pos = StageObject_GetPosition(so_activator);&#10;&#10;&#9;local vec_drone_door = [door_pos[0] - drone_pos[0], door_pos[1] - drone_pos[1]];&#10;&#9;local vec_player_door = [door_pos[0] - pos[0], door_pos[1] - pos[0]];&#10;&#10;&#9;local dot = Dot(vec_drone_door, vec_player_door);&#10;&#10;&#9;local can_interact = false;&#10;&#9;if (dot &#62; 0)&#10;&#9;&#9;can_interact = Distance(pos, drone_pos) &#60; 60;&#10;&#9;else&#10;&#9;&#9;can_interact = Distance(pos, door_pos) &#60; 60;&#10;&#10;&#9;if (!can_interact)&#10;&#9;&#9;return false;&#10;&#10;&#9;local quest_id = &#34;quests/hidden-archipelago.nut&#34;;&#10;&#9;if (Game_IsQuestCompleted(quest_id))&#10;&#9;&#9;return true;&#10;&#10;&#9;if (!Game_IsQuestCurrent(quest_id))&#10;&#9;&#9;return false;&#10;&#10;&#9;return true;&#10;}"
+        interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local quest_id = &#34;quests/hidden-archipelago.nut&#34;;&#10;&#9;local phase_id = Game_GetQuestPhaseId(quest_id);&#10;&#10;&#9;if (phase_id == &#34;PHASE_INVESTIGATE_SIGNAL&#34;)&#10;&#9;{&#10;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;use&#34;, true);&#10;&#9;&#9;Game_SendQuestPhaseCommandWord(quest_id, phase_id, &#34;activate&#34;);&#10;&#9;&#9;return;&#10;&#9;}&#10;&#10;&#9;if (phase_id == &#34;PHASE_GO_TO_DRONE_DEPOT&#34;)&#10;&#9;{&#10;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;use&#34;, true);&#10;&#9;&#9;Game_SendQuestPhaseCommandWord(quest_id, phase_id, &#34;activate&#34;);&#10;&#9;&#9;return;&#10;&#9;}&#10;&#10;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#10;&#9;Game_SetCinemaMode(true);&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;Actor_QueueActionMove(so_activator, pos[0], pos[1]);&#10;&#10;&#9;local command = Command_Create(&#34;activate&#34;);&#10;&#9;Command_SetStageObjectReference(command, so_activator);&#10;&#9;Actor_QueueActionSendCommand(so_activator, so_self, command, 0);&#10;&#9;Command_Delete(command);&#10;&#10;&#9;return;&#10;&#10;&#9;Actor_QueueActionPlayAnimation(so_self, &#34;propellers_start&#34;, false);&#10;&#9;Actor_QueueActionPlayAnimation(so_self, &#34;door_closing&#34;, false);&#10;&#10;&#9;local so_drone = so_self;&#10;&#10;&#9;local script = @&#34;&#10;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_self, $so_drone);&#10;&#9;&#9;Actor_InteractWithInteraction($so_drone, so_self, &#34;&#34;fly_away&#34;&#34;);&#10;&#9;&#34;;&#10;&#9;script = string_replace(script, &#34;$so_drone&#34;, so_drone.tostring());&#10;&#9;Actor_QueueActionRunScript(so_activator, script);&#10;}"
+        interaction_0_trigger="PRESS_BUTTON"
+        interaction_0_controller_button="USE"
+        interaction_0_text="Use"
+        interaction_0_radius="150"
+      interaction_1_id="fly_away"
+        interaction_1_enabled="0"
+        interaction_1_localize="0"
+        interaction_1_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Actor_SetActorFlag(so_self &#34;STATIC&#34;, false);&#10;&#9;Actor_PlayAnimation(so_self, &#34;propellers_run&#34;);&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#9;Actor_QueueActionMoveAlongKeyValueStorePath(so_self, kvs, &#34;fly_away_path&#34;);&#10;&#10;}"
+        interaction_1_trigger="NONE"
+        interaction_1_radius="200"
+      interaction_2_id="arrive"
+        interaction_2_localize="0"
+        interaction_2_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#9;Game_PlayCameraCutscenePaths(kvs, &#34;arrive_camera_path&#34;);&#10;&#10;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#10;&#9;/*&#10;&#9;Actor_SetActorFlag(so_self &#34;STATIC&#34;, false);&#10;&#9;Game_SetCinemaMode(true, true);&#10;&#10;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;{&#10;&#9;&#9;local player = Game_GetPlayerActor(i);&#10;&#9;&#9;if (player == null)&#10;&#9;&#9;&#9;break;&#10;&#10;&#9;&#9;Actor_SetActorFlag(so_self &#34;SOLID&#34;, false);&#10;&#9;&#9;StageObject_SetParent(player, so_self);&#10;&#9;&#9;StageObject_SetPosition(player, 0, 0, -5);&#10;&#9;}&#10;&#10;&#10;&#9;Actor_PlayAnimation(so_self, &#34;propellers_run&#34;);&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#9;Actor_QueueActionMoveAlongKeyValueStorePath(so_self, kvs, &#34;arrive_path&#34;);&#10;*/&#10;}"
+        interaction_2_trigger="NONE"
+        interaction_2_radius="200"
+      interaction_3_id="mod_starting_stage_on_game_start_cargo_drone_low"
+        interaction_3_trigger="ON_GAME_START"
+        interaction_3_external_script="scripts/interactions/mods/mod-starting-stage-on-game-start-cargo-drone-low.nut"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="MESH" />
+    <node id="model" value="models/objects/cargo-drone_low-collider.model" />
+    <node id="min_z" value="-126.5" />
+    <node id="max_z" value="-1.0" />
+    <node id="is_closed" value="1" />
+  </array>
+
+  <array id="COLLIDER_EDGES">
+    <node px0="60.46" py0="60.00" px1="-60.00" py1="60.00" />
+    <node px0="-60.00" py0="-60.00" px1="60.46" py1="-60.00" />
+    <node px0="60.46" py0="-60.00" px1="60.46" py1="60.00" />
+    <node px0="-60.00" py0="52.36" px1="53.76" py1="53.76" />
+    <node px0="53.76" py0="-53.76" px1="-60.00" py1="-52.36" />
+    <node px0="53.76" py0="53.76" px1="53.76" py1="-53.76" />
+    <node px0="-60.00" py0="60.00" px1="-60.00" py1="52.36" />
+    <node px0="-60.00" py0="-52.36" px1="-60.00" py1="-60.00" />
+  </array>
+
+</root>

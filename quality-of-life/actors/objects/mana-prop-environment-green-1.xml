@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="tags" value="MOD_OCPD_MINIMAP,MOD_ONE_HIT_OBJECTS,MOD_PRESERVE_NATURE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE,PERMANENT_TRANSFORM,PERMANENT_ATTRIBUTES" />
+    <node id="physics_material" value="CERAMICS" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="10" />
+    <node id="move_acceleration" value="0" />
+    <node id="max_move_speed" value="75" />
+    <node id="dampening_factor_on_ground" value="8" />
+    <node id="dampening_factor_on_air" value="8" />
+    <node id="restitution_coefficient" value="0.15" />
+    <node id="friction" value="0" />
+    <node id="minimum_damage_threshold" value="40" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="10" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="150" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="damage_type_accept_mask" value="BLUNT,SELF_DESTRUCT,HIT_GROUND,EXPLOSIVE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES">
+    <node id="color_material_Material" type="COLOR" value="0.082281,0.393239,1,1" />
+    <node id="drops_random_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="DISMANTLABLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="AI_PARAMETERS" ai="ObstacleAnimated">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="block" event_0_trigger_time="0" event_0_id="id0" event_0_effect="effects/mana-prop-hit.xml" />
+    <node id="break" event_0_trigger_time="0" event_0_id="id0" event_0_effect="effects/mana-prop-break.xml" />
+    <node id="death" category="DEATH" event_0_trigger_time="0" event_0_id="id0" event_0_effect="effects/mana-prop-break.xml" />
+    <node id="idle"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     forced_animation_length_in_seconds="1.00"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/mana-sparkles-green.xml"
+     event_0_spawn_effect_offset_z="-20.00"
+     event_1_trigger_time="0.475"
+     event_1_id="id1"
+     event_1_effect="effects/mana-sparkles-green.xml"
+     event_1_spawn_effect_offset_z="-20.00"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="shadow_scale" value="0.4" />
+    <node id="shadow_alpha" value="0.3" />
+    <node id="shadow_drawn_for_each_bone" value="true" />
+    <node id="model" value="models/objects/corruption-crystal-green-4.model" />
+  </array>
+
+  <array id="PROPS">
+    <node id="new"
+     mount_bone_id="root"
+     actor_type="actors/objects/corruption-crystal-green-1.xml"
+     mount_scale="0.51"
+     mount_offset_x="0"
+     mount_offset_y="0"
+     mount_offset_z="1.39"
+     mount_rotation_angles_x="0.0237365"
+     mount_rotation_angles_y="0.226893"
+     mount_rotation_angles_z="-3.67863"
+    />
+
+    <node id="new22"
+     mount_bone_id="root"
+     actor_type="actors/objects/corruption-crystal-green-1.xml"
+     mount_scale="0.39"
+     mount_offset_x="-0.25"
+     mount_offset_y="0.23"
+     mount_offset_z="0.99"
+     mount_rotation_angles_x="-5.73899"
+     mount_rotation_angles_y="-0.0542797"
+     mount_rotation_angles_z="-3.67863"
+    />
+
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_preserve_nature_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-preserve-nature-on-game-start.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="SPHERE" />
+    <node id="radius" value="14.1" />
+    <node id="offset_x" value="-0.7" />
+    <node id="offset_y" value="0.2" />
+    <node id="offset_z" value="-4.3" />
+  </array>
+</root>

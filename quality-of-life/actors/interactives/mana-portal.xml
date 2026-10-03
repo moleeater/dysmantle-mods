@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="INFO">
+		<node id="version" value="1" />
+		<node id="tags" value="HEAT_SOURCE,POINT_OF_INTEREST,MANA" />
+	</array>
+
+	<array id="ATTRIBUTES">
+		<node id="actor_flags" value="SEETHROUGH,INDESTRUCTIBLE,ONLY_VISIBLE_IN_EDITOR,NO_MOMENTUM_FROM_COLLISIONS,DELETE_ACTOR_AFTER_DEATH" />
+		<node id="persistency_flags" value="PERMANENT_KEY_VALUES" />
+		<node id="physics_material" value="CONCRETE" />
+		<node id="mass" value="80" />
+		<node id="gravity_multiplier" value="1" />
+		<node id="turn_speed" value="0" />
+		<node id="move_acceleration" value="0" />
+		<node id="max_move_speed" value="500" />
+		<node id="dampening_factor_on_ground" value="6" />
+		<node id="dampening_factor_on_air" value="0.1" />
+		<node id="restitution_coefficient" value="0" />
+		<node id="friction" value="0" />
+		<node id="minimum_damage_threshold" value="0" />
+		<node id="aggro_radius" value="128" />
+		<node id="friend_avoidance_radius" value="10" />
+		<node id="initial_scale" value="1" />
+		<node id="damage" value="0" />
+		<node id="range" value="0" />
+		<node id="max_hit_points" value="100" />
+		<node id="damage_type_accept_mask" value="" />
+		<node id="friend_group" value="OBSTACLES" />
+		<node id="color" r="0" g="0.66" b="1" a="1" />
+	</array>
+
+	<array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+		<node id="open" type="BOOLEAN" flags="PERSISTENT,SAVE_STATE" value="false" />
+		<node id="teleport_target_pos" type="POSITION" value="0,0,0" />
+		<node id="heat_modifier" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="-5" />
+		<node id="heat_radius" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="100" />
+		<node id="is_safe_heat" type="BOOLEAN" flags="PERSISTENT,NO_REPLICATION" value="true" />
+		<node id="open_cost" type="INTEGER" value="1" />
+		<node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="SIGNAL_SOURCE" />
+		<node id="discovered" type="BOOLEAN" flags="PERSISTENT,SAVE_STATE" value="false" />
+	</array>
+
+	<array id="AI_PARAMETERS" ai="ObstacleAnimated">
+	</array>
+
+	<array id="ANIMATIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+		<node id="closed"
+		 wrap_mode="LOOP"
+		 forced_animation_length_in_seconds="0.50"
+		 event_0_trigger_time="0"
+		 event_0_id="mana"
+		 event_0_effect="effects/material-tomb-orb.xml"
+		 event_0_spawn_effect_offset_z="-50.00"
+		 event_1_trigger_time="0.402"
+		 event_1_id="electrhum"
+		 event_1_sound_event="{{BOOLEAN,|Q|looping|Q|,|Q|true|Q|},{FLOAT,|Q|fade_in_duration|Q|,|Q|1|Q|},{FLOAT,|Q|fade_out_duration|Q|,|Q|1|Q|},{FLOAT2,|Q|volume_range|Q|,|Q|0.4,0.4|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.75,0.75|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|400,700|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/humming|Q|}}"
+		 event_1_spawn_effect_scale="0.15"
+		 event_1_spawn_effect_offset_z="-50.00"
+		/>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+		<node id="open"
+		 forced_animation_length_in_seconds="2.50"
+		 event_0_trigger_time="0"
+		 event_0_id="mana"
+		 event_0_effect="effects/material-tomb-orb.xml"
+		 event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/mana-rift-power-sparks|Q|}}"
+		 event_0_spawn_effect_scale="1.76"
+		 event_0_spawn_effect_offset_z="-52.06"
+		 event_1_trigger_time="0"
+		 event_1_id="electrhum"
+		 event_1_effect="effects/electric-discharge-small.xml"
+		 event_1_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/mana-rift-electric-discharge|Q|}}"
+		 event_1_spawn_effect_scale="1.24"
+		 event_1_spawn_effect_offset_z="-52.66"
+		 event_2_trigger_time="0"
+		 event_2_id="sfx-teleport"
+		 event_2_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/mana-rift-teleport|Q|}}"
+		 event_2_spawn_effect_offset_z="-52.66"
+		 event_3_trigger_time="0.417"
+		 event_3_id="electrhum2"
+		 event_3_effect="effects/electric-discharge-small.xml"
+		 event_3_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.8,0.8|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|1.3,1.3|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/mana-rift-electric-discharge|Q|}}"
+		 event_3_spawn_effect_scale="1.22"
+		 event_3_spawn_effect_offset_z="-52.66"
+		/>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+		<node id="opened"
+		 wrap_mode="LOOP"
+		 forced_animation_length_in_seconds="0.50"
+		 event_0_trigger_time="0.00785"
+		 event_0_id="fog-door"
+		 event_0_effect="effects/fog-door.xml"
+		 event_0_sound_event="{{BOOLEAN,|Q|looping|Q|,|Q|true|Q|},{FLOAT,|Q|fade_out_duration|Q|,|Q|1|Q|},{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|400,700|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/power-sparks-loop|Q|}}"
+		 event_0_spawn_effect_scale="0.26"
+		 event_0_spawn_effect_offset_z="-52.66"
+		 event_1_trigger_time="0.01"
+		 event_1_id="sfx-hum"
+		 event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{BOOLEAN,|Q|looping|Q|,|Q|true|Q|},{FLOAT,|Q|fade_out_duration|Q|,|Q|1|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.8,0.8|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|400,700|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/humming|Q|}}"
+		 event_1_spawn_effect_scale="0.26"
+		 event_1_spawn_effect_offset_z="-52.66"
+		 event_2_trigger_time="0.142"
+		 event_2_id="sparks"
+		 event_2_effect="effects/electric-discharge-tiny.xml"
+		 event_2_spawn_effect_offset_z="-50.00"
+		 event_3_trigger_time="0.25"
+		 event_3_id="fog-door2"
+		 event_3_effect="effects/fog-door.xml"
+		 event_3_sound_event="{{BOOLEAN,|Q|looping|Q|,|Q|true|Q|},{FLOAT,|Q|fade_out_duration|Q|,|Q|1|Q|},{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|400,700|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/power-sparks-loop|Q|}}"
+		 event_3_spawn_effect_scale="0.26"
+		 event_3_spawn_effect_offset_z="-52.66"
+		/>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+		<node id="hint"
+		 wrap_mode="LOOP"
+		 start_playing_at_random_time_key="true"
+		 forced_animation_length_in_seconds="8.00"
+		 event_0_trigger_time="0.01"
+		 event_0_id="electrhum"
+		 event_0_effect="effects/electric-discharge-tiny.xml"
+		 event_0_sound_event="{{BOOLEAN,|Q|looping|Q|,|Q|true|Q|},{FLOAT,|Q|fade_out_duration|Q|,|Q|1|Q|},{FLOAT2,|Q|volume_range|Q|,|Q|0.3,0.3|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.6,0.6|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|200,600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/humming|Q|}}"
+		 event_0_spawn_effect_scale="0.26"
+		 event_0_spawn_effect_offset_z="-52.66"
+		 event_1_trigger_time="1.62"
+		 event_1_id="spark4"
+		 event_1_effect="effects/electric-discharge-tiny.xml"
+		 event_1_spawn_effect_scale="0.26"
+		 event_1_spawn_effect_offset_z="-43.05"
+		 event_2_trigger_time="3.17"
+		 event_2_id="spark"
+		 event_2_effect="effects/electric-discharge-tiny.xml"
+		 event_2_spawn_effect_scale="0.26"
+		 event_2_spawn_effect_offset_z="-37.47"
+		 event_3_trigger_time="4.89"
+		 event_3_id="spark3"
+		 event_3_effect="effects/electric-discharge-tiny.xml"
+		 event_3_spawn_effect_scale="0.26"
+		 event_3_spawn_effect_offset_z="-51.13"
+		 event_4_trigger_time="7.26"
+		 event_4_id="spark2"
+		 event_4_effect="effects/electric-discharge-tiny.xml"
+		 event_4_spawn_effect_scale="0.26"
+		 event_4_spawn_effect_offset_z="-43.49"
+		/>
+
+	</array>
+
+	<array id="RENDERER_PARAMETERS">
+		<node id="renderer" value="BitmapBillboard" />
+		<node id="shadow_method" value="NONE" />
+		<node id="visual_bounds_size_multiplier" value="1.5" />
+		<node id="blend_mode" value="ADDITIVE" />
+		<node id="allow_static_caching" value="false" />
+		<node id="initial_bitmap_a" value="effects/gfx/tomb-orb-haze-outer.png" />
+	</array>
+
+	<array id="INTERACTIONS">
+		<node interaction_0_id="open"
+		 interaction_0_disable_after_interaction="0"
+		 interaction_0_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;if (Game_GetWorldStateAsInteger(&#34;MANA_RIFTS&#34;, &#34;enabled&#34;) == 0)&#10;&#9;&#9;return false;&#10;&#10;&#9;return !StageObject_GetKeyValue(so_self, &#34;open&#34;);&#10;}"
+		 interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;if (StageObject_GetKeyValue(so_self, &#34;open&#34;))&#10;&#9;&#9;return;&#10;&#10;&#9;if (!Game_IsRecipeCrafted(&#34;RIFT_TOOLKIT&#34;))&#10;&#9;{&#10;&#9;&#9;Game_SetRecipeUnlocked(&#34;RIFT_TOOLKIT&#34;, true, true);&#10;&#9;&#9;local text = LOC_TEXT(&#34;I need to craft [RECIPE].&#34;);&#10;&#9;&#9;text = string_replace(text, &#34;[RECIPE]&#34;, &#34;[GREEN][RECIPE_NAME=RIFT_TOOLKIT][WHITE]&#34;);&#10;&#9;&#9;Game_AddActorNotification(so_activator, text);&#10;&#9;&#9;return;&#10;&#9;}&#10;&#10;&#9;local open_cost = StageObject_GetKeyValue(so_self, &#34;open_cost&#34;);&#10;&#9;if (open_cost == null)&#10;&#9;&#9;open_cost = &#34;1&#34;;&#10;&#10;&#9;local materials = &#34;&#34; + open_cost + &#34;xMANA_CHUNK&#34;;&#10;&#9;if (open_cost == 0 || Game_ThrowMaterialsToActorFromStorage(so_activator, so_self, materials))&#10;&#9;{&#10;&#9;&#9;local num_opened = Game_GetWorldStateAsInteger(&#34;MANA_RIFTS&#34;, &#34;opened&#34;) + 1;&#10;&#9;&#9;Game_SetWorldState(&#34;MANA_RIFTS&#34;, &#34;opened&#34;, num_opened.tostring());&#10;&#10;&#9;&#9;StageObject_SetKeyValueBoolean(so_self, &#34;open&#34;, true);&#10;&#9;&#9;Actor_InteractWithInteraction(so_self, so_activator, &#34;init&#34;);&#10;&#9;&#9;Actor_PlayAnimation(so_self, &#34;open&#34;);&#10;&#9;&#9;//Game_SetStagePointOfInterestCompleted(so_self);&#10;&#9;}&#10;&#9;else&#10;&#9;{&#10;&#9;&#9;local text = LOC_TEXT(&#34;I don&#39;t have enough [MATERIALS] in storage.&#34;);&#10;&#9;&#9;text = string_replace(text, &#34;[MATERIALS]&#34;, &#34;[MATERIAL_ICON=MANA_CHUNK][MATERIAL_NAME=MANA_CHUNK]&#34;);&#10;&#9;&#9;Game_AddActorNotification(so_activator, text);&#10;&#9;}&#10;}"
+		 interaction_0_trigger="HOLD_DOWN_BUTTON"
+		 interaction_0_trigger_parameter_float="1"
+		 interaction_0_controller_button="USE"
+		 interaction_0_text="Open Rift"
+		 interaction_0_attach_offset="0,0,-25"
+		 interaction_1_id="enter"
+		 interaction_1_disable_after_interaction="0"
+		 interaction_1_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;if (Game_GetWorldStateAsInteger(&#34;MANA_RIFTS&#34;, &#34;enabled&#34;) == 0)&#10;&#9;&#9;return false;&#10;&#10;&#9;return StageObject_GetKeyValue(so_self, &#34;open&#34;);&#10;}"
+		 interaction_1_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;StageObject_SetKeyValueBoolean(so_self, &#34;open&#34;, true);&#10;&#9;Actor_InteractWithInteraction(so_self, so_activator, &#34;init&#34;);&#10;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#9;local target_pos = StageObject_GetKeyValue(so_self, &#34;teleport_target_pos&#34;);&#10;&#9;if (target_pos != null)&#10;&#9;{&#10;&#9;&#9;Game_TeleportPlayers(target_pos[0], target_pos[1], target_pos[2]);&#10;&#9;&#9;return;&#10;&#9;}&#10;}"
+		 interaction_1_trigger="ENTER_RADIUS"
+		 interaction_1_radius="20"
+		 interaction_1_attach_offset="0,0,-25"
+		 interaction_2_id="init"
+		 interaction_2_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;if (Game_IsQuestCompleted(&#34;quests/displaced-guards.nut&#34;))&#10;&#9;&#9;Game_SetWorldState(&#34;MANA_RIFTS&#34;, &#34;enabled&#34;, &#34;1&#34;);&#10;&#10;&#9;local enabled = Game_GetWorldStateAsInteger(&#34;MANA_RIFTS&#34;, &#34;enabled&#34;) &#62; 0;&#10;&#9;Actor_SetActorFlag(so_self, &#34;ONLY_VISIBLE_IN_EDITOR&#34;, !enabled);&#10;&#10;&#9;if (enabled)&#10;&#9;{&#10;&#9;&#9;if (StageObject_GetKeyValue(so_self, &#34;open&#34;))&#10;&#9;&#9;{&#10;&#9;&#9;&#9;if (!Actor_IsAnimationPlaying(so_self, &#34;opened&#34;))&#10;&#9;&#9;&#9;&#9;Actor_PlayAnimation(so_self, &#34;opened&#34;);&#10;&#9;&#9;&#9;Actor_StopAnimationWithFade(so_self, &#34;closed&#34;, 0);&#10;&#9;&#9;}&#10;&#9;&#9;else&#10;&#9;&#9;{&#10;&#9;&#9;&#9;if (!Actor_IsAnimationPlaying(so_self, &#34;closed&#34;))&#10;&#9;&#9;&#9;&#9;Actor_PlayAnimation(so_self, &#34;closed&#34;);&#10;&#9;&#9;&#9;Actor_StopAnimationWithFade(so_self, &#34;opened&#34;, 0);&#10;&#9;&#9;}&#10;&#9;&#9;Actor_StopAnimationWithFade(so_self, &#34;hint&#34;, 0);&#10;&#9;}&#10;&#9;else&#10;&#9;{&#10;&#9;&#9;if (!Actor_IsAnimationPlaying(so_self, &#34;hint&#34;))&#10;&#9;&#9;&#9;Actor_PlayAnimation(so_self, &#34;hint&#34;);&#10;&#9;&#9;Actor_StopAnimationWithFade(so_self, &#34;opened&#34;, 0);&#10;&#9;&#9;Actor_StopAnimationWithFade(so_self, &#34;closed&#34;, 0);&#10;&#9;}&#10;&#10;&#9;local open_cost = StageObject_GetKeyValue(so_self, &#34;open_cost&#34;);&#10;&#9;if (open_cost == null)&#10;&#9;&#9;open_cost = 1;&#10;&#10;&#10;&#9;local text = LOC_TEXT(&#34;Open&#34;);&#10;//    if (Game_IsRecipeCrafted(&#34;RIFT_TOOLKIT&#34;))&#10;&#9;{&#10;&#9;&#9;if (open_cost &#62; 0)&#10;&#9;&#9;&#9;text = text + &#34; (&#34; + open_cost + &#34;x[MATERIAL_ICON=MANA_CHUNK])&#34;;&#10;&#9;}&#10;&#10;&#9;Actor_SetInteractionText(so_self, &#34;open&#34;, Game_GetConvertedString(text));&#10;}"
+		 interaction_2_trigger="ON_GAME_START"
+		 interaction_3_id="check"
+		 interaction_3_disable_after_interaction="0"
+		 interaction_3_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Actor_InteractWithInteraction(so_self, so_self, &#34;init&#34;);&#10;}"
+		 interaction_3_trigger="ENTER_RADIUS"
+		 interaction_3_radius="200"
+		 interaction_4_id="discover"
+		 interaction_4_localize="0"
+		 interaction_4_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;if (StageObject_GetKeyValue(so_self, &#34;discovered&#34;, false))&#10;&#9;&#9;return;&#10;&#10;&#9;StageObject_SetKeyValueBoolean(so_self, &#34;discovered&#34;, true);&#10;&#10;&#9;local num_discovered = Game_GetWorldStateAsInteger(&#34;MANA_RIFTS&#34;, &#34;num_discovered&#34;, 0);&#10;&#9;num_discovered++;&#10;&#10;&#9;Game_SetWorldState(&#34;MANA_RIFTS&#34;, &#34;num_discovered&#34;, num_discovered.tostring());&#10;&#10;&#9;if (num_discovered == 1)&#10;&#9;{&#10;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;Strange...&#34;));&#10;&#9;}&#10;&#9;else if (num_discovered == 2)&#10;&#9;{&#10;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;It&#39;s like time and space are bent around this spot... [EMOJI=thinking face]&#34;));&#10;&#9;}&#10;&#9;else if (num_discovered == 3)&#10;&#9;{&#10;&#9;&#9;Game_ShowQuestStartDialog(&#34;quests/strange-energy.nut&#34;, true);&#10;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;I should investigate this phenomenon further...&#34;));&#10;&#9;}&#10;}"
+		 interaction_4_trigger="ENTER_RADIUS"
+		 interaction_4_radius="120"
+		/>
+
+	</array>
+
+	<array id="COLLIDER">
+		<node id="type" value="CYLINDER" />
+		<node id="radius_xy" value="16.0" />
+		<node id="min_z" value="-120.0" />
+		<node id="max_z" value="0.0" />
+	</array>
+</root>

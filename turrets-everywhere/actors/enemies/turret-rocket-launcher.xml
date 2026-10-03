@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="Rocket Launcher Turret" localize="true" />
+    <node id="tags" value="NO_FRAME_FREEZE,MECHANICAL" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,FRIEND_OR_FOE,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE" />
+    <node id="physics_material" value="METAL" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="4" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="800" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="350" />
+    <node id="damage_type_accept_mask" value="UNSPECIFIED,BLUNT,PIERCING,FIRE,COLD,POISON,ELECTRIC,EXPLOSIVE,SELF_DESTRUCT,HIT_GROUND,PROJECTILE,HEAT" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="timer_enabled" type="BOOLEAN" value="true" />
+    <node id="timer_start_automatically" type="BOOLEAN" value="false" />
+    <node id="timer_one_shot" type="BOOLEAN" value="false" />
+    <node id="timer_interval" type="FLOAT" value="1" />
+    <node id="timer_interval_2" type="FLOAT" value="0" />
+    <node id="timer_offset" type="FLOAT" value="0" />
+    <node id="build_cost" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="10xSTEEL,2xELECTRONICS" />
+    <node id="color_material_color" type="COLOR" value="0.61,0.69,0.46,1" />
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="2xIRON,RUBBER" />
+    <node id="drops_random_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="SCRAP_ELECTRONICS,ELECTRONICS" />
+    <node id="ProjectileWeapon_auto_shoot" type="BOOLEAN" value="false" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="description" type="STRING" flags="PERSISTENT,LOCALIZED,NO_REPLICATION" value="Rocket Launcher Turret" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleBehavioral">
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleProjectileWeapon"
+     key.ACTOR_TYPE.ProjectileWeapon_projectile="actors/projectiles/turret-rocket-launcher-projectile.xml"
+     key.INTEGER.ProjectileWeapon_projectiles_per_shot="1"
+     key.FLOAT.ProjectileWeapon_projectile_speed="400"
+     key.FLOAT.ProjectileWeapon_projectile_speed_spread="0"
+     key.FLOAT.ProjectileWeapon_projectile_damage_multiplier="1"
+     key.FLOAT.ProjectileWeapon_projectile_accuracy_spread="0"
+     key.FLOAT.ProjectileWeapon_projectile_spread="0"
+     key.BOOLEAN.ProjectileWeapon_auto_shoot="false"
+     key.FLOAT.ProjectileWeapon_auto_shoot_interval="1.5"
+     key.STRING.ProjectileWeapon_bones="muzzle"
+     key.BOOLEAN.ProjectileWeapon_ignore_z_direction="false"
+     key.BOOLEAN.ProjectileWeapon_set_target_actor="true"
+     key.INTEGER.ProjectileWeapon_clip_size="-1"
+     key.FLOAT.ProjectileWeapon_max_distance_to_target="800"
+    />
+
+    <node id="DysmantleTurret" key.FLOAT.FindTarget_fov="220" key.FLOAT.FindTarget_auto_shoot_fov="220" key.BOOLEAN.is_rocket_turret="true" />
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death"
+     category="DEATH"
+     animation_controller="PhysicsMaterialBasedDeath"
+     forced_animation_length_in_seconds="0.20"
+     force_update_visual_bounds="true"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/flash-ground.xml"
+     event_1_trigger_time="0"
+     event_1_id="id1"
+     event_1_effect="effects/steel-barrel-break.xml"
+    />
+
+    <node id="weapon_fired"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/sentry-turret-rig-recoil-additive.anim"
+     bone_group_id="Recoil"
+     forced_animation_length_in_seconds="1.00"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_bone_id="muzzle"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/machinegun-muzzle-flash.xml"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|400,800|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-rocket-fire|Q|}}"
+    />
+
+    <node id="tracking" sound_scape="sound-scapes/turret-tracking-loop.xml" wrap_mode="LOOP" forced_animation_length_in_seconds="1.00" />
+    <node id="stun"
+     wrap_mode="LOOP"
+     forced_animation_length_in_seconds="2.50"
+     event_0_trigger_time="0"
+     event_0_id="stars"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/stun-stars.xml"
+     event_0_spawn_effect_offset_z="-50.00"
+     event_1_trigger_time="0.69"
+     event_1_id="stars2"
+     event_1_ignore_bone_orientation="true"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/stun-stars.xml"
+     event_1_spawn_effect_offset_z="-50.00"
+     event_2_trigger_time="1.38"
+     event_2_id="stars3"
+     event_2_ignore_bone_orientation="true"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/stun-stars.xml"
+     event_2_spawn_effect_offset_z="-5.00"
+     event_3_trigger_time="2.07"
+     event_3_id="stars4"
+     event_3_ignore_bone_orientation="true"
+     event_3_spawn_effect_to_local_particle_system="true"
+     event_3_effect="effects/stun-stars.xml"
+     event_3_spawn_effect_offset_z="-50.00"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="Turret" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="2.44" />
+    <node id="shadow_offset_x" value="-2.97" />
+    <node id="shadow_alpha" value="0.31" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="model" value="models/enemies/turret-rocketlauncher.model" />
+  </array>
+
+  <array id="RENDERABLES">
+    <node id="DysmantleLaserAim" />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="CYLINDER" />
+    <node id="radius_xy" value="26.0" />
+    <node id="min_z" value="-53.3" />
+    <node id="max_z" value="0.0" />
+  </array>
+</root>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+<array id="INFO">
+
+ <node id="name" value="English" />
+ <node id="name_localized" value="English" />
+ <node id="author" value="" />
+ 
+</array>
+
+</root>

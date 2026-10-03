@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<!--
+  To use these in a stage:
+
+  1) Set stage string key value 'initial_lighting_setup_id' with flag PERSISTENT to any of the setup ids like 'INITIAL_UNDERGROUND'.
+  2) Set stage string key value 'current_lighting_setup_id' with flags PERSISTENT and SAVE_STATE to any of the setup ids like 'INITIAL_UNDERGROUND'.
+     This is required so that the current light setup is saved with the save game.
+  3) Set stage persistent boolean key value 'simulate_time_of_day' to false.
+  4) Add marker with template type LIGHTING_SETUP to the stage:
+    -It calls Game_SetWorldLightingSetup when the player enters the marker area, and
+    -calls Game_RevertWorldLightingSetup when the player leaves the marker area.
+
+  This file is automatically reloaded when the game starts and developer mode is enabled.
+-->
+  <array id="SETUPS">
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node id="DEFAULT_UNDERGROUND"
+      ambient_light_color="0.56,0.53,0.60"
+      directional_light_color="0.78,0.70,0.54,1.0"
+      fog_color="0.10,0.300,0.500,1" fog_range="947344,947345"
+      bloom_alpha="0.3"
+      directional_light_shadow_intensity="1.0"
+      directional_light_shadow_softness="3.0"
+      directional_light_angle_x="10"
+      directional_light_angle_y="53"
+      directional_light_angle_z="44"
+      />
+
+    <node id="BRIGHT_UNDERGROUND"
+      ambient_light_color="0.56,0.53,0.60"
+      directional_light_color="0.78,0.70,0.54,1.6"
+      fog_color="0.10,0.300,0.500,1" fog_range="947344,947345"
+      bloom_alpha="0.3"
+      directional_light_shadow_intensity="1.0"
+      directional_light_shadow_softness="3.0"
+      directional_light_angle_x="10"
+      directional_light_angle_y="53"
+      directional_light_angle_z="44"
+      />
+
+    <node id="DARK_UNDERGROUND"
+      ambient_light_color="0.56,0.53,0.60"
+      directional_light_color="0.78,0.70,0.54,0.8"
+      fog_color="0.10,0.300,0.500,1" fog_range="947344,947345"
+      bloom_alpha="0.3"
+      directional_light_shadow_intensity="1.0"
+      directional_light_shadow_softness="3.0"
+      directional_light_angle_x="10"
+      directional_light_angle_y="53"
+      directional_light_angle_z="44"
+      />
+
+    <node id="TOWN"
+      ambient_light_color="0.5,0.3,0.2"
+      directional_light_color="0.7,0.7,0.5,1.5"
+      fog_color="0.750,0.35,0.2,1" fog_range="947344,947345"
+      bloom_alpha="0.2"
+      directional_light_shadow_intensity="0.5"
+      directional_light_shadow_softness="2.0"
+      directional_light_angle_x="10"
+      directional_light_angle_y="53"
+      directional_light_angle_z="44"
+      />
+
+    <node id="LABORATORY_1"
+      ambient_light_color="0.40,0.50,0.40"
+      directional_light_color="0.50,0.60,0.50,1.4"
+      fog_color="0.10,0.300,0.500,1" fog_range="947344,947345"
+      bloom_alpha="0.3"
+      directional_light_shadow_intensity="0.6"
+      directional_light_shadow_softness="3.0"
+      />
+
+    <node id="LABORATORY_2"
+      ambient_light_color="0.25,0.42,0.38"
+      directional_light_color="0.35,0.45,0.50,1.4"
+      fog_color="0.1,0.65,0.35,1" fog_range="947344,947345"
+      bloom_alpha="0.3"
+      directional_light_shadow_intensity="0.6"
+      directional_light_shadow_softness="3.0"
+      />
+
+    <node id="LABORATORY_2A"
+      ambient_light_color="0.15,0.40,0.25"
+      directional_light_color="0.30,0.55,0.45,1.0"
+      fog_color="0.1,0.65,0.35,1" fog_range="947344,947345"
+      bloom_alpha="0.2"
+      directional_light_shadow_intensity="0.6"
+      directional_light_shadow_softness="3.0"
+      />
+
+    <node id="LABORATORY_3"
+      ambient_light_color="0.6,0.7,0.8"
+      directional_light_color="0.55,0.7,0.55,1.5"
+      fog_color="0.25,0.6,0.52,0.5" fog_range="947344,947345"
+      bloom_alpha="0.2"
+      directional_light_shadow_intensity="0.5"
+      directional_light_shadow_softness="3.0"
+      />
+
+    <node id="LABORATORY_3A"
+      ambient_light_color="0.4,0.5,0.6"
+      directional_light_color="0.45,0.6,0.45,1.5"
+      fog_color="0.25,0.6,0.52,0.5" fog_range="947344,947345"
+      bloom_alpha="0.2"
+      directional_light_shadow_intensity="0.5"
+      directional_light_shadow_softness="3.0"
+      />
+
+    <node id="EXCAVATED_TOMB"
+      ambient_light_color="0.6,0.35,0.45"
+      directional_light_color="0.6,0.35,0.45,1.5"
+      fog_color="0.6,0.52,0.25,0.5" fog_range="947344,947345"
+      bloom_alpha="0.2"
+      directional_light_shadow_intensity="0.5"
+      directional_light_shadow_softness="2.0"
+      />
+
+    <node id="DUSK"
+      ambient_light_color="0.6,0.3,0.8"
+      directional_light_color="0.92,0.61,0.17,1.50"
+      fog_color="0.87,0.42,0.1,1" fog_range="947344,947345"
+      bloom_alpha="0.3"
+      directional_light_shadow_intensity="1.0"
+      directional_light_shadow_softness="1.0"
+      directional_light_angle_x="10"
+      directional_light_angle_y="53"
+      directional_light_angle_z="44"
+      />
+
+    <node id="CAVE_TOMB"
+      ambient_light_color="0.65,0.35,0.15"
+      directional_light_color="0.35,0.5,0.65,0.75"
+      fog_color="0,0,0,1" fog_range="947344,947345"
+      bloom_alpha="0.3"
+      directional_light_shadow_intensity="1.0"
+      directional_light_shadow_softness="2.5"
+      directional_light_angle_x="10"
+      directional_light_angle_y="53"
+      directional_light_angle_z="44"
+      />
+
+    <node id="PURPLE_TEST"
+      ambient_light_color="0.8,0.1,0.8"
+      directional_light_color="0.92,0.0,0.87,1.50"
+      fog_color=".8,.6,1,1" fog_range="947344,947345"
+      bloom_alpha="0.3"
+      directional_light_shadow_intensity="1.0"
+      directional_light_shadow_softness="1.0"
+      directional_light_angle_x="10"
+      directional_light_angle_y="53"
+      directional_light_angle_z="44"
+      />
+
+    <node id="PEA_SOUP"
+      ambient_light_color="0.4,0.4,0.8"
+      directional_light_color="0.4,0.8,0.7,1.60"
+      fog_color=".4,.5,.4,1" fog_range="947344,947345"
+      bloom_alpha="0.2"
+      directional_light_shadow_intensity="1.0"
+      directional_light_shadow_softness="5.0"
+      directional_light_angle_x="10"
+      directional_light_angle_y="53"
+      directional_light_angle_z="44"
+      />
+
+    <node id="CAVE_OPEN"
+      ambient_light_color="0.75,0.6,0.4"
+      directional_light_color="0.9,0.7,0.3,1.0"
+      fog_color=".1,.25,.4,1" fog_range="947344,947345"
+      bloom_alpha="0.2"
+      directional_light_shadow_intensity="1.0"
+      directional_light_shadow_softness="4.0"
+      directional_light_angle_x="10"
+      directional_light_angle_y="53"
+      directional_light_angle_z="44"
+      />
+
+    <node id="CAVE_BLUE_FOG"
+      ambient_light_color="0.73,0.52,0.66"
+      directional_light_color="0.95,0.75,0.44,0.64"
+      fog_color=".05,.2,.3,1" fog_range="947344,947345"
+      bloom_alpha="0.25"
+      directional_light_shadow_intensity="0.4"
+      directional_light_shadow_softness="1.8"
+      directional_light_angle_x="10"
+      directional_light_angle_y="53"
+      directional_light_angle_z="44"
+      />
+
+    <node id="DLC3_DLC1ISLAND"
+      ambient_light_color="0.40,0.15,0.40"
+      directional_light_color="0.2,0.4,0.4,1.00"
+      fog_color="0.0,.2,.3,0.85" fog_range="947344,947345"
+      />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="POINT_OF_INTEREST" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,INDESTRUCTIBLE,NO_MOMENTUM_FROM_COLLISIONS,DELETE_ACTOR_AFTER_DEATH,CAN_BE_STOOD_ON,IGNORE_COLLIDER_WHEN_PICKING" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="80" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="0.32" g="0.27" b="0.27" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="enter_animation" type="STRING" value="move_from_up" />
+    <node id="leave_animation" type="STRING" value="move_up" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENTRYWAY" />
+    <node id="stage" type="STAGE" />
+    <node id="travel_to_entrance_id" type="STRING" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="ObstacleAnimated">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death" category="DEATH" animation_controller="PhysicsMaterialBasedDeath" forced_animation_length_in_seconds="0.20" force_update_visual_bounds="true" />
+    <node id="move_down"
+     script="function UsersEnter(so_self)&#10;{&#10;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;{&#10;&#9;&#9;local so_user = StageObject_GetKeyValue(so_self, &#34;user_&#34; + i);&#10;&#9;&#9;if (so_user != null)&#10;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_user, so_self);&#10;&#9;}&#10;}&#10;&#10;function UsersLeave(so_self)&#10;{&#10;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;{&#10;&#9;&#9;local so_user = StageObject_GetKeyValue(so_self, &#34;user_&#34; + i);&#10;&#9;&#9;if (so_user != null)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_user, 0);&#10;&#9;&#9;&#9;StageObject_SetGlobal(so_user, true);&#10;&#9;&#9;}&#10;&#9;}&#10;}&#10;&#10;function OnStart(so_self, length)&#10;{&#10;&#9;StageObject_SetKeyValueFloat(so_self, &#34;base_z&#34;, StageObject_GetPosition(so_self)[2]);&#10;&#9;UsersEnter(so_self);&#10;&#9;Actor_SetActorFlag(so_self, &#34;STATIC&#34;, false);&#10;}&#10;&#10;function OnUpdate(so_self, time_key, length)&#10;{&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;if (pos == null)&#10;&#9;&#9;return;&#10;&#10;&#9;local base_z = StageObject_GetKeyValue(so_self, &#34;base_z&#34;);&#10;&#9;StageObject_SetPosition(so_self, pos[0], pos[1], base_z + 50 * time_key);&#10;}&#10;&#10;function OnEnd(so_self, length)&#10;{&#10;&#9;UsersLeave(so_self);&#10;&#9;Actor_SetActorFlag(so_self, &#34;STATIC&#34;, true);&#10;}"
+     forced_animation_length_in_seconds="3.00"
+     event_0_trigger_time="0"
+     event_0_id="sfx-move"
+     event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/elevator-move-long|Q|}}"
+     event_1_trigger_time="3"
+     event_1_id="sfx-stop"
+     event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.8,0.9|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/elevator-stop|Q|}}"
+    />
+
+    <node id="move_up"
+     script="function UsersEnter(so_self)&#10;{&#10;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;{&#10;&#9;&#9;local so_user = StageObject_GetKeyValue(so_self, &#34;user_&#34; + i);&#10;&#9;&#9;if (so_user != null)&#10;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_user, so_self);&#10;&#9;}&#10;}&#10;&#10;function UsersLeave(so_self)&#10;{&#10;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;{&#10;&#9;&#9;local so_user = StageObject_GetKeyValue(so_self, &#34;user_&#34; + i);&#10;&#9;&#9;if (so_user != null)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_user, 0);&#10;&#9;&#9;&#9;StageObject_SetGlobal(so_user, true);&#10;&#9;&#9;}&#10;&#9;}&#10;}&#10;&#10;function OnStart(so_self, length)&#10;{&#10;&#9;StageObject_SetKeyValueFloat(so_self, &#34;base_z&#34;, StageObject_GetPosition(so_self)[2]);&#10;&#9;UsersEnter(so_self);&#10;&#9;Actor_SetActorFlag(so_self, &#34;STATIC&#34;, false);&#10;}&#10;&#10;function OnUpdate(so_self, time_key, length)&#10;{&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;if (pos == null)&#10;&#9;&#9;return;&#10;&#10;&#9;local base_z = StageObject_GetKeyValue(so_self, &#34;base_z&#34;);&#10;&#9;StageObject_SetPosition(so_self, pos[0], pos[1], base_z + -50 * time_key);&#10;}&#10;&#10;function OnEnd(so_self, length)&#10;{&#10;&#9;UsersLeave(so_self);&#10;&#9;Actor_SetActorFlag(so_self, &#34;STATIC&#34;, true);&#10;}"
+     forced_animation_length_in_seconds="3.00"
+     event_0_trigger_time="0"
+     event_0_id="sfx-move"
+     event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/elevator-move-long|Q|}}"
+     event_1_trigger_time="3"
+     event_1_id="sfx-stop"
+     event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.8,0.9|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/elevator-stop|Q|}}"
+    />
+
+    <node id="move_from_up"
+     script="function UsersEnter(so_self)&#10;{&#10;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;{&#10;&#9;&#9;local so_user = StageObject_GetKeyValue(so_self, &#34;user_&#34; + i);&#10;&#9;&#9;if (so_user != null)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_user, so_self);&#10;&#9;&#9;&#9;local so_pet = StageObject_GetKeyValue(so_user, &#34;ref_pet&#34;);&#10;&#9;&#9;&#9;if(so_pet != null)&#10;&#9;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_pet, so_self);&#10;&#10;&#9;&#9;}&#10;&#9;}&#10;}&#10;&#10;function UsersLeave(so_self)&#10;{&#10;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;{&#10;&#9;&#9;local so_user = StageObject_GetKeyValue(so_self, &#34;user_&#34; + i);&#10;&#9;&#9;if (so_user != null)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_user, 0);&#10;&#9;&#9;&#9;StageObject_SetGlobal(so_user, true);&#10;&#9;&#9;&#9;local so_pet = StageObject_GetKeyValue(so_user, &#34;ref_pet&#34;);&#10;&#9;&#9;&#9;if (so_pet != null)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_pet, 0);&#10;&#9;&#9;&#9;&#9;StageObject_SetGlobal(so_pet, true);&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#9;}&#10;}&#10;&#10;function OnStart(so_self, length)&#10;{&#10;&#9;StageObject_SetKeyValueFloat(so_self, &#34;base_z&#34;, StageObject_GetPosition(so_self)[2]);&#10;&#9;UsersEnter(so_self);&#10;&#9;Actor_SetActorFlag(so_self, &#34;STATIC&#34;, false);&#10;}&#10;&#10;function OnUpdate(so_self, time_key, length)&#10;{&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;if (pos == null)&#10;&#9;&#9;return;&#10;&#10;&#9;local base_z = StageObject_GetKeyValue(so_self, &#34;base_z&#34;);&#10;&#9;StageObject_SetPosition(so_self, pos[0], pos[1], base_z + -50 * (length-time_key));&#10;}&#10;&#10;function OnEnd(so_self, length)&#10;{&#10;&#9;UsersLeave(so_self);&#10;&#9;Actor_SetActorFlag(so_self, &#34;STATIC&#34;, true);&#10;}"
+     forced_animation_length_in_seconds="2.30"
+     event_0_trigger_time="0"
+     event_0_id="sfx-move"
+     event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/elevator-move-short|Q|}}"
+     event_1_trigger_time="2.3"
+     event_1_id="sfx-stop"
+     event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.8,0.9|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/elevator-stop|Q|}}"
+    />
+
+    <node id="move_from_down"
+     script="function UsersEnter(so_self)&#10;{&#10;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;{&#10;&#9;&#9;local so_user = StageObject_GetKeyValue(so_self, &#34;user_&#34; + i);&#10;&#9;&#9;if (so_user != null)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_user, so_self);&#10;&#9;&#9;&#9;local so_pet = StageObject_GetKeyValue(so_user, &#34;ref_pet&#34;);&#10;&#9;&#9;&#9;if (so_pet != null)&#10;&#9;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_pet, so_self);&#10;&#9;&#9;}&#10;&#9;}&#10;}&#10;&#10;function UsersLeave(so_self)&#10;{&#10;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;{&#10;&#9;&#9;local so_user = StageObject_GetKeyValue(so_self, &#34;user_&#34; + i);&#10;&#9;&#9;if (so_user != null)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_user, 0);&#10;&#9;&#9;&#9;StageObject_SetGlobal(so_user, true);&#10;&#10;&#9;&#9;&#9;local so_pet = StageObject_GetKeyValue(so_user, &#34;ref_pet&#34;);&#10;&#9;&#9;&#9;if (so_pet != null)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_pet, 0);&#10;&#9;&#9;&#9;&#9;StageObject_SetGlobal(so_pet, true);&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#9;}&#10;}&#10;&#10;function OnStart(so_self, length)&#10;{&#10;&#9;StageObject_SetKeyValueFloat(so_self, &#34;base_z&#34;, StageObject_GetPosition(so_self)[2]);&#10;&#9;UsersEnter(so_self);&#10;&#9;Actor_SetActorFlag(so_self, &#34;STATIC&#34;, false);&#10;}&#10;&#10;function OnUpdate(so_self, time_key, length)&#10;{&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;if (pos == null)&#10;&#9;&#9;return;&#10;&#10;&#9;local base_z = StageObject_GetKeyValue(so_self, &#34;base_z&#34;);&#10;&#9;StageObject_SetPosition(so_self, pos[0], pos[1], base_z + 50 * (length-time_key));&#10;}&#10;&#10;function OnEnd(so_self, length)&#10;{&#10;&#9;UsersLeave(so_self);&#10;&#9;Actor_SetActorFlag(so_self, &#34;STATIC&#34;, true);&#10;}"
+     forced_animation_length_in_seconds="2.30"
+     event_0_trigger_time="0"
+     event_0_id="sfx-move"
+     event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/elevator-move-short|Q|}}"
+     event_1_trigger_time="2.3"
+     event_1_id="sfx-stop"
+     event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.8,0.9|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/elevator-stop|Q|}}"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="shadow_method" value="NONE" />
+    <node id="render_scale" value="0.85" />
+    <node id="model" value="models/objects/ark-walkway.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="leave"
+        interaction_0_external_script="scripts/interactions/elevator-lift-platform-press-button.nut"
+        interaction_0_trigger="PRESS_BUTTON"
+        interaction_0_controller_button="USE"
+        interaction_0_text="Leave"
+        interaction_0_radius="50"
+        interaction_0_attach_offset="0,0,-20"
+      interaction_1_id="stage_enter"
+        interaction_1_script_to_run_on_interaction="function AreSamePlayers(so_1, so_2)&#10;{&#10;&#9;local i1 = Game_GetPlayerIndexByActor(so_1);&#10;&#9;local i2 = Game_GetPlayerIndexByActor(so_2);&#10;&#9;if (i1 == null || i2 == null)&#10;&#9;&#9;return;&#10;&#9;if (i1 &#60; 0 || i2 &#60; 0)&#10;&#9;&#9;return;&#10;&#9;return i1 == i2;&#10;}&#10;&#10;function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#10;&#9;if (AreSamePlayers(Game_GetAnyPlayerActor(), so_activator))&#10;&#9;{&#10;&#9;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;local user = &#34;user_&#34; + i;&#10;&#9;&#9;&#9;local player_actor = Game_GetPlayerActor(i);&#10;&#9;&#9;&#9;if (player_actor != null)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;StageObject_SetKeyValueStageObjectReference(so_self, user, player_actor);&#10;&#9;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(player_actor, so_self);&#10;&#9;&#9;&#9;&#9;StageObject_SetPosition(player_actor, 10-i*35, -i*25, 0);&#10;&#9;&#9;&#9;&#9;StageObject_SetAngle(player_actor, 0);&#10;&#10;&#9;&#9;&#9;&#9;local so_pet = StageObject_GetKeyValueStageObjectReference(player_actor,&#34;ref_pet&#34;);&#10;&#9;&#9;&#9;&#9;if (so_pet != null)&#10;&#9;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;&#9;StageObject_SetParentButRetainStageTransform(so_pet, so_self);&#10;&#9;&#9;&#9;&#9;&#9;StageObject_SetPosition(so_pet, 15-i*35, -i*25+5, 0);&#10;&#9;&#9;&#9;&#9;&#9;StageObject_SetAngle(so_pet, 0);&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#9;}&#10;&#10;&#9;Game_SetCinemaMode(true, true);&#10;&#9;local script_start = @&#34;&#10;&#9;&#9;local anim_id = StageObject_GetKeyValue($so_self, &#34;&#34;enter_animation&#34;&#34;);&#10;&#9;&#9;if (!Actor_IsAnimationPlaying($so_self, anim_id))&#10;&#9;&#9;&#9;Actor_PlayAnimation($so_self, anim_id);&#10;&#10;&#9;&#9;Game_SetCinemaMode(true);&#10;&#9;&#9;Actor_SetActorFlag($so_activator, &#34;&#34;SOLID&#34;&#34;, false);&#10;&#9;&#34;;&#10;&#10;&#9;script_start = string_replace(script_start, &#34;$so_activator&#34;, so_activator);&#10;&#9;script_start = string_replace(script_start, &#34;$so_self&#34;, so_self);&#10;&#10;&#9;Actor_QueueActionRunScript(so_activator, script_start);&#10;&#10;&#9;local script_end = @&#34;&#10;&#9;&#9;Game_SetCinemaMode(false);&#10;&#9;&#9;Actor_SetActorFlag($so_activator, &#34;&#34;SOLID&#34;&#34;, true);&#10;&#9;&#34;;&#10;&#10;&#9;script_end = string_replace(script_end, &#34;$so_activator&#34;, so_activator);&#10;&#9;script_end = string_replace(script_end, &#34;$so_self&#34;, so_self);&#10;&#10;&#9;Actor_QueueActionRunScript(so_activator, script_end);&#10;}"
+        interaction_1_trigger="NONE"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="BOX" />
+    <node id="size_x" value="127.5" />
+    <node id="size_y" value="127.5" />
+    <node id="size_z" value="32.3" />
+    <node id="offset_z" value="16.2" />
+  </array>
+
+</root>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+<array id="STRINGS">
+
+ <node
+  id = "THOUSANDS_SEPARATOR"
+  to = "," />
+
+ <node
+  id = "TIME_FORMAT"
+  to = "HH:MM:SS" />
+ <node
+  id = "Change Language"
+  to = "Vaiha kieli" />
+  
+ <!-- Texts in localization mapping file 'localized-texts.xml'. -->
+ <node
+  id = "Defeat the 10tons crew!"
+  to = "Suomiiii" />
+ <node
+  id = "Click-and-hold the screen to aim."
+  to = "Click-and-hold the screen to aim." />
+ <node
+  id = "Tap-and-hold the screen to aim."
+  to = "Tap-and-hold the screen to aim." />
+ <node
+  id = "The first clown knocks out the rest!"
+  to = "The first clown knocks out the rest!" />
+
+ <!-- Achievement texts -->
+ <node
+  id = "All Birds With One Stone"
+  to = "All Birds With One Stone" />
+ <node
+  id = "Complete a level using only one rock."
+  to = "Complete a level using only one rock." />
+ <node
+  id = "Head Shot!"
+  to = "Head Shot!" />
+ <node
+  id = "Hit the King with a rock."
+  to = "Hit the King with a rock." />
+ <node
+  id = "Headache"
+  to = "Headache" />
+ <node
+  id = "Hit the King with a rock three times during a level."
+  to = "Hit the King with a rock three times during a level." />
+ <node
+  id = "Destroyer of a Thousand"
+  to = "Destroyer of a Thousand" />
+ <node
+  id = "Destroy a thousand enemies."
+  to = "Destroy a thousand enemies." />
+ <node
+  id = "Thousand Throws"
+  to = "Thousand Throws" />
+ <node
+  id = "Throw a thousand projectiles."
+  to = "Throw a thousand projectiles." />
+
+
+ <!-- Strings in UI file 'ui/Loading.xml': -->
+ <node
+  id = "Press |img src='gamepad/gamepad_button_a.png' scale=0.7| to Start"
+  to = "Press |img src='gamepad/gamepad_button_a.png' scale=0.7| to Start" />
+ <!-- End of strings in UI file 'ui/Loading.xml': -->
+
+
+ <!-- Strings in UI file 'ui/Achievements.xml': -->
+ <node
+  id = "OK"
+  to = "OK" />
+ <node
+  id = "Achievements"
+  to = "Achievements" />
+ <!-- End of strings in UI file 'ui/Achievements.xml': -->
+
+
+ <!-- Strings in UI file 'ui/UIEditor.xml': -->
+ <node
+  id = "File"
+  to = "File" />
+ <node
+  id = "UI"
+  to = "UI" />
+ <node
+  id = "Inspect"
+  to = "Inspect" />
+ <node
+  id = "Add"
+  to = "Add" />
+ <node
+  id = "Add UI components by dragging them to the screen area."
+  to = "Add UI components by dragging them to the screen area." />
+ <!-- End of strings in UI file 'ui/UIEditor.xml': -->
+
+
+ <!-- Strings in UI file 'ui/PurchaseInProgress.xml': -->
+ <node
+  id = "Processing"
+  to = "Processing" />
+ <node
+  id = "Please wait..."
+  to = "Please wait..." />
+ <node
+  id = "Cancel"
+  to = "Cancel" />
+ <!-- End of strings in UI file 'ui/PurchaseInProgress.xml': -->
+
+
+ <!-- Strings in UI file 'ui/PauseMenu.xml': -->
+ <node
+  id = "Game Paused"
+  to = "Game Paused" />
+ <node
+  id = "Resume"
+  to = "Resume" />
+ <node
+  id = "Restart"
+  to = "Restart" />
+ <node
+  id = "Options"
+  to = "Options" />
+
+ <!-- End of strings in UI file 'ui/PauseMenu.xml': -->
+
+
+ <!-- Strings in UI file 'ui/Options.xml': -->
+ <node
+  id = "Windowed"
+  to = "Windowed" />
+ <node
+  id = "Sound Effects Volume"
+  to = "Sound Effects Volume" />
+ <node
+  id = "Music Volume"
+  to = "Music Volume" />
+ <!-- End of strings in UI file 'ui/Options.xml': -->
+
+
+ <!-- Strings in UI file 'ui/MainMenu.xml': -->
+ <node
+  id = "Extras"
+  to = "Extras" />
+ <node
+  id = "Credits"
+  to = "Credits" />
+ <node
+  id = "Leaderboards"
+  to = "Leaderboards" />
+ <node
+  id = "Toggle saturate"
+  to = "Toggle saturate" />
+ <node
+  id = "UI Component Gallery"
+  to = "UI Component Gallery" />
+ <node
+  id = "Play"
+  to = "Play" />
+ <node
+  id = "Switch User"
+  to = "Switch User" />
+ <node
+  id = "The summer 2016 AppTemplate update breaks backwards compatibility with multiple major changes.\n\n-Squirrel is now used instead of Lua for events scripts.\n-XML is now used as UI definition format.\n-Components can have OnClick scripts to reduce the need to ui event script files in many cases."
+  to = "The summer 2016 AppTemplate update breaks backwards compatibility with multiple major changes.\n\n-Squirrel is now used instead of Lua for events scripts.\n-XML is now used as UI definition format.\n-Components can have OnClick scripts to reduce the need to ui event script files in many cases." />
+ <node
+  id = "App Template"
+  to = "App Template" />
+ <!-- End of strings in UI file 'ui/MainMenu.xml': -->
+
+
+ <!-- Strings in UI file 'ui/Gallery.xml': -->
+ <node
+  id = "UI Gallery"
+  to = "UI Gallery" />
+ <node
+  id = "Button"
+  to = "Button" />
+ <node
+  id = "Checkbox"
+  to = "Checkbox" />
+ <node
+  id = "Small Text"
+  to = "Small Text" />
+ <node
+  id = "X"
+  to = "X" />
+ <!-- End of strings in UI file 'ui/Gallery.xml': -->
+
+
+ <!-- Strings in UI file 'ui/Extras.xml': -->
+ <node
+  id = "Developer"
+  to = "Developer" />
+ <node
+  id = "Save Slots"
+  to = "Save Slots" />
+ <node
+  id = "Back"
+  to = "Back" />
+ <!-- End of strings in UI file 'ui/Extras.xml': -->
+
+
+ <!-- Strings in UI file 'ui/Bar.xml': -->
+ <node
+  id = "Close bar"
+  to = "Close bar" />
+ <!-- End of strings in UI file 'ui/Bar.xml': -->
+
+
+ <!-- Strings in UI file 'ui/Profiles.xml': -->
+ <node
+  id = "Select Save Slot"
+  to = "Select Save Slot" />
+ <node
+  id = "Slot #1"
+  to = "Slot #1" />
+ <node
+  id = "Slot #2"
+  to = "Slot #2" />
+ <node
+  id = "Slot #3"
+  to = "Slot #3" />
+ <node
+  id = "Slot #4"
+  to = "Slot #4" />
+ <node
+  id = "Delete"
+  to = "Delete" />
+ <!-- End of strings in UI file 'ui/Profiles.xml': -->
+
+ <node
+  id = "Empty"
+  to = "Empty" />
+ <node
+  id = "Yes, Delete"
+  to = "Yes, Delete" />
+ <node
+  id = "Delete Profile in Slot #%d?"
+  to = "Delete Profile in Slot #%d?" />
+ <node
+  id = "Time played %s"
+  to = "Time played %s" />
+
+ <!-- Strings in UI file 'ui/Leaderboards.xml': -->
+ <node
+  id = "Global"
+  to = "Global" />
+ <node
+  id = "Friends"
+  to = "Friends" />
+ <!-- End of strings in UI file 'ui/Leaderboards.xml': -->
+
+
+ <!-- Strings in UI file 'ui/Credits.xml': -->
+ <node
+  id = "by"
+  to = "by" />
+ <node
+  id = "Design"
+  to = "Design" />
+ <node
+  id = "Programming 4%%"
+  to = "Programming 4%%" />
+ <node
+  id = "Art"
+  to = "Art" />
+ <node
+  id = "Level Design"
+  to = "Level Design" />
+ <node
+  id = "Something"
+  to = "Something" />
+ <node
+  id = "Beta Testers"
+  to = "Beta Testers" />
+ <!-- End of strings in UI file 'ui/Credits.xml': -->
+
+ <node
+  id = "CREDITS"
+  to = "CREDITS" />
+
+
+ <!-- 217 ref words in total. -->
+ <!-- 73 ref strings in total. -->
+</array>
+</root>

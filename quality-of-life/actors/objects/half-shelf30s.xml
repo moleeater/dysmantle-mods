@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="objects/half shelf30s" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="tags" value="CAN_HOLD_TABLEWARE,MOD_OCPD_MINIMAP,MOD_ONE_HIT_OBJECTS" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,PERMANENT,SOLID,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE" />
+    <node id="physics_material" value="WOOD" />
+    <node id="mass" value="100" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="1" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="200" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.5" />
+    <node id="minimum_damage_threshold" value="34" />
+    <node id="aggro_radius" value="500" />
+    <node id="friend_avoidance_radius" value="30" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="100" />
+    <node id="max_hit_points" value="100" />
+    <node id="damage_type_accept_mask" value="UNSPECIFIED,BLUNT,SLASHING,FIRE,COLD,POISON,ELECTRIC,EXPLOSIVE,SELF_DESTRUCT,HIT_GROUND,PROJECTILE,HEAT" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES">
+    <node id="color_material_half-shelf30s" type="COLOR" value="0.559812,0.305291,0.147496,1" />
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="3xSCRAP_WOOD" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="DISMANTLABLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleObstacleAnimated">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death" animation_controller="PhysicsMaterialBasedDeath" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="bm_shadow" value="shadows/shadow-rectangle-thin.png" />
+    <node id="shadow_angle" value="90" />
+    <node id="shadow_scale" value="1.8" />
+    <node id="shadow_offset_x" value="14.1" />
+    <node id="shadow_alpha" value="0.58" />
+    <node id="model" value="models/objects/half-shelf30s.model" />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="MESH" />
+    <node id="min_z" value="-102.1" />
+    <node id="max_z" value="0.2" />
+    <node id="is_closed" value="1" />
+  </array>
+
+  <array id="COLLIDER_EDGES">
+    <node px0="-1.68" py0="29.83" px1="-1.68" py1="-29.83" />
+    <node px0="-1.68" py0="-29.83" px1="25.39" py1="-29.83" />
+    <node px0="25.39" py0="-29.83" px1="25.50" py1="-28.49" />
+    <node px0="25.50" py0="-28.49" px1="1.45" py1="-28.49" />
+    <node px0="25.39" py0="29.83" px1="-1.68" py1="29.83" />
+    <node px0="25.50" py0="28.49" px1="25.39" py1="29.83" />
+    <node px0="1.45" py0="28.49" px1="25.50" py1="28.49" />
+    <node px0="1.45" py0="-28.49" px1="1.45" py1="28.49" />
+  </array>
+</root>

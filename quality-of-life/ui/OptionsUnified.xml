@@ -1,0 +1,2649 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="SHADERFILTER"
+     inherit="DefaultShaderFilter"
+     shaderfilter.cache_results="true"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node name="panel"
+      type="NINEPATCH"
+      inherit="DecayNinePatchPanel"
+      position.x="0.5"
+      position.y="0.5"
+      scale="0.9"
+      ui_scale_modifier="0.0"
+      align="VCENTER,HCENTER"
+      ninepatch.rectangle_width="873"
+      ninepatch.rectangle_height="710"
+      />
+
+    <node parent="panel" name="panel_sub"
+      type="NINEPATCH"
+      inherit="DecayNinePatchPanelInner"
+      position.x="2.60471e-05"
+      position.y="-0.386352"
+      align="HCENTER"
+      ninepatch.rectangle_width="850"
+      ninepatch.rectangle_height="615"
+      />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="aligner_SetTabs"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel"
+     position.x="-0.000716411"
+     position.y="-0.417385"
+     scale="0.649142"
+     ui_scale_modifier="0.1"
+     aligner.layout="STACK"
+     aligner.area_height="55.4667"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.min_padding="40"
+     aligner.align_y_axis="false"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node parent="aligner_SetTabs" name="SetTab_Mods"
+      type="BUTTON" inherit="TabButton"
+      button.ninepatch_width="80" button.ninepatch_height="80"
+      button.bm_icon="ui/gfx/mods/mods-tabbutton.png" button.icon_offset="0,-18"
+      button.text="Mods" button.text_offset="0,20" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="SetTab_Gameplay"
+     type="BUTTON"
+     inherit="TabButton"
+     parent="aligner_SetTabs"
+     button.text="Gameplay"
+     button.text_offset="0,20"
+     button.bm_icon="ui/gfx/tab-Gameplay.png"
+     button.icon_offset="0,-18"
+     button.ninepatch_width="71"
+     button.ninepatch_height="80"
+    />
+
+    <node
+     name="SetTab_Controls"
+     type="BUTTON"
+     inherit="TabButton"
+     parent="aligner_SetTabs"
+     button.text="Controls"
+     button.text_offset="0,20"
+     button.bm_icon="ui/gfx/tab-Controls.png"
+     button.icon_offset="0,-18"
+     button.ninepatch_width="103"
+     button.ninepatch_height="80"
+    />
+
+    <node
+     name="SetTab_Audio"
+     type="BUTTON"
+     inherit="TabButton"
+     parent="aligner_SetTabs"
+     button.text="Audio"
+     button.text_offset="0,20"
+     button.bm_icon="ui/gfx/tab-Audio.png"
+     button.icon_offset="0,-18"
+     button.ninepatch_width="97"
+     button.ninepatch_height="80"
+    />
+
+    <node
+     name="SetTab_Graphics"
+     type="BUTTON"
+     inherit="TabButton"
+     parent="aligner_SetTabs"
+     active="false"
+     button.text="Graphics"
+     button.text_offset="0,20"
+     button.bm_icon="ui/gfx/tab-Graphics.png"
+     button.icon_offset="0,-18"
+     button.ninepatch_width="106"
+     button.ninepatch_height="80"
+    />
+
+    <node
+     name="SetTab_Accessibility"
+     type="BUTTON"
+     inherit="TabButton"
+     parent="aligner_SetTabs"
+     button.text="Accessibility"
+     button.text_offset="0,20"
+     button.bm_icon="ui/gfx/tab-Accessibility.png"
+     button.icon_offset="0,-18"
+     button.ninepatch_width="111"
+     button.ninepatch_height="80"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node
+      name="tf_main"
+      type="TOUCHFIELD"
+      inherit="DefaultTouchField"
+      parent="panel"
+      position.x="-0.47"
+      position.y="-0.362389"
+      touchfield.automatic_content_width="true"
+      touchfield.automatic_content_height="true"
+      touchfield.area_width="820"
+      touchfield.area_height="580"
+      touchfield.clip_children="true"
+      touchfield.axis_x_enabled="false"
+      touchfield.bm_scroll_indicator="ui/gfx/scroll-indicator.png"
+      />
+
+    <node
+      name="slider_main_tf"
+      type="SLIDER"
+      inherit="SliderScrollbar"
+      parent="panel"
+      position.x="0.461927"
+      position.y="-0.359328"
+      localize="true"
+      scale="0.677742"
+      align="HCENTER"
+      slider.ninepatch_height="850"
+      slider.linked_view="tf_main"
+      slider.ninepatch_width="32"
+      />
+
+    <node
+      name="aligner_main"
+      type="ALIGNER"
+      inherit="EditorAligner"
+      parent="tf_main"
+      position.x="0.492"
+      position.y="0.0354051"
+      scale="0.911329"
+      ui_scale_modifier="0.2"
+      align="HCENTER"
+      aligner.layout="STACK"
+      aligner.area_width="48.3955"
+      aligner.automatic_area_height="true"
+      aligner.min_padding="2"
+      />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="Tab_Controls"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_main"
+     visible="false"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="16"
+    />
+
+    <node
+     name="TitleAdvSettings2"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Controls"
+     active="true"
+     scale="1.2"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="502"
+     textbox.text="Control Options"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="marker_controls_padding_top3"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Tab_Controls"
+     align="VCENTER,HCENTER"
+     marker.area_height="2.08701"
+    />
+
+    <node
+     name="TitleInvertYAxis"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Controls"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Invert Y-axis"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_invert_y_axis"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleInvertYAxis"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleRunToggle"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Controls"
+     active="true"
+     required_features="!VIRTUAL_CONTROLS"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Run Toggle"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_run_toggle"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleRunToggle"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleAutolockToEnemies"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Controls"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Autolock to Enemies"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_autolock_to_enemies"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleAutolockToEnemies"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleAutolockToEnemies2"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Controls"
+     active="true"
+     required_control_interfaces="MOUSE"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Lock mouse inside window"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_lock_mouse_inside_window"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleAutolockToEnemies2"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleVibration"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Controls"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Vibration"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="marker_controls_padding_top2"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Tab_Controls"
+     align="VCENTER,HCENTER"
+     marker.area_height="15.2647"
+    />
+
+    <node
+     name="TitleAdvSettings3"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Controls"
+     active="true"
+     scale="1.2"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="502"
+     textbox.text="Configure Controls"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="ControllerTypes"
+     type="DROPDOWNLIST"
+     inherit="DefaultDropDownList"
+     parent="Tab_Controls"
+     localize="false"
+     align="VCENTER,HCENTER"
+     drop_down_list.ninepatch_width="360"
+     drop_down_list.lines="WASDMOUSE,Keyboard and Mouse;GAMEPAD,Gamepad"
+    />
+
+    <node
+     name="marker_controls_padding_top"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Tab_Controls"
+     align="VCENTER,HCENTER"
+     marker.area_height="3.40478"
+    />
+
+    <node
+     name="GamepadArt"
+     type="DROPDOWNLIST"
+     inherit="DefaultDropDownList"
+     parent="Tab_Controls"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     align="VCENTER,HCENTER"
+     drop_down_list.ninepatch_width="360"
+    />
+
+    <node
+     name="Aligner.Controls"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="Tab_Controls"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="10"
+    />
+
+    <node
+     name="marker_controls_padding_bottom2"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Tab_Controls"
+     align="VCENTER,HCENTER"
+     marker.area_height="4.72255"
+    />
+
+    <node
+     name="Reset"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="Tab_Controls"
+     position.z="-0.0196078"
+     button.text="Reset to Defaults"
+     button.ninepatch_width="490"
+    />
+
+    <node
+     name="Tab_Accessibility"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_main"
+     visible="false"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="26.0741"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="22"
+    />
+
+    <node
+     name="Close"
+     type="BUTTON"
+     inherit="SmallSquareXButton"
+     parent="panel"
+     position.x="0.483317"
+     position.y="-0.473706"
+     visible_for_control_interface="GROUP_POINTER_BASED"
+     on_click_script_call="UI_PopScreen()"
+     can_be_accessed_with_gamepads="false"
+     scale="0.881072"
+     ui_scale_modifier="0.2"
+     align="RIGHT"
+    />
+
+    <node
+     name="marker_controls_padding_bottom"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Tab_Controls"
+     align="VCENTER,HCENTER"
+     marker.area_height="11.9077"
+    />
+
+    <node
+     name="Tab_Gameplay"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_main"
+     visible="false"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="26.0741"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="22"
+    />
+
+    <node
+     name="Tab_Audio"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_main"
+     visible="false"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="26.0741"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="22"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_mute_audio_when_window_not_in_focus"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="Tab_Audio"
+     required_features="WINDOWED_TOGGLE"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_play_copyrighted_music"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="Tab_Audio"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleScreenShake"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Screen Shake"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_FLOAT_screen_shake_multiplier"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="TitleScreenShake"
+     position.x="0.0925976"
+     position.y="-0.0138663"
+     align="VCENTER"
+     user_string="0..2"
+     slider.value="0.7"
+    />
+
+    <node
+     name="TitleFreezeFrame"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Freeze Frame Effect"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_FLOAT_freeze_frame_multiplier"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="TitleFreezeFrame"
+     position.x="0.0925976"
+     position.y="-0.0138663"
+     align="VCENTER"
+     user_string="0..1"
+     slider.value="1"
+    />
+
+    <node
+     name="TitleShowEmojis"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Accessibility"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Show Emojis"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_show_emojis"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleShowEmojis"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleTextShowDuration"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Accessibility"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Text Show Duration"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_FLOAT_text_show_duration_multiplier"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="TitleTextShowDuration"
+     position.x="0.0925976"
+     position.y="-0.0138663"
+     align="VCENTER"
+     user_string="0.1..2"
+     slider.value="0.473684"
+    />
+
+    <node
+     name="TitleTutorials"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Tutorials"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_tutorials"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleTutorials"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleTutorials2"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Accessibility"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Color blind mode"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_color_blind_mode"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleTutorials2"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleTutorials3"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Accessibility"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Reduce blinking effects"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleTutorials4"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Accessibility"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Reduce trypophobia triggers"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitlePauseStage"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     required_features="WINDOWED_TOGGLE"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Pause game when not in focus"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_pause_stage_when_window_not_in_focus"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitlePauseStage"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleRotateMinimap"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Rotate Minimap"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_minimap_rotated_based_on_camera"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleRotateMinimap"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleTemperatureUnits"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Temperature units"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_STRING_temperature_units"
+     type="DROPDOWNLIST"
+     inherit="DefaultDropDownList"
+     parent="TitleTemperatureUnits"
+     position.x="0.0903009"
+     scale="0.9"
+     align="VCENTER"
+     drop_down_list.ninepatch_width="330"
+     drop_down_list.lines="CELSIUS,Celsius;FAHRENHEIT,Fahrenheit"
+    />
+
+    <node
+     name="TitleClockFormat"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Clock format"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_STRING_clock_format"
+     type="DROPDOWNLIST"
+     inherit="DefaultDropDownList"
+     parent="TitleClockFormat"
+     position.x="0.0903009"
+     scale="0.9"
+     align="VCENTER"
+     drop_down_list.ninepatch_width="330"
+     drop_down_list.lines="24H,24 hours;AMPM,AM PM"
+    />
+
+    <node
+     name="TitleStoreWhenResting"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Store materials when resting"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_store_materials_when_resting"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleStoreWhenResting"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleFriendlyFire"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     required_features="COOP"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Friendly fire"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleCoopHarmTip"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="TitleFriendlyFire"
+     position.x="0.239864"
+     position.y="0.0402047"
+     active="true"
+     required_features="COOP"
+     color="1,1,1,0.75"
+     scale="0.745469"
+     align="VCENTER"
+     textbox.textbox_width="358"
+     textbox.text="Co-op players can harm each other."
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_friendly_fire"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleFriendlyFire"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleCoopCollisions"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     required_features="COOP"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Co-op player collisions"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleCoopCollisions2"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     required_features="COOP"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Draw co-op player indicators"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_coop_player_collisions"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleCoopCollisions"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_draw_player_indicators"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleCoopCollisions2"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleClickToOpenMinimap"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     required_features="!OMIT_OPEN_MAP_BY_CLICKING_OPTION"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Open map by clicking minimap"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_open_map_by_clicking_minimap"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleClickToOpenMinimap"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleRotateCameraAutomatically"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Rotate camera automatically"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_autorotate_camera"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleRotateCameraAutomatically"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="Title_material_tracking_notification_animations"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Material tracking notification animations"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_material_tracking_notification_animations"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="Title_material_tracking_notification_animations"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleShowSaveIndicator"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Show save indicator"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_show_save_indicator"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleShowSaveIndicator"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleSendGameEventLogs"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Gameplay"
+     active="true"
+     required_features="SHOW_GAME_EVENT_LOG"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Send Game Event Logs"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_send_game_event_logs"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleSendGameEventLogs"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_reduce_blinking_effects"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleTutorials3"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_reduce_trypophobia_triggers"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleTutorials4"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleMuteAudio"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="KeyValue_BOOLEAN_mute_audio_when_window_not_in_focus"
+     position.x="-0.259361"
+     position.y="-0.00242531"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="360"
+     textbox.text="Mute audio when app not in focus"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleMuteAudio2"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="KeyValue_BOOLEAN_play_copyrighted_music"
+     position.x="-0.259361"
+     position.y="-0.00242531"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="360"
+     textbox.text="Play copyrighted music"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleMuteAudio3"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="KeyValue_BOOLEAN_play_copyrighted_music"
+     position.x="1.4172"
+     position.y="0.00940547"
+     active="true"
+     color="1,1,1,0.5"
+     scale="0.706261"
+     align="VCENTER"
+     textbox.textbox_width="422"
+     textbox.text="Streamers can disable this to avoid having to clear copyrights for videos."
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_vibration"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleVibration"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="EmojiExample"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="KeyValue_BOOLEAN_show_emojis"
+     position.x="1.42119"
+     position.y="0.0212357"
+     active="true"
+     localize="false"
+     color="1,1,1,0.75"
+     scale="0.739234"
+     align="VCENTER"
+     textbox.textbox_width="357"
+     textbox.text="Example: I'm thinking |img src='emojis/thinking face.png' scale=0.9 offset=2|"
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="Privacy"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="Tab_Gameplay"
+     position.z="-0.0196078"
+     required_features="PRIVACY_POLICY"
+     on_click_script_call="NX_CallExtension(\"OpenURL\", \"https://www.10tons.com/privacy-policy/\");"
+     button.text="Privacy"
+     button.ninepatch_width="490"
+    />
+
+    <node
+     name="ResetDefaults_Gameplay"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="Tab_Gameplay"
+     position.z="-0.0196078"
+     button.text="Reset to Defaults"
+     button.ninepatch_width="490"
+    />
+
+    <node
+     name="ShowGameEventLog"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="TitleSendGameEventLogs"
+     position.x="0.524003"
+     position.y="-0.0147638"
+     position.z="-0.0196078"
+     required_features="SHOW_GAME_EVENT_LOG"
+     on_click_script_call="UI_PushScreen(\"GameEventLog\");"
+     scale="0.735238"
+     button.text="Show Log"
+     button.ninepatch_width="266"
+    />
+
+    <node
+     name="marker_1"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Tab_Gameplay"
+     marker.area_width="121.186"
+     marker.area_height="27.5519"
+    />
+
+    <node
+     name="VolSound"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="Tab_Audio"
+     position.z="-0.0392157"
+     align="VCENTER"
+     slider.value="0.33"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node type="SLIDER" inherit="DefaultSlider" parent="Tab_Audio" name="mod_nonlinear_volume_sound"
+      align="VCENTER" slider.value="0" visible="false" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="Title6"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="VolSound"
+     position.x="-0.0223214"
+     position.y="0.000744207"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="350"
+     textbox.text="Sound Effects Volume"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="VolMusic"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="Tab_Audio"
+     position.z="-0.0392157"
+     align="VCENTER"
+     slider.value="0"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node type="SLIDER" inherit="DefaultSlider" parent="Tab_Audio" name="mod_nonlinear_volume_music"
+      align="VCENTER" slider.value="0" visible="false" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="ResetDefaults_Audio"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="Tab_Audio"
+     position.z="-0.0196078"
+     button.text="Reset to Defaults"
+     button.ninepatch_width="490"
+    />
+
+    <node
+     name="Title19"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="VolMusic"
+     position.x="-0.0219245"
+     position.y="0.00744093"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="350"
+     textbox.text="Music Volume"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="Tab_Graphics"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_main"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="26.0741"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="21"
+    />
+
+    <node
+     name="TitlePresets"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Graphics"
+     active="true"
+     required_features="!SIMPLE_GRAPHICS_SETTINGS"
+     scale="1.2"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="478"
+     textbox.text="Graphics Presets"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="aligner_presets"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="Tab_Graphics"
+     required_features="!SIMPLE_GRAPHICS_SETTINGS"
+     scale="0.851638"
+     aligner.area_width="531.353"
+     aligner.area_height="107.166"
+     aligner.fixed_num_columns="3"
+     aligner.min_padding="0.3"
+    />
+
+    <node
+     name="TitleAdvSettings"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Tab_Graphics"
+     active="true"
+     scale="1.2"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="502"
+     textbox.text="Advanced Settings"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="marker_Renderer"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Tab_Graphics"
+     align="HCENTER"
+     marker.area_height="2.89328"
+    />
+
+    <node
+     name="Renderer"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="marker_Renderer"
+     position.y="-6.47123"
+     save_dynamic_content_to_ui_xml="false"
+     active="true"
+     localize="false"
+     required_features="!SIMPLE_GRAPHICS_SETTINGS"
+     color="1,1,1,0.4"
+     scale="0.840017"
+     align="HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="137"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="aligner_graphics_options"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="Tab_Graphics"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="26.0741"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="22"
+    />
+
+    <node
+     name="TitleRes"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     required_features="FREE_RESOLUTION"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="Screen Resolution:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleVsync2"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     required_features="MOBILE_UI"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="Battery Saving Mode"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleVsync"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     required_features="!SIMPLE_GRAPHICS_SETTINGS,!MOBILE_UI"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="Vertical Sync"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleRenderScale"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     required_features="!SIMPLE_GRAPHICS_SETTINGS"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="Render Scale:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleUIScale"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     required_features="!OMIT_UI_SCALE_SLIDER"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="UI Scale:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleCameraDistance"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="Camera Distance:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleParticleDetail"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     required_features="!SIMPLE_GRAPHICS_SETTINGS"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="Particle Detail:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleShadows"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     required_features="!OMIT_SHADOW_OPTION"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="Dynamic Shadows:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleFXAA"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     required_features="!SIMPLE_GRAPHICS_SETTINGS"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="FXAA Anti-aliasing:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleBloom"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="Bloom filter:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleFilmGrain"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="Film Grain:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleVignette"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="Vignette:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TitleDepthOfField"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_graphics_options"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="240"
+     textbox.text="Depth of Field:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="Detail_LOW"
+     type="BUTTON"
+     inherit="SmallButton"
+     parent="aligner_presets"
+     button.text="Low"
+     button.ninepatch_width="150"
+    />
+
+    <node
+     name="Detail_MEDIUM"
+     type="BUTTON"
+     inherit="SmallButton"
+     parent="aligner_presets"
+     button.text="Medium"
+     button.ninepatch_width="150"
+    />
+
+    <node
+     name="Detail_HIGH"
+     type="BUTTON"
+     inherit="SmallButton"
+     parent="aligner_presets"
+     button.text="High"
+     button.ninepatch_width="150"
+    />
+
+    <node
+     name="Autodetect"
+     type="BUTTON"
+     inherit="SmallButton"
+     parent="aligner_presets"
+     button.text="Autodetect"
+     button.ninepatch_width="340"
+    />
+
+    <node
+     name="Resolution"
+     type="BUTTON"
+     inherit="WideButton"
+     parent="TitleRes"
+     position.x="0.0701737"
+     position.y="0.0318179"
+     localize="false"
+     on_click_script_call="UI_PushScreen(\"GraphicsResolutions\")"
+     align="VCENTER"
+     button.text="3440x1440"
+    />
+
+    <node
+     name="KeyValue_FLOAT_render_scale"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="TitleRenderScale"
+     position.x="0.0925976"
+     position.y="0.0614815"
+     save_dynamic_content_to_ui_xml="false"
+     required_features="!SIMPLE_GRAPHICS_SETTINGS"
+     align="VCENTER"
+    />
+
+    <node
+     name="KeyValue_FLOAT_ui_scale_modifier"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="TitleUIScale"
+     position.x="0.0925976"
+     position.y="0.0614815"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+    />
+
+    <node
+     name="KeyValue_FLOAT_camera_distance"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="TitleCameraDistance"
+     position.x="0.0925976"
+     position.y="0.0614815"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+     slider.min_value="0.5"
+    />
+
+    <node
+     name="ParticleDetailLevel"
+     type="DROPDOWNLIST"
+     inherit="DefaultDropDownList"
+     parent="TitleParticleDetail"
+     position.x="0.0931216"
+     position.y="-0.0407395"
+     localize="false"
+     required_features="!SIMPLE_GRAPHICS_SETTINGS"
+     scale="0.9"
+     align="VCENTER"
+     drop_down_list.ninepatch_width="330"
+     drop_down_list.lines="LOW,Low;MEDIUM,Medium;DEFAULT,High"
+    />
+
+    <node
+     name="ShadowDetailLevel"
+     type="DROPDOWNLIST"
+     inherit="DefaultDropDownList"
+     parent="TitleShadows"
+     position.x="0.0931216"
+     position.y="-0.0407395"
+     localize="false"
+     required_features="!OMIT_SHADOW_OPTION"
+     scale="0.9"
+     align="VCENTER"
+     drop_down_list.ninepatch_width="330"
+     drop_down_list.lines="V0,Off;V1,Low;V2,Medium;V3,High;V4,Ultra"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_Filter_FXAA"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleFXAA"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     save_dynamic_content_to_ui_xml="false"
+     required_features="!SIMPLE_GRAPHICS_SETTINGS"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_Filter_Bloom"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleBloom"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_Filter_Noise"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleFilmGrain"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_Filter_Vignette"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleVignette"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_Filter_Blur"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleDepthOfField"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="ResetDefaults_Graphics"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_graphics_options"
+     position.z="-0.0196078"
+     button.text="Reset to Defaults"
+     button.ninepatch_width="490"
+    />
+
+    <node
+     name="ResetDefaults_Accessibility"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="Tab_Accessibility"
+     position.z="-0.0196078"
+     button.text="Reset to Defaults"
+     button.ninepatch_width="490"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_vsync"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleVsync"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_battery_saving_mode"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleVsync2"
+     position.x="0.0903009"
+     position.y="0.0111183"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="marker_graphics_padding"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_graphics_options"
+     marker.area_height="21.448"
+    />
+
+    <node
+     name="Aligner.TOUCH.0"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="Aligner.Controls"
+     visible="false"
+     aligner.layout="STACK"
+     aligner.automatic_area_width="true"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="1"
+     aligner.min_padding="16"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_move_virtual_stick"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="TitleMoveVirtualStick"
+     position.x="0.0903009"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TitleMoveVirtualStick"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Aligner.TOUCH.0"
+     active="true"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Move Virtual Stick to Touch Position"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="EditVirtualControls"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="Aligner.TOUCH.0"
+     active="false"
+     required_features="VIRTUAL_CONTROLS"
+     on_click_script_call="UI_PopScreen(\"OptionsUnified\");\nUI_PopScreen(\"PauseMenu\");\nUI_PushScreen(\"EditControlLayout\");"
+     button.text="Edit Control Layout"
+     button.ninepatch_width="430"
+    />
+
+    <node
+     name="EditVirtualControlsHint"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="EditVirtualControls"
+     position.y="0.505"
+     required_features="VIRTUAL_CONTROLS"
+     scale="0.7"
+     align="HCENTER"
+     textbox.textbox_width="340"
+     textbox.text="Only available during gameplay"
+     textbox.text_align="HCENTER"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node type="ALIGNER" inherit="EditorAligner" parent="aligner_main" name="Tab_Mods"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.automatic_area_height="true" aligner.min_padding="0" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="Tab_Mods" name="mods_incompatibility"
+      color="1,0,0,1" align="HCENTER,VCENTER" textbox.text_align="HCENTER,VCENTER" textbox.textbox_width="725"
+      textbox.text="Disabled because of an incompatible mod." />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="Tab_Mods" name="mods_notingame"
+      color="1,1,0,1" align="HCENTER,VCENTER" textbox.text_align="HCENTER,VCENTER" textbox.textbox_width="725"
+      textbox.text="You must be loaded into a game world to use most of the options, they are hidden until then." visible="false" />
+    <node type="MARKER" inherit="DefaultMarker" parent="Tab_Mods" name="mods_notingame_spacer" align="BOTTOM,HCENTER" marker.area_height="35" visible="false" />
+
+
+    <node type="TEXTBOX" inherit="MediumTextbox" parent="Tab_Mods" name="mod_quality_of_life_title"
+      align="BOTTOM,HCENTER" textbox.text_align="VCENTER,HCENTER" textbox.textbox_width="720"
+      localize="false" active="true" visible="false" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_quality_of_life_navigation_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="true"
+      localize="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_quality_of_life_navigation_accordion" name="mod_quality_of_life_navigation"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_navigation" name="mod_predator_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1714144500" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_predator_enabled_title" name="mod_predator_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_navigation" name="mod_camera_distance_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="SLIDER" inherit="DefaultSlider" parent="mod_camera_distance_title" name="mod_camera_distance"
+      position.x="0.04" align="VCENTER" slider.value="0.25" slider.ninepatch_width="230" slider.value="0.25" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_camera_distance_hud" name="mod_camera_distance_hud_title"
+      scale="0.7" position.x="-0.1" align="RIGHT,VCENTER" textbox.text_align="VCENTER" localize="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_camera_distance_title" name="mod_camera_distance_hud"
+      position.x="0.86" align="VCENTER" checkbox.toggle_value_on_click="true" required_features="!MOBILE_UI" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_navigation" name="mod_camera_distance_vanilla_clone_title"
+      align="VCENTER,RIGHT" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="SLIDER" inherit="DefaultSlider" parent="mod_camera_distance_vanilla_clone_title" name="mod_camera_distance_vanilla_clone"
+      position.x="0.04" align="VCENTER" slider.ninepatch_width="80" slider.min_value="0.5" slider.value="1" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_camera_distance_vanilla_clone" name="mod_camera_distance_notice"
+      color="0.67,0.67,0.67,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="300"
+      localize="false" visible="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_navigation" name="mod_thick_gridlines_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_thick_gridlines_enabled_title" name="mod_thick_gridlines_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_navigation" name="mod_moonlight_brightness_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="SLIDER" inherit="DefaultSlider" parent="mod_moonlight_brightness_title" name="mod_moonlight_brightness"
+      position.x="0.04" align="VCENTER" slider.ninepatch_width="330" slider.value="0" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_navigation" name="mod_grid_rays_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_grid_rays_enabled_title" name="mod_grid_rays_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_quality_of_life_traversal_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="true"
+      localize="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_quality_of_life_traversal_accordion" name="mod_quality_of_life_traversal"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_traversal" name="mod_keep_running_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_keep_running_enabled_title" name="mod_keep_running_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_keep_running_enabled" name="mod_keep_running_enabled_warning"
+      color="1,1,0,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="400"
+      localize="false" visible="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_traversal" name="mod_trap_warning_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_trap_warning_enabled_title" name="mod_trap_warning_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_traversal" name="mod_common_rifts_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_common_rifts_enabled_title" name="mod_common_rifts_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_traversal" name="mod_bridge_islands_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_bridge_islands_enabled_title" name="mod_bridge_islands_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_traversal" name="mod_no_stumps_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_no_stumps_enabled_title" name="mod_no_stumps_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_quality_of_life_weapons_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="true"
+      localize="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_quality_of_life_weapons_accordion" name="mod_quality_of_life_weapons"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_weapons" name="mod_indestructible_buildables_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_indestructible_buildables_enabled_title" name="mod_indestructible_buildables_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_weapons" name="mod_one_hit_objects_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" visible="false" user_string="1719731405" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_one_hit_objects_enabled_title" name="mod_one_hit_objects_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_weapons" name="mod_roll_attack_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_roll_attack_enabled_title" name="mod_roll_attack_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_weapons" name="mod_bioweapon_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1744745084" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_bioweapon_title" name="mod_bioweapon_craft"
+      scale="0.76" position.x="0.035" align="VCENTER" button.text_padding_horizontal="24" button.adjust_ninepatch_width_based_on_text_length="true" active="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_weapons" name="mod_bullet_time_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_bullet_time_title" name="mod_bullet_time_craft"
+      scale="0.76" position.x="0.035" align="VCENTER" button.text_padding_horizontal="24" button.adjust_ninepatch_width_based_on_text_length="true" active="false" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_quality_of_life_completionist_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="true"
+      localize="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_quality_of_life_completionist_accordion" name="mod_quality_of_life_completionist"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_completionist" name="mod_reveal_pois_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1766693109" />
+<!--
+    <node type="DROPDOWNLIST" inherit="DefaultDropDownList" parent="mod_reveal_pois_title" name="mod_reveal_pois_type"
+      scale="0.8" position.x="0.05" align="VCENTER" drop_down_list.ninepatch_width="130" drop_down_list.padding_left="24" drop_down_list.max_list_height="10"
+      localize="false" active="false" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_reveal_pois_type" name="mod_reveal_pois_activate"
+      scale="0.95" position.x="1.2" align="VCENTER" button.text_padding_horizontal="24" button.adjust_ninepatch_width_based_on_text_length="true"
+      localize="false" active="false" />
+-->
+    <node type="BUTTON" inherit="SmallButton" parent="mod_reveal_pois_title" name="mod_reveal_pois_activate"
+      scale="0.76" position.x="0.035" align="VCENTER" button.text_padding_horizontal="24" button.adjust_ninepatch_width_based_on_text_length="true" localize="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_completionist" name="mod_track_more_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" required_features="!MOBILE_UI" user_string="1761703190" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_track_more_enabled_title" name="mod_track_more_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_track_more_enabled" name="mod_track_more_enabled_warning"
+      color="1,1,0,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="400"
+      localize="false" visible="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_completionist" name="mod_second_playthrough_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1744567845" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_second_playthrough_enabled_title" name="mod_second_playthrough_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_second_playthrough_enabled" name="mod_second_playthrough_enabled_warning"
+      color="1,1,0,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="400"
+      localize="false" visible="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_completionist" name="mod_map_the_shores_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_map_the_shores_enabled_title" name="mod_map_the_shores_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_completionist" name="mod_ark_progress_hud_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_ark_progress_hud_title" name="mod_ark_progress_hud"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" active="false" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_ark_progress_hud" name="mod_ark_progress_hud_notice"
+      color="0.67,0.67,0.67,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="400" localize="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_completionist" name="mod_ocpd_minimap_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1718063101" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_ocpd_minimap_enabled_title" name="mod_ocpd_minimap_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_ocpd_minimap_enabled" name="mod_ocpd_minimap_enabled_notice"
+      color="0.67,0.67,0.67,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="400"
+      localize="false" visible="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_completionist" name="mod_mark_chunk_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_mark_chunk_title" name="mod_mark_chunk_craft"
+      scale="0.76" position.x="0.035" align="VCENTER" button.text_padding_horizontal="24" button.adjust_ninepatch_width_based_on_text_length="true"
+      localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_mark_chunk_title" name="mod_mark_chunk_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" visible="false" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_quality_of_life_animals_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="true"
+      localize="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_quality_of_life_animals_accordion" name="mod_quality_of_life_animals"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_animals" name="mod_collector_pets_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_collector_pets_enabled_title" name="mod_collector_pets_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_collector_pets_enabled" name="mod_collector_pets_enabled_notice"
+      color="0.67,0.67,0.67,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="400"
+      localize="false" visible="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_animals" name="mod_clone_deer_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_clone_deer_enabled_title" name="mod_clone_deer_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_clone_deer_enabled" name="mod_clone_deer_enabled_notice"
+      color="0.67,0.67,0.67,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="400"
+      localize="false" visible="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_animals" name="mod_no_petting_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_no_petting_enabled_title" name="mod_no_petting_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_quality_of_life_other_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="true"
+      localize="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_quality_of_life_other_accordion" name="mod_quality_of_life_other"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_other" name="mod_hide_corpses_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_hide_corpses_enabled_title" name="mod_hide_corpses_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_other" name="mod_unlimited_builds_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1740620875" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_unlimited_builds_enabled_title" name="mod_unlimited_builds_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_other" name="mod_show_fps_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_show_fps_enabled_title" name="mod_show_fps_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_show_fps_enabled" name="mod_show_fps_enabled_warning"
+      color="1,1,0,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="400"
+      localize="false" visible="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_other" name="mod_photo_mode_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_photo_mode_enabled_title" name="mod_photo_mode_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_photo_mode_enabled" name="mod_photo_mode_enabled_warning"
+      color="1,1,0,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="400"
+      localize="false" visible="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_other" name="mod_free_camera_error"
+      color="1,1,0,1" align="HCENTER,VCENTER" textbox.text_align="HCENTER,VCENTER" textbox.textbox_width="725"
+      localize="false" visible="false" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_other" name="mod_free_camera_controller_title"
+      align="VCENTER,RIGHT" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" visible="false" user_string="1731081762" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_free_camera_controller_title" name="mod_free_camera_controller_wasdmouse"
+      align="VCENTER" position.x="0.03" button.adjust_ninepatch_width_based_on_text_length="true" button.text_padding_vertical="0" button.text_padding_horizontal="12"
+      button.text_scale_idle="0.2" button.text_scale_over="0.2" button.text_scale_pressed="0.2" button.text_scale_disabled="0.2"
+      button.bitmap_color_over="0.75,0.75,0.75,1" button.bitmap_color_pressed="0.5,0.5,0.5,1" button.text_color_idle="1,1,1,1" localize="false" active="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_other" name="mod_code_editor_error"
+      color="1,1,0,1" align="HCENTER,VCENTER" textbox.text_align="HCENTER,VCENTER" textbox.textbox_width="725"
+      localize="false" visible="false" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_other" name="mod_code_editor_controller_title"
+      align="VCENTER,RIGHT" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" visible="false" user_string="1719446566" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_code_editor_controller_title" name="mod_code_editor_controller_wasdmouse"
+      align="VCENTER" position.x="0.03" button.adjust_ninepatch_width_based_on_text_length="true" button.text_padding_vertical="0" button.text_padding_horizontal="12"
+      button.text_scale_idle="0.2" button.text_scale_over="0.2" button.text_scale_pressed="0.2" button.text_scale_disabled="0.2"
+      button.bitmap_color_over="0.75,0.75,0.75,1" button.bitmap_color_pressed="0.5,0.5,0.5,1" button.text_color_idle="1,1,1,1" localize="false" active="false" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_quality_of_life_difficulty_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="true"
+      localize="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_quality_of_life_difficulty_accordion" name="mod_quality_of_life_difficulty"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_difficulty" name="mod_hide_minimap_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1713952500" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_hide_minimap_enabled_title" name="mod_hide_minimap_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_difficulty" name="mod_instant_death_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1752268307" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_instant_death_enabled_title" name="mod_instant_death_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_quality_of_life_alwayson_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="5" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="true"
+      localize="false" visible="false" />
+    <node type="ALIGNER" inherit="DefaultAligner" parent="mod_quality_of_life_alwayson_accordion" name="mod_quality_of_life_alwayson"
+      align="VCENTER,HCENTER" aligner.area_width="700" aligner.layout="GRID" aligner.center_last_row_in_grid_layout="false" 
+      aligner.fixed_num_columns="3" aligner.min_padding="0" aligner.automatic_area_height="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_accessible_ramps_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1757517630" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_allow_99_percent_pois_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1767674763" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_ark_elevator_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1716875030" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_ark_progress_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1714392300" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_ark_single_deposit_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1770069139" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_ascend_shelter_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1752536478" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_auto_gasmask_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_big_inventions_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1784001648" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_booksmart_pets_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1768109184" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_build_on_ground_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1767400164" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_bypass_catacomb_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1770002192" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_camera_heading_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_capernaum_shortcut_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1770073979" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_collapsible_pois_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1741559794" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_colored_markers_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_confirm_pills_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1713770820" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_console_dupes_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1719446566" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_cut_gatherables_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1768636549" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_did_i_dieded_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1776197480" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_difficulty_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1741395436" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_dodge_cliffs_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1741750543" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_dont_track_dishes_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1744567845" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_easier_gathering_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_eating_hitpoints_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_event_log_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1719244794" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_explode_shards_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1774869134" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_extract_barrier_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1774426823" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_fast_weapon_switch_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1768103833" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_fix_from_storage_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1720207670" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_flower_power_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1730415617" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_focus_tools_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_grab_material_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1739647700" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_grid_info_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_healing_treat_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_heavy_keys_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1769999340" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_home_game_plus_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1751577774" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_hunting_knives_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1768643844" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_keys_to_home_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1740451187" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_link_gas_leaks_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1776751809" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_loudspeaker_no_friendly_fire_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1768558124" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_minimap_extra_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_mods_ui_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1719446566" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_new_game_plus_plus_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1718940787" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_nonlinear_volume_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_obelisk_info_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_ostrich_nests_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1774413882" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_pet_pointer_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1767560323" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_petting_heals_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_pickup_mines_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_planter_basics_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1775023801" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_pocket_pets_forever_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1767659895" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_poi_info_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_preserve_nature_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1748942125" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_quest_fixes_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1775849860" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_remember_the_seed_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1717778069" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_remind_to_extract_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1752506210" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_restless_crates_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1774409930" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_reveal_teleporters_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1767729089" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_sane_fabricator_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1750545829" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_save_material_transporter_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1716569520" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_show_statistics_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1740636178" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_sleep_timer_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_snowfall_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1770089896" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_sound_muffler_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1770176440" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_stage_name_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_starting_stage_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1745708935" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_tabula_rasa_farms_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1784468747" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_tall_mushrooms_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1767675780" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_target_pets_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_thinner_bushes_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1716161280" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_touchable_refiner_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1767498292" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_trophies_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1768664046" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_unhide_text_log_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_unstuck_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_visible_bushes_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_walkable_ark_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1790960806" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_walk_over_mortarpods_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_wheat_is_not_corn_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_wiki_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1741374838" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_wild_crops_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1717778069" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_quality_of_life_alwayson" name="mod_yawning_title" localize="false" active="true"
+      align="HCENTER,VCENTER" textbox.text_align="VCENTER" scale="0.7" textbox.textbox_width="320" textbox.fit_inside_textbox="true" user_string="1716307380" />
+
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_nonlinear_volume_sound" name="mod_nonlinear_volume_sound_title"
+      position.x="-0.02" align="RIGHT,VCENTER" textbox.textbox_width="350" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_nonlinear_volume_music" name="mod_nonlinear_volume_music_title"
+      position.x="-0.02" align="RIGHT,VCENTER" textbox.textbox_width="350" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+
+
+    <node type="MARKER" inherit="DefaultMarker" parent="Tab_Mods" name="mod_quality_of_life_bottom_spacer" align="BOTTOM,HCENTER" marker.area_height="40" visible="false" />
+
+
+    <node type="TEXTBOX" inherit="MediumTextbox" parent="Tab_Mods" name="mod_cheats_title"
+      align="BOTTOM,HCENTER" textbox.text_align="VCENTER,HCENTER" textbox.textbox_width="720"
+      localize="false" active="true" visible="false" />
+
+
+    <node type="BUTTON" inherit="WideButton" parent="Tab_Mods" name="mod_cheats_use"
+      align="HCENTER,VCENTER" button.text_padding_horizontal="50" button.adjust_ninepatch_width_based_on_text_length="true" 
+      localize="false" visible="false" />
+
+    <node type="MARKER" inherit="DefaultMarker" parent="Tab_Mods" name="mod_cheats_use_spacer" align="BOTTOM,HCENTER" marker.area_height="10" visible="false" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_cheats_spawn_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="false"
+      localize="false" active="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_cheats_spawn_accordion" name="mod_cheats_spawn"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_spawn" name="mod_craft_recipes_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1727635980" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_craft_recipes_title" name="mod_craft_recipes_use"
+      scale="0.76" position.x="0.035" align="VCENTER" button.text_padding_horizontal="24" button.adjust_ninepatch_width_based_on_text_length="true" localize="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_spawn" name="mod_spawn_materials_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1728846769" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_spawn_materials_title" name="mod_spawn_materials_use"
+      scale="0.76" position.x="0.035" align="VCENTER" button.text_padding_horizontal="24" button.adjust_ninepatch_width_based_on_text_length="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_spawn" name="mod_level_up_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1753021482" />
+    <node type="DROPDOWNLIST" inherit="DefaultDropDownList" parent="mod_level_up_title" name="mod_level_up_amount"
+      scale="0.8" position.x="0.05" align="VCENTER" drop_down_list.ninepatch_width="130" drop_down_list.padding_left="24" drop_down_list.max_list_height="10"
+      localize="false" active="false" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_level_up_amount" name="mod_level_up_activate"
+      scale="0.95" position.x="1.2" align="VCENTER" button.text_padding_horizontal="24" button.adjust_ninepatch_width_based_on_text_length="true"
+      localize="false" active="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_spawn" name="mod_give_keys_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1731105065" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_give_keys_title" name="mod_give_keys_use"
+      scale="0.76" position.x="0.035" align="VCENTER" button.text_padding_horizontal="24" button.adjust_ninepatch_width_based_on_text_length="true" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_cheats_death_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="false"
+      localize="false" active="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_cheats_death_accordion" name="mod_cheats_death"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_death" name="mod_ignore_death_counter_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1776769782" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_ignore_death_counter_enabled_title" name="mod_ignore_death_counter_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_death" name="mod_safer_chasms_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_safer_chasms_enabled_title" name="mod_safer_chasms_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_death" name="mod_light_souls_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1737653795" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_light_souls_enabled_title" name="mod_light_souls_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_death" name="mod_god_mode_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_god_mode_enabled_title" name="mod_god_mode_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_death" name="mod_temperature_protection_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1740620875" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_temperature_protection_enabled_title" name="mod_temperature_protection_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_death" name="mod_disable_killzones_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_disable_killzones_enabled_title" name="mod_disable_killzones_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_death" name="mod_no_fall_damage_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_no_fall_damage_enabled_title" name="mod_no_fall_damage_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_cheats_traversal_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="false"
+      localize="false" active="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_cheats_traversal_accordion" name="mod_cheats_traversal"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_traversal" name="mod_stealth_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1739647700" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_stealth_enabled_title" name="mod_stealth_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_traversal" name="mod_power_walking_increase_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="SLIDER" inherit="DefaultSlider" parent="mod_power_walking_increase_title" name="mod_power_walking_increase"
+      position.x="0.04" align="VCENTER" slider.ninepatch_width="230" slider.value="0" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_power_walking_hud" name="mod_power_walking_hud_title"
+      scale="0.7" position.x="-0.1" align="VCENTER,RIGHT" textbox.text_align="VCENTER" localize="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_power_walking_increase_title" name="mod_power_walking_hud"
+      position.x="0.86" align="VCENTER" checkbox.toggle_value_on_click="true" required_features="!MOBILE_UI" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_traversal" name="mod_auto_climb_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_auto_climb_enabled_title" name="mod_auto_climb_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_traversal" name="mod_rift_forwards_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_rift_forwards_title" name="mod_rift_forwards_craft"
+      scale="0.76" position.x="0.035" align="VCENTER" button.text_padding_horizontal="24" button.adjust_ninepatch_width_based_on_text_length="true" active="false" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_cheats_weapons_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="false"
+      localize="false" active="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_cheats_weapons_accordion" name="mod_cheats_weapons"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_weapons" name="mod_break_spirits_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1776769782" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_break_spirits_enabled_title" name="mod_break_spirits_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_weapons" name="mod_infinite_items_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1751674944" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_infinite_items_enabled_title" name="mod_infinite_items_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_weapons" name="mod_more_item_slots_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1768953111" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_more_item_slots_enabled_title" name="mod_more_item_slots_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_more_item_slots_enabled" name="mod_more_item_slots_enabled_warning"
+      color="1,1,0,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="400"
+      localize="false" visible="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_weapons" name="mod_more_melee_targets_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" visible="false" user_string="1714857960" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_more_melee_targets_enabled_title" name="mod_more_melee_targets_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_weapons" name="mod_one_hit_enemies_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" visible="false" user_string="1786811640" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_one_hit_enemies_enabled_title" name="mod_one_hit_enemies_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_weapons" name="mod_faster_melee_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_faster_melee_enabled_title" name="mod_faster_melee_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_weapons" name="mod_auto_attack_controller_title"
+      align="VCENTER,RIGHT" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1719731405" />
+    <node type="ALIGNER" inherit="DefaultAligner" parent="mod_auto_attack_controller_title" name="mod_auto_attack_controller_aligner"
+      position.x="0.03" align="VCENTER" aligner.area_width="340" aligner.layout="STACK" aligner.fixed_num_rows="1"
+      aligner.align_y_axis="false" aligner.min_padding="0" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_auto_attack_controller_aligner" name="mod_auto_attack_controller_gamepad"
+      align="VCENTER" button.adjust_ninepatch_width_based_on_text_length="true" button.text_padding_vertical="0" button.text_padding_horizontal="12"
+      button.text_scale_idle="0.2" button.text_scale_over="0.2" button.text_scale_pressed="0.2" button.text_scale_disabled="0.2"
+      button.bitmap_color_over="0.75,0.75,0.75,1" button.bitmap_color_pressed="0.5,0.5,0.5,1" button.text_color_idle="1,1,1,1" localize="false" active="false" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_auto_attack_controller_aligner" name="mod_auto_attack_controller_gamepad_title"
+      scale="0.6" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="140" localize="false" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_auto_attack_controller_aligner" name="mod_auto_attack_controller_wasdmouse"
+      align="VCENTER" button.adjust_ninepatch_width_based_on_text_length="true" button.text_padding_vertical="0" button.text_padding_horizontal="12"
+      button.text_scale_idle="0.2" button.text_scale_over="0.2" button.text_scale_pressed="0.2" button.text_scale_disabled="0.2"
+      button.bitmap_color_over="0.75,0.75,0.75,1" button.bitmap_color_pressed="0.5,0.5,0.5,1" button.text_color_idle="1,1,1,1" localize="false" active="false" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_auto_attack_controller_aligner" name="mod_auto_attack_controller_wasdmouse_title"
+      scale="0.6" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="140" localize="false" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_cheats_loot_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="false"
+      localize="false" active="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_cheats_loot_accordion" name="mod_cheats_loot"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_loot" name="mod_material_magnet_plus_percent_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" visible="false" />
+    <node type="SLIDER" inherit="DefaultSlider" parent="mod_material_magnet_plus_percent_title" name="mod_material_magnet_plus_percent"
+      position.x="0.04" align="VCENTER" slider.ninepatch_width="330" slider.value="0" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_loot" name="mod_auto_material_transporter_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_auto_material_transporter_enabled_title" name="mod_auto_material_transporter_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_auto_material_transporter_enabled" name="mod_auto_material_transporter_enabled_notice"
+      color="0.67,0.67,0.67,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="245"
+      localize="false" visible="false" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_auto_material_transporter_hud" name="mod_auto_material_transporter_hud_title"
+      scale="0.7" position.x="-0.1" align="VCENTER,RIGHT" textbox.text_align="VCENTER" localize="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_auto_material_transporter_enabled_title" name="mod_auto_material_transporter_hud"
+      position.x="0.86" align="VCENTER" checkbox.toggle_value_on_click="true" required_features="!MOBILE_UI" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_loot" name="mod_free_wells_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1717753880" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_free_wells_enabled_title" name="mod_free_wells_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_free_wells_enabled" name="mod_free_wells_enabled_warning"
+      color="1,1,0,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="400"
+      localize="false" visible="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_loot" name="mod_fertilizer_multiplier_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="SLIDER" inherit="DefaultSlider" parent="mod_fertilizer_multiplier_title" name="mod_fertilizer_multiplier_slider"
+      position.x="0.04" align="VCENTER" slider.ninepatch_width="245" slider.value="0" />
+    <node type="EDITBOX" inherit="DefaultEditbox" parent="mod_fertilizer_multiplier_slider" name="mod_fertilizer_multiplier"
+      color="0.67,0.67,0.67,1" position.x="1.025" align="VCENTER" editbox.ninepatch_width="80" editbox.padding="10" editbox.text="" active="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_loot" name="mod_plenty_of_fish_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_plenty_of_fish_enabled_title" name="mod_plenty_of_fish_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_loot" name="mod_loot_drop_bonus_amount_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" visible="false" user_string="1753730509" />
+    <node type="SLIDER" inherit="DefaultSlider" parent="mod_loot_drop_bonus_amount_title" name="mod_loot_drop_bonus_amount"
+      position.x="0.04" align="VCENTER"
+      slider.ninepatch_width="275" slider.linked_value_ui_property="mod_loot_drop_bonus_amount_number:editbox.text" slider.value="0" />
+    <node type="EDITBOX" inherit="DefaultEditbox" parent="mod_loot_drop_bonus_amount" name="mod_loot_drop_bonus_amount_number"
+      color="0.67,0.67,0.67,1" position.x="1.025" align="VCENTER"
+      editbox.ninepatch_width="50" editbox.padding="15" editbox.accepts_numbers_only="true" editbox.number_value_decimals="0" editbox.text="" editbox.is_read_only="true"
+      active="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_loot" name="mod_bigger_backpack_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1768942920" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_bigger_backpack_title" name="mod_bigger_backpack_craft"
+      scale="0.76" position.x="0.035" align="VCENTER" button.text_padding_horizontal="24" button.adjust_ninepatch_width_based_on_text_length="true" active="false" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_cheats_time_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="false"
+      localize="false" active="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_cheats_time_accordion" name="mod_cheats_time"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_time" name="mod_change_time_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1719305256" />
+    <node type="BUTTON" inherit="SmallButton" parent="mod_change_time_title" name="mod_change_time_use"
+      scale="0.76" position.x="0.035" align="VCENTER" button.text_padding_horizontal="24" button.adjust_ninepatch_width_based_on_text_length="true" localize="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_time" name="mod_boost_refiner_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_boost_refiner_enabled_title" name="mod_boost_refiner_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_time" name="mod_instant_farming_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_instant_farming_enabled_title" name="mod_instant_farming_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_instant_farming_enabled" name="mod_instant_farming_enabled_warning"
+      color="1,1,0,1" scale="0.7" position.x="1.5" align="VCENTER" textbox.text_align="VCENTER" textbox.textbox_width="400"
+      localize="false" visible="false" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_time" name="mod_speed_fishing_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_speed_fishing_enabled_title" name="mod_speed_fishing_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_time" name="mod_well_prepared_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_well_prepared_enabled_title" name="mod_well_prepared_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_time" name="mod_sleep_anytime_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1716293160" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_sleep_anytime_enabled_title" name="mod_sleep_anytime_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_time" name="mod_speedhack_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1739647700" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_speedhack_enabled_title" name="mod_speedhack_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_time" name="mod_world_time_multiplier_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1752630736" />
+    <node type="SLIDER" inherit="DefaultSlider" parent="mod_world_time_multiplier_title" name="mod_world_time_multiplier_slider"
+      position.x="0.04" align="VCENTER" slider.ninepatch_width="245" slider.value="0" />
+    <node type="EDITBOX" inherit="DefaultEditbox" parent="mod_world_time_multiplier_slider" name="mod_world_time_multiplier"
+      color="0.67,0.67,0.67,1" position.x="1.025" align="VCENTER" editbox.ninepatch_width="80" editbox.padding="10" editbox.text="" active="false" />
+
+
+    <node type="ACCORDION" inherit="EditorAccordion" parent="Tab_Mods" name="mod_cheats_minigames_accordion"
+      accordion.bm_ninepatch="editor/ui/gfx/button-ninepatch-pressed.png" shader_effect="DecayPanel"
+      accordion.ninepatch_width="725" accordion.ninepatch_height="40" accordion.ninepatch_margin="15"
+      accordion.content_padding_top="0" accordion.content_padding_bottom="15" accordion.text_scale="1.5" accordion.is_open="false"
+      localize="false" active="false" visible="false" />
+    <node type="ALIGNER" inherit="EditorAlignerAccordionStack" parent="mod_cheats_minigames_accordion" name="mod_cheats_minigames"
+      align="HCENTER" aligner.layout="STACK" aligner.automatic_area_width="true" aligner.min_padding="12" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_minigames" name="mod_crack_tombs_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1719862789" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_crack_tombs_enabled_title" name="mod_crack_tombs_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_minigames" name="mod_electrifying_grenade_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1739905847" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_electrifying_grenade_enabled_title" name="mod_electrifying_grenade_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_minigames" name="mod_defeat_horde_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" user_string="1719916164" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_defeat_horde_enabled_title" name="mod_defeat_horde_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="mod_cheats_minigames" name="mod_beat_gembine_enabled_title"
+      align="RIGHT,VCENTER" textbox.textbox_width="360" textbox.text_align="RIGHT,VCENTER"
+      localize="false" active="true" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_beat_gembine_enabled_title" name="mod_beat_gembine_enabled"
+      position.x="0.04" align="VCENTER" checkbox.toggle_value_on_click="true" />
+
+
+    <node type="MARKER" inherit="DefaultMarker" parent="Tab_Mods" name="mod_cheats_bottom_spacer" align="BOTTOM,HCENTER" marker.area_height="40" visible="false" />
+
+
+    <node type="TEXTBOX" inherit="SmallTextbox" parent="Tab_Mods" name="mods_info"
+      color="0.67,0.67,0.67,1" align="HCENTER,VCENTER" textbox.text_align="HCENTER,VCENTER" textbox.textbox_width="725"
+      textbox.text="Click on the modpack and mod titles for more information." visible="false" />
+    <node type="MARKER" inherit="DefaultMarker" parent="Tab_Mods" name="mods_changelog_spacer" align="HCENTER" marker.area_height="20" visible="false" />
+    <node type="BUTTON" inherit="SmallButton" parent="Tab_Mods" name="mods_changelog"
+      scale="0.9" align="HCENTER,VCENTER" button.text_padding_horizontal="32" button.adjust_ninepatch_width_based_on_text_length="true"
+      button.text="Change Log" active="true" visible="false" />
+    <node type="MARKER" inherit="DefaultMarker" parent="Tab_Mods" name="mods_discord_spacer" align="HCENTER" marker.area_height="20" />
+    <node type="BUTTON" inherit="SmallButton" parent="Tab_Mods" name="mods_discord"
+      scale="0.9" align="HCENTER,VCENTER" button.text_padding_horizontal="32" button.adjust_ninepatch_width_based_on_text_length="true"
+      on_click_script_call="NX_CallExtension (\"OpenURL\", LocalizeText(\"https://discord.com/channels/359262019045687298/932928692861173781\"));"
+      button.text="Questions?" active="true" />
+    <node type="MARKER" inherit="DefaultMarker" parent="Tab_Mods" name="mods_bottom_spacer" align="HCENTER" marker.area_height="40" />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

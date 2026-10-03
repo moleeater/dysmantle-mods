@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="POINT_OF_INTEREST" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="150" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="0.71" g="0.49" b="0.28" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="requested_materials" type="STRING" flags="PERSISTENT,SAVE_STATE" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="WISHING_WELL" />
+    <node id="time_used" type="INTEGER" flags="PERSISTENT,SAVE_STATE" value="0" />
+    <node id="time_to_wait" type="INTEGER" value="1800" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleBehavioral">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="accept"
+     forced_animation_length_in_seconds="3.00"
+     event_0_trigger_time="0.9"
+     event_0_id="sfx"
+     event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/wishing-well-accept|Q|}}"
+     event_1_trigger_time="1"
+     event_1_id="effect"
+     event_1_effect="effects/wishing-well-reward.xml"
+     event_1_spawn_effect_offset_z="-46.91"
+     event_2_trigger_time="2.76"
+     event_2_id="reward"
+     event_2_spawn_effect_angle_z="-0.04"
+     event_2_spawn_effect_offset_z="-50.31"
+     event_2_command_word="search_materials"
+    />
+
+    <node id="reject"
+     event_0_trigger_time="0"
+     event_0_id="effect"
+     event_0_effect="effects/wishing-well-rejected.xml"
+     event_0_spawn_effect_offset_z="-25.44"
+     event_1_trigger_time="0"
+     event_1_id="sfx"
+     event_1_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/wishing-well-reject|Q|}}"
+    />
+
+    <node id="material_received" event_0_trigger_time="0" event_0_id="id0" event_0_effect="effects/wishing-well-input.xml" event_0_spawn_effect_offset_z="-40.48" />
+    <node id="idle"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     forced_animation_length_in_seconds="0.25"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/wishing-well-idle.xml"
+     event_0_spawn_effect_offset_z="-19.66"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="4.95" />
+    <node id="shadow_alpha" value="0.75" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="model" value="models/interactives/wishing-well.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="use"
+        interaction_0_localize="0"
+        interaction_0_disable_after_interaction="0"
+        interaction_0_external_script="scripts/interactions/wishing-well-press-button-use-use.nut"
+        interaction_0_trigger="PRESS_BUTTON"
+        interaction_0_controller_button="USE"
+        interaction_0_attach_offset="0,0,-60"
+      interaction_1_id="init"
+        interaction_1_external_script="scripts/interactions/wishing-well-on-game-start.nut"
+        interaction_1_trigger="ON_GAME_START"
+      interaction_2_id="reward"
+        interaction_2_disable_after_interaction="0"
+        interaction_2_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local id = &#34;puid&#34; + StageObject_GetPersistentUniqueId(so_self);&#10;&#9;local state = Game_GetWorldState(&#34;WISHING_WELLS&#34;, id);&#10;&#9;local level = state ? state.tointeger() : 1;&#10;&#10;&#9;local requested_materials = Game_GetWishingWellRequestedMaterials(so_self, level+1);&#10;&#9;StageObject_SetKeyValueString(so_self, &#34;requested_materials&#34;, requested_materials);&#10;&#10;&#9;local time_now = Game_GetWorldTimeSecondsAsRealTimeSeconds();&#10;&#9;StageObject_SetKeyValueInteger(so_self, &#34;time_used&#34;, time_now);&#10;&#10;&#9;Actor_InteractWithInteraction(so_self, so_activator, &#34;init&#34;);&#10;&#9;Actor_SetInteractionEnabled(so_self, &#34;use&#34;, true);&#10;&#10;&#9;local prev_requested_materials = StageObject_GetKeyValue(so_self, &#34;prev_requested_materials&#34;);&#10;&#9;Game_GiveWishingWellReward(so_self, level, prev_requested_materials);&#10;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#9;//local reward = StageObject_GetKeyValue(so_self, &#34;reward_&#34; + level);&#10;&#9;//Game_SpawnMaterials(so_self, 0, reward);&#10;}"
+        interaction_2_trigger="ON_COMMAND_WORD"
+        interaction_2_trigger_command_word="search_materials"
+      interaction_3_id="timeout"
+        interaction_3_disable_after_interaction="0"
+        interaction_3_external_script="scripts/interactions/wishing-well-press-button-use-timeout.nut"
+        interaction_3_trigger="PRESS_BUTTON"
+        interaction_3_controller_button="USE"
+        interaction_3_text="Investigate"
+        interaction_3_attach_offset="0,0,-60"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="CYLINDER" />
+    <node id="radius_xy" value="43.5" />
+    <node id="min_z" value="-45.3" />
+    <node id="max_z" value="0.0" />
+  </array>
+
+</root>

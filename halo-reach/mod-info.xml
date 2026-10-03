@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="load_priority" value="0" />
+    <node id="author" value="MoleEater" />
+    <node id="title" value="Halo reach: vanilla range" />
+    <node id="description" value="Melee weapons have all-around range, hitting anything surrounding you. To hit multiple objects in a swing, use the More melee targets mod.
+
+This version has a vanilla range, only the angle is changed.
+
+Troubleshooting: https://dysmantle.fandom.com/wiki/Modding
+
+Are you impatient or trying to minimize the grind? This mod changes melee weapons to have an all-around 360 degree attack range. All main melee weapons included (no shovel, no fishing pole), from the Crowbar to the Power Fist, so you can ease your life from the start of a new game. But all the weapons keep their same damage amounts, which means you can not sequence-break the game or quests, you can only cheat the enemy fights and the time.
+
+It is meant to be used with the More melee targets mod from the Cheats modpack which allows you to damage 90 objects in one melee swing, but the modification of this mod can not be toggled in the game, so this must be packaged and installed separatelly, because not every user of the Cheats modpack wants this mod.
+" />
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

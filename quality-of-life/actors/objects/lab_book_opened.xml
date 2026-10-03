@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="objects/lab_book_opened" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="tags" value="TABLEWARE,MOD_OCPD_MINIMAP,MOD_ONE_HIT_OBJECTS,PET_IGNORE_ATTACK,READABLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE" />
+    <node id="physics_material" value="CARDBOARD" />
+    <node id="mass" value="100" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="1" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="200" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.5" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="500" />
+    <node id="friend_avoidance_radius" value="30" />
+    <node id="initial_scale" value="0.9" />
+    <node id="damage" value="0" />
+    <node id="range" value="100" />
+    <node id="max_hit_points" value="100" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="text" type="STRING" flags="PERSISTENT,LOCALIZED" />
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="SCRAP_FABRIC" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="DISMANTLABLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="AI_PARAMETERS" ai="Null">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death" category="DEATH" animation_controller="PhysicsMaterialBasedDeath" force_update_visual_bounds="true" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="model" value="models/objects/lab_book_opened.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+    <node interaction_0_id="read"
+     interaction_0_disable_after_interaction="0"
+     interaction_0_external_script="scripts/interactions/readable-sign.nut"
+     interaction_0_trigger="PRESS_BUTTON"
+     interaction_0_controller_button="USE"
+     interaction_0_text="Read"
+     interaction_0_radius="100"
+     interaction_0_attach_offset="0,0,-5"
+     interaction_1_id="init"
+     interaction_1_external_script="scripts/interactions/readable-sign-init.nut"
+     interaction_1_trigger="ON_GAME_START"
+     interaction_1_radius="100"
+    />
+
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="BOX" />
+    <node id="size_x" value="24.8" />
+    <node id="size_y" value="28.7" />
+    <node id="size_z" value="3.5" />
+    <node id="offset_z" value="-1.9" />
+  </array>
+</root>

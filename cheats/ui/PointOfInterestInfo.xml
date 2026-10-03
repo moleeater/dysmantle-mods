@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="SHADERFILTER"
+     inherit="DefaultShaderFilter"
+     on_click_script_call="UI_PopScreen();"
+     shaderfilter.cache_results="true"
+    />
+
+    <node
+     name="panel"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanel"
+     position.x="0.499666"
+     position.y="0.498799"
+     ui_scale_modifier="0.25"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="684"
+     ninepatch.automatic_content_height="true"
+    />
+
+    <node
+     name="aligner_1"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel"
+     position.x="-8.95604e-05"
+     position.y="-0.499132"
+     scale="1.04225"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="548.667"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="4"
+    />
+
+    <node
+     name="marker_6"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_1"
+     align="VCENTER,HCENTER"
+     marker.area_width="139.852"
+     marker.area_height="33.0173"
+    />
+
+    <node
+     name="panel2"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanelInner"
+     parent="aligner_1"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="90"
+     ninepatch.rectangle_height="90"
+    />
+
+    <node
+     name="ItemIcon"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="panel2"
+     position.x="0.00197646"
+     position.y="0.0144846"
+     custom_draw="true"
+     scale="1.09239"
+     align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="marker_5"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_1"
+     align="VCENTER,HCENTER"
+     marker.area_width="139.852"
+     marker.area_height="31.7025"
+    />
+
+    <node
+     name="Name"
+     type="TEXTBOX"
+     inherit="MediumTextbox"
+     parent="aligner_1"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.62111"
+     align="VCENTER,HCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="930"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="Coordinates"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_1"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.762693"
+     align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="Type"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="panel2"
+     position.y="0.582593"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.762693"
+     align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="marker_4"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_1"
+     align="VCENTER,HCENTER"
+     marker.area_width="139.852"
+     marker.area_height="18.5551"
+    />
+
+    <node
+     name="Desc"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_1"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.687938"
+     align="HCENTER"
+     textbox.textbox_width="830"
+     textbox.text_align="HCENTER"
+    />
+
+    <node
+     name="marker_2"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_1"
+     align="VCENTER,HCENTER"
+     marker.area_width="139.852"
+     marker.area_height="2.42788"
+    />
+
+    <node
+     name="goals_centerer"
+     type="NINEPATCH"
+     inherit="DefaultNinePatch"
+     parent="aligner_1"
+     color="1,1,1,0.4"
+     scale="1.03935"
+     align="VCENTER,HCENTER"
+     ninepatch.bitmap="!NONE"
+     ninepatch.automatic_content_width="true"
+     ninepatch.automatic_content_height="true"
+     ninepatch.automatic_content_padding="0"
+    />
+
+    <node
+     name="ProgressBar"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="panel"
+     position.x="0.00142098"
+     position.y="0.37903"
+     visible="false"
+     custom_draw="true"
+     align="VCENTER,HCENTER"
+     marker.area_width="273.778"
+     marker.area_height="23.7037"
+    />
+
+    <node
+     name="Track"
+     type="CHECKBOX"
+     inherit="TrackingCheckbox"
+     parent="aligner_1"
+     visible="false"
+     scale="0.874696"
+     checkbox.value="1"
+     checkbox.text="Start tracking this Quest"
+    />
+
+    <node
+     name="ButtonGroup"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_1"
+     scale="0.849072"
+     aligner.area_width="726.092"
+     aligner.area_height="97.8043"
+     aligner.fixed_num_rows="1"
+    />
+
+    <node
+     name="Listen"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="ButtonGroup"
+     visible="false"
+     button.text="Listen"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="ShowOnMap"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="ButtonGroup"
+     button.text="Show on Map"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="Travel"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="ButtonGroup"
+     visible="false"
+     button.text="Fast Travel"
+     button.ninepatch_width="260"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node parent="ButtonGroup" name="mod_crack_tombs"
+      type="BUTTON" inherit="DefaultButton"
+      button.bitmap_color_over="0.75,0.75,0.75,1"
+      button.bitmap_color_pressed="0.5,0.5,0.5,1"
+      button.adjust_ninepatch_width_based_on_text_length="true"
+      button.text_padding_horizontal="32"
+      localize="false"
+      active="false"
+      visible="false"
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="Back"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="ButtonGroup"
+     on_click_script_call="UI_PopScreen();"
+     button.text="OK"
+     button.ninepatch_width="250"
+    />
+
+  </array>
+</root>

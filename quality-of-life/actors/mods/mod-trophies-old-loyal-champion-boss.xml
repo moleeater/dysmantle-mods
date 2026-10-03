@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="INFO">
+		<node id="version" value="1" />
+		<node id="tags" value="HIDE_IN_EDITOR_PALETTE" />
+	</array>
+
+	<array id="ATTRIBUTES">
+		<node id="actor_flags" value="STATIC" />
+		<node id="physics_material" value="PLASTIC" />
+		<node id="mass" value="100" />
+		<node id="gravity_multiplier" value="1" />
+		<node id="turn_speed" value="1" />
+		<node id="move_acceleration" value="200" />
+		<node id="max_move_speed" value="1" />
+		<node id="dampening_factor_on_ground" value="0" />
+		<node id="dampening_factor_on_air" value="0" />
+		<node id="restitution_coefficient" value="0.5" />
+		<node id="friction" value="0.2" />
+		<node id="minimum_damage_threshold" value="0" />
+		<node id="aggro_radius" value="128" />
+		<node id="friend_avoidance_radius" value="10" />
+		<node id="initial_scale" value="1" />
+		<node id="damage" value="0" />
+		<node id="range" value="400" />
+		<node id="max_hit_points" value="100" />
+		<node id="friend_group" value="OBSTACLES" />
+		<node id="color" r="1" g="1" b="1" a="1" />
+	</array>
+
+	<array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+		<node id="color_material_1" type="COLOR" value="1,1,1,1" />
+		<node id="color_material_0" type="COLOR" value="1,0.795,0.650514,1" />
+	</array>
+
+	<array id="AI_PARAMETERS" ai="ObstacleAnimated">
+	</array>
+
+	<array id="ANIMATIONS">
+		<node id="pose.moving"
+		 animation_controller="SingleAnimationFrame"
+		 skeleton_animation="models/animations/humanoid-tomb-guard_melee_jogging-1h.anim"
+		 fade_in_duration="0"
+		 fade_out_duration="0"
+		 key_values="{{FLOAT,|Q|t|Q|,|Q|0.185|Q|}}"
+		/>
+
+		<node id="pose.stalk"
+		 animation_controller="SingleAnimationFrame"
+		 skeleton_animation="models/animations/humanoid-zombie_female_stalk.anim"
+		 fade_in_duration="0"
+		 fade_out_duration="0"
+		 key_values="{{FLOAT,|Q|t|Q|,|Q|0.406|Q|}}"
+		/>
+
+	</array>
+
+	<array id="RENDERER_PARAMETERS">
+		<node id="renderer" value="ModelSkinned" />
+		<node id="shadow_drawn_for_each_bone" value="true" />
+		<node id="shadow_method" value="NONE" />
+		<node id="receive_shadows" value="false" />
+		<node id="model" value="models/enemies/tomb-guard.model" />
+	</array>
+
+	<array id="PROPS">
+		<node id="melee_weapon" mount_bone_id="tool" actor_type="actors/tools/guard_boss_khopesh.xml" mount_scale="0.75" />
+		<node id="blob_1"
+		 mount_bone_id="shoulder.R"
+		 actor_type="actors/objects/corruption-prop-bubbles.xml"
+		 mount_scale="1.44"
+		 mount_offset_x="-1.98"
+		 mount_offset_y="5.14"
+		 mount_offset_z="-3.13"
+		/>
+
+		<node id="shield"
+		 mount_bone_id="arm-2.L"
+		 actor_type="actors/objects/archeology-shield.xml"
+		 mount_offset_x="-0.14"
+		 mount_offset_y="9.89"
+		 mount_offset_z="4"
+		 mount_rotation_angles_x="3.18016"
+		 mount_rotation_angles_y="0.0572468"
+		 mount_rotation_angles_z="1.85738"
+		/>
+
+	</array>
+
+	<array id="COLLIDER">
+		<node id="type" value="NONE" />
+	</array>
+</root>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="INFO">
+		<node id="version" value="1" />
+		<node id="tags" value="HIDE_IN_EDITOR_PALETTE" />
+	</array>
+
+	<array id="ATTRIBUTES">
+		<node id="actor_flags" value="STATIC" />
+		<node id="physics_material" value="PLASTIC" />
+		<node id="mass" value="100" />
+		<node id="gravity_multiplier" value="1" />
+		<node id="turn_speed" value="1" />
+		<node id="move_acceleration" value="200" />
+		<node id="max_move_speed" value="1" />
+		<node id="dampening_factor_on_ground" value="0" />
+		<node id="dampening_factor_on_air" value="0" />
+		<node id="restitution_coefficient" value="0.5" />
+		<node id="friction" value="0.2" />
+		<node id="minimum_damage_threshold" value="0" />
+		<node id="aggro_radius" value="128" />
+		<node id="friend_avoidance_radius" value="10" />
+		<node id="initial_scale" value="1" />
+		<node id="damage" value="0" />
+		<node id="range" value="400" />
+		<node id="max_hit_points" value="100" />
+		<node id="friend_group" value="OBSTACLES" />
+		<node id="color" r="1" g="1" b="1" a="1" />
+	</array>
+
+	<array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+		<node id="color_material_0" type="COLOR" value="0.83,0.4,0.37,1" />
+		<node id="color_material_1" type="COLOR" value="0.91,0.88,0.55,1" />
+		<node id="color_material_2" type="COLOR" value="0.85,0.59,0.92,1" />
+		<node id="color_material_4" type="COLOR" value="0.89,0.63,0.8,1" />
+	</array>
+
+	<array id="AI_PARAMETERS" ai="ObstacleAnimated">
+	</array>
+
+	<array id="ANIMATIONS">
+		<node id="pose.melee"
+		 animation_controller="SingleAnimationFrame"
+		 skeleton_animation="models/animations/humanoid-zombie_female_melee.anim"
+		 fade_in_duration="0"
+		 fade_out_duration="0"
+		 key_values="{{FLOAT,|Q|t|Q|,|Q|0.326|Q|}}"
+		/>
+
+		<node id="pose.leap"
+		 animation_controller="SingleAnimationFrame"
+		 skeleton_animation="models/animations/humanoid-zombie_female_leap-1.anim"
+		 fade_in_duration="0"
+		 fade_out_duration="0"
+		 key_values="{{FLOAT,|Q|t|Q|,|Q|0.478|Q|}}"
+		/>
+
+	</array>
+
+	<array id="RENDERER_PARAMETERS">
+		<node id="renderer" value="ModelSkinned" />
+		<node id="shadow_drawn_for_each_bone" value="true" />
+		<node id="shadow_method" value="NONE" />
+		<node id="receive_shadows" value="false" />
+		<node id="model" value="models/enemies/zombie-leaper.model" />
+	</array>
+
+	<array id="PROPS">
+		<node id="Warts-Arm_L_1" mount_bone_id="arm-2.L" actor_type="actors/objects/corruption-prop-warts-glow.xml" />
+		<node id="Warts-Arm_L_2"
+		 mount_bone_id="arm-2.L"
+		 actor_type="actors/objects/corruption-prop-warts-glow.xml"
+		 mount_scale="0.6"
+		 mount_offset_x="0"
+		 mount_offset_y="9"
+		 mount_offset_z="0"
+		/>
+
+		<node id="Warts-Arm_L_3"
+		 mount_bone_id="arm-1.L"
+		 actor_type="actors/objects/corruption-prop-warts-glow.xml"
+		 mount_scale="0.7"
+		 mount_offset_x="0"
+		 mount_offset_y="9"
+		 mount_offset_z="0"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="1.62316"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="Warts_Back"
+		 mount_bone_id="chest"
+		 actor_type="actors/objects/corruption-prop-warts-glow.xml"
+		 mount_offset_x="0"
+		 mount_offset_y="3"
+		 mount_offset_z="-3"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="3.76991"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="Warts-Arm_R_2"
+		 mount_bone_id="arm-2.R"
+		 actor_type="actors/objects/corruption-prop-warts-glow.xml"
+		 mount_offset_x="0"
+		 mount_offset_y="9"
+		 mount_offset_z="0"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="3.08923"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="Warts-Arm_R_1"
+		 mount_bone_id="arm-2.R"
+		 actor_type="actors/objects/corruption-prop-warts-glow.xml"
+		 mount_scale="0.7"
+		 mount_offset_x="0"
+		 mount_offset_y="2"
+		 mount_offset_z="0"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="1.8326"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="Warts_Leg_L"
+		 mount_bone_id="leg-2.L"
+		 actor_type="actors/objects/corruption-prop-warts.xml"
+		 mount_scale="0.7"
+		 mount_offset_x="3"
+		 mount_offset_y="20"
+		 mount_offset_z="0"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="5.55015"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="Warts_Leg_R"
+		 mount_bone_id="leg-2.R"
+		 actor_type="actors/objects/corruption-prop-warts.xml"
+		 mount_offset_x="0"
+		 mount_offset_y="20"
+		 mount_offset_z="0"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="4.17134"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="Warts-face_2"
+		 mount_bone_id="head"
+		 actor_type="actors/objects/corruption-prop-warts-glow.xml"
+		 mount_scale="0.4"
+		 mount_offset_x="1"
+		 mount_offset_y="3"
+		 mount_offset_z="5"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="3.15905"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="Warts-face_3"
+		 mount_bone_id="head"
+		 actor_type="actors/objects/corruption-prop-warts-glow.xml"
+		 mount_scale="0.3"
+		 mount_offset_x="2"
+		 mount_offset_y="1"
+		 mount_offset_z="3"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="2.19911"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="Warts_Back2"
+		 mount_bone_id="chest"
+		 actor_type="actors/objects/corruption-prop-warts-glow.xml"
+		 mount_offset_x="0"
+		 mount_offset_y="-1"
+		 mount_offset_z="-1"
+		 mount_rotation_angles_x="3.89208"
+		 mount_rotation_angles_y="3.76991"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="Warts_Back3"
+		 mount_bone_id="chest"
+		 actor_type="actors/objects/corruption-prop-warts-glow.xml"
+		 mount_offset_x="3"
+		 mount_offset_y="-1"
+		 mount_offset_z="-1"
+		 mount_rotation_angles_x="3.89208"
+		 mount_rotation_angles_y="4.85202"
+		 mount_rotation_angles_z="0"
+		/>
+
+	</array>
+
+	<array id="COLLIDER">
+		<node id="type" value="NONE" />
+	</array>
+</root>

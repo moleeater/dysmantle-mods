@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="INFO">
+    <node 
+      size="240"
+      diffuse="ground-tiles/textures/snow-diffuse.jpg"
+      normals="ground-tiles/textures/snow-normals.jpg"
+      specular="ground-tiles/textures/snow-specular.jpg"
+      physics_material="SNOW"
+      temperature_modifier="-20"
+      forced_tile_pattern_marker="G"
+      />
+  </array>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="KEY_VALUES">
+    <node key.STRING.ambience_id="MOD_SNOWFALL" />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+</root>

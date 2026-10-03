@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="INFO">
+    <node id="mod_version" value="0.1.0" />
+    <node id="load_priority" value="0" />
+    <node id="tags" value="LOCALIZATION" />
+    <node id="author" value="Sendker" />
+    <node id="title" value="Polish translation" />
+    <node id="description" value="Tlumaczenie tresci gry na jezyk polski, obejmujace dialogi, opisy i interfejs, aby polscy gracze mogli w pelni zrozumiec i cieszyc sie rozgrywka w swoim ojczystym jezyku." />
+  </array>
+</root>

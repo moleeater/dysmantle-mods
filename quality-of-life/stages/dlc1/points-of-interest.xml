@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="stages/dlc1/index.xml">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node puid="234037" chunk="117" pos="25479;3366;-475" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="238030" chunk="119" pos="28510;3583;-240" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="330106" chunk="165" pos="26003;3834;-481" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="330107" chunk="165" pos="25869;3776;-479" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="330108" chunk="165" pos="25905;3914;-485" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="332013" chunk="166" pos="27254;3934;-360" area="0" so_id="puid332013" type="CAMPFIRE" parm="Crystal Caves" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="332100" chunk="166" pos="27478;4150;-361" area="0" so_id="puid332100" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="334016" chunk="167" pos="27975;4043;-240" area="0" so_id="puid334016" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="334019" chunk="167" pos="28710;4110;-240" area="0" so_id="puid334019" type="MANA_CHAMBER" actor_type="actors/interactives/mana-chamber.xml" />
+    <node puid="334099" chunk="167" pos="28530;4514;-240" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="334112" chunk="167" pos="28221;3854;-240" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="336081" chunk="168" pos="28859;3879;-240" area="0" so_id="boss_mana_spirit" type="ENEMY_BOSS" actor_type="actors/enemies/boss-mana-spirit.xml" />
+    <node puid="350129" chunk="175" pos="37531;4698;0" area="0" so_id="puid350129" type="CAMPFIRE" parm="Safe Haven" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="350168" chunk="175" pos="37987;4488;300" area="0" so_id="puid350168" type="FISHING_SPOT" parm="MANA_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="420090" chunk="210" pos="21990;5970;-360" area="0" type="FARMABLE" actor_type="actors/interactives/farming-plant-bed.xml" />
+    <node puid="430184" chunk="215" pos="27621;5416;-480" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="446187" chunk="223" pos="38136;5124;-22" area="0" so_id="puid446187" custom_display_name="Lobster Salad" type="RECIPE_DISH" recipe="DISH_LOBSTER_SALAD" actor_type="actors/objects/chest.xml" />
+    <node puid="448267" chunk="224" pos="39436;5693;-180" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="448268" chunk="224" pos="39084;5585;-180" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="448292" chunk="224" pos="39491;5439;-180" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="448295" chunk="224" pos="39348;5518;-180" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="448304" chunk="224" pos="39133;5408;-180" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="450173" chunk="225" pos="39659;5611;-187" area="0" so_id="ENERGY_RELAY_2" type="ENERGY_RELAY" actor_type="actors/interactives/energy-relay.xml" />
+    <node puid="450179" chunk="225" pos="39672;5896;-120" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="450200" chunk="225" pos="39707;5705;-180" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="452183" chunk="226" pos="40933;5853;-120" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="452218" chunk="226" pos="41145;5929;-120" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="516186" chunk="258" pos="21990;6090;-360" area="0" so_id="puid516186" type="QUEST" parm="quests/mana-seed-bag.nut" actor_type="actors/interactives/quest-trigger.xml" />
+    <node puid="516248" chunk="258" pos="22737;6748;-360" area="0" so_id="puid516248" custom_display_name="Doc's House Key" type="KEY" key="DOCS_HOUSE_KEY" actor_type="actors/objects/desk-30s.xml" />
+    <node puid="516319" chunk="258" pos="22110;6090;-360" area="0" type="FARMABLE" actor_type="actors/interactives/farming-plant-bed.xml" />
+    <node puid="516320" chunk="258" pos="21930;6150;-360" area="0" type="FARMABLE" actor_type="actors/interactives/farming-plant-bed.xml" />
+    <node puid="518119" chunk="259" pos="23348;6877;-226" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="520142" chunk="260" pos="24321;6947;-469" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="520143" chunk="260" pos="24372;6827;-469" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="522062" chunk="261" pos="25493;6295;-226" area="0" so_id="puid522062" type="STASH" actor_type="actors/interactives/stash-trigger.xml" />
+    <node puid="522175" chunk="261" pos="25300;6975;-480" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="526211" chunk="263" pos="28200;6459;-480" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="526212" chunk="263" pos="28254;6153;-480" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="544203" chunk="272" pos="39515;6394;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="544226" chunk="272" pos="38628;7028;-120" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="544239" chunk="272" pos="38756;6805;-120" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="544240" chunk="272" pos="39462;6667;-240" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="546099" chunk="273" pos="39966;6766;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="546125" chunk="273" pos="40363;6224;-142" area="0" so_id="puid546125" type="FIXABLE" actor_type="actors/objects/drawbridge.xml" />
+    <node puid="546156" chunk="273" pos="40056;6228;-142" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="546230" chunk="273" pos="39840;6630;-240" area="0" so_id="puid546230" type="MANA_CHAMBER" actor_type="actors/interactives/mana-chamber.xml" />
+    <node puid="546231" chunk="273" pos="40799;6192;-120" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="546295" chunk="273" pos="40429;6714;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="546298" chunk="273" pos="40410;6510;60" area="0" so_id="puid546298" type="FISHING_SPOT" parm="MANA_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="548107" chunk="274" pos="41236;7099;-180" area="0" so_id="puid548107" custom_display_name="Mana Crossbow" type="RECIPE" recipe="MANA_CROSSBOW" actor_type="actors/objects/chest.xml" />
+    <node puid="548169" chunk="274" pos="41010;6540;-120" area="0" so_id="puid548169" type="QUEST" parm="quests/building-sawmills.nut" actor_type="actors/interactives/quest-trigger.xml" />
+    <node puid="548173" chunk="274" pos="41010;6630;-120" area="0" so_id="puid548173" type="REFINER_SAWMILL" actor_type="actors/interactives/sawmill.xml" />
+    <node puid="548188" chunk="274" pos="41481;6341;-120" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="548242" chunk="274" pos="40972;6227;-120" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="614001" chunk="307" pos="23448;7705;-360" area="0" so_id="puid614001" type="CAMPFIRE" parm="Hidden Workshop" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="614040" chunk="307" pos="23040;7381;-364" area="0" so_id="hidden_workshop" type="FIXABLE" actor_type="actors/objects/ropebridge-1-fixable.xml" />
+    <node puid="614096" chunk="307" pos="23898;7487;-360" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="628181" chunk="314" pos="32304;7217;-219" area="0" so_id="puid628181" type="CAMPFIRE" parm="Glimpse" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="632134" chunk="316" pos="33986;7830;-221" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="634300" chunk="317" pos="35459;8273;-382" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="640217" chunk="320" pos="39097;8216;-142" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="640219" chunk="320" pos="38426;8301;-240" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="642129" chunk="321" pos="40020;8176;-122" area="0" so_id="puid642129" type="CAMPFIRE" parm="Colony of the Divided" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="642317" chunk="321" pos="40504;7434;-262" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="642337" chunk="321" pos="39969;7203;-82" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="642389" chunk="321" pos="40693;7317;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="642390" chunk="321" pos="39971;7749;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="642391" chunk="321" pos="40780;7383;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="644081" chunk="322" pos="41255;7978;-142" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="644120" chunk="322" pos="41783;7203;-180" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="644232" chunk="322" pos="41055;8220;-144" area="0" so_id="colony_bridge" type="FIXABLE" actor_type="actors/objects/ropebridge-1-fixable.xml" />
+    <node puid="646060" chunk="323" pos="42521;7573;-120" area="0" so_id="puid646060" type="STASH" actor_type="actors/interactives/stash-trigger.xml" />
+    <node puid="648146" chunk="324" pos="43903;7626;-1" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="648150" chunk="324" pos="44099;8355;12" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="648151" chunk="324" pos="43915;8020;15" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="650062" chunk="325" pos="44760;8220;-30" area="2" so_id="puid650062" type="BURIED_TREASURE" parm="BATTLEBEACH" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="652172" chunk="326" pos="45840;7589;50" area="2" so_id="puid652172" type="STASH" actor_type="actors/interactives/stash-trigger.xml" />
+    <node puid="652203" chunk="326" pos="46754;7879;-240" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="652204" chunk="326" pos="46251;7649;-240" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-leaper.xml" />
+    <node puid="654003" chunk="327" pos="46865;7426;-240" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="654169" chunk="327" pos="47844;8108;-240" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="714082" chunk="357" pos="25470;8910;-240" area="0" so_id="puid714082" type="WISHING_WELL" actor_type="actors/interactives/wishing-well.xml" />
+    <node puid="714122" chunk="357" pos="25403;8806;-246" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="716048" chunk="358" pos="27557;9171;-479" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="716094" chunk="358" pos="27456;9067;-478" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="716095" chunk="358" pos="27377;9283;-477" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="716096" chunk="358" pos="26621;9500;-360" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="716125" chunk="358" pos="26626;9371;-360" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="716126" chunk="358" pos="26750;9262;-360" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="718049" chunk="359" pos="28254;8768;-470" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="718107" chunk="359" pos="28313;8653;-461" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="720197" chunk="360" pos="28980;8520;-420" area="0" so_id="puid720197" type="FISHING_SPOT" parm="MANA_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="724123" chunk="362" pos="32190;9153;0" area="0" so_id="puid724123" custom_display_name="Thimble" type="RECIPE" recipe="THIMBLE" actor_type="actors/objects/chest.xml" />
+    <node puid="724174" chunk="362" pos="32102;9463;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee-advanced.xml" />
+    <node puid="726152" chunk="363" pos="33395;9255;-1" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="726238" chunk="363" pos="33259;9112;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="728165" chunk="364" pos="34491;9252;-8" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="728167" chunk="364" pos="33643;8820;-230" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="728191" chunk="364" pos="33744;8988;-237" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="730185" chunk="365" pos="34928;9561;-0" area="0" so_id="puid730185" type="STASH" actor_type="actors/interactives/stash-trigger.xml" />
+    <node puid="730212" chunk="365" pos="35815;9050;-262" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="730213" chunk="365" pos="35619;8898;-230" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="730214" chunk="365" pos="35410;8650;-237" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="730215" chunk="365" pos="35373;9093;-213" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="730216" chunk="365" pos="35947;8407;-240" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="730323" chunk="365" pos="35274;8609;-442" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="732117" chunk="366" pos="37042;8762;-230" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="732181" chunk="366" pos="36183;9263;-242" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="732182" chunk="366" pos="36933;8722;-231" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="734175" chunk="367" pos="37215;8500;-216" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="734176" chunk="367" pos="37370;8778;-219" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="734206" chunk="367" pos="38224;9390;-232" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="734207" chunk="367" pos="37399;8500;-240" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="738124" chunk="369" pos="40546;8496;-165" area="0" so_id="puid738124" type="AUDIO_LOG" parm="UNDERWORLD_FATE" actor_type="actors/interactives/tape-recorder.xml" />
+    <node puid="738179" chunk="369" pos="39894;8494;-120" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="738208" chunk="369" pos="40522;8699;-120" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="738222" chunk="369" pos="40677;9419;-120" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="738223" chunk="369" pos="40598;9378;-120" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="738224" chunk="369" pos="40479;9435;-120" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="742145" chunk="371" pos="42717;8966;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="742146" chunk="371" pos="43000;9030;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="742147" chunk="371" pos="42957;8823;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="744102" chunk="372" pos="44256;9379;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="744108" chunk="372" pos="43241;8633;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="746069" chunk="373" pos="44974;9444;0" area="2" so_id="OBELISK_OF_GROWTH" type="ARENA_OBELISK" actor_type="actors/interactives/arena-obelisk.xml" />
+    <node puid="746140" chunk="373" pos="45059;8931;-11" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="750159" chunk="375" pos="47631;9407;0" area="2" so_id="puid750159" type="CAMPFIRE" parm="Scavenger Hamlet" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="750249" chunk="375" pos="47233;9202;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="750250" chunk="375" pos="47877;8800;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="752218" chunk="376" pos="48865;8510;-240" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="754005" chunk="377" pos="49241;8960;-240" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="810087" chunk="405" pos="25815;10641;-474" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="810088" chunk="405" pos="25858;10768;-475" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="810138" chunk="405" pos="25731;10720;-479" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="814049" chunk="407" pos="28333;10752;-480" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="816059" chunk="408" pos="29764;10771;240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="818119" chunk="409" pos="30922;10568;240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="818123" chunk="409" pos="30811;10262;240" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="820178" chunk="410" pos="31308;9693;228" area="0" so_id="puid820178" type="STASH" actor_type="actors/interactives/stash-trigger.xml" />
+    <node puid="820187" chunk="410" pos="31887;9902;2" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="820224" chunk="410" pos="31926;10518;238" area="0" so_id="puid820224" type="BURIED_TREASURE" parm="NEAR_BIG_RIVER" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="820251" chunk="410" pos="32297;9698;0" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="822157" chunk="411" pos="33408;9894;-23" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="822158" chunk="411" pos="33403;10115;-6" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="822161" chunk="411" pos="32535;10160;4" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="822162" chunk="411" pos="33227;9771;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="822181" chunk="411" pos="33123;9778;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="824082" chunk="412" pos="34111;9668;2" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="824122" chunk="412" pos="33642;9943;-3" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="826155" chunk="413" pos="35646;9760;-240" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="826166" chunk="413" pos="34848;9760;-0" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="832134" chunk="416" pos="38768;9738;-382" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="832152" chunk="416" pos="38765;10193;-238" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="832162" chunk="416" pos="38759;10325;-246" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="834137" chunk="417" pos="39711;10436;-360" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="834138" chunk="417" pos="39793;10549;-360" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="834149" chunk="417" pos="40505;10713;-214" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="836155" chunk="418" pos="40949;10580;-228" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="836180" chunk="418" pos="41344;9939;-360" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="840146" chunk="420" pos="44183;9731;60" area="2" so_id="puid840146" type="FISHING_SPOT" parm="MANA_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="842172" chunk="421" pos="45245;10199;-0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="844145" chunk="422" pos="45961;10299;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="844146" chunk="422" pos="46384;10546;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="844147" chunk="422" pos="46122;10769;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="844148" chunk="422" pos="45904;10719;60" area="2" so_id="puid844148" type="FISHING_SPOT" parm="LEGENDARY_MANA_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="846035" chunk="423" pos="47280;10760;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="846036" chunk="423" pos="47517;10592;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="846171" chunk="423" pos="47586;9913;0" area="2" so_id="puid846171" type="QUEST" parm="quests/vault-into-past.nut" actor_type="actors/interactives/quest-trigger.xml" />
+    <node puid="848109" chunk="424" pos="48855;9716;60" area="2" so_id="puid848109" type="FISHING_SPOT" parm="MANA_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="848125" chunk="424" pos="48311;9755;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="902123" chunk="451" pos="23581;11737;-11" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="904098" chunk="452" pos="24231;11649;-12" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="904199" chunk="452" pos="24480;11945;-9" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="906102" chunk="453" pos="25487;11938;-0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="908038" chunk="454" pos="26893;11525;-478" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="908039" chunk="454" pos="27136;11760;-471" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="908040" chunk="454" pos="27128;11564;-488" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="910111" chunk="455" pos="27672;11500;-472" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="910117" chunk="455" pos="28230;11010;-474" area="0" so_id="puid910117" type="BURIED_TREASURE" parm="jalopy_cliffs" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="910125" chunk="455" pos="28237;11195;-476" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="912105" chunk="456" pos="29845;11066;240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="914139" chunk="457" pos="30234;10929;240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="914148" chunk="457" pos="30504;11380;235" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="914149" chunk="457" pos="30860;11172;228" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="914150" chunk="457" pos="30958;11076;208" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="916121" chunk="458" pos="32381;11609;11" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="916194" chunk="458" pos="32265;11913;-25" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="916216" chunk="458" pos="32332;11225;-5" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="916251" chunk="458" pos="31666;11498;240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="916256" chunk="458" pos="31681;11644;255" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="916257" chunk="458" pos="31762;11401;240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="918122" chunk="459" pos="32600;11981;0" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="918198" chunk="459" pos="32567;11458;13" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="920002" chunk="460" pos="34660;11289;-241" area="0" type="ANIMAL" actor_type="actors/animals/deer-male.xml" />
+    <node puid="924117" chunk="462" pos="36828;11089;-240" area="0" type="ANIMAL" actor_type="actors/animals/deer-female.xml" />
+    <node puid="924161" chunk="462" pos="36742;11097;-240" area="0" type="ANIMAL" actor_type="actors/animals/deer-baby-fawn.xml" />
+    <node puid="924162" chunk="462" pos="36764;11150;-240" area="0" type="ANIMAL" actor_type="actors/animals/deer-baby-fawn.xml" />
+    <node puid="928062" chunk="464" pos="39483;11579;-220" area="0" so_id="BT_DLC1_DLC1TOWERA_1" type="BURIED_TELEPORTER" parm="stages/pet-stages/pet-stage-DLC1-1.stage" actor_type="actors/interactives/buried-teleporter.xml" />
+    <node puid="928158" chunk="464" pos="39282;11135;-238" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="928177" chunk="464" pos="39000;11160;0" area="0" so_id="puid928177" type="BURIED_TREASURE" parm="DLC1_COLONY_PATH" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="928181" chunk="464" pos="38890;11954;0" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="928186" chunk="464" pos="38825;11487;0" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="930202" chunk="465" pos="39801;11044;-360" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" />
+    <node puid="930206" chunk="465" pos="40730;11869;-245" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="930216" chunk="465" pos="40609;11947;-246" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="930219" chunk="465" pos="39888;11520;-255" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="932081" chunk="466" pos="40982;10830;-228" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="932235" chunk="466" pos="41713;11029;-246" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="934144" chunk="467" pos="42441;11733;-120" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="934151" chunk="467" pos="42226;11021;-240" area="0" type="ANIMAL" actor_type="actors/animals/deer-male-mana.xml" />
+    <node puid="936130" chunk="468" pos="43549;10887;9" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="938170" chunk="469" pos="44484;10994;21" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="938171" chunk="469" pos="44587;10945;20" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="938173" chunk="469" pos="44571;11184;29" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="940182" chunk="470" pos="46408;11655;-240" area="2" type="DOGHOUSE" actor_type="actors/objects/dog-house.xml" />
+    <node puid="940207" chunk="470" pos="46328;11769;-240" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="942100" chunk="471" pos="47216;11975;-1" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="942115" chunk="471" pos="47194;11635;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="942116" chunk="471" pos="47462;11907;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="942141" chunk="471" pos="47603;11053;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="996045" chunk="498" pos="22689;12820;-3" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="996067" chunk="498" pos="22733;12328;-0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="996096" chunk="498" pos="22556;12488;-22" area="1" so_id="puid996096" type="BURIED_TREASURE" parm="DLC1_WEST_BEACH" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="998126" chunk="499" pos="23512;12699;-0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-stalker.xml" />
+    <node puid="998130" chunk="499" pos="23760;12480;60" area="1" so_id="puid998130" type="FISHING_SPOT" parm="GOOD_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="1000058" chunk="500" pos="24576;12228;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1000117" chunk="500" pos="24335;12921;-16" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1002173" chunk="501" pos="25366;12082;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1002195" chunk="501" pos="25592;12177;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1002196" chunk="501" pos="25202;12965;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1004079" chunk="502" pos="26937;12795;-368" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1004080" chunk="502" pos="26912;12716;-360" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1004165" chunk="502" pos="26933;13145;-375" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1004166" chunk="502" pos="26817;13128;-362" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1008160" chunk="504" pos="29789;12622;239" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1008172" chunk="504" pos="29747;12755;244" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1010214" chunk="505" pos="31147;12056;240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1010215" chunk="505" pos="31044;12560;241" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1012152" chunk="506" pos="31767;13037;260" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1012221" chunk="506" pos="31950;12030;-7" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1012240" chunk="506" pos="31923;13057;245" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1012243" chunk="506" pos="31428;12635;240" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1014094" chunk="507" pos="32659;12191;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1014157" chunk="507" pos="33277;13195;-232" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1014177" chunk="507" pos="32743;12647;0" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1014255" chunk="507" pos="33201;13167;-236" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1016235" chunk="508" pos="34322;12509;-300" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1016258" chunk="508" pos="34291;12392;-348" area="0" so_id="puid1016258" type="AUDIO_LOG" parm="UNDERWORLD_RUMORS" actor_type="actors/interactives/tape-recorder.xml" />
+    <node puid="1018220" chunk="509" pos="34852;12487;-300" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1018221" chunk="509" pos="35006;12338;-300" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1018222" chunk="509" pos="35034;13119;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1018223" chunk="509" pos="35142;12569;-300" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1018236" chunk="509" pos="35104;13013;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1018249" chunk="509" pos="35141;13191;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1020292" chunk="510" pos="36354;13034;-287" area="0" so_id="audio_log_ivory_entrance" type="AUDIO_LOG" parm="UNDERWORLD_DOC" actor_type="actors/interactives/tape-recorder.xml" />
+    <node puid="1022164" chunk="511" pos="38067;12724;-240" area="0" so_id="west_north_bridge" type="FIXABLE" actor_type="actors/objects/ropebridge-1-fixable.xml" />
+    <node puid="1022198" chunk="511" pos="37400;12905;-187" area="0" so_id="puid1022198" type="CAMPFIRE" parm="Broken Railroad" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1022227" chunk="511" pos="38366;12556;-142" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="1024027" chunk="512" pos="39368;12358;0" area="0" so_id="town_colony_bridge" type="FIXABLE" actor_type="actors/objects/ropebridge-1-fixable.xml" />
+    <node puid="1024139" chunk="512" pos="39120;12719;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="1026084" chunk="513" pos="40785;12553;0" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1026085" chunk="513" pos="40493;12079;-3" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1026087" chunk="513" pos="39905;12904;-20" area="0" so_id="puid1026087" type="BURIED_TREASURE" parm="DLC1_TOWN_EAST_CLIFF" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="1028133" chunk="514" pos="41377;12222;0" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1028134" chunk="514" pos="41309;12648;0" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1030112" chunk="515" pos="42314;12347;-0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1032149" chunk="516" pos="43483;13112;-120" area="2" so_id="puid1032149" type="TIMED_CHEST" actor_type="actors/interactives/timed-crate.xml" />
+    <node puid="1032164" chunk="516" pos="44209;12739;24" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1032165" chunk="516" pos="43660;12619;17" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1034058" chunk="517" pos="44534;12337;9" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1034060" chunk="517" pos="44898;12125;20" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1034111" chunk="517" pos="45270;13110;-59" area="2" so_id="puid1034111" type="WISHING_WELL" actor_type="actors/interactives/wishing-well.xml" />
+    <node puid="1036034" chunk="518" pos="46652;12710;3" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1036036" chunk="518" pos="46060;12679;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1036045" chunk="518" pos="45870;13156;4" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1036046" chunk="518" pos="45917;12964;-4" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1036081" chunk="518" pos="46320;12834;6" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1036147" chunk="518" pos="46473;12062;-240" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1038081" chunk="519" pos="47583;12350;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1038107" chunk="519" pos="47820;12780;-480" area="2" so_id="shelter_underworld_topside" type="SHELTER" parm="stages/shelters/shelter-underworld.stage" actor_type="actors/objects/lab-shelter-entrance.xml" />
+    <node puid="1038174" chunk="519" pos="47291;12900;-480" area="2" so_id="puid1038174" type="TIMED_CHEST" actor_type="actors/interactives/timed-crate.xml" />
+    <node puid="1038199" chunk="519" pos="47468;13058;-480" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1038200" chunk="519" pos="47895;13024;-480" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="1040124" chunk="520" pos="48251;12192;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1040138" chunk="520" pos="49044;12689;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1040157" chunk="520" pos="48392;12958;-240" area="2" so_id="puid1040157" type="BURIED_TREASURE" parm="DLC1_SHELTER_CLIFF" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="1042126" chunk="521" pos="49682;12664;-0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1044074" chunk="522" pos="50513;12913;0" area="2" so_id="puid1044074" type="BURIED_TREASURE" parm="DLC1_EAST_BEACH" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="1090094" chunk="545" pos="21276;14100;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1092116" chunk="546" pos="22793;13996;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1092140" chunk="546" pos="21687;14328;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1094011" chunk="547" pos="23760;14100;20" area="1" so_id="BT_DLC1_DLC1TOWERB_1" type="BURIED_TELEPORTER" parm="stages/pet-stages/pet-stage-DLC1-3.stage" actor_type="actors/interactives/buried-teleporter.xml" />
+    <node puid="1094164" chunk="547" pos="23040;13823;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1098131" chunk="549" pos="25860;13441;0" area="1" so_id="puid1098131" custom_display_name="Grilled Lobster Tail" type="RECIPE_DISH" recipe="DISH_GRILLED_LOBSTER_TAIL" actor_type="actors/objects/home-kitchen-cupboard.xml" />
+    <node puid="1098156" chunk="549" pos="26009;13309;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1102117" chunk="551" pos="28558;14185;-2" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1102151" chunk="551" pos="27810;14160;300" area="1" so_id="puid1102151" type="FISHING_SPOT" parm="GOOD_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="1104144" chunk="552" pos="28960;14327;2" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1104165" chunk="552" pos="29007;14395;-11" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1104173" chunk="552" pos="29242;13711;120" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1104175" chunk="552" pos="29187;13632;120" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1104186" chunk="552" pos="29540;14234;-30" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1106059" chunk="553" pos="30510;13710;240" area="1" so_id="puid1106059" type="MANA_CHAMBER" actor_type="actors/interactives/mana-chamber.xml" />
+    <node puid="1106175" chunk="553" pos="30715;13610;240" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1106177" chunk="553" pos="30502;14210;227" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1106217" chunk="553" pos="31089;13894;218" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1106294" chunk="553" pos="30247;13487;240" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1106295" chunk="553" pos="30558;13988;236" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1106301" chunk="553" pos="30382;13592;240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1108273" chunk="554" pos="31395;13221;240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1108274" chunk="554" pos="31839;13208;249" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1108276" chunk="554" pos="31481;14020;248" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1108283" chunk="554" pos="31729;13355;248" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1108292" chunk="554" pos="31208;14055;252" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="1108304" chunk="554" pos="31247;13540;240" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1108305" chunk="554" pos="31481;13588;232" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1110298" chunk="555" pos="33210;13851;-300" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1110299" chunk="555" pos="33308;13801;-300" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1110300" chunk="555" pos="33203;14100;-300" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1110302" chunk="555" pos="33222;13246;-232" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1110309" chunk="555" pos="32887;14216;-221" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1110310" chunk="555" pos="32749;13916;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1110359" chunk="555" pos="32513;13650;-0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1112273" chunk="556" pos="33706;13788;-300" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1112283" chunk="556" pos="33643;14344;-300" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1112287" chunk="556" pos="33623;14023;-300" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1112302" chunk="556" pos="34448;13761;-237" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1114221" chunk="557" pos="35741;13780;-360" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1116359" chunk="558" pos="36895;13844;-360" area="0" so_id="dlc_1_signal_source" type="SIGNAL_SOURCE" actor_type="actors/interactives/generic-trigger.xml" />
+    <node puid="1116366" chunk="558" pos="36570;13380;-360" area="0" so_id="puid1116366" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="1118254" chunk="559" pos="38370;13590;-240" area="0" so_id="puid1118254" type="QUEST" parm="quests/building-sawmills.nut" actor_type="actors/interactives/quest-trigger.xml" />
+    <node puid="1118291" chunk="559" pos="38280;13590;-240" area="0" so_id="puid1118291" type="REFINER_SAWMILL" actor_type="actors/interactives/sawmill.xml" />
+    <node puid="1120243" chunk="560" pos="38850;13710;-240" area="0" type="FARMABLE" actor_type="actors/interactives/farming-plant-bed.xml" />
+    <node puid="1120294" chunk="560" pos="38970;13830;-240" area="0" type="FARMABLE" actor_type="actors/interactives/farming-plant-bed.xml" />
+    <node puid="1120295" chunk="560" pos="38670;13830;-240" area="0" type="FARMABLE" actor_type="actors/interactives/farming-plant-bed.xml" />
+    <node puid="1124151" chunk="562" pos="41186;13727;1" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1124179" chunk="562" pos="40947;13453;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1126160" chunk="563" pos="43039;13983;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1128070" chunk="564" pos="44085;13366;16" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1128095" chunk="564" pos="44157;13962;48" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1128125" chunk="564" pos="43717;13375;-120" area="2" so_id="puid1128125" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="1130127" chunk="565" pos="45525;14332;-119" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1132020" chunk="566" pos="46447;14118;-120" area="2" so_id="puid1132020" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="1132111" chunk="566" pos="46092;13733;2" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1134090" chunk="567" pos="47010;14212;-8" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1134099" chunk="567" pos="47012;14046;-0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1134114" chunk="567" pos="47137;14183;-4" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1140029" chunk="570" pos="51384;13949;2" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1140054" chunk="570" pos="51391;14367;-3" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1142040" chunk="571" pos="52444;14262;-240" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1144115" chunk="572" pos="52911;14214;-480" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1144174" chunk="572" pos="52989;14023;-480" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1144175" chunk="572" pos="53213;13859;-442" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="1160028" chunk="580" pos="5955;15055;0" area="-1" so_id="underworld_island_entrance" type="ENTRYWAY" parm="stages/island/index.xml" actor_type="actors/interactives/stage-leave-enter-trigger-dlc-underworld.xml" />
+    <node puid="1162002" chunk="581" pos="6690;14430;0" area="-1" so_id="puid1162002" type="CAMPFIRE" parm="Island In the End" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1186124" chunk="593" pos="21438;15364;-120" area="1" so_id="puid1186124" type="CAMPFIRE" parm="Beachtop" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1188138" chunk="594" pos="22560;15150;60" area="1" so_id="puid1188138" type="FISHING_SPOT" parm="MANA_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="1190118" chunk="595" pos="23502;15554;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1192028" chunk="596" pos="24840;15060;-480" area="1" so_id="puid1192028" type="MANA_CHAMBER" actor_type="actors/interactives/mana-chamber.xml" />
+    <node puid="1192073" chunk="596" pos="24677;15027;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1192074" chunk="596" pos="24113;15073;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1192105" chunk="596" pos="24103;15009;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1192106" chunk="596" pos="24915;15195;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1192166" chunk="596" pos="24990;15063;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1194017" chunk="597" pos="25604;15167;-474" area="1" so_id="puid1194017" custom_display_name="Shrimp Cakes" type="RECIPE_DISH" recipe="DISH_SHRIMP_CAKES" actor_type="actors/objects/car-30s.xml" />
+    <node puid="1194142" chunk="597" pos="25973;15325;-240" area="1" so_id="puid1194142" type="STASH" actor_type="actors/interactives/stash-trigger.xml" />
+    <node puid="1194146" chunk="597" pos="25303;15229;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1194147" chunk="597" pos="25475;14594;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1196083" chunk="598" pos="26950;14489;-480" area="1" so_id="puid1196083" type="CAMPFIRE" parm="Jalopy Station" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1198145" chunk="599" pos="28051;15089;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1198158" chunk="599" pos="28598;15374;240" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1200182" chunk="600" pos="29423;14605;-22" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1200183" chunk="600" pos="28997;14539;-24" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1202022" chunk="601" pos="30060;15480;251" area="1" so_id="campfire_barricades" type="CAMPFIRE" parm="Overrun Barricades" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1202215" chunk="601" pos="31092;14669;212" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1202216" chunk="601" pos="30362;14516;222" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1202250" chunk="601" pos="30797;14520;251" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1202251" chunk="601" pos="31168;14613;215" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1204034" chunk="602" pos="32280;14850;0" area="1" so_id="town_entrance_fixable_bridge" type="FIXABLE" actor_type="actors/objects/ropebridge-1-fixable.xml" />
+    <node puid="1204233" chunk="602" pos="31225;14680;215" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1204234" chunk="602" pos="31288;14503;232" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1204273" chunk="602" pos="32305;15407;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1208070" chunk="604" pos="34380;14850;-240" area="0" so_id="northsouthbridge" type="FIXABLE" actor_type="actors/objects/drawbridge.xml" />
+    <node puid="1212033" chunk="606" pos="36730;15315;-420" area="0" so_id="ivorymountain_relay" type="ENERGY_RELAY" actor_type="actors/interactives/energy-relay.xml" />
+    <node puid="1212259" chunk="606" pos="36455;15084;-414" area="0" so_id="DLC1_TOWER_A" type="LINK_TOWER" actor_type="actors/interactives/link-tower-30s.xml" />
+    <node puid="1212343" chunk="606" pos="36690;14520;-420" area="0" so_id="puid1212343" custom_display_name="Fedora" type="RECIPE" recipe="FEDORA" actor_type="actors/objects/office-steellocker-3.xml" />
+    <node puid="1216188" chunk="608" pos="39255;15306;-234" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1218058" chunk="609" pos="40459;15299;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1220003" chunk="610" pos="41691;15090;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1220030" chunk="610" pos="41380;14774;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1220071" chunk="610" pos="41913;15369;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1220167" chunk="610" pos="41656;15034;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1220174" chunk="610" pos="41315;14940;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-stalker.xml" />
+    <node puid="1220225" chunk="610" pos="40948;14531;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1220226" chunk="610" pos="40942;14625;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" />
+    <node puid="1222102" chunk="611" pos="43054;14830;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1222115" chunk="611" pos="42055;15080;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1224128" chunk="612" pos="44190;15093;101" area="2" so_id="puid1224128" type="CAMPFIRE" parm="Basin of Solitude" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1224218" chunk="612" pos="43240;15428;47" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1224219" chunk="612" pos="43572;14826;80" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1226067" chunk="613" pos="44818;14767;83" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1226125" chunk="613" pos="45273;15427;-120" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1226131" chunk="613" pos="45496;15065;-240" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1226155" chunk="613" pos="45162;15039;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" />
+    <node puid="1228063" chunk="614" pos="45911;14790;-240" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1228065" chunk="614" pos="46619;14979;-360" area="2" so_id="puid1228065" type="STASH" actor_type="actors/interactives/stash-trigger.xml" />
+    <node puid="1228079" chunk="614" pos="45610;14760;-240" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1228085" chunk="614" pos="46182;15360;-240" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1228086" chunk="614" pos="45727;15501;-240" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1230069" chunk="615" pos="47453;14585;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1232123" chunk="616" pos="48849;14461;20" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="1232125" chunk="616" pos="48816;14644;21" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1232126" chunk="616" pos="48695;14621;22" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1234077" chunk="617" pos="50190;15420;0" area="2" so_id="puid1234077" type="MANA_CHAMBER" actor_type="actors/interactives/mana-chamber.xml" />
+    <node puid="1234171" chunk="617" pos="50182;15585;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1234172" chunk="617" pos="50017;15589;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1238147" chunk="619" pos="52787;14453;-420" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1238245" chunk="619" pos="51980;14969;-300" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1240229" chunk="620" pos="53129;14550;-489" area="2" so_id="ENERGY_RELAY_1" type="ENERGY_RELAY" actor_type="actors/interactives/energy-relay.xml" />
+    <node puid="1240247" chunk="620" pos="53238;14633;-480" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1240271" chunk="620" pos="52948;14877;-360" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1284065" chunk="642" pos="22456;16219;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1284066" chunk="642" pos="22341;16363;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1284147" chunk="642" pos="22664;16279;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1286072" chunk="643" pos="23136;15854;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1286074" chunk="643" pos="23185;15947;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1286162" chunk="643" pos="23812;16402;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1288035" chunk="644" pos="24839;15840;-480" area="1" so_id="puid1288035" type="FIXABLE" actor_type="actors/objects/drawbridge.xml" />
+    <node puid="1288146" chunk="644" pos="24788;16344;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1288151" chunk="644" pos="24886;16304;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1288152" chunk="644" pos="24500;16106;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1288169" chunk="644" pos="24598;16598;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1290211" chunk="645" pos="25621;16507;-540" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1290251" chunk="645" pos="25874;16123;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1290252" chunk="645" pos="25266;16158;-540" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1290253" chunk="645" pos="25396;16048;-540" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1290254" chunk="645" pos="26096;15724;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1292009" chunk="646" pos="26940;16170;-540" area="1" so_id="ENERGY_RELAY_0" type="ENERGY_RELAY" actor_type="actors/interactives/energy-relay.xml" />
+    <node puid="1292181" chunk="646" pos="27013;15869;-540" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1292195" chunk="646" pos="26478;16269;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1292227" chunk="646" pos="26957;16071;-540" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1292248" chunk="646" pos="26668;16217;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1292294" chunk="646" pos="26570;16172;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1294145" chunk="647" pos="28541;15973;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1296232" chunk="648" pos="29098;16124;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1300254" chunk="650" pos="32340;16648;-247" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1302020" chunk="651" pos="33450;16770;-240" area="1" so_id="puid1302020" type="CAMPFIRE" parm="Crownsville" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1302210" chunk="651" pos="33569;15713;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1304241" chunk="652" pos="34196;16221;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1304325" chunk="652" pos="34190;16675;-237" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1304366" chunk="652" pos="34792;16163;-300" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1304368" chunk="652" pos="34789;16112;-305" area="1" so_id="puid1304368" custom_display_name="Sawed-off Shotgun" type="RECIPE" recipe="SAWED_OFF_SHOTGUN" actor_type="actors/objects/chest.xml" />
+    <node puid="1306105" chunk="653" pos="34847;15716;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1306291" chunk="653" pos="35308;16255;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1306321" chunk="653" pos="35745;16412;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1306322" chunk="653" pos="35358;15981;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1308100" chunk="654" pos="36840;15720;-360" area="0" so_id="puid1308100" type="CAMPFIRE" parm="Ivory Mountain Co." actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1310205" chunk="655" pos="37458;16762;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1310206" chunk="655" pos="38181;16045;-265" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1310207" chunk="655" pos="38182;15758;-260" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1314100" chunk="657" pos="39931;16132;-15" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1314101" chunk="657" pos="39941;15937;-0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-stalker.xml" />
+    <node puid="1314102" chunk="657" pos="39924;15843;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1316082" chunk="658" pos="42000;16070;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1316083" chunk="658" pos="41880;16432;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1316108" chunk="658" pos="41269;16195;0" area="2" so_id="DLC1_TOWER_C" type="LINK_TOWER" actor_type="actors/interactives/link-tower-30s.xml" />
+    <node puid="1318080" chunk="659" pos="43066;16068;-120" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1318113" chunk="659" pos="42270;15729;118" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1320111" chunk="660" pos="43362;16284;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-stalker.xml" />
+    <node puid="1320117" chunk="660" pos="43740;16528;-120" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1320139" chunk="660" pos="43580;16054;-120" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1320164" chunk="660" pos="43496;16250;-120" area="2" so_id="puid1320164" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="1322131" chunk="661" pos="44783;16278;37" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1322149" chunk="661" pos="44967;16471;29" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1322166" chunk="661" pos="44520;16535;39" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1324120" chunk="662" pos="46609;16259;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1324125" chunk="662" pos="45645;15618;-240" area="2" so_id="puid1324125" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="1324151" chunk="662" pos="46496;15876;-120" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1324160" chunk="662" pos="46227;15680;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="1326101" chunk="663" pos="46937;16451;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1326111" chunk="663" pos="47494;16197;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1326130" chunk="663" pos="47904;16588;-120" area="2" so_id="puid1326130" type="BURIED_TREASURE" parm="DLC1_UNDER_THE_ROCK" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="1328143" chunk="664" pos="48083;16557;-120" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1330009" chunk="665" pos="49277;15984;14" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1330103" chunk="665" pos="50193;16085;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1330105" chunk="665" pos="50098;15803;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1330134" chunk="665" pos="49934;16298;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1332001" chunk="666" pos="51050;16713;0" area="2" so_id="puid1332001" type="CAMPFIRE" parm="Farm of Desolation" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1334001" chunk="667" pos="51763;16553;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1334120" chunk="667" pos="52224;16246;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1334143" chunk="667" pos="51815;16623;-5" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1380188" chunk="690" pos="21863;16895;-240" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1380199" chunk="690" pos="22749;17272;3" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1382002" chunk="691" pos="23058;16878;0" area="1" so_id="puid1382002" type="CAMPFIRE" parm="Knot Shores" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1382031" chunk="691" pos="23880;17160;-240" area="1" so_id="puid1382031" type="FIXABLE" actor_type="actors/objects/drawbridge.xml" />
+    <node puid="1382150" chunk="691" pos="23704;17540;-241" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1384126" chunk="692" pos="24514;17256;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1384176" chunk="692" pos="24684;17454;-0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1384199" chunk="692" pos="24143;17138;-4" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1386197" chunk="693" pos="25793;17287;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1386202" chunk="693" pos="25756;17651;-0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1386203" chunk="693" pos="25801;17685;4" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1386204" chunk="693" pos="25419;17688;-0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1386218" chunk="693" pos="25560;17220;-240" area="1" so_id="puid1386218" type="BURIED_TREASURE" parm="apex_cliff" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="1386219" chunk="693" pos="25226;17219;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1388120" chunk="694" pos="27483;17515;28" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1388175" chunk="694" pos="26749;17586;7" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1390205" chunk="695" pos="28423;16870;-142" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1390222" chunk="695" pos="28230;17158;5" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1390261" chunk="695" pos="28043;17128;14" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1390276" chunk="695" pos="27759;17337;27" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1392002" chunk="696" pos="29430;17628;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1392159" chunk="696" pos="29611;17852;5" area="1" so_id="puid1392159" type="MANA_CHAMBER" actor_type="actors/interactives/mana-chamber.xml" />
+    <node puid="1392161" chunk="696" pos="29390;17900;-0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1394172" chunk="697" pos="30703;17912;-0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="1394180" chunk="697" pos="30001;17870;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1396105" chunk="698" pos="31261;17520;1" area="1" so_id="town_entrance_bridge" type="FIXABLE" actor_type="actors/objects/drawbridge.xml" />
+    <node puid="1396169" chunk="698" pos="32383;16963;-306" area="1" so_id="puid1396169" type="AUDIO_LOG" parm="UNDERWORLD_DIVIDE" actor_type="actors/interactives/tape-recorder.xml" />
+    <node puid="1396177" chunk="698" pos="32204;16940;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1396192" chunk="698" pos="32214;17706;-257" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1396194" chunk="698" pos="32016;17644;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1400145" chunk="700" pos="34237;16847;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1400150" chunk="700" pos="33815;17348;-240" area="1" so_id="puid1400150" custom_display_name="Shrimp Cocktail" type="RECIPE_DISH" recipe="DISH_SHRIMP_COCKTAIL" actor_type="actors/objects/suburb-plastic-box.xml" />
+    <node puid="1400271" chunk="700" pos="33806;17403;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-stalker.xml" />
+    <node puid="1400304" chunk="700" pos="34363;17254;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1400305" chunk="700" pos="33974;17567;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1400325" chunk="700" pos="33973;17160;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1400348" chunk="700" pos="34368;17700;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1400355" chunk="700" pos="34358;17371;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1400372" chunk="700" pos="34736;17088;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1402135" chunk="701" pos="35188;17405;-348" area="0" so_id="audio_log_radiostation" type="AUDIO_LOG" parm="UNDERWORLD_IVORY" actor_type="actors/interactives/tape-recorder.xml" />
+    <node puid="1402199" chunk="701" pos="35522;17222;-300" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="1402370" chunk="701" pos="35643;17513;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1402395" chunk="701" pos="34895;17135;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1404131" chunk="702" pos="36599;17880;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1410002" chunk="705" pos="39672;17086;0" area="2" so_id="puid1410002" type="STASH" actor_type="actors/interactives/stash-trigger.xml" />
+    <node puid="1412126" chunk="706" pos="41106;17200;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1412148" chunk="706" pos="41993;17499;-0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1414095" chunk="707" pos="42083;16802;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1414140" chunk="707" pos="42053;17322;3" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1416122" chunk="708" pos="43662;17268;7" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1416168" chunk="708" pos="43579;17351;4" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1416185" chunk="708" pos="43718;17409;6" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1418123" chunk="709" pos="44820;17962;-120" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1418141" chunk="709" pos="45430;17541;-23" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1418158" chunk="709" pos="44880;17739;-282" area="2" so_id="puid1418158" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="1420094" chunk="710" pos="46305;16972;-120" area="2" so_id="puid1420094" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="1420111" chunk="710" pos="46222;17315;-120" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1420115" chunk="710" pos="46163;17561;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="1424186" chunk="712" pos="48640;17816;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1424187" chunk="712" pos="48560;17402;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1424188" chunk="712" pos="48084;17358;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="1424199" chunk="712" pos="49021;17704;-120" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1424201" chunk="712" pos="48575;17615;-120" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1424202" chunk="712" pos="48863;17753;-120" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1426056" chunk="713" pos="49710;17160;0" area="2" so_id="puid1426056" type="FIXABLE" actor_type="actors/objects/drawbridge.xml" />
+    <node puid="1428042" chunk="714" pos="51546;17863;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1428285" chunk="714" pos="51330;17490;-120" area="2" type="FARMABLE" actor_type="actors/interactives/farming-plant-bed.xml" />
+    <node puid="1428286" chunk="714" pos="51390;17610;-120" area="2" type="FARMABLE" actor_type="actors/interactives/farming-plant-bed.xml" />
+    <node puid="1428287" chunk="714" pos="51450;17430;-120" area="2" type="FARMABLE" actor_type="actors/interactives/farming-plant-bed.xml" />
+    <node puid="1428293" chunk="714" pos="50856;17485;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1428294" chunk="714" pos="50903;17596;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1482069" chunk="741" pos="25445;18824;-483" area="1" so_id="puid1482069" type="STASH" actor_type="actors/interactives/stash-trigger.xml" />
+    <node puid="1484151" chunk="742" pos="27059;19076;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1488045" chunk="744" pos="29376;18474;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1488178" chunk="744" pos="29786;18167;-0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1488187" chunk="744" pos="29336;18143;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1488195" chunk="744" pos="29013;19009;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1488198" chunk="744" pos="29294;18393;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1490004" chunk="745" pos="30102;18186;-0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1490092" chunk="745" pos="30222;18085;-0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1490205" chunk="745" pos="31031;18051;23" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1490215" chunk="745" pos="30766;18144;-5" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1492135" chunk="746" pos="31366;18536;4" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1492164" chunk="746" pos="31321;18631;23" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1494018" chunk="747" pos="33390;18000;-240" area="0" so_id="town_station_bridge" type="FIXABLE" actor_type="actors/objects/drawbridge.xml" />
+    <node puid="1494129" chunk="747" pos="33239;18905;-300" area="0" so_id="ENERGY_RELAY_TOWN" type="ENERGY_RELAY" actor_type="actors/interactives/energy-relay.xml" />
+    <node puid="1494231" chunk="747" pos="33480;18780;-300" area="0" so_id="puid1494231" custom_display_name="Town Station Key" type="KEY" key="COLLECTOR_STATION_KEY" actor_type="actors/objects/office-steellocker-3.xml" />
+    <node puid="1494276" chunk="747" pos="33345;18360;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1494278" chunk="747" pos="33335;18975;-300" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1494294" chunk="747" pos="32580;19009;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1496150" chunk="748" pos="34654;18201;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1496155" chunk="748" pos="34630;18625;-240" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1496156" chunk="748" pos="34773;18708;-239" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1496157" chunk="748" pos="34672;19152;-235" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1498231" chunk="749" pos="35669;19121;-231" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1500280" chunk="750" pos="36146;18973;-226" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="1500319" chunk="750" pos="36717;18417;-223" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1500327" chunk="750" pos="36811;18426;-220" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1502119" chunk="751" pos="37230;18690;-240" area="0" so_id="puid1502119" type="QUEST" parm="quests/mana-seed-bag.nut" actor_type="actors/interactives/quest-trigger.xml" />
+    <node puid="1502227" chunk="751" pos="37500;18300;-240" area="0" so_id="puid1502227" type="LOCKED_DOOR" parm="DOCS_HOUSE_KEY" actor_type="actors/tiles/wall-brown-brick-outer-door.xml" />
+    <node puid="1502313" chunk="751" pos="37410;18990;-240" area="0" type="FARMABLE" actor_type="actors/interactives/farming-plant-bed.xml" />
+    <node puid="1502314" chunk="751" pos="37530;18930;-240" area="0" type="FARMABLE" actor_type="actors/interactives/farming-plant-bed.xml" />
+    <node puid="1502315" chunk="751" pos="37470;18810;-240" area="0" type="FARMABLE" actor_type="actors/interactives/farming-plant-bed.xml" />
+    <node puid="1504197" chunk="752" pos="39397;18678;1" area="0" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1504232" chunk="752" pos="38416;18767;-91" area="0" so_id="puid1504232" type="TIMED_CHEST" actor_type="actors/interactives/timed-crate.xml" />
+    <node puid="1504249" chunk="752" pos="38945;18620;-2" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1506037" chunk="753" pos="39900;18390;0" area="2" so_id="puid1506037" type="CAMPFIRE" parm="Gorge of the Undead" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1506055" chunk="753" pos="40486;18232;7" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1506060" chunk="753" pos="40221;19074;0" area="2" type="ANIMAL" actor_type="actors/animals/deer-male-mana.xml" />
+    <node puid="1506159" chunk="753" pos="39982;18184;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1510094" chunk="755" pos="43049;18657;-3" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1512076" chunk="756" pos="43801;18140;14" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-stalker.xml" />
+    <node puid="1512077" chunk="756" pos="43285;18707;-2" area="2" so_id="puid1512077" type="BURIED_TREASURE" parm="DLC1_DRY_CLIFF_SIDE" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="1512083" chunk="756" pos="43437;18826;-20" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1512113" chunk="756" pos="44234;18799;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee-advanced.xml" />
+    <node puid="1512114" chunk="756" pos="43688;19116;-120" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1514046" chunk="757" pos="44515;18903;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1514047" chunk="757" pos="44613;18098;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1514048" chunk="757" pos="44734;18601;-120" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee-advanced.xml" />
+    <node puid="1516070" chunk="758" pos="46524;18694;-240" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1518073" chunk="759" pos="46920;18592;-259" area="2" so_id="puid1518073" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="1518074" chunk="759" pos="46890;18750;-180" area="2" so_id="puid1518074" type="FISHING_SPOT" parm="LEGENDARY_MANA_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="1518081" chunk="759" pos="47083;18950;-240" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1520069" chunk="760" pos="48810;18780;60" area="2" so_id="puid1520069" type="FISHING_SPOT" parm="MANA_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="1520125" chunk="760" pos="48082;19107;-240" area="2" so_id="puid1520125" type="TIMED_CHEST" actor_type="actors/interactives/timed-crate.xml" />
+    <node puid="1574012" chunk="787" pos="23731;20197;-488" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1576115" chunk="788" pos="24270;19933;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1580069" chunk="790" pos="26989;19314;-239" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1584098" chunk="792" pos="29104;19545;2" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1584148" chunk="792" pos="29940;19567;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1584188" chunk="792" pos="29896;19325;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1584219" chunk="792" pos="29926;20081;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1584342" chunk="792" pos="29220;20040;9" area="1" so_id="puid1584342" type="QUEST" parm="quests/desperate-existence.nut" actor_type="actors/interactives/quest-trigger.xml" />
+    <node puid="1586227" chunk="793" pos="30224;19395;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1586242" chunk="793" pos="30569;19486;4" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1586271" chunk="793" pos="30481;20084;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1588158" chunk="794" pos="31775;19735;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1588215" chunk="794" pos="31231;19373;19" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1588233" chunk="794" pos="32198;19794;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1590225" chunk="795" pos="33488;20317;48" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1590334" chunk="795" pos="32940;19260;-304" area="1" so_id="puid1590334" type="LOCKED_DOOR" parm="COLLECTOR_STATION_KEY" actor_type="actors/tiles/wall-brown-brick-inner-door.xml" />
+    <node puid="1592108" chunk="796" pos="34560;20280;0" area="0" so_id="town_south_bypass_bridge" type="FIXABLE" actor_type="actors/objects/ropebridge-1-fixable.xml" />
+    <node puid="1592135" chunk="796" pos="33677;19780;-249" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1592141" chunk="796" pos="33819;20285;36" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1592148" chunk="796" pos="33865;19603;-287" area="0" so_id="puid1592148" type="AUDIO_LOG" parm="UNDERWORLD_RELAYS" actor_type="actors/interactives/tape-recorder.xml" />
+    <node puid="1594183" chunk="797" pos="35263;20295;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1594227" chunk="797" pos="35028;20269;7" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1594253" chunk="797" pos="35416;19488;-240" area="2" type="DOGHOUSE" actor_type="actors/objects/dog-house.xml" />
+    <node puid="1596176" chunk="798" pos="37020;19999;-29" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1596220" chunk="798" pos="36207;20189;2" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1596221" chunk="798" pos="36515;19957;11" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1596222" chunk="798" pos="36365;20177;2" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1598181" chunk="799" pos="37866;20385;-25" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1598202" chunk="799" pos="37695;19923;-5" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1598219" chunk="799" pos="37636;20088;5" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1600140" chunk="800" pos="38755;19556;-37" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1600141" chunk="800" pos="39470;19315;-33" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1600155" chunk="800" pos="38911;19570;-12" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1600177" chunk="800" pos="38524;20051;40" area="2" so_id="BT_DLC1_DLC1TOWERC_1" type="BURIED_TELEPORTER" parm="stages/pet-stages/pet-stage-DLC1-2-mid-maze.stage" actor_type="actors/interactives/buried-teleporter.xml" />
+    <node puid="1600212" chunk="800" pos="38899;19217;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1600215" chunk="800" pos="38543;19625;-36" area="2" type="ANIMAL" actor_type="actors/animals/deer-male-mana.xml" />
+    <node puid="1600218" chunk="800" pos="38670;20060;25" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1600219" chunk="800" pos="38635;20156;16" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1602002" chunk="801" pos="40405;19255;-22" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1604157" chunk="802" pos="41169;20045;-8" area="2" so_id="enemy_5" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1604218" chunk="802" pos="41785;19649;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1604276" chunk="802" pos="41089;19212;0" area="2" type="ANIMAL" actor_type="actors/animals/deer-male-mana.xml" />
+    <node puid="1608082" chunk="804" pos="43395;20322;-0" area="2" so_id="puid1608082" type="AUDIO_LOG" parm="UNDERWORLD_SPIRITS" actor_type="actors/interactives/tape-recorder.xml" />
+    <node puid="1608176" chunk="804" pos="44333;19691;-240" area="2" so_id="puid1608176" type="BURIED_TREASURE" parm="DLC1_DEER_PLATEAU" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="1608177" chunk="804" pos="44288;19527;-240" area="2" type="ANIMAL" actor_type="actors/animals/deer-female.xml" />
+    <node puid="1610138" chunk="805" pos="44810;20255;-240" area="2" type="ANIMAL" actor_type="actors/animals/deer-female.xml" />
+    <node puid="1610146" chunk="805" pos="44519;19582;-240" area="2" type="ANIMAL" actor_type="actors/animals/deer-male-mana.xml" />
+    <node puid="1612072" chunk="806" pos="46089;19726;-10" area="2" so_id="puid1612072" type="STASH" actor_type="actors/interactives/stash-trigger.xml" />
+    <node puid="1612073" chunk="806" pos="46282;20327;-120" area="2" so_id="puid1612073" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="1614073" chunk="807" pos="47930;19776;-240" area="2" so_id="puid1614073" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="1670029" chunk="835" pos="23974;20573;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1674087" chunk="837" pos="25697;20767;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1674088" chunk="837" pos="25796;20736;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1674171" chunk="837" pos="25493;21404;-487" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1674212" chunk="837" pos="25206;21351;-479" area="1" so_id="puid1674212" type="BURIED_TREASURE" parm="UW_START_AREA_CAVE" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="1676127" chunk="838" pos="27089;21360;-540" area="1" so_id="ENERGY_RELAY_3" type="ENERGY_RELAY" actor_type="actors/interactives/energy-relay.xml" />
+    <node puid="1676246" chunk="838" pos="26893;21409;-575" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1676247" chunk="838" pos="27045;21165;-540" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1676283" chunk="838" pos="26527;21170;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1680066" chunk="840" pos="28823;20756;0" area="1" so_id="puid1680066" type="CAMPFIRE" parm="Passage Valley" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1680319" chunk="840" pos="29281;21566;12" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1680330" chunk="840" pos="29830;20421;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1682005" chunk="841" pos="30031;20559;-6" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1682159" chunk="841" pos="30336;21549;13" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1682161" chunk="841" pos="30153;21411;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1684049" chunk="842" pos="31560;21480;0" area="1" so_id="puid1684049" type="QUEST" parm="quests/building-smelters.nut" actor_type="actors/interactives/quest-trigger.xml" />
+    <node puid="1684225" chunk="842" pos="32043;21210;-60" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1684251" chunk="842" pos="31380;21480;0" area="1" so_id="puid1684251" type="REFINER_SMELTER" actor_type="actors/interactives/smelter.xml" />
+    <node puid="1684295" chunk="842" pos="31262;21246;-0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1684332" chunk="842" pos="31456;21151;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-mana-wolf.xml" />
+    <node puid="1684335" chunk="842" pos="32262;21267;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="1686056" chunk="843" pos="32529;20600;-28" area="1" so_id="smelter_factory_bridge" type="FIXABLE" actor_type="actors/objects/ropebridge-1-fixable.xml" />
+    <node puid="1686149" chunk="843" pos="33516;20488;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1688179" chunk="844" pos="34753;20445;-10" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1688180" chunk="844" pos="34407;21398;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1688188" chunk="844" pos="33682;20564;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1688189" chunk="844" pos="33954;20688;-0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1688190" chunk="844" pos="33807;20410;-24" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1688234" chunk="844" pos="34793;20889;-0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1690148" chunk="845" pos="35234;20476;-0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1690177" chunk="845" pos="34878;21554;11" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1690178" chunk="845" pos="35066;21564;5" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1692149" chunk="846" pos="36208;21484;-4" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1692167" chunk="846" pos="36966;20833;-2" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1692176" chunk="846" pos="36086;20901;-60" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-stalker.xml" />
+    <node puid="1692244" chunk="846" pos="36604;21144;5" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1692245" chunk="846" pos="36859;20959;4" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1692255" chunk="846" pos="36224;21394;-5" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1694126" chunk="847" pos="38282;20551;3" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1694154" chunk="847" pos="37866;20563;-27" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1694197" chunk="847" pos="38336;21212;-0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1696059" chunk="848" pos="38598;21323;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" />
+    <node puid="1698131" chunk="849" pos="40694;20645;-1" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1698144" chunk="849" pos="40683;20849;0" area="2" so_id="enemy_4" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1698174" chunk="849" pos="40341;21562;10" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1700127" chunk="850" pos="41294;20913;-13" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1700165" chunk="850" pos="41849;20820;-40" area="2" so_id="relay_suburbs" type="MANA_CHAMBER" actor_type="actors/interactives/mana-chamber.xml" />
+    <node puid="1700229" chunk="850" pos="41733;20677;-17" area="2" so_id="dlc_quest_spirit_trouble" type="QUEST" parm="quests/spirit-trouble.nut" actor_type="actors/interactives/quest-trigger.xml" />
+    <node puid="1700290" chunk="850" pos="40941;20901;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1702102" chunk="851" pos="42493;21429;0" area="2" so_id="enemy_3" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1702240" chunk="851" pos="43115;20548;10" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1702242" chunk="851" pos="42778;20417;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1702272" chunk="851" pos="42218;20671;-3" area="2" so_id="enemy_34" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1706263" chunk="853" pos="44889;21153;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1706275" chunk="853" pos="45284;20658;-240" area="2" type="ANIMAL" actor_type="actors/animals/deer-male-mana.xml" />
+    <node puid="1706276" chunk="853" pos="44783;20423;-240" area="2" type="ANIMAL" actor_type="actors/animals/deer-male-mana.xml" />
+    <node puid="1706277" chunk="853" pos="45313;20570;-240" area="2" type="ANIMAL" actor_type="actors/animals/deer-baby-fawn.xml" />
+    <node puid="1766101" chunk="883" pos="23954;22514;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1766105" chunk="883" pos="23715;22796;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1766106" chunk="883" pos="23813;22674;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1768048" chunk="884" pos="24080;22317;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1770037" chunk="885" pos="26155;22218;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1770162" chunk="885" pos="26310;22145;-471" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1770163" chunk="885" pos="25506;21705;-477" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1770164" chunk="885" pos="25743;22792;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1770165" chunk="885" pos="25816;22732;-478" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1772018" chunk="886" pos="27279;22753;-469" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1772145" chunk="886" pos="27368;22471;-469" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1772214" chunk="886" pos="26942;21988;-550" area="1" so_id="DLC1_TOWER_B" type="LINK_TOWER" actor_type="actors/interactives/link-tower-30s.xml" />
+    <node puid="1774064" chunk="887" pos="27724;22705;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1774131" chunk="887" pos="27770;22085;-120" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1774144" chunk="887" pos="28003;22050;-120" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1774187" chunk="887" pos="28460;22617;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1776121" chunk="888" pos="29878;21808;-3" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1778001" chunk="889" pos="30408;22473;-3" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1778162" chunk="889" pos="30216;21744;27" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1778163" chunk="889" pos="30060;21612;16" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1778166" chunk="889" pos="30148;21902;15" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1780055" chunk="890" pos="31810;21804;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1780092" chunk="890" pos="31917;21806;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1782216" chunk="891" pos="32657;22765;-18" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1782217" chunk="891" pos="32678;22463;8" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1782324" chunk="891" pos="32953;22507;-202" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1782325" chunk="891" pos="33309;22226;5" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1782326" chunk="891" pos="33298;22135;5" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1786193" chunk="893" pos="35006;21675;18" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1786226" chunk="893" pos="35699;22082;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1786227" chunk="893" pos="35650;22005;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1786228" chunk="893" pos="35792;22121;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1786229" chunk="893" pos="35703;22180;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1788127" chunk="894" pos="36749;21818;2" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1788162" chunk="894" pos="37044;22407;19" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1788163" chunk="894" pos="36950;22339;-3" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1788190" chunk="894" pos="36114;22010;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1790098" chunk="895" pos="37868;22100;0" area="2" so_id="puid1790098" type="STASH" actor_type="actors/interactives/stash-trigger.xml" />
+    <node puid="1790176" chunk="895" pos="37746;22608;9" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1790177" chunk="895" pos="37841;22686;17" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1792097" chunk="896" pos="38712;22171;19" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1792098" chunk="896" pos="38936;22286;16" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1796023" chunk="898" pos="41959;21820;-28" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1796124" chunk="898" pos="41649;21907;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1796191" chunk="898" pos="41533;22253;0" area="2" so_id="enemy_0" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1798219" chunk="899" pos="42270;22392;-6" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1798225" chunk="899" pos="42791;21931;0" area="2" so_id="enemy_1" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1800103" chunk="900" pos="43826;21721;8" area="2" so_id="puid1800103" type="CAMPFIRE" parm="Shattered Suburbs" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1802125" chunk="901" pos="45457;22411;0" area="2" so_id="puid1802125" type="RIFT" actor_type="actors/interactives/mana-rift-teleport.xml" />
+    <node puid="1804078" chunk="902" pos="45738;21662;17" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1804079" chunk="902" pos="45635;21826;12" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="1806044" chunk="903" pos="47271;21699;60" area="2" so_id="puid1806044" type="FISHING_SPOT" parm="MANA_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="1864149" chunk="932" pos="24984;23534;-485" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1864189" chunk="932" pos="24902;23439;-481" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1868081" chunk="934" pos="26426;23595;-475" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1868082" chunk="934" pos="27103;23614;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1870025" chunk="935" pos="27702;23428;-480" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1870026" chunk="935" pos="27984;23329;-478" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1870042" chunk="935" pos="28054;23993;-480" area="1" so_id="puid1870042" type="STASH" actor_type="actors/interactives/stash-trigger.xml" />
+    <node puid="1874193" chunk="937" pos="30532;22908;120" area="1" so_id="puid1874193" type="FISHING_SPOT" parm="MANA_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="1874199" chunk="937" pos="30302;23302;3" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1876129" chunk="938" pos="31770;23010;0" area="1" so_id="OBELISK_OF_LIFE" type="ARENA_OBELISK" actor_type="actors/interactives/arena-obelisk.xml" />
+    <node puid="1876217" chunk="938" pos="31605;23867;-120" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1878350" chunk="939" pos="33039;23442;-180" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1878351" chunk="939" pos="33017;23530;-180" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1878363" chunk="939" pos="33561;23192;-120" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1878365" chunk="939" pos="32744;23818;-180" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1880263" chunk="940" pos="33838;22876;-262" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1880318" chunk="940" pos="34349;23812;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1880335" chunk="940" pos="33974;23297;-120" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="1880336" chunk="940" pos="33677;23178;-121" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="1882089" chunk="941" pos="34933;23034;20" area="1" so_id="puid1882089" type="CAMPFIRE" parm="Scarp of Thieves" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1884070" chunk="942" pos="36055;23007;0" area="2" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1884079" chunk="942" pos="36143;22951;0" area="2" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1962030" chunk="981" pos="25615;24851;-114" area="1" so_id="underworld_start_campfire" type="CAMPFIRE" parm="Underworld Entryway" actor_type="actors/objects/spirit-campfire.xml" />
+    <node puid="1962056" chunk="981" pos="26108;24675;-165" area="1" so_id="audio_log_UNDERWORLD_ENTRANCE" type="AUDIO_LOG" parm="UNDERWORLD_EXPLORERS" actor_type="actors/interactives/tape-recorder.xml" />
+    <node puid="1970181" chunk="985" pos="30350;24611;-7" area="1" so_id="puid1970181" type="BURIED_TREASURE" parm="DLC1_SOUTH_SPOT" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="1970197" chunk="985" pos="31045;24231;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="1970198" chunk="985" pos="30921;24602;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1970199" chunk="985" pos="30298;24715;-4" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1970200" chunk="985" pos="30148;24169;-2" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="1972093" chunk="986" pos="31215;24074;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1972139" chunk="986" pos="31785;24599;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1972226" chunk="986" pos="32161;24452;-300" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="1972234" chunk="986" pos="32099;24312;-300" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1974196" chunk="987" pos="33574;25003;-120" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1974264" chunk="987" pos="33269;24417;-113" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="1974265" chunk="987" pos="33296;24548;-111" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1974266" chunk="987" pos="33141;24512;-115" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1974267" chunk="987" pos="33200;24296;-121" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="1974278" chunk="987" pos="32746;24290;-120" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="1974346" chunk="987" pos="33575;24256;-120" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1974381" chunk="987" pos="33201;24403;-116" area="1" so_id="quest_thief_treasure" type="BURIED_TREASURE" tags="QUEST_TARGET" parm="THIEF_ROAD" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="1976030" chunk="988" pos="34615;24398;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="1976328" chunk="988" pos="33878;24822;-120" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-chaser.xml" />
+    <node puid="1976334" chunk="988" pos="34781;24265;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/mana-spirit.xml" />
+    <node puid="1976341" chunk="988" pos="33819;24808;-120" area="1" so_id="quest_clue_dig" type="BURIED_TREASURE" tags="QUEST_TARGET" parm="THIEF_CLUE" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="1978040" chunk="989" pos="34943;24335;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="2056048" chunk="1028" pos="24113;25399;-120" area="1" so_id="entrance_underworld" type="ENTRYWAY" parm="stages/special/catacombs-1.stage" actor_type="actors/interactives/stage-leave-enter-trigger-dlc-underworld.xml" />
+    <node puid="2058267" chunk="1029" pos="25470;26232;-60" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="2058268" chunk="1029" pos="25592;26210;-60" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="2060058" chunk="1030" pos="26895;26207;-369" area="1" so_id="puid2060058" type="BURIED_TREASURE" parm="UW_START_AREA" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="2060110" chunk="1030" pos="26835;26134;-352" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="2066089" chunk="1033" pos="30458;26270;-1" area="1" type="ANIMAL" actor_type="actors/animals/deer-male-mana.xml" />
+    <node puid="2066102" chunk="1033" pos="30960;25980;20" area="1" so_id="BT_DLC1_DLC1TOWERC_2" type="BURIED_TELEPORTER" parm="stages/pet-stages/pet-stage-DLC1-4.stage" actor_type="actors/interactives/buried-teleporter.xml" />
+    <node puid="2066188" chunk="1033" pos="30834;25992;-2" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-puker.xml" />
+    <node puid="2068151" chunk="1034" pos="31472;25715;-44" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+    <node puid="2068171" chunk="1034" pos="32080;26105;-8" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="2068173" chunk="1034" pos="32078;26235;-27" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="2068275" chunk="1034" pos="31879;25734;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="2068288" chunk="1034" pos="31935;25530;-240" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="2070055" chunk="1035" pos="33150;25590;-19" area="1" so_id="puid2070055" type="MANA_CHAMBER" actor_type="actors/interactives/mana-chamber.xml" />
+    <node puid="2070142" chunk="1035" pos="33330;26010;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="2070144" chunk="1035" pos="33378;25621;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/spikeball.xml" />
+    <node puid="2070168" chunk="1035" pos="33246;25459;-3" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="2070169" chunk="1035" pos="32940;25748;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-animal-wolf.xml" />
+    <node puid="2070170" chunk="1035" pos="32995;25298;0" area="1" type="ENEMY_STATIONARY" actor_type="actors/enemies/mortarpod.xml" />
+    <node puid="2072080" chunk="1036" pos="33959;25374;0" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-mana-female-melee.xml" />
+    <node puid="2162055" chunk="1081" pos="30944;26557;60" area="1" so_id="puid2162055" type="FISHING_SPOT" parm="MANA_SPOT" actor_type="actors/interactives/fishing-spot.xml" />
+    <node puid="2164051" chunk="1082" pos="31811;26525;-11" area="1" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-mana-melee.xml" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+</root>

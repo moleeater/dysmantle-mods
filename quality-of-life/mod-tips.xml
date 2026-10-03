@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="TIPS">
+
+    <node platform="WINDOWS" lang="en" value="
+More quality-of-life hacks are available on NexusMods, listed as 'CE hacks'.
+Includes low platforms, cooking helper, faster material storage, map re-draw, camera control.
+" />
+
+    <node platform="ANDROID" lang="en" value="
+More quality-of-life hacks are available on NexusMods, listed as 'Android hacks'.
+Currently only includes faster material storage.
+" />
+
+    <node lang="en" value="
+You can enable mods and view their details in the Options menu.
+" />
+
+    <node lang="en" value="
+Click the mod title in the Options menu to view a brief description of the mod's functionality.
+" />
+
+    <node lang="en" value="
+Check the Changelog to discover what is new and updated in the mods.
+" />
+
+    <node lang="en" value="
+Need help or have a new idea?
+Join the official 10tons discord server to chat about mods.
+" />
+
+    <node lang="en" value="
+Game too easy? Want more challenge? Adjust the difficulty when starting a new game.
+Difficulty affects enemy health, speed, damage, XP.
+" />
+
+    <node lang="en" value="
+Click a POI on the map or in the collection menu to see more information.
+This includes towers, fishing spots, obelisks, teleporters, the Ark.
+" />
+
+    <node lang="en" value="
+Wiki articles are available on many screens, click the round wiki icon to open a browser link.
+For quests, bosses, creatures, tools, specials, trinkets, features, skills, materials, dishes, etc.
+" />
+
+    <node lang="en" value="
+Got an endgame weapon to carry into a new game but don't want to unlock Ark level 3 again?
+New Game Plus can be started anytime at your home shelter.
+" />
+
+    <node lang="en" value="
+Bring your most powerful weapons and inventions into New Game Plus.
+You can select which tools or features you want to keep.
+" />
+
+    <node lang="en" value="
+You can start a new game from the shelters scattered across the main island.
+Some shelters offer a tougher start, others are just for fun.
+" />
+
+    <node lang="en" value="
+Start a new game where trees, bushes, rocks are protected from your attacks.
+Let the island show its beauty, with nature left untouched.
+" />
+
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

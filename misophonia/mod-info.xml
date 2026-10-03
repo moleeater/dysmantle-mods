@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="load_priority" value="2" />
+    <node id="author" value="MoleEater" />
+    <node id="title" value="Misophonia" />
+    <node id="description" value="Accessibility mod for people with misophonia.
+Disables chewing, gulping, scratching, coughing, exhaling, grunt, hurt, death sounds of the player.
+
+Troubleshooting: https://dysmantle.fandom.com/wiki/Modding
+" />
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

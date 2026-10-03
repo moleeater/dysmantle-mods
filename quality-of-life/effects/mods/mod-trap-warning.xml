@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="DEFAULT">
+
+    <node class="BITMAP" bitmaps="emojis/skull and crossbones.png"
+      align_to_camera="true"
+      blend_mode="NORMAL"
+      scale_multiplier="0.67"
+      alpha_curve="0,1;1,0"
+      lighting_mode="NONE"
+      gravity_multiplier="0"
+      move_speed="0"
+      move_direction="0,0,0"
+      age_to_die="0.5"
+      />
+
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

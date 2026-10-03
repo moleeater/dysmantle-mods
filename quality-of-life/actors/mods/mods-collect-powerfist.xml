@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="DELETE_ACTOR_AFTER_DEATH,INDESTRUCTIBLE,SOLID,STATIC" />
+    <node id="physics_material" value="METAL" />
+    <node id="friend_group" value="OBSTACLES" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="model" type="MODEL" value="models/tools/powerfist.model" />
+    <node id="recipe_id" type="STRING" value="POWER_FIST" />
+    <node id="item_id" type="STRING" value="items/tools/power-fist.nut" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleCollectible">
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelCollectible" />
+    <node id="model" value="models/tools/powerfist.model" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="render_scale" value="1.2" />
+    <node id="render_offset_x" value="0" />
+    <node id="render_offset_y" value="0" />
+    <node id="render_offset_z" value="-20" />
+    <node id="shadow_alpha" value="0" />
+  </array>
+
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="collect"
+        interaction_0_trigger="HOLD_DOWN_BUTTON"
+        interaction_0_trigger_parameter_float="2"
+        interaction_0_controller_button="USE"
+        interaction_0_text="Collect"
+        interaction_0_radius="120"
+        interaction_0_command_to_send_to_activator_actor="pick_up"
+        interaction_0_external_script="scripts/interactions/mods/mod-starting-stage-hold-down-button-collectible-object.nut"
+    />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="BOX" />
+    <node id="size_x" value="17.5" />
+    <node id="size_y" value="19.6" />
+    <node id="size_z" value="16.4" />
+    <node id="offset_x" value="1.0" />
+    <node id="offset_y" value="5.6" />
+    <node id="offset_z" value="-15.0" />
+  </array>
+
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

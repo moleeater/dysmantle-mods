@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="Small Vintage Radio" localize="true" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="tags" value="TABLEWARE,MOD_OCPD_MINIMAP,MOD_ONE_HIT_OBJECTS" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="physics_material" value="WOOD" />
+    <node id="mass" value="100" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="1" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="200" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.5" />
+    <node id="minimum_damage_threshold" value="25" />
+    <node id="aggro_radius" value="500" />
+    <node id="friend_avoidance_radius" value="30" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="100" />
+    <node id="max_hit_points" value="50" />
+    <node id="damage_type" value="ELECTRIC" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES">
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="2xSCRAP_WOOD,SCRAP_ELECTRONICS" />
+    <node id="build_cost" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="2xLUMBER,2xELECTRONICS" />
+    <node id="drops_random_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="SCRAP_ELECTRONICS,SCRAP_ELECTRONICS,ELECTRONICS" />
+    <node id="preview_angle" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="180" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="DISMANTLABLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="AI_PARAMETERS" ai="ObstacleAnimated">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death"
+     category="DEATH"
+     animation_controller="PhysicsMaterialBasedDeath"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/link-tower-sparks.xml"
+    />
+
+    <node id="use"
+     forced_animation_length_in_seconds="2.50"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/radio-static-01|SC|sfx/radio-static-02|SC|sfx/radio-static-03|Q|}}"
+     event_1_trigger_time="2.8"
+     event_1_id="reset_interaction"
+     event_1_command_word="run_script"
+     event_1_command_word_key_values="{{SCRIPT,|Q|script|Q|,|Q|Actor_SetInteractionEnabled(so_self, |BS||Q|listen|BS||Q|, true)|SC||Q|}}"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="model" value="models/objects/radio-30s.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+    <node interaction_0_id="tune"
+     interaction_0_disable_after_interaction="0"
+     interaction_0_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;return !Game_IsShowingActorNotification(so_self);&#10;}"
+     interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Actor_SetInteractionEnabled(so_self, &#34;listen&#34;, false);&#10;&#9;Actor_PlayAnimation(so_self, &#34;use&#34;);&#10;}"
+     interaction_0_trigger="PRESS_BUTTON"
+     interaction_0_controller_button="USE"
+     interaction_0_text="Tune"
+    />
+
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="BOX" />
+    <node id="size_x" value="12.2" />
+    <node id="size_y" value="23.4" />
+    <node id="size_z" value="25.1" />
+    <node id="offset_z" value="-12.5" />
+  </array>
+</root>

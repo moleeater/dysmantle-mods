@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="physics_material" value="NO_DAMAGE" />
+    <node id="actor_flags" value="INDESTRUCTIBLE,NO_MOMENTUM_FROM_COLLISIONS,SEETHROUGH" />
+    <node id="time_awake_after_leaving_view_in_secs" value="-1" />
+    <node id="color" r="0.55" g="0.55" b="0.55" a="0.5" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="ObstacleAnimated">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="loop"
+      play_on_create="true"
+      wrap_mode="LOOP"
+      forced_animation_length_in_seconds="0.50"
+      event_0_trigger_time="0" event_0_id="haze"
+        event_0_effect="effects/mods/mod-common-rift-haze.xml"
+        event_0_spawn_effect_scale="1.47"
+        event_0_spawn_effect_offset_z="-52.06"
+      event_1_trigger_time="0.01" event_1_id="sfx-hum"
+        event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{BOOLEAN,|Q|looping|Q|,|Q|true|Q|},{FLOAT,|Q|fade_out_duration|Q|,|Q|1|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.8,0.8|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|400,700|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/humming|Q|}}"
+        event_1_spawn_effect_scale="0.26"
+        event_1_spawn_effect_offset_z="-52.66"
+      event_2_trigger_time="0.402" event_2_id="discharge"
+        event_2_effect="effects/mods/mod-common-rift-discharge.xml"
+        event_2_sound_event="{{BOOLEAN,|Q|looping|Q|,|Q|true|Q|},{FLOAT,|Q|fade_out_duration|Q|,|Q|1|Q|},{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|400,700|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/power-sparks-loop|Q|}}"
+        event_2_spawn_effect_scale="0.26"
+        event_2_spawn_effect_offset_z="-52.66"
+    />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="BitmapBillboard" />
+    <node id="shadow_method" value="NONE" />
+    <node id="visual_bounds_size_multiplier" value="1.5" />
+    <node id="blend_mode" value="ADDITIVE" />
+    <node id="allow_static_caching" value="false" />
+    <node id="initial_bitmap_a" value="effects/gfx/tomb-orb-haze-outer.png" />
+  </array>
+
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="enter_radius_teleport"
+        interaction_0_trigger="ENTER_RADIUS"
+        interaction_0_radius="20"
+        interaction_0_attach_offset="0,0,-25"
+        interaction_0_disable_after_interaction="0"
+        interaction_0_external_script="scripts/interactions/mods/mod-common-rifts-enter-radius-teleport.nut"
+      interaction_1_id="enter_radius_reveal"
+        interaction_1_trigger="ENTER_RADIUS"
+        interaction_1_radius="200"
+        interaction_1_attach_offset="0,0,-25"
+        interaction_1_disable_after_interaction="0"
+        interaction_1_external_script="scripts/interactions/mods/mod-common-rifts-enter-radius-reveal.nut"
+    />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="CYLINDER" />
+    <node id="radius_xy" value="16" />
+    <node id="min_z" value="-120" />
+    <node id="max_z" value="0" />
+  </array>
+
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="Ex-Wolf" localize="true" />
+    <node id="tags" value="POINT_OF_INTEREST,MONSTER" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SOLID,FRIEND_OR_FOE,AFFECTED_BY_GRAVITY,COLLIDE_AGAINST_STATIC_EDGES,SET_NONSOLID_ON_DEATH_END,CAN_STAND_ON_ACTORS" />
+    <node id="persistency_flags" value="TEMPORARY_DEATH_STATE,TEMPORARY_TRANSFORM,TEMPORARY_ATTRIBUTES" />
+    <node id="physics_material" value="FLESH" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="1" />
+    <node id="move_acceleration" value="0" />
+    <node id="max_move_speed" value="50" />
+    <node id="dampening_factor_on_ground" value="8" />
+    <node id="dampening_factor_on_air" value="0.5" />
+    <node id="restitution_coefficient" value="0.15" />
+    <node id="friction" value="0" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="10" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="90" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="drops_random_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="BONE,HIDE" />
+    <node id="script_file" type="FILE" value="actors/enemies/scripts/ex-animal-wolf.nut" />
+    <node id="stance" type="STRING" value="hands_free" />
+    <node id="default_running_speed_multiplier" type="FLOAT" value="7" />
+    <node id="default_strafing_speed_multiplier" type="FLOAT" value="1.25" />
+    <node id="default_knockback_strength" type="FLOAT" value="200" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENEMY_NORMAL" />
+    <node id="description" type="STRING" flags="PERSISTENT,LOCALIZED,NO_REPLICATION" value="Once a majestic hunter of the wild, the Ex-Wolf is now nothing more than a cruel diseased beast." />
+    <node id="hearing_multiplier" type="FLOAT" value="1" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleEnemyScripted">
+    <node id="max_aggro_range" type="FLOAT" value="500" />
+    <node id="max_field_of_view" type="FLOAT" value="120" />
+    <node id="allow_flanking" type="BOOLEAN" value="false" />
+    <node id="react_to_enemy_collisions" type="BOOLEAN" value="true" />
+    <node id="roadmap_requires_activation" type="BOOLEAN" value="false" />
+    <node id="alert_system_enabled" type="BOOLEAN" value="true" />
+    <node id="alert_level_start_wander" type="FLOAT" value="-1" />
+    <node id="alert_level_stop_wander" type="FLOAT" value="-1" />
+    <node id="alert_level_start_investigate_noise" type="FLOAT" value="75" />
+    <node id="alert_level_stop_chase" type="FLOAT" value="20" />
+    <node id="alert_level_increase_speed" type="FLOAT" value="5" />
+    <node id="alert_level_decrease_speed" type="FLOAT" value="5" />
+    <node id="alert_level_max_distance_from_home" type="FLOAT" value="1200" />
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleAvoidFriends" />
+  </array>
+
+  <array id="ANIMATIONS">
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node id="die"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/quaped-wolf_die-1.anim"
+     fade_out_duration="0"
+     pause_at_end="true"
+    />
+
+    <node id="die2"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/quaped-wolf_die-2.anim"
+     fade_out_duration="0"
+     pause_at_end="true"
+    />
+
+    <node id="die3"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/quaped-wolf_die-3.anim"
+     fade_out_duration="0"
+     pause_at_end="true"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node id="drown"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/quaped-wolf_drowning.anim"
+     wrap_mode="LOOP"
+     event_0_trigger_time="6.5"
+     event_0_id="drown"
+     event_0_command_word="self_destruct"
+    />
+
+    <node id="fall" animation_controller="Playback" skeleton_animation="models/animations/quaped-wolf_falling.anim" wrap_mode="LOOP" />
+    <node id="landing"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/quaped-wolf_landing_soft.anim"
+     event_0_trigger_time="0"
+     event_0_id="sfx-impact"
+     event_0_effect="effects/sfx-enemy-impact.xml"
+    />
+
+    <node id="landing_damage"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/quaped-wolf_landing_hard.anim"
+     event_0_trigger_time="0.2"
+     event_0_id="sfx-impact"
+     event_0_effect="effects/sfx-enemy-impact.xml"
+     event_1_trigger_time="0.35"
+     event_1_id="sfx-hurt"
+     event_1_effect="effects/sfx-wolf-hurt.xml"
+    />
+
+    <node id="melee.hands_free.idle"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/quaped-wolf_attack_standing_1.anim"
+     tags="MELEE"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0"
+     event_0_id="sfx-growl"
+     event_0_effect="effects/sfx-wolf-growl.xml"
+     event_1_trigger_time="0.25"
+     event_1_id="turn"
+     event_1_command_word="turn_towards_target"
+     event_2_trigger_time="0.35"
+     event_2_id="sfx-bark"
+     event_2_effect="effects/sfx-wolf-bark.xml"
+     event_3_trigger_time="0.6"
+     event_3_id="attack"
+     event_3_effect="effects/wolf-bite.xml"
+     event_3_spawn_effect_offset_x="60.00"
+     event_3_command_word="melee_attack"
+     event_3_command_word_key_values="{{FLOAT,|Q|angle|Q|,|Q|90|Q|}}"
+     event_4_trigger_time="0.85"
+     event_4_id="sfx-bark2"
+     event_4_effect="effects/sfx-wolf-bark.xml"
+     event_5_trigger_time="1.01"
+     event_5_id="id2"
+     event_5_bone_id="jaw"
+     event_5_effect="effects/wolf-bite.xml"
+     event_5_spawn_effect_offset_y="23.00"
+    />
+
+    <node id="melee.hands_free.moving"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/quaped-wolf_bite-1.anim"
+     bone_group_id="NeckupOnly"
+     tags="MELEE"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0.15"
+     event_0_id="sfx-bark"
+     event_0_effect="effects/sfx-wolf-bark.xml"
+     event_1_trigger_time="0.285"
+     event_1_id="id2"
+     event_2_trigger_time="0.33"
+     event_2_id="attack"
+     event_2_effect="effects/wolf-bite.xml"
+     event_2_spawn_effect_offset_x="60.00"
+     event_2_command_word="melee_attack"
+     event_2_command_word_key_values="{{FLOAT,|Q|angle|Q|,|Q|90|Q|}}"
+    />
+
+    <node id="move.hands_free.idle.default"
+     animation_controller="DysmantleAnimalMove"
+     skeleton_animation="models/animations/quaped-wolf_alert-1.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     start_playing_at_random_time_key="true"
+    />
+
+    <node id="move.hands_free.run.default" animation_controller="DysmantleAnimalMove" skeleton_animation="models/animations/quaped-wolf_jog.anim" bone_group_id="NoRootMovement" wrap_mode="LOOP" />
+    <node id="move.hands_free.turning.left" animation_controller="DysmantleMove" skeleton_animation="models/animations/quaped-wolf_turn-left.anim" wrap_mode="LOOP" />
+    <node id="move.hands_free.turning.right" animation_controller="DysmantleMove" skeleton_animation="models/animations/quaped-wolf_turn-right.anim" wrap_mode="LOOP" />
+    <node id="move.hands_free.walk.default" animation_controller="DysmantleAnimalMove" skeleton_animation="models/animations/quaped-wolf_walk.anim" bone_group_id="NoRootMovement" wrap_mode="LOOP" />
+    <node id="spot_enemy" event_0_trigger_time="0" event_0_id="sfx-growl" event_0_trigger_if_actor_is_dead="false" event_0_effect="effects/sfx-wolf-growl.xml" />
+    <node id="stalk" animation_controller="Playback" skeleton_animation="models/animations/quaped-wolf_alert-1.anim" />
+    <node id="stun"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/quaped-wolf_stunned.anim"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_bone_id="neck"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/stun-stars.xml"
+     event_0_spawn_effect_offset_y="11.00"
+     event_0_spawn_effect_offset_z="18.00"
+     event_1_trigger_time="0.57"
+     event_1_id="id1"
+     event_1_bone_id="neck"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/stun-stars.xml"
+     event_1_spawn_effect_offset_y="11.00"
+     event_1_spawn_effect_offset_z="18.00"
+     event_2_trigger_time="1.23"
+     event_2_id="id2"
+     event_2_bone_id="neck"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/stun-stars.xml"
+     event_2_spawn_effect_offset_y="11.00"
+     event_2_spawn_effect_offset_z="18.00"
+     event_3_trigger_time="1.97"
+     event_3_id="id3"
+     event_3_bone_id="neck"
+     event_3_spawn_effect_to_local_particle_system="true"
+     event_3_effect="effects/stun-stars.xml"
+     event_3_spawn_effect_offset_y="11.00"
+     event_3_spawn_effect_offset_z="18.00"
+     event_4_trigger_time="2.66"
+     event_4_id="id4"
+     event_4_bone_id="neck"
+     event_4_spawn_effect_to_local_particle_system="true"
+     event_4_effect="effects/stun-stars.xml"
+     event_4_spawn_effect_offset_y="11.00"
+     event_4_spawn_effect_offset_z="18.00"
+    />
+
+    <node id="inside_mana_chamber"
+     wrap_mode="LOOP"
+     keep_on_stack_top="true"
+     forced_animation_length_in_seconds="0.50"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_bone_id="head"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/enemy-inside-mana-chamber.xml"
+     event_0_spawn_effect_angle_z="180.00"
+     event_1_trigger_time="0.184"
+     event_1_id="id1"
+     event_1_bone_id="head"
+     event_1_ignore_bone_orientation="true"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/enemy-inside-mana-chamber.xml"
+     event_1_spawn_effect_angle_z="180.00"
+     event_2_trigger_time="0.377"
+     event_2_id="id3"
+     event_2_bone_id="head"
+     event_2_ignore_bone_orientation="true"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/enemy-inside-mana-chamber.xml"
+     event_2_spawn_effect_angle_z="180.00"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="0.4" />
+    <node id="shadow_alpha" value="0.3" />
+    <node id="shadow_drawn_for_each_bone" value="true" />
+    <node id="model" value="models/enemies/zombie-wolf.model" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_peaceful_mode_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-peaceful-mode-on-game-start.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="CAPSULE" />
+    <node id="radius" value="12.0" />
+    <node id="height" value="35.0" />
+    <node id="offset_z" value="-29.5" />
+  </array>
+
+</root>

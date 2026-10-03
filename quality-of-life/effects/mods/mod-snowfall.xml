@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="DEFAULT">
+    <node
+      enabled="true"
+      class="BITMAP"
+      bitmaps="effects/gfx/dot.png"
+      number_of_particles="100"
+      initial_age="0;-0.3"
+      age_to_die="80"
+      time="0"
+      blend_mode="ADDITIVE"
+      lighting_mode="POINT"
+      collide_to_ground="true"
+      die_on_collision="true"
+      align_to_camera="true"
+      position_offset="0,0,-300"
+      position_spread_box="500,500,500"
+      move_speed="111"
+      move_direction="1,0,0"
+      move_angle_spread="11"
+      move_angle_z="0"
+      move_angle_y="0"
+      move_angle_x="0"
+      dampening_factor="1"
+      restitution_coefficient="0.5"
+      gravity_multiplier="0.1;0"
+      alpha_curve="0,1"
+      scale_curve="0,1"
+      alpha_multiplier="1"
+      scale_multiplier="1"
+      rotation_angles="0,0,0"
+      angular_velocity="0,0,0"
+      />
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

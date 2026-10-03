@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="3x3 Concrete Platform" localize="true" />
+    <node id="tags" value="HIDE_IN_EDITOR_PALETTE,BUILDABLE,BRIDGE,BUILD_PLATFORM" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,PERMANENT,SOLID,DELETE_ACTOR_AFTER_DEATH,CAN_BE_STOOD_ON" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE,PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="100" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="1" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="200" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.5" />
+    <node id="minimum_damage_threshold" value="1" />
+    <node id="aggro_radius" value="500" />
+    <node id="friend_avoidance_radius" value="30" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="100" />
+    <node id="max_hit_points" value="500" />
+    <node id="damage_type_accept_mask" value="UNSPECIFIED,BLUNT,PIERCING,FIRE,COLD,POISON,ELECTRIC,EXPLOSIVE,SELF_DESTRUCT,HIT_GROUND,PROJECTILE,HEAT" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES">
+    <node id="build_cost" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="16xSTONE" />
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="8xSTONE" />
+    <node id="color_material_floor" type="COLOR" flags="PERSISTENT,SAVE_STATE" value="0.61,0.44,0.27,1" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="Null">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death"
+     category="DEATH"
+     animation_controller="PhysicsMaterialBasedDeath"
+     force_update_visual_bounds="true"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/flash-ground-large.xml"
+     event_1_trigger_time="0"
+     event_1_id="id1"
+     event_1_effect="effects/concrete-pig-break.xml"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="model" value="models/buildables/platform-brick-3x3.model" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_indestructible_buildables_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-indestructible-buildables-on-game-start.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="BOX" />
+    <node id="size_x" value="180.0" />
+    <node id="size_y" value="180.0" />
+    <node id="size_z" value="120.0" />
+  </array>
+
+</root>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="RECTANGLE"
+     inherit="FaderRectangle"
+     on_click_script_call="UI_PopScreen();"
+     color="0,0,0,0.2"
+    />
+
+    <node
+     name="fader2"
+     type="IMAGE"
+     inherit="DefaultImage"
+     position.x="0.499375"
+     position.y="1.04333"
+     on_click_script_call="UI_PopScreen();"
+     color="1,1,1,0.4"
+     scale="11.5451"
+     align="VCENTER,HCENTER"
+     image.bitmap="shadows/shadow-capsule.png"
+    />
+
+    <node
+     name="Materials"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     position.x="0.515334"
+     position.y="0.980926"
+     scale="0.630912"
+     align="BOTTOM,HCENTER"
+     aligner.area_height="83.1047"
+     aligner.automatic_area_width="true"
+    />
+
+    <node
+     name="Slot_0"
+     type="BUTTON"
+     inherit="MaterialFrameButton"
+     parent="Materials"
+     save_dynamic_content_to_ui_xml="false"
+     custom_draw="true"
+     button.ninepatch_width="74"
+     button.ninepatch_height="74"
+    />
+
+    <node
+     name="Tooltip"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     position.x="0.498958"
+     position.y="0.953705"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.791827"
+     align="VCENTER,HCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="653"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="panel_storage"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanelTransparent"
+     position.x="0.499573"
+     position.y="0.0128472"
+     color="0.3,0.3,0.3,0.75"
+     scale="0.827204"
+     ui_scale_modifier="0.16"
+     align="HCENTER"
+     ninepatch.rectangle_width="833"
+     ninepatch.automatic_content_height="true"
+    />
+
+    <node
+     name="aligner_panel_content"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel_storage"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="1"
+     aligner.min_padding="6"
+    />
+
+    <node
+     name="marker_2"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_panel_content"
+     align="VCENTER,HCENTER"
+     marker.area_height="17.8591"
+    />
+
+    <node
+     name="TitleStorage"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="aligner_panel_content"
+     scale="1.49091"
+     align="HCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.text="Materials in Storage"
+    />
+
+    <node
+     name="aligner_storage"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_panel_content"
+     scale="0.84139"
+     align="HCENTER"
+     aligner.automatic_area_width="true"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="11"
+     aligner.center_last_row_in_grid_layout="false"
+    />
+
+    <node
+     name="marker_1"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_panel_content"
+     align="VCENTER,HCENTER"
+     marker.area_height="10.4889"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node parent="Tooltip" name="mod_eating_hitpoints"
+      type="TEXTBOX" inherit="DefaultTextbox"
+      align="HCENTER"
+      scale="0.9"
+      position.y="-1.4"
+      textbox.text_align="HCENTER,VCENTER"
+      shader_effect="FontBlackShadowOutline"
+      localize="false"
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

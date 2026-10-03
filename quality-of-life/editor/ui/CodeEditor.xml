@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="RECTANGLE"
+     inherit="EditorFaderRectangle"
+     on_click_script_call="UI_PopScreen();"
+     color="0,0,0,0.55"
+     scale_type="RELATIVE_TO_SCREEN_SIZE"
+    />
+
+    <node
+     name="panel"
+     type="NINEPATCH"
+     inherit="EditorNinePatchRoundedPanel"
+     position.x="0.499711"
+     position.y="0.498664"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="853"
+     ninepatch.rectangle_height="527"
+    />
+
+    <node
+     name="panel2"
+     type="NINEPATCH"
+     inherit="EditorNinePatchBevel"
+     parent="panel"
+     position.x="-0.00383778"
+     position.y="-0.412705"
+     align="HCENTER"
+     ninepatch.rectangle_width="817"
+     ninepatch.rectangle_height="420"
+    />
+
+    <node
+     name="Operations"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel"
+     position.x="0.475771"
+     position.y="0.449847"
+     align="RIGHT,VCENTER"
+     aligner.layout="STACK"
+     aligner.area_height="31.7419"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.min_padding="8"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="aligner_syntax_SQUIRREL"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel"
+     position.x="-0.482972"
+     position.y="0.449847"
+     align="VCENTER"
+     aligner.layout="STACK"
+     aligner.area_height="30.4516"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.min_padding="8"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="Title"
+     type="TEXTBOX"
+     inherit="EditorMediumTextbox"
+     parent="panel"
+     position.x="-0.481051"
+     position.y="-0.457936"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="592"
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="LineColumn"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="Operations"
+     save_dynamic_content_to_ui_xml="false"
+     scale="0.898369"
+     align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="KeywordHelp"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="panel"
+     position.x="-0.000669773"
+     position.y="0.512258"
+     save_dynamic_content_to_ui_xml="false"
+     scale="0.898369"
+     align="HCENTER"
+     textbox.text_align="HCENTER"
+    />
+
+    <node
+     name="Cancel"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="Operations"
+     tooltip_text="Revert all changes and exit."
+     visible="false"
+     button.text="Revert"
+     button.ninepatch_width="80"
+     button.ninepatch_height="30"
+    />
+
+    <node
+     name="aligner_syntax_NONE"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="Operations"
+     visible="false"
+     align="VCENTER"
+     aligner.layout="STACK"
+     aligner.area_height="30.4516"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.min_padding="10"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="Reload"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="Operations"
+     tooltip_text="Revert all changes and exit."
+     button.text="Reload"
+     button.ninepatch_width="80"
+     button.ninepatch_height="30"
+    />
+
+    <node
+     name="Load"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="Operations"
+     button.text="Load..."
+     button.ninepatch_width="80"
+     button.ninepatch_height="30"
+    />
+
+    <node
+     name="Save"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="Operations"
+     button.text="Save"
+     button.ninepatch_width="80"
+     button.ninepatch_height="30"
+    />
+
+    <node
+     name="Compile"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_syntax_SQUIRREL"
+     tooltip_text="CTRL+B: Compiles script and attempts to run it to show potential errors. Depending on the script, running may not make sense."
+     button.text="Compile and Run"
+     button.ninepatch_width="105"
+     button.ninepatch_height="30"
+    />
+
+    <node
+     name="SaveAndExit"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_syntax_NONE"
+     button.text="Save and Exit"
+     button.ninepatch_width="110"
+     button.ninepatch_height="30"
+    />
+
+    <node
+     name="ClearErrors"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_syntax_SQUIRREL"
+     tooltip_text="Clears script overlay errors."
+     button.text="Clear Errors"
+     button.ninepatch_width="90"
+     button.ninepatch_height="30"
+    />
+
+    <node
+     name="Close"
+     type="BUTTON"
+     inherit="EditorCloseButton"
+     parent="panel"
+     position.x="0.470819"
+     position.y="-0.45229"
+    />
+
+    <node
+     name="CodeEdit"
+     type="CODEEDITOR"
+     inherit="DefaultCodeEditor"
+     parent="panel2"
+     position.x="-0.000210682"
+     position.y="0.00843209"
+     align="HCENTER"
+     codeeditor.area_width="811.613"
+     codeeditor.area_height="412.903"
+     codeeditor.area_color="0.2,0.2,0.2,0"
+     codeeditor.text_scale="0.5"
+    />
+
+    <node
+     name="AutoCompile"
+     type="CHECKBOX"
+     inherit="EditorCheckbox"
+     parent="aligner_syntax_SQUIRREL"
+     tooltip_text="Automatically compiles and shows errors if not pressed any key for a while."
+     checkbox.value="1"
+     checkbox.text="Autocompile"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="Documentation"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_syntax_SQUIRREL"
+     tooltip_text="Shows list of constants and functions (Use CTRL+SPACE for autocomplete)"
+     button.text="API Docs"
+     button.ninepatch_width="65"
+     button.ninepatch_height="30"
+    />
+
+    <node
+     name="Indent"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_syntax_SQUIRREL"
+     tooltip_text="Autoindents the file"
+     button.text="Format"
+     button.ninepatch_width="65"
+     button.ninepatch_height="30"
+    />
+
+    <node
+     name="Search"
+     type="EDITBOX"
+     inherit="EditorEditboxSearch"
+     parent="panel"
+     position.x="0.245342"
+     position.y="-0.450435"
+     align="VCENTER"
+     editbox.ninepatch_width="166"
+     editbox.text=""
+    />
+
+    <node
+     name="slider_1"
+     type="SLIDER"
+     inherit="EditorSliderScrollbar"
+     parent="panel"
+     position.x="0.483099"
+     position.y="-0.41741"
+     save_dynamic_content_to_ui_xml="true"
+     localize="true"
+     align="HCENTER"
+     slider.ninepatch_height="425"
+     slider.linked_view="CodeEdit"
+    />
+
+    <node
+     name="slider_2"
+     type="SLIDER"
+     inherit="EditorSliderScrollbar"
+     parent="panel"
+     position.x="-0.000848918"
+     position.y="0.399363"
+     save_dynamic_content_to_ui_xml="true"
+     localize="true"
+     slider.ninepatch_width="821"
+     slider.ninepatch_height="12"
+     slider.linked_view="CodeEdit"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node parent="panel" name="mod_code_editor_help"
+      type="TEXTBOX" inherit="EditorSmallTextbox"
+      align="HCENTER"
+      scale="0.898369"
+      position.y="-0.545"
+      shader_effect="FontBlackShadowOutline"
+      textbox.text_align="HCENTER"
+      localize="false"
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

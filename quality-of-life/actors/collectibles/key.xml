@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="COLLECTIBLE" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SOLID,SEETHROUGH,AFFECTED_BY_GRAVITY,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH,CAN_STAND_ON_ACTORS" />
+    <node id="persistency_flags" value="PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="gravity_multiplier" value="10" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="1300" />
+    <node id="max_move_speed" value="60" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.15" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="220" />
+    <node id="friend_avoidance_radius" value="40" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1000" />
+    <node id="friend_group" value="COLLECTIBLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="key_id" type="STRING" flags="PERSISTENT,SAVE_STATE" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleCollectible">
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="BitmapCollectible" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="0.88" />
+    <node id="shadow_alpha" value="0.21" />
+    <node id="render_scale" value="0.5" />
+    <node id="initial_bitmap_a" value="actors/collectibles/gfx/key-basic.png" />
+  </array>
+
+  <array id="INTERACTIONS">
+    <node interaction_0_id="collect"
+     interaction_0_trigger="PRESS_BUTTON"
+     interaction_0_controller_button="USE"
+     interaction_0_radius="100"
+     interaction_0_command_to_send_to_activator_actor="pick_up"
+     interaction_0_attach_offset="0,0,-35"
+    />
+
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="SPHERE" />
+    <node id="radius" value="12.7" />
+    <node id="offset_z" value="-30.2" />
+  </array>
+
+</root>

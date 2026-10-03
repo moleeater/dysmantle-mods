@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="INFO">
+		<node id="version" value="1" />
+		<node id="tags" value="HIDE_IN_EDITOR_PALETTE" />
+	</array>
+
+	<array id="ATTRIBUTES">
+		<node id="actor_flags" value="STATIC" />
+		<node id="physics_material" value="PLASTIC" />
+		<node id="mass" value="100" />
+		<node id="gravity_multiplier" value="1" />
+		<node id="turn_speed" value="1" />
+		<node id="move_acceleration" value="200" />
+		<node id="max_move_speed" value="1" />
+		<node id="dampening_factor_on_ground" value="0" />
+		<node id="dampening_factor_on_air" value="0" />
+		<node id="restitution_coefficient" value="0.5" />
+		<node id="friction" value="0.2" />
+		<node id="minimum_damage_threshold" value="0" />
+		<node id="aggro_radius" value="128" />
+		<node id="friend_avoidance_radius" value="10" />
+		<node id="initial_scale" value="1" />
+		<node id="damage" value="0" />
+		<node id="range" value="400" />
+		<node id="max_hit_points" value="100" />
+		<node id="friend_group" value="OBSTACLES" />
+		<node id="color" r="1" g="1" b="1" a="1" />
+	</array>
+
+	<array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+		<node id="color_material_0" type="COLOR" value="0.55,0.52,0.55,1" />
+		<node id="color_material_1" type="COLOR" value="0.84,0.81,0.7,1" />
+		<node id="color_material_2" type="COLOR" value="0.52,0.06,0.27,1" />
+		<node id="color_material_4" type="COLOR" value="0.89,0.63,0.8,1" />
+	</array>
+
+	<array id="AI_PARAMETERS" ai="ObstacleAnimated">
+	</array>
+
+	<array id="ANIMATIONS">
+		<node id="walk"
+		 animation_controller="SingleAnimationFrame"
+		 skeleton_animation="models/animations/humanoid-zombie_female_walk_forward.anim"
+		 fade_in_duration="0"
+		 fade_out_duration="0"
+		 key_values="{{FLOAT,|Q|t|Q|,|Q|0|Q|}}"
+		/>
+
+		<node id="melee_stalk"
+		 animation_controller="SingleAnimationFrame"
+		 skeleton_animation="models/animations/humanoid-zombie_female_melee-2.anim"
+		 fade_in_duration="0"
+		 fade_out_duration="0"
+		 key_values="{{FLOAT,|Q|t|Q|,|Q|0.873|Q|}}"
+		/>
+
+	</array>
+
+	<array id="RENDERER_PARAMETERS">
+		<node id="renderer" value="ModelSkinned" />
+		<node id="shadow_drawn_for_each_bone" value="true" />
+		<node id="shadow_method" value="NONE" />
+		<node id="receive_shadows" value="false" />
+		<node id="model" value="models/enemies/zombie-female-1.model" />
+	</array>
+
+	<array id="PROPS">
+		<node id="new"
+		 mount_bone_id="head"
+		 actor_type="actors/enemies/zombie-female-head-1.xml"
+		 mount_scale="0.94"
+		 mount_rotation_angles_x="-1.5708"
+		 mount_rotation_angles_y="0"
+		 mount_rotation_angles_z="-1.5708"
+		/>
+
+		<node id="new_20979" mount_bone_id="hand.L" actor_type="actors/objects/corruption-prop-warts.xml" mount_scale="1.14" />
+		<node id="new_28002" mount_bone_id="spine-1" actor_type="actors/objects/corruption-prop-spike.xml" />
+		<node id="new_28291"
+		 mount_bone_id="spine-2"
+		 actor_type="actors/objects/corruption-prop-spike.xml"
+		 mount_offset_x="0"
+		 mount_offset_y="2.08"
+		 mount_offset_z="0"
+		 mount_rotation_angles_x="-0.442092"
+		 mount_rotation_angles_y="0"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="new_30892"
+		 mount_bone_id="neck"
+		 actor_type="actors/objects/corruption-prop-spike.xml"
+		 mount_rotation_angles_x="-0.0314159"
+		 mount_rotation_angles_y="0"
+		 mount_rotation_angles_z="0"
+		/>
+
+	</array>
+
+	<array id="COLLIDER">
+		<node id="type" value="NONE" />
+	</array>
+</root>

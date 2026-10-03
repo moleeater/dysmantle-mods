@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" localize="true" />
+    <node id="tags" value="FLYING,POINT_OF_INTEREST,MONSTER" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="PERMANENT,SOLID,FRIEND_OR_FOE,AFFECTED_BY_GRAVITY,SET_NONSOLID_ON_DEATH_END,CAN_STAND_ON_ACTORS" />
+    <node id="persistency_flags" value="TEMPORARY_DEATH_STATE,TEMPORARY_TRANSFORM,TEMPORARY_ATTRIBUTES" />
+    <node id="physics_material" value="FLESH" />
+    <node id="mass" value="100" />
+    <node id="gravity_multiplier" value="0.5" />
+    <node id="turn_speed" value="4" />
+    <node id="move_acceleration" value="0" />
+    <node id="max_move_speed" value="75" />
+    <node id="dampening_factor_on_ground" value="8" />
+    <node id="dampening_factor_on_air" value="8" />
+    <node id="restitution_coefficient" value="0.15" />
+    <node id="friction" value="0" />
+    <node id="minimum_damage_threshold" value="1" />
+    <node id="aggro_radius" value="500" />
+    <node id="friend_avoidance_radius" value="60" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="15" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="120" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="script_file" type="FILE" flags="PERSISTENT,NO_REPLICATION" value="actors/enemies/scripts/doomsquito.nut" />
+    <node id="stance" type="STRING" value="fly" />
+    <node id="default_running_speed_multiplier" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="3" />
+    <node id="default_knockback_strength" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="200" />
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="CHITIN" />
+    <node id="description" type="STRING" flags="PERSISTENT,LOCALIZED" value="A heavily mutated form of a common mosquito that is able to accurately fling its poison over large distances." />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENEMY_NORMAL" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleEnemyScripted">
+    <node id="max_aggro_range" type="FLOAT" value="500" />
+    <node id="max_field_of_view" type="FLOAT" value="270" />
+    <node id="allow_flanking" type="BOOLEAN" value="true" />
+    <node id="react_to_enemy_collisions" type="BOOLEAN" value="true" />
+    <node id="roadmap_requires_activation" type="BOOLEAN" value="false" />
+    <node id="alert_system_enabled" type="BOOLEAN" value="true" />
+    <node id="alert_level_start_wander" type="FLOAT" value="50" />
+    <node id="alert_level_stop_wander" type="FLOAT" value="0" />
+    <node id="alert_level_start_investigate_noise" type="FLOAT" value="75" />
+    <node id="alert_level_stop_chase" type="FLOAT" value="10" />
+    <node id="alert_level_increase_speed" type="FLOAT" value="5" />
+    <node id="alert_level_decrease_speed" type="FLOAT" value="5" />
+    <node id="alert_level_max_distance_from_home" type="FLOAT" value="1200" />
+    <node id="stay_near_birth_position" type="BOOLEAN" value="true" />
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleAvoidFriends" />
+    <node id="DysmantleProjectileWeapon"
+     key.ACTOR_TYPE.ProjectileWeapon_projectile="actors/projectiles/puke-projectile.xml"
+     key.INTEGER.ProjectileWeapon_projectiles_per_shot="1"
+     key.FLOAT.ProjectileWeapon_projectile_speed="1000"
+     key.FLOAT.ProjectileWeapon_projectile_speed_spread="0"
+     key.FLOAT.ProjectileWeapon_projectile_damage_multiplier="1"
+     key.FLOAT.ProjectileWeapon_projectile_accuracy_spread="0"
+     key.FLOAT.ProjectileWeapon_projectile_spread="0"
+     key.BOOLEAN.ProjectileWeapon_auto_shoot="false"
+     key.FLOAT.ProjectileWeapon_auto_shoot_interval="1"
+     key.STRING.ProjectileWeapon_bones="centre"
+     key.BOOLEAN.ProjectileWeapon_ignore_z_direction="true"
+     key.BOOLEAN.ProjectileWeapon_set_target_actor="false"
+     key.INTEGER.ProjectileWeapon_clip_size="-1"
+     key.FLOAT.ProjectileWeapon_max_distance_to_target="-1"
+    />
+
+  </array>
+
+  <array id="ANIMATIONS">
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node id="die-1"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomsquito-rig-die-1.anim"
+     pause_at_end="true"
+    />
+
+    <node id="die-2"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomsquito-rig-die-2.anim"
+     pause_at_end="true"
+    />
+
+    <node id="die-3"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomsquito-rig-die-3.anim"
+     pause_at_end="true"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node id="drown"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomsquito-rig-wings-flapping-additive.anim"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0.333"
+     event_0_id="drown"
+     event_0_command_word="self_destruct"
+    />
+
+    <node id="move.fly.idle.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/doomsquito-rig-idle-1.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     play_on_create="true"
+    />
+
+    <node id="move.fly.jog.default" animation_controller="DysmantleMove" skeleton_animation="models/animations/doomsquito-rig-flying-forward.anim" bone_group_id="NoRootMovement" wrap_mode="LOOP" />
+    <node id="move.fly.turning.left" animation_controller="DysmantleMove" skeleton_animation="models/animations/doomsquito-rig-strafe-left.anim" bone_group_id="NoRootMovement" wrap_mode="LOOP" />
+    <node id="move.fly.turning.right" animation_controller="DysmantleMove" skeleton_animation="models/animations/doomsquito-rig-strafe-right.anim" bone_group_id="NoRootMovement" wrap_mode="LOOP" />
+    <node id="needle_attack"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomsquito-rig-needle-attack.anim"
+     bone_group_id="NoWings"
+     event_0_trigger_time="0"
+     event_0_id="sfx-screech"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.8,0.9|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/doomsquito-attack-01|SC|sfx/enemies/doomsquito-attack-02|Q|}}"
+     event_1_trigger_time="0"
+     event_1_id="sfx-movement"
+     event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|1,1.1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/boomsquito-death-movement|Q|}}"
+     event_2_trigger_time="0.2"
+     event_2_id="turn"
+     event_2_command_word="turn_towards_target"
+     event_3_trigger_time="0.5"
+     event_3_id="sfx-sting"
+     event_3_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/doomsquito-sting-01|SC|sfx/enemies/doomsquito-sting-02|Q|}}"
+     event_4_trigger_time="0.6"
+     event_4_id="attack"
+     event_4_spawn_effect_offset_x="70.00"
+     event_4_command_word="melee_attack"
+     event_4_command_word_key_values="{{FLOAT,|Q|angle|Q|,|Q|120|Q|}}"
+    />
+
+    <node id="spawn" animation_controller="ScaleUp" forced_animation_length_in_seconds="0.30" />
+    <node id="stinger_attack"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomsquito-rig-stinger-attack.anim"
+     bone_group_id="NoWings"
+     event_0_trigger_time="0"
+     event_0_id="splash"
+     event_0_bone_id="stinger"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/hurler-shooting-green-splash.xml"
+     event_1_trigger_time="0"
+     event_1_id="turn"
+     event_1_command_word="turn_towards_target"
+     event_2_trigger_time="0.19"
+     event_2_id="splash2"
+     event_2_bone_id="stinger"
+     event_2_ignore_bone_orientation="true"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/hurler-shooting-green-splash.xml"
+     event_2_spawn_effect_offset_x="-11.29"
+     event_3_trigger_time="0.2"
+     event_3_id="sfx-charge"
+     event_3_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.7,0.8|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/doomsquito-sting-charge-01|SC|sfx/enemies/doomsquito-sting-charge-02|Q|}}"
+     event_4_trigger_time="0.42"
+     event_4_id="splash3"
+     event_4_bone_id="stinger"
+     event_4_ignore_bone_orientation="true"
+     event_4_spawn_effect_to_local_particle_system="true"
+     event_4_effect="effects/hurler-shooting-green-splash.xml"
+     event_4_spawn_effect_offset_x="-11.29"
+     event_5_trigger_time="0.42"
+     event_5_id="id5"
+     event_5_bone_id="stinger"
+     event_5_ignore_bone_orientation="true"
+     event_5_spawn_effect_to_local_particle_system="true"
+     event_5_effect="effects/hurler-shooting-green-flash.xml"
+     event_6_trigger_time="0.8"
+     event_6_id="turn2"
+     event_6_command_word="turn_towards_target"
+     event_7_trigger_time="0.97"
+     event_7_id="sfx-sting"
+     event_7_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.8,0.9|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/doomsquito-sting-01|SC|sfx/enemies/doomsquito-sting-02|Q|}}"
+     event_8_trigger_time="1.02"
+     event_8_id="attack"
+     event_8_command_word="fire_weapon"
+    />
+
+    <node id="stun"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomsquito-rig-idle-1.anim"
+     bone_group_id="NoWings"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0"
+     event_0_id="stars"
+     event_0_bone_id="head"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/stun-stars.xml"
+     event_1_trigger_time="0.69"
+     event_1_id="stars2"
+     event_1_bone_id="head"
+     event_1_ignore_bone_orientation="true"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/stun-stars.xml"
+     event_2_trigger_time="1.38"
+     event_2_id="stars3"
+     event_2_bone_id="head"
+     event_2_ignore_bone_orientation="true"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/stun-stars.xml"
+     event_3_trigger_time="2.07"
+     event_3_id="stars4"
+     event_3_bone_id="head"
+     event_3_ignore_bone_orientation="true"
+     event_3_spawn_effect_to_local_particle_system="true"
+     event_3_effect="effects/stun-stars.xml"
+    />
+
+    <node id="wings_flapping"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomsquito-rig-wings-flapping-additive.anim"
+     bone_group_id="WingsOnly"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{BOOLEAN,|Q|looping|Q|,|Q|true|Q|},{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/doomsquito-flapping-loop|Q|}}"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="model" value="models/enemies/doomsquito.model" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_peaceful_mode_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-peaceful-mode-on-game-start.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="CAPSULE" />
+    <node id="radius" value="12.0" />
+    <node id="height" value="26.0" />
+    <node id="offset_z" value="-45.0" />
+  </array>
+
+</root>

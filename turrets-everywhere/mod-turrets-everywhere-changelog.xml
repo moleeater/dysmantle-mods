@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="title" value="Turrets everywhere" />
+  </array>
+  <array id="CHANGELOG">
+
+
+    <node epoch="1786541792" id="117"
+      value="
+- fixed bug in Turrets everywhere mod not dropping mana beads for Pets and Dungeons DLC3 bosses
+" />
+
+
+    <node epoch="1786439523" id="116"
+      value="
+- fixed temporal quests spawning monsters in Turrets everywhere mod, all quest can be completed now
+- added warning and checks, as turns out, the Turrets everywhere mod needs Developer Mode enabled
+" />
+
+
+    <node epoch="1786080516" id="115"
+      value="
+- new Turrets everywhere mod: A silly mod, which replaces most minion monsters with turret enemies.
+" />
+
+
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

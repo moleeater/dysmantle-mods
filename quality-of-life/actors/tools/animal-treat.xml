@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="NO_EXPERIENCE_REWARD_ON_DEATH,THROWABLE_WEAPON" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SOLID,AFFECTED_BY_GRAVITY,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH,CAN_STAND_ON_ACTORS" />
+    <node id="physics_material" value="PLASTIC" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="1" />
+    <node id="minimum_damage_threshold" value="1" />
+    <node id="aggro_radius" value="600" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="48" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1" />
+    <node id="friend_group" value="GRENADES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="monster_lure" type="BOOLEAN" value="false" />
+    <node id="animal_treat" type="BOOLEAN" value="true" />
+    <node id="duration" type="FLOAT" value="30" />
+    <node id="start_delay" type="FLOAT" value="1" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleMonsterLure">
+  </array>
+
+  <array id="SCRIPTS">
+    <node id="embedded_ai_script"><![CDATA[function OnGameStart(so_actor)
+{
+  StageObject_SetKeyValueFloat(so_actor, "timer", 0);
+}
+
+function OnThink(so_actor, tdelta)
+{
+  local timer = StageObject_GetKeyValue(so_actor, "timer");
+  if (timer == null)
+  {
+    StageObject_SetKeyValueFloat(so_actor, "timer", 0);
+    return;
+  }
+  timer += tdelta;
+  StageObject_SetKeyValueFloat(so_actor, "timer", timer);
+
+  if (timer >= StageObject_GetKeyValue(so_actor, "explosion_delay"))
+  {
+    Stage_SendStageObjectCommandWord(so_actor, "self_destruct");
+    //Stage_KillActorAndStartDeathAnimation(so_actor);
+  }
+}]]></node>
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death"
+     category="DEATH"
+     forced_animation_length_in_seconds="0.10"
+     event_0_trigger_time="0"
+     event_0_id="dust"
+     event_0_effect="effects/puff-ground.xml"
+    />
+
+    <node id="idle" wrap_mode="LOOP" play_on_create="true" forced_animation_length_in_seconds="1.00" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="1.04" />
+    <node id="shadow_alpha" value="0.91" />
+    <node id="model" value="models/tools/animal-treat.model" />
+  </array>
+
+  <array id="RENDERABLES">
+    <node id="DysmantleExplosion" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_healing_treat_on_interval"
+        interaction_0_trigger="ON_INTERVAL"
+        interaction_0_trigger_parameter_float="1"
+        interaction_0_disable_after_interaction="0"
+        interaction_0_external_script="scripts/interactions/mods/mod-healing-treat-on-interval.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="CYLINDER" />
+    <node id="radius_xy" value="5.0" />
+    <node id="min_z" value="-0.1" />
+    <node id="max_z" value="0.0" />
+  </array>
+
+</root>

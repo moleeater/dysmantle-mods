@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="title" value="Peaceful mode" />
+  </array>
+  <array id="CHANGELOG">
+
+
+    <node epoch="1757978497" id="90.1.2"
+      value="
+- added more safety checks for temporal monster killing quests
+" />
+
+
+    <node epoch="1741670810" id="82.5.0"
+      value="
+- added in-game event logging to some of the mods to help 10tons know why strange things happened in modded save files
+" />
+
+
+    <node epoch="1739987890" id="81.2.0"
+      value="
+- fixed DLC2 Boomsquito warning message
+- fixed DLC2 hidden turrets
+" />
+
+
+    <node epoch="1739589058" id="80.2.0"
+      value="
+- fixed a bug with the mortarpod colliders 
+" />
+
+
+    <node epoch="1719350880" id="69.6.1"
+      value="
+- fixed DLC1 The Slick Swindler
+- fixed Night Terrors
+" />
+
+
+    <node epoch="1719345085" id="69.6.0"
+      value="
+- fixed DLC1 mana-infused enemies
+- fixed DLC1 Mana Spirit enemy
+" />
+
+
+    <node epoch="1717257720" id="68.4.1"
+      value="
+- first release
+" />
+
+
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

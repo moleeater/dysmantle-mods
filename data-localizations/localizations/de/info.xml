@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+<array id="INFO">
+
+ <node id="enabled" value="true" />
+ <node id="name" value="German" />
+ <node id="name_localized" value="Deutsch" />
+ <node id="author" value="" />
+ 
+</array>
+
+</root>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="NO_EXPERIENCE_REWARD_ON_DEATH,POINT_OF_INTEREST,NO_BUILDING_ZONE,PERSISTENT_KEY_VALUES_AFTER_DEATH" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,NO_MOMENTUM_FROM_COLLISIONS,SEND_COMMANDS_TO_PROPS" />
+    <node id="persistency_flags" value="PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="METAL" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="370" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="damage_type_accept_mask" value="UNSPECIFIED,COLD,POISON,ELECTRIC,EXPLOSIVE,SELF_DESTRUCT,HIT_GROUND,PROJECTILE,HEAT" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+    <node id="friend_group" value="PLAYERS" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="SHELTER_LOUDSPEAKER" />
+    <node id="camera_path_0" type="PATH" flags="PERSISTENT,NO_REPLICATION" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|0|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|30|Q|}};108,-81,-499,{{QUATERNION,|Q|rotation|Q|,|Q|-0.44731,-0.0778672,0.152803,0.877782|Q|},{FLOAT,|Q|fov|Q|,|Q|50|Q|},{FLOAT,|Q|near_z|Q|,|Q|60|Q|},{FLOAT,|Q|far_z|Q|,|Q|3450.4|Q|},{BOOLEAN,|Q|ease_in|Q|,|Q|false|Q|},{BOOLEAN,|Q|ease_out|Q|,|Q|false|Q|},{FLOAT,|Q|pause_in_seconds|Q|,|Q|0|Q|}};136,-104,-584,{{QUATERNION,|Q|rotation|Q|,|Q|-0.45808,-0.0726807,0.138829,0.87499|Q|},{SCRIPT,|Q|script|Q|,|Q|function OnNode(so, nkvs)|BS|n{|BS|n|BS|tfor (local i = 0|SC| i < 4|SC| i++)|BS|n|BS|t{|BS|n|BS|t|BS|tlocal player_actor = Game_GetPlayerActor(i)|SC||BS|n|BS|t|BS|tif (player_actor == null)|BS|n|BS|t|BS|t|BS|treturn|SC||BS|n|BS|t|BS|tStage_KillActorAndStartDeathAnimation(player_actor, |BS||Q|die_of_heat|BS||Q|)|SC||BS|n|BS|t|BS|tGame_SetPlayerActorCauseOfDeath(player_actor, |BS||Q|DEFENSE_REWIND|BS||Q|)|SC||BS|n|BS|t}|BS|n}|Q|}};148,-112,-628,{{QUATERNION,|Q|rotation|Q|,|Q|-0.45808,-0.0726808,0.138828,0.87499|Q|},{BOOLEAN,|Q|ease_in|Q|,|Q|true|Q|},{BOOLEAN,|Q|ease_out|Q|,|Q|false|Q|},{FLOAT,|Q|pause_in_seconds|Q|,|Q|0|Q|}}" />
+    <node id="color_material_1" type="COLOR" flags="PERSISTENT,NO_REPLICATION" value="1,0.57,0.18,1" />
+    <node id="color_material_2" type="COLOR" flags="PERSISTENT,NO_REPLICATION" value="0.87,0.83,0.77,1" />
+    <node id="color_material_3" type="COLOR" flags="PERSISTENT,NO_REPLICATION" value="0.23,0.25,0.29,1" />
+    <node id="wave_0_actor_type" type="ACTOR_TYPE" value="actors/enemies/ex-human-underground-horde.xml" />
+    <node id="wave_0_num_per_burst" type="INTEGER" value="5" />
+    <node id="wave_0_num_bursts" type="INTEGER" value="3" />
+    <node id="wave_0_burst_interval" type="FLOAT" value="2" />
+    <node id="extracted_cpu" type="BOOLEAN" flags="PERSISTENT,SAVE_STATE" value="false" />
+    <node id="vbone_snap" type="TRANSFORM" flags="PERSISTENT,NO_REPLICATION" value="-1,-8.74228e-08,0,61,8.74228e-08,-1,0,-2.30078,0,0,1,-1,0,0,0,1,1" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleBehavioral">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death" category="DEATH" forced_animation_length_in_seconds="0.20" force_update_visual_bounds="true" />
+    <node id="activate_start"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     forced_animation_length_in_seconds="10.00"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/siren-air-raid|Q|}}"
+     event_1_trigger_time="0"
+     event_1_id="play-active-anim"
+     event_1_command_word="play_animation"
+     event_1_command_word_key_values="{{STRING,|Q|animation_id|Q|,|Q|active|Q|}}"
+    />
+
+    <node id="active"
+     script="function OnUpdate(so_actor, time_key, length)&#10;{&#10;&#9;local t = time_key / length;&#10;&#9;local c = 0.25 + 0.75 * (1-sin(t * PI));&#10;&#9;Actor_SetModelGlowColor(so_actor, c,c,c,1);&#10;}"
+     wrap_mode="LOOP"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     forced_animation_length_in_seconds="1.00"
+     force_awake_during_animation="true"
+     event_0_trigger_time="0"
+     event_0_id="fx"
+     event_0_effect="effects/siren-active.xml"
+     event_0_spawn_effect_offset_z="-321.00"
+    />
+
+    <node id="undo_wave"
+     script="function OnUpdate(so_actor, time_key, length)&#10;{&#10;&#9;local t = time_key / length;&#10;&#9;local c = m_randf(0,1);// 0.25 + 0.75 * (1-sin(t * PI));&#10;&#9;Actor_SetModelGlowColor(so_actor, c,c,c,1);&#10;}"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     forced_animation_length_in_seconds="12.00"
+     event_0_trigger_time="0"
+     event_0_id="fx"
+     event_0_effect="effects/loudspeaker-undo-wave.xml"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,0.9|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/mana-rift-power-sparks|Q|}}"
+     event_0_spawn_effect_scale="2"
+     event_0_spawn_effect_offset_z="-84.17"
+     event_1_trigger_time="0"
+     event_1_id="sfx-wave"
+     event_2_trigger_time="0"
+     event_2_id="sfx-wave"
+     event_2_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/shelter-loudspeaker-undo-wave|Q|}}"
+     event_3_trigger_time="0.0248"
+     event_3_id="fx_spark"
+     event_3_effect="effects/electric-discharge-small.xml"
+     event_3_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.6,0.7|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/explosion-electric|Q|}}"
+     event_3_spawn_effect_scale="0.7"
+     event_3_spawn_effect_offset_z="-84.17"
+     event_4_trigger_time="0.222"
+     event_4_id="fx2"
+     event_4_effect="effects/loudspeaker-undo-wave.xml"
+     event_4_spawn_effect_scale="1.5"
+     event_4_spawn_effect_offset_z="-158.99"
+     event_5_trigger_time="0.503"
+     event_5_id="fx3"
+     event_5_effect="effects/loudspeaker-undo-wave.xml"
+     event_5_spawn_effect_offset_z="-193.91"
+     event_6_trigger_time="0.55"
+     event_6_id="fx_spark2"
+     event_6_effect="effects/electric-discharge-small.xml"
+     event_6_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/power-spark-01|SC|sfx/power-spark-02|SC|sfx/power-spark-03|Q|}}"
+     event_6_spawn_effect_scale="1.5"
+     event_6_spawn_effect_offset_z="-256.19"
+     event_7_trigger_time="1.2"
+     event_7_id="fx_spark3"
+     event_7_effect="effects/electric-discharge-small.xml"
+     event_7_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/power-spark-01|SC|sfx/power-spark-02|SC|sfx/power-spark-03|Q|}}"
+     event_7_spawn_effect_scale="1.5"
+     event_7_spawn_effect_offset_z="-256.19"
+    />
+
+    <node id="inactive_idle" script="function OnUpdate(so_actor, time_key, length)&#10;{&#10;&#9;local c = 0;&#10;&#9;Actor_SetModelGlowColor(so_actor, c,c,c,1);&#10;}" wrap_mode="LOOP" play_on_create="true" forced_animation_length_in_seconds="2.00" />
+    <node id="extract_cpu"
+     script="function OnUpdate(so_actor, time_key, length)&#10;{&#10;&#9;local t = time_key / length;&#10;&#9;local c = 0.95 * (1-sin(PI/2+t * 2 * PI));&#10;&#9;Actor_SetModelGlowColor(so_actor, c,c,c,1);&#10;}"
+     fade_in_duration="0"
+     fade_out_duration="0"
+     forced_animation_length_in_seconds="0.50"
+     force_awake_during_animation="true"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/search-material-appear|Q|}}"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="Model" />
+    <node id="bm_shadow" value="shadows/shadow-square.png" />
+    <node id="shadow_scale" value="3.46" />
+    <node id="shadow_alpha" value="0.3" />
+    <node id="allow_static_caching" value="false" />
+    <node id="model" value="models/interactives/shelter-alarm.model" />
+  </array>
+
+  <array id="PROPS">
+    <node id="dish1"
+     enabled="0"
+     mount_bone_id="root"
+     actor_type="actors/interactives/satellite-dish.xml"
+     mount_scale="1.48"
+     mount_offset_x="-6.91"
+     mount_offset_y="0"
+     mount_offset_z="-90"
+     mount_rotation_angles_x="0"
+     mount_rotation_angles_y="0"
+     mount_rotation_angles_z="3.14159"
+    />
+
+    <node id="dish2"
+     enabled="0"
+     mount_bone_id="root"
+     actor_type="actors/interactives/satellite-dish.xml"
+     mount_offset_x="4.7"
+     mount_offset_y="7.11"
+     mount_offset_z="-90"
+     mount_rotation_angles_x="0"
+     mount_rotation_angles_y="0"
+     mount_rotation_angles_z="-0.785398"
+    />
+
+    <node id="dish3"
+     enabled="0"
+     mount_bone_id="root"
+     actor_type="actors/interactives/satellite-dish.xml"
+     mount_offset_x="4.53"
+     mount_offset_y="-6.95"
+     mount_offset_z="-90.25"
+     mount_rotation_angles_x="0"
+     mount_rotation_angles_y="0"
+     mount_rotation_angles_z="0.785398"
+    />
+
+  </array>
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="activate"
+        interaction_0_enabled="0"
+        interaction_0_disable_after_interaction="0"
+        interaction_0_external_script="scripts/interactions/evac-shelter-loudspeaker-hold-down-button-use-activate.nut"
+        interaction_0_trigger="HOLD_DOWN_BUTTON"
+        interaction_0_trigger_parameter_float="1.5"
+        interaction_0_controller_button="USE"
+        interaction_0_text="Activate"
+        interaction_0_radius="40"
+        interaction_0_bone_id="interaction"
+      interaction_1_id="init"
+        interaction_1_localize="0"
+        interaction_1_script_to_run_on_interaction="function UpdateSpawnEntranceReference(so_self)&#10;{&#10;&#9;local pos = StageObject_GetStagePosition(so_self);&#10;&#9;local at = &#34;actors/objects/shelter-entry-hatch.xml&#34;;&#10;&#9;local spawn_entrance = Stage_QueryNearestActorWithType(pos[0], pos[1], pos[2], 2*20*60, at);&#10;&#9;if (spawn_entrance == null)&#10;&#9;&#9;return;&#10;&#9;StageObject_SetKeyValueStageObjectReference(so_self, &#34;spawn_entrance&#34;, spawn_entrance);&#10;}&#10;&#10;function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;UpdateSpawnEntranceReference(so_self);&#10;&#10;&#9;local tutorial_quest_id = &#34;quests/shelter-defence.nut&#34;;&#10;&#9;local is_quest_handled = Game_IsQuestCurrent(tutorial_quest_id) || Game_IsQuestCompleted(tutorial_quest_id);&#10;&#10;&#9;if (!StageObject_GetKeyValue(so_self, &#34;extracted_cpu&#34;, false))&#10;&#9;{&#10;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;investigate&#34;, !is_quest_handled);&#10;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;activate&#34;, false);&#10;&#9;&#9;return;&#10;&#9;}&#10;&#10;&#9;if (is_quest_handled)&#10;&#9;{&#10;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;investigate&#34;, false);&#10;&#10;&#9;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#9;&#9;local so_entrance = KeyValueStore_GetKeyValue(kvs, &#34;spawn_entrance&#34;);&#10;&#9;&#9;if (so_entrance == null)&#10;&#9;&#9;&#9;return;&#10;&#10;&#9;&#9;if (StageObject_GetKeyValue(so_entrance, &#34;cleared&#34;))&#10;&#9;&#9;{&#10;&#9;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;activate&#34;, false);&#10;&#9;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;after_completed&#34;, true);&#10;&#9;&#9;}&#10;&#9;&#9;else&#10;&#9;&#9;{&#10;&#9;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;activate&#34;, true);&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;else&#10;&#9;{&#10;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;investigate&#34;, true);&#10;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;activate&#34;, false);&#10;&#9;&#9;return;&#10;&#9;}&#10;}"
+        interaction_1_trigger="ENTER_RADIUS"
+        interaction_1_radius="200"
+      interaction_2_id="spawn_check"
+        interaction_2_enabled="0"
+        interaction_2_localize="0"
+        interaction_2_disable_after_interaction="0"
+        interaction_2_script_to_run_on_interaction="function GetWaveKeyValue(kvs, wave, id)&#10;{&#10;&#9;return KeyValueStore_GetKeyValue(kvs, &#34;wave_&#34; + wave.tostring() + &#34;_&#34; + id);&#10;}&#10;&#10;function SpawnEnemy(kvs, wave, so_entrance, so_target, angle_offset, path_key)&#10;{&#10;&#9;local at = GetWaveKeyValue(kvs, wave, &#34;actor_type&#34;);&#10;&#9;local pos = StageObject_GetPosition(so_entrance);&#10;&#9;local angle = StageObject_GetAngle(so_entrance) + angle_offset;&#10;&#9;Actor_SetActorFlag(so_entrance, &#34;SOLID&#34;, false);&#10;&#10;&#9;local radius = 74;&#10;&#9;local angle_radians = angle/180*PI;&#10;&#9;local offset_x = radius * cos(angle_radians);&#10;&#9;local offset_y = radius * sin(angle_radians);&#10;&#10;&#9;local so = Stage_CreateActor(at, pos[0] + offset_x, pos[1] + offset_y, 0, false);&#10;&#10;&#9;if (so == null)&#10;&#9;&#9;return;&#10;&#10;&#9;StageObject_SetGlobal(so, false);&#10;&#9;StageObject_SetScale(so, 0.9 + 0.1 * m_randf());&#10;&#10;&#9;StageObject_SetAngle(so, angle);&#10;&#9;StageObject_SetVisible(so, false);&#10;&#9;Actor_SetActorFlag(so, &#34;SOLID&#34;, false);&#10;&#10;&#9;Actor_QueueActionWait(so, 0.9 * m_randf());&#10;&#10;&#9;local playback_speed = 0.5 + 1.0 * m_randf();&#10;&#9;local script = @&#34;&#10;&#9;&#9;StageObject_SetVisible($so, true);&#10;&#9;&#9;Actor_SetActorFlag($so, &#34;&#34;SOLID&#34;&#34;, true);&#10;&#9;&#34;;&#10;&#9;script = string_replace(script, &#34;$so&#34;, so.tostring());&#10;&#9;Actor_QueueActionRunScript(so, script);&#10;&#10;&#9;Actor_QueueActionPlayAnimationWithParameters(so, &#34;climb_up&#34;, playback_speed, 0, true);&#10;&#10;&#9;Game_StartHordeAttack(so, so_target, kvs, path_key);&#10;&#9;return so;&#10;}&#10;&#10;function GetNumberOfPaths(so_self)&#10;{&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#9;local num = 0;&#10;&#10;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;{&#10;&#9;&#9;local path = KeyValueStore_GetKeyValue(kvs, &#34;walk_path_&#34; + i);&#10;&#9;&#9;if (path == null)&#10;&#9;&#9;&#9;break;&#10;&#9;&#9;num++;&#10;&#9;}&#10;&#9;return num;&#10;}&#10;&#10;function GetNumberOfWaves(so_self)&#10;{&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#9;local num = 0;&#10;&#10;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;{&#10;&#9;&#9;local path = KeyValueStore_GetKeyValue(kvs, &#34;wave_&#34; + i + &#34;_actor_type&#34;);&#10;&#9;&#9;if (path == null)&#10;&#9;&#9;&#9;break;&#10;&#9;&#9;num++;&#10;&#9;}&#10;&#9;return num;&#10;}&#10;&#10;function AllMonstersKilled(so_self)&#10;{&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#9;local num_waves_done = KeyValueStore_GetKeyValue(kvs, &#34;num_waves_done&#34;);&#10;&#9;local at = GetWaveKeyValue(kvs, num_waves_done, &#34;actor_type&#34;);&#10;&#9;if (at == null)&#10;&#9;&#9;at = &#34;actors/enemies/ex-human-underground-horde.xml&#34;;&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;local enemies = Stage_QueryActorsWithTypeInRadius(pos[0], pos[1], pos[2], 2 * 20 * 60, at);&#10;&#10;&#9;if (enemies.len() &#62; 0)&#10;&#9;{&#10;&#9;&#9;return false;&#10;&#9;}&#10;&#10;&#9;return true;&#10;}&#10;&#10;function CheckCompletion(so_self)&#10;{&#10;&#9;if (!AllMonstersKilled(so_self))&#10;&#9;&#9;return;&#10;&#10;&#9;local quest_id = &#34;quests/shelter-defence.nut&#34;;//StageObject_GetKeyValue(so_self, &#34;quest_id&#34;);&#10;&#9;Game_SendQuestPhaseGoalCommandWord(quest_id, &#34;PHASE_0&#34;, &#34;KILL_MONSTERS&#34;, &#34;complete&#34;);&#10;&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#9;local so_entrance = KeyValueStore_GetKeyValue(kvs, &#34;spawn_entrance&#34;);&#10;&#9;StageObject_SetKeyValueBoolean(so_entrance, &#34;cleared&#34;, true);&#10;&#10;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#9;Game_RemoveAllBlockingPaths();&#10;}&#10;&#10;function VisualizePath(so_self)&#10;{&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#9;local effect = &#34;effects/shelter-horde-trail-visualization.xml&#34;;&#10;&#9;for (local i = 0; i &#60; 4; i++)&#10;&#9;{&#10;&#9;&#9;local kv_path = KeyValueStore_GetKeyValue(kvs, &#34;walk_path_&#34; + i);&#10;&#9;&#9;if (kv_path == null)&#10;&#9;&#9;&#9;return;&#10;&#9;&#9;Game_VisualizePathKeyValue(kv_path, so_self, effect, 5, 5, -10, false);&#10;&#9;}&#10;}&#10;&#10;function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#10;&#9;local num_waves_done = KeyValueStore_GetKeyValue(kvs, &#34;num_waves_done&#34;);&#10;&#9;local num_waves = GetNumberOfWaves(so_self);&#10;&#10;&#9;//Engine_Warning(&#34;wave &#34; + (num_waves_done + 1) + &#34; of &#34; + num_waves);&#10;&#10;&#9;if (num_waves_done &#62;= num_waves)&#10;&#9;{&#10;&#9;&#9;Actor_SetInteractionTriggerParameterFloat(so_self, &#34;spawn_check&#34;, 0.5);&#10;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;spawn_check&#34;, false);&#10;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;activate&#34;, false);&#10;&#9;&#9;Actor_StopAnimationWithFade(so_self, &#34;activate_start&#34;, 2);&#10;&#10;&#9;&#9;local so_entrance = KeyValueStore_GetKeyValue(kvs, &#34;spawn_entrance&#34;);&#10;&#9;&#9;Actor_StopAnimationWithFade(so_entrance, &#34;spawning_monsters&#34;, 2);&#10;&#9;&#9;CheckCompletion(so_self);&#10;&#9;&#9;return;&#10;&#9;}&#10;&#10;&#9;local num_bursts = GetWaveKeyValue(kvs, num_waves_done, &#34;num_bursts&#34;);&#10;&#9;local num_bursts_done = KeyValueStore_GetKeyValue(kvs, &#34;num_bursts_done&#34;);&#10;&#10;&#9;//Engine_Warning(&#34;burst &#34; + (num_bursts_done) + &#34; of &#34; + num_bursts);&#10;&#10;&#9;if (num_bursts_done &#62;= num_bursts)&#10;&#9;{&#10;&#9;&#9;Actor_SetInteractionTriggerParameterFloat(so_self, &#34;spawn_check&#34;, 0.5);&#10;&#9;&#9;if (!AllMonstersKilled(so_self))&#10;&#9;&#9;&#9;return;&#10;&#10;&#9;&#9;num_waves_done++;&#10;&#9;&#9;KeyValueStore_SetKeyValueInteger(kvs, &#34;num_waves_done&#34;, num_waves_done);&#10;&#9;&#9;KeyValueStore_SetKeyValueInteger(kvs, &#34;num_bursts_done&#34;, 0);&#10;&#10;&#9;&#9;if (num_waves_done &#60; num_waves)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;VisualizePath(so_self);&#10;&#9;&#9;&#9;local text_major = LOC_TEXT(&#34;Monsters incoming!&#34;);&#10;&#9;&#9;&#9;local waves_remaining = num_waves - num_waves_done;&#10;&#9;&#9;&#9;local text_minor = LOC_TEXT(&#34;Wave [NUMBER]&#34;);&#10;&#9;&#9;&#9;text_minor = string_replace(text_minor, &#34;[NUMBER]&#34;, (num_waves_done+1).tostring() + &#34; / &#34; + num_waves);&#10;&#9;&#9;&#9;Game_AddMajorNotification(&#34;ui/gfx/icon-quest.png&#34;, &#34;sfx/quest-new&#34;, text_major, text_minor, &#34;TOP&#34;);&#10;&#9;&#9;}&#10;&#9;&#9;else&#10;&#9;&#9;{&#10;&#9;&#9;&#9;local text_major = LOC_TEXT(&#34;Victory!&#34;);&#10;&#9;&#9;&#9;local text_minor = LOC_TEXT(&#34;The shelter is now ready to be entered.&#34;);&#10;&#9;&#9;&#9;Game_AddMajorNotification(&#34;ui/gfx/icon-quest.png&#34;, &#34;sfx/quest-new&#34;, text_major, text_minor, &#34;TOP&#34;);&#10;&#9;&#9;}&#10;&#10;&#9;&#9;return;&#10;&#9;}&#10;&#10;&#9;local burst_interval = GetWaveKeyValue(kvs, num_waves_done, &#34;burst_interval&#34;);&#10;&#9;Actor_SetInteractionTriggerParameterFloat(so_self, &#34;spawn_check&#34;, burst_interval);&#10;&#10;&#9;num_bursts_done++;&#10;&#9;KeyValueStore_SetKeyValueInteger(kvs, &#34;num_bursts_done&#34;, num_bursts_done);&#10;&#10;&#9;local so_entrance = KeyValueStore_GetKeyValue(kvs, &#34;spawn_entrance&#34;);&#10;&#9;local num_paths = GetNumberOfPaths(so_self);&#10;&#10;&#9;local num_per_burst = GetWaveKeyValue(kvs, num_waves_done, &#34;num_per_burst&#34;);&#10;&#10;&#9;local angle_spread = 180;&#10;&#9;local angle_step;&#10;&#9;local angle_start = 0;&#10;&#10;&#9;if (num_per_burst &#62; 1)&#10;&#9;{&#10;&#9;&#9;angle_step = angle_spread / (num_per_burst-1);&#10;&#9;&#9;angle_start = 0;&#10;&#9;}&#10;&#9;else&#10;&#9;{&#10;&#9;&#9;angle_step = 0;&#10;&#9;&#9;angle_start = angle_spread/2;&#10;&#9;}&#10;&#10;&#9;local num_spawned = 0;&#10;&#10;&#10;&#9;for (local i = 0; i &#60; num_per_burst; i++)&#10;&#9;{&#10;&#9;&#9;local angle = angle_start + i * angle_step;&#10;&#9;&#9;local path = &#34;walk_path_&#34; + (num_spawned%num_paths).tostring();&#10;&#9;&#9;SpawnEnemy(kvs, num_waves_done, so_entrance, so_self, angle, path);&#10;&#9;&#9;num_spawned++;&#10;&#9;}&#10;}"
+        interaction_2_trigger="ON_INTERVAL"
+        interaction_2_trigger_parameter_float="0.25"
+      interaction_3_id="fail"
+        interaction_3_localize="0"
+        interaction_3_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Game_SetCinemaMode(true);&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;Game_SetRespawnPoint(pos[0] + 90, pos[1], pos[2]);&#10;&#9;Actor_PlayAnimation(so_self, &#34;undo_wave&#34;);&#10;&#9;Actor_StopAnimationWithFade(so_self, &#34;active&#34;, 0);&#10;&#10;&#9;local t = Game_GetWorldTimeRelativeDayBetween0And1AfterMidnight();&#10;&#9;Game_SetOverrideTimeOfDayValueAnimation(t, t-1, 15);&#10;&#9;Game_SetOverrideTimeOfDayEnabled(true);&#10;&#10;&#9;local so_camera = StageObject_GetById(&#34;cinema_camera&#34;);&#10;&#9;Stage_SetActiveCamera(so_camera);&#10;&#9;local kvs_camera_paths = ActorType_GetKeyValueStore(Actor_GetActorType(so_self));&#10;&#9;Camera_RemoveAllAnimationsFromQueue(so_camera);&#10;&#9;Camera_AddAnimationToQueueAllPaths(so_camera, kvs_camera_paths, so_self);&#10;&#9;//Camera_SetStageCameraAfterAnimationQueueIsFinished(so_camera, Stage_GetBaseCamera());&#10;&#9;//Camera_SetStageCameraAnimationQueueLooping(so_camera, true);&#10;&#9;NX_SwitchMusic(&#34;music/Campfire&#34;, 0.5, 1);&#10;&#10;&#9;local quest_id = StageObject_GetKeyValue(so_self, &#34;quest_id&#34;);&#10;&#9;if (quest_id != null &#38;&#38; quest_id != &#34;&#34;)&#10;&#9;&#9;Game_SetQuestFailed(quest_id);&#10;}"
+        interaction_3_trigger="ON_DEATH_START"
+      interaction_4_id="investigate"
+        interaction_4_enabled="0"
+        interaction_4_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;return StageObject_GetKeyValue(so_self, &#34;extracted_cpu&#34;, false);&#10;}"
+        interaction_4_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;/*if (StageObject_GetStagePosition(so_self)[0] &#60;= 1920/2*60)&#10;&#9;{&#10;&#9;&#9;Game_AddActorNotification(so_self, &#34;Game feature under development! Only actors on east side of the island accessible right now!&#34;);&#10;&#9;&#9;return;&#10;&#9;}*/&#10;&#10;&#9;Game_ShowQuestStartDialog(&#34;quests/shelter-defence.nut&#34;, true);&#10;&#9;Actor_SetInteractionEnabled(so_self, &#34;activate&#34;, true);&#10;}"
+        interaction_4_trigger="PRESS_BUTTON"
+        interaction_4_controller_button="USE"
+        interaction_4_text="Investigate"
+        interaction_4_bone_id="interaction"
+      interaction_5_id="after_completed"
+        interaction_5_enabled="0"
+        interaction_5_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Game_LogEvent(&#34;SHELTER_DEFENCE&#34;, &#34;WON&#34;);&#10;&#10;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;I think it&#39;s safe to enter that shelter now.&#34;));&#10;&#10;&#9;// Fix for legacy saves&#10;&#9;if (!Game_IsRecipeUnlocked(&#34;TURRET_AMMO_EXPANSION_1&#34;))&#10;&#9;{&#10;&#9;&#9;Game_SetBuildableUnlocked(&#34;actors/buildables/turret-machine-gun.xml&#34;, true, true);&#10;&#9;&#9;Game_SetRecipeUnlocked(&#34;TURRET_AMMO_EXPANSION_1&#34;, true, true);&#10;&#9;}&#10;}"
+        interaction_5_trigger="PRESS_BUTTON"
+        interaction_5_controller_button="USE"
+        interaction_5_text="Investigate"
+        interaction_5_bone_id="interaction"
+      interaction_6_id="extract_cpu"
+        interaction_6_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;return !StageObject_GetKeyValue(so_self, &#34;extracted_cpu&#34;, false);&#10;}"
+        interaction_6_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local num = Game_GetWorldStateAsInteger(&#34;SHELTER_DEFENCE&#34;, &#34;extracted_cpus&#34;, 0);&#10;&#9;num++;&#10;&#9;Game_SetWorldState(&#34;SHELTER_DEFENCE&#34;, &#34;extracted_cpus&#34;, num.tostring());&#10;&#9;StageObject_SetKeyValueBoolean(so_self, &#34;extracted_cpu&#34;, true);&#10;&#9;local text;&#10;&#9;if (num == 1)&#10;&#9;{&#10;&#9;&#9;text = LOC_TEXT(&#34;I can now override this shelter security system to attract the monsters out of the [ORANGE]shelter[WHITE] nearby.&#34;);&#10;&#9;&#9;Game_AddActorNotificationWithDelay(so_activator, text, 0.4);&#10;&#9;&#9;text = LOC_TEXT(&#34;I should find more of these [MATERIAL_ICON=CPU].&#34;);&#10;&#9;&#9;Game_AddActorNotificationWithDelay(so_activator, text, 0);&#10;&#9;}&#10;&#9;else&#10;&#9;{&#10;&#9;&#9;text = LOC_TEXT(&#34;Overridden and [MATERIAL_ICON=CPU] extracted. [EMOJI=flexed biceps]&#34;);&#10;&#9;&#9;Game_AddActorNotificationWithDelay(so_activator, text, 0.4);&#10;&#9;}&#10;&#10;&#9;Actor_PlayAnimation(so_self, &#34;extract_cpu&#34;);&#10;&#9;Game_SpawnMaterials(so_self, so_activator, &#34;1xCPU&#34;);&#10;&#9;Actor_InteractWithInteraction(so_self, so_self, &#34;init&#34;);&#10;}"
+        interaction_6_trigger="HOLD_DOWN_BUTTON"
+        interaction_6_trigger_parameter_float="2.5"
+        interaction_6_controller_button="USE"
+        interaction_6_text="Hack"
+        interaction_6_bone_id="interaction"
+      interaction_7_id="mod_ascend_shelter_hold_down_button"
+        interaction_7_disable_after_interaction="0"
+        interaction_7_trigger="HOLD_DOWN_BUTTON"
+        interaction_7_controller_button="USE"
+        interaction_7_trigger_parameter_float="3.0"
+        interaction_7_bone_id="interaction"
+        interaction_7_text="Link Ascension"
+        interaction_7_external_script="scripts/interactions/mods/mod-ascend-shelter-hold-down-button.nut"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="BOX" />
+    <node id="size_x" value="78.6" />
+    <node id="size_y" value="71.4" />
+    <node id="size_z" value="347.0" />
+    <node id="offset_x" value="3.6" />
+    <node id="offset_z" value="-173.5" />
+  </array>
+
+</root>

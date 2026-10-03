@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="RECTANGLE"
+     inherit="EditorFaderRectangle"
+     color="0,0,0,0.55"
+     scale_type="RELATIVE_TO_SCREEN_SIZE"
+    />
+
+    <node
+     name="panel"
+     type="NINEPATCH"
+     inherit="EditorNinePatchRoundedPanel"
+     position.x="0.499145"
+     position.y="0.498799"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="506"
+     ninepatch.rectangle_height="361"
+     ninepatch.allow_dragging_component="true"
+    />
+
+    <node
+     name="TextPanel"
+     type="NINEPATCH"
+     inherit="EditorNinePatchBevel"
+     parent="panel"
+     position.x="0.00082604"
+     position.y="0.0014808"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="489"
+     ninepatch.rectangle_height="255"
+    />
+
+    <node
+     name="touchfield_1"
+     type="TOUCHFIELD"
+     inherit="DefaultTouchField"
+     parent="TextPanel"
+     position.x="-0.490055"
+     position.y="-0.486218"
+     touchfield.automatic_content_width="true"
+     touchfield.automatic_content_height="true"
+     touchfield.area_width="478.223"
+     touchfield.area_height="248.387"
+     touchfield.clip_children="true"
+     touchfield.axis_x_enabled="false"
+    />
+
+    <node
+     name="Title"
+     type="TEXTBOX"
+     inherit="EditorMediumTextbox"
+     parent="panel"
+     position.x="0.000871192"
+     position.y="-0.421489"
+     align="VCENTER,HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="434"
+     textbox.text="Mod validation Result"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="Text"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="touchfield_1"
+     position.x="0.489465"
+     position.y="0.0273295"
+     align="HCENTER"
+     textbox.textbox_width="454"
+     textbox.text="OK"
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="aligner_1"
+     type="ALIGNER"
+     inherit="DefaultAligner"
+     parent="panel"
+     position.x="0.00168833"
+     position.y="0.426424"
+     aligner.area_width="430.177"
+     aligner.area_height="39.5111"
+    />
+
+    <node
+     name="Button_0"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_1"
+     button.text="OK"
+    />
+
+    <node
+     name="Button_1"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_1"
+     visible="false"
+     button.text="Don't Save Yet"
+    />
+
+    <node
+     name="Button_2"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_1"
+     visible="false"
+     button.text="Cancel"
+    />
+
+    <node
+     name="slider_1"
+     type="SLIDER"
+     inherit="EditorSliderScrollbar"
+     parent="panel"
+     position.x="0.464346"
+     position.y="-8.18181e-05"
+     save_dynamic_content_to_ui_xml="true"
+     localize="true"
+     slider.ninepatch_height="243"
+     slider.value="-0"
+     slider.linked_view="touchfield_1"
+     slider.hide_full_scrollbars="true"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node name="mod_mods_ui"
+      type="SCRIPTABLE" inherit="DefaultScriptable"
+      scriptable.script_file="editor/ui/scripts/mods/mod-mods-ui-editorpopup.nut"
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+  <array id="MACHINES" name="UTILITY" build_mode="ADD_ACTOR" >
+    <node id="actors/interactives/sawmill.xml" />
+    <node id="actors/interactives/smelter.xml" />
+    <node id="actors/buildables/recycler.xml" />
+    <node id="actors/buildables/camp-storage-box.xml" />
+    <node id="actors/buildables/workbench.xml" />
+    <node id="actors/buildables/home-kitchen-stove.xml" />
+    <node id="actors/buildables/planter.xml" />
+    <node id="actors/buildables/chemistry-set.xml" />
+    <node id="actors/buildables/seed-cart.xml" />
+    <node id="actors/buildables/feeding-through.xml" />
+    <node id="actors/buildables/fireplace.xml" />
+    <node id="actors/buildables/power-transformer.xml" />
+    <node id="actors/buildables/automation-console.xml" />
+    <node id="actors/buildables/fuel-canister.xml" />
+  </array>
+      
+  <array id="DEFENCE" name="DEFENCES" tags="_LOCKED" build_mode="ADD_ACTOR" >
+    <node id="actors/buildables/turret-machine-gun.xml" />
+    <node id="actors/buildables/turret-rocket-launcher.xml" />
+    <node id="actors/buildables/suburb-sandbag-barrier.xml" />
+  </array>
+
+  <array id="PLATFORMS" name="PLATFORMS" tags="LOCKED,SNAP_TO_CELL,ANGLE_SNAP_90" build_mode="ADD_ACTOR" >
+    <node id="actors/buildables/platform-brick-1x1.xml" />
+    <node id="actors/buildables/platform-brick-2x2.xml" />
+    <node id="actors/buildables/platform-brick-3x3.xml" />
+    <node id="actors/buildables/stairs-brick-1x1.xml" />
+  </array>
+
+  <array id="WALLS" name="WALLS" tags="SNAP_TO_PLATFORM,ANGLE_SNAP_90" build_mode="ADD_ACTOR" >
+    <node id="actors/buildables/door-steel.xml" />
+    <node id="actors/buildables/wall-brick-I.xml" />
+    <node id="actors/buildables/wall-inner-I.xml" />
+    <node id="actors/buildables/wall-inner-doorway.xml" />
+    <node id="actors/buildables/wall-inner-pillar.xml" />
+    <node id="actors/buildables/wall-brick-doorway.xml" />
+    <node id="actors/buildables/wall-brick-window.xml" />
+    <node id="actors/buildables/door-wooden.xml" />
+    <node id="actors/buildables/wall-wood-doorway.xml" />
+    <node id="actors/buildables/wall-wood-straight.xml" />
+    <node id="actors/buildables/wall-wood-window.xml" />
+    <node id="actors/buildables/door-glass.xml" />
+    <node id="actors/buildables/wall-glass-doorway.xml" />
+    <node id="actors/buildables/wall-glass-I.xml" />
+  </array>
+
+<!--
+  <array id="FLOORS" name="FLOORS" tags="LOCKED,SNAP_TO_CELL,HIDE" build_mode="CHANGE_GROUND_TILE" >
+    <node id="floor-carpet" />
+    <node id="floor-dark-tile-square" />
+    <node id="floor-tiles-red-checker" />
+  </array>
+-->
+
+  <array id="FURNITURE" name="FURNITURE" tags="LOCKED,HIDE" build_mode="ADD_ACTOR" >
+    <node id="actors/buildables/cafeteria-chair.xml" />
+    <node id="actors/buildables/cafeteria-table.xml" />
+    <node id="actors/buildables/home-bed-double.xml" />
+    <node id="actors/buildables/home-bed-single.xml" />
+    <node id="actors/buildables/home-chair-cushioned.xml" />
+    <node id="actors/buildables/home-chair-wooden.xml" />
+    <node id="actors/buildables/home-dining-table-round.xml" />
+    <node id="actors/buildables/home-dining-table.xml" />
+    <node id="actors/buildables/home-grandfather-clock.xml" />
+    <node id="actors/buildables/home-hallway-dresser.xml" />
+    <node id="actors/buildables/home-kitchen-counter-corner-in.xml" />
+    <node id="actors/buildables/home-kitchen-counter.xml" />
+    <node id="actors/buildables/home-kitchen-cupboard-corner-in.xml" />
+    <node id="actors/buildables/home-kitchen-cupboard.xml" />
+    <node id="actors/buildables/home-kitchen-fridge.xml" />
+    <node id="actors/buildables/home-kitchen-sink.xml" />
+    <node id="actors/buildables/home-livingroom-armchair-1.xml" />
+    <node id="actors/buildables/home-livingroom-armchair-2.xml" />
+    <node id="actors/buildables/home-livingroom-couch.xml" />
+    <node id="actors/buildables/home-livingroom-table-tv.xml" />
+    <node id="actors/buildables/home-livingroom-table.xml" />
+    <node id="actors/buildables/home-study-book-shelve.xml" />
+    <node id="actors/buildables/home-study-desk.xml" />
+    <node id="actors/buildables/home-toilet-tub.xml" />
+    <node id="actors/buildables/home-toilet-seat.xml" />
+    <node id="actors/buildables/home-toilet-sink.xml" />
+    <node id="actors/buildables/home-wardrobe.xml" />
+    <node id="actors/buildables/hospital-bed.xml" />
+    <node id="actors/buildables/office-chair.xml" />
+    <node id="actors/buildables/desk-30s.xml" />
+    <node id="actors/buildables/table30s.xml" />
+    <node id="actors/buildables/couch30s.xml" />
+    <node id="actors/buildables/chair30s.xml" />
+    <node id="actors/buildables/laboratory-testing-chair.xml" />
+    <node id="actors/buildables/lab-blackboard-standing.xml" />
+    <node id="actors/buildables/lab-mainframe.xml" />
+    <node id="actors/buildables/lab-magnetic-storage.xml" />
+    <node id="actors/buildables/lab-oscilloscope.xml" />
+  </array>
+  
+  <array id="DECORATIVE" name="DECORATIVE" tags="LOCKED,HIDE" build_mode="ADD_ACTOR" >
+    <node id="actors/buildables/home-coat-rack.xml" />
+    <node id="actors/buildables/home-frame-wall-rectangle.xml" />
+    <node id="actors/buildables/home-frame-wall-square.xml" />
+    <node id="actors/buildables/home-frame-wall-oval.xml" />
+    <node id="actors/buildables/home-roomplant-floor-1.xml" />
+    <node id="actors/buildables/home-roomplant-table.xml" />
+    <node id="actors/buildables/home-study-desk-lamp.xml" />
+    <node id="actors/buildables/home-kitchen-coffee-container.xml" />
+    <node id="actors/buildables/home-kitchen-coffeemachine.xml" />
+    <node id="actors/buildables/home-kitchen-cookingpot.xml" />
+    <node id="actors/buildables/home-kitchen-fryingpan.xml" />
+    <node id="actors/buildables/home-kitchen-microwave.xml" />
+    <node id="actors/buildables/home-kitchen-sugar-jar.xml" />
+    <node id="actors/buildables/home-kitchen-toaster.xml" />
+    <node id="actors/buildables/home-radiator.xml" />
+    <node id="actors/buildables/home-livingroom-floorlamp-1.xml" />
+    <node id="actors/buildables/home-livingroom-tv-70s.xml" />
+    <node id="actors/buildables/home-phone-rotary.xml" />
+    <node id="actors/buildables/home-study-keyboard.xml" />
+    <node id="actors/buildables/home-study-pc.xml" />
+    <node id="actors/buildables/home-tableware-bowl.xml" />
+    <node id="actors/buildables/home-tableware-mug.xml" />
+    <node id="actors/buildables/home-tableware-plate-deep.xml" />
+    <node id="actors/buildables/home-tableware-plate-shallow.xml" />
+    <node id="actors/buildables/home-toilet-paper-holder.xml" />
+    <node id="actors/buildables/home-toilet-shower.xml" />
+    <node id="actors/buildables/typewriter-30s.xml" />
+    <node id="actors/buildables/television-30s.xml" />
+    <node id="actors/buildables/big-radio30s.xml" />
+    <node id="actors/buildables/radio-30s.xml" />
+    <node id="actors/buildables/cashier-30s.xml" />
+    <node id="actors/buildables/30s_gramophone.xml" />
+    <node id="actors/buildables/lab-microscope.xml" />
+    <node id="actors/buildables/lab_bottle_round.xml" />
+    <node id="actors/buildables/lab_bottle_triangle.xml" />
+    <node id="actors/buildables/lab_flask.xml" />
+    <node id="actors/buildables/lab-tuberack.xml" />
+    <node id="actors/buildables/lab_chemistryset_round.xml" />
+    <node id="actors/buildables/lab_chemistryset_triangle.xml" />
+    <node id="actors/buildables/lab_chemistryset.xml" />
+    <node id="actors/buildables/dog-house.xml" />
+    <node id="actors/buildables/water-bowl.xml" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="actors/mods/mod-trophies-false-gatekeeper.xml" />
+    <node id="actors/mods/mod-trophies-vicious-twins.xml" />
+    <node id="actors/mods/mod-trophies-alpha-wolf.xml" />
+    <node id="actors/mods/mod-trophies-law.xml" />
+    <node id="actors/mods/mod-trophies-ruthless-pitcher.xml" />
+    <node id="actors/mods/mod-trophies-reaper.xml" />
+    <node id="actors/mods/mod-trophies-perilous-pursuer.xml" />
+    <node id="actors/mods/mod-trophies-old-loyal-champion.xml" />
+    <node id="actors/mods/mod-trophies-skinless-skulkers.xml" />
+    <node id="actors/mods/mod-trophies-sword.xml" />
+    <node id="actors/mods/mod-trophies-crown.xml" />
+    <node id="actors/mods/mod-trophies-toxic-destroyer.xml" />
+    <node id="actors/mods/mod-trophies-alpha-wolves.xml" />
+    <node id="actors/mods/mod-trophies-wicked-leaper.xml" />
+    <node id="actors/mods/mod-trophies-slick-swindler.xml" />
+    <node id="actors/mods/mod-trophies-cats.xml" />
+    <node id="actors/mods/mod-trophies-doomhive-prime.xml" />
+    <node id="actors/mods/mod-trophies-mass-production-models.xml" />
+    <node id="actors/mods/mod-trophies-beast-of-timber.xml" />
+    <node id="actors/mods/mod-trophies-beast-of-frost.xml" />
+    <node id="actors/mods/mod-trophies-beast-of-terra.xml" />
+    <node id="actors/mods/mod-trophies-beast-of-desolation.xml" />
+    <node id="actors/mods/mod-trophies-groundskeeper.xml" />
+    <node id="actors/mods/mod-trophies-lab-guardian.xml" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+<!--
+  <array id="OUTSIDE" name="OUTDOORS" tags="LOCKED,HIDE" build_mode="ADD_ACTOR" >
+    <node id="actors/objects/clothesline-square.xml" />
+    <node id="actors/objects/dog-house.xml" />
+    <node id="actors/objects/home-table-small-rugged.xml" />
+    <node id="actors/objects/home-table-square-rugged.xml" />
+    <node id="actors/objects/park-bench.xml" />
+    <node id="actors/objects/road-boombarrier.xml" />
+    <node id="actors/objects/shop-cardboard-box.xml" />
+    <node id="actors/objects/suburb-aluminium-ladder.xml" />
+    <node id="actors/objects/suburb-basketball-hoop.xml" />
+    <node id="actors/objects/subrurb-wood-crate-1.xml" />
+    <node id="actors/objects/subrurb-wood-crate-2.xml" />
+    <node id="actors/objects/suburb-grill.xml" />
+    <node id="actors/objects/suburb-hockey-goal.xml" />
+    <node id="actors/objects/suburb-jersey-barrier.xml" />
+    <node id="actors/objects/suburb-junglegym.xml" />
+    <node id="actors/objects/suburb-mailbox.xml" />
+    <node id="actors/objects/suburb-merrygoround.xml" />
+    <node id="actors/objects/suburb-plastic-box.xml" />
+    <node id="actors/objects/suburb-postbox.xml" />
+    <node id="actors/objects/suburb-slide.xml" />
+    <node id="actors/objects/suburb-steel-barrel.xml" />
+    <node id="actors/objects/suburb-trash-bin.xml" />
+    <node id="actors/objects/suburb-yard-chair.xml" />
+    <node id="actors/objects/suburb-plastic-yard-chair.xml" />
+  </array>
+-->
+
+</root>

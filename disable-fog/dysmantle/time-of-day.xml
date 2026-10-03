@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <array id="DAY_VARIATION_0">
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node time="00:00"
+      ambient_light_color=".3,.3,.5"
+      directional_light_color="0.2,0.3,0.8,1.6"
+      fog_color="0,0,.1,1" fog_range="47344,47345"
+      bloom_alpha="1"
+      directional_light_shadow_intensity="1.0"
+      directional_light_shadow_softness="1.0"
+      />
+
+    <node time="06:00"
+      ambient_light_color="0.4,0.4,0.5"
+      directional_light_color="0.2,0.2,0.9,1"
+      fog_color="0,0.4,0.6,1" fog_range="47344,47345"
+      bloom_alpha="1"
+      />
+
+    <node time="07:00"
+      ambient_light_color="0.5,0.5,0.8"
+      directional_light_color=".6,0.2,0.1,2.5"
+      fog_color=".8,.6,1,1" fog_range="47344,47345"
+      bloom_alpha="0.3"
+      />
+
+    <node time="09:00"
+      ambient_light_color="0.6,0.6,0.6"
+      directional_light_color="1,0.5,0.5,2"
+      fog_color=".8,.6,1,1" fog_range="47344,47345"
+      bloom_alpha="0.3"
+      />
+
+    <node time="12:00"
+      ambient_light_color="0.85,0.85,0.85"
+      directional_light_color="1,0.7,0.7,1.1"
+      fog_color=".5,.7,1,1" fog_range="47344,47345"
+      bloom_alpha="0.25"
+      />
+
+    <node time="16:00"
+      ambient_light_color="0.5,0.5,0.5"
+      directional_light_color="1,0.75,0.6,1.0"
+      fog_color=".5,0.7,1,1" fog_range="47344,47345"
+      bloom_alpha="1"
+      />
+
+    <node time="17:00"
+      ambient_light_color="0.5,0.5,0.5"
+      directional_light_color="1,0.85,0.5,1.0"
+      fog_color=".5,0.7,1,1" fog_range="47344,47345"
+      bloom_alpha="1"
+      />
+
+    <node time="20:00"
+      ambient_light_color="0.6,0.3,0.8"
+      directional_light_color="0.92,0.61,0.17,1.50"
+      fog_color="0.87,0.42,0.1,1" fog_range="47344,47345"
+      bloom_alpha="0.3"
+      />
+
+    <node time="21:00"
+      ambient_light_color=".4,.4,.7"
+      directional_light_color="0.2,0.3,0.8,1"
+      fog_color="0.1,0.2,0.3,1" fog_range="47344,47345"
+      bloom_alpha="1"
+      />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="ICONS">
+    <node id="NEW_GAME" icon="map/icon-hatch.png" />
+    <node id="QUEST_ACCEPTED" icon="map/icon-quest.png" />
+    <node id="QUEST_PHASE" icon="map/icon-quest.png" />
+    <node id="QUEST_COMPLETED" icon="map/icon-quest.png" />
+    <node id="SEARCHED" icon="hud/interaction-search.png" />
+    <node id="KILLED_BOSS" icon="map/icon-boss.png" />
+    <node id="KILLED_ENEMY" icon="map/icon-enemy.png" />
+    <node id="DIED" icon="map/icon-player-death-position.png" />
+    <node id="RECOVER_LOOT" icon="map/icon-player-death-position.png" />
+    <node id="LINK_TOWER_ACTIVATED" icon="map/icon-link-tower.png" />
+    <node id="LINK_RELAY" icon="map/icon-link-relay.png" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="ENTER_SPECIAL_STAGE" icon="map/icon-entryway.png" />
+    <node id="LEAVE_SPECIAL_STAGE" icon="map/icon-entryway.png" />
+    <node id="SAVE_AND_EXIT" icon="map/icon-marker.png" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+    <node id="TOMB_ENTERED" icon="map/icon-tomb.png" />
+    <node id="TOMB_COMPLETED" icon="map/icon-tomb.png" />
+    <node id="CAMPFIRE_LIT" icon="map/icon-campfire.png" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="INVENT_AND_CRAFT" icon="map/icon-workbench.png" />
+    <node id="ITEM_UPGRADED" icon="map/icon-workbench.png" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+    <node id="WISHING_WELL" icon="map/icon-wishing-well.png" />
+    <node id="LISTENED_RADIO" icon="map/icon-radio.png" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="RESPAWN" icon="map/icon-player-death-position.png" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+    <node id="COMBAT_ALTAR_REWARD" icon="map/icon-arena-obelisk.png" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="BUG_REPORT" icon="map/icon-outpost.png" />
+    <node id="COOP_REVIVE" icon="map/icon-marker.png" />
+    <node id="CRASH" icon="map/icon-outpost.png" />
+    <node id="DAY" icon="map/icon-hatch.png" />
+    <node id="DUG_HOLE" icon="map/icon-buried-treasure.png" />
+    <node id="ENTER_STAGE" icon="map/icon-entryway.png" />
+    <node id="FEEDBACK" icon="map/icon-outpost.png" />
+    <node id="FIXABLE_FIXED" icon="map/icon-fixable.png" />
+    <node id="FOUND_BURIED_TREASURE" icon="map/icon-buried-treasure.png" />
+    <node id="FPS_MEASUREMENT" icon="map/icon-outpost.png" />
+    <node id="FPS_SAMPLE" icon="map/icon-outpost.png" />
+    <node id="GRAPHICS_SETTINGS" icon="map/icon-outpost.png" />
+    <node id="LEVEL_UP" icon="map/icon-campfire.png" />
+    <node id="LISTENED_AUDIO_LOG" icon="map/icon-audio-log.png" />
+    <node id="LOG_START" icon="map/icon-outpost.png" />
+    <node id="MATERIALS_LEFT" icon="map/icon-outpost.png" />
+    <node id="MATERIALS_TOTAL" icon="map/icon-outpost.png" />
+    <node id="MEDAL" icon="map/icon-goal.png" />
+    <node id="MOD_ARK_ELEVATOR" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_AUTO_CLIMB" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_BRIDGE_ISLANDS" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_CLONE_DEER" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_COMMON_RIFTS" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_CRACK_TOMBS" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_CRAFT_RECIPES" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_DEFEAT_HORDE" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_DIFFICULTY" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_DISABLE_KILLZONES" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_ELECTRIFYING_GRENADE" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_FALL_GUARDIAN" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_FASTER_MELEE" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_FORAGING" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_GIVE_KEYS" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_GOD_MODE" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_HYPERCRITICAL" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_INSTANT_FARMING" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_KEYS_TO_HOME" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_MATERIAL_MAGNET_PLUS" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_MORE_MELEE_TARGETS" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_NEW_GAME_PLUS_PLUS" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_NO_FALL_DAMAGE" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_PEACEFUL_MODE" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_RIFT_FORWARDS" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_SHOW_STATISTICS" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_SPAWN_MATERIALS" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_SPEEDHACK" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_SPEED_FISHING" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_STEALTH" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_STUNNING_PETS" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_TEMPERATURE_PROTECTION" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_UNLIMITED_BUILDS" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="MOD_UNSTUCK" icon="ui/gfx/mods/mods-tabbutton.png" />
+    <node id="OBELISK" icon="map/icon-arena-obelisk.png" />
+    <node id="OPEN_WORLD_TEST_GAME" icon="map/icon-outpost.png" />
+    <node id="RESTART_STAGE" icon="map/icon-hatch.png" />
+    <node id="SHELTER_DEFENCE" icon="map/icon-shelter-loudspeaker.png" />
+    <node id="SKILL" icon="map/icon-campfire.png" />
+    <node id="TIMED_CRATE" icon="map/icon-chest.png" />
+    <node id="TOMB_INVESTIGATE" icon="map/icon-tomb.png" />
+    <node id="TOMB_PYRAMID_UNLOCK" icon="map/icon-tomb.png" />
+    <node id="TOMB_UNCOMPLETED" icon="map/icon-tomb.png" />
+    <node id="TOMB_UNLOCK" icon="map/icon-tomb.png" />
+    <node id="TRAVEL_TO_STAGE" icon="map/icon-entryway.png" />
+    <node id="WISHING_WELL_ACCEPT" icon="map/icon-wishing-well.png" />
+    <node id="WISHING_WELL_REJECT" icon="map/icon-wishing-well.png" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+</root>

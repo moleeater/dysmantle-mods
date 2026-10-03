@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="CAMPFIRE,HEAT_SOURCE,POINT_OF_INTEREST" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="physics_material" value="WOOD" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="0.55" g="0.32" b="0.24" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="name" type="STRING" flags="PERSISTENT,LOCALIZED" value="Unknown Campfire" />
+    <node id="heat_modifier" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="30" />
+    <node id="heat_radius" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="120" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="CAMPFIRE" />
+    <node id="is_safe_heat" type="BOOLEAN" flags="PERSISTENT,NO_REPLICATION" value="true" />
+    <node id="heat_requires_activation" type="BOOLEAN" flags="PERSISTENT,NO_REPLICATION" value="true" />
+    <node id="camera_path_0" type="PATH" flags="PERSISTENT,NO_REPLICATION" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|15|Q|}};-234,-148,-326,{{QUATERNION,|Q|rotation|Q|,|Q|0.387048,0.14401,0.317537,0.853596|Q|},{FLOAT,|Q|fov|Q|,|Q|50|Q|}};-218,-103,-281,{{QUATERNION,|Q|rotation|Q|,|Q|0.425587,0.165777,0.321702,0.829399|Q|},{FLOAT,|Q|fov|Q|,|Q|50|Q|}}" />
+    <node id="camera_path_1" type="PATH" flags="PERSISTENT,NO_REPLICATION" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|15|Q|}};54,-141,-1025,{{QUATERNION,|Q|rotation|Q|,|Q|0.466901,0.00596506,0.00878209,0.884246|Q|},{FLOAT,|Q|fov|Q|,|Q|30|Q|},{FLOAT,|Q|near_z|Q|,|Q|60|Q|},{FLOAT,|Q|far_z|Q|,|Q|3845.28|Q|},{FLOAT,|Q|speed_mul|Q|,|Q|1|Q|},{BOOLEAN,|Q|ease_in|Q|,|Q|false|Q|},{BOOLEAN,|Q|ease_out|Q|,|Q|false|Q|},{FLOAT,|Q|pause_in_seconds|Q|,|Q|0|Q|}};-55,17,-1084,{{QUATERNION,|Q|rotation|Q|,|Q|0.449071,0.0100563,0.0156594,0.893302|Q|},{FLOAT,|Q|fov|Q|,|Q|30|Q|},{FLOAT,|Q|near_z|Q|,|Q|60|Q|},{FLOAT,|Q|far_z|Q|,|Q|3845.28|Q|},{FLOAT,|Q|speed_mul|Q|,|Q|1|Q|},{BOOLEAN,|Q|ease_in|Q|,|Q|false|Q|},{BOOLEAN,|Q|ease_out|Q|,|Q|false|Q|},{FLOAT,|Q|pause_in_seconds|Q|,|Q|0|Q|}}" />
+    <node id="mtl_tex_glow_0" type="BITMAP" value="models/textures/spirit-campfire-glow.jpg" />
+    <node id="light_color" type="COLOR" flags="PERSISTENT,NO_REPLICATION" value="0.3,0.98,0.92,1" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleCampfire">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death" category="DEATH" animation_controller="PhysicsMaterialBasedDeath" forced_animation_length_in_seconds="0.20" force_update_visual_bounds="true" />
+    <node id="burning"
+     wrap_mode="LOOP"
+     forced_animation_length_in_seconds="0.50"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/spirit-campfire.xml"
+     event_0_sound_event="{{BOOLEAN,|Q|looping|Q|,|Q|true|Q|},{FLOAT2,|Q|volume_range|Q|,|Q|0.8,0.8|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|300,600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/fire-loop|Q|}}"
+    />
+
+    <node id="blaze"
+     forced_animation_length_in_seconds="0.50"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/campfire.xml"
+     event_1_trigger_time="0"
+     event_1_id="sfx-ignite"
+     event_1_command_word="play_sound_positional"
+     event_1_command_word_key_values="{{SOUND,|Q|sound|Q|,|Q|sfx/fire-ignite|Q|},{FLOAT,|Q|volume|Q|,|Q|1|Q|},{FLOAT,|Q|frequency_multiplier|Q|,|Q|1|Q|}}"
+     event_2_trigger_time="0.021"
+     event_2_id="id1"
+     event_2_effect="effects/campfire.xml"
+     event_3_trigger_time="0.039"
+     event_3_id="id2"
+     event_3_effect="effects/campfire.xml"
+     event_4_trigger_time="0.062"
+     event_4_id="id3"
+     event_4_effect="effects/campfire.xml"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="shadow_scale" value="1.5" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="model" value="models/objects/campfire.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="light"
+        interaction_0_disable_after_interaction="0"
+        interaction_0_actor_this_interaction_tags="!ACTIVATED"
+        interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Game_SaveGame();&#10;&#9;Actor_QueueActionSetSolid(so_activator, false);&#10;&#9;Actor_QueueActionMoveToDistanceFromActor(so_activator, so_self, 58);&#10;&#9;Actor_QueueActionSetSolid(so_activator, true);&#10;&#9;local pos = StageObject_GetStagePosition(so_self);&#10;&#9;Actor_QueueActionTurnTowardsPosition(so_activator, pos[0], pos[1]);&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_unequip&#34;, true);&#10;&#9;local command = Command_Create(&#34;activate&#34;);&#10;&#9;Command_SetStageObjectReference(command, so_self);&#10;&#9;Actor_QueueActionSendCommand(so_activator, so_activator, command, 1.2);&#10;&#9;Command_Delete(command);&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;lighting_a_fire&#34;, true);&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_equip&#34;, false);&#10;&#10;&#10;&#9;if (StageObject_GetId(so_self) == &#34;underworld_start_campfire&#34;)&#10;&#9;{&#10;&#10;&#9;&#9;Game_AddActorNotificationWithDelay(so_activator, LOC_TEXT(&#34;The flame looks different. Pretty colors. [EMOJI=fire]&#34;), 4)&#10;&#10;&#9;}&#10;&#10;}"
+        interaction_0_script_to_run_on_interaction_started="function OnInteractionStarted(so_self, so_activator)&#10;{&#10;&#9;Actor_SetInteractionEnabled(so_self, &#34;light&#34;, false);&#10;}"
+        interaction_0_script_to_run_on_interaction_cancelled="function OnInteractionCancelled(so_self, so_activator)&#10;{&#10;&#9;Actor_SetInteractionEnabled(so_self, &#34;light&#34;, true);&#10;}"
+        interaction_0_trigger="PRESS_BUTTON"
+        interaction_0_controller_button="USE"
+        interaction_0_text="Light the Fire"
+      interaction_1_id="rest"
+        interaction_1_disable_after_interaction="0"
+        interaction_1_actor_this_interaction_tags="ACTIVATED"
+        interaction_1_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;return !Actor_IsAnimationPlaying(so_activator, &#34;sitting_on_ground&#34;);&#10;}"
+        interaction_1_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local wait_script = @&#34;&#10;&#9;function IsWaiting()&#10;&#9;{&#10;&#9;&#9;return Game_IsStoringMaterials();&#10;&#9;}&#10;&#9;&#34;;&#10;&#10;&#9;Actor_SetActorFlag(so_activator, &#34;INDESTRUCTIBLE&#34;, true);&#10;&#9;KeyValueStore_SetKeyValueBoolean(Engine_GetKeyValueStore(), &#34;cinema_mode&#34;, true);&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;local so_storage_box = Stage_QueryNearestActorWithType(pos[0], pos[1], pos[2], 300, &#34;actors/interactives/camp-storage-box.xml&#34;);&#10;&#10;&#9;// We may already be storing stuff.&#10;&#9;local engine_kvs = Engine_GetKeyValueStore();&#10;&#9;local storing_enabled = KeyValueStore_GetKeyValue(engine_kvs, &#34;store_materials_when_resting&#34;) == true;&#10;&#9;if (storing_enabled &#38;&#38; so_storage_box != null &#38;&#38; !Game_IsStoringMaterials())&#10;&#9;&#9;Actor_InteractWithInteraction(so_storage_box, so_activator, &#34;store&#34;);&#10;&#10;&#9;Actor_QueueActionTurnTowardsPosition(so_activator, pos[0], pos[1]);&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_unequip&#34;, true);&#10;&#9;Actor_QueueActionPlayAnimationWithTransition(so_activator, &#34;sitting_on_ground&#34;, &#34;sitting_down&#34;, true);&#10;&#10;&#9;// Need to wait the previous storing and then start a new one in case we sat down while storing,&#10;&#9;// but picked up some materials between.&#10;&#9;Actor_QueueActionWaitForScript(so_activator, wait_script);&#10;&#9;if (storing_enabled &#38;&#38; so_storage_box != null)&#10;&#9;&#9;Actor_InteractWithInteraction(so_storage_box, so_activator, &#34;store&#34;);&#10;&#9;Actor_QueueActionWaitForScript(so_activator, wait_script);&#10;&#10;&#9;UI_SendScreenMessage(&#34;Campfire&#34;, &#34;CampfireActor&#34;, so_self.tostring());&#10;&#9;UI_SendScreenMessage(&#34;Campfire&#34;, &#34;PlayerActor&#34;, so_activator.tostring());&#10;&#9;Actor_QueueActionRunScript(so_activator, @&#34;UI_PushScreen(&#34;&#34;Campfire&#34;&#34;);&#34;);&#10;&#10;&#9;Actor_QueueActionWaitForCommandWord(so_activator, &#34;wait&#34;);&#10;&#9;Actor_QueueActionStopAnimationWithTransition(so_activator, &#34;sitting_on_ground&#34;, &#34;sitting_up&#34;, true);&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_equip&#34;, false);&#10;&#10;&#9;//Actor_InteractWithInteraction(so_self, so_activator, &#34;rest_camera&#34;);&#10;}"
+        interaction_1_trigger="PRESS_BUTTON"
+        interaction_1_controller_button="USE"
+        interaction_1_text="Camp"
+      interaction_2_id="rest_camera"
+        interaction_2_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local so_camera = StageObject_GetById(&#34;cinema_camera&#34;);&#10;&#9;Stage_SetActiveCamera(so_camera);&#10;&#9;local kvs_camera_paths = ActorType_GetKeyValueStore(Actor_GetActorType(so_self));&#10;&#9;Camera_RemoveAllAnimationsFromQueue(so_camera);&#10;&#9;Camera_AddAnimationToQueueAllPaths(so_camera, kvs_camera_paths, so_self);&#10;&#9;Camera_SetStageCameraAfterAnimationQueueIsFinished(so_camera, Stage_GetBaseCamera());&#10;&#9;Camera_SetStageCameraAnimationQueueLooping(so_camera, true);&#10;}"
+        interaction_2_trigger="NONE"
+      interaction_3_id="exit"
+        interaction_3_disable_after_interaction="0"
+        interaction_3_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local so_camera = StageObject_GetById(&#34;cinema_camera&#34;);&#10;&#9;Camera_RemoveAllAnimationsFromQueue(so_camera);&#10;&#9;Stage_SetActiveCamera(Stage_GetBaseCamera());&#10;&#10;&#10;&#9;//initial fast travel quest&#10;&#9;local quest_id = &#34;quests/campfire-fast-travel-intro.nut&#34;;&#10;&#10;&#9;if(!Game_IsQuestCurrent(quest_id) || !Game_IsQuestCompleted(quest_id))&#10;&#9;&#9;Game_ShowQuestStartDialog(&#34;quests/campfire-fast-travel-intro.nut&#34;, true);&#10;&#10;&#9;quest_id = &#34;quests/dlc_1_main.nut&#34;;&#10;&#10;&#9;//dlc main quest&#10;&#9;if(Game_IsQuestCurrent(quest_id)){&#10;&#10;&#9;&#9; if(Game_GetQuestPhaseId(quest_id) == &#34;PHASE_BACK_TO_TOWN&#34;){&#10;&#10;&#10;&#10;&#9;&#9;&#9; if(Game_GetWorldState(&#34;DLC_1_MAIN_QUEST&#34;, &#34;travel_remark&#34;) != null){&#10;&#10;&#9;&#9;&#9;&#9; local remark3 = LOC_TEXT(&#34;My travel troubles continue. [EMOJI=frowning face]&#34;)&#10;&#10;&#9;&#9;&#9;&#9; if(m_randf() &#62;= 0.6)&#10;&#9;&#9;&#9;&#9;&#9; Game_AddActorNotificationWithDelay(so_activator, remark3, 3)&#10;&#10;&#9;&#9;&#9;&#9; return;&#10;&#9;&#9;&#9; }&#10;&#10;&#10;&#9;&#9;&#9; local remark1 = LOC_TEXT(&#34;Strange. I can&#39;t use the Campfires for traveling any more. [EMOJI=compass]&#34;);&#10;&#9;&#9;&#9; local remark2 = LOC_TEXT(&#34;Those devices I broke must have been important. [EMOJI=grimacing face]&#34;);&#10;&#10;&#9;&#9;&#9; Game_AddActorNotificationWithDelay(so_activator, remark1, 2);&#10;&#9;&#9;&#9; Game_AddActorNotification(so_activator,remark2);&#10;&#10;&#9;&#9;&#9; Game_SetWorldState(&#34;DLC_1_MAIN_QUEST&#34;, &#34;travel_remark&#34;, &#34;1&#34;);&#10;&#10;&#10;&#9;&#9; }&#10;&#10;&#10;&#9;}&#10;&#10;&#10;&#10;&#10;&#10;}"
+        interaction_3_trigger="NONE"
+      interaction_4_id="stage_enter"
+        interaction_4_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local script_end_start = @&#34;&#10;&#9;&#9;Game_SetCinemaMode(true);&#10;&#9;&#9;&#34;;&#10;//    StageObject_SetPositionByStackingOnTop(so_activator, )&#10;&#9;Actor_QueueActionRunScript(so_activator, script_end_start);&#10;//    Actor_QueueActionPlayAnimation(so_activator, &#34;tool_unequip&#34;, false);&#10;&#9;Game_SetCinemaMode(true, true);&#10;&#10;&#9;Actor_QueueActionRunScript(so_activator, format(&#34;StageObject_AddTag(%d, &#92;&#34;IGNORE_SMALL_COLLISIONS&#92;&#34;);&#34;, so_activator));&#10;&#9;Actor_QueueActionMoveToDistanceFromActor(so_activator, so_self, 80);&#10;&#9;Actor_QueueActionRunScript(so_activator, format(&#34;StageObject_RemoveTag(%d, &#92;&#34;IGNORE_SMALL_COLLISIONS&#92;&#34;);&#34;, so_activator));&#10;&#10;//    Actor_QueueActionMoveToBone(so_activator, so_self, &#34;snap&#34;);&#10;//    Actor_QueueActionPlayAnimation(so_activator, &#34;tool_equip&#34;, true);&#10;&#9;local script_end = @&#34;&#10;&#9;&#9;Game_SetCinemaMode(false);&#10;&#9;&#9;&#34;;&#10;&#9;Actor_QueueActionRunScript(so_activator, script_end);&#10;}"
+        interaction_4_trigger="NONE"
+      interaction_5_id="enter_radius"
+        interaction_5_disable_after_interaction="0"
+        interaction_5_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;&#9;local identifier = &#34;puid_&#34; + StageObject_GetPersistentUniqueId(so_self);&#10;&#9;&#9;local worldstate = Game_GetWorldState(&#34;UW_CAMPFIRES_FOUND&#34;,identifier);&#10;&#10;&#10;&#9;&#9;if(worldstate == null){&#10;&#10;&#10;&#9;&#9;&#9;local quest_id = &#34;quests/campfire-fast-travel-intro.nut&#34;;&#10;&#10;&#9;&#9;&#9;if(Game_IsQuestCurrent(quest_id)){&#10;&#10;&#9;&#9;&#9;&#9;if(!Game_IsQuestGoalCompleted(quest_id, &#34;PHASE_USE_FAST_TRAVEL&#34;, &#34;GOAL_FIND_ANOTHER_CAMPFIRE&#34;)){&#10;&#10;&#9;&#9;&#9;&#9;&#9;Game_SendQuestPhaseGoalCommandWord(quest_id,&#34;PHASE_USE_FAST_TRAVEL&#34;,&#34;GOAL_FIND_ANOTHER_CAMPFIRE&#34;, &#34;complete&#34;);&#10;&#10;&#9;&#9;&#9;&#9;}&#10;&#10;&#9;&#9;&#9;}&#10;&#10;&#10;&#9;&#9;}&#10;&#10;&#9;&#9;Game_SetWorldState(&#34;UW_CAMPFIRES_FOUND&#34;,identifier,&#34;found&#34;);&#10;&#10;&#10;&#10;&#10;}"
+        interaction_5_trigger="ENTER_RADIUS"
+        interaction_5_radius="200"
+      interaction_6_id="mod_restless_crates_enter_radius"
+        interaction_6_disable_after_interaction="0"
+        interaction_6_trigger="ENTER_RADIUS"
+        interaction_6_external_script="scripts/interactions/mods/mod-restless-crates-enter-radius.nut"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="CYLINDER" />
+    <node id="radius_xy" value="40.0" />
+    <node id="min_z" value="-25.0" />
+    <node id="max_z" value="0.0" />
+  </array>
+
+</root>

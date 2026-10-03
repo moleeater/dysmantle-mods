@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="interactives/arena obelisk" />
+    <node id="tags" value="POINT_OF_INTEREST,NO_BUILDING_ZONE" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="100" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="800" />
+    <node id="damage_type_accept_mask" value="BLUNT,EXPLOSIVE,SELF_DESTRUCT" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="0.32" g="0.34" b="0.39" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="effect_despawn" type="PARTICLE_EFFECT" flags="PERSISTENT,NO_REPLICATION" value="effects/enemy-despawn-medium.xml" />
+    <node id="effect_spawn" type="PARTICLE_EFFECT" flags="PERSISTENT,NO_REPLICATION" value="effects/enemy-spawn-medium.xml" />
+    <node id="enemies_1" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}};-26,-139,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}}" />
+    <node id="enemies_2" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}};-110,-107,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}};98,-103,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}}" />
+    <node id="enemies_3" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}};-137,-75,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}};-17,-146,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}};91,-96,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}}" />
+    <node id="enemies_4" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}};140,-76,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}};1,-143,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}};-129,-98,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}};-196,7,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}}" />
+    <node id="enemies_5" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}};-168,-11,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}};-109,-104,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}};-11,-145,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}};110,-102,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}};146,3,0,{{ACTOR_TYPE,|Q|type|Q|,|Q|actors/enemies/ex-human-female-melee.xml|Q|}}" />
+    <node id="reward_1" type="STRING" value="TOMATO" />
+    <node id="reward_2" type="STRING" value="TOMATO" />
+    <node id="reward_3" type="STRING" value="TOMATO" />
+    <node id="reward_4" type="STRING" value="TOMATO" />
+    <node id="reward_5" type="STRING" value="TOMATO" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ARENA_OBELISK" />
+    <node id="investigated" type="BOOLEAN" flags="PERSISTENT,SAVE_STATE" value="false" />
+    <node id="powered" type="BOOLEAN" flags="PERSISTENT,SAVE_STATE" value="false" />
+    <node id="completed" type="BOOLEAN" flags="PERSISTENT,SAVE_STATE" value="false" />
+    <node id="cost" type="STRING" value="TOMB_ORB" />
+    <node id="no_building_zone_radius" type="FLOAT" value="350" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleCombatAltar">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="0-completed"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/arena-obelisk-rig-0-completed.anim"
+     event_0_trigger_time="0"
+     event_0_id="effect-pillar"
+     event_0_effect="effects/arena-obelisk-complete-pillar.xml"
+     event_1_trigger_time="0.125"
+     event_1_id="reward"
+     event_1_command_word="search_materials"
+    />
+
+    <node id="1-completed"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/arena-obelisk-rig-1-completed.anim"
+     event_0_trigger_time="0"
+     event_0_id="effect-pillar"
+     event_0_effect="effects/arena-obelisk-complete-pillar.xml"
+     event_1_trigger_time="0"
+     event_1_id="effect-dot"
+     event_1_effect="effects/arena-obelisk-complete-dot.xml"
+     event_1_spawn_effect_offset_x="24.00"
+     event_1_spawn_effect_offset_y="14.00"
+     event_1_spawn_effect_offset_z="-41.00"
+     event_2_trigger_time="0"
+     event_2_id="effect-dot2"
+     event_2_effect="effects/arena-obelisk-complete-dot.xml"
+     event_2_spawn_effect_offset_x="-24.00"
+     event_2_spawn_effect_offset_y="-14.00"
+     event_2_spawn_effect_offset_z="-41.00"
+     event_3_trigger_time="0"
+     event_3_id="effect-dot3"
+     event_3_effect="effects/arena-obelisk-complete-dot.xml"
+     event_3_spawn_effect_offset_x="-14.00"
+     event_3_spawn_effect_offset_y="24.00"
+     event_3_spawn_effect_offset_z="-41.00"
+     event_4_trigger_time="0"
+     event_4_id="effect-dot4"
+     event_4_effect="effects/arena-obelisk-complete-dot.xml"
+     event_4_spawn_effect_offset_x="14.00"
+     event_4_spawn_effect_offset_y="-24.00"
+     event_4_spawn_effect_offset_z="-41.00"
+     event_5_trigger_time="0.125"
+     event_5_id="reward"
+     event_5_command_word="search_materials"
+    />
+
+    <node id="2-completed"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/arena-obelisk-rig-2-completed.anim"
+     event_0_trigger_time="0"
+     event_0_id="effect-pillar"
+     event_0_effect="effects/arena-obelisk-complete-pillar.xml"
+     event_1_trigger_time="0"
+     event_1_id="effect-dot"
+     event_1_effect="effects/arena-obelisk-complete-dot.xml"
+     event_1_spawn_effect_offset_x="21.00"
+     event_1_spawn_effect_offset_y="-11.00"
+     event_1_spawn_effect_offset_z="-63.00"
+     event_2_trigger_time="0"
+     event_2_id="effect-dot2"
+     event_2_effect="effects/arena-obelisk-complete-dot.xml"
+     event_2_spawn_effect_offset_x="-21.00"
+     event_2_spawn_effect_offset_y="11.00"
+     event_2_spawn_effect_offset_z="-63.00"
+     event_3_trigger_time="0"
+     event_3_id="effect-dot3"
+     event_3_effect="effects/arena-obelisk-complete-dot.xml"
+     event_3_spawn_effect_offset_x="-11.00"
+     event_3_spawn_effect_offset_y="-21.00"
+     event_3_spawn_effect_offset_z="-63.00"
+     event_4_trigger_time="0"
+     event_4_id="effect-dot4"
+     event_4_effect="effects/arena-obelisk-complete-dot.xml"
+     event_4_spawn_effect_offset_x="11.00"
+     event_4_spawn_effect_offset_y="21.00"
+     event_4_spawn_effect_offset_z="-63.00"
+     event_5_trigger_time="0.125"
+     event_5_id="reward"
+     event_5_command_word="search_materials"
+    />
+
+    <node id="3-completed"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/arena-obelisk-rig-3-completed.anim"
+     event_0_trigger_time="0"
+     event_0_id="effect-pillar"
+     event_0_effect="effects/arena-obelisk-complete-pillar.xml"
+     event_1_trigger_time="0"
+     event_1_id="effect-dot"
+     event_1_effect="effects/arena-obelisk-complete-dot.xml"
+     event_1_spawn_effect_offset_x="17.00"
+     event_1_spawn_effect_offset_y="7.00"
+     event_1_spawn_effect_offset_z="-89.00"
+     event_2_trigger_time="0"
+     event_2_id="effect-dot2"
+     event_2_effect="effects/arena-obelisk-complete-dot.xml"
+     event_2_spawn_effect_offset_x="-17.00"
+     event_2_spawn_effect_offset_y="-7.00"
+     event_2_spawn_effect_offset_z="-89.00"
+     event_3_trigger_time="0"
+     event_3_id="effect-dot3"
+     event_3_effect="effects/arena-obelisk-complete-dot.xml"
+     event_3_spawn_effect_offset_x="7.00"
+     event_3_spawn_effect_offset_y="-17.00"
+     event_3_spawn_effect_offset_z="-89.00"
+     event_4_trigger_time="0.117"
+     event_4_id="effect-dot4"
+     event_4_effect="effects/arena-obelisk-complete-dot.xml"
+     event_4_spawn_effect_offset_x="-7.00"
+     event_4_spawn_effect_offset_y="17.00"
+     event_4_spawn_effect_offset_z="-89.00"
+     event_5_trigger_time="0.125"
+     event_5_id="reward"
+     event_5_command_word="search_materials"
+    />
+
+    <node id="4-completed"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/arena-obelisk-rig-4-completed.anim"
+     event_0_trigger_time="0"
+     event_0_id="effect-pillar"
+     event_0_effect="effects/arena-obelisk-complete-pillar.xml"
+     event_1_trigger_time="0"
+     event_1_id="effect-dot"
+     event_1_effect="effects/arena-obelisk-complete-dot.xml"
+     event_1_spawn_effect_offset_x="14.00"
+     event_1_spawn_effect_offset_y="-6.00"
+     event_1_spawn_effect_offset_z="-106.00"
+     event_2_trigger_time="0"
+     event_2_id="effect-dot2"
+     event_2_effect="effects/arena-obelisk-complete-dot.xml"
+     event_2_spawn_effect_offset_x="-14.00"
+     event_2_spawn_effect_offset_y="6.00"
+     event_2_spawn_effect_offset_z="-106.00"
+     event_3_trigger_time="0"
+     event_3_id="effect-dot3"
+     event_3_effect="effects/arena-obelisk-complete-dot.xml"
+     event_3_spawn_effect_offset_x="6.00"
+     event_3_spawn_effect_offset_y="14.00"
+     event_3_spawn_effect_offset_z="-106.00"
+     event_4_trigger_time="0.117"
+     event_4_id="effect-dot4"
+     event_4_effect="effects/arena-obelisk-complete-dot.xml"
+     event_4_spawn_effect_offset_x="-6.00"
+     event_4_spawn_effect_offset_y="-14.00"
+     event_4_spawn_effect_offset_z="-106.00"
+     event_5_trigger_time="0.125"
+     event_5_id="reward"
+     event_5_command_word="search_materials"
+    />
+
+    <node id="5-completed"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/arena-obelisk-rig-5-completed.anim"
+     event_0_trigger_time="0"
+     event_0_id="effect-pillar"
+     event_0_effect="effects/arena-obelisk-complete-pillar.xml"
+     event_1_trigger_time="0"
+     event_1_id="effect-dot"
+     event_1_effect="effects/arena-obelisk-complete-dot.xml"
+     event_1_spawn_effect_offset_x="11.00"
+     event_1_spawn_effect_offset_y="1.00"
+     event_1_spawn_effect_offset_z="-130.00"
+     event_2_trigger_time="0"
+     event_2_id="effect-dot2"
+     event_2_effect="effects/arena-obelisk-complete-dot.xml"
+     event_2_spawn_effect_offset_x="-11.00"
+     event_2_spawn_effect_offset_y="-1.00"
+     event_2_spawn_effect_offset_z="-130.00"
+     event_3_trigger_time="0"
+     event_3_id="effect-dot3"
+     event_3_effect="effects/arena-obelisk-complete-dot.xml"
+     event_3_spawn_effect_offset_y="11.00"
+     event_3_spawn_effect_offset_z="-130.00"
+     event_4_trigger_time="0"
+     event_4_id="effect-dot4"
+     event_4_effect="effects/arena-obelisk-complete-dot.xml"
+     event_4_spawn_effect_offset_x="1.00"
+     event_4_spawn_effect_offset_y="-11.00"
+     event_4_spawn_effect_offset_z="-130.00"
+     event_5_trigger_time="0.125"
+     event_5_id="reward"
+     event_5_command_word="search_materials"
+    />
+
+    <node id="powered"
+     forced_animation_length_in_seconds="6.00"
+     event_0_trigger_time="0"
+     event_0_id="effect-pillar"
+     event_0_effect="effects/arena-obelisk-complete-pillar.xml"
+     event_1_trigger_time="0"
+     event_1_id="sfx-powered"
+     event_1_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/arena-obelisk-powered|Q|}}"
+     event_2_trigger_time="0.2"
+     event_2_id="effect-wave"
+     event_2_bone_id="balls-5"
+     event_2_effect="effects/obelisk-powered.xml"
+     event_2_spawn_effect_offset_y="0.11"
+     event_2_spawn_effect_offset_z="-0.59"
+    />
+
+    <node id="activated"
+     sound_scape="sound-scapes/arena-obelisk-activated-loop.xml"
+     wrap_mode="LOOP"
+     forced_animation_length_in_seconds="0.50"
+     event_0_trigger_time="0"
+     event_0_id="fx"
+     event_0_effect="effects/arena-obelisk-activated-pillar.xml"
+    />
+
+    <node id="used" event_0_trigger_time="0" event_0_id="fx" event_0_effect="effects/arena-obelisk-complete-pillar.xml" />
+    <node id="activate" event_0_trigger_time="0" event_0_id="fx" event_0_effect="effects/arena-obelisk-complete-pillar.xml" />
+    <node id="deactivate" event_0_trigger_time="0" event_0_id="fx" event_0_effect="effects/arena-obelisk-complete-pillar.xml" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="bm_shadow" value="shadows/shadow-square.png" />
+    <node id="shadow_scale" value="3.29" />
+    <node id="shadow_alpha" value="0.56" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="ground_decal_type" value="arena-altar" />
+    <node id="ground_decal_angle" value="90" />
+    <node id="ground_decal_scale" value="0.5" />
+    <node id="ground_decal_offset_x" value="-60" />
+    <node id="model" value="models/interactives/arena-obelisk.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="use"
+        interaction_0_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;local num_investigated = Game_GetWorldStateAsInteger(&#34;OBELISKS&#34;, &#34;num_investigated&#34;, 0);&#10;&#9;local powered = StageObject_GetKeyValue(so_self, &#34;powered&#34;, false);&#10;&#10;&#9;if (abs(Game_GetAngleDifference(so_self, so_activator)) &#60; 130)&#10;&#9;{&#10;&#9;&#9;return false;&#10;&#9;}&#10;&#10;&#9;return num_investigated &#62;= 3 &#38;&#38; powered;&#10;}"
+        interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;//Game_AddActorNotification(so_self, &#34;DEVELOPER NOTE: COMING SOON!&#34;);&#10;&#9;//return;&#10;&#10;&#9;//Game_SaveGame();&#10;&#10;&#9;local id = &#34;puid&#34; + StageObject_GetPersistentUniqueId(so_self);&#10;&#9;local state = Game_GetWorldState(&#34;COMBAT_ALTARS&#34;, id);&#10;&#9;local level = state ? (state.tointeger() + 1) : 1;&#10;&#10;&#9;Game_LogEvent(&#34;OBELISK&#34;, &#34;START_&#34; + level.tostring(), StageObject_GetId(so_self));&#10;&#10;&#9;local blocking_path = StageObject_GetKeyValue(so_self, &#34;obelisk_fight_area&#34;);&#10;&#9;if (blocking_path != null)&#10;&#9;&#9;Game_AddBlockingPath(blocking_path);&#10;&#10;&#9;Actor_QueueActionMoveToBone(so_activator, so_self, &#34;snap&#34;);&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_unequip&#34;, true);&#10;&#9;Actor_QueueActionPlayAnimationWithTransition(so_activator, &#34;interaction_loop&#34;, &#34;interaction_once&#34;, true);&#10;&#10;&#9;local command = Command_Create(&#34;activate&#34;);&#10;&#9;Command_SetStageObjectReference(command, so_activator);&#10;&#9;Actor_QueueActionSendCommand(so_activator, so_self, command, 0);&#10;&#9;Command_Delete(command);&#10;&#10;&#9;local script = @&#34;Actor_PlayAnimation($so_self, &#34;&#34;used&#34;&#34;);&#34;;&#10;&#9;script = string_replace(script, &#34;$so_self&#34;, so_self.tostring());&#10;&#9;Actor_QueueActionRunScript(so_activator, script);&#10;&#10;&#9;Actor_QueueActionWaitForCommandWord(so_activator, &#34;wait&#34;);&#10;&#9;Actor_QueueActionStopAnimation(so_activator, &#34;interaction_loop&#34;, true);&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_equip&#34;, false);&#10;&#9;Actor_QueueActionSendCommandWord(so_activator, so_self, &#34;wait&#34;);&#10;}"
+        interaction_0_trigger="PRESS_BUTTON"
+        interaction_0_controller_button="USE"
+        interaction_0_text="Use"
+      interaction_1_id="reward"
+        interaction_1_enabled="0"
+        interaction_1_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;if (abs(Game_GetAngleDifference(so_self, so_activator)) &#60; 130)&#10;&#9;{&#10;&#9;&#9;return false;&#10;&#9;}&#10;&#10;&#9;return true;&#10;}"
+        interaction_1_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local id = &#34;puid&#34; + StageObject_GetPersistentUniqueId(so_self);&#10;&#9;local state = Game_GetWorldState(&#34;COMBAT_ALTARS&#34;, id);&#10;&#9;local level = state ? (state.tointeger() + 1) : 1;&#10;&#9;Game_LogEvent(&#34;OBELISK&#34;, &#34;WON_&#34; + level.tostring(), StageObject_GetId(so_self));&#10;&#9;if (level == 5)&#10;&#9;{&#10;&#9;&#9;Game_ChangeMedalProgressAmount(&#34;COMBAT_OBELISKS&#34;, 1);&#10;&#9;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#10;&#9;&#9;local quest_id = &#34;quests/obelisk-intro.nut&#34;;&#10;&#9;&#9;Game_SendQuestPhaseCommandWord(quest_id, &#34;COMPLETE_DONE&#34;, &#34;activate&#34;);&#10;&#10;&#9;&#9;StageObject_SetKeyValueBoolean(so_self, &#34;completed&#34;, true);&#10;&#9;}&#10;&#10;&#9;Actor_QueueActionRunScript(so_activator, &#34;Game_SetCinemaMode(true);&#34;);&#10;&#9;Actor_QueueActionMoveToBone(so_activator, so_self, &#34;snap&#34;);&#10;&#9;Actor_QueueActionSendCommandWord(so_activator, so_self, &#34;wait&#34;);&#10;&#9;Actor_QueueActionWaitForCommandWord(so_activator, &#34;wait&#34;);&#10;&#9;Actor_QueueActionRunScript(so_activator, &#34;Game_SetCinemaMode(false);&#34;);&#10;&#10;&#9;Actor_QueueActionWaitForCommandWord(so_self, &#34;wait&#34;);&#10;&#9;Actor_QueueActionPlayAnimation(so_self, level + &#34;-completed&#34;, true);&#10;&#9;Actor_QueueActionSendCommandWord(so_self, so_activator, &#34;wait&#34;);&#10;&#10;&#9;Game_RemoveAllBlockingPaths();&#10;}"
+        interaction_1_trigger="PRESS_BUTTON"
+        interaction_1_controller_button="USE"
+        interaction_1_text="Claim Reward"
+      interaction_2_id="inspect"
+        interaction_2_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;local quest_id = &#34;quests/obelisk-intro.nut&#34;;&#10;&#9;if (Game_IsQuestGoalCompleted(quest_id, &#34;INVESTIGATE&#34;, &#34;INVESTIGATE&#34;))&#10;&#9;&#9;return false;&#10;&#10;&#9;return !Game_IsShowingActorNotification(so_activator) &#38;&#38;&#10;&#9;&#9;!StageObject_GetKeyValue(so_self, &#34;investigated&#34;, false);&#10;}"
+        interaction_2_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local quest_id = &#34;quests/obelisk-intro.nut&#34;;&#10;&#9;local num_investigated = Game_GetWorldStateAsInteger(&#34;OBELISKS&#34;, &#34;num_investigated&#34;, 0);&#10;&#10;&#9;if (!StageObject_GetKeyValue(so_self, &#34;investigated&#34;, false))&#10;&#9;{&#10;&#9;&#9;StageObject_SetKeyValueBoolean(so_self, &#34;investigated&#34;, true);&#10;&#9;&#9;Game_SendQuestPhaseCommandWord(quest_id, &#34;INVESTIGATE&#34;, &#34;activate&#34;);&#10;&#10;&#9;&#9;num_investigated++;&#10;&#9;&#9;Game_SetWorldState(&#34;OBELISKS&#34;, &#34;num_investigated&#34;, num_investigated.tostring());&#10;&#9;}&#10;&#10;&#9;if (num_investigated == 1)&#10;&#9;{&#10;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;I don&#39;t remember seeing these obelisks ever before on the island.&#34;));&#10;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;I should inspect more of these. [EMOJI=thinking face]&#34;));&#10;&#9;}&#10;&#9;else if (num_investigated == 2)&#10;&#9;{&#10;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;This is interesting. I think I need to somehow power up these obelisks.&#34;));&#10;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;I should inspect one more for additional clues. [EMOJI=detective]&#34;));&#10;&#9;}&#10;&#9;else if (num_investigated == 3)&#10;&#9;{&#10;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;I think I know how to use these now. I should prepare fighting for my life though.&#34;));&#10;&#9;}&#10;}"
+        interaction_2_trigger="PRESS_BUTTON"
+        interaction_2_controller_button="USE"
+        interaction_2_text="Inspect"
+        interaction_2_radius="100"
+      interaction_3_id="quest_start"
+        interaction_3_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local quest_id = &#34;quests/obelisk-intro.nut&#34;;&#10;&#10;&#9;if (!(Game_IsQuestCurrent(quest_id) &#38;&#38; Game_IsQuestCompleted(quest_id)))&#10;&#9;{&#10;&#9;&#9;Game_ShowQuestStartDialog(quest_id, true);&#10;&#9;}&#10;}"
+        interaction_3_trigger="ENTER_RADIUS"
+        interaction_3_radius="120"
+      interaction_4_id="attune"
+        interaction_4_disable_after_interaction="0"
+        interaction_4_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;return StageObject_GetKeyValue(so_self, &#34;completed&#34;, false);&#10;}"
+        interaction_4_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;//Game_SaveGame();&#10;&#9;UI_SendScreenMessage(&#34;Obelisk&#34;, &#34;obelisk_id&#34;, StageObject_GetId(so_self));&#10;&#9;UI_SendScreenMessage(&#34;Obelisk&#34;, &#34;obelisk_so&#34;, so_self.tostring());&#10;&#9;UI_PushScreen(&#34;Obelisk&#34;);&#10;}"
+        interaction_4_trigger="PRESS_BUTTON"
+        interaction_4_controller_button="USE"
+      interaction_5_id="activate"
+        interaction_5_localize="0"
+        interaction_5_disable_after_interaction="0"
+        interaction_5_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local quest_id = &#34;quests/obelisk-intro.nut&#34;;&#10;&#9;Game_SendQuestPhaseCommandWord(quest_id, &#34;ACTIVATE&#34;, &#34;activate&#34;);&#10;&#9;if (!Actor_IsAnimationPlaying(so_self, &#34;activated&#34;))&#10;&#9;&#9;Actor_PlayAnimation(so_self, &#34;activate&#34;);&#10;&#9;&#9;Actor_PlayAnimation(so_self, &#34;activated&#34;);&#10;}"
+        interaction_5_trigger="NONE"
+      interaction_6_id="power"
+        interaction_6_localize="0"
+        interaction_6_disable_after_interaction="0"
+        interaction_6_external_script="scripts/interactions/arena-obelisk-hold-down-button.nut"
+        interaction_6_trigger="HOLD_DOWN_BUTTON"
+        interaction_6_trigger_parameter_float="1"
+        interaction_6_controller_button="USE"
+        interaction_6_text="Power"
+      interaction_7_id="init"
+        interaction_7_localize="0"
+        interaction_7_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local cost = StageObject_GetKeyValue(so_self, &#34;cost&#34;);&#10;&#9;local text = Game_GetConvertedString(&#34;1x[MATERIAL_ICON=&#34;+cost+&#34;][MATERIAL_NAME=&#34;+cost+&#34;]&#34;);&#10;&#9;Actor_SetInteractionText(so_self, &#34;power&#34;, text);&#10;&#10;&#9;local state = Game_GetPlayerState(&#34;OBELISK&#34;);&#10;&#9;if (state == null)&#10;&#9;&#9;return;&#10;&#9;if (state == StageObject_GetId(so_self))&#10;&#9;{&#10;&#9;&#9;if (!Actor_IsAnimationPlaying(so_self, &#34;activated&#34;))&#10;&#9;&#9;&#9;Actor_PlayAnimation(so_self, &#34;activated&#34;);&#10;&#9;}&#10;}"
+        interaction_7_trigger="ON_GAME_START"
+      interaction_8_id="deactivate"
+        interaction_8_localize="0"
+        interaction_8_disable_after_interaction="0"
+        interaction_8_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;if (Actor_IsAnimationPlaying(so_self, &#34;activated&#34;))&#10;&#9;&#9;Actor_PlayAnimation(so_self, &#34;deactivate&#34;);&#10;&#9;&#9;Actor_StopAnimationWithFade(so_self, &#34;activated&#34;, 0.5);&#10;}"
+        interaction_8_trigger="NONE"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="BOX" />
+    <node id="size_x" value="57.8" />
+    <node id="size_y" value="57.8" />
+    <node id="size_z" value="155.9" />
+    <node id="offset_z" value="-77.9" />
+  </array>
+
+</root>

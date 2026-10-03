@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="COLLECTIBLE,MATERIAL" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SOLID,SEETHROUGH,AFFECTED_BY_GRAVITY,DELETE_ACTOR_AFTER_DEATH,CAN_STAND_ON_ACTORS" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="1300" />
+    <node id="max_move_speed" value="60" />
+    <node id="dampening_factor_on_ground" value="10" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.15" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="220" />
+    <node id="friend_avoidance_radius" value="40" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1000" />
+    <node id="damage_type_accept_mask" value="" />
+    <node id="friend_group" value="COLLECTIBLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES">
+    <node id="collectible_type" type="STRING" value="MATERIAL" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleCollectible">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death" category="DEATH" animation_controller="ScaleDown" forced_animation_length_in_seconds="0.10" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="Material" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="1.47" />
+    <node id="shadow_alpha" value="0.16" />
+    <node id="render_scale" value="0.5" />
+    <node id="allow_static_caching" value="false" />
+    <node id="initial_bitmap_a" value="dysmantle/materials/icon-bricks.png" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_ark_progress_on_death_start"
+        interaction_0_trigger="ON_DEATH_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-ark-progress-on-death-start.nut"
+      interaction_1_id="mod_grab_material_on_press_button_use_material"
+        interaction_1_trigger="PRESS_BUTTON"
+        interaction_1_controller_button="USE"
+        interaction_1_radius="1"
+        interaction_1_attach_offset="0,0,-45"
+        interaction_1_external_script="scripts/interactions/mods/mod-grab-material-press-button.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="SPHERE" />
+    <node id="radius" value="12.7" />
+  </array>
+
+</root>

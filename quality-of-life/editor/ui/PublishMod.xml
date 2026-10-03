@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="RECTANGLE"
+     inherit="EditorFaderRectangle"
+     color="0,0,0,0.55"
+     scale_type="RELATIVE_TO_SCREEN_SIZE"
+    />
+
+    <node
+     name="panel"
+     type="NINEPATCH"
+     inherit="EditorNinePatchRoundedPanel"
+     position.x="0.499145"
+     position.y="0.498799"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="667"
+     ninepatch.rectangle_height="509"
+    />
+
+    <node
+     name="PreviewPanel2"
+     type="NINEPATCH"
+     inherit="EditorNinePatchBevel"
+     parent="panel"
+     position.x="-0.471987"
+     position.y="-0.38861"
+     ninepatch.rectangle_width="630"
+     ninepatch.rectangle_height="230"
+    />
+
+    <node
+     name="PreviewPanel4"
+     type="NINEPATCH"
+     inherit="EditorNinePatchBevel"
+     parent="panel"
+     position.x="-0.174387"
+     position.y="0.274576"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="395"
+     ninepatch.rectangle_height="191"
+    />
+
+    <node
+     name="touchfield_1"
+     type="TOUCHFIELD"
+     inherit="DefaultTouchField"
+     parent="PreviewPanel2"
+     position.x="0.241645"
+     position.y="0.0148816"
+     touchfield.automatic_content_width="true"
+     touchfield.automatic_content_height="true"
+     touchfield.area_width="465.778"
+     touchfield.area_height="220"
+     touchfield.clip_children="true"
+     touchfield.axis_x_enabled="false"
+    />
+
+    <node
+     name="aligner_2"
+     type="ALIGNER"
+     inherit="DefaultAligner"
+     parent="PreviewPanel4"
+     position.x="-0.453309"
+     position.y="0.0729715"
+     aligner.area_width="53.3334"
+     aligner.area_height="83.5556"
+    />
+
+    <node
+     name="aligner_3"
+     type="ALIGNER"
+     inherit="DefaultAligner"
+     parent="touchfield_1"
+     position.x="0.19945"
+     position.y="0.378773"
+     aligner.area_width="94.2222"
+     aligner.area_height="145.185"
+    />
+
+    <node
+     name="Title"
+     type="TEXTBOX"
+     inherit="EditorMediumTextbox"
+     parent="panel"
+     position.x="-0.472294"
+     position.y="-0.470325"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="246"
+     textbox.text="Publish Mod"
+     textbox.text_align="VCENTER"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node
+     name="Title10"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="aligner_3"
+     align="RIGHT,VCENTER"
+     textbox.text="Version:"
+     color="1,1,1,0.75"
+    />
+
+    <node
+     name="Title7"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="aligner_3"
+     align="RIGHT,VCENTER"
+     textbox.text="Folder:"
+     color="1,1,1,0.75"
+    />
+
+    <node
+     name="Title8"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="aligner_3"
+     align="RIGHT,VCENTER"
+     textbox.text="Id:"
+     color="1,1,1,0.75"
+    />
+
+    <node
+     name="Title9"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="aligner_3"
+     align="RIGHT,VCENTER"
+     textbox.text="Validation:"
+     color="1,1,1,0.75"
+    />
+
+    <node
+     name="Title3"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="aligner_3"
+     align="RIGHT,VCENTER"
+     textbox.text="Title:"
+     color="1,1,1,0.75"
+    />
+
+    <node
+     name="Title6"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="aligner_3"
+     align="RIGHT,VCENTER"
+     textbox.text="Tags:"
+     color="1,1,1,0.75"
+    />
+
+    <node
+     name="Title4"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="aligner_3"
+     align="RIGHT,VCENTER"
+     textbox.text="Author:"
+     color="1,1,1,0.75"
+    />
+
+    <node
+     name="Title5"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="aligner_3"
+     align="RIGHT,VCENTER"
+     textbox.text="Description:"
+     color="1,1,1,0.75"
+    />
+
+    <node
+     name="ModTitle"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="Title3"
+     position.x="0.2043"
+     position.y="-0.0460892"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+     color="1,1,1,0.5"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="ModFolder"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="Title7"
+     position.x="0.130467"
+     position.y="-0.020444"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+    />
+
+    <node
+     name="ModId"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="Title8"
+     position.x="0.39645"
+     position.y="0.0295554"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node
+     name="ModAuthor"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="Title4"
+     position.x="0.150325"
+     position.y="0.00620517"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+     color="1,1,1,0.5"
+    />
+
+    <node
+     name="ModTags"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="Title6"
+     position.x="0.231438"
+     position.y="0.00391758"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+     color="1,1,1,0.5"
+    />
+
+    <node
+     name="ModDesc"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="Title5"
+     position.x="0.0964901"
+     position.y="-0.462042"
+     save_dynamic_content_to_ui_xml="false"
+     textbox.textbox_width="356"
+     color="1,1,1,0.5"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="ModValidation"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="Title9"
+     position.x="0.0964901"
+     position.y="-0.462042"
+     save_dynamic_content_to_ui_xml="false"
+     textbox.textbox_width="356"
+    />
+
+    <node
+     name="ModVersion"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="Title10"
+     position.x="0.0964901"
+     position.y="-0.462042"
+     save_dynamic_content_to_ui_xml="false"
+     textbox.textbox_width="356"
+    />
+
+    <node
+     name="ModDesc2"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="PreviewPanel4"
+     position.x="-0.310547"
+     position.y="-0.397448"
+     align="VCENTER,HCENTER"
+     textbox.text="Publishing Settings"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="aligner_1"
+     type="ALIGNER"
+     inherit="DefaultAligner"
+     parent="panel"
+     position.x="0.303022"
+     position.y="0.276071"
+     aligner.area_width="207.955"
+     aligner.area_height="184.103"
+    />
+
+    <node
+     name="Refresh"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_1"
+     button.text="Reload from HDD"
+     button.ninepatch_width="140"
+    />
+
+    <node
+     name="OpenModFolder"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_1"
+     button.text="Open Mod Folder..."
+     button.ninepatch_width="140"
+    />
+
+    <node
+     name="Validate"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_1"
+     button.text="Validate Mod"
+     button.ninepatch_width="140"
+    />
+
+    <node
+     name="Publish"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_1"
+     button.text="Publish"
+     button.ninepatch_width="140"
+    />
+
+    <node
+     name="Back"
+     type="BUTTON"
+     inherit="EditorCloseButton"
+     parent="panel"
+     position.x="0.457726"
+     position.y="-0.443091"
+    />
+
+    <node
+     name="ModPreview"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="PreviewPanel2"
+     position.x="0.129344"
+     position.y="0.358792"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER,HCENTER"
+     image.force_width="132"
+     image.force_height="132"
+    />
+
+    <node
+     name="Visibility"
+     type="DROPDOWNLIST"
+     inherit="EditorDropDownList"
+     parent="aligner_2"
+     align="VCENTER"
+     drop_down_list.lines="PUBLIC,Public;FRIENDS_ONLY,Friends Only;PRIVATE,Private"
+    />
+
+    <node
+     name="SubscribeAfterUpload"
+     type="CHECKBOX"
+     inherit="EditorCheckbox"
+     parent="aligner_2"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.text="Subscribe the mod"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="ModDesc4"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="Visibility"
+     position.x="0.0113356"
+     position.y="-1.14753"
+     textbox.text="Visibility:"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node name="mod_mods_ui"
+      type="SCRIPTABLE" inherit="DefaultScriptable"
+      scriptable.script_file="editor/ui/scripts/mods/mod-mods-ui-publishmod.nut"
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

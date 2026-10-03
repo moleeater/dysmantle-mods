@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="SHADERFILTER"
+     inherit="DefaultShaderFilter"
+    />
+
+    <node
+     name="panel"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.498303"
+     position.y="0.474798"
+     scale="0.972658"
+     ui_scale_modifier="0.25"
+     align="VCENTER,HCENTER"
+     marker.area_width="656.903"
+     marker.area_height="333.677"
+    />
+
+    <node
+     name="splash_0"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="panel"
+     position.x="-0.138575"
+     position.y="-0.309358"
+     position.z="-0.0193349"
+     scale="1.29415"
+     align="VCENTER,HCENTER"
+     image.bitmap="ui/gfx/notification-bg-triangle.png"
+    />
+
+    <node
+     name="splash_2"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="panel"
+     position.x="0.0121646"
+     position.y="0.223511"
+     angle.z="-2.21212"
+     scale="1.29415"
+     align="VCENTER,HCENTER"
+     image.bitmap="ui/gfx/notification-bg-triangle.png"
+    />
+
+    <node
+     name="splash_1"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="panel"
+     position.x="0.21084"
+     position.y="-0.383604"
+     position.z="0.0386698"
+     angle.z="0.669738"
+     scale="1.29415"
+     align="VCENTER,HCENTER"
+     image.bitmap="ui/gfx/notification-bg-triangle.png"
+    />
+
+    <node
+     name="image_1"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="panel"
+     position.x="0.0400329"
+     position.y="0.438902"
+     position.z="-0.0193349"
+     align="HCENTER"
+     image.bitmap="ui/gfx/notification-bg-wide.png"
+    />
+
+    <node
+     name="image_2"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="panel"
+     position.x="0.0150997"
+     position.y="0.933876"
+     position.z="0.0116009"
+     angle.z="3.09987"
+     align="HCENTER"
+     image.bitmap="ui/gfx/notification-bg-wide.png"
+     image.force_width="757"
+     image.force_height="100"
+    />
+
+    <node
+     name="image_3"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="panel"
+     position.x="0.0445699"
+     position.y="0.680047"
+     angle.z="3.09987"
+     align="VCENTER,HCENTER"
+     image.bitmap="ui/gfx/notification-bg-wide.png"
+     image.force_width="397"
+     image.force_height="103"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node
+     name="Title"
+     type="TEXTBOX"
+     inherit="LargeTextbox"
+     parent="panel"
+     position.x="0.059536"
+     position.y="0.568446"
+     position.z="-0.0252984"
+     scale="0.658156"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="1300"
+     textbox.text_align="HCENTER"
+     textbox.text="Rocket Launcher Turret"
+    />
+
+    <node
+     name="Desc"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="panel"
+     position.x="0.0561589"
+     position.y="0.639714"
+     position.z="-0.0193349"
+     align="HCENTER"
+     textbox.textbox_width="689"
+     textbox.text="Rocket Launcher Turret"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="Image"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="panel"
+     position.x="0.0266886"
+     position.y="0.491106"
+     position.z="-0.0580046"
+     scale="1.00484"
+     align="BOTTOM,HCENTER"
+     image.bitmap="actors/enemies/turret-rocket-launcher.png"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

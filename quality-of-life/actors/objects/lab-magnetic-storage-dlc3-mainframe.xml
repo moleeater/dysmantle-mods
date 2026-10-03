@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="Laboratory Magnetic Storage" localize="true" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="tags" value="MOD_OCPD_MINIMAP,MOD_ONE_HIT_OBJECTS" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE,PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="METAL" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="50" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="150" />
+    <node id="damage_type_accept_mask" value="UNSPECIFIED,BLUNT,FIRE,COLD,POISON,ELECTRIC,EXPLOSIVE,SELF_DESTRUCT,HIT_GROUND,PROJECTILE,HEAT" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="0.71" b="0.42" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="uploaded" type="BOOLEAN" flags="PERSISTENT,SAVE_STATE" value="false" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="DISMANTLABLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleObstacleAnimated">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death"
+     category="DEATH"
+     animation_controller="PhysicsMaterialBasedDeath"
+     forced_animation_length_in_seconds="0.20"
+     force_update_visual_bounds="true"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/puff-ground.xml"
+     event_1_trigger_time="0"
+     event_1_id="id1"
+     event_1_effect="effects/chair-break.xml"
+    />
+
+    <node id="upload"
+     animation_controller="ScaleDown"
+     forced_animation_length_in_seconds="0.20"
+     force_update_visual_bounds="true"
+     event_0_trigger_time="0.00264"
+     event_0_id="id0"
+     event_0_effect="effects/electric-discharge-large.xml"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|1.1,1.5|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/mana-rift-electric-discharge|Q|}}"
+     event_0_spawn_effect_scale="0.5"
+     event_0_spawn_effect_offset_z="-68.00"
+     event_1_trigger_time="0.0309"
+     event_1_id="id1"
+     event_1_effect="effects/electric-discharge-large.xml"
+     event_1_spawn_effect_scale="0.5"
+     event_1_spawn_effect_offset_z="-34.00"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="bm_shadow" value="shadows/shadow-rectangle-short.png" />
+    <node id="shadow_angle" value="90" />
+    <node id="shadow_scale" value="2" />
+    <node id="shadow_alpha" value="0.4" />
+    <node id="model" value="models/objects/lab-magnetic-storage.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+    <node interaction_0_id="upload"
+     interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;StageObject_SetKeyValueBoolean(so_self, &#34;uploaded&#34;, true);&#10;&#9;Actor_PlayAnimation(so_self, &#34;upload&#34;);&#10;&#9;//Actor_SetActorFlag(so_self, &#34;ONLY_VISIBLE_IN_EDITOR&#34;, true);&#10;&#9;Actor_SetActorFlag(so_self, &#34;SOLID&#34;, false);&#10;}"
+     interaction_0_trigger="NONE"
+     interaction_1_id="init"
+     interaction_1_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;if (StageObject_GetKeyValue(so_self, &#34;uploaded&#34;, false))&#10;&#9;&#9;StageObject_SetEnabled(so_self, false);&#10;}"
+     interaction_1_trigger="ON_GAME_START"
+    />
+
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="BOX" />
+    <node id="size_x" value="36.0" />
+    <node id="size_y" value="42.0" />
+    <node id="size_z" value="84.0" />
+    <node id="offset_z" value="-42.0" />
+  </array>
+</root>

@@ -1,0 +1,2590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+<!--
+See writing guidelines in Google Docs.
+-->
+
+  <array id="RECIPES">
+
+<!-- Upgradeable Core -->
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node category="CRAFTING" id="BACKPACK"
+      tags="AVAILABLE_AT_START,CRAFTED_AT_START"
+      icon="dysmantle/gear/backpack.png"
+      display_name="Backpack"
+      description="Carries materials and items. Upgrading it increases material carry capacity."
+      requires_materials="10xPLANTS,8xSCRAP_WOOD"
+      upgrade_1_materials ="10xPLANTS,4xSCRAP_FABRIC"                upgrade_1_tags ="ADD_NOTCHES,ADD_SLOT"
+      upgrade_2_materials ="20xPLANTS,20xSCRAP_WOOD,14xSCRAP_FABRIC" upgrade_2_tags ="ADD_NOTCHES,ADD_SLOT"
+      upgrade_3_materials ="5xHIDE,20xSCRAP_FABRIC,25xPLASTICS"      upgrade_3_tags ="ADD_NOTCHES,ADD_SLOT"
+      upgrade_4_materials ="6xHIDE,20xCERAMICS,5xIRON"               upgrade_4_tags ="ADD_NOTCHES,ADD_SLOT"
+      upgrade_5_materials ="30xFABRIC,20xRUBBER,15xIRON"             upgrade_5_tags ="ADD_SLOT"
+      upgrade_6_materials ="40xFABRIC,8xSTEEL,5xELECTRONICS"         upgrade_6_tags ="ADD_SLOT"
+      upgrade_7_materials ="11xNIGHT_MANA"
+      upgrade_8_materials ="1xFISH_A"                                upgrade_8_tags ="ADD_NOTCHES"
+      upgrade_9_materials ="1xFISH_A"                                upgrade_9_tags ="ADD_NOTCHES"
+      upgrade_10_materials="1xFISH_A"                                upgrade_10_tags="ADD_NOTCHES"
+      upgrade_11_materials="1xFISH_A"                                upgrade_11_tags="ADD_NOTCHES"
+      upgrade_12_materials="1xFISH_A"                                upgrade_12_tags="ADD_NOTCHES"
+      upgrade_13_materials="1xFISH_A"                                upgrade_13_tags="ADD_NOTCHES"
+      upgrade_14_materials="1xFISH_A"                                upgrade_14_tags="ADD_NOTCHES"
+      upgrade_15_materials="1xFISH_A"                                upgrade_15_tags="ADD_NOTCHES"
+      upgrade_16_materials="1xFISH_A"                                upgrade_16_tags="ADD_NOTCHES"
+      upgrade_17_materials="1xFISH_A"                                upgrade_17_tags="ADD_NOTCHES"
+      upgrade_18_materials="1xFISH_A"                                upgrade_18_tags="ADD_NOTCHES"
+      upgrade_19_materials="1xFISH_A"                                upgrade_19_tags="ADD_NOTCHES"
+      upgrade_20_materials="1xFISH_A"                                upgrade_20_tags="ADD_NOTCHES"
+      upgrade_21_materials="1xFISH_A"                                upgrade_21_tags="ADD_NOTCHES"
+      upgrade_22_materials="1xFISH_A"                                upgrade_22_tags="ADD_NOTCHES"
+      upgrade_23_materials="1xFISH_A"                                upgrade_23_tags="ADD_NOTCHES"
+      upgrade_24_materials="1xFISH_A"                                upgrade_24_tags="ADD_NOTCHES"
+      upgrade_25_materials="1xFISH_A"                                upgrade_25_tags="ADD_NOTCHES"
+      upgrade_26_materials="1xFISH_A"                                upgrade_26_tags="ADD_NOTCHES"
+      upgrade_27_materials="1xFISH_A"                                upgrade_27_tags="ADD_NOTCHES"
+      upgrade_28_materials="1xFISH_A"                                upgrade_28_tags="ADD_NOTCHES"
+      upgrade_29_materials="1xFISH_A"                                upgrade_29_tags="ADD_NOTCHES"
+      upgrade_30_materials="1xFISH_A"                                upgrade_30_tags="ADD_NOTCHES"
+      upgrade_31_materials="1xFISH_A"                                upgrade_31_tags="ADD_NOTCHES"
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<!-- Headgear (by level requirement/obtain order) -->
+
+    <node id="BASEBALL_CAP"
+     category="CRAFTING"
+     level_requirement="3"
+     requires_materials="10xSCRAP_FABRIC,15xPLASTICS"
+     output_item_id="items/headgears/baseball-cap.nut"
+     upgrade_1_materials="20xSCRAP_FABRIC,10xRUBBER"
+     upgrade_2_materials="15xFABRIC,4xSTEEL"
+     upgrade_3_materials="20xFABRIC,2xTITANIUM"
+    />
+
+    <node id="COWBOY_HAT" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     category="CRAFTING"
+     requires_materials="4xHIDE,15xSCRAP_FABRIC"
+     output_item_id="items/headgears/cowboy-hat.nut"
+     upgrade_1_materials="8xHIDE,8xRUBBER"
+     upgrade_2_materials="3xSTEEL,15xFABRIC"
+     upgrade_3_materials="6xLUMBER,16xHIDE"
+    />
+
+    <node id="FUR_HAT" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     category="CRAFTING"
+     requires_materials="8xHIDE,16xPLASTICS"
+     output_item_id="items/headgears/fur-hat.nut"
+     upgrade_1_materials="15xSCRAP_FABRIC,10xRUBBER"
+     upgrade_2_materials="10xFABRIC,14xIRON"
+     upgrade_3_materials="35xMANA_BEAD,3xSTEEL"
+    />
+
+    <node id="BOONEY_HAT"
+     category="CRAFTING"
+     level_requirement="12"
+     requires_materials="15xSCRAP_FABRIC,30xPLANTS"
+     output_item_id="items/headgears/booney-hat.nut"
+     upgrade_1_materials="4xHIDE,15xPLASTICS"
+     upgrade_2_materials="30xMANA_BEAD,20xBONE"
+     upgrade_3_materials="8xLUMBER,24xFABRIC"
+    />
+
+    <!-- <node id="PLAGUE_MASK"
+     category="CRAFTING" tags="ONLY_SHOW_AFTER_UNLOCKED,HIDE_IN_COLLECTION"
+     level_requirement="999"
+     requires_materials="5xFABRIC,20xSCRAP_FABRIC"
+     output_item_id="items/headgears/plague-mask.nut"
+    /> -->
+
+    <node id="HARD_HAT"
+     category="CRAFTING"
+     level_requirement="23"
+     requires_materials="15xCERAMICS,25xPLASTICS,3xSTEEL"
+     upgrade_1_materials="25xCERAMICS,6xSTEEL"
+     upgrade_2_materials="16xRUBBER,15xFABRIC"
+     upgrade_3_materials="3xTITANIUM,35xMANA_BEAD"
+     output_item_id="items/headgears/hard-hat.nut"
+    />
+
+    <node id="DESERT_HELMET"
+     category="CRAFTING"
+     tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     level_requirement="26"
+     requires_materials="25xFABRIC,6xSTEEL"
+     output_item_id="items/headgears/desert-helmet.nut"
+     upgrade_1_materials="20xCERAMICS,30xPLASTICS"
+     upgrade_2_materials="50xMANA_BEAD,30xCACTUS"
+     upgrade_3_materials="5xTITANIUM,10xLUMBER"
+    />
+
+    <node id="MOTORCYCLE_HELMET"
+     category="CRAFTING"
+     level_requirement="30"
+     requires_materials="25xPLASTICS,10xSTEEL"
+     output_item_id="items/headgears/motorcycle-helmet.nut"
+     upgrade_1_materials="25xCERAMICS,12xHIDE"
+     upgrade_2_materials="16xRUBBER,40xMANA_BEAD"
+     upgrade_3_materials="6xTITANIUM,30xBONE"
+    />
+
+    <node id="WAR_HELMET"
+     category="CRAFTING"
+     level_requirement="32"
+     requires_materials="30xIRON,25xCERAMICS"
+     output_item_id="items/headgears/war-helmet.nut"
+     upgrade_1_materials="8xSTEEL,12xHIDE"
+     upgrade_2_materials="3xTITANIUM,25xFABRIC"
+     upgrade_3_materials="40xMANA_BEAD,12xELECTRONICS"
+    />
+
+    <node id="GAS_MASK"
+     category="CRAFTING" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     requires_materials="15xPLASTICS,15xRUBBER,20xMANA_BEAD"
+     output_item_id="items/headgears/gas-mask.nut"
+    />
+
+    <node id="CROWN"
+     category="CRAFTING" tags="ONLY_SHOW_AFTER_UNLOCKED,HIDE_IN_COLLECTION"
+     level_requirement="1"
+     requires_materials="999xMANA_SHARD"
+     output_item_id="items/headgears/crown.nut"
+    />
+
+<!-- Outfits (by level requirement) -->
+
+    <node id="OUTFIT_JEANS_AND_JERSEY"
+     category="CRAFTING" tags="AVAILABLE_AT_START,CRAFTED_AT_START"
+     requires_materials="5xFABRIC"
+     output_item_id="items/outfits/jeans-and-jersey.nut"
+    />
+
+    <node id="OUTFIT_OUTDOORSMAN"
+     category="CRAFTING"
+     level_requirement="7"
+     requires_materials="6xFABRIC,15xPLASTICS,5xRUBBER"
+     output_item_id="items/outfits/outdoorsman.nut"
+    />
+
+    <node id="OUTFIT_LUMBERJACK"
+     category="CRAFTING"
+     level_requirement="14"
+     requires_materials="20xFABRIC,25xWOOD,50xPLANTS"
+     output_item_id="items/outfits/lumberjack.nut"
+    />
+
+    <node id="OUTFIT_ARMOR-LIGHT"
+     category="CRAFTING"
+     level_requirement="17"
+     requires_materials="12xHIDE,15xIRON,15xCERAMICS"
+     output_item_id="items/outfits/armor-light.nut"
+    />
+
+    <node id="OUTFIT_SAFARI"
+     category="CRAFTING"
+     level_requirement="20"
+     requires_materials="25xFABRIC,15xBONE,20xCACTUS"
+     output_item_id="items/outfits/safari.nut"
+    />
+
+    <node id="OUTFIT_WINTER_COAT"
+     category="CRAFTING"
+     level_requirement="20"
+     requires_materials="20xFABRIC,8xHIDE,12xRUBBER"
+     output_item_id="items/outfits/winter-coat.nut"
+    />
+
+    <node id="OUTFIT_SOLDIER"
+     category="CRAFTING"
+     level_requirement="35"
+     requires_materials="30xFABRIC,8xTITANIUM,8xHIDE"
+     output_item_id="items/outfits/soldier.nut"
+    />
+
+    <node id="OUTFIT_GOPNIK"
+     category="CRAFTING"    tags="HIDE_IN_COLLECTION"
+     level_requirement="999"
+     requires_materials="10xFABRIC,25xPLANTS"
+     output_item_id="items/outfits/gopnik.nut"
+    />
+
+<!-- Weapons -->
+
+<!-- BLUNT WEAPONS -->
+
+    <node id="CROWBAR"
+     category="CRAFTING" tags="AVAILABLE_AT_START,CRAFTED_AT_START"
+     requires_materials="10xSCRAP_METAL,3xRUBBER"
+     output_item_id="items/tools/crowbar.nut"
+     upgrade_1_materials="2xSCRAP_METAL,5xSCRAP_WOOD"
+     upgrade_2_materials="15xSCRAP_METAL,15xSCRAP_WOOD"
+     upgrade_3_materials="25xSCRAP_METAL,12xCERAMICS"
+     upgrade_4_materials="25xCERAMICS, 8xRUBBER"
+     upgrade_5_materials="12xRUBBER,6xFABRIC"
+     _upgrade_6_materials="18xIRON,8xSCRAP_ELECTRONICS"
+     _upgrade_7_materials="8xSTEEL,12xRUBBER"
+     _upgrade_8_materials="12xSTEEL,12xCERAMICS"
+     _upgrade_9_materials="8xELECTRONICS,18xSTEEL"
+    />
+
+    <node id="BASEBALL_BAT"
+     category="CRAFTING" tags="EXIT_FABRICATOR_AFTER_CRAFTING,SHOW_NEW_TOOL_ANIMAATION"
+     level_requirement="14"
+     requires_materials="3xHIDE,6xWOOD"
+     output_item_id="items/tools/baseball-bat.nut"
+     upgrade_1_materials="10xWOOD,20xPLASTICS"
+     upgrade_2_materials="8xIRON,20xCERAMICS"
+     upgrade_3_materials="16xIRON,12xRUBBER"
+     upgrade_4_materials="25xIRON,6xELECTRONICS"
+     upgrade_5_materials="15xSTONE,15xELECTRONICS"
+    />
+
+    <node id="WRENCH"
+     category="CRAFTING" tags="EXIT_FABRICATOR_AFTER_CRAFTING,SHOW_NEW_TOOL_ANIMAATION"
+     level_requirement="21"
+     requires_materials="8xIRON,6xRUBBER"
+     output_item_id="items/tools/wrench.nut"
+     upgrade_1_materials="14xIRON,12xSCRAP_ELECTRONICS"
+     upgrade_2_materials="8xSTEEL,25xCERAMICS"
+     upgrade_3_materials="12xSTEEL,12xRUBBER"
+     upgrade_4_materials="1xTITANIUM,10xELECTRONICS"
+     upgrade_5_materials="4xTITANIUM,15xELECTRONICS"
+    />
+
+    <node id="SLEDGEHAMMER"
+     category="CRAFTING" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     level_requirement="25"
+     requires_materials="8xSTONE,4xLUMBER"
+     output_item_id="items/tools/sledgehammer.nut"
+     upgrade_1_materials="8xLUMBER,40xCERAMICS"
+     upgrade_2_materials="16xSTEEL,8xRUBBER"
+     upgrade_3_materials="1xTITANIUM,9xSCRAP_ELECTRONICS"
+     upgrade_4_materials="3xELECTRONICS,40xMANA_BEAD"
+     upgrade_5_materials="5xTITANIUM,1xMANA_SHARD"
+     _upgrade_6_materials="8xFABRIC,5xSTEEL"
+     _upgrade_7_materials="9xSCRAP_ELECTRONICS,8xSTEEL"
+     _upgrade_8_materials="3xELECTRONICS,12xSTEEL"
+     _upgrade_9_materials="10xCERAMICS,16xSTEEL"
+     _upgrade_10_materials="15xCERAMICS,10xRUBBER,18xSTEEL"
+    />
+
+    <node id="RIOT_SHIELD"
+     category="CRAFTING" tags="EXIT_FABRICATOR_AFTER_CRAFTING,SHOW_NEW_TOOL_ANIMAATION,INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     level_requirement="20"
+     requires_materials="15xSTEEL,20xRUBBER,8xLUMBER"
+     output_item_id="items/tools/riot-shield.nut"
+     upgrade_1_materials="30xCERAMICS,20xFABRIC,30xPLASTICS"
+     upgrade_2_materials="20xSTEEL,10xSCRAP_ELECTRONICS"
+     upgrade_3_materials="12xLUMBER,40xPLASTICS"
+     upgrade_4_materials="5xTITANIUM,25xMANA_BEAD"
+     upgrade_5_materials="1xMANA_SHARD,9xELECTRONICS"
+     _upgrade_6_materials="8xFABRIC,5xSTEEL"
+     _upgrade_7_materials="9xSCRAP_ELECTRONICS,8xSTEEL"
+     _upgrade_8_materials="3xELECTRONICS,12xSTEEL"
+     _upgrade_9_materials="10xCERAMICS,16xSTEEL"
+     _upgrade_10_materials="15xCERAMICS,10xRUBBER,18xSTEEL"
+    />
+
+    <node id="POWER_FIST"
+     category="CRAFTING" tags="EXIT_FABRICATOR_AFTER_CRAFTING,SHOW_NEW_TOOL_ANIMAATION,HIDE_IN_INVENT_SCREEN"
+     level_requirement="33"
+     requires_materials="2xTITANIUM,30xCERAMICS,30xMANA_BEAD"
+     output_item_id="items/tools/power-fist.nut"
+     upgrade_1_materials="4xTITANIUM,25xSTONE,60xMANA_BEAD"
+     upgrade_2_materials="6xTITANIUM,12xLUMBER,2xMANA_CHUNK"
+     upgrade_3_materials="8xTITANIUM,10xELECTRONICS,3xMANA_CHUNK"
+     upgrade_4_materials="10xTITANIUM,20xBRICKS,1xMANA_SHARD"
+     upgrade_5_materials="12xTITANIUM,20xLUMBER,2xMANA_SHARD"
+    />
+
+<!-- SLASHING WEAPONS -->
+
+    <node id="SICKLE"
+     category="CRAFTING" tags="EXIT_FABRICATOR_AFTER_CRAFTING,SHOW_NEW_TOOL_ANIMAATION"
+     level_requirement="5"
+     requires_materials="15xCERAMICS,25xSCRAP_WOOD"
+     output_item_id="items/tools/sickle.nut"
+     upgrade_1_materials="25xSCRAP_METAL, 20xSCRAP_FABRIC"
+     upgrade_2_materials="20xPLASTICS, 6xFABRIC"
+     upgrade_3_materials="8xIRON,20xSCRAP_WOOD"
+     upgrade_4_materials="8xIRON,8xRUBBER"
+     upgrade_5_materials="10xWOOD,5xSCRAP_ELECTRONICS"
+     _upgrade_6_materials="15xSTEEL,1xTOMB_ORB"
+     _upgrade_7_materials="15xSTEEL,1xTOMB_ORB"
+     _upgrade_8_materials="15xSTEEL,1xTOMB_ORB"
+     _upgrade_9_materials="15xSTEEL,1xTOMB_ORB"
+    />
+
+    <node id="MACHETE"
+     category="CRAFTING" tags="EXIT_FABRICATOR_AFTER_CRAFTING,SHOW_NEW_TOOL_ANIMAATION"
+     level_requirement="11"
+     requires_materials="8xWOOD,6xIRON"
+     output_item_id="items/tools/machete.nut"
+     upgrade_1_materials="10xIRON,20xPLASTICS"
+     upgrade_2_materials="16xWOOD,12xSCRAP_ELECTRONICS"
+     upgrade_3_materials="15xIRON,9xRUBBER"
+     upgrade_4_materials="3xSTONE,9xELECTRONICS"
+     upgrade_5_materials="4xSTEEL,35xCERAMICS"
+     _upgrade_6_materials="15xSTEEL,1xTOMB_ORB"
+     _upgrade_7_materials="15xSTEEL,1xTOMB_ORB"
+     _upgrade_8_materials="15xSTEEL,1xTOMB_ORB"
+     _upgrade_9_materials="15xSTEEL,1xTOMB_ORB"
+     />
+
+    <node id="KATANA"
+     category="CRAFTING" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     level_requirement="20"
+     requires_materials="20xIRON,30xWOOD"
+     output_item_id="items/tools/katana.nut"
+     upgrade_1_materials="25xIRON,15xFABRIC"
+     upgrade_2_materials="10xSTEEL,20xCERAMICS"
+     upgrade_3_materials="15xSTEEL,12xRUBBER"
+     upgrade_4_materials="8xTITANIUM,10xLUMBER"
+     upgrade_5_materials="12xTITANIUM,18xLUMBER"
+     _upgrade_6_materials="15xSTEEL,1xTOMB_ORB"
+     _upgrade_7_materials="15xSTEEL,1xTOMB_ORB"
+     _upgrade_8_materials="15xSTEEL,1xTOMB_ORB"
+     _upgrade_9_materials="15xSTEEL,1xTOMB_ORB"
+    />
+
+    <node id="AXE"
+     category="CRAFTING" tags="EXIT_FABRICATOR_AFTER_CRAFTING,SHOW_NEW_TOOL_ANIMAATION"
+     level_requirement="21"
+     requires_materials="14xWOOD,15xIRON"
+     output_item_id="items/tools/axe.nut"
+     upgrade_1_materials="6xSTEEL,25xCERAMICS"
+     upgrade_2_materials="5xLUMBER,10xRUBBER"
+     upgrade_3_materials="12xSTEEL,25xCERAMICS"
+     upgrade_4_materials="10xLUMBER,10xELECTRONICS"
+     upgrade_5_materials="5xTITANIUM,15xRUBBER"
+     _upgrade_6_materials="8xCERAMICS,6xSTEEL"
+     _upgrade_7_materials="8xRUBBER,12xSTEEL"
+     _upgrade_8_materials="16xRUBBER,6xELECTRONICS"
+     _upgrade_9_materials="12xELECTRONICS,16xSTEEL"
+    />
+
+    <node id="KHOPESH"
+     category="CRAFTING" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     level_requirement="33"
+     requires_materials="10xLUMBER,50xMANA_BEAD"
+     output_item_id="items/tools/khopesh.nut"
+     upgrade_1_materials="60xRUBBER,100xMANA_BEAD"
+     upgrade_2_materials="15xTITANIUM,1xMANA_CHUNK"
+     upgrade_3_materials="40xELECTRONICS,2xMANA_CHUNK"
+     upgrade_4_materials="20xLUMBER,1xMANA_SHARD"
+     upgrade_5_materials="15xLUMBER,15xTITANIUM,1xMANA_SHARD"
+     _upgrade_6_materials="15xSTEEL,1xTOMB_ORB"
+     _upgrade_7_materials="15xSTEEL,1xTOMB_ORB"
+     _upgrade_8_materials="15xSTEEL,1xTOMB_ORB"
+     _upgrade_9_materials="15xSTEEL,1xTOMB_ORB"
+    />
+
+<!-- PIERCING WEAPONS -->
+
+    <node id="CROSSBOW"
+     category="CRAFTING" tags="SHOW_NEW_TOOL_ANIMAATION,ONLY_SHOW_AFTER_UNLOCKED,HIDE_IN_COLLECTION"
+     level_requirement="15"
+     requires_materials="10xSTEEL,10xLUMBER,30xMANA_BEAD"
+     output_item_id="items/tools/crossbow.nut"
+     upgrade_1_materials="15xIRON,20xCERAMICS"
+     upgrade_2_materials="30xWOOD,15xRUBBER"
+     upgrade_3_materials="5xLUMBER,10xSCRAP_ELECTRONICS"
+     upgrade_4_materials="10xSTEEL,30xMANA_BEAD"
+     upgrade_5_materials="4xTITANIUM,2xMANA_SHARD"
+     _upgrade_6_materials="5xSCRAP_ELECTRONICS,14xCERAMICS"
+     _upgrade_7_materials="10xSCRAP_ELECTRONICS,15xRUBBER"
+     _upgrade_8_materials="12xSTEEL,15xWOOD"
+     _upgrade_9_materials="18xSTEEL,10xWOOD,10xRUBBER"
+     _upgrade_10_materials="22xSTEEL,5xELECTRONICS"
+    />
+
+    <node id="HUNTING_RIFLE"
+     category="CRAFTING" tags="EXIT_FABRICATOR_AFTER_CRAFTING,SHOW_NEW_TOOL_ANIMAATION"
+     level_requirement="31"
+     requires_materials="10xSTEEL,10xLUMBER,30xMANA_BEAD"
+     output_item_id="items/tools/hunting-rifle.nut"
+     upgrade_1_materials="15xIRON,20xCERAMICS"
+     upgrade_2_materials="30xWOOD,15xRUBBER"
+     upgrade_3_materials="5xLUMBER,10xSCRAP_ELECTRONICS"
+     upgrade_4_materials="10xSTEEL,30xMANA_BEAD"
+     upgrade_5_materials="5xTITANIUM,2xMANA_SHARD"
+     _upgrade_6_materials="5xSCRAP_ELECTRONICS,14xCERAMICS"
+     _upgrade_7_materials="10xSCRAP_ELECTRONICS,15xRUBBER"
+     _upgrade_8_materials="12xSTEEL,15xWOOD"
+     _upgrade_9_materials="18xSTEEL,10xWOOD,10xRUBBER"
+     _upgrade_10_materials="22xSTEEL,5xELECTRONICS"
+    />
+
+<!-- Tools (by level requirement) -->
+
+    <node id="SHOVEL"
+     category="CRAFTING" tags="SHOW_NEW_TOOL_ANIMAATION"
+     level_requirement="4"
+     requires_materials="15xSCRAP_METAL,10xSCRAP_WOOD,12xPLASTICS"
+     output_item_id="items/tools/shovel.nut"
+     _upgrade_1_materials="5xIRON,8xWOOD"
+     _upgrade_2_materials="5xSTEEL,8xELECTRONICS"
+    />
+
+    <node id="SEED_BAG"
+     category="CRAFTING" tags="SHOW_NEW_TOOL_ANIMAATION"
+     level_requirement="5"
+     requires_materials="30xPLANTS,20xSCRAP_FABRIC,15xSCRAP_WOOD"
+     output_item_id="items/tools/seed-bag.nut"
+     _upgrade_1_materials="6xIRON,7xWOOD,5xHIDE"
+     _upgrade_2_materials="5xSTEEL,5xELECTRONICS,8xFABRIC"
+    />
+
+    <node id="FISHING_ROD"
+     category="CRAFTING" tags="EXIT_FABRICATOR_AFTER_CRAFTING,SHOW_NEW_TOOL_ANIMAATION"
+     level_requirement="6"
+     requires_materials="16xSCRAP_WOOD,8xSCRAP_FABRIC,5xSCRAP_METAL"
+     output_item_id="items/tools/fishing-rod.nut"
+     _upgrade_1_materials="12xSCRAP_FABRIC,8xWOOD"
+     _upgrade_2_materials="16xPLASTICS,8xCERAMICS"
+    />
+
+    <node id="HOE"
+     category="CRAFTING" tags="SHOW_NEW_TOOL_ANIMAATION"
+     level_requirement="8"
+     requires_materials="25xSCRAP_METAL,20xSCRAP_WOOD,10xCERAMICS"
+     output_item_id="items/tools/hoe.nut"
+     _upgrade_1_materials="6xIRON,7xWOOD"
+     _upgrade_2_materials="5xSTEEL,4xELECTRONICS,4xRUBBER"
+    />
+
+    <node id="BUILDER"
+     category="CRAFTING" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     level_requirement="9"
+     requires_materials="5xSCRAP_FABRIC,15xPLASTICS"
+     output_item_id="items/tools/builder.nut"
+     upgrade_1_materials="8xRUBBER,15xCERAMICS"
+     upgrade_2_materials="8xSCRAP_ELECTRONICS, 12xWOOD"
+     upgrade_3_materials="14xFABRIC,12xIRON"
+     upgrade_4_materials="8xSTEEL,20xMANA_BEAD"
+     upgrade_5_materials="1xMANA_SHARD,20xELECTRONICS"
+    />
+
+    <node id="PAINT_BRUSH"
+     category="CRAFTING"
+     level_requirement="12"
+     requires_materials="6xWOOD,4xHIDE,3xIRON"
+     output_item_id="items/tools/paint-brush.nut"
+    />
+
+    <node id="ANIMAL_TREATS"
+     category="CRAFTING" tags="ONLY_SHOW_AFTER_UNLOCKED"
+     requires_materials="16xSCRAP_FABRIC,40xPLANTS"
+     output_item_id="items/tools/animal-treats.nut"
+     upgrade_1_materials="24xSCRAP_FABRIC,35xCARROT"
+     upgrade_2_materials="4xHIDE,30xTOMATO"
+     upgrade_3_materials="8xHIDE,27xLETTUCE"
+     upgrade_4_materials="12xHIDE,24xPOTATO"
+     upgrade_5_materials="10xFABRIC,22xCORN"
+     upgrade_6_materials="12xFABRIC,20xONION"
+     upgrade_7_materials="14xFABRIC,19xWHEAT"
+     upgrade_8_materials="1xMANA_SHARD,18xWHEAT"
+    />
+
+<!-- SPECIALS (by level requirement/type) -->
+
+<!-- Health/Healing -->
+
+    <node id="AMBER_PILLS"
+     category="CRAFTING" tags="AVAILABLE_AT_START,CRAFTED_AT_START"
+     requires_materials="10xCERAMICS,3xMANA_BEAD"
+     output_item_id="items/specials/amber-pills.nut"
+    />
+
+    <node id="BANDAGES"
+     category="CRAFTING" tags=""
+     level_requirement="6"
+     requires_materials="15xSCRAP_FABRIC,25xPLANTS"
+     output_item_id="items/specials/bandages.nut"
+     upgrade_1_materials="10xPLASTICS,18xSCRAP_FABRIC"
+     upgrade_2_materials="10xFABRIC,25xPLASTICS"
+     upgrade_3_materials="15xFABRIC,15xRUBBER"
+    />
+
+    <node id="PAIN_KILLERS"
+     category="CRAFTING" tags=""
+     level_requirement="8"
+     requires_materials="5xMUSHROOM_BROWN,15xPLASTICS"
+     output_item_id="items/specials/pain-killers.nut"
+     upgrade_1_materials="10xMUSHROOM_RED,5xFISH_A"
+     upgrade_2_materials="15xMUSHROOM_WHITE,8xFISH_B"
+     upgrade_3_materials="20xMANA_BEAD,10xFISH_C"
+    />
+
+    <node id="AMBER_MANA_PILLS"
+     category="CRAFTING" tags=""
+     level_requirement="19"
+     requires_materials="10xCERAMICS,25xPLASTICS,25xMANA_BEAD"
+     requires_item="items/specials/amber-pills.nut"
+     output_item_id="items/specials/amber-mana-pills.nut"
+    />
+
+<!-- Throwable Weapons -->
+
+    <node id="THROWING_KNIVES"
+     category="CRAFTING" tags=""
+     level_requirement="2"
+     requires_materials="10xSCRAP_METAL,8xSCRAP_FABRIC,10xPLASTICS"
+     output_item_id="items/specials/throwing-knives.nut"
+     upgrade_1_materials="20xSCRAP_METAL,20xPLASTICS"
+     upgrade_2_materials="10xIRON,15xCERAMICS"
+     upgrade_3_materials="15xWOOD,20xRUBBER"
+    />
+
+    <node id="THROWING_KNIVES_TRIPLE"
+     category="CRAFTING" tags=""
+     level_requirement="10"
+     requires_materials="5xIRON,20xSCRAP_WOOD,2xHIDE"
+     output_item_id="items/specials/throwing-knives-triple.nut"
+     upgrade_1_materials="15xIRON,10xWOOD"
+     upgrade_2_materials="20xIRON,10xRUBBER"
+     upgrade_3_materials="10xSTEEL,5xLUMBER"
+    />
+
+    <node id="MONSTER_LURE"
+     category="CRAFTING" tags="SHOW_NEW_TOOL_ANIMAATION"
+     level_requirement="13"
+     requires_materials="40xPLANTS,20xPLASTICS,8xSCRAP_ELECTRONICS"
+     output_item_id="items/specials/monster-lure.nut"
+    />
+
+    <node id="FRAG_GRENADE"
+     category="CRAFTING" tags=""
+     level_requirement="17"
+     requires_materials="15xIRON,6xSCRAP_ELECTRONICS,10xPLASTICS"
+     output_item_id="items/specials/frag-grenade.nut"
+     upgrade_1_materials="12xIRON,20xCERAMICS"
+     upgrade_2_materials="20xIRON,15xRUBBER"
+     upgrade_3_materials="15xSTEEL,10xELECTRONICS"
+    />
+
+    <node id="PROXIMITY_MINE"
+     category="CRAFTING" tags=""
+     level_requirement="22"
+     requires_materials="18xIRON,12xSCRAP_ELECTRONICS,25xPLASTICS"
+     output_item_id="items/specials/proximity-mine.nut"
+     upgrade_1_materials="25xIRON,20xCERAMICS"
+     upgrade_2_materials="15xSTEEL,15xRUBBER"
+     upgrade_3_materials="2xTITANIUM,10xELECTRONICS"
+    />
+
+    <node id="SMALL_BOMB"
+     category="CRAFTING" tags="EXIT_FABRICATOR_AFTER_CRAFTING,SHOW_NEW_TOOL_ANIMAATION,HIDE_IN_COLLECTION"
+     level_requirement="999"
+     requires_materials="7xRUBBER,2xPLASTICS,4xELECTRONICS"
+     output_item_id="items/specials/small-bomb.nut"
+     upgrade_1_materials="3xSCRAP_WOOD"
+     upgrade_2_materials="3xPLANTS,2xPLASTICS"
+     upgrade_3_materials="3xPLASTICS"
+     _upgrade_4_materials="3xPLASTICS,10xPLANTS"
+     _upgrade_5_materials="3xIRON,12xPLANTS"
+     _upgrade_6_materials="3xSCRAP_WOOD,20xPLANTS"
+     _upgrade_7_materials="3xIRON,12xPLANTS"
+     _upgrade_8_materials="3xSCRAP_WOOD,20xPLANTS"
+     _upgrade_9_materials="3xIRON,12xPLANTS"
+     _upgrade_10_materials="3xSCRAP_WOOD,20xPLANTS"
+    />
+
+    <node id="THROWABLE_BOMB"
+     category="CRAFTING" tags="EXIT_FABRICATOR_AFTER_CRAFTING,SHOW_NEW_TOOL_ANIMAATION,HIDE_IN_COLLECTION"
+     level_requirement="999"
+     requires_materials="7xRUBBER,2xPLASTICS,4xELECTRONICS"
+     output_item_id="items/specials/throwable-bomb.nut"
+     upgrade_1_materials="3xSCRAP_WOOD"
+     upgrade_2_materials="3xPLANTS,2xPLASTICS"
+     upgrade_3_materials="3xPLASTICS"
+     _upgrade_4_materials="3xPLASTICS,10xPLANTS"
+     _upgrade_5_materials="3xIRON,12xPLANTS"
+     _upgrade_6_materials="3xSCRAP_WOOD,20xPLANTS"
+    />
+
+    <node id="REMOTE_EXPLOSIVE"
+     category="CRAFTING" tags="EXIT_FABRICATOR_AFTER_CRAFTING,SHOW_NEW_TOOL_ANIMAATION,HIDE_IN_COLLECTION"
+     level_requirement="999"
+     requires_materials="7xRUBBER,2xPLASTICS,6xELECTRONICS"
+     output_item_id="items/specials/remote-explosive.nut"
+     upgrade_1_materials="3xSCRAP_WOOD"
+     upgrade_2_materials="3xPLANTS,2xPLASTICS"
+     upgrade_3_materials="3xPLASTICS"
+    />
+
+<!-- Storage/Map Traversal -->
+
+    <node id="MATERIAL_TRANSPORTER"
+     category="CRAFTING" tags=""
+     level_requirement="20"
+     requires_materials="40xPLASTICS,40xMANA_BEAD,10xELECTRONICS"
+     output_item_id="items/specials/material-transporter.nut"
+     upgrade_1_materials="18xRUBBER,10xLUMBER"
+     upgrade_2_materials="15xELECTRONICS,7xTITANIUM"
+     upgrade_3_materials="20xELECTRONICS,1xMANA_SHARD"
+    />
+
+    <node id="MONSTER_SCANNER"
+     category="CRAFTING"
+     level_requirement="25"
+     requires_materials="80xMANA_BEAD,16xELECTRONICS,12xSTEEL"
+     output_item_id="items/specials/monster-scanner.nut"
+    />
+
+    <node id="HOME_PORTAL_DEVICE"
+     category="CRAFTING" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     level_requirement="25"
+     requires_materials="1xMANA_SHARD,1xMANA_CHUNK,10xELECTRONICS"
+     output_item_id="items/specials/home-portal-device.nut"
+    />
+
+    <node id="HOME_PORTAL_DEVICE_LONG_RANGE"
+     category="CRAFTING" tags=""
+     level_requirement="30"
+     icon="items/specials/home-portal-device.png"
+     display_name="Long Range Home Portal"
+     description="Enables using Home Portal outside the main island."
+     requires_materials="2xMANA_CHUNK,15xELECTRONICS"
+    />
+
+<!-- TRINKETS (by level requirement) -->
+
+    <node id="BAG_OF_BLOOD"
+     category="CRAFTING" tags=""
+     level_requirement="3"
+     requires_materials="25xPLANTS,15xPLASTICS"
+     upgrade_1_materials="22xPLASTICS,5xIRON"
+     upgrade_2_materials="30xPLASTICS,10xCERAMICS"
+     upgrade_3_materials="15xFABRIC,15xMANA_BEAD"
+     output_item_id="items/trinkets/bag-of-blood.nut"
+    />
+
+    <node id="FLASHLIGHT"
+     category="CRAFTING"
+     level_requirement="4"
+     requires_materials="3xSCRAP_ELECTRONICS,10xPLASTICS"
+     output_item_id="items/trinkets/flashlight.nut"
+    />
+
+    <node id="SHOCK_ABSORBER"
+     category="CRAFTING"
+     level_requirement="5"
+     requires_materials="12xCERAMICS,18xSCRAP_FABRIC"
+     upgrade_1_materials="8xIRON, 20xPLASTICS"
+     upgrade_2_materials="4xELECTRONICS, 8xRUBBER"
+     upgrade_3_materials="12xSTEEL,1xMANA_SHARD"
+     output_item_id="items/trinkets/shock-absorber.nut"
+    />
+
+    <node id="COFFEE_THERMOS"
+     category="CRAFTING"
+     level_requirement="7"
+     requires_materials="20xSCRAP_FABRIC,10xPLASTICS"
+     output_item_id="items/trinkets/coffee-thermos.nut"
+    />
+
+    <node id="RUBBER_DUCK"
+     category="CRAFTING"
+     level_requirement="9"
+     requires_materials="30xPLASTICS,8xCERAMICS"
+     output_item_id="items/trinkets/rubber-duck.nut"
+    />
+
+    <node id="ACUPUNCTURE_NEEDLES"
+     category="CRAFTING"
+     level_requirement="9"
+     requires_materials="6xBONE,18xPLASTICS"
+     upgrade_1_materials="9xIRON,7xSCRAP_ELECTRONICS"
+     upgrade_2_materials="5xLUMBER,15xCERAMICS"
+     upgrade_3_materials="3xTITANIUM,1xMANA_SHARD"
+     output_item_id="items/trinkets/acupuncture-needles.nut"
+    />
+
+    <node id="CAMO_NETTING"
+     category="CRAFTING"
+     level_requirement="10"
+     requires_materials="25xPLANTS,15xSCRAP_FABRIC"
+     upgrade_1_materials="20xSCRAP_FABRIC,15xPLASTICS"
+     upgrade_2_materials="10xFABRIC,8xHIDE"
+     upgrade_3_materials="20xFABRIC,15xMANA_BEAD"
+     output_item_id="items/trinkets/camo-netting.nut"
+    />
+
+    <node id="TACKLE"
+     category="CRAFTING"
+     level_requirement="12"
+     requires_materials="18xPLASTICS,25xPLANTS"
+     upgrade_1_materials="11xSCRAP_METAL,10xSCRAP_FABRIC"
+     upgrade_2_materials="8xIRON,7xRUBBER"
+     upgrade_3_materials="6xSTEEL,6xFABRIC"
+     output_item_id="items/trinkets/tackle.nut"
+    />
+
+    <node id="MAGNIFYING_GLASS"
+     category="CRAFTING"
+     level_requirement="13"
+     requires_materials="15xSCRAP_METAL,15xPLASTICS"
+     upgrade_1_materials="8xIRON,10xSCRAP_ELECTRONICS"
+     upgrade_2_materials="5xSTEEL,7xRUBBER"
+     upgrade_3_materials="2xTITANIUM,5xELECTRONICS"
+     output_item_id="items/trinkets/magnifying-glass.nut"
+    />
+
+    <node id="GYROSCOPE"
+     category="CRAFTING"
+     level_requirement="14"
+     requires_materials="5xIRON,20xPLASTICS"
+     upgrade_1_materials="15xIRON,15xCERAMICS,5xSCRAP_ELECTRONICS"
+     upgrade_2_materials="8xSTEEL,15xRUBBER"
+     upgrade_3_materials="1xTITANIUM,6xELECTRONICS"
+     output_item_id="items/trinkets/gyroscope.nut"
+    />
+
+    <node id="LACES"
+     category="CRAFTING"
+     level_requirement="16"
+     requires_materials="12xRUBBER,10xFABRIC"
+     output_item_id="items/trinkets/laces.nut"
+    />
+
+    <node id="JAR_OF_LARD"
+     category="CRAFTING"
+     level_requirement="16"
+     requires_materials="15xPLASTICS,3xHIDE"
+     upgrade_1_materials="9xCERAMICS,5xHIDE"
+     upgrade_2_materials="12xIRON,9xRUBBER"
+     upgrade_3_materials="6xELECTRONICS,1xMANA_SHARD"
+     output_item_id="items/trinkets/jar-of-lard.nut"
+    />
+
+    <node id="BASEBALL_CARD"
+     category="CRAFTING"
+     level_requirement="17"
+     requires_materials="10xWOOD,22xPLASTICS"
+     upgrade_1_materials="15xWOOD,6xELECTRONICS"
+     upgrade_2_materials="5xSTONE,10xFABRIC"
+     upgrade_3_materials="6xLUMBER,14xRUBBER"
+     output_item_id="items/trinkets/baseball-card.nut"
+    />
+
+    <node id="MACHINED_SPRING"
+     category="CRAFTING"
+     level_requirement="19"
+     requires_materials="30xSCRAP_METAL,15xPLASTICS"
+     upgrade_1_materials="7xIRON,15xCERAMICS"
+     upgrade_2_materials="7xSTEEL,5xELECTRONICS"
+     upgrade_3_materials="2xTITANIUM,1xMANA_SHARD"
+     output_item_id="items/trinkets/machined-spring.nut"
+    />
+
+    <node id="DENTURED_FANGS"
+     category="CRAFTING"
+     level_requirement="20"
+     requires_materials="15xBONE,20xRUBBER"
+     upgrade_1_materials="10xMEAT,20xLUMBER"
+     upgrade_2_materials="20xCACTUS,15xSTEEL"
+     upgrade_3_materials="5xTITANIUM,1xMANA_CHUNK"
+     output_item_id="items/trinkets/dentured-fangs.nut"
+    />
+
+    <node id="WEIGHT_LIFTING_GLOVES"
+     category="CRAFTING"
+     level_requirement="22"
+     requires_materials="6xSTEEL,15xFABRIC"
+     upgrade_1_materials="5xSTONE,18xCERAMICS"
+     upgrade_2_materials="2xTITANIUM,20xFABRIC"
+     upgrade_3_materials="8xRUBBER,25xMANA_BEAD"
+     output_item_id="items/trinkets/weight-lifting-gloves.nut"
+    />
+
+    <node id="BERSERKER_CHARM"
+     category="CRAFTING"
+     level_requirement="25"
+     requires_materials="20xWOOD,10xBONE,10xMANA_BEAD"
+     upgrade_1_materials="16xLUMBER,20xCERAMICS"
+     upgrade_2_materials="12xSTEEL,15xELECTRONICS"
+     upgrade_3_materials="3xTITANIUM,2xMANA_CHUNK"
+     output_item_id="items/trinkets/berserker-charm.nut"
+    />
+
+    <node id="MATERIAL_MAGNET"
+     category="CRAFTING"
+     level_requirement="27"
+     requires_materials="5xSTEEL,25xCERAMICS,5xMANA_BEAD"
+     upgrade_1_materials="8xELECTRONICS,10xRUBBER,7xMANA_BEAD"
+     upgrade_2_materials="2xTITANIUM,15xMANA_BEAD"
+     upgrade_3_materials="12xELECTRONICS,30xMANA_BEAD"
+     output_item_id="items/trinkets/material-magnet.nut"
+    />
+
+    <node id="BANDOLIER"
+     category="CRAFTING"
+     level_requirement="30"
+     requires_materials="14xIRON,18xFABRIC"
+     upgrade_1_materials="8xSTEEL,15xHIDE"
+     upgrade_2_materials="6xLUMBER,20xMANA_BEAD"
+     upgrade_3_materials="3xTITANIUM,1xMANA_SHARD"
+     output_item_id="items/trinkets/bandolier.nut"
+    />
+
+    <node id="LIGHTNING_ROD"
+     category="CRAFTING"
+     level_requirement="32"
+     requires_materials="10xELECTRONICS,30xPLASTICS,8xTITANIUM"
+     output_item_id="items/trinkets/lightning-rod.nut"
+    />
+
+    <node id="COUNTERWEIGHT"
+     category="CRAFTING"
+     level_requirement="33"
+     requires_materials="25xSCRAP_METAL,20xSCRAP_WOOD"
+     upgrade_1_materials="12xIRON,16xCERAMICS"
+     upgrade_2_materials="8xRUBBER,6xSCRAP_ELECTRONICS"
+     upgrade_3_materials="7xSTEEL,18xMANA_BEAD"
+     output_item_id="items/trinkets/counterweight.nut"
+    />
+
+<!-- "Found" Recipe Trinkets -->
+
+    <node id="ICE_BRICK" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     category="CRAFTING"
+     requires_materials="30xPLASTICS,15xSCRAP_FABRIC,8xCERAMICS"
+     output_item_id="items/trinkets/ice-brick.nut"
+    />
+
+    <node id="HOT_WATER_BOTTLE" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     category="CRAFTING"
+     requires_materials="15xRUBBER,25xPLASTICS"
+     output_item_id="items/trinkets/hot-water-bottle.nut"
+    />
+
+    <node id="OLD_POCKET_WATCH"
+     category="CRAFTING" tags="HIDE_IN_INVENT_SCREEN"
+     level_requirement="11"
+     requires_materials="20xIRON,30xSCRAP_METAL,20xMANA_BEAD"
+     output_item_id="items/trinkets/old-pocket-watch.nut"
+    />
+
+    <node id="DIGITAL_WRIST_WATCH"
+     category="CRAFTING" tags="HIDE_IN_INVENT_SCREEN"
+     level_requirement="11"
+     requires_materials="15xSTEEL,5xELECTRONICS,20xMANA_BEAD"
+     output_item_id="items/trinkets/digital-wrist-watch.nut"
+    />
+
+    <node id="METAL_DETECTOR"    tags="HIDE_IN_COLLECTION"
+     category="CRAFTING"
+     level_requirement="999"
+     requires_materials="10xPLASTICS,10xELECTRONICS"
+     output_item_id="items/trinkets/metal-detector.nut"
+    />
+
+<!-- FEATURES (by type) -->
+
+<!-- Campfire Items -->
+
+    <node id="SLEEPING_BAG"
+     category="CRAFTING"
+     level_requirement="4"
+     display_name="Sleeping Bag"
+     description="Enables sleeping at [ORANGE]Campfires[WHITE]. Sleeping passes time and grants temporary [GREEN]well-rested bonus[WHITE] effects."
+     icon="dysmantle/gear/sleeping-bag.png"
+     requires_materials="20xPLANTS,15xSCRAP_FABRIC"
+     upgrade_1_materials="25xSCRAP_FABRIC,5xHIDE" upgrade_1_tags="MORE_HOURS"
+     upgrade_2_materials="15xFABRIC,10xHIDE" upgrade_2_tags="MORE_HOURS"
+     upgrade_3_materials="25xFABRIC,15xRUBBER" upgrade_3_tags="MORE_HOURS"
+    />
+
+    <node id="COOKING_POT"
+     category="CRAFTING" tags=""
+     level_requirement="2"
+     display_name="Cooking Pot"
+     description="Perfect for cooking recipes at stoves."
+     icon="dysmantle/gear/cooking-pot.png"
+     requires_materials="8xSCRAP_METAL,5xCERAMICS"
+     output_feature_id="COOKING_POT"
+     upgrade_description="Adds one new ingredient slot which allows cooking new recipes."
+     upgrade_1_materials="10xIRON,5xFABRIC" upgrade_1_tags="ADD_INGREDIENT_SLOT"
+     upgrade_2_materials="10xSTEEL,8xRUBBER" upgrade_2_tags="ADD_INGREDIENT_SLOT"
+     _upgrade_3_materials="10xSTEEL,5xRUBBER" _upgrade_3_tags="ADD_INGREDIENT_SLOT"
+    />
+
+    <node id="COOKING_STAND"
+     category="CRAFTING" _tags="INVENTABLE_AT_START"
+     level_requirement="11"
+     display_name="Cooking Stand"
+     description="Enables cooking at [ORANGE]Campfires[WHITE]."
+     icon="dysmantle/gear/cooking-stand.png"
+     requires_materials="20xCERAMICS,8xIRON,7xWOOD"
+     output_feature_id="COOKING_STAND"
+    />
+
+<!-- Storage -->
+
+    <node id="STORAGE_BOX_TAKE_AWAY"
+     category="CRAFTING"
+     level_requirement="8"
+     display_name="Storage Box Upgrade"
+     description="Enables taking materials out of the [ORANGE]Camp Storage Box[WHITE] and placing them back into your Carried Materials slots. Removing materials costs additional [GREEN]XP[WHITE]. Press [BUTTON=DROP] near a Storage Box to open the menu."
+     icon="dysmantle/gear/storage-box.png"
+     requires_materials="15xIRON,20xMANA_BEAD"
+    />
+
+    <node id="STORAGE_BOX_TAKE_AWAY_DISCOUNT"
+     category="CRAFTING"
+     level_requirement="25"
+     display_name="Storage Box Discount"
+     description="Taking materials out of the [ORANGE]Camp Storage Box[WHITE] costs [GREEN]50% less XP[WHITE]."
+     icon="dysmantle/gear/storage-box-discount.png"
+     requires_materials="5xSTEEL,30xMANA_BEAD"
+    />
+
+    <node id="COMPRESSOR_COMMON"
+     category="CRAFTING"
+     level_requirement="13"
+     display_name="Common Compressor"
+     description="Doubles the backpack slot carry capacity for Common Materials."
+     icon="dysmantle/materials/icon-plants.png"
+     requires_materials="10xIRON,10xWOOD,15xMANA_BEAD"
+    />
+
+    <node id="COMPRESSOR_UNCOMMON"
+     category="CRAFTING"
+     level_requirement="21"
+     display_name="Uncommon Compressor"
+     description="Doubles the backpack slot carry capacity for [GREEN]Uncommon[WHITE] Materials."
+     icon="dysmantle/materials/icon-wood.png"
+     requires_materials="10xSTEEL,10xLUMBER,40xMANA_BEAD"
+    />
+
+    <node id="COMPRESSOR_RARE"
+     category="CRAFTING"
+     level_requirement="29"
+     display_name="Rare Compressor"
+     description="Doubles the backpack slot carry capacity for [BLUE]Rare[WHITE] Materials."
+     icon="dysmantle/materials/icon-steel.png"
+     requires_materials="5xTITANIUM,15xELECTRONICS,1xMANA_SHARD"
+    />
+
+    <node id="LETTER_TO_HOME"
+     category="CRAFTING" tags="HIDE_IN_COLLECTION"
+     level_requirement="999"
+     requires_materials="1xMANA_SHARD,40xFABRIC,20xELECTRONICS"
+     output_item_id="items/trinkets/letter-to-home.nut"
+    />
+
+<!-- Map Traversal -->
+
+    <node id="ROPE_AND_HOOK"
+     category="CRAFTING" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     display_name="Rope And Hook"
+     description="Allows descending to [ORANGE]Tombs[WHITE]."
+     icon="dysmantle/gear/rope-and-hook.png"
+     requires_materials="15xSCRAP_FABRIC,15xSCRAP_METAL"
+     output_feature_id="ROPE_AND_HOOK"
+    />
+
+    <node id="COMPASS"
+     category="CRAFTING"
+     level_requirement="10"
+     display_name="Compass"
+     description="Enables fast travelling from one activated [ORANGE]link tower[WHITE] to another."
+     icon="dysmantle/gear/compass.png"
+     requires_materials="6xIRON,10xCERAMICS,5xSCRAP_ELECTRONICS"
+    />
+
+    <node id="LOCKPICK_SIMPLE"
+     category="CRAFTING"
+     level_requirement="12"
+     display_name="Basic Lockpick"
+     description="A simple set of tools for unlocking simple locks."
+     icon="dysmantle/gear/lockpick-basic.png"
+     output_key_id="LOCKPICK_1"
+     requires_materials="8xIRON,5xSCRAP_ELECTRONICS"
+    />
+
+    <node id="LOCKPICK_COMPLEX"
+     category="CRAFTING"
+     level_requirement="19"
+     display_name="Expert Lockpick"
+     description="An adept level set of tools for unlocking complex locks."
+     icon="dysmantle/gear/lockpick-expert.png"
+     output_key_id="LOCKPICK_2"
+     requires_materials="8xSTEEL,4xELECTRONICS"
+    />
+
+    <node id="LOCKPICK_MASTER"
+     category="CRAFTING"
+     level_requirement="24"
+     display_name="Master Lockpick"
+     description="A masterful set of tools for unlocking highly advanced locks."
+     icon="dysmantle/gear/lockpick-master.png"
+     output_key_id="LOCKPICK_3"
+     requires_materials="2xTITANIUM,25xMANA_BEAD"
+    />
+
+    <node id="RIFT_TOOLKIT"
+     category="CRAFTING" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     display_name="Rift Toolkit"
+     description="Allows opening and entering [BLUE]Mana Rifts[WHITE]."
+     icon="dysmantle/gear/rift-toolkit.png"
+     requires_materials="3xMANA_CHUNK,10xELECTRONICS"
+     output_feature_id="RIFT_TOOLKIT"
+    />
+
+<!-- Link Tower Upgrades -->
+
+    <node id="LINK_TOWER_TOOLKIT"
+     category="CRAFTING"
+     level_requirement="7"
+     display_name="Link Tower Toolkit"
+     description="Toolkit that enables installing [GREEN]Transmitters[WHITE] to [ORANGE]Link Towers[WHITE]. Transmitters have various effects such as stopping monsters from respawning. Enables getting [MATERIAL_ICON=MANA_BEAD][BLUE]Mana Beads[WHITE]."
+     icon="dysmantle/gear/link-tower-toolkit.png"
+     requires_materials="10xIRON,10xSCRAP_ELECTRONICS"
+    />
+
+    <node id="TRANSMITTER_SCANNER"
+     category="TRANSMITTER"
+     level_requirement="5"
+     display_name="Scanner Radar"
+     description="Shows statistics such as the monster count for the [ORANGE]Link Tower Area[WHITE]."
+     icon="dysmantle/materials/icon-electronics.png"
+     requires_materials="5xMANA_BEAD,5xSCRAP_ELECTRONICS,1xELECTRONICS"
+    />
+
+    <node id="TRANSMITTER_ENEMY_RESPAWN_DISABLER"
+     category="TRANSMITTER"
+     level_requirement="1"
+     display_name="Deadly Transmission"
+     description="Stops killed monsters from respawning. Each monster permanently killed this way drops one [MATERIAL_ICON=MANA_BEAD][MATERIAL_NAME=MANA_BEAD]."
+     icon="dysmantle/materials/icon-electronics.png"
+     requires_materials="1xTOMB_ORB,6xSCRAP_ELECTRONICS"
+    />
+
+    <node id="TRANSMITTER_TOWER_LEVEL_UP"
+     category="TRANSMITTER" tags="DYNAMIC_REQUIREMENTS"
+     level_requirement="20"
+     display_name="Ascension Signal"
+     description="Transmits a high energy [BLUE]Mana[WHITE] powered signal that ripples through time and space. Transmitter breaks after the transmission.\n\nRespawns all killed monsters as tougher versions. New monsters award more [GREEN]Experience Points[WHITE] and have better material drops."
+     icon="dysmantle/materials/icon-electronics.png"
+     requires_tags="ALL_MONSTERS_KILLED"
+     requires_materials="11xMANA_BEAD,4xSCRAP_ELECTRONICS"
+    />
+
+    <node id="TRANSMITTER_RESPAWN_MONSTERS" tags="HIDE_IN_COLLECTION"
+     category="TRANSMITTER"
+     level_requirement="999"
+     display_name="Respawn Elevation Transmission"
+     description="[ORANGE]Link Tower Level[WHITE] is increased + 1. All monsters in the area are respawned back. New monsters are tougher, but give better rewards."
+     icon="dysmantle/materials/icon-electronics.png"
+     requires_materials="4xMANA_BEAD,4xSCRAP_ELECTRONICS"
+    />
+
+    <node id="TRANSMITTER_WEAKER_MONSTERS"    tags="HIDE_IN_COLLECTION"
+     category="TRANSMITTER"
+     level_requirement="999"
+     display_name="Pain Transmission"
+     description="All monsters in the area start out with 75% of their hit points."
+     icon="dysmantle/materials/icon-electronics.png"
+     requires_materials="4xMANA_BEAD,4xSCRAP_ELECTRONICS"
+    />
+
+    <node id="TRANSMITTER_CAMP_FAST_TRAVEL"    tags="HIDE_IN_COLLECTION"
+     category="TRANSMITTER" requires_iap="DLC1"
+     level_requirement="1"
+     display_name="Campfire Triangulation"
+     description="Allows [GREEN]Fast Travelling[WHITE] between [ORANGE]Campfires[WHITE] on this [ORANGE]Link Tower Area[WHITE]."
+     icon="dysmantle/materials/icon-electronics.png"
+     requires_materials="15xMANA_BEAD,5xELECTRONICS"
+    />
+
+    <node id="TRANSMITTER_RESTORE_OBJECTS"    tags="HIDE_IN_COLLECTION"
+     category="TRANSMITTER"
+     level_requirement="999"
+     display_name="Reversion Transmission"
+     description="Restores all objects unaffected by [BLUE]Mana[WHITE] to their [GREEN]Day 1[WHITE] states."
+     icon="dysmantle/materials/icon-electronics.png"
+     requires_materials="10xMANA_BEAD,10xELECTRONICS"
+    />
+
+    <node id="CAMP_UPGRADE_FAST_TRAVEL"    tags="HIDE_IN_COLLECTION"
+     category="CAMP_UPGRADE" requires_iap="DLC1"
+     level_requirement="5"
+     display_name="Smoke Signal"
+     description="Allows [GREEN]Fast Travelling[WHITE] to this [ORANGE]Campfire[WHITE] from a [ORANGE]Link Tower[WHITE]."
+     icon="dysmantle/materials/icon-electronics.png"
+     requires_materials="1xMANA_SHARD,10xWOOD"
+    />
+
+<!-- Buildables/Buildable Improvements -->
+
+    <node id="TEARDOWN_EFFICIENCY"
+     category="CRAFTING" _tags="INVENTABLE_AT_START"
+     level_requirement="25"
+     display_name="Teardown Efficiency"
+     description="Get all used materials back when breaking an object you've built using the [GREEN]Builder's Kit[WHITE]."
+     icon="dysmantle/gear/tear-down-efficiency.png"
+     requires_materials="10xCERAMICS,16xSCRAP_METAL,15xSCRAP_WOOD"
+     output_feature_id="TEARDOWN_EFFICIENCY"
+    />
+
+<!-- Defensive Buildables -->
+
+    <node id="BUILDER_SANDBAGS"
+     category="CRAFTING" tags=""
+     level_requirement="26"
+     display_name="Defensive Sandbags"
+     description="Buildable defensive structures that will help slow down the rush of monsters."
+     requires_materials="20xBRICKS,25xSTONE"
+     icon="dysmantle/gear/sandbags.png"
+     output_buildable_id="actors/buildables/suburb-sandbag-barrier.xml"
+    />
+
+    <node id="BUILDER_ROCKET_TURRET"
+     category="CRAFTING" tags=""
+     level_requirement="28"
+     display_name="Rocket Turret"
+     description="Buildable Rocket Turret that deals explosive splash damage to several monsters at once."
+     requires_materials="8xTITANIUM,3xCPU"
+     icon="dysmantle/gear/rocket-turret.png"
+     output_buildable_id="actors/buildables/turret-rocket-launcher.xml"
+    />
+
+    <node id="TURRET_AMMO_EXPANSION_1"
+     category="CRAFTING" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     level_requirement="18" skill_level="1"
+     requires_buildable_id="actors/buildables/turret-machine-gun.xml"
+     display_name="Turret Ammo Expansion"
+     description="Increased ammo capacity for all turrets."
+     requires_materials="20xSTEEL,1xCPU"
+     icon="dysmantle/gear/turret-ammo-expansion.png"
+     key.FLOAT.turret_ammo_percentage_increase="50"
+    />
+
+    <node id="TURRET_AMMO_EXPANSION_2"
+     category="CRAFTING" tags=""
+     level_requirement="33" skill_level="2"
+     display_name="Turret Ammo Expansion"
+     description="Increased ammo capacity for all turrets."
+     requires_materials="10xTITANIUM,2xCPU"
+     icon="dysmantle/gear/turret-ammo-expansion.png"
+     key.FLOAT.turret_ammo_percentage_increase="60"
+    />
+
+<!-- Base Building -->
+
+    <node id="BLD_BASIC_DECORATIVE"
+     category="CRAFTING" tags="INVENTABLE_AT_START,ONLY_SHOW_AFTER_UNLOCKED"
+     level_requirement="9"
+     display_name="Basic Decoratives"
+     description="Few smaller decorative objects to spruce up your home."
+     requires_materials="6xSCRAP_WOOD,12xSCRAP_METAL"
+     icon="dysmantle/gear/basic-decorations.png"
+     output_buildable_id="actors/buildables/home-roomplant-floor-1.xml,actors/buildables/home-roomplant-table.xml,actors/buildables/home-frame-wall-rectangle.xml,actors/buildables/home-frame-wall-square.xml,actors/buildables/home-frame-wall-oval.xml"
+    />
+
+    <node id="BLD_INNER_WALLS"
+     category="CRAFTING" tags=""
+     level_requirement="11"
+     display_name="Inner Walls"
+     description="A small set of internal walls to help divide your home into rooms."
+     requires_materials="20xSCRAP_WOOD,6xIRON"
+     icon="dysmantle/gear/inner-walls.png"
+     output_buildable_id="actors/buildables/wall-inner-I.xml,actors/buildables/wall-inner-doorway.xml,actors/buildables/wall-inner-pillar.xml"
+    />
+
+    <node id="BLD_KITCHEN_FURNITURE"
+     category="CRAFTING" tags=""
+     level_requirement="13"
+     display_name="Kitchen Furnishings"
+     description="A sink and a set of cabinets to form the heart of the kitchen."
+     requires_materials="12xSCRAP_WOOD,18xSCRAP_METAL"
+     icon="dysmantle/gear/kitchen-furnishings.png"
+     output_buildable_id="actors/buildables/home-kitchen-counter-corner-in.xml,actors/buildables/home-kitchen-counter.xml,actors/buildables/home-kitchen-cupboard-corner-in.xml,actors/buildables/home-kitchen-cupboard.xml,actors/buildables/home-kitchen-sink.xml"
+    />
+
+    <node id="BLD_PLATFORMS"
+     category="CRAFTING" tags=""
+     level_requirement="17"
+     display_name="Concrete Platforms"
+     description="Heavyset concrete platforms of different sizes to implement advanced floorplans."
+     requires_materials="8xSTONE,18xSCRAP_WOOD"
+     icon="dysmantle/gear/concrete-platforms.png"
+     output_buildable_id="actors/buildables/platform-brick-1x1.xml,actors/buildables/platform-brick-2x2.xml"
+    />
+
+    <node id="BLD_KITCHEN_APPLIANCES"
+     category="CRAFTING" tags=""
+     level_requirement="21"
+     display_name="Kitchen Appliances"
+     description="Assortment of household appliances to really bring the kitchen alive."
+     requires_materials="8xSCRAP_ELECTRONICS,25xPLASTICS"
+     icon="dysmantle/gear/kitchen-appliances.png"
+     output_buildable_id="actors/buildables/home-kitchen-stove.xml,actors/buildables/home-kitchen-fridge.xml,actors/buildables/home-kitchen-coffeemachine.xml,actors/buildables/home-kitchen-microwave.xml,actors/buildables/home-kitchen-toaster.xml"
+    />
+
+    <node id="BLD_GREENHOUSE"
+     category="CRAFTING" tags=""
+     level_requirement="23"
+     display_name="Greenhouse Essentials"
+     description="A set of glass walls and a planter for crop cultivation indoors."
+     requires_materials="8xSTONE,12xIRON"
+     icon="dysmantle/gear/greenhouse-furnishings.png"
+     output_buildable_id="actors/buildables/door-glass.xml,actors/buildables/wall-glass-doorway.xml,actors/buildables/wall-glass-I.xml,actors/buildables/planter.xml"
+    />
+
+    <node id="BLD_TOILET_FURNITURE"
+     category="CRAFTING" tags=""
+     level_requirement="24"
+     display_name="Toilet Furnishings"
+     description="Set of smooth ceramic furnishings to create a truly chic bathroom."
+     requires_materials="25xCERAMICS,12xIRON"
+     icon="dysmantle/gear/toilet-furnishings.png"
+     output_buildable_id="actors/buildables/home-toilet-tub.xml,actors/buildables/home-toilet-sink.xml,actors/buildables/home-toilet-seat.xml,actors/buildables/home-toilet-paper-holder.xml,actors/buildables/home-toilet-shower.xml"
+    />
+
+    <node id="BLD_WORKSHOP_FURNITURE"
+     category="CRAFTING" tags=""
+     level_requirement="27"
+     display_name="Workshop Furnishings"
+     description="DIY stations to bring about a degree of self-sufficiency."
+     requires_materials="10xSCRAP_ELECTRONICS,8xSTEEL"
+     icon="dysmantle/gear/workshop-furnishings.png"
+     output_buildable_id="actors/buildables/workbench.xml,actors/buildables/camp-storage-box.xml"
+    />
+
+    <node id="BLD_LIVING_ROOM_FURNITURE"
+     category="CRAFTING" tags=""
+     level_requirement="30"
+     display_name="Living Room Furniture"
+     description="Colorful and comfortable furniture bring about a relaxing atmosphere."
+     requires_materials="12xFABRIC,15xLUMBER"
+     icon="dysmantle/gear/living-room-furniture.png"
+     output_buildable_id="actors/buildables/home-grandfather-clock.xml,actors/buildables/home-livingroom-armchair-1.xml,actors/buildables/home-livingroom-couch.xml,actors/buildables/home-livingroom-table.xml,actors/buildables/home-study-book-shelve.xml,actors/buildables/home-livingroom-table-tv.xml"
+    />
+
+    <node id="BLD_BEDROOM_FURNITURE"
+     category="CRAFTING" tags=""
+     level_requirement="33"
+     display_name="Bedroom Furnishings"
+     description="Bouncy beds and strong angular storage spaces to guarantee a peaceful slumber."
+     requires_materials="25xFABRIC,18xLUMBER"
+     icon="dysmantle/gear/bedroom-furnishings.png"
+     output_buildable_id="actors/buildables/home-bed-single.xml,actors/buildables/home-bed-double.xml,actors/buildables/home-wardrobe.xml,actors/buildables/home-hallway-dresser.xml"
+    />
+
+    <node id="BLD_LIVING_ROOM_DECORATIONS"
+     category="CRAFTING" tags=""
+     level_requirement="34"
+     display_name="Living Room Decorations"
+     description="Devices and doodads that elevate the living room into a sanctuary for the soul."
+     requires_materials="10xSTEEL,16xELECTRONICS"
+     icon="dysmantle/gear/living-room-decorations.png"
+     output_buildable_id="actors/buildables/home-coat-rack.xml,actors/buildables/home-radiator.xml,actors/buildables/home-livingroom-tv-70s.xml,actors/buildables/home-livingroom-floorlamp-1.xml"
+    />
+
+    <node id="BLD_BRICK_WALLS"
+     category="CRAFTING" tags=""
+     level_requirement="36"
+     display_name="Brick Walls"
+     description="Sturdy and elegant brick walls offer added value for an enterprising homeowner."
+     requires_materials="25xBRICKS,15xSTONE"
+     icon="dysmantle/gear/brick-walls.png"
+     output_buildable_id="actors/buildables/wall-brick-doorway.xml,actors/buildables/wall-brick-window.xml,actors/buildables/wall-brick-I.xml,actors/buildables/door-steel.xml"
+    />
+
+    <!--
+    <node id="KITCHEN_DECORATIONS"
+     category="CRAFTING" tags=""
+     level_requirement="33"
+     display_name="Kitchen Decorations"
+     description="Sturdy and elegant brick walls offer added value for an enterprising homeowner."
+     requires_materials="10xTITANIUM,2xCPU"
+     icon="dysmantle/gear/todo.png"
+     output_buildable_id="actors/buildables/home-kitchen-coffee-container.xml,actors/buildables/home-kitchen-cookingpot.xml,actors/buildables/home-kitchen-fryingpan.xml,actors/buildables/home-kitchen-sugar-jar.xml"
+    />
+    -->
+
+    <!--
+    <node id="DINING_ROOM_FURNITURE"
+     category="CRAFTING" tags=""
+     level_requirement="33"
+     display_name="Dining Room Furnishings"
+     description="Sturdy and elegant brick walls offer added value for an enterprising homeowner."
+     requires_materials="10xTITANIUM,2xCPU"
+     icon="dysmantle/gear/todo.png"
+     output_buildable_id="actors/buildables/home-toilet-tub.xml,actors/buildables/home-toilet-sink.xml,actors/buildables/home-toilet-seat.xml,actors/buildables/home-toilet-paper-holder.xml,actors/buildables/home-toilet-shower.xml"
+    />
+
+    <node id="DINING_ROOM_DECORATIONS"
+     category="CRAFTING" tags=""
+     level_requirement="33"
+     display_name="Dining Room Decorations"
+     description="Sturdy and elegant brick walls offer added value for an enterprising homeowner."
+     requires_materials="10xTITANIUM,2xCPU"
+     icon="dysmantle/gear/todo.png"
+     output_buildable_id="actors/buildables/home-toilet-tub.xml,actors/buildables/home-toilet-sink.xml,actors/buildables/home-toilet-seat.xml,actors/buildables/home-toilet-paper-holder.xml,actors/buildables/home-toilet-shower.xml"
+    />
+    -->
+
+    <!--
+    <node id="HOME_OFFICE_FURNITURE"
+     category="CRAFTING" tags=""
+     level_requirement="33"
+     display_name="Home Office Furniture"
+     description="Sturdy and elegant brick walls offer added value for an enterprising homeowner."
+     requires_materials="10xTITANIUM,2xCPU"
+     icon="dysmantle/gear/todo.png"
+     output_buildable_id="actors/buildables/home-toilet-tub.xml,actors/buildables/home-toilet-sink.xml,actors/buildables/home-toilet-seat.xml,actors/buildables/home-toilet-paper-holder.xml,actors/buildables/home-toilet-shower.xml"
+    />
+
+    <node id="HOME_OFFICE_DECORATIONS"
+     category="CRAFTING" tags=""
+     level_requirement="33"
+     display_name="Home Office Decorations"
+     description="Sturdy and elegant brick walls offer added value for an enterprising homeowner."
+     requires_materials="10xTITANIUM,2xCPU"
+     icon="dysmantle/gear/todo.png"
+     output_buildable_id="actors/buildables/home-toilet-tub.xml,actors/buildables/home-toilet-sink.xml,actors/buildables/home-toilet-seat.xml,actors/buildables/home-toilet-paper-holder.xml,actors/buildables/home-toilet-shower.xml"
+    />
+    -->
+
+<!-- Cooking Recipes -->
+
+    <node id="DISH_GRILLED_ZANDER"
+     category="COOKING"
+     display_name="Grilled Zander"
+     description="A perfect fillet seasoned with spices and grilled golden brown. Served with fresh spring onions. "
+     icon="dysmantle/cooking/dish-skewer.png"
+     requires_materials="4xFISH_E,6xONION,5xSPICES"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_FISH_PIE"
+     category="COOKING"
+     display_name="Fish Pie"
+     description="A crusty baked seafood pie that has a fresh and crispy taste."
+     icon="dysmantle/cooking/dish-pie-warm.png"
+     requires_materials="8xFISH_E,5xPOTATO,4xWHEAT"
+     key.FLOAT.enemy_aggro_range_percentage_decrease="4"
+    />
+
+    <node id="DISH_ZANDER_RISOTTO"
+     category="COOKING"
+     display_name="Zander Risotto"
+     description="A carefully prepared risotto dish with a fillet of delicious zander on top."
+     icon="dysmantle/cooking/dish-bowl-warm.png"
+     requires_materials="7xFISH_E,6xMUSHROOM_RED,3xONION,8xRICE"
+     key.FLOAT.melee_damage_percentage_increase_vs_tag_MONSTER="2.5"
+    />
+
+    <node id="DISH_SMOOTHIE"
+     category="COOKING"
+     display_name="Smoothie"
+     description="A frosty smoothie topped with berries. Sure to give one a fresh look on life!"
+     icon="dysmantle/cooking/drink-cool.png"
+     requires_materials="8xBERRIES,6xEGG"
+     key.FLOAT.enemy_aggro_range_percentage_decrease="4"
+    />
+
+    <node id="DISH_BERRY_TART"
+     category="COOKING"
+     display_name="Berry Tart"
+     description="A crunchy first bite gives way to a soft and sweet berry filling that melts your tongue away."
+     icon="dysmantle/cooking/dish-pie-warm.png"
+     requires_materials="10xBERRIES,5xEGG,5xWHEAT"
+     key.FLOAT.backstab_damage_percentage_increase="25"
+    />
+
+    <node id="DISH_STRAWBERRY_CAKE"
+     category="COOKING"
+     display_name="Strawberry Sponge Cake"
+     description="A handful of summer berries and a slight hint of vanilla make this moist cake almost irresistible."
+     icon="dysmantle/cooking/dish-cake.png"
+     requires_materials="10xBERRIES,4xEGG,6xWHEAT"
+     key.FLOAT.damage_evade_chance_absolute_increase="2.5"
+    />
+
+    <node id="DISH_TOMATO_SOUP"
+     category="COOKING"
+     display_name="Tomato Soup"
+     description="Delicious steaming soup made of overgrown and ripe tomato pulps."
+     icon="dysmantle/cooking/dish-bowl-warm.png"
+     requires_materials="3xTOMATO"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_TOMATO_BRUSCHETTA"
+     category="COOKING"
+     display_name="Tomato Bruschetta"
+     description="A snack that is quick to prepare that has tomato and onion slices on top of artisan bread."
+     icon="dysmantle/cooking/dish-bruchetta.png"
+     requires_materials="3xONION,4xTOMATO,5xWHEAT"
+     key.FLOAT.backstab_critical_chance_absolute_increase="5"
+    />
+
+    <node id="DISH_TOMATO_GRATIN"
+     category="COOKING"
+     display_name="Tomato Gratin"
+     description="A slowly-cooked yet amazingly fresh baked dish full of flavour and aroma."
+     icon="dysmantle/cooking/dish-ovenpan.png"
+     requires_materials="3xCARROT,4xONION,6xTOMATO,3xWHEAT"
+     key.FLOAT.melee_attack_delay_percentage_increase="-5"
+    />
+
+    <node id="DISH_BONE_MARROW"
+     category="COOKING"
+     display_name="Bone Marrow"
+     description="A surprisingly fulfilling and nutritious substance with berries on top for that wild aftertaste."
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="5xBERRIES,6xBONE"
+     key.FLOAT.critical_hit_chance_absolute_increase="1.5"
+    />
+
+    <node id="DISH_BONE_GULAI"
+     category="COOKING"
+     display_name="Bone Gulai"
+     description="A rich and spicy traditional dish from another island nation."
+     icon="dysmantle/cooking/dish-bowl-warm.png"
+     requires_materials="12xBONE,7xBERRIES,4xSPICES"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_BONE_BROTH"
+     category="COOKING"
+     display_name="Bone Broth"
+     description="Marrow can be used as a base for a soup. It gives a meaty taste to all ingredients within."
+     icon="dysmantle/cooking/dish-bowl-warm.png"
+     requires_materials="6xPOTATO,12xBONE,8xCARROT,4xMUSHROOM_BROWN"
+     key.FLOAT.melee_attack_speed_percentage_increase="4"
+    />
+
+    <node id="DISH_CACTUS_JUICE"
+     category="COOKING"
+     display_name="Cactus Juice"
+     description="Although spiky on the outside, the insides of a cactus contain some delicious nectar."
+     icon="dysmantle/cooking/drink-cool.png"
+     requires_materials="12xCACTUS,5xTOMATO"
+     key.FLOAT.backstab_critical_chance_absolute_increase="5"
+    />
+
+    <node id="DISH_CACTUS_SALAD"
+     category="COOKING"
+     display_name="Cactus Salad"
+     description="Cactus as an ingredient can give a salad an exotic taste."
+     icon="dysmantle/cooking/dish-salad.png"
+     requires_materials="8xCACTUS,10xLETTUCE,6xTOMATO"
+     key.FLOAT.damage_evade_chance_absolute_increase="2.5"
+    />
+
+    <node id="DISH_FRIED_CACTUS"
+     category="COOKING"
+     display_name="Fried Cactus"
+     description="A tasty combination platter with a crisp texture."
+     icon="dysmantle/cooking/dish-salad.png"
+     requires_materials="8xCACTUS,5xONION,5xSPICES,4xTOMATO"
+     key.FLOAT.melee_attack_speed_percentage_increase="4"
+    />
+
+    <node id="DISH_CARROT_JUICE"
+     category="COOKING"
+     display_name="Carrot Juice"
+     description="A healthy drink that is good for you."
+     icon="dysmantle/cooking/drink-cool.png"
+     requires_materials="12xCARROT,6xTOMATO"
+     key.FLOAT.search_efficiency_absolute_increase="15"
+    />
+
+    <node id="DISH_CARROT_CAKE"
+     category="COOKING"
+     display_name="Carrot Cake"
+     description="A flavourful and sweet cake that is quite easy to make."
+     icon="dysmantle/cooking/dish-cake.png"
+     requires_materials="8xCARROT,5xEGG,6xWHEAT"
+     key.FLOAT.dodge_roll_speed_percentage_increase="5"
+    />
+
+    <node id="DISH_ROASTED_CARROTS"
+     category="COOKING"
+     display_name="Roasted Carrots"
+     description="A simple dish where one adds breadcrumbs, diced onion and some spices for a very crunchy snack."
+     icon="dysmantle/cooking/dish-salad.png"
+     requires_materials="7xCARROT,4xCORN,4xONION,5xWHEAT"
+     key.FLOAT.melee_attack_delay_percentage_increase="-5"
+    />
+
+    <node id="DISH_CORNCOB"
+     category="COOKING"
+     display_name="Corncob"
+     description="A simple dish to prepare but tastes very juicy and sweet."
+     icon="dysmantle/cooking/dish-skewer.png"
+     requires_materials="9xCORN"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_STREET_CORN"
+     category="COOKING"
+     display_name="Street Corn"
+     description="More elegant solution than eating corn straight from the cob."
+     icon="dysmantle/cooking/dish-fastfood.png"
+     requires_materials="8xCORN,6xONION,4xSPICES"
+     key.FLOAT.build_limit_increase="15"
+    />
+
+    <node id="DISH_CORNED_HASH_BEEF"
+     category="COOKING"
+     display_name="Corned Hash Beef"
+     description="Slice and dice the ingredients on the pan and fry until crispy."
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="7xCORN,6xMEAT,5xPOTATO,3xSPICES"
+     key.FLOAT.damage_deflect_absolute_increase="10.0"
+    />
+
+    <node id="DISH_PANCAKE"
+     category="COOKING"
+     display_name="Pancake"
+     description="A flat cake cooked golden brown on a pan. Versatile and timeless breakfast staple."
+     icon="dysmantle/cooking/dish-ovenpan.png"
+     requires_materials="4xBERRIES,7xEGG,4xWHEAT"
+     key.FLOAT.backstab_damage_percentage_increase="25"
+    />
+
+    <node id="DISH_EGGSNBACON"
+     category="COOKING"
+     display_name="Eggs'n'Bacon"
+     description="When you add a few slices of crispy bacon into the mix with some fried eggs you've got something really special going on in there."
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="6xEGG,4xMEAT"
+     key.FLOAT.search_efficiency_absolute_increase="15"
+    />
+
+    <node id="DISH_FULL_BREAKFAST"
+     category="COOKING"
+     display_name="Full Breakfast"
+     description="A traditional breakfast from a certain part of the world that could be seen as an institution in its own right."
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="8xEGG,6xMEAT,6xMUSHROOM_WHITE,4xTOMATO"
+     key.FLOAT.damage_evade_chance_absolute_increase="2.5"
+    />
+
+    <node id="DISH_FISHNCHIPS"
+     category="COOKING"
+     display_name="Fish'n'Chips"
+     description="Fried fish with crispy potatoes on the side."
+     icon="dysmantle/cooking/dish-fastfood.png"
+     requires_materials="7xFISH_A,5xPOTATO"
+     key.FLOAT.fishing_speed_percentage_increase="50"
+    />
+
+    <node id="DISH_FISH_SOUP"
+     category="COOKING"
+     display_name="Fish Soup"
+     description="A basic soup with fish and vegetables in it. Warm and fulfilling."
+     icon="dysmantle/cooking/dish-bowl-warm.png"
+     requires_materials="4xCARROT,6xFISH_A,7xPOTATO"
+     key.FLOAT.critical_hit_damage_percentage_increase="12.5"
+    />
+
+    <node id="DISH_FISH_BALLS"
+     category="COOKING"
+     display_name="Fish Balls"
+     description="Fish rolled up into ball shape and then deep fried. Crispy and tasty!"
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="5xEGG,6xFISH_A,4xSPICES"
+     key.FLOAT.strafing_speed_percentage_increase="5"
+    />
+
+    <node id="DISH_FISHSTICKS"
+     category="COOKING"
+     display_name="Fishsticks"
+     description="Battered fish fillet with an appetizing crunchy exterior."
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="5xCORN,7xFISH_B"
+     key.FLOAT.dodge_roll_speed_percentage_increase="5"
+    />
+
+    <node id="DISH_OVEN_SALMON"
+     category="COOKING"
+     display_name="Oven Salmon"
+     description="A high quality salmon fillet cooked in an oven with a side of potatoes."
+     icon="dysmantle/cooking/dish-ovenpan.png"
+     requires_materials="7xFISH_C,6xPOTATO,5xSPICES"
+     key.FLOAT.fishing_speed_percentage_increase="50"
+    />
+
+    <node id="DISH_SALMON_BURGER"
+     category="COOKING"
+     display_name="Salmon Burger"
+     description="A juicy salmon fillet spiced up and served between two steaming hot buns."
+     icon="dysmantle/cooking/dish-sandwich.png"
+     requires_materials="4xFISH_C,4xLETTUCE,5xONION,5xWHEAT"
+     key.FLOAT.critical_hit_chance_absolute_increase="1.5"
+    />
+
+    <node id="DISH_FRIED_VENDACE"
+     category="COOKING"
+     display_name="Fried Vendace"
+     description="A small fish that is breaded and then fried on the pan. Usually ingested in large numbers."
+     icon="dysmantle/cooking/dish-fastfood.png"
+     requires_materials="5xCORN,9xFISH_B"
+     key.FLOAT.strafing_speed_percentage_increase="5"
+    />
+
+    <node id="DISH_SMOKED_FISH_PASTA"
+     category="COOKING"
+     display_name="Smoked Fish Pasta"
+     description="A creamy pasta that has an intense smoky flavour."
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="6xFISH_C,3xMUSHROOM_RED,6xWHEAT"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_KALAKUKKO"
+     category="COOKING"
+     display_name="Kalakukko"
+     description="A traditional dish from the land of a thousand lakes. Basically, fish baked inside of a bread."
+     icon="dysmantle/cooking/dish-ovenpan.png"
+     requires_materials="6xFISH_C,6xMEAT,3xSPICES,6xWHEAT"
+     key.FLOAT.running_speed_percentage_increase="2.5"
+    />
+
+    <node id="DISH_GREEN_SALAD"
+     category="COOKING"
+     display_name="Green Salad"
+     description="Although a salad can't get more basic than this, it still provides for nutrition."
+     icon="dysmantle/cooking/dish-salad.png"
+     requires_materials="8xLETTUCE,6xTOMATO"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_FISH_SALAD"
+     category="COOKING"
+     display_name="Fish Salad"
+     description="Crispy green salad peppered with potato slices and gently fried fish."
+     icon="dysmantle/cooking/dish-salad.png"
+     requires_materials="6xFISH_B,9xLETTUCE,5xPOTATO"
+     key.FLOAT.power_attack_damage_percentage_increase="50"
+    />
+
+    <node id="DISH_STEAKHOUSE_SALAD"
+     category="COOKING"
+     display_name="Steakhouse Salad"
+     description="Although it does contain copious amounts of meat, at least the greens balance it out."
+     icon="dysmantle/cooking/dish-salad.png"
+     requires_materials="8xLETTUCE,6xMEAT,6xTOMATO,2xSPICES"
+     key.FLOAT.heat_protection_absolute_increase="5"
+    />
+
+    <node id="DISH_FLANK_STEAK"
+     category="COOKING"
+     display_name="Flank Steak"
+     description="A cut of beef fried just right with a side of potatoes."
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="8xMEAT,5xPOTATO"
+     key.FLOAT.backstab_critical_chance_absolute_increase="5"
+    />
+
+    <node id="DISH_HAMBURGER"
+     category="COOKING"
+     display_name="Hamburger"
+     description="A thick ground beef patty between freshly baked buns. Truly a modern classic."
+     icon="dysmantle/cooking/dish-sandwich.png"
+     requires_materials="4xLETTUCE,5xMEAT,4xWHEAT"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_TENDERLOIN"
+     category="COOKING"
+     display_name="Tenderloin"
+     description="The most tender cut of beef with added spices and crunchy vegetables."
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="4xCARROT,5xMUSHROOM_WHITE,8xMEAT,4xPOTATO"
+     key.FLOAT.melee_damage_percentage_increase_vs_tag_MONSTER="2.5"
+    />
+
+    <node id="DISH_MUSHROOM_SKEWER"
+     category="COOKING"
+     display_name="Mushroom Skewer"
+     description="Mushrooms and tomato grilled over an open flame make a juicy combination."
+     icon="dysmantle/cooking/dish-skewer.png"
+     requires_materials="7xMUSHROOM_BROWN,2xONION,5xTOMATO"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_MUSHROOM_SALAD"
+     category="COOKING"
+     display_name="Mushroom Salad"
+     description="This creamy mushroom salad is a traditional dish in a small country up north."
+     icon="dysmantle/cooking/dish-salad.png"
+     requires_materials="6xMUSHROOM_BROWN,6xLETTUCE,4xONION"
+     key.FLOAT.power_attack_damage_percentage_increase="50"
+    />
+
+    <node id="DISH_MUSHROOM_RISOTTO"
+     category="COOKING"
+     display_name="Mushroom Risotto"
+     description="The rice in the dish absorbs a good deal of flavour from mushrooms and caramelized onion."
+     icon="dysmantle/cooking/dish-bowl-warm.png"
+     requires_materials="9xMUSHROOM_BROWN,5xMUSHROOM_RED,6xRICE,4xONION"
+     key.FLOAT.running_speed_percentage_increase="2.5"
+    />
+
+    <node id="DISH_BACON_MUSHROOMS"
+     category="COOKING"
+     display_name="Bacon Mushrooms"
+     description="Wrap the mushrooms with bacon and then grill them a little for a juicy treat."
+     icon="dysmantle/cooking/dish-skewer.png"
+     requires_materials="4xMEAT,7xMUSHROOM_RED"
+     key.FLOAT.fishing_speed_percentage_increase="50"
+    />
+
+    <node id="DISH_GARLIC_MUSHROOMS"
+     category="COOKING"
+     display_name="Garlic Mushrooms"
+     description="Mushrooms dipped in spicy garlic oil and roasted afterwards."
+     icon="dysmantle/cooking/dish-skewer.png"
+     requires_materials="6xMUSHROOM_RED,5xONION,4xSPICES"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_MUSHROOM_BROTH"
+     category="COOKING"
+     display_name="Mushroom Broth"
+     description="Bones and mushrooms both give an unforgettable taste to this thick soup."
+     icon="dysmantle/cooking/dish-bowl-warm.png"
+     requires_materials="4xBONE,5xCARROT,8xMUSHROOM_RED,6xPOTATO"
+     key.FLOAT.damage_reduction_percentage_increase="5"
+    />
+
+    <node id="DISH_MUSHROOM_OMELETTE"
+     category="COOKING"
+     display_name="Mushroom Omelette"
+     description="Mushrooms give an earthy flavour to this omelette."
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="6xEGG,7xMUSHROOM_WHITE"
+     key.FLOAT.strafing_speed_percentage_increase="5"
+    />
+
+    <node id="DISH_MUSHROOM_SKILLET"
+     category="COOKING"
+     display_name="Mushroom Skillet"
+     description="Mushrooms work as a good side dish for a steak as they readily absorb all the tasty juices."
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="5xMEAT,6xMUSHROOM_WHITE,4xSPICES"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_MUSHROOM_PIE"
+     category="COOKING"
+     display_name="Mushroom Pie"
+     description="There is a whole world of taste and flavour hidden under the thin crust"
+     icon="dysmantle/cooking/dish-pie-warm.png"
+     requires_materials="8xMUSHROOM_WHITE,5xONION,4xSPICES,5xWHEAT"
+     key.FLOAT.critical_hit_damage_percentage_increase="12.5"
+    />
+
+    <node id="DISH_ONION_RINGS"
+     category="COOKING"
+     display_name="Onion Rings"
+     description="Sliced onion, dipped in batter and fried to a crispy treat."
+     icon="dysmantle/cooking/dish-fastfood.png"
+     requires_materials="7xONION,5xWHEAT"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_PELOPONNESIAN_VEGETABLES"
+     category="COOKING"
+     display_name="Peloponnesian Vegetables"
+     description="Vegetables served fresh with a dash of tasty spices. Fresh like a summer day."
+     icon="dysmantle/cooking/dish-salad.png"
+     requires_materials="4xCARROT,6xONION,5xSPICES"
+     key.FLOAT.critical_hit_chance_absolute_increase="1.5"
+    />
+
+    <node id="DISH_ONION_BROTH"
+     category="COOKING"
+     display_name="Onion Broth"
+     description="A thick broth with a rich taste of onion and beef."
+     icon="dysmantle/cooking/dish-bowl-warm.png"
+     requires_materials="4xEGG,3xMEAT,6xONION,3xWHEAT"
+     key.FLOAT.search_efficiency_absolute_increase="15"
+    />
+
+    <node id="DISH_FRENCH_FRIES"
+     category="COOKING"
+     display_name="French Fries"
+     description="Potatoes cut into thin strips are then deep-fried and salted for a quick snack."
+     icon="dysmantle/cooking/dish-fastfood.png"
+     requires_materials="8xPOTATO,5xSPICES"
+     key.FLOAT.dodge_roll_speed_percentage_increase="5"
+    />
+
+    <node id="DISH_BAKED_POTATOES"
+     category="COOKING"
+     display_name="Baked Potatoes"
+     description="Baked potatoes are good by themselves, but with added fishy sauce they become excellent."
+     icon="dysmantle/cooking/dish-ovenpan.png"
+     requires_materials="3xEGG,5xFISH_A,7xPOTATO"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_POTATO_SALAD"
+     category="COOKING"
+     display_name="Potato Salad"
+     description="A creamy, cold salad that is especially good on Midsummer's Eve."
+     icon="dysmantle/cooking/dish-salad.png"
+     requires_materials="4xEGG,7xPOTATO,4xONION"
+     key.FLOAT.damage_reduction_percentage_increase="5"
+    />
+
+    <node id="DISH_RICE_BOWL"
+     category="COOKING"
+     display_name="Rice Bowl"
+     description="A steaming bowl of cooked rice with spring onions chopped on top to give that fresh feeling."
+     icon="dysmantle/cooking/dish-bowl-warm.png"
+     requires_materials="7xRICE,5xONION"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_SUSHI"
+     category="COOKING"
+     display_name="Sushi"
+     description="Cooked rice pressed into shape with a topping made of fish. Quick to eat but keeps you nourished for a long time. "
+     icon="dysmantle/cooking/dish-fastfood.png"
+     requires_materials="5xFISH_A,5xFISH_B,8xRICE"
+     key.FLOAT.enemy_aggro_range_percentage_decrease="4"
+    />
+
+    <node id="DISH_BEEF_RICE_BOWL"
+     category="COOKING"
+     display_name="Beef Rice Bowl"
+     description="A bowl of steaming hot cooked rice with traditionally spiced meat on top with a flourish of carrots on the side."
+     icon="dysmantle/cooking/dish-bowl-warm.png"
+     requires_materials="6xCARROT,5xMEAT,4xMUSHROOM_BROWN,8xRICE"
+     key.FLOAT.melee_damage_percentage_increase_vs_tag_MONSTER="2.5"
+    />
+
+    <node id="DISH_CHILI_SOUP"
+     category="COOKING"
+     display_name="Chili Soup"
+     description="A tomato soup spiked with hot spices for that pleasantly burning sensation."
+     icon="dysmantle/cooking/dish-bowl-warm.png"
+     requires_materials="7xTOMATO,6xSPICES"
+     key.FLOAT.backstab_damage_percentage_increase="25"
+    />
+
+    <node id="DISH_CHILI_DOGS"
+     category="COOKING"
+     display_name="Chili Dogs"
+     description="A couple of hot dogs topped with a hot meat sauce. A prized food among hedgehogs for some reason."
+     icon="dysmantle/cooking/dish-fastfood.png"
+     requires_materials="6xMEAT,5xSPICES,5xWHEAT"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_CURRY"
+     category="COOKING"
+     display_name="Curry"
+     description="A delicious and spicy dish that will leave one warm and fulfilled."
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="5xONION,4xRICE,8xSPICES,7xTOMATO"
+     key.FLOAT.cold_protection_absolute_increase="5"
+    />
+
+    <node id="DISH_BREAD"
+     category="COOKING"
+     display_name="Bread"
+     description="A perfectly ordinary bread with a crunchy, flavourful crust made of cornmeal."
+     icon="dysmantle/cooking/dish-sandwich.png"
+     requires_materials="2xCORN,7xWHEAT"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_PASTA_BOLOGNESE"
+     category="COOKING"
+     display_name="Pasta Bolognese"
+     description="A pasta dish with a rich meaty sauce with added tomato."
+     icon="dysmantle/cooking/dish-shallow-plate-warm.png"
+     requires_materials="7xMEAT,6xTOMATO,6xWHEAT"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="DISH_TORTILLA"
+     category="COOKING"
+     display_name="Burrito"
+     description="Spiced meat and lettuce wrapped into a tight package with flatbread. "
+     icon="dysmantle/cooking/dish-fastfood.png"
+     requires_materials="4xLETTUCE,4xMEAT,3xSPICES,5xWHEAT"
+     key.FLOAT.damage_deflect_absolute_increase="10.0"
+    />
+
+    <node id="DISH_KIMCHI"
+     category="COOKING"
+     display_name="Kimchi"
+     description="A spicy dish made of salted and fermented vegetables, rich in dietary fiber."
+     icon="dysmantle/cooking/dish-salad.png"
+     requires_materials="6xLETTUCE,4xONION,6xCARROT,3xSPICES"
+     key.FLOAT.build_limit_increase="15"
+    />
+
+    <node id="DISH_CURRY_UDON"
+     category="COOKING"
+     display_name="Curry Udon"
+     description="A noodle dish infused with a mild and sweet curry sauce."
+     icon="dysmantle/cooking/dish-bowl-warm.png"
+     requires_materials="4xWHEAT,2xMEAT,3xCARROT,6xSPICES"
+     key.FLOAT.critical_hit_chance_absolute_increase="1.5"
+    />
+
+    <node id="DISH_CATFISH_KABAYAKI"
+     category="COOKING"
+     display_name="Catfish Kabayaki"
+     description="A saccharine and exquisite dish made from the legendary catfish."
+     icon="dysmantle/cooking/dish-salad.png"
+     requires_materials="3xFISH_D,6xWHEAT,6xONION,4xRICE"
+     key.FLOAT.material_drop_percentage_increase="100"
+    />
+
+<!-- Skills -->
+
+    <node id="SKILL_INVENTOR_1"
+     category="SKILL" tags="FORCE_SHOW"
+     display_name="Inventor" skill_level="1"
+     description="Enables [GREEN]Inventing[WHITE] and [GREEN]Crafting[WHITE] items at Campfires."
+     icon="dysmantle/skills/inventor.png"
+    />
+
+    <node id="SKILL_FARMER_1"
+     category="SKILL"
+     display_name="Farmer" skill_level="1"
+     _description="Enables [GREEN]Harvest[WHITE] interaction which will always yield maximum crops."
+     key.FLOAT.plant_grow_speed_percentage_increase="20"
+     requires_recipe_crafted="SEED_BAG"
+     icon="dysmantle/skills/farmer.png"
+    />
+
+    <node id="SKILL_FARMER_2"
+     category="SKILL"
+     display_name="Farmer" skill_level="2"
+     icon="dysmantle/skills/farmer.png"
+     key.FLOAT.plant_grow_speed_percentage_increase="20"
+    />
+
+    <node id="SKILL_FARMER_3"
+     category="SKILL"
+     display_name="Farmer" skill_level="3"
+     icon="dysmantle/skills/farmer.png"
+     key.FLOAT.plant_grow_speed_percentage_increase="20"
+    />
+
+    <node id="SKILL_FARMER_4"
+     category="SKILL"
+     display_name="Farmer" skill_level="4"
+     icon="dysmantle/skills/farmer.png"
+     key.FLOAT.plant_grow_speed_percentage_increase="20"
+    />
+
+    <node id="SKILL_FARMER_5"
+     category="SKILL"
+     display_name="Farmer" skill_level="5"
+     icon="dysmantle/skills/farmer.png"
+     key.FLOAT.plant_grow_speed_percentage_increase="20"
+    />
+
+    <node id="SKILL_FARMER_6"
+     category="SKILL" requires_iap="DLC1"
+     display_name="Farmer" skill_level="6"
+     icon="dysmantle/skills/farmer.png"
+     key.FLOAT.plant_grow_speed_percentage_increase="20"
+    />
+
+    <node id="SKILL_FISHER_1"
+     category="SKILL"
+     display_name="Fisher" skill_level="1"
+     requires_recipe_crafted="FISHING_ROD"
+     icon="dysmantle/skills/fisher.png"
+     key.FLOAT.fishing_xp_percentage_increase="100"
+     key.FLOAT.fishing_speed_percentage_increase="30"
+    />
+
+    <node id="SKILL_FISHER_2"
+     category="SKILL"
+     display_name="Fisher" skill_level="2"
+     icon="dysmantle/skills/fisher.png"
+     key.FLOAT.fishing_xp_percentage_increase="50"
+     key.FLOAT.fishing_speed_percentage_increase="35"
+    />
+
+    <node id="SKILL_FISHER_3"
+     category="SKILL"
+     display_name="Fisher" skill_level="3"
+     icon="dysmantle/skills/fisher.png"
+     key.FLOAT.fishing_xp_percentage_increase="50"
+     key.FLOAT.fishing_speed_percentage_increase="40"
+    />
+
+    <node id="SKILL_FISHER_4"
+     category="SKILL"
+     display_name="Fisher" skill_level="4"
+     icon="dysmantle/skills/fisher.png"
+     key.FLOAT.fishing_xp_percentage_increase="50"
+     key.FLOAT.fishing_speed_percentage_increase="45"
+    />
+
+    <node id="SKILL_FISHER_5"
+     category="SKILL"
+     display_name="Fisher" skill_level="5"
+     icon="dysmantle/skills/fisher.png"
+     key.FLOAT.fishing_xp_percentage_increase="50"
+     key.FLOAT.fishing_speed_percentage_increase="50"
+    />
+
+    <node id="SKILL_VIGOROUS_1"
+     category="SKILL"
+     display_name="Vigorous" skill_level="1"
+     icon="dysmantle/skills/vigorous.png"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="SKILL_VIGOROUS_2"
+     category="SKILL"
+     display_name="Vigorous" skill_level="2"
+     icon="dysmantle/skills/vigorous.png"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="SKILL_VIGOROUS_3"
+     category="SKILL"
+     display_name="Vigorous" skill_level="3"
+     icon="dysmantle/skills/vigorous.png"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="SKILL_VIGOROUS_4"
+     category="SKILL"
+     display_name="Vigorous" skill_level="4"
+     icon="dysmantle/skills/vigorous.png"
+     key.FLOAT.hit_points_absolute_increase="5"
+    />
+
+    <node id="SKILL_VIGOROUS_5"
+     category="SKILL"
+     display_name="Vigorous" skill_level="5"
+     icon="dysmantle/skills/vigorous.png"
+     key.FLOAT.hit_points_absolute_increase="10"
+    />
+
+    <node id="SKILL_VIGOROUS_6"
+     category="SKILL" requires_iap="DLC1"
+     display_name="Vigorous" skill_level="6"
+     icon="dysmantle/skills/vigorous.png"
+     key.FLOAT.hit_points_absolute_increase="10"
+    />
+
+    <node id="SKILL_HOARDER_1"
+     category="SKILL"
+     display_name="Hoarder" skill_level="1"
+     icon="dysmantle/skills/hoarder.png"
+     key.FLOAT.material_store_experience_points_percentage_increase="20"
+    />
+
+    <node id="SKILL_HOARDER_2"
+     category="SKILL"
+     display_name="Hoarder" skill_level="2"
+     icon="dysmantle/skills/hoarder.png"
+     key.FLOAT.material_store_experience_points_percentage_increase="20"
+    />
+
+    <node id="SKILL_HOARDER_3"
+     category="SKILL"
+     display_name="Hoarder" skill_level="3"
+     icon="dysmantle/skills/hoarder.png"
+     key.FLOAT.material_store_experience_points_percentage_increase="20"
+    />
+
+    <node id="SKILL_HOARDER_4"
+     category="SKILL"
+     display_name="Hoarder" skill_level="4"
+     icon="dysmantle/skills/hoarder.png"
+     key.FLOAT.material_store_experience_points_percentage_increase="20"
+    />
+
+    <node id="SKILL_HOARDER_5"
+     category="SKILL"
+     display_name="Hoarder" skill_level="5"
+     icon="dysmantle/skills/hoarder.png"
+     key.FLOAT.material_store_experience_points_percentage_increase="20"
+    />
+
+    <node id="SKILL_GATHERER_1"
+     category="SKILL"
+     display_name="Gatherer" skill_level="1" force_show_at_levels="3,5,7,11"
+     description="Start [GREEN]gathering[WHITE] mushrooms, bird eggs, and other useful resources that can be found in the wilderness."
+     icon="dysmantle/skills/gatherer.png"
+     output_feature_id="GATHERER"
+    />
+
+    <node id="SKILL_GATHERER_2"
+     category="SKILL"
+     display_name="Gatherer" skill_level="2"
+     icon="dysmantle/skills/gatherer.png"
+     key.FLOAT.extra_gatherable_chance_percentage_increase="25"
+    />
+
+    <node id="SKILL_GATHERER_3"
+     category="SKILL"
+     display_name="Gatherer" skill_level="3"
+     icon="dysmantle/skills/gatherer.png"
+     key.FLOAT.extra_gatherable_chance_percentage_increase="25"
+    />
+
+    <node id="SKILL_GATHERER_4"
+     category="SKILL"
+     display_name="Gatherer" skill_level="4"
+     icon="dysmantle/skills/gatherer.png"
+     key.FLOAT.extra_gatherable_chance_percentage_increase="25"
+    />
+
+    <node id="SKILL_GATHERER_5"
+     category="SKILL"
+     display_name="Gatherer" skill_level="5"
+     icon="dysmantle/skills/gatherer.png"
+     key.FLOAT.extra_gatherable_chance_percentage_increase="25"
+    />
+
+    <node id="SKILL_MULTITALENTED_1"
+     category="SKILL"
+     display_name="Multi-talented" skill_level="1"
+     description="Choose between [GREEN]4[WHITE] skills instead of 3 when leveling up."
+     icon="dysmantle/skills/multitalented.png"
+    />
+
+    <node id="SKILL_MULTITALENTED_2"
+     category="SKILL"
+     display_name="Multi-talented" skill_level="2"
+     description="Choose between [GREEN]5[WHITE] skills instead of 4 when leveling up."
+     icon="dysmantle/skills/multitalented.png"
+    />
+
+    <node id="SKILL_FAST_LEARNER_1"
+     category="SKILL"
+     display_name="Fast Learner" skill_level="1"
+     icon="dysmantle/skills/fast-learner.png"
+     key.FLOAT.experience_points_percentage_increase="8"
+    />
+
+    <node id="SKILL_FAST_LEARNER_2"
+     category="SKILL"
+     display_name="Fast Learner" skill_level="2"
+     icon="dysmantle/skills/fast-learner.png"
+     key.FLOAT.experience_points_percentage_increase="8"
+    />
+
+    <node id="SKILL_FAST_LEARNER_3"
+     category="SKILL"
+     display_name="Fast Learner" skill_level="3"
+     icon="dysmantle/skills/fast-learner.png"
+     key.FLOAT.experience_points_percentage_increase="8"
+    />
+
+    <node id="SKILL_FAST_LEARNER_4"
+     category="SKILL"
+     display_name="Fast Learner" skill_level="4"
+     icon="dysmantle/skills/fast-learner.png"
+     key.FLOAT.experience_points_percentage_increase="8"
+    />
+
+    <node id="SKILL_FAST_LEARNER_5"
+     category="SKILL"
+     display_name="Fast Learner" skill_level="5"
+     icon="dysmantle/skills/fast-learner.png"
+     key.FLOAT.experience_points_percentage_increase="8"
+    />
+
+    <node id="SKILL_FAST_LEARNER_6"
+     category="SKILL" requires_iap="DLC1"
+     display_name="Fast Learner" skill_level="6"
+     icon="dysmantle/skills/fast-learner.png"
+     key.FLOAT.experience_points_percentage_increase="8"
+    />
+
+    <node id="SKILL_FIGHTER_1"
+     category="SKILL"
+     display_name="Fighter" skill_level="1"
+     icon="dysmantle/skills/fighter.png"
+     key.FLOAT.melee_damage_percentage_increase_vs_tag_MONSTER="5"
+    />
+
+    <node id="SKILL_FIGHTER_2"
+     category="SKILL"
+     display_name="Fighter" skill_level="2"
+     icon="dysmantle/skills/fighter.png"
+     key.FLOAT.melee_damage_percentage_increase_vs_tag_MONSTER="5"
+    />
+
+    <node id="SKILL_FIGHTER_3"
+     category="SKILL"
+     display_name="Fighter" skill_level="3"
+     icon="dysmantle/skills/fighter.png"
+     key.FLOAT.melee_damage_percentage_increase_vs_tag_MONSTER="5"
+    />
+
+    <node id="SKILL_FIGHTER_4"
+     category="SKILL"
+     display_name="Fighter" skill_level="4"
+     icon="dysmantle/skills/fighter.png"
+     key.FLOAT.melee_damage_percentage_increase_vs_tag_MONSTER="10"
+    />
+
+    <node id="SKILL_FIGHTER_5"
+     category="SKILL"
+     display_name="Fighter" skill_level="5"
+     icon="dysmantle/skills/fighter.png"
+     key.FLOAT.melee_damage_percentage_increase_vs_tag_MONSTER="10"
+    />
+
+    <node id="SKILL_FIGHTER_6"
+     category="SKILL" requires_iap="DLC1"
+     display_name="Fighter" skill_level="6"
+     icon="dysmantle/skills/fighter.png"
+     key.FLOAT.melee_damage_percentage_increase_vs_tag_MONSTER="10"
+    />
+
+    <node id="SKILL_PITCHER_1"
+     category="SKILL"
+     display_name="Pitcher" skill_level="1"
+     icon="dysmantle/skills/pitcher.png"
+     key.FLOAT.throwable_weapon_damage_percentage_increase_vs_tag_MONSTER="10"
+    />
+
+    <node id="SKILL_PITCHER_2"
+     category="SKILL"
+     display_name="Pitcher" skill_level="2"
+     icon="dysmantle/skills/pitcher.png"
+     key.FLOAT.throwable_weapon_damage_percentage_increase_vs_tag_MONSTER="10"
+    />
+
+    <node id="SKILL_PITCHER_3"
+     category="SKILL"
+     display_name="Pitcher" skill_level="3"
+     icon="dysmantle/skills/pitcher.png"
+     key.FLOAT.throwable_weapon_damage_percentage_increase_vs_tag_MONSTER="15"
+    />
+
+    <node id="SKILL_PITCHER_4"
+     category="SKILL" requires_iap="DLC1"
+     display_name="Pitcher" skill_level="4"
+     icon="dysmantle/skills/pitcher.png"
+     key.FLOAT.throwable_weapon_damage_percentage_increase_vs_tag_MONSTER="15"
+    />
+
+    <node id="SKILL_PACK_RAT_1"
+     category="SKILL"
+     display_name="Pack Rat" skill_level="1" force_show_at_levels="2,4,9"
+     icon="dysmantle/skills/pack-rat.png"
+     key.INTEGER.material_carry_slot_absolute_increase="1"
+    />
+
+    <node id="SKILL_PACK_RAT_2"
+     category="SKILL"
+     display_name="Pack Rat" skill_level="2"
+     icon="dysmantle/skills/pack-rat.png"
+     key.INTEGER.material_carry_slot_absolute_increase="1"
+    />
+
+    <node id="SKILL_PACK_RAT_3"
+     category="SKILL"
+     display_name="Pack Rat" skill_level="3"
+     icon="dysmantle/skills/pack-rat.png"
+     key.INTEGER.material_carry_slot_absolute_increase="1"
+    />
+
+    <node id="SKILL_CULINARIST_1" force_show_at_levels="6,8"
+     category="SKILL"
+     display_name="Culinarist" skill_level="1"
+     description="[GREEN]Eat[WHITE] edible materials you are carrying to regain [GREEN]Hit Points[WHITE]. Press [BUTTON=DROP] to open the menu during the game."
+     icon="dysmantle/skills/culinarist.png"
+    />
+
+    <node id="SKILL_CULINARIST_2"
+     category="SKILL"
+     display_name="Culinarist" skill_level="2"
+     icon="dysmantle/skills/culinarist.png"
+     key.INTEGER.eating_hit_points_regain_percentage_increase="50"
+    />
+
+    <node id="SKILL_CULINARIST_3"
+     category="SKILL"
+     display_name="Culinarist" skill_level="3"
+     icon="dysmantle/skills/culinarist.png"
+     key.INTEGER.eating_hit_points_regain_percentage_increase="50"
+    />
+
+    <node id="SKILL_CULINARIST_4"
+     category="SKILL"
+     display_name="Culinarist" skill_level="4"
+     icon="dysmantle/skills/culinarist.png"
+     key.INTEGER.eating_hit_points_regain_percentage_increase="50"
+    />
+
+    <node id="SKILL_CULINARIST_5"
+     category="SKILL"
+     display_name="Culinarist" skill_level="5"
+     icon="dysmantle/skills/culinarist.png"
+     key.INTEGER.eating_hit_points_regain_percentage_increase="50"
+    />
+
+    <node id="SKILL_BUILDER_1"
+     category="SKILL" requires_recipe_crafted="BUILDER"
+     display_name="Builder" skill_level="1"
+     icon="dysmantle/skills/builder.png"
+     key.INTEGER.build_limit_increase="10"
+    />
+
+    <node id="SKILL_BUILDER_2"
+     category="SKILL"
+     display_name="Builder" skill_level="2"
+     icon="dysmantle/skills/builder.png"
+     key.INTEGER.build_limit_increase="20"
+    />
+
+    <node id="SKILL_BUILDER_3"
+     category="SKILL"
+     display_name="Builder" skill_level="3"
+     icon="dysmantle/skills/builder.png"
+     key.INTEGER.build_limit_increase="30"
+    />
+
+    <node id="SKILL_BUILDER_4"
+     category="SKILL"
+     display_name="Builder" skill_level="4"
+     icon="dysmantle/skills/builder.png"
+     key.INTEGER.build_limit_increase="40"
+    />
+
+    <node id="SKILL_BUILDER_5"
+     category="SKILL"
+     display_name="Builder" skill_level="5"
+     icon="dysmantle/skills/builder.png"
+     key.INTEGER.build_limit_increase="50"
+    />
+
+    <node id="SKILL_BUILDER_6"
+     category="SKILL" requires_iap="DLC1"
+     display_name="Builder" skill_level="6"
+     icon="dysmantle/skills/builder.png"
+     key.INTEGER.build_limit_increase="60"
+    />
+
+    <node id="SKILL_BUILDER_7"
+     category="SKILL" requires_iap="DLC2"
+     display_name="Builder" skill_level="7"
+     icon="dysmantle/skills/builder.png"
+     key.INTEGER.build_limit_increase="70"
+    />
+
+    <node id="SKILL_DOCTOR_1"
+     category="SKILL" requires_recipe_crafted="PAIN_KILLERS"
+     display_name="Doctor" skill_level="1"
+     description="[GREEN]Heal[WHITE] yourself more with healing items."
+     icon="dysmantle/skills/doctor.png"
+     key.FLOAT.heal_amount_percentage_increase="25"
+    />
+
+    <node id="SKILL_DOCTOR_2"
+     category="SKILL"
+     display_name="Doctor" skill_level="2"
+     icon="dysmantle/skills/doctor.png"
+     key.FLOAT.heal_amount_percentage_increase="25"
+    />
+
+    <node id="SKILL_DOCTOR_3"
+     category="SKILL"
+     display_name="Doctor" skill_level="3"
+     icon="dysmantle/skills/doctor.png"
+     key.FLOAT.heal_amount_percentage_increase="25"
+    />
+
+    <node id="SKILL_DOCTOR_4"
+     category="SKILL"
+     display_name="Doctor" skill_level="4"
+     icon="dysmantle/skills/doctor.png"
+     key.FLOAT.heal_amount_percentage_increase="25"
+    />
+
+    <node id="SKILL_DOCTOR_5"
+     category="SKILL"
+     display_name="Doctor" skill_level="5"
+     icon="dysmantle/skills/doctor.png"
+     key.FLOAT.heal_amount_percentage_increase="25"
+    />
+
+    <node id="SKILL_SCAVENGER_1"
+     category="SKILL"
+     display_name="Scavenger" skill_level="1" force_show_at_levels="12"
+     description="Increases chance of finding extra materials when searching."
+     icon="dysmantle/skills/scavenger.png"
+     key.FLOAT.search_efficiency_absolute_increase="20"
+     output_feature_id="SCAVENGER"
+    />
+
+    <node id="SKILL_SCAVENGER_2"
+     category="SKILL"
+     display_name="Scavenger" skill_level="2"
+     icon="dysmantle/skills/scavenger.png"
+     key.FLOAT.search_efficiency_absolute_increase="20"
+    />
+
+    <node id="SKILL_SCAVENGER_3"
+     category="SKILL"
+     display_name="Scavenger" skill_level="3"
+     icon="dysmantle/skills/scavenger.png"
+     key.FLOAT.search_efficiency_absolute_increase="20"
+    />
+
+    <node id="SKILL_SCAVENGER_4"
+     category="SKILL"
+     display_name="Scavenger" skill_level="4"
+     icon="dysmantle/skills/scavenger.png"
+     key.FLOAT.search_efficiency_absolute_increase="25"
+    />
+
+    <node id="SKILL_SCAVENGER_5"
+     category="SKILL"
+     display_name="Scavenger" skill_level="5"
+     icon="dysmantle/skills/scavenger.png"
+     key.FLOAT.search_efficiency_absolute_increase="25"
+    />
+
+    <node id="SKILL_ANIMAL_FRIEND_1"
+     level_requirement="4"
+     category="SKILL"
+     display_name="Animal Friend" skill_level="1" force_show_at_levels="7,15,21"
+     description="Unlocks [GREEN][RECIPE_NAME=ANIMAL_TREATS][WHITE] Recipe. [GREEN]Animal Friendliness[WHITE] makes animals less afraid of you."
+     icon="dysmantle/skills/animal-friend.png"
+     output_feature_id="ANIMAL_FRIEND"
+     output_recipe_id="ANIMAL_TREATS"
+     key.FLOAT.animal_friend_effect_percentage_increase="20"
+    />
+
+    <node id="SKILL_ANIMAL_FRIEND_2"
+     category="SKILL"
+     display_name="Animal Friend" skill_level="2" force_show_at_levels="8,16,22"
+     description="Enables [GREEN]Animal Petting[WHITE] interaction."
+     icon="dysmantle/skills/animal-friend.png"
+     output_feature_id="ANIMAL_PETTING"
+     key.FLOAT.animal_friend_effect_percentage_increase="20"
+    />
+
+    <node id="SKILL_ANIMAL_FRIEND_3"
+     category="SKILL"
+     display_name="Animal Friend" skill_level="3"
+     description="Animals that are following you fight by your side."
+     icon="dysmantle/skills/animal-friend.png"
+     key.TAGS.tags="FIGHTING_ANIMALS"
+    />
+
+    <node id="SKILL_TURRET_SPECIALIST_1"
+     category="SKILL" requires_recipe_crafted="BUILDER"
+     requires_buildable_id="actors/buildables/turret-machine-gun.xml"
+     display_name="Turret Specialist" skill_level="1" force_show_at_levels="12"
+     icon="dysmantle/skills/turret-specialist.png"
+     key.FLOAT.turret_ammo_percentage_increase="20"
+     key.FLOAT.turret_reload_speed_percentage_increase="50"
+    />
+
+    <node id="SKILL_TURRET_SPECIALIST_2"
+     category="SKILL"
+     display_name="Turret Specialist" skill_level="2"
+     icon="dysmantle/skills/turret-specialist.png"
+     key.FLOAT.turret_ammo_percentage_increase="20"
+     key.FLOAT.turret_reload_speed_percentage_increase="50"
+    />
+
+    <node id="SKILL_TURRET_SPECIALIST_3"
+     category="SKILL"
+     display_name="Turret Specialist" skill_level="3"
+     icon="dysmantle/skills/turret-specialist.png"
+     key.FLOAT.turret_ammo_percentage_increase="20"
+     key.FLOAT.turret_reload_speed_percentage_increase="50"
+    />
+
+    <node id="SKILL_TURRET_SPECIALIST_4"
+     category="SKILL"
+     display_name="Turret Specialist" skill_level="4"
+     icon="dysmantle/skills/turret-specialist.png"
+     key.FLOAT.turret_ammo_percentage_increase="20"
+     key.FLOAT.turret_reload_speed_percentage_increase="50"
+    />
+
+    <node id="SKILL_TURRET_SPECIALIST_5"
+     category="SKILL"
+     display_name="Turret Specialist" skill_level="5"
+     icon="dysmantle/skills/turret-specialist.png"
+     key.FLOAT.turret_ammo_percentage_increase="20"
+     key.FLOAT.turret_reload_speed_percentage_increase="50"
+    />
+
+    <node id="SKILL_TURRET_SPECIALIST_6"
+     category="SKILL" requires_iap="DLC2"
+     display_name="Turret Specialist" skill_level="6"
+     icon="dysmantle/skills/turret-specialist.png"
+     key.FLOAT.turret_ammo_percentage_increase="20"
+     key.FLOAT.turret_reload_speed_percentage_increase="50"
+    />
+
+    <node id="SKILL_FLOWER_POWER_1"
+     level_requirement="5"
+     category="SKILL" requires_iap="DLC2" tags="HIDE_IN_LEVELUP_SCREEN"
+     display_name="Flower Power" skill_level="1"
+     description="Enables collecting exotic flowers."
+     icon="dysmantle/skills/flower-power.png"
+    />
+
+<!-- Obelisk effects and names. Recipe ids should match obelisk actor ids on the island stage. -->
+
+    <node id="OBELISK_OF_WAR"
+     category="OBELISK"
+     display_name="Obelisk of War"
+     key.FLOAT.melee_attack_speed_percentage_increase="10"
+    />
+
+    <node id="OBELISK_OF_WINTER"
+     category="OBELISK"
+     display_name="Obelisk of Winter"
+     key.FLOAT.cold_protection_absolute_increase="5"
+    />
+
+    <node id="OBELISK_OF_SUMMER"
+     category="OBELISK"
+     display_name="Obelisk of Summer"
+     key.FLOAT.heat_protection_absolute_increase="5"
+    />
+
+    <node id="OBELISK_OF_WIND"
+     category="OBELISK"
+     display_name="Obelisk of Wind"
+     key.FLOAT.running_speed_percentage_increase="7"
+    />
+
+    <node id="OBELISK_OF_WATER"
+     category="OBELISK"
+     display_name="Obelisk of Water"
+     key.FLOAT.damage_evade_chance_absolute_increase="15"
+    />
+
+    <node id="OBELISK_OF_EARTH"
+     category="OBELISK"
+     display_name="Obelisk of Earth"
+     key.FLOAT.damage_reduction_percentage_increase = "8"
+    />
+
+    <node id="OBELISK_OF_FIRE"
+     category="OBELISK"
+     display_name="Obelisk of Fire"
+     key.FLOAT.critical_hit_chance_absolute_increase="6"
+    />
+
+  </array>
+</root>

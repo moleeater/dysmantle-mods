@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="tags" value="SEARCHABLE,MOD_OCPD_MINIMAP,MOD_ONE_HIT_OBJECTS" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,SET_NONSOLID_ON_DEATH_END,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE,PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="PLANTS" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="120" />
+    <node id="damage_type_accept_mask" value="UNSPECIFIED,BLUNT,SLASHING,FIRE,COLD,POISON,ELECTRIC,EXPLOSIVE,SELF_DESTRUCT,HIT_GROUND,PROJECTILE,HEAT" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES">
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="20xPLANTS" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="SEARCHABLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleSearchable">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death" category="DEATH" animation_controller="PhysicsMaterialBasedDeath" forced_animation_length_in_seconds="0.20" force_update_visual_bounds="true" />
+    <node id="open" category="DEATH" animation_controller="PhysicsMaterialBasedDeath" forced_animation_length_in_seconds="0.20" force_update_visual_bounds="true" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="shadow_angle" value="270" />
+    <node id="shadow_offset_x" value="-7.92" />
+    <node id="shadow_method" value="NONE" />
+    <node id="ground_decal_angle" value="270" />
+    <node id="ground_decal_scale" value="0.58" />
+    <node id="ground_decal_offset_x" value="-0.53" />
+    <node id="ground_decal_offset_y" value="0.67" />
+    <node id="model" value="models/objects/maple-leaf-pile.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+    <node interaction_0_id="search"
+     interaction_0_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#10;}"
+     interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local command = Command_Create(&#34;search_materials&#34;);&#10;&#9;Command_SetStageObjectReference(command, so_self);&#10;&#9;Stage_SendStageObjectCommandWithDelete(so_activator, command);&#10;&#10;&#9;Actor_PlayAnimation(so_self, &#34;open&#34;);&#10;&#9;Stage_KillActorAndStartDeathAnimation(so_self);&#10;}"
+     interaction_0_script_to_run_on_interaction_started="function OnInteractionStarted(so_self, so_activator)&#10;{&#10;&#9;Actor_PlayAnimation(so_activator, &#34;search-container&#34;);&#10;}"
+     interaction_0_script_to_run_on_interaction_cancelled="function OnInteractionCancelled(so_self, so_activator)&#10;{&#10;&#9;Actor_StopAnimationWithFade(so_activator, &#34;search-container&#34;, 0.2);&#10;}"
+     interaction_0_trigger="HOLD_DOWN_BUTTON"
+     interaction_0_trigger_parameter_float="1.5"
+     interaction_0_controller_button="USE"
+     interaction_0_text="Search"
+    />
+
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="CYLINDER" />
+    <node id="radius_xy" value="45.9" />
+    <node id="min_z" value="-85.0" />
+    <node id="max_z" value="19.4" />
+    <node id="offset_x" value="3.3" />
+    <node id="offset_y" value="1.8" />
+  </array>
+</root>

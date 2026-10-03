@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="RECIPES">
+
+    <node category="CRAFTING" id="MOD_RIFT_FORWARDS"
+      tags="HIDE_IN_COLLECTION"
+      output_item_id="items/specials/mod-rift-forwards.nut"
+      />
+
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_EPIC" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_LEGENDARY" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_PLANTS" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_SCRAP_FABRIC" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_SCRAP_WOOD" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_SCRAP_METAL" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_PLASTICS" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_STONE" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_WOOD" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_IRON" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_SCRAP_ELECTRONICS" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_CERAMICS" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_FABRIC" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_HIDE" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_BRICKS" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_RUBBER" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_STEEL" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_LUMBER" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_ELECTRONICS" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_MANA_BEAD" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_TITANIUM" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_MANA_CHUNK" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_MANA_SHARD" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_TOMB_ORB" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_NIGHT_MANA" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_CPU" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_MUSHROOM_BROWN" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_MUSHROOM_RED" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_MUSHROOM_WHITE" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_RICE" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_BERRIES" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_EGG" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_CACTUS" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_SPICES" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_FISH_A" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_FISH_B" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_FISH_C" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_FISH_E" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_FISH_D" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_MEAT" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_BONE" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_TOMATO" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_CARROT" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_CORN" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_LETTUCE" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_ONION" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_POTATO" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_WHEAT" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_LOBSTER" requires_iap="DLC1" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_OCTOPUS" requires_iap="DLC2" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_BANANA" requires_iap="DLC2" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_TRUFFLE" requires_iap="DLC2" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_CLOUDBERRY" requires_iap="DLC2" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_TIGER_LILY" requires_iap="DLC2" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_AMBER_LILY" requires_iap="DLC2" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_FROST_LILY" requires_iap="DLC2" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_CHITIN" requires_iap="DLC2" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_GOLD_ORE" requires_iap="DLC2" />
+    <node category="CRAFTING" tags="HIDE_IN_COLLECTION" id="COMPRESSOR_GOLD_BAR" requires_iap="DLC2" />
+
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="load_priority" value="1" />
+    <node id="author" value="MoleEater" />
+    <node id="title" value="Quality of life" />
+    <node id="description" value="110+ quality-of-life mods packed into one modpack, with a settings interface to enable the optional mods.
+
+What is included? Watch this Youtube playlist: https://e934.short.gy/dysmantle-mod-quality-of-life-playlist
+
+Troubleshooting: https://dysmantle.fandom.com/wiki/Modding
+" />
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

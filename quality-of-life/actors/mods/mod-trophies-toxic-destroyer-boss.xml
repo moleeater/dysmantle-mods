@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="INFO">
+		<node id="version" value="1" />
+		<node id="tags" value="HIDE_IN_EDITOR_PALETTE" />
+	</array>
+
+	<array id="ATTRIBUTES">
+		<node id="actor_flags" value="STATIC" />
+		<node id="physics_material" value="PLASTIC" />
+		<node id="mass" value="100" />
+		<node id="gravity_multiplier" value="1" />
+		<node id="turn_speed" value="1" />
+		<node id="move_acceleration" value="200" />
+		<node id="max_move_speed" value="1" />
+		<node id="dampening_factor_on_ground" value="0" />
+		<node id="dampening_factor_on_air" value="0" />
+		<node id="restitution_coefficient" value="0.5" />
+		<node id="friction" value="0.2" />
+		<node id="minimum_damage_threshold" value="0" />
+		<node id="aggro_radius" value="128" />
+		<node id="friend_avoidance_radius" value="10" />
+		<node id="initial_scale" value="1" />
+		<node id="damage" value="0" />
+		<node id="range" value="400" />
+		<node id="max_hit_points" value="100" />
+		<node id="friend_group" value="OBSTACLES" />
+		<node id="color" r="1" g="1" b="1" a="1" />
+	</array>
+
+	<array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+		<node id="color_material_1" type="COLOR" value="0.38353,0.490324,0.135392,1" />
+		<node id="color_material_2" type="COLOR" value="0.842115,0.776154,0.35,1" />
+	</array>
+
+	<array id="AI_PARAMETERS" ai="ObstacleAnimated">
+	</array>
+
+	<array id="ANIMATIONS">
+		<node id="pose.shoot"
+		 animation_controller="SingleAnimationFrame"
+		 skeleton_animation="models/animations/humanoid-volunteer_throw_secondary.anim"
+		 fade_in_duration="0"
+		 fade_out_duration="0"
+		 key_values="{{FLOAT,|Q|t|Q|,|Q|0.69|Q|}}"
+		/>
+
+		<node id="pose.walk"
+		 animation_controller="SingleAnimationFrame"
+		 skeleton_animation="models/animations/humanoid-zombie_female_walk_forward.anim"
+		 fade_in_duration="0"
+		 fade_out_duration="0"
+		 key_values="{{FLOAT,|Q|t|Q|,|Q|0.01|Q|}}"
+		/>
+
+	</array>
+
+	<array id="RENDERER_PARAMETERS">
+		<node id="renderer" value="ModelSkinned" />
+		<node id="shadow_drawn_for_each_bone" value="true" />
+		<node id="shadow_method" value="NONE" />
+		<node id="receive_shadows" value="false" />
+		<node id="model" value="models/enemies/zombie-male-1.model" />
+	</array>
+
+	<array id="PROPS">
+		<node id="head" mount_bone_id="head" actor_type="actors/enemies/zombie-male-head-2.xml" mount_scale="0.8" />
+		<node id="glow-warts1"
+		 mount_bone_id="arm-2.L"
+		 actor_type="actors/objects/corruption-prop-warts-glow.xml"
+		 mount_offset_x="0"
+		 mount_offset_y="10.65"
+		 mount_offset_z="0"
+		 mount_rotation_angles_x="-2.11604"
+		 mount_rotation_angles_y="1.47149"
+		 mount_rotation_angles_z="-0.0298451"
+		/>
+
+		<node id="bubbles2"
+		 mount_bone_id="hand.L"
+		 actor_type="actors/objects/corruption-prop-bubbles.xml"
+		 mount_scale="1.4"
+		 mount_offset_x="2.81"
+		 mount_offset_y="13.6"
+		 mount_offset_z="0"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="-12.4805"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="warts2"
+		 mount_bone_id="arm-1.L"
+		 actor_type="actors/objects/corruption-prop-warts.xml"
+		 mount_scale="1.24"
+		 mount_offset_x="-0.95"
+		 mount_offset_y="-0.99"
+		 mount_offset_z="1.1"
+		 mount_rotation_angles_x="0.849277"
+		 mount_rotation_angles_y="0.00349066"
+		 mount_rotation_angles_z="-8.41912"
+		/>
+
+		<node id="back_warts"
+		 mount_bone_id="chest"
+		 actor_type="actors/objects/corruption-prop-warts-glow.xml"
+		 mount_scale="1.72"
+		 mount_offset_x="-1.6"
+		 mount_offset_y="10.21"
+		 mount_offset_z="-4.89"
+		 mount_rotation_angles_x="-0.341386"
+		 mount_rotation_angles_y="-11.0495"
+		 mount_rotation_angles_z="-0.233001"
+		/>
+
+		<node id="back_warts2"
+		 mount_bone_id="chest"
+		 actor_type="actors/objects/corruption-prop-warts-glow.xml"
+		 mount_scale="1.31"
+		 mount_offset_x="-9.62"
+		 mount_offset_y="12.48"
+		 mount_offset_z="-2.88"
+		 mount_rotation_angles_x="-0.728675"
+		 mount_rotation_angles_y="-5.38801"
+		 mount_rotation_angles_z="-0.233001"
+		/>
+
+		<node id="bubbles22"
+		 mount_bone_id="hand.L"
+		 actor_type="actors/objects/corruption-prop-bubbles.xml"
+		 mount_scale="1.09"
+		 mount_offset_x="1.92"
+		 mount_offset_y="19.6"
+		 mount_offset_z="-4.5"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="-16.1871"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="spikes"
+		 mount_bone_id="head"
+		 actor_type="actors/objects/corruption-prop-spike.xml"
+		 mount_scale="0.83"
+		 mount_rotation_angles_x="-1.36677"
+		 mount_rotation_angles_y="-0.831475"
+		 mount_rotation_angles_z="-0.0919788"
+		/>
+
+		<node id="spikes2"
+		 mount_bone_id="head"
+		 actor_type="actors/objects/corruption-prop-spike.xml"
+		 mount_scale="0.53"
+		 mount_rotation_angles_x="-0.723614"
+		 mount_rotation_angles_y="-5.25903"
+		 mount_rotation_angles_z="-0.0919788"
+		/>
+
+		<node id="warts_foot"
+		 mount_bone_id="ankle.R"
+		 actor_type="actors/objects/corruption-prop-warts.xml"
+		 mount_scale="1.13"
+		 mount_offset_x="0.15"
+		 mount_offset_y="1.62"
+		 mount_offset_z="0.64"
+		 mount_rotation_angles_x="-27.8754"
+		 mount_rotation_angles_y="-10.4641"
+		 mount_rotation_angles_z="3.61336"
+		/>
+
+		<node id="warts_foot2"
+		 mount_bone_id="ankle.L"
+		 actor_type="actors/objects/corruption-prop-warts.xml"
+		 mount_scale="0.9"
+		 mount_offset_x="0.15"
+		 mount_offset_y="1.62"
+		 mount_offset_z="0.64"
+		 mount_rotation_angles_x="-27.8754"
+		 mount_rotation_angles_y="-10.4641"
+		 mount_rotation_angles_z="3.61336"
+		/>
+
+	</array>
+
+	<array id="COLLIDER">
+		<node id="type" value="NONE" />
+	</array>
+</root>

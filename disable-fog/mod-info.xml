@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="load_priority" value="0" />
+    <node id="author" value="MoleEater" />
+    <node id="title" value="Disable fog" />
+    <node id="description" value="No camera distance fog on main stages. Needs Camera distance modifier mod from Quality of life modpack.
+Disables the fog which is drawn when the camera is zoomed out. Does not change tombs and dungeons.
+
+Troubleshooting: https://dysmantle.fandom.com/wiki/Modding
+
+The game engine uses fog to mask distant objects, so you cannot see when those are drawn as a low quality object (LOD) or not drawn at all. Every video game engine does this to an extent for performance issues. This mod puts this fog so high up, it is not covering the camera. You can see the maximum draw distance of the game engine as black areas.
+
+This mod only has reason the be used with the Camera distance modifier mod in the Quality of life modpack. Why is this a separate download, and not included in there, then? Because it can not be toggled optionally, the changes this makes are permanent, and some QoL mod users wouldn't want to use the Camera distance modifier, but just other mods in that pack.
+" />
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

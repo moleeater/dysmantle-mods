@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+
+<!-- List of fonts used. These are reloaded when the language changes. -->
+<array id="FONTS">
+
+ <node id="fonts/small.mft" />
+ <node id="fonts/medium.mft" />
+ 
+</array>
+
+<!-- List of bitmaps to be reloaded when the language changes. This is a temp solution, will be automated in future. -->
+<array id="BITMAPS">
+ <node id="ui/gfx/game-logo.png" />
+</array>
+
+
+
+</root>

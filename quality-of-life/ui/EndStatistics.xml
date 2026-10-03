@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+    <node
+     name="fader"
+     type="RECTANGLE"
+     inherit="BlackBackground"
+     scale_type="STRETCH_TO_COVER_SCREEN"
+     rectangle.width="100"
+     rectangle.height="100"
+    />
+
+    <node
+     name="TF"
+     type="TOUCHFIELD"
+     inherit="DefaultTouchField"
+     position.x="0.499219"
+     position.y="0.5"
+     active="false"
+     align="VCENTER,HCENTER"
+     touchfield.automatic_content_width="true"
+     touchfield.automatic_content_height="true"
+     touchfield.content_width="1015.77"
+     touchfield.content_height="2405.71"
+     touchfield.area_width="1114.67"
+     touchfield.area_height="641.495"
+     touchfield.axis_x_enabled="false"
+     touchfield.value_y="1665.37"
+    />
+
+    <node
+     name="aligner_1"
+     type="ALIGNER"
+     inherit="DefaultAligner"
+     parent="TF"
+     position.x="-0.316333"
+     position.y="0.0682196"
+     angle.x="0.0436332"
+     angle.y="-0.274889"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="314.957"
+     aligner.area_height="2041.2"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="1"
+     aligner.min_padding="10"
+    />
+
+    <node
+     name="marker_3"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_1"
+     position.y="0.0214834"
+     align="VCENTER,HCENTER"
+     marker.area_width="224"
+     marker.area_height="87.7041"
+    />
+
+    <node
+     name="marker_4"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_1"
+     position.y="0.0964472"
+     align="VCENTER,HCENTER"
+     marker.area_width="224"
+     marker.area_height="198.328"
+    />
+
+    <node
+     name="textbox_1"
+     type="TEXTBOX"
+     inherit="MediumTextbox"
+     parent="aligner_1"
+     position.y="0.149927"
+     color="0.9,0.1,0.1,1"
+     scale="0.63328"
+     textbox.text="Statistics"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+     name="aligner_statistics"
+     type="ALIGNER"
+     inherit="DefaultAligner"
+     parent="aligner_1"
+     position.y="0.175303"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="241.745"
+     aligner.area_height="972.019"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="1"
+     aligner.min_padding="6"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="last_line_marker"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_1"
+     position.y="0.664675"
+     align="VCENTER,HCENTER"
+     marker.area_width="348.444"
+     marker.area_height="33.7778"
+    />
+
+    <node
+     name="spacer"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_statistics"
+     position.y="0.00155293"
+     align="VCENTER,HCENTER"
+     marker.area_width="348.444"
+     marker.area_height="3.01896"
+    />
+
+    <node
+     name="textbox_14"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_1"
+     position.y="0.677848"
+     localize="false"
+     scale="0.906194"
+     textbox.textbox_width="895"
+    />
+
+    <node
+     name="marker_10"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_1"
+     position.y="0.844925"
+     align="VCENTER,HCENTER"
+     marker.area_width="224"
+     marker.area_height="633.077"
+    />
+
+    <node
+     name="part_pool"
+     type="EMITTER"
+     inherit="DefaultEmitter"
+     parent="fader"
+     position.x="0.196354"
+     position.y="0.247222"
+    />
+
+  </array>
+</root>

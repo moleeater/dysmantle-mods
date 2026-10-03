@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="objects/escapepod launchpad" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,PERMANENT,SOLID,INDESTRUCTIBLE,CAN_BE_STOOD_ON" />
+    <node id="physics_material" value="METAL" />
+    <node id="mass" value="100" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="1" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="200" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.5" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="500" />
+    <node id="friend_avoidance_radius" value="30" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="100" />
+    <node id="max_hit_points" value="1" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES">
+    <node id="path_planning_hints" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}};-90,-0,-0;-150,-60,-0;-150,60,-0" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleObstacleAnimated">
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="Model" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="14.72" />
+    <node id="shadow_alpha" value="0.5" />
+    <node id="model" value="models/objects/escapepod-launchpad.model" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_starting_stage_on_game_start_escapepod_launchpad"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-starting-stage-on-game-start-escapepod-launchpad.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="MESH" />
+    <node id="model" value="models/objects/escapepod-launchpad-collider.model" />
+    <node id="min_z" value="-27.3" />
+    <node id="max_z" value="0.0" />
+    <node id="is_closed" value="1" />
+  </array>
+
+  <array id="COLLIDER_EDGES">
+    <node px0="95.62" py0="-103.44" px1="95.62" py1="-124.58" />
+    <node px0="95.62" py0="-124.58" px1="113.94" py1="-135.15" />
+    <node px0="113.94" py0="-135.15" px1="132.25" py1="-124.58" />
+    <node px0="132.25" py0="-124.58" px1="132.25" py1="-103.44" />
+    <node px0="113.94" py0="-92.86" px1="95.62" py1="-103.44" />
+    <node px0="132.25" py0="-103.44" px1="113.94" py1="-92.86" />
+    <node px0="103.44" py0="95.62" px1="124.58" py1="95.62" />
+    <node px0="124.58" py0="95.62" px1="135.15" py1="113.94" />
+    <node px0="135.15" py0="113.94" px1="124.58" py1="132.25" />
+    <node px0="124.58" py0="132.25" px1="103.44" py1="132.25" />
+    <node px0="92.86" py0="113.94" px1="103.44" py1="95.62" />
+    <node px0="103.44" py0="132.25" px1="92.86" py1="113.94" />
+    <node px0="-95.62" py0="103.44" px1="-95.62" py1="124.58" />
+    <node px0="-95.62" py0="124.58" px1="-113.94" py1="135.15" />
+    <node px0="-113.94" py0="135.15" px1="-132.25" py1="124.58" />
+    <node px0="-132.25" py0="124.58" px1="-132.25" py1="103.44" />
+    <node px0="-113.94" py0="92.86" px1="-95.62" py1="103.44" />
+    <node px0="-132.25" py0="103.44" px1="-113.94" py1="92.86" />
+    <node px0="-103.44" py0="-95.62" px1="-124.58" py1="-95.62" />
+    <node px0="-124.58" py0="-95.62" px1="-135.15" py1="-113.94" />
+    <node px0="-135.15" py0="-113.94" px1="-124.58" py1="-132.25" />
+    <node px0="-124.58" py0="-132.25" px1="-103.44" py1="-132.25" />
+    <node px0="-92.86" py0="-113.94" px1="-103.44" py1="-95.62" />
+    <node px0="-103.44" py0="-132.25" px1="-92.86" py1="-113.94" />
+  </array>
+
+</root>

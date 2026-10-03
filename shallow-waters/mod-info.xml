@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="load_priority" value="2" />
+    <node id="author" value="MoleEater" />
+    <node id="title" value="Shallow waters" />
+    <node id="description" value="Walk in the lakes and the seas, without dying or rubber duck teleported. Works in tandem with 2 mods from the Cheats modpack
+
+Troubleshooting: https://dysmantle.fandom.com/wiki/Modding
+
+On my recent playthrough, i got tired of running into the waters and constantly teleported, so i looked into a way to flag the waters as walkable surfaces. You still can not walk off from the waters to the shore as they are too high, so you need to use the Rift forwards mod or the Automatic climbing mod from the Cheats modpack to get out of the water to the shore somehow.
+As the waters are not flagged as lethal from now on, the monsters are walking into it too, so you need to check the waters for enemies.
+" />
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

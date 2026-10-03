@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="Mortar Pod" localize="true" />
+    <node id="tags" value="POINT_OF_INTEREST,MONSTER" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,PERMANENT,SOLID,FRIEND_OR_FOE" />
+    <node id="persistency_flags" value="TEMPORARY_DEATH_STATE,TEMPORARY_TRANSFORM,TEMPORARY_ATTRIBUTES" />
+    <node id="physics_material" value="FLESH" />
+    <node id="mass" value="100" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="1" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="200" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.5" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="500" />
+    <node id="friend_avoidance_radius" value="30" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="100" />
+    <node id="max_hit_points" value="150" />
+    <node id="damage_type_accept_mask" value="UNSPECIFIED,BLUNT,SLASHING,PIERCING,FIRE,COLD,ELECTRIC,EXPLOSIVE,SELF_DESTRUCT,HIT_GROUND,PROJECTILE" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES">
+    <node id="script_file" type="FILE" value="actors/enemies/scripts/mortarpod.nut" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENEMY_STATIONARY" />
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="8xPLANTS" />
+    <node id="description" type="STRING" flags="PERSISTENT,LOCALIZED,NO_REPLICATION" value="A mutated form of a tropical flower that spits out toxic sludge when it senses lifeforms nearby." />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleEnemyScripted">
+    <node id="max_aggro_range" type="FLOAT" value="360" />
+    <node id="max_field_of_view" type="FLOAT" value="90" />
+    <node id="allow_flanking" type="BOOLEAN" value="false" />
+    <node id="react_to_enemy_collisions" type="BOOLEAN" value="true" />
+    <node id="roadmap_requires_activation" type="BOOLEAN" value="false" />
+    <node id="alert_system_enabled" type="BOOLEAN" value="false" />
+    <node id="alert_level_start_wander" type="FLOAT" value="50" />
+    <node id="alert_level_stop_wander" type="FLOAT" value="1" />
+    <node id="alert_level_start_investigate_noise" type="FLOAT" value="75" />
+    <node id="alert_level_stop_chase" type="FLOAT" value="20" />
+    <node id="alert_level_increase_speed" type="FLOAT" value="5" />
+    <node id="alert_level_decrease_speed" type="FLOAT" value="5" />
+    <node id="alert_level_max_distance_from_home" type="FLOAT" value="600" />
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="idle"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/mortarpod-rig-idle.anim"
+     playback_speed="0.5"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     start_playing_at_random_time_key="true"
+    />
+
+    <node id="shoot"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/mortarpod-rig-shoot.anim"
+     event_0_trigger_time="0.551"
+     event_0_id="shoot"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1.1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mortarpod-shoot-01|SC|sfx/enemies/mortarpod-shoot-02|SC|sfx/enemies/mortarpod-shoot-03|Q|}}"
+     event_0_command_word="fire_weapon"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="die"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/mortarpod-rig-die.anim"
+     model="models/enemies/mortarpod-dead.model"
+     switch_model_on_animation_start="true"
+     delete_all_decals_on_model_switch="true"
+     event_0_trigger_time="0"
+     event_0_id="splash"
+     event_0_effect="effects/mortarpod-death-splash.xml"
+     event_0_spawn_effect_offset_z="-37.74"
+     event_1_trigger_time="0"
+     event_1_id="lingering cloud"
+     event_1_effect="effects/puke-puddle-death.xml"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node id="hit" animation_controller="Playback" skeleton_animation="models/animations/mortarpod-rig-hit.anim" fade_in_duration="0.1" fade_out_duration="0.1" />
+    <node id="stun" animation_controller="Playback" skeleton_animation="models/animations/mortarpod-rig-stunned.anim" wrap_mode="LOOP" />
+    <node id="inside_mana_chamber"
+     wrap_mode="LOOP"
+     keep_on_stack_top="true"
+     forced_animation_length_in_seconds="0.50"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_bone_id="bone-1"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/enemy-inside-mana-chamber.xml"
+     event_0_spawn_effect_angle_z="180.00"
+     event_0_spawn_effect_offset_z="-25.00"
+     event_1_trigger_time="0.184"
+     event_1_id="id1"
+     event_1_bone_id="bone-1"
+     event_1_ignore_bone_orientation="true"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/enemy-inside-mana-chamber.xml"
+     event_1_spawn_effect_angle_z="180.00"
+     event_1_spawn_effect_offset_z="-25.00"
+     event_2_trigger_time="0.377"
+     event_2_id="id3"
+     event_2_bone_id="bone-1"
+     event_2_ignore_bone_orientation="true"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/enemy-inside-mana-chamber.xml"
+     event_2_spawn_effect_angle_z="180.00"
+     event_2_spawn_effect_offset_z="-25.00"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="shadow_method" value="NONE" />
+    <node id="ground_decal_type" value="mortarpod-veins" />
+    <node id="ground_decal_scale" value="1.25" />
+    <node id="model" value="models/enemies/mortarpod.model" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_peaceful_mode_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-peaceful-mode-on-game-start.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="CAPSULE" />
+    <node id="radius" value="28.0" />
+    <node id="height" value="16.0" />
+    <node id="offset_z" value="-36.0" />
+  </array>
+
+</root>

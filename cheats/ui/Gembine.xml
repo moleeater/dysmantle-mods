@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="SHADERFILTER"
+     inherit="FaderBlurFilter"
+     shaderfilter.cache_results="true"
+    />
+
+    <node
+     name="panel"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanelTransparent"
+     position.x="0.498746"
+     position.y="0.499514"
+     color="0.3,0.3,0.3,0.75"
+     ui_scale_modifier="0.2"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="687"
+     ninepatch.rectangle_height="490"
+    />
+
+    <node
+     name="ScorePanel"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="panel"
+     position.x="-0.347597"
+     position.y="0.0525441"
+     visible="false"
+     align="VCENTER,HCENTER"
+     marker.area_width="157.438"
+     marker.area_height="134.827"
+    />
+
+    <node
+     name="panel2"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanelTransparent"
+     parent="ScorePanel"
+     position.x="0.00659729"
+     position.y="-0.679803"
+     align="HCENTER"
+     ninepatch.rectangle_width="145"
+     ninepatch.rectangle_height="183"
+    />
+
+    <node
+     name="aligner_1"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="ScorePanel"
+     position.x="0.00787868"
+     position.y="0.00277092"
+     aligner.layout="STACK"
+     aligner.area_height="117.408"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="8"
+    />
+
+    <node
+     name="textbox_score"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="aligner_1"
+     position.y="-0.408999"
+     color="0.9,0.05,0.05,1"
+     scale="0.791422"
+     align="VCENTER,HCENTER"
+     textbox.text="SCORE"
+    />
+
+    <node
+     name="Score"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_1"
+     position.y="-0.181722"
+     localize="false"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="115"
+     textbox.text_align="HCENTER"
+    />
+
+    <node
+     name="marker_1"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_1"
+     position.y="-0.0202082"
+     align="VCENTER,HCENTER"
+     marker.area_width="81.7778"
+     marker.area_height="5.92592"
+    />
+
+    <node
+     name="textbox_hiscore"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="aligner_1"
+     position.y="0.164167"
+     color="0.8,0.05,0.05,1"
+     scale="0.791422"
+     align="VCENTER,HCENTER"
+     textbox.text="HISCORE"
+    />
+
+    <node
+     name="Highscore"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_1"
+     position.y="0.323307"
+     localize="false"
+     scale="0.768341"
+     align="HCENTER"
+     textbox.textbox_width="122"
+     textbox.text="115,975"
+     textbox.text_align="HCENTER"
+    />
+
+    <node
+     name="NextGemPanel"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="panel"
+     position.x="0.356363"
+     position.y="0.0369028"
+     visible="false"
+     align="VCENTER,HCENTER"
+     marker.area_width="160.696"
+     marker.area_height="92.5786"
+    />
+
+    <node
+     name="panel3"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanelTransparent"
+     parent="NextGemPanel"
+     position.x="-0.00972149"
+     position.y="-0.967741"
+     align="HCENTER"
+     ninepatch.rectangle_width="145"
+     ninepatch.rectangle_height="183"
+    />
+
+    <node
+     name="textbox_next_gem"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="NextGemPanel"
+     position.x="-0.00510671"
+     position.y="-0.2269"
+     color="0.9,0.05,0.05,1"
+     scale="0.791422"
+     align="VCENTER,HCENTER"
+     textbox.text="NEXT"
+    />
+
+    <node
+     name="NextGem"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="NextGemPanel"
+     position.x="-0.00518487"
+     position.y="0.209648"
+     align="VCENTER,HCENTER"
+     marker.area_width="115.364"
+     marker.area_height="41.5677"
+    />
+
+    <node
+     name="Reward"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="panel"
+     position.x="-0.40877"
+     position.y="-0.387528"
+     custom_draw="true"
+     scale="0.777309"
+     align="VCENTER,HCENTER"
+     marker.area_width="70"
+     marker.area_height="60"
+    />
+
+    <node
+     name="Board"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="panel"
+     position.x="0.00101909"
+     position.y="0.0599966"
+     scale="1.02711"
+     align="VCENTER,HCENTER"
+     marker.area_width="267.66"
+     marker.area_height="264.383"
+    />
+
+    <node
+     name="Tutorial"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="panel"
+     position.x="0.000921659"
+     position.y="0.426605"
+     localize="false"
+     scale="0.852363"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="695"
+     textbox.text="Figure out how to combine the two gems."
+     textbox.text_align="HCENTER"
+    />
+
+    <node
+     name="Leave"
+     type="BUTTON"
+     inherit="SmallSquareXButton"
+     parent="panel"
+     position.x="0.424044"
+     position.y="-0.393702"
+     on_click_script_call="UI_PopScreen()"
+     can_be_accessed_with_gamepads="false"
+    />
+
+    <node
+     name="textbox_1"
+     type="TEXTBOX"
+     inherit="MediumTextbox"
+     parent="panel"
+     position.x="0.00129724"
+     position.y="-0.347302"
+     scale="0.81491"
+     align="VCENTER,HCENTER"
+     textbox.text="GEMBINE"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node parent="panel" name="mod_beat_gembine"
+      type="BUTTON" inherit="SmallButton"
+      align="TOP,HCENTER"
+      scale="0.5"
+      position.x="-0.35"
+      position.y="-0.23"
+      button.bitmap_color_over="0.75,0.75,0.75,1"
+      button.bitmap_color_pressed="0.5,0.5,0.5,1"
+      button.adjust_ninepatch_width_based_on_text_length="true"
+      button.text_padding_horizontal="32"
+      localize="false"
+      can_be_accessed_with_gamepads="false"
+      visible="false"
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

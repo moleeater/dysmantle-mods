@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="POINT_OF_INTEREST,BRIDGE" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH,CAN_BE_STOOD_ON" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="200" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="0.8" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1000" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="stage" type="STAGE" value="stages/pet-stages/pet-stage-placeholder.stage" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="BURIED_TELEPORTER" />
+    <node id="color_glow_material_telewater" type="COLOR" value="1,1,1,1" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="ObstacleAnimated">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="stage_enter" animation_controller="Playback" skeleton_animation="models/animations/tomb-timed-switch-rig-loop.anim" />
+    <node id="idle"
+     script="function OnUpdate(so_self, time_key, length)&#10;{&#10;&#9; local t = 1 + 0.5 * cos(2* PI * time_key/length);&#10;&#9; t *= 0.1;&#10;&#9; Actor_SetModelGlowColor(so_self, t,t,t,1);&#10;}"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/tomb-timed-switch-rig-loop.anim"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0"
+     event_0_id="water_ripples"
+     event_0_bone_id="stone"
+     event_0_effect="effects/telestone-ripple.xml"
+     event_0_spawn_effect_offset_y="1.00"
+     event_1_trigger_time="0"
+     event_1_id="particles"
+     event_1_effect="effects/telestone-particles.xml"
+     event_2_trigger_time="0.497"
+     event_2_id="particles2"
+     event_2_effect="effects/telestone-particles.xml"
+    />
+
+    <node id="stage_exit"
+     script="function OnStart(so_self, length)&#10;{&#10;}&#10;&#10;function OnUpdate(so_self, time_key, length)&#10;{&#10;&#9; local offset = 1.15;&#10;&#9; local t = 1 + 0.5 * cos(7* PI * time_key/length);&#10;&#10;&#9; Actor_SetModelGlowColor(so_self, t,t,t,1);&#10;}"
+     animation_controller="PlaybackReversed"
+     skeleton_animation="models/animations/telepad-rig-water-rise.anim"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/pet-teleporter-use|Q|}}"
+    />
+
+    <node id="activated" script="function OnStart(so_self, length)&#10;{&#10;&#9;Actor_SetModelGlowColor(so_self, 1,1,1,1);&#10;}" />
+    <node id="discover"
+     script="function OnStart(so_self, length)&#10;{&#10;&#9;Actor_SetModelGlowColor(so_self, 1,1,1,0.0);&#10;}&#10;&#10;function OnUpdate(so_self, time_key, length)&#10;{&#10;&#9; /*local kvs = StageObject_GetKeyValueStore(so_self)&#10;&#9; local value = StageObject_GetKeyValue(so_self, &#34;glow_value&#34;, 0);&#10;&#10;&#9; if (value &#60;= 1)&#10;&#9; {&#10;&#10;&#9;&#9; value = value + (0.3 * time_key);&#10;&#9;&#9; Actor_SetModelGlowColor(so_self, value,value,value,1.0);&#10;&#9; }*/&#10;&#10;&#9; local offset = 1.15;&#10;&#9; local t = m_clamp01f((time_key-offset) / (length-offset));&#10;&#10;&#9; Actor_SetModelGlowColor(so_self, t,t,t,1);&#10;}"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/telepad-rig-water-rise.anim"
+     event_0_trigger_time="0.15"
+     event_0_id="sfx"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/pet-teleporter-activate|Q|}}"
+     event_1_trigger_time="1.2"
+     event_1_id="sfx2"
+     event_1_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/tomb-floor-button-use|Q|}}"
+    />
+
+    <node id="completed" script="function OnStart(so_self, length)&#10;{&#10;&#9;Actor_SetModelGlowColor(so_self, 1,1,1,1.0);&#10;}" wrap_mode="LOOP" forced_animation_length_in_seconds="0.30" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="5" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="ground_decal_angle" value="-90" />
+    <node id="allow_static_caching" value="false" />
+    <node id="model" value="models/interactives/telestone.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="use"
+        interaction_0_external_script="scripts/interactions/buried-teleporter-press-button.nut"
+        interaction_0_trigger="PRESS_BUTTON"
+        interaction_0_controller_button="USE"
+        interaction_0_radius="70"
+      interaction_1_id="stage_enter"
+        interaction_1_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local stage = StageObject_GetKeyValue(so_self, &#34;stage&#34;, null);&#10;&#9;if (stage == null ||&#10;&#9;&#9;!string_contains_string(stage, &#34;pet-stages/&#34;) ||&#10;&#9;&#9;string_contains_string(stage, &#34;pet-stages/pet-hub.stage&#34;))&#10;&#9;{&#10;&#9;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#9;}&#10;&#9;else&#10;&#9;{&#10;&#9;&#9;if (Game_IsTombCompleted(stage))&#10;&#9;&#9;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#9;}&#10;&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#10;&#9;local player_index = Game_GetPlayerIndexByActor(so_activator);&#10;&#9;StageObject_SetPosition(so_activator, pos[0] + 60 * player_index, pos[1], pos[2]);&#10;&#9;StageObject_SetAngle(so_activator, 40 * player_index);&#10;&#9;Actor_SetActorFlag(so_activator, &#34;ONLY_VISIBLE_IN_EDITOR&#34;, true);&#10;&#9;Actor_PlayAnimationWithDelayPlaybackSpeedAndPosition(so_activator, &#34;teleport_in&#34;, 0, 1, 0);&#10;&#9;Actor_PlayAnimationWithDelayPlaybackSpeedAndPosition(so_self, &#34;stage_enter&#34;, 0, 1, 0);&#10;}"
+        interaction_1_trigger="NONE"
+      interaction_2_id="init"
+        interaction_2_external_script="scripts/interactions/buried-teleporter-on-game-start.nut"
+        interaction_2_trigger="ON_GAME_START"
+      interaction_3_id="digged"
+        interaction_3_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;local so_plane = Stage_QueryNearestActorWithType(pos[0],pos[1],pos[2], 120, &#34;actors/interactives/buried-teleporter-plane.xml&#34;);&#10;//    local so_plane = StageObject_GetKeyValue(so_self, &#34;plane&#34;);&#10;&#9;if (so_plane == null)&#10;&#9;&#9;return;&#10;&#9;Stage_KillActorAndStartDeathAnimation(so_plane);&#10;&#10;&#9;Actor_SetActorFlag(so_self, &#34;ONLY_VISIBLE_IN_EDITOR&#34;, false);&#10;&#9;Actor_PlayAnimation(so_self, &#34;idle&#34;);&#10;//    Stage_DeleteStageObject(so_plane);&#10;}"
+        interaction_3_trigger="NONE"
+      interaction_4_id="pet_investigate"
+        interaction_4_disable_after_interaction="0"
+        interaction_4_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;if(Stage_GetFilename().find(&#34;pet-hub&#34;) != null)&#10;&#9;&#9;return false;&#10;&#9;if(StageObject_GetKeyValue(so_self, &#34;unlocked&#34;, false))&#10;&#9;&#9;return false;&#10;&#9;if(Game_IsBuriedTeleporterFound(StageObject_GetId(so_self)))&#10;&#9;&#9;return false;&#10;&#9;if(Game_GetWorldState(&#34;BURIED_TELEPORTERS&#34;, StageObject_GetId(so_self)) == &#34;-1&#34;)&#10;&#9;&#9;return false;&#10;&#10;&#9;local so_id = StageObject_GetId (so_self);&#10;&#9;if(Game_IsBuriedTeleporterDiggable(so_id) == false)&#10;&#9;&#9;return false;&#10;&#10;&#10;&#9;return true;&#10;}"
+        interaction_4_script_to_run_when_actor_enters_radius="function OnActorEntersRadius(so_self, so_activator)&#10;{&#10;&#9;local so_ref = StageObject_GetKeyValueStageObjectReference (so_activator, &#34;ref_pet&#34;)&#10;&#10;&#9;if(Game_IsBuriedTeleporterFound(StageObject_GetId(so_self)))&#10;&#9;&#9;return;&#10;&#10;&#9;if(so_ref == null)&#10;&#9;&#9;return;&#10;&#10;&#9;if(!StageObject_HasTag (so_ref, &#34;PET&#34;))&#10;&#9;&#9;return;&#10;&#10;&#9;if(Game_GetWorldState (&#34;BURIED_TELEPORTERS&#34;, StageObject_GetId(so_self)) == &#34;-1&#34;)&#10;&#9;&#9;return;&#10;&#10;&#9;local current_action = Game_GetCurrentAction(so_ref);&#10;&#9;if (current_action == &#34;InvestigateAction&#34; || current_action == &#34;AttackAction&#34;)&#10;&#9;{&#10;&#9;&#9;return;&#10;&#9;}&#10;&#9;//Game_StartInvestigate (so_ref, &#34;Lure&#34;, so_self);&#10;&#9;local pos = StageObject_GetPosition (so_self);&#10;&#9;//Game_PlayAnimationByAction (so_ref, &#34;discovery&#34;)&#10;&#9;//Game_StartMoveTo(so_ref, pos[0], pos[1]);&#10;&#9;//Game_PlayAnimationByAction (so_ref, &#34;digging&#34;)&#10;&#10;&#9;StageObject_SetKeyValueBoolean (so_ref,&#34;is_running&#34;,true);&#10;&#9;Actor_PlayAnimation (so_ref, &#34;discovery&#34;);&#10;&#9;Game_StartInvestigate(so_ref, &#34;NONE&#34;, so_self);&#10;&#10;&#10;/*&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;local so_plane = Stage_QueryNearestActorWithType(pos[0],pos[1],pos[2], 120, &#34;actors/interactives/buried-teleporter-plane.xml&#34;);&#10;&#9;if (so_plane != null)&#10;&#9;{&#10;&#9;&#9;Actor_PlayAnimationWithDelayPlaybackSpeedAndPosition(so_plane, &#34;found&#34;,2,1,0);&#10;&#9;}&#10;*/&#10;&#10;&#9;//Actor_QueueActionMoveToDistanceFromActor (so_ref,so_self, 30);&#10;&#9;//Actor_QueueActionPlayAnimation (so_ref,&#34;digging&#34;,true);&#10;}"
+        interaction_4_trigger="ENTER_RADIUS"
+        interaction_4_radius="400"
+      interaction_5_id="pet_digged"
+        interaction_5_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;local so_plane = Stage_QueryNearestActorWithType(pos[0],pos[1],pos[2], 120, &#34;actors/interactives/buried-teleporter-plane.xml&#34;);&#10;&#9;if (so_plane != null)&#10;&#9;{&#10;&#9;&#9;Actor_PlayAnimationWithDelayPlaybackSpeedAndPosition(so_plane, &#34;found&#34;,0,1,0);&#10;&#9;} //so_self&#10;&#9;Game_SetWorldState(&#34;BURIED_TELEPORTERS&#34;, StageObject_GetId(so_self),&#34;-1&#34;);&#10;}"
+        interaction_5_trigger="NONE"
+      interaction_6_id="mod_pet_pointer_on_game_start"
+        interaction_6_trigger="ON_GAME_START"
+        interaction_6_external_script="scripts/interactions/mods/mod-pet-pointer-on-game-start.nut"
+      interaction_7_id="mod_reveal_teleporters_on_game_start"
+        interaction_7_trigger="ON_GAME_START"
+        interaction_7_external_script="scripts/interactions/mods/mod-reveal-teleporters-on-game-start.nut"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="CYLINDER" />
+    <node id="radius_xy" value="29.5" />
+    <node id="min_z" value="0.0" />
+    <node id="max_z" value="10.0" />
+  </array>
+
+</root>

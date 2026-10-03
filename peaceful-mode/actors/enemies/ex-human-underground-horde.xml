@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="Ex-Human Dweller" localize="true" />
+    <node id="tags" value="POINT_OF_INTEREST,MONSTER,NO_AREA_LEVEL_SCALING" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SOLID,FRIEND_OR_FOE,AFFECTED_BY_GRAVITY,COLLIDE_AGAINST_STATIC_EDGES,SET_NONSOLID_ON_DEATH_END,DELETE_ACTOR_AFTER_DEATH,CAN_STAND_ON_ACTORS" />
+    <node id="persistency_flags" value="TEMPORARY_DEATH_STATE,TEMPORARY_TRANSFORM,TEMPORARY_ATTRIBUTES" />
+    <node id="physics_material" value="FLESH" />
+    <node id="mass" value="800" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.75" />
+    <node id="move_acceleration" value="0" />
+    <node id="max_move_speed" value="75" />
+    <node id="dampening_factor_on_ground" value="8" />
+    <node id="dampening_factor_on_air" value="0.5" />
+    <node id="restitution_coefficient" value="0.15" />
+    <node id="friction" value="0" />
+    <node id="minimum_damage_threshold" value="1" />
+    <node id="aggro_radius" value="240" />
+    <node id="friend_avoidance_radius" value="50" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="16" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="500" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="FollowPath_path" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|false|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}}" />
+    <node id="FollowPath_start_automatically" type="BOOLEAN" value="false" />
+    <node id="Wander_radius" type="FLOAT" value="300" />
+    <node id="Wander_start_automatically" type="BOOLEAN" value="false" />
+    <node id="default_knockback_strength" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="200" />
+    <node id="default_running_speed_multiplier" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="2.4" />
+    <node id="default_strafing_speed_multiplier" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="1.25" />
+    <node id="map_icon_clone" type="BITMAP" flags="PERSISTENT,NO_REPLICATION" value="map/icon-enemy.png" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENEMY_NORMAL" />
+    <node id="script_file" type="FILE" flags="PERSISTENT,NO_REPLICATION" value="actors/enemies/scripts/ex-human-horde-female.nut" />
+    <node id="stance" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="hands_free" />
+    <node id="description" type="STRING" flags="PERSISTENT,LOCALIZED,NO_REPLICATION" value="Existing in the darkness below the ground has made the Dweller lose its eyesight. It relies almost purely on sounds for navigation." />
+    <node id="hearing_multiplier" type="FLOAT" value="1" />
+    <node id="xp_reward_multiplier" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="0.006" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleEnemyScripted">
+    <node id="max_aggro_range" type="FLOAT" value="500" />
+    <node id="max_field_of_view" type="FLOAT" value="90" />
+    <node id="allow_flanking" type="BOOLEAN" value="true" />
+    <node id="react_to_enemy_collisions" type="BOOLEAN" value="false" />
+    <node id="roadmap_requires_activation" type="BOOLEAN" value="false" />
+    <node id="alert_system_enabled" type="BOOLEAN" value="false" />
+    <node id="alert_level_start_wander" type="FLOAT" value="50" />
+    <node id="alert_level_stop_wander" type="FLOAT" value="1" />
+    <node id="alert_level_start_investigate_noise" type="FLOAT" value="75" />
+    <node id="alert_level_stop_chase" type="FLOAT" value="20" />
+    <node id="alert_level_increase_speed" type="FLOAT" value="5" />
+    <node id="alert_level_decrease_speed" type="FLOAT" value="5" />
+    <node id="alert_level_max_distance_from_home" type="FLOAT" value="600" />
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleAvoidFriends" />
+  </array>
+
+  <array id="ANIMATIONS">
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node id="die"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_die1.anim"
+     fade_out_duration="0"
+     pause_at_end="true"
+     key_values="{{FLOAT,|Q|fall_angle|Q|,|Q|180|Q|}}"
+     event_0_trigger_time="0.75"
+     event_0_id="puff1"
+     event_0_trigger_if_animation_is_fading_out="false"
+     event_0_bone_id="spine-1"
+     event_0_ignore_bone_orientation="true"
+     event_0_effect="effects/shelter-dweller-death.xml"
+     event_1_trigger_time="0.75"
+     event_1_id="puff2"
+     event_1_trigger_if_animation_is_fading_out="false"
+     event_1_bone_id="chest"
+     event_1_ignore_bone_orientation="true"
+     event_1_effect="effects/shelter-dweller-death.xml"
+     event_2_trigger_time="0.75"
+     event_2_id="puff3"
+     event_2_trigger_if_animation_is_fading_out="false"
+     event_2_bone_id="arm-2.L"
+     event_2_ignore_bone_orientation="true"
+     event_2_effect="effects/shelter-dweller-death.xml"
+     event_3_trigger_time="0.75"
+     event_3_id="puff4"
+     event_3_trigger_if_animation_is_fading_out="false"
+     event_3_bone_id="arm-2.R"
+     event_3_ignore_bone_orientation="true"
+     event_3_effect="effects/shelter-dweller-death.xml"
+     event_4_trigger_time="0.75"
+     event_4_id="puff5"
+     event_4_trigger_if_animation_is_fading_out="false"
+     event_4_bone_id="hand.R"
+     event_4_ignore_bone_orientation="true"
+     event_4_effect="effects/shelter-dweller-death.xml"
+     event_5_trigger_time="0.75"
+     event_5_id="puff6"
+     event_5_trigger_if_animation_is_fading_out="false"
+     event_5_bone_id="hand.L"
+     event_5_ignore_bone_orientation="true"
+     event_5_effect="effects/shelter-dweller-death.xml"
+     event_6_trigger_time="0.75"
+     event_6_id="puff7"
+     event_6_trigger_if_animation_is_fading_out="false"
+     event_6_bone_id="head"
+     event_6_ignore_bone_orientation="true"
+     event_6_effect="effects/shelter-dweller-death.xml"
+     event_6_spawn_effect_offset_x="-13.45"
+     event_7_trigger_time="0.75"
+     event_7_id="puff8"
+     event_7_trigger_if_animation_is_fading_out="false"
+     event_7_bone_id="ball.L"
+     event_7_ignore_bone_orientation="true"
+     event_7_effect="effects/shelter-dweller-death.xml"
+     event_8_trigger_time="0.75"
+     event_8_id="puff9"
+     event_8_bone_id="ball.R"
+     event_8_ignore_bone_orientation="true"
+     event_8_effect="effects/shelter-dweller-death.xml"
+     event_9_trigger_time="0.75"
+     event_9_id="puff10"
+     event_9_trigger_if_animation_is_fading_out="false"
+     event_9_bone_id="leg-2.L"
+     event_9_ignore_bone_orientation="true"
+     event_9_effect="effects/shelter-dweller-death.xml"
+     event_10_trigger_time="0.75"
+     event_10_id="puff11"
+     event_10_trigger_if_animation_is_fading_out="false"
+     event_10_bone_id="leg-2.R"
+     event_10_ignore_bone_orientation="true"
+     event_10_effect="effects/shelter-dweller-death.xml"
+    />
+
+    <node id="die2"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_die2.anim"
+     fade_out_duration="0"
+     pause_at_end="true"
+     key_values="{{FLOAT,|Q|fall_angle|Q|,|Q|180|Q|}}"
+     event_0_trigger_time="0.8"
+     event_0_id="puff1"
+     event_0_bone_id="spine-1"
+     event_0_ignore_bone_orientation="true"
+     event_0_effect="effects/shelter-dweller-death.xml"
+     event_1_trigger_time="0.8"
+     event_1_id="puff2"
+     event_1_bone_id="head"
+     event_1_ignore_bone_orientation="true"
+     event_1_effect="effects/shelter-dweller-death.xml"
+     event_2_trigger_time="0.8"
+     event_2_id="puff3"
+     event_2_bone_id="hand.L"
+     event_2_ignore_bone_orientation="true"
+     event_2_effect="effects/shelter-dweller-death.xml"
+     event_3_trigger_time="0.8"
+     event_3_id="puff4"
+     event_3_bone_id="hand.R"
+     event_3_ignore_bone_orientation="true"
+     event_3_effect="effects/shelter-dweller-death.xml"
+     event_4_trigger_time="0.8"
+     event_4_id="puff5"
+     event_4_bone_id="leg-2.L"
+     event_4_ignore_bone_orientation="true"
+     event_4_effect="effects/shelter-dweller-death.xml"
+     event_5_trigger_time="0.8"
+     event_5_id="puff6"
+     event_5_bone_id="leg-2.R"
+     event_5_ignore_bone_orientation="true"
+     event_5_effect="effects/shelter-dweller-death.xml"
+     event_6_trigger_time="0.8"
+     event_6_id="puff7"
+     event_6_bone_id="ball.L"
+     event_6_ignore_bone_orientation="true"
+     event_6_effect="effects/shelter-dweller-death.xml"
+     event_7_trigger_time="0.8"
+     event_7_id="puff8"
+     event_7_bone_id="ball.R"
+     event_7_ignore_bone_orientation="true"
+     event_7_effect="effects/shelter-dweller-death.xml"
+    />
+
+    <node id="die3"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_die3.anim"
+     fade_out_duration="0"
+     pause_at_end="true"
+     key_values="{{FLOAT,|Q|fall_angle|Q|,|Q|0|Q|}}"
+     event_0_trigger_time="0.75"
+     event_0_id="puff1"
+     event_0_bone_id="spine-1"
+     event_0_ignore_bone_orientation="true"
+     event_0_effect="effects/shelter-dweller-death.xml"
+     event_1_trigger_time="0.75"
+     event_1_id="puff2"
+     event_1_bone_id="head"
+     event_1_ignore_bone_orientation="true"
+     event_1_effect="effects/shelter-dweller-death.xml"
+     event_2_trigger_time="0.75"
+     event_2_id="puff3"
+     event_2_bone_id="arm-2.R"
+     event_2_ignore_bone_orientation="true"
+     event_2_effect="effects/shelter-dweller-death.xml"
+     event_3_trigger_time="0.75"
+     event_3_id="puff4"
+     event_3_bone_id="arm-2.L"
+     event_3_ignore_bone_orientation="true"
+     event_3_effect="effects/shelter-dweller-death.xml"
+     event_4_trigger_time="0.75"
+     event_4_id="puff5"
+     event_4_bone_id="hand.L"
+     event_4_ignore_bone_orientation="true"
+     event_4_effect="effects/shelter-dweller-death.xml"
+     event_5_trigger_time="0.75"
+     event_5_id="puff6"
+     event_5_bone_id="hand.R"
+     event_5_ignore_bone_orientation="true"
+     event_5_effect="effects/shelter-dweller-death.xml"
+     event_6_trigger_time="0.75"
+     event_6_id="puff7"
+     event_6_bone_id="leg-2.L"
+     event_6_ignore_bone_orientation="true"
+     event_6_effect="effects/shelter-dweller-death.xml"
+     event_7_trigger_time="0.75"
+     event_7_id="puff8"
+     event_7_bone_id="leg-2.R"
+     event_7_ignore_bone_orientation="true"
+     event_7_effect="effects/shelter-dweller-death.xml"
+     event_8_trigger_time="0.75"
+     event_8_id="puff9"
+     event_8_bone_id="ball.L"
+     event_8_ignore_bone_orientation="true"
+     event_8_effect="effects/shelter-dweller-death.xml"
+     event_9_trigger_time="0.75"
+     event_9_id="puff10"
+     event_9_bone_id="ball.R"
+     event_9_ignore_bone_orientation="true"
+     event_9_effect="effects/shelter-dweller-death.xml"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node id="drown"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-volunteer_drowning.anim"
+     playback_speed="0.75"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0.966997"
+     event_0_id="drown"
+     event_0_command_word="self_destruct"
+    />
+
+    <node id="fall" animation_controller="Playback" skeleton_animation="models/animations/humanoid-zombie_female_falling.anim" wrap_mode="LOOP" />
+    <node id="hit"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_hit1-additive.anim"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/dweller-hurt-01|SC|sfx/enemies/dweller-hurt-02|SC|sfx/enemies/dweller-hurt-03|Q|}}"
+    />
+
+    <node id="idle" animation_controller="DysmantleIdle" skeleton_animation="models/animations/humanoid-zombie_female_idle-2.anim" bone_group_id="NoRootMovement" fade_out_duration="0.6" />
+    <node id="investigate_lure" animation_controller="Playback" skeleton_animation="models/animations/humanoid-zombie_female_lured.anim" wrap_mode="LOOP" />
+    <node id="landing" animation_controller="Playback" skeleton_animation="models/animations/humanoid-zombie_female_landing_soft.anim" />
+    <node id="landing_damage" animation_controller="Playback" skeleton_animation="models/animations/humanoid-zombie_female_landing_hard.anim" />
+    <node id="melee.hands_free"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_melee.anim"
+     tags="MELEE"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1.1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/dweller-attack-01|SC|sfx/enemies/dweller-attack-02|SC|sfx/enemies/dweller-attack-03|Q|}}"
+     event_1_trigger_time="0.5"
+     event_1_id="turn"
+     event_1_command_word="turn_towards_target"
+     event_2_trigger_time="0.77"
+     event_2_id="id1"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/zombie-swing-horizontal-180.xml"
+     event_2_spawn_effect_offset_x="21.74"
+     event_2_spawn_effect_offset_z="-65.07"
+     event_3_trigger_time="0.8"
+     event_3_id="attack"
+     event_3_spawn_effect_offset_x="55.00"
+     event_3_spawn_effect_offset_y="-10.00"
+     event_3_command_word="melee_attack"
+     event_3_command_word_key_values="{{FLOAT,|Q|angle|Q|,|Q|120|Q|}}"
+    />
+
+    <node id="melee.hands_free-2"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_melee-2.anim"
+     tags="MELEE"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1.1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/dweller-attack-01|SC|sfx/enemies/dweller-attack-02|SC|sfx/enemies/dweller-attack-03|Q|}}"
+     event_1_trigger_time="0.45"
+     event_1_id="turn"
+     event_1_command_word="turn_towards_target"
+     event_2_trigger_time="0.5"
+     event_2_id="id2"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/zombie-swing-horizontal-180-ccw.xml"
+     event_2_spawn_effect_angle_z="33.00"
+     event_2_spawn_effect_offset_x="2.97"
+     event_2_spawn_effect_offset_y="-4.75"
+     event_2_spawn_effect_offset_z="-58.79"
+     event_3_trigger_time="0.61"
+     event_3_id="attack"
+     event_3_spawn_effect_offset_x="45.00"
+     event_3_spawn_effect_offset_y="25.00"
+     event_3_command_word="melee_attack"
+     event_3_command_word_key_values="{{FLOAT,|Q|angle|Q|,|Q|120|Q|}}"
+     event_4_trigger_time="1.1"
+     event_4_id="id1"
+     event_4_spawn_effect_to_local_particle_system="true"
+     event_4_effect="effects/zombie-swing-horizontal-180.xml"
+     event_4_spawn_effect_offset_x="1.00"
+     event_4_spawn_effect_offset_z="-65.07"
+     event_5_trigger_time="1.16"
+     event_5_id="attack2"
+     event_5_spawn_effect_offset_x="45.00"
+     event_5_spawn_effect_offset_y="-25.00"
+     event_5_command_word="melee_attack"
+     event_5_command_word_key_values="{{FLOAT,|Q|angle|Q|,|Q|120|Q|}}"
+    />
+
+    <node id="move.hands_free.idle.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_idle.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     start_playing_at_random_time_key="true"
+    />
+
+    <node id="move.hands_free.jog.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_run_forward.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0.0577"
+     event_0_id="footstep"
+     event_0_bone_id="ankle.R"
+     event_0_command_word="footstep"
+     event_1_trigger_time="0.512945"
+     event_1_id="footstep2"
+     event_1_bone_id="ankle.L"
+     event_1_command_word="footstep"
+    />
+
+    <node id="move.hands_free.run.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_run_forward.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0.0577"
+     event_0_id="footstep"
+     event_0_bone_id="ankle.R"
+     event_0_command_word="footstep"
+     event_1_trigger_time="0.512945"
+     event_1_id="footstep2"
+     event_1_bone_id="ankle.L"
+     event_1_command_word="footstep"
+    />
+
+    <node id="move.hands_free.turning.left"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_turn-left.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     start_playing_at_random_time_key="true"
+    />
+
+    <node id="move.hands_free.turning.right"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_turn-right.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     start_playing_at_random_time_key="true"
+    />
+
+    <node id="move.hands_free.walk.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_walk_forward.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0.0577"
+     event_0_id="footstep"
+     event_0_bone_id="ankle.R"
+     event_0_command_word="footstep"
+     event_1_trigger_time="0.512945"
+     event_1_id="footstep2"
+     event_1_bone_id="ankle.L"
+     event_1_command_word="footstep"
+    />
+
+    <node id="spot_enemy"
+     forced_animation_length_in_seconds="1.50"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_trigger_if_actor_is_dead="false"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.7,0.8|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/dweller-alert-01|SC|sfx/enemies/dweller-alert-02|SC|sfx/enemies/dweller-alert-03|Q|}}"
+    />
+
+    <node id="stun"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_stunned.anim"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_bone_id="head"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/stun-stars.xml"
+     event_1_trigger_time="0.62"
+     event_1_id="id1"
+     event_1_bone_id="head"
+     event_1_ignore_bone_orientation="true"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/stun-stars.xml"
+     event_2_trigger_time="1.28"
+     event_2_id="id2"
+     event_2_bone_id="head"
+     event_2_ignore_bone_orientation="true"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/stun-stars.xml"
+     event_3_trigger_time="1.96"
+     event_3_id="id3"
+     event_3_bone_id="head"
+     event_3_ignore_bone_orientation="true"
+     event_3_spawn_effect_to_local_particle_system="true"
+     event_3_effect="effects/stun-stars.xml"
+    />
+
+    <node id="unused_melee.hands_free-areal"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_melee-areal.anim"
+     tags="MELEE"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_effect="effects/sfx-ex-female-attack.xml"
+     event_1_trigger_time="1.1"
+     event_1_id="turn"
+     event_1_command_word="turn_towards_target"
+     event_2_trigger_time="1.48"
+     event_2_id="woosh1"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/zombie-swing-horizontal-180.xml"
+     event_2_spawn_effect_offset_z="-65.00"
+     event_3_trigger_time="1.49"
+     event_3_id="attack1"
+     event_3_spawn_effect_offset_x="60.00"
+     event_3_command_word="melee_attack"
+     event_4_trigger_time="1.92"
+     event_4_id="attack2"
+     event_4_spawn_effect_offset_x="60.00"
+     event_4_command_word="melee_attack"
+     event_5_trigger_time="1.93"
+     event_5_id="woosh2"
+     event_5_spawn_effect_to_local_particle_system="true"
+     event_5_effect="effects/zombie-swing-horizontal-180-ccw.xml"
+     event_5_spawn_effect_angle_z="33.00"
+     event_5_spawn_effect_offset_x="2.97"
+     event_5_spawn_effect_offset_y="-4.75"
+     event_5_spawn_effect_offset_z="-58.79"
+     event_6_trigger_time="2.23"
+     event_6_id="woosh3"
+     event_6_spawn_effect_to_local_particle_system="true"
+     event_6_effect="effects/zombie-swing-horizontal-180.xml"
+     event_6_spawn_effect_offset_x="1.00"
+     event_6_spawn_effect_offset_z="-44.02"
+     event_7_trigger_time="2.24"
+     event_7_id="attack3"
+     event_7_spawn_effect_offset_x="-60.00"
+     event_7_command_word="melee_attack"
+     event_8_trigger_time="2.98"
+     event_8_id="woosh4"
+     event_8_spawn_effect_to_local_particle_system="true"
+     event_8_effect="effects/zombie-swing-horizontal-180-ccw.xml"
+     event_8_spawn_effect_angle_z="180.00"
+     event_8_spawn_effect_offset_x="2.97"
+     event_8_spawn_effect_offset_y="-4.75"
+     event_8_spawn_effect_offset_z="-58.79"
+     event_9_trigger_time="3.01"
+     event_9_id="attack4"
+     event_9_spawn_effect_offset_x="-60.00"
+     event_9_command_word="melee_attack"
+     event_10_trigger_time="3.42943"
+     event_10_id="woosh5"
+     event_10_spawn_effect_to_local_particle_system="true"
+     event_10_effect="effects/zombie-swing-horizontal-180.xml"
+     event_10_spawn_effect_angle_z="180.00"
+     event_10_spawn_effect_offset_x="-5.60"
+     event_10_spawn_effect_offset_z="-65.07"
+     event_11_trigger_time="3.44"
+     event_11_id="attack5"
+     event_11_spawn_effect_offset_x="60.00"
+     event_11_command_word="melee_attack"
+    />
+
+    <node id="wait.hands_free"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_melee.anim"
+     tags="MELEE"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1.1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/dweller-attack-01|SC|sfx/enemies/dweller-attack-02|SC|sfx/enemies/dweller-attack-03|Q|}}"
+     event_1_trigger_time="0.5"
+     event_1_id="turn"
+     event_1_command_word="turn_towards_target"
+     event_2_trigger_time="0.77"
+     event_2_id="id1"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/zombie-swing-horizontal-180.xml"
+     event_2_spawn_effect_offset_x="21.74"
+     event_2_spawn_effect_offset_z="-65.07"
+     event_3_trigger_time="0.8"
+     event_3_id="attack"
+     event_3_spawn_effect_offset_x="55.00"
+     event_3_spawn_effect_offset_y="-10.00"
+     event_3_command_word="melee_attack"
+     event_3_command_word_key_values="{{FLOAT,|Q|angle|Q|,|Q|120|Q|}}"
+    />
+
+    <node id="wait.hands_free-2"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_idle-2.anim"
+     bone_group_id="NoRootMovement"
+     tags="MELEE"
+     fade_out_duration="0.6"
+    />
+
+    <node id="climb_up" animation_controller="Playback" skeleton_animation="models/animations/humanoid-volunteer_climb_up_shelter.anim" playback_speed="1.5" fade_in_duration="0" />
+    <node id="keep_awake" wrap_mode="LOOP" play_on_create="true" forced_animation_length_in_seconds="0.50" force_awake_during_animation="true" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="0.4" />
+    <node id="shadow_alpha" value="0.3" />
+    <node id="shadow_drawn_for_each_bone" value="true" />
+    <node id="render_scale" value="1.3" />
+    <node id="model" value="models/enemies/shelter-dweller.model" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_peaceful_mode_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-peaceful-mode-on-game-start.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="CAPSULE" />
+    <node id="radius" value="12.0" />
+    <node id="height" value="60.0" />
+    <node id="offset_z" value="-42.0" />
+  </array>
+
+</root>

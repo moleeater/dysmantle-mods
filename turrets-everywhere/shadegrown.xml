@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+  <array id="DEFAULT_KEY_VALUES">
+    <node id="ground_grid_lit_in_shaders" type="BOOLEAN" value="true" />
+    <node id="ground_grid_normals_and_specular" type="BOOLEAN" value="true" />
+    <node id="static_actors_are_lit_in_shader" type="BOOLEAN" value="true" />
+    <node id="leave_actor_decals" type="BOOLEAN" value="true" />
+    <node id="max_lights_per_dynamic_actor" type="INTEGER" value="6" />
+
+    <node id="num_chunks_to_keep_in_memory_in_editor" type="INTEGER" value="128" />
+    <node id="num_chunks_to_keep_in_memory_in_game" type="INTEGER" value="42" />
+
+    <node id="actor_type_cache_size" type="INTEGER" value="200" />
+    <node id="ui_scale_modifier" type="FLOAT" value="0" />
+    <node id="interaction_icon_scale" type="FLOAT" value="0.8" />
+    <node id="interaction_text_scale" type="FLOAT" value="0.8" />
+    <node id="text_base_scale" type="FLOAT" value="0.7" />
+    <node id="camera_distance" type="FLOAT" value="1" />
+    
+    <node id="ground_casts_shadows" type="BOOLEAN" value="true" />
+  </array>
+    
+  <array id="LOD_TESTS" required_features="LOD_TESTS" >
+    <node id="stage_chunk_lods" type="BOOLEAN" value="true" />
+  </array>
+    
+  <array id="SMALLER_UI_KEY_VALUES" required_features="SMALLER_UI" >
+    <node id="ui_scale_modifier" type="FLOAT" value="-0.5" />
+    <node id="text_base_scale" type="FLOAT" value="0.7" />
+    <node id="interaction_icon_scale" type="FLOAT" value="0.8" />
+    <node id="interaction_text_scale" type="FLOAT" value="0.8" />
+    <node id="camera_distance" type="FLOAT" value="1" />
+  </array>
+  
+  <array id="MOBILE_UI_KEY_VALUES" required_features="MOBILE_UI" >
+    <node id="ground_casts_shadows" type="BOOLEAN" value="false" />
+    <node id="ui_scale_modifier" type="FLOAT" value="0.5" />
+    <node id="text_base_scale" type="FLOAT" value="0.9" />
+    <node id="interaction_icon_scale" type="FLOAT" value="1.0" />
+    <node id="interaction_text_scale" type="FLOAT" value="1.4" />
+    <node id="camera_distance" type="FLOAT" value="0.75" />
+    <node id="max_tracked_quests" type="INTEGER" value="1" />
+    <node id="max_tracked_recipes" type="INTEGER" value="1" />
+    <node id="open_map_by_clicking_minimap" type="BOOLEAN" value="true" />
+    <node id="map_chunks_to_keep_in_memory" type="INTEGER" value="20" />
+  </array>
+    
+  <array id="SIMPLER_SHADOWS" required_features="SIMPLER_SHADOWS" >
+    <node id="directional_shadows_at_camera_focus_point" type="BOOLEAN" value="true" />
+  </array>
+  
+  <array id="BIGGER_UI_KEY_VALUES" required_features="BIGGER_UI" >
+    <!--node id="ui_scale_modifier" type="FLOAT" value="0.3" /--> <!-- switch isn't using this, set in Dysmantle::SetNintendoSwitchUIScale() -->
+    <node id="interaction_icon_scale" type="FLOAT" value="0.9" />
+    <node id="interaction_text_scale" type="FLOAT" value="1.0" />
+    <node id="camera_distance" type="FLOAT" value="0.75" />
+  </array>
+  
+  <array id="GROUND_TILE_MAPPINGS">
+    <node id="grass" to="grassland-grass" />
+    <node id="soil" to="grassland-grass" />
+    <node id="stone-patio-square" to="grassland-grass" />
+    <node id="asphalt" to="grassland-grass" />
+    <node id="cement" to="grassland-grass" />
+    <node id="bathroom-tile" to="grassland-grass" />
+    <node id="autumn-soil" to="grassland-grass" />
+    <node id="rock-grey" to="grassland-grass" />
+    <node id="tartan" to="grassland-grass" />
+    <node id="dirt" to="grassland-grass" />
+    <node id="gravel" to="grassland-grass" />
+    <node id="jungle-floor" to="grassland-grass" />
+  </array>
+  
+  <array id="DECAL_TYPE_MAPPINGS">
+    <node id="tile-edge-grass" to="edge-evergreen-moss" />
+    <node id="tile-edge-soil" to="edge-evergreen-moss" />
+    <node id="tile-edge-snow" to="edge-evergreen-moss" />
+    <node id="tile-edge-dirt" to="edge-evergreen-moss" />
+  </array>
+  
+  <array id="ACTOR_TYPE_MAPPINGS">
+  <!--  <node id="actors/interactives/ancient-chest-timed.xml" to="actors/interactives/timed-crate.xml" /> -->
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="actors/enemies/boomsquito.xml" to="actors/enemies/turret-lab-machine-gun.xml" />
+    <node id="actors/enemies/ex-animal-mana-wolf.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/ex-animal-wolf.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/ex-human-fast-chaser.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/ex-human-female-melee-advanced.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/ex-human-female-melee.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/ex-human-leaper.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/ex-human-male-mana-melee.xml" to="actors/enemies/turret-rocket-launcher.xml" />
+    <node id="actors/enemies/ex-human-male-melee-advanced.xml" to="actors/enemies/turret-rocket-launcher.xml" />
+    <node id="actors/enemies/ex-human-male-melee.xml" to="actors/enemies/turret-rocket-launcher.xml" />
+    <node id="actors/enemies/ex-human-mana-chaser.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/ex-human-mana-female-melee.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/ex-human-mana-puker.xml" to="actors/enemies/turret-rocket-launcher.xml" />
+    <node id="actors/enemies/ex-human-mana-stalker.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/ex-human-puker.xml" to="actors/enemies/turret-rocket-launcher.xml" />
+    <node id="actors/enemies/ex-human-stalker.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/mana-spirit.xml" to="actors/enemies/turret-rocket-launcher.xml" />
+    <node id="actors/enemies/mortarpod.xml" to="actors/enemies/turret-rocket-launcher.xml" />
+    <node id="actors/enemies/spikeball.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/tomb-guard.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/tomb-guard-mana.xml" to="actors/enemies/turret-machine-gun.xml" />
+    <node id="actors/enemies/tomb-guard-ranged.xml" to="actors/enemies/turret-rocket-launcher.xml" />
+    <node id="actors/enemies/tomb-melee-enemy.xml" to="actors/enemies/turret-machine-gun.xml" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+  
+</root>

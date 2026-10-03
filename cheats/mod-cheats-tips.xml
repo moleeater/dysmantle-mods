@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="TIPS" required_file="scripts/mods/mod-cheats.nut">
+
+    <node platform="WINDOWS" lang="en" value="
+More cheat hacks are available on NexusMods, listed as 'CE hacks'.
+Includes death counter, backpack compressor, backpack slots, skill selection, reveal map, teleport.
+" />
+
+    <node platform="ANDROID" lang="en" value="
+More cheat hacks are available on NexusMods, listed as 'Android hacks'.
+Includes death counter, backpack compressor.
+" />
+
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

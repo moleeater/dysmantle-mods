@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="NO_EXPERIENCE_REWARD_ON_DEATH,THROWABLE_WEAPON" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SOLID,AFFECTED_BY_GRAVITY,INDESTRUCTIBLE,NO_MOMENTUM_FROM_COLLISIONS,DELETE_ACTOR_AFTER_DEATH,CAN_STAND_ON_ACTORS" />
+    <node id="physics_material" value="PLASTIC" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="1" />
+    <node id="minimum_damage_threshold" value="1" />
+    <node id="aggro_radius" value="750" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="45" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1" />
+    <node id="damage_type" value="PIERCING" />
+    <node id="friend_group" value="GRENADES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="color_material_color" type="COLOR" value="0.51,0.55,0.32,1" />
+    <node id="duration" type="FLOAT" value="30" />
+    <node id="start_delay" type="FLOAT" value="1" />
+    <node id="animal_treat" type="BOOLEAN" value="true" />
+    <node id="color_material_base" type="COLOR" value="1,0.710086,0.228468,1" />
+    <node id="color_material_spikes" type="COLOR" value="1,0.615856,0.127258,1" />
+    <node id="color_material_plate" type="COLOR" value="1,1,0.765926,1" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleMonsterLure">
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleExplode"
+     key.BOOLEAN.Explode_explode_on_death="true"
+     key.BOOLEAN.Explode_explode_on_enemy_impact="false"
+     key.FLOAT.Explode_radius="90"
+     key.PARTICLE_EFFECT.Explode_effect="effects/flash-1.xml"
+     key.BITMAP.Explode_shockwave_bitmap=""
+     key.FLOAT.Explode_shockwave_bitmap_alpha="0"
+     key.FLOAT.Explode_shockwave_speed="1000"
+     key.FLOAT.Explode_shockwave_delay="0"
+     key.INTEGER.Explode_num_shrapnels="0"
+     key.ACTOR_TYPE.Explode_shrapnel_actor_type=""
+     key.BOOLEAN.Explode_cause_damage_to_owner="true"
+     key.BOOLEAN.Explode_cause_damage_to_owner_friends="true"
+     key.STRING.Explode_damage_type="PIERCING"
+     key.FLOAT.Explode_friendly_damage_multiplier="0.1"
+     key.FLOAT.Explode_stun_enemies_duration="5"
+    />
+
+    <node id="DysmantleProximityTrigger" key.FLOAT.Proximity_trigger_radius="80" key.FLOAT.Proximity_trigger_delay="0.25" />
+  </array>
+
+  <array id="SCRIPTS">
+    <node id="embedded_ai_script" ><![CDATA[function OnGameStart(so_actor)
+{
+  StageObject_SetKeyValueFloat(so_actor, "timer", 0);
+}
+
+function OnThink(so_actor, tdelta)
+{
+  local timer = StageObject_GetKeyValue(so_actor, "timer");
+  if (timer == null)
+  {
+    StageObject_SetKeyValueFloat(so_actor, "timer", 0);
+    return;
+  }
+  timer += tdelta;
+  StageObject_SetKeyValueFloat(so_actor, "timer", timer);
+
+  if (timer >= StageObject_GetKeyValue(so_actor, "explosion_delay"))
+  {
+    Stage_SendStageObjectCommandWord(so_actor, "self_destruct");
+    //Stage_KillActorAndStartDeathAnimation(so_actor);
+  }
+}]]></node>
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/rig-bear-trap-spring.anim"
+     delete_all_decals_on_model_switch="true"
+     event_0_trigger_time="0.159"
+     event_0_id="id0"
+     event_0_effect="effects/flash-1.xml"
+     event_0_spawn_effect_offset_z="-20.00"
+    />
+
+    <node id="active"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/rig-bear-trap-activate.anim"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/puff-1.xml"
+    />
+
+    <node id="inactive" animation_controller="Playback" skeleton_animation="models/animations/rig-bear-trap-idle.anim" wrap_mode="LOOP" />
+    <node id="closed" animation_controller="Playback" skeleton_animation="models/animations/rig-bear-trap-closed.anim" play_on_create="true" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacleSkinned" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="1.87" />
+    <node id="shadow_alpha" value="0.51" />
+    <node id="model" value="models/secondarys/bear-trap.model" />
+  </array>
+
+  <array id="RENDERABLES">
+    <node id="DysmantleExplosion" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_pickup_mines_hold_down_button"
+        interaction_0_trigger="HOLD_DOWN_BUTTON"
+        interaction_0_trigger_parameter_float="1"
+        interaction_0_controller_button="USE"
+        interaction_0_radius="45"
+        interaction_0_disable_after_interaction="0"
+        interaction_0_external_script="scripts/interactions/mods/mod-pickup-mines-hold-down-button.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="SPHERE" />
+    <node id="radius" value="15.7" />
+    <node id="offset_z" value="-5.1" />
+  </array>
+
+</root>

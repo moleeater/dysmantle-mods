@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,INDESTRUCTIBLE" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="100" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="800" />
+    <node id="damage_type_accept_mask" value="BLUNT,EXPLOSIVE,SELF_DESTRUCT" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="material_id" type="STRING" value="PLANTS" />
+    <node id="required_amount" type="INTEGER" value="150" />
+    <node id="xp_reward_per_material" type="INTEGER" value="20" />
+    <node id="num_times_deposited" type="INTEGER" value="0" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleObstacleAnimated">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death" category="DEATH" animation_controller="PhysicsMaterialBasedDeath" forced_animation_length_in_seconds="0.20" force_update_visual_bounds="true" />
+    <node id="close"
+     animation_controller="PlaybackReversed"
+     skeleton_animation="models/animations/ark-deposit-rig-deposit.anim"
+     playback_speed="0.4"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0.05"
+     event_0_id="sfx-servo"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/material-container-hatch-servo|Q|}}"
+     event_1_trigger_time="0.1"
+     event_1_id="sfx-hatch"
+     event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|1.1,1.2|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/elevator-stop|Q|}}"
+    />
+
+    <node id="open"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/ark-deposit-rig-deposit.anim"
+     playback_speed="0.5"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0"
+     event_0_id="sfx-servo"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/material-container-hatch-servo|Q|}}"
+     event_1_trigger_time="0.1"
+     event_1_id="sfx-hatch"
+     event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|1.1,1.2|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/elevator-stop|Q|}}"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="completed"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/ark-deposit-rig-completed.anim"
+     playback_speed="0.5"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     forced_animation_length_in_seconds="1.00"
+     event_0_trigger_time="0"
+     event_0_id="sfx-servo"
+     event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/material-container-servo|Q|}}"
+     event_1_trigger_time="0.3"
+     event_1_id="sfx-stop"
+     event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/elevator-stop|Q|}}"
+     event_2_trigger_time="0.34"
+     event_2_id="sfx-hatch-squeak"
+     event_2_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/fabricator-hatch-close|Q|}}"
+     event_3_trigger_time="0.51"
+     event_3_id="sfx-hatch"
+     event_3_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|1.1,1.1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/shelter-hatch-slam|Q|}}"
+		 event_4_id="mod-walkable-ark"
+		 event_4_trigger_time="0.6"
+		 event_4_command_word="run_script"
+		 event_4_command_word_key_values="{{SCRIPT,|Q|script|Q|,|Q|Actor_SetActorFlag(so_self,|BS||Q|SOLID|BS||Q|,false)|SC||Q|}}"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacleSkinned" />
+    <node id="bm_shadow" value="shadows/shadow-rectangle-blurry.png" />
+    <node id="shadow_angle" value="90" />
+    <node id="shadow_scale" value="9.8" />
+    <node id="shadow_alpha" value="0.32" />
+    <node id="allow_static_caching" value="false" />
+    <node id="model" value="models/interactives/ark-deposit.model" />
+  </array>
+
+  <array id="PROPS">
+    <node id="text"
+     mount_bone_id="number"
+     actor_type="actors/interactives/floating-text.xml"
+     mount_scale="0.25"
+     mount_offset_x="-0.53"
+     mount_offset_y="-0.46"
+     mount_offset_z="-1.55"
+     mount_rotation_angles_x="-0.872665"
+     mount_rotation_angles_y="0"
+     mount_rotation_angles_z="3.14159"
+    />
+
+    <node id="icon"
+     mount_bone_id="icon"
+     actor_type="actors/collectibles/material-flat.xml"
+     mount_scale="0.7"
+     mount_rotation_angles_x="0.698132"
+     mount_rotation_angles_y="0"
+     mount_rotation_angles_z="3.14159"
+    />
+
+  </array>
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="init_create"
+        interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local material_id = StageObject_GetKeyValue(so_self, &#34;material_id&#34;);&#10;&#9;if (material_id == null || material_id == &#34;&#34;)&#10;&#9;&#9;return;&#10;&#10;&#9;local kvs = Actor_GetPropActorKeyValueStore(so_self, &#34;icon&#34;);&#10;&#9;KeyValueStore_SetKeyValueString(kvs, &#34;material_id&#34;, material_id);&#10;&#9;Actor_InteractWithInteraction(so_self, so_activator, &#34;update&#34;);&#10;}"
+        interaction_0_trigger="ON_CREATE"
+      interaction_1_id="deposit"
+        interaction_1_localize="0"
+        interaction_1_disable_after_interaction="0"
+        interaction_1_external_script="scripts/interactions/ark-material-contrainer-hold-down-button.nut"
+        interaction_1_trigger="PRESS_BUTTON"
+        interaction_1_controller_button="USE"
+        interaction_1_text="Deposit"
+        interaction_1_attach_offset="0,20,-15"
+      interaction_2_id="update"
+        interaction_2_disable_after_interaction="0"
+        interaction_2_external_script="scripts/interactions/ark-material-contrainer-on-game-start.nut"
+        interaction_2_trigger="ON_GAME_START"
+      interaction_3_id="init_game"
+        interaction_3_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Actor_InteractWithInteraction(so_self, so_activator, &#34;update&#34;);&#10;}"
+        interaction_3_trigger="ON_GAME_START"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="MESH" />
+    <node id="model" value="models/interactives/ark-deposit-collider.model" />
+    <node id="min_z" value="-59.0" />
+    <node id="max_z" value="0.0" />
+    <node id="is_closed" value="1" />
+  </array>
+
+  <array id="COLLIDER_EDGES">
+    <node px0="24.52" py0="38.24" px1="-14.80" py1="38.24" />
+    <node px0="-14.80" py0="38.24" px1="-14.80" py1="-38.24" />
+    <node px0="-14.80" py0="-38.24" px1="24.52" py1="-38.24" />
+    <node px0="24.52" py0="8.19" px1="24.52" py1="38.24" />
+    <node px0="24.52" py0="-38.24" px1="24.52" py1="-8.19" />
+    <node px0="50.71" py0="-8.19" px1="50.71" py1="8.19" />
+    <node px0="24.52" py0="-8.19" px1="50.71" py1="-8.19" />
+    <node px0="50.71" py0="8.19" px1="24.52" py1="8.19" />
+  </array>
+
+</root>

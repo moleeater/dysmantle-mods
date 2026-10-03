@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <array id="INFO">
+    <node id="enabled" value="true" />
+    <node id="name" value="Hungarian" />
+    <node id="name_localized" value="Magyar" />
+    <node id="author" value="EmOo" />
+  </array>
+</root>

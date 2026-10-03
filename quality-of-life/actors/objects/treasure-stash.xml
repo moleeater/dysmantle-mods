@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="tags" value="SEARCHABLE,MOD_OCPD_MINIMAP,MOD_ONE_HIT_OBJECTS" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SOLID,NO_MOMENTUM_FROM_COLLISIONS,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE,PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="WOOD" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="100" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="SCRAP_WOOD" />
+    <node id="search_reward_materials" type="STRING" value="SCRAP_WOOD" />
+    <node id="is_found" type="BOOLEAN" flags="PERSISTENT,SAVE_STATE" value="false" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="SEARCHABLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleBehavioral">
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleTreasureStash" />
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death" category="DEATH" animation_controller="PhysicsMaterialBasedDeath" />
+    <node id="swing"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/stash-drop-rig-stash-swinging.anim"
+     wrap_mode="LOOP"
+     keep_on_stack_top="true"
+     play_on_create="true"
+     play_on_create_delay="1.5"
+     force_update_visual_bounds="true"
+    />
+
+    <node id="appear"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/stash-drop-rig-stash-drop.anim"
+     playback_speed="1.2"
+     force_update_visual_bounds="true"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/stash-fall.xml"
+     event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/ambience/rock-rumble-quiet-01|SC|sfx/ambience/rock-rumble-quiet-02|SC|sfx/ambience/rock-rumble-quiet-03|Q|}}"
+     event_1_trigger_time="0"
+     event_1_id="sfx-rope-swish"
+     event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.75,0.75|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.75,0.75|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/stash-fall-rope-swish|Q|}}"
+     event_2_trigger_time="0.485"
+     event_2_id="id2"
+     event_2_effect="effects/stash-fall.xml"
+     event_2_spawn_effect_offset_z="-150.00"
+     event_3_trigger_time="0.833"
+     event_3_id="id1"
+     event_3_effect="effects/stash-hit-ground.xml"
+    />
+
+    <node id="open" event_0_trigger_time="0" event_0_id="id1" event_0_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/search-material-appear|Q|}}" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_angle" value="-90" />
+    <node id="shadow_scale" value="3.94" />
+    <node id="shadow_alpha" value="0.26" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="ground_decal_angle" value="-90" />
+    <node id="cast_shadows" value="false" />
+    <node id="model" value="models/objects/stash-drop.model" />
+  </array>
+
+  <array id="PROPS">
+    <node id="crate"
+     mount_bone_id="10"
+     actor_type="actors/objects/subrurb-wood-crate-1.xml"
+     mount_offset_x="18.49"
+     mount_offset_y="87.47"
+     mount_offset_z="-0.19"
+     mount_rotation_angles_x="1.20916"
+     mount_rotation_angles_y="-0.142593"
+     mount_rotation_angles_z="-0.0710349"
+    />
+
+    <node id="crate2"
+     mount_bone_id="9"
+     actor_type="actors/objects/subrurb-wood-crate-1.xml"
+     mount_offset_x="23.87"
+     mount_offset_y="51.86"
+     mount_offset_z="2.89"
+     mount_rotation_angles_x="1.81776"
+     mount_rotation_angles_y="0.244695"
+     mount_rotation_angles_z="-0.224798"
+    />
+
+    <node id="bag"
+     mount_bone_id="10"
+     actor_type="actors/objects/prop-stash-bag.xml"
+     mount_scale="1.14"
+     mount_offset_x="-0.83"
+     mount_offset_y="32.61"
+     mount_offset_z="1.92"
+     mount_rotation_angles_x="0.672301"
+     mount_rotation_angles_y="-0.558505"
+     mount_rotation_angles_z="-2.03209"
+    />
+
+    <node id="bag2"
+     mount_bone_id="9"
+     actor_type="actors/objects/prop-stash-bag.xml"
+     mount_scale="1.11"
+     mount_offset_x="5.07"
+     mount_offset_y="68.25"
+     mount_offset_z="13.51"
+     mount_rotation_angles_x="2.53806"
+     mount_rotation_angles_y="-1.02922"
+     mount_rotation_angles_z="1.99369"
+    />
+
+    <node id="new"
+     mount_bone_id="9"
+     actor_type="actors/objects/mana-prop-environment-green-1.xml"
+     mount_scale="1.11"
+     mount_offset_x="11.15"
+     mount_offset_y="3.95"
+     mount_offset_z="-1.79"
+     mount_rotation_angles_x="-4.11426"
+     mount_rotation_angles_y="-0.0684169"
+     mount_rotation_angles_z="-0.0994838"
+    />
+
+  </array>
+
+  <array id="INTERACTIONS">
+    <node interaction_0_id="search"
+     interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local command = Command_Create(&#34;search_materials&#34;);&#10;&#9;Command_SetStageObjectReference(command, so_self);&#10;&#9;Stage_SendStageObjectCommand(so_activator, command);&#10;&#9;Stage_SendStageObjectCommandWithDelete(so_self, command);&#10;&#10;&#9;Actor_PlayAnimation(so_self, &#34;open&#34;);&#10;&#10;&#9;StageObject_SetKeyValueBoolean(so_self, &#34;is_found&#34;, true);&#10;}"
+     interaction_0_script_to_run_on_interaction_started="function OnInteractionStarted(so_self, so_activator)&#10;{&#10;&#9;Actor_PlayAnimation(so_activator, &#34;search-container&#34;);&#10;}"
+     interaction_0_script_to_run_on_interaction_cancelled="function OnInteractionCancelled(so_self, so_activator)&#10;{&#10;&#9;Actor_StopAnimationWithFade(so_activator, &#34;search-container&#34;, 0.2);&#10;}"
+     interaction_0_trigger="HOLD_DOWN_BUTTON"
+     interaction_0_trigger_parameter_float="1"
+     interaction_0_controller_button="USE"
+     interaction_0_text="Search"
+     interaction_0_bone_id="root"
+     interaction_0_attach_offset="0,50,0"
+     interaction_1_id="check_found"
+     interaction_1_disable_after_interaction="0"
+     interaction_1_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;if (StageObject_GetKeyValue(so_self, &#34;is_found&#34;) == true)&#10;&#9;{&#10;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;search&#34;, false);&#10;&#9;}&#10;&#10;&#9;if (StageObject_GetKeyValue(so_self, &#34;searched&#34;) == true)&#10;&#9;{&#10;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;search&#34;, false);&#10;&#9;}&#10;}"
+     interaction_1_trigger="ON_GAME_START"
+    />
+
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="CYLINDER" />
+    <node id="radius_xy" value="24.1" />
+    <node id="min_z" value="-119.4" />
+    <node id="max_z" value="0.0" />
+  </array>
+</root>

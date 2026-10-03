@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="POINT_OF_INTEREST" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH,CAN_BE_STOOD_ON" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="ambience_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="TOMB" />
+    <node id="travel_to_entrance_id" type="STRING" />
+    <node id="stage" type="STAGE" value="stages/island/index.xml" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENTRYWAY" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleBehavioral">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="dripple" play_on_create="true" event_0_trigger_time="0" event_0_id="id0" event_0_effect="effects/tomb-start-sand-fall.xml" />
+    <node id="light"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     forced_animation_length_in_seconds="0.50"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/tomb-start-light-cone.xml"
+    />
+
+    <node id="swing" animation_controller="Playback" skeleton_animation="models/animations/tomb-exit-rig-initial-swing.anim" wrap_mode="LOOP" play_on_create="true" />
+    <node id="exit_tomb" animation_controller="Playback" skeleton_animation="models/animations/tomb-exit-rig-volunteer_exit_tomb.anim" pause_at_end="true" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="shadow_angle" value="-90" />
+    <node id="shadow_method" value="NONE" />
+    <node id="ground_decal_type" value="tomb-start" />
+    <node id="ground_decal_angle" value="-90" />
+    <node id="cast_shadows" value="false" />
+    <node id="allow_static_caching" value="false" />
+    <node id="model" value="models/objects/tomb-start.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="leave"
+        interaction_0_disable_after_interaction="0"
+        interaction_0_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10; return !Game_IsShowingActorNotification(so_activator);&#10;}"
+        interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local materials = Stage_QueryStageObjectsWithTag(STAGE_OBJECT_TYPE_ACTOR, &#34;MATERIAL&#34;);&#10;&#9;if (materials)&#10;&#9;{&#10;&#9;&#9;foreach (material in materials)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;local material_id = StageObject_GetKeyValue(material, &#34;material_id&#34;);&#10;&#9;&#9;&#9;if (material_id == &#34;TOMB_ORB&#34;)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;I should pick up that [MATERIAL_ICON=TOMB_ORB][MATERIAL_NAME=TOMB_ORB] before I leave!&#34;));&#10;&#9;&#9;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;Press [BUTTON=DROP] to open the Carried Materials menu.&#34;));&#10;&#9;&#9;&#9;&#9;return;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#9;}&#10;&#10;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;local angle = StageObject_GetAngle(so_self);&#10;&#9;Actor_QueueActionMove(so_activator, pos[0], pos[1]);&#10;&#9;Actor_QueueActionTurn(so_activator, angle);&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_unequip&#34;, true);&#10;&#9;Actor_QueueActionSendCommandWord(so_activator, so_self, &#34;wait&#34;);&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;exit_tomb&#34;, false);&#10;&#10;&#9;Actor_QueueActionWaitForCommandWord(so_self, &#34;wait&#34;);&#10;&#9;Actor_QueueActionPlayAnimation(so_self, &#34;exit_tomb&#34;, true);&#10;&#10;&#9;Game_SetCinemaMode(true);&#10;&#9;local travel_to_entrance_id = StageObject_GetKeyValue(so_self, &#34;travel_to_entrance_id&#34;);&#10;&#9;if (travel_to_entrance_id == null || travel_to_entrance_id == &#34;&#34;)&#10;&#9;{&#10;&#9;&#9;// Fallback for returning from tombs etc.&#10;&#9;&#9;Game_SetScreenFadeOutWithCommand(3, &#34;travel_back_from_stage&#34;, so_activator, 2);&#10;&#9;}&#10;&#9;else&#10;&#9;{&#10;&#9;&#9;Game_SetScreenFadeOutWithCommand(3, &#34;travel_to_stage&#34;, so_self, 2);&#10;&#9;}&#10;}"
+        interaction_0_trigger="PRESS_BUTTON"
+        interaction_0_controller_button="USE"
+        interaction_0_text="Leave"
+        interaction_0_radius="130"
+        interaction_0_bone_id="9"
+      interaction_1_id="stage_enter"
+        interaction_1_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#10;&#9;local player_index = Game_GetPlayerIndexByActor(so_activator);&#10;&#9;StageObject_SetPosition(so_activator, pos[0] + 60 * player_index, pos[1] + 20, pos[2]);&#10;&#9;StageObject_SetAngle(so_activator, 40 * player_index);&#10;&#9;Actor_PlayAnimationWithDelayPlaybackSpeedAndPosition(so_activator, &#34;enter_tomb_inside&#34;, 0, 1 + 0.15*player_index, 0.1 * player_index);&#10;}"
+        interaction_1_trigger="NONE"
+      interaction_2_id="mod_crack_tombs_hold_down_button"
+        interaction_2_trigger="HOLD_DOWN_BUTTON"
+        interaction_2_trigger_parameter_float="2.5"
+        interaction_2_controller_button="TARGET_LOCK"
+        interaction_2_radius="130"
+        interaction_2_bone_id="9"
+        interaction_2_external_script="scripts/interactions/mods/mod-crack-tombs-hold-down-button.nut"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="NONE" />
+  </array>
+
+</root>

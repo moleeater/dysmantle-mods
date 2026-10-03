@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="COMPONENTS">
+    <node
+     name="fader"
+     type="SHADERFILTER"
+     inherit="DefaultShaderFilter"
+     shaderfilter.cache_results="true"
+    />
+
+    <node
+     name="panel"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanel"
+     position.x="0.497396"
+     position.y="0.501852"
+     ui_scale_modifier="0.25"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="794"
+     ninepatch.rectangle_height="451"
+    />
+
+    <node
+     name="aligner_buttons"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel"
+     position.x="0.00235195"
+     position.y="0.396717"
+     aligner.area_width="548.588"
+     aligner.fixed_num_rows="1"
+    />
+
+    <node
+     name="aligner_2"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel"
+     position.x="0.0040458"
+     position.y="-0.418741"
+     aligner.area_width="722.474"
+     aligner.area_height="19.4471"
+    />
+
+    <node
+     name="panel4"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanelInner"
+     parent="aligner_2"
+     position.x="-0.333333"
+     align="HCENTER"
+     ninepatch.rectangle_width="236"
+     ninepatch.rectangle_height="345"
+    />
+
+    <node
+     name="panel2"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanelInner"
+     parent="aligner_2"
+     position.x="-2.98023e-08"
+     align="HCENTER"
+     ninepatch.rectangle_width="236"
+     ninepatch.rectangle_height="345"
+    />
+
+    <node
+     name="panel3"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanelInner"
+     parent="aligner_2"
+     position.x="0.333333"
+     align="HCENTER"
+     ninepatch.rectangle_width="236"
+     ninepatch.rectangle_height="345"
+    />
+
+    <node
+     name="aligner_1"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel2"
+     position.x="-0.00287951"
+     position.y="0.46427"
+     aligner.area_width="132.166"
+     aligner.area_height="274.83"
+     aligner.fixed_num_columns="1"
+    />
+
+    <node
+     name="Title"
+     type="TEXTBOX"
+     inherit="MediumTextbox"
+     parent="panel4"
+     position.x="6.74352e-05"
+     position.y="0.831296"
+     localize="false"
+     scale="0.504111"
+     align="VCENTER,HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="408"
+     textbox.text="Smelter"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="Material_Input"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_1"
+     position.y="-0.25"
+     localize="false"
+     custom_draw="true"
+     button.text=""
+     button.icon_scale="0.75"
+     button.ninepatch_width="80"
+     button.ninepatch_height="80"
+    />
+
+    <node
+     name="Material_Output"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="panel3"
+     position.x="0.145824"
+     position.y="0.508771"
+     localize="false"
+     custom_draw="true"
+     button.text=""
+     button.icon_scale="0.75"
+     button.ninepatch_width="80"
+     button.ninepatch_height="80"
+    />
+
+    <node
+     name="Material_Fuel"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_1"
+     position.y="0.25"
+     localize="false"
+     custom_draw="true"
+     button.text=""
+     button.icon_scale="0.75"
+     button.ninepatch_width="80"
+     button.ninepatch_height="80"
+    />
+
+    <node
+     name="FuelTime"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="panel2"
+     position.x="-0.0020012"
+     position.y="0.933942"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.64"
+     align="BOTTOM,HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="319"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="RefineTime"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="panel3"
+     position.x="-0.00108775"
+     position.y="0.934926"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.64"
+     align="BOTTOM,HCENTER"
+     textbox.textbox_width="314"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node parent="aligner_buttons" name="mod_boost_refiner_button"
+      type="BUTTON" inherit="DefaultButton"
+      align="VCENTER"
+      button.bitmap_color_over="0.75,0.75,0.75,1"
+      button.bitmap_color_pressed="0.5,0.5,0.5,1"
+      button.adjust_ninepatch_width_based_on_text_length="true"
+      selection_priority="5"
+      localize="false"
+      active="false"
+      visible="false"
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="Stop"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_buttons"
+     position.x="-0.25"
+     visible="false"
+     button.text="Stop"
+     button.ninepatch_width="240"
+    />
+
+    <node
+     name="Start"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_buttons"
+     button.text="Start"
+     button.ninepatch_width="240"
+    />
+
+    <node
+     name="Close"
+     type="BUTTON"
+     inherit="SmallSquareXButton"
+     parent="panel"
+     position.x="0.461576"
+     position.y="-0.428949"
+     visible_for_control_interface="GROUP_POINTER_BASED"
+     can_be_accessed_with_gamepads="false"
+     scale="0.783885"
+    />
+
+    <node
+     name="Title5"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Material_Input"
+     position.y="-0.597778"
+     scale="0.8"
+     align="VCENTER,HCENTER"
+     textbox.text="INPUT"
+    />
+
+    <node
+     name="Title4"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="Material_Fuel"
+     position.y="-0.597778"
+     scale="0.8"
+     align="VCENTER,HCENTER"
+     textbox.text="FUEL"
+    />
+
+    <node
+     name="Title6"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="panel3"
+     position.x="0.00262982"
+     position.y="0.108952"
+     scale="0.8"
+     align="VCENTER,HCENTER"
+     textbox.text="OUTPUT"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node
+     name="Remove_Input"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="Material_Input"
+     position.x="-0.91"
+     localize="false"
+     ui_scale_modifier="0"
+     scale="1.6"
+     button.text="-"
+     button.text_offset="1,1"
+     button.ninepatch_width="40"
+     button.ninepatch_height="40"
+     button.ninepatch_margin="0"
+    />
+
+    <node
+     name="Add_Input"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="Material_Input"
+     position.x="0.91"
+     localize="false"
+     ui_scale_modifier="0"
+     scale="1.6"
+     button.text="+"
+     button.text_offset="1,1"
+     button.ninepatch_width="40"
+     button.ninepatch_height="40"
+     button.ninepatch_margin="0"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="Remove_Fuel"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="Material_Fuel"
+     position.x="-0.75"
+     visible="false"
+     localize="false"
+     ui_scale_modifier="0.3"
+     button.text="-"
+     button.ninepatch_width="40"
+     button.ninepatch_height="40"
+    />
+
+    <node
+     name="Add_Fuel"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="Material_Fuel"
+     position.x="0.75"
+     visible="false"
+     localize="false"
+     ui_scale_modifier="0.3"
+     button.text="+"
+     button.ninepatch_width="40"
+     button.ninepatch_height="40"
+    />
+
+    <node
+     name="Model"
+     type="MODEL"
+     inherit="DefaultModel"
+     parent="panel4"
+     position.x="0.0760584"
+     position.y="0.651644"
+     angle.x="1.26245"
+     angle.y="-0.00981748"
+     angle.z="1.9166"
+     color="0.25,0.25,0.25,1"
+     scale="1.54603"
+     model.model="models/interactives/smelter.model"
+    />
+
+    <node
+     name="light_1"
+     type="LIGHT"
+     inherit="DefaultLight"
+     parent="panel"
+     position.x="0.0455907"
+     position.y="-0.468271"
+     position.z="-0.47506"
+     color="1,1,1,3"
+     light.radius="631.111"
+    />
+
+    <node
+     name="light_2"
+     type="LIGHT"
+     inherit="DefaultLight"
+     parent="panel"
+     position.x="-0.622991"
+     position.y="0.0959812"
+     position.z="-0.0503356"
+     color="1,0.6,0.2,2"
+     light.radius="631.111"
+    />
+
+    <node
+     name="image_1"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="panel3"
+     position.x="-0.207266"
+     position.y="0.509427"
+     color="1,1,1,0.5"
+     scale="0.848226"
+     align="VCENTER,HCENTER"
+     image.bitmap="ui/gfx/arrow.png"
+    />
+
+  </array>
+</root>

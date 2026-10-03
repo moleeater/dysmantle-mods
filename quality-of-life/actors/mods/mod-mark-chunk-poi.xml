@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="HIDE_IN_EDITOR_PALETTE,MOD_MARK_CHUNK_POI,POINT_OF_INTEREST,SKIP_RENDERING" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="physics_material" value="NO_DAMAGE" />
+    <node id="actor_flags" value="ONLY_VISIBLE_IN_EDITOR,STATIC" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES">
+    <node id="poi_type" type="STRING" value="X" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="Null">
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="Null" />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="NONE" />
+  </array>
+
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

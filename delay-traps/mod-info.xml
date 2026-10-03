@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="load_priority" value="0" />
+    <node id="author" value="MoleEater" />
+    <node id="title" value="Delay traps" />
+    <node id="description" value="Pit traps and breaking floors in tombs are collapsing after 20 seconds, giving you more time to react.
+If you find the tomb breaking floors too hard to solve, or you are annoyed by pit traps in the overworld, now they collapse after 20 seconds, not 0.5 or 4 as before.
+
+Troubleshooting: https://dysmantle.fandom.com/wiki/Modding
+" />
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

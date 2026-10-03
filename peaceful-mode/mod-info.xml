@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="load_priority" value="2" />
+    <node id="author" value="MoleEater" />
+    <node id="title" value="Peaceful mode" />
+    <node id="description" value="No monsters, no enemies in the game.
+
+Warning: this mod makes permanent changes to your save file, the moment you load in, it will automatically kill all nearby bosses. Always backup your saves when testing a mod!
+
+Enemy drops still drop, you still get the XP, as if you had killed them. You auto-kill all the enemies spawning, even if they are off-screen.
+Sitting at a campfire will respawn them, and standing up from the campfire you will auto-kill them again, and you get their loot and XP again - until you install the Deadly transmission. Because of this, you are likely to get more loot and XP of what you would in a normal game.
+
+Troubleshooting: https://dysmantle.fandom.com/wiki/Modding
+
+I played through all of the main game (no DLCs) from a brand new start to the end, the game is playable.
+
+Untested:
+- majority of DLC1, Mana Chambers quest might never work without living enemies
+- majority of DLC2, but mainly the bosses
+- all of DLC3, but mainly 8 fighting pet stages and 5 DLC1 pet stages
+
+If something is not working, please write a comment on the Steam Workshop page, thank you.
+" />
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

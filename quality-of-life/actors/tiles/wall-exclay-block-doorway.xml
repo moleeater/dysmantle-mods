@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="tiles/wall exclay block doorway" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="tags" value="MOD_OCPD_MINIMAP,MOD_ONE_HIT_OBJECTS" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,SET_NONSOLID_ON_DEATH_END,WALL,IGNORE_COLLIDER_WHEN_PICKING" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="55" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="300" />
+    <node id="damage_type_accept_mask" value="BLUNT,EXPLOSIVE,SELF_DESTRUCT" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="foliage_class" type="STRING" value="TALL_DOORWAY" />
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="BRICKS" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="DISMANTLABLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleWall">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death"
+     category="DEATH"
+     animation_controller="PhysicsMaterialBasedDeath"
+     model="models/tiles/wall-brown-brick-rubble-I.model"
+     switch_model_on_animation_start="true"
+     delete_all_decals_on_model_switch="true"
+     forced_animation_length_in_seconds="0.20"
+     force_update_visual_bounds="true"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/puff-1.xml"
+     event_0_spawn_effect_offset_z="-100.00"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="bm_shadow" value="shadows/shadow-wall-I.png" />
+    <node id="shadow_alpha" value="0.15" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="model" value="models/tiles/wall-exclay-block-doorway.model" />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="MESH" />
+    <node id="model" value="models/tiles/wall-collider-doorway.model" />
+    <node id="min_z" value="-120.0" />
+    <node id="max_z" value="0.0" />
+    <node id="is_closed" value="1" />
+  </array>
+
+  <array id="COLLIDER_EDGES">
+    <node px0="3.60" py0="30.00" px1="-3.60" py1="30.00" />
+    <node px0="-3.60" py0="-30.00" px1="3.60" py1="-30.00" />
+    <node px0="-3.60" py0="30.00" px1="-3.60" py1="23.81" />
+    <node px0="-3.60" py0="-24.00" px1="-3.60" py1="-30.00" />
+    <node px0="3.60" py0="-30.00" px1="3.60" py1="-23.81" />
+    <node px0="3.60" py0="24.00" px1="3.60" py1="30.00" />
+    <node px0="3.60" py0="-23.81" px1="-3.60" py1="-24.00" />
+    <node px0="-3.60" py0="23.81" px1="3.60" py1="24.00" />
+  </array>
+</root>

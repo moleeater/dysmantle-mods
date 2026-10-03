@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="RECTANGLE"
+     inherit="FaderRectangle"
+     on_click_script_call="UI_PopScreen();"
+     color="0,0,0,0.25"
+    />
+
+    <node
+     name="panel"
+     type="NINEPATCH"
+     inherit="EditorNinePatch"
+     position.x="0.5"
+     position.y="0.5"
+     color="0.5,0.5,0.5,0.95"
+     scale="1.1062"
+     ui_scale_modifier="0.2"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="782"
+     ninepatch.rectangle_height="458"
+    />
+
+    <node
+     name="panel2"
+     type="NINEPATCH"
+     inherit="EditorNinePatchBevel"
+     parent="panel"
+     position.x="-0.00207689"
+     position.y="-0.370647"
+     color="1,1,1,0.6"
+     align="HCENTER"
+     ninepatch.rectangle_width="733"
+     ninepatch.rectangle_height="99"
+    />
+
+    <node
+     name="panel3"
+     type="NINEPATCH"
+     inherit="EditorNinePatchBevel"
+     parent="panel"
+     position.x="-0.000451836"
+     position.y="-0.15398"
+     color="1,1,1,0.6"
+     align="HCENTER"
+     ninepatch.rectangle_width="733"
+     ninepatch.rectangle_height="162"
+    />
+
+    <node
+     name="panel4"
+     type="NINEPATCH"
+     inherit="EditorNinePatchBevel"
+     parent="panel"
+     position.x="-0.0010943"
+     position.y="0.200747"
+     color="1,1,1,0.6"
+     align="HCENTER"
+     ninepatch.rectangle_width="733"
+     ninepatch.rectangle_height="123"
+    />
+
+    <node
+     name="panel5"
+     type="NINEPATCH"
+     inherit="EditorNinePatchBevel"
+     parent="panel"
+     position.x="0.104083"
+     position.y="0.220896"
+     color="1,1,1,0.6"
+     ninepatch.rectangle_width="275"
+     ninepatch.rectangle_height="104"
+    />
+
+    <node
+     name="touchfield_1"
+     type="TOUCHFIELD"
+     inherit="DefaultTouchField"
+     parent="panel3"
+     position.x="-0.182364"
+     position.y="0.0516121"
+     touchfield.automatic_content_width="true"
+     touchfield.automatic_content_height="true"
+     touchfield.area_width="494.815"
+     touchfield.area_height="149.037"
+     touchfield.clip_children="true"
+     touchfield.axis_x_enabled="false"
+     touchfield.bm_scroll_indicator="ui/gfx/scroll-indicator.png"
+    />
+
+    <node
+     name="Title"
+     type="TEXTBOX"
+     inherit="EditorMediumTextbox"
+     parent="panel"
+     position.x="-0.000381804"
+     position.y="-0.445098"
+     scale="0.723388"
+     align="VCENTER,HCENTER"
+     textbox.text="|img scale=1.1 offset=3 src='emojis/shushing face.png'| Cheats |img scale=1.1 offset=3 src='emojis/shushing face.png'|"
+    />
+
+    <node
+     name="material_id"
+     type="EDITBOX"
+     inherit="EditorEditboxWide"
+     parent="panel2"
+     position.x="-0.490848"
+     position.y="0.255092"
+     align=""
+     editbox.ninepatch_width="206"
+     editbox.text="TOMATO"
+     editbox.enable_autocompletion="true"
+    />
+
+    <node
+     name="recipe_id"
+     type="EDITBOX"
+     inherit="EditorEditboxWide"
+     parent="panel3"
+     position.x="-0.490848"
+     position.y="0.177755"
+     align=""
+     editbox.ninepatch_width="211"
+     editbox.text=""
+     editbox.enable_autocompletion="true"
+    />
+
+    <node
+     name="collectible_category"
+     type="EDITBOX"
+     inherit="EditorEditboxWide"
+     parent="panel5"
+     position.x="0.0172452"
+     position.y="0.178681"
+     scale="0.909412"
+     align=""
+     editbox.ninepatch_width="140"
+     editbox.text="KEYS"
+     editbox.enable_autocompletion="true"
+    />
+
+    <node
+     name="collectible_id"
+     type="EDITBOX"
+     inherit="EditorEditboxWide"
+     parent="collectible_category"
+     position.x="1.0223"
+     align=""
+     editbox.ninepatch_width="150"
+     editbox.enable_autocompletion="true"
+    />
+
+    <node
+     name="SpawnMaterial"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="material_id"
+     position.x="1.26243"
+     position.y="0.504662"
+     button.text="Spawn"
+     button.ninepatch_height="28"
+    />
+
+    <node
+     name="UnlockRecipe"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="recipe_id"
+     position.x="0.246968"
+     position.y="1.62635"
+     button.text="Unlock Recipe"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="UnlockCollectible"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="collectible_category"
+     position.x="0.756594"
+     position.y="1.60519"
+     button.text="Unlock Collectible"
+     button.ninepatch_width="210"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="CraftRecipe"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="recipe_id"
+     position.x="0.246415"
+     position.y="2.67106"
+     button.text="Craft Recipe"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="ChangeRecipeUpgradeLevel"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="recipe_id"
+     tooltip_text="Increases level by 1.\n\nHold down shift to decrease the level by 1."
+     position.x="0.504244"
+     position.y="3.73694"
+     button.text="Change Upgrade Level"
+     button.ninepatch_width="210"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="UncraftRecipe"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="recipe_id"
+     position.x="0.762625"
+     position.y="2.67873"
+     button.text="Uncraft Recipe"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="LockRecipe"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="recipe_id"
+     position.x="0.762987"
+     position.y="1.61286"
+     button.text="Lock Recipe"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="LockCollectible"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="collectible_category"
+     position.x="0.757064"
+     position.y="2.67106"
+     button.text="Lock Collectible"
+     button.ninepatch_width="210"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="CheatBasics"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="panel4"
+     position.x="-0.49"
+     position.y="0.44"
+     align="VCENTER"
+     button.text="Cheat Basics"
+     button.ninepatch_width="110"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="CheatMap"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="panel4"
+     position.x="-0.268569"
+     position.y="0.44"
+     button.text="Cheat Map"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="CheatInvulnerability"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="panel4"
+     position.x="-0.04"
+     position.y="0.23"
+     button.text="Toggle Invulnerability"
+     button.ninepatch_width="160"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="RunScriptForPlayerActor"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="panel4"
+     position.x="-0.49"
+     position.y="0.17"
+     align="VCENTER"
+     button.text="Run script for player actor..."
+     button.ninepatch_width="210"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="AddAllMaterialsToStorage"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="panel2"
+     position.x="-0.350031"
+     position.y="0.764672"
+     button.text="+10 All Materials To Storage"
+     button.ninepatch_width="200"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="CheatEverything"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="panel4"
+     position.x="-0.49"
+     position.y="0.7"
+     align="VCENTER"
+     button.text="Cheat Everything"
+     button.ninepatch_width="110"
+     button.ninepatch_height="26"
+    />
+
+    <node
+     name="textbox_1"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="material_id"
+     position.x="0.0125606"
+     position.y="-0.636716"
+     textbox.text="Spawn Material Id at Player Position"
+    />
+
+    <node
+     name="TextInvulnerability"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="CheatInvulnerability"
+     position.x="-0.000122613"
+     position.y="0.687769"
+     align="HCENTER"
+     textbox.textbox_width="160"
+     textbox.text="Player |#00ff00|invulnerable|#ffffff| until stage is (re)loaded."
+     textbox.text_align="HCENTER"
+    />
+
+    <node
+     name="textbox_2"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="recipe_id"
+     position.x="0.0125606"
+     position.y="-0.594388"
+     textbox.text="Recipe id"
+    />
+
+    <node
+     name="textbox_3"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="collectible_category"
+     position.x="0.0125606"
+     position.y="-0.594388"
+     textbox.text="Category"
+    />
+
+    <node
+     name="textbox_4"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="collectible_category"
+     position.x="1.11738"
+     position.y="-0.60788"
+     textbox.text="Collectible id"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node parent="panel2" name="mod_spawn_materials_touchfield"
+      type="TOUCHFIELD" inherit="DefaultTouchField"
+      position.x="-0.0526612"
+      position.y="0.05"
+      touchfield.area_width="400"
+      touchfield.area_height="90"
+      touchfield.automatic_content_width="true"
+      touchfield.automatic_content_height="true"
+      touchfield.axis_x_enabled="false"
+      touchfield.clip_children="true"
+      touchfield.bm_scroll_indicator="ui/gfx/scroll-indicator.png"
+      />
+
+    <node parent="panel2" name="mod_spawn_materials_scrollbar"
+      type="SLIDER" inherit="EditorSliderScrollbar"
+      align="HCENTER,VCENTER"
+      scale="0.5"
+      position.x="0.49"
+      position.y="0.5"
+      slider.linked_view="mod_spawn_materials_touchfield"
+      slider.ninepatch_height="180"
+      slider.hide_full_scrollbars="true"
+      />
+
+    <node
+     name="all_materials"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="mod_spawn_materials_touchfield"
+     save_dynamic_content_to_ui_xml="false"
+     position.y="0.02"
+     scale="0.629895"
+     textbox.textbox_width="628"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="all_recipes_locked"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="touchfield_1"
+     position.x="0.508159"
+     position.y="0.0200047"
+     save_dynamic_content_to_ui_xml="false"
+     scale="0.827496"
+     textbox.textbox_width="290"
+    />
+
+    <node
+     name="all_recipes_unlocked"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="touchfield_1"
+     position.x="0.00372818"
+     position.y="0.0279859"
+     save_dynamic_content_to_ui_xml="false"
+     scale="0.827496"
+     textbox.textbox_width="290"
+    />
+
+    <node
+     name="Close"
+     type="BUTTON"
+     inherit="EditorTinyButton"
+     parent="panel"
+     position.x="0.47"
+     position.y="-0.45"
+     on_click_script_call="UI_PopScreen();"
+     scale="0.790569"
+     button.text="X"
+     button.ninepatch_width="30"
+     button.ninepatch_height="30"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node parent="SpawnMaterial" name="mod_spawn_materials_amount"
+      type="EDITBOX" inherit="DefaultEditbox"
+      scale="0.6"
+      position.x="0.55"
+      align="VCENTER"
+      editbox.ninepatch_width="90"
+      editbox.padding="10"
+      editbox.text=""
+      active="false"
+      visible="false"
+      />
+
+    <node parent="SpawnMaterial" name="mod_spawn_materials_amount_slider"
+      type="SLIDER" inherit="DefaultSlider"
+      scale="0.7"
+      position.x="1.15"
+      align="VCENTER"
+      slider.ninepatch_width="250"
+      slider.value="0"
+      visible="false"
+      />
+
+    <node parent="panel3" name="mod_craft_recipes_scrollbar"
+      type="SLIDER" inherit="EditorSliderScrollbar"
+      align="HCENTER,VCENTER"
+      scale="0.5"
+      position.x="0.155"
+      position.y="0.51"
+      slider.linked_view="touchfield_1"
+      slider.ninepatch_height="305"
+      slider.hide_full_scrollbars="true"
+      slider.ninepatch_width="24"
+      color="1,1,1,1"
+      />
+
+    <node parent="panel" name="mod_give_keys_panel"
+      type="NINEPATCH" inherit="EditorNinePatchBevel"
+      position.x="-0.485"
+      position.y="-0.4"
+      color="1,1,1,0.6"
+      ninepatch.rectangle_width="760"
+      ninepatch.rectangle_height="400"
+      visible="false"
+      />
+
+    <node parent="mod_give_keys_panel" name="mod_give_keys_dropdown"
+      type="DROPDOWNLIST" inherit="DefaultDropDownList"
+      align="HCENTER"
+      scale="0.7"
+      position.x="0.5"
+      position.y="0.05"
+      drop_down_list.ninepatch_width="650"
+      drop_down_list.padding_left="18"
+      drop_down_list.padding_right="18"
+      drop_down_list.padding_top="16"
+      drop_down_list.padding_bottom="14"
+      drop_down_list.max_list_height="17"
+      localize="false"
+      />
+
+    <node parent="mod_give_keys_panel" name="mod_give_keys_give"
+      type="BUTTON" inherit="EditorSmallButton"
+      scale="1.5"
+      position.x="0.425"
+      position.y="0.3"
+      button.text_padding_horizontal="10"
+      button.adjust_ninepatch_width_based_on_text_length="true"
+      localize="false"
+      />
+
+    <node parent="mod_give_keys_panel" name="mod_give_keys_lose"
+      type="BUTTON" inherit="EditorSmallButton"
+      scale="1.5"
+      position.x="0.575"
+      position.y="0.3"
+      button.text_padding_horizontal="10"
+      button.adjust_ninepatch_width_based_on_text_length="true"
+      localize="false"
+      />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

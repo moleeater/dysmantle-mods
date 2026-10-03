@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- NEXUS .MFT Font Source File -->
+
+<root>
+
+	<array id="settings">
+
+		<node id="VERSION" value="2" />
+		
+		<node id="INPUT" 
+		 ttf="Tahoma.ttf" size_px="45" 
+		 strings="../../../../data-localizations/localizations/th/language.xml"
+		 ttf_fallback="Tahoma.ttf" />
+		
+		<!-- Output font file parameters. Parm scale accepts floating point values (like "0.125" or quotients (like "1/3"). -->
+		<node id="OUTPUT"					scale="1" />
+
+		<!-- How much extra spacing to leave between the characters. This affects all characters. -->
+		<node id="SPACING"					value="3" />
+		<node id="FONT_HEIGHT_MULTIPLIER"   value="0.84" />
+		<node id="Y_OFFSET"                 value="-4" />
+
+		<!-- How much transparency will the kern-pair algorithm take (range 0..1). High value can be used to remove shadows or glows around glyphs. -->
+		<node id="AUTO_KERN_THRESHOLD"		value="0.05" />
+
+        <node id="DISTANCE_FIELD"           scale="16" spread="4" size_px="28" />
+
+	</array>
+
+
+	<!--
+
+		<node id="032"	char=" "	spacing="0"		span="1" tags="DISABLE_AUTOKERN,SKIP" />
+
+	-->
+
+
+	<!-- Latin-1 character set. -->
+	<array id="glyphs">
+		<node id="032"	char=" "	spacing="4" tags="DISABLE_AUTOKERN" span="0" />
+		<node id="033"	char="!"	spacing="0"	/>
+		<node id="034"	char=""		spacing="0" span="2"	/>
+		<node id="035"	char="#"	spacing="0"	/>
+		<node id="036"	char="$"	spacing="0"	/>
+		<node id="037"	char="%"	spacing="0"	/>
+		<node id="038"	char="&"	spacing="0"	/>
+		<node id="039"	char="'"	spacing="0"	/>
+		<node id="040"	char="("	spacing="0"	/>
+		<node id="041"	char=")"	spacing="0"	/>
+		<node id="042"	char="*"	spacing="0"	tags="DISABLE_AUTOKERN" />
+		<node id="043"	char="+"	spacing="0"	tags="DISABLE_AUTOKERN" />
+		<node id="044"	char=","	spacing="0"	tags="DISABLE_AUTOKERN" />
+		<node id="045"	char="-"	spacing="0"	tags="DISABLE_AUTOKERN" />
+		<node id="046"	char="."	spacing="0"	tags="DISABLE_AUTOKERN" />
+		<node id="047"	char="/"	spacing="0"	/>
+		<node id="048"	char="0"	spacing="0"	/>
+		<node id="049"	char="1"	spacing="0"	/>
+		<node id="050"	char="2"	spacing="0"	/>
+		<node id="051"	char="3"	spacing="0"	/>
+		<node id="052"	char="4"	spacing="0"	/>
+		<node id="053"	char="5"	spacing="0"	/>
+		<node id="054"	char="6"	spacing="0"	/>
+		<node id="055"	char="7"	spacing="0"	/>
+		<node id="056"	char="8"	spacing="0"	/>
+		<node id="057"	char="9"	spacing="0"	/>
+		<node id="058"	char=":"	spacing="0"	tags="DISABLE_AUTOKERN" />
+		<node id="059"	char=";"	spacing="0"	tags="DISABLE_AUTOKERN" />
+		<node id="060"	char="<"	spacing="0" tags="DISABLE_AUTOKERN" />
+		<node id="061"	char="="	spacing="0"	tags="DISABLE_AUTOKERN" />
+		<node id="062"	char=">"	spacing="0"	tags="DISABLE_AUTOKERN" />
+		<node id="063"	char="?"	spacing="0"	/>
+		<node id="064"	char="@"	spacing="0"	/>
+		<node id="065"	char="A"	spacing="0"	/>
+		<node id="066"	char="B"	spacing="0"	/>
+		<node id="067"	char="C"	spacing="0"	/>
+		<node id="068"	char="D"	spacing="0"	/>
+		<node id="069"	char="E"	spacing="0"	/>
+		<node id="070"	char="F"	spacing="0"	/>
+		<node id="071"	char="G"	spacing="0"	/>
+		<node id="072"	char="H"	spacing="0"	/>
+		<node id="073"	char="I"	spacing="0"	/>
+		<node id="074"	char="J"	spacing="0"	/>
+		<node id="075"	char="K"	spacing="0"	/>
+		<node id="076"	char="L"	spacing="0"	/>
+		<node id="077"	char="M"	spacing="0"	/>
+		<node id="078"	char="N"	spacing="0"	/>
+		<node id="079"	char="O"	spacing="0"	/>
+		<node id="080"	char="P"	spacing="0"	/>
+		<node id="081"	char="Q"	spacing="0"	/>
+		<node id="082"	char="R"	spacing="0"	/>
+		<node id="083"	char="S"	spacing="0"	/>
+		<node id="084"	char="T"	spacing="0"	/>
+		<node id="085"	char="U"	spacing="0"	/>
+		<node id="086"	char="V"	spacing="0"	/>
+		<node id="087"	char="W"	spacing="0"	/>
+		<node id="088"	char="X"	spacing="0"	/>
+		<node id="089"	char="Y"	spacing="0"	/>
+		<node id="090"	char="Z"	spacing="0"	/>
+		<node id="091"	char="["	spacing="0"	/>
+		<node id="092"	char="\\"	spacing="0"	/>
+		<node id="093"	char="]"	spacing="0"	/>
+		<node id="094"	char="^"	spacing="0"	/>
+		<node id="095"	char="_"	spacing="0"	tags="DISABLE_AUTOKERN" />
+		<node id="096"	char="`"	spacing="0"	/>
+		<node id="097"	char="a"	spacing="0"	/>
+		<node id="098"	char="b"	spacing="0"	/>
+		<node id="099"	char="c"	spacing="0"	/>
+		<node id="100"	char="d"	spacing="0"	/>
+		<node id="101"	char="e"	spacing="0"	/>
+		<node id="102"	char="f"	spacing="0"	/>
+		<node id="103"	char="g"	spacing="0"	/>
+		<node id="104"	char="h"	spacing="0"	/>
+		<node id="105"	char="i"	spacing="0"	/>
+		<node id="106"	char="j"	spacing="0"	/>
+		<node id="107"	char="k"	spacing="0"	/>
+		<node id="108"	char="l"	spacing="0"	/>
+		<node id="109"	char="m"	spacing="0"	/>
+		<node id="110"	char="n"	spacing="0"	/>
+		<node id="111"	char="o"	spacing="0"	/>
+		<node id="112"	char="p"	spacing="0"	/>
+		<node id="113"	char="q"	spacing="0"	/>
+		<node id="114"	char="r"	spacing="0"	/>
+		<node id="115"	char="s"	spacing="0"	/>
+		<node id="116"	char="t"	spacing="0"	/>
+		<node id="117"	char="u"	spacing="0"	/>
+		<node id="118"	char="v"	spacing="0"	/>
+		<node id="119"	char="w"	spacing="0"	/>
+		<node id="120"	char="x"	spacing="0"	/>
+		<node id="121"	char="y"	spacing="0"	/>
+		<node id="122"	char="z"	spacing="0"	/>
+		<node id="123"	char="{"	spacing="0"	/>
+		<node id="124"	char="|"	spacing="0"	/>
+		<node id="125"	char="}"	spacing="0"	/>
+		<node id="126"	char="~"	spacing="0"	/>
+		<node id="161"	char="¡"	spacing="0"	/>
+		<node id="162"	char="¢"	spacing="0"	/>
+		<node id="169"	char="©"	spacing="0"	/>
+		<node id="174"	char="®"	spacing="0"	/>
+		<node id="191"	char="¿"	spacing="0"	/>
+		<node id="192"	char="À"	spacing="0"	/>
+		<node id="193"	char="Á"	spacing="0"	/>
+		<node id="194"	char="Â"	spacing="0"	/>
+		<node id="195"	char="Ã"	spacing="0"	/>
+		<node id="196"	char="Ä"	spacing="0"	/>
+		<node id="197"	char="Å"	spacing="0"	/>
+		<node id="198"	char="Æ"	spacing="0"	/>
+		<node id="199"	char="Ç"	spacing="0"	/>
+		<node id="200"	char="È"	spacing="0"	/>
+		<node id="201"	char="É"	spacing="0"	/>
+		<node id="202"	char="Ê"	spacing="0"	/>
+		<node id="203"	char="Ë"	spacing="0"	/>
+		<node id="204"	char="Ì"	spacing="0"	/>
+		<node id="205"	char="Í"	spacing="0"	/>
+		<node id="206"	char="Î"	spacing="0"	/>
+		<node id="207"	char="Ï"	spacing="0"	/>
+		<node id="208"	char="Ð"	spacing="0"	/>
+		<node id="209"	char="Ñ"	spacing="0"	/>
+		<node id="210"	char="Ò"	spacing="0"	/>
+		<node id="211"	char="Ó"	spacing="0"	/>
+		<node id="212"	char="Ô"	spacing="0"	/>
+		<node id="213"	char="Õ"	spacing="0"	/>
+		<node id="214"	char="Ö"	spacing="0"	/>
+		<node id="215"	char="×"	spacing="0"	/>
+		<node id="216"	char="Ø"	spacing="0"	/>
+		<node id="217"	char="Ù"	spacing="0"	/>
+		<node id="218"	char="Ú"	spacing="0"	/>
+		<node id="219"	char="Û"	spacing="0"	/>
+		<node id="220"	char="Ü"	spacing="0"	/>
+		<node id="221"	char="Ý"	spacing="0"	/>
+		<node id="222"	char="Ÿ"	spacing="0"	/>
+		<node id="223"	char="ß"	spacing="0"	/>
+		<node id="224"	char="à"	spacing="0"	/>
+		<node id="225"	char="á"	spacing="0"	/>
+		<node id="226"	char="â"	spacing="0"	/>
+		<node id="227"	char="ã"	spacing="0"	/>
+		<node id="228"	char="ä"	spacing="0"	/>
+		<node id="229"	char="å"	spacing="0"	/>
+		<node id="230"	char="æ"	spacing="0"	/>
+		<node id="231"	char="ç"	spacing="0"	/>
+		<node id="232"	char="è"	spacing="0"	/>
+		<node id="233"	char="é"	spacing="0"	/>
+		<node id="234"	char="ê"	spacing="0"	/>
+		<node id="235"	char="ë"	spacing="0"	/>
+		<node id="236"	char="ì"	spacing="0"	/>
+		<node id="237"	char="í"	spacing="0"	/>
+		<node id="238"	char="î"	spacing="0"	/>
+		<node id="239"	char="ï"	spacing="0"	/>
+		<node id="240"	char="ð"	spacing="0"	/>
+		<node id="241"	char="ñ"	spacing="0"	/>
+		<node id="242"	char="ò"	spacing="0"	/>
+		<node id="243"	char="ó"	spacing="0"	/>
+		<node id="244"	char="ô"	spacing="0"	/>
+		<node id="245"	char="õ"	spacing="0"	/>
+		<node id="246"	char="ö"	spacing="0"	/>
+		<node id="247"	char="÷"	spacing="0"	/>
+		<node id="248"	char="ø"	spacing="0"	/>
+		<node id="249"	char="ù"	spacing="0"	/>
+		<node id="250"	char="ú"	spacing="0"	/>
+		<node id="251"	char="û"	spacing="0"	/>
+		<node id="252"	char="ü"	spacing="0"	/>
+		<node id="253"	char="ý"	spacing="0"	/>
+		<node id="254"	char="þ"	spacing="0"	/>
+		<node id="255"	char="ÿ"	spacing="0"	/>
+		
+	</array>
+
+
+
+	
+</root>

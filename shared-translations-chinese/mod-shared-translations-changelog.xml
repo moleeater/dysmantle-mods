@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="title" value="Shared translations" />
+  </array>
+  <array id="CHANGELOG">
+
+
+    <node epoch="1769726695" id="11.0.0"
+      value="
+- updated to game version 1.4.1
+" />
+
+
+    <node epoch="1730334845" id="10.0.0"
+      value="
+- added Korean translation for MoleEater's mods by SilverMoonMint
+- added Korean translation for DLCX mod by SilverMoonMint
+" />
+
+
+    <node epoch="1729641048" id="9.0.0"
+      value="
+- added Chinese translation for DLCX mod by -XYB88-
+" />
+
+
+    <node epoch="1718634891" id="7.0.0"
+      value="
+- updated to game version 1.4.0.41
+" />
+
+
+    <node epoch="1716972592" id="6.1.0"
+      value="
+- updated to game version 1.4.0.38
+" />
+
+
+    <node epoch="1716578760" id="6.0.0"
+      value="
+- updated to game version 1.4.0.36
+" />
+
+
+    <node epoch="1715218380" id="5.0.0"
+      value="
+- updated to game version 1.4.0.29
+" />
+
+
+    <node epoch="1714753560" id="4.0.0"
+      value="
+- added Russian translation for MoleEater's mods by *VESP*
+- updated Chinese translation for MoleEater's mods by -XYB88-
+- fixed Chinese translation may have lost newline characters because of code reformatting, reverted
+" />
+
+
+    <node epoch="1714460760" id="3.0.0"
+      value="
+- updated Chinese translation for MoleEater's mods by -XYB88-
+" />
+
+
+    <node epoch="1712697180" id="2.0.0"
+      value="
+- added Chinese translation for MoleEater's mods by -XYB88-
+" />
+
+
+    <node epoch="1712598060" id="1.0.0"
+      value="
+- initial upload of the v1.3.0.65 vanilla files and all text from MoleEater's mods included in the English file
+" />
+
+
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

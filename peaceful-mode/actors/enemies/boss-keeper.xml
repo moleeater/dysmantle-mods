@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" localize="true" />
+    <node id="tags" value="POINT_OF_INTEREST,MONSTER" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SOLID,FRIEND_OR_FOE,AFFECTED_BY_GRAVITY,COLLIDE_AGAINST_STATIC_EDGES,SET_NONSOLID_ON_DEATH_END,CAN_STAND_ON_ACTORS" />
+    <node id="persistency_flags" value="TEMPORARY_DEATH_STATE,TEMPORARY_TRANSFORM,TEMPORARY_ATTRIBUTES" />
+    <node id="physics_material" value="FLESH" />
+    <node id="mass" value="250" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="3" />
+    <node id="move_acceleration" value="0" />
+    <node id="max_move_speed" value="60" />
+    <node id="dampening_factor_on_ground" value="8" />
+    <node id="dampening_factor_on_air" value="0.5" />
+    <node id="restitution_coefficient" value="0.15" />
+    <node id="friction" value="0" />
+    <node id="minimum_damage_threshold" value="30" />
+    <node id="aggro_radius" value="240" />
+    <node id="friend_avoidance_radius" value="45" />
+    <node id="initial_scale" value="1.6" />
+    <node id="damage" value="60" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="3000" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="FollowPath_path" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|false|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}}" />
+    <node id="FollowPath_start_automatically" type="BOOLEAN" value="false" />
+    <node id="Wander_radius" type="FLOAT" value="300" />
+    <node id="Wander_start_automatically" type="BOOLEAN" value="false" />
+    <node id="default_knockback_strength" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="200" />
+    <node id="default_running_speed_multiplier" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="3.6" />
+    <node id="default_strafing_speed_multiplier" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="1.5" />
+    <node id="drops_random_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="SCRAP_ELECTRONICS,IRON" />
+    <node id="map_icon_clone" type="BITMAP" flags="PERSISTENT,NO_REPLICATION" value="map/icon-enemy.png" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENEMY_NORMAL" />
+    <node id="script_file" type="FILE" flags="PERSISTENT,NO_REPLICATION" value="actors/enemies/scripts/ex-human-stalker.nut" />
+    <node id="stance" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="hands_free" />
+    <node id="description" type="STRING" flags="PERSISTENT,LOCALIZED,NO_REPLICATION" value="The Stalker has shed more of its former humanity than most ex-humans, trading it for savage ferocity and an endless thirst for blood." />
+    <node id="hearing_multiplier" type="FLOAT" value="1" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleEnemyScripted">
+    <node id="max_aggro_range" type="FLOAT" value="500" />
+    <node id="max_field_of_view" type="FLOAT" value="90" />
+    <node id="allow_flanking" type="BOOLEAN" value="true" />
+    <node id="react_to_enemy_collisions" type="BOOLEAN" value="true" />
+    <node id="roadmap_requires_activation" type="BOOLEAN" value="false" />
+    <node id="alert_system_enabled" type="BOOLEAN" value="true" />
+    <node id="alert_level_start_wander" type="FLOAT" value="50" />
+    <node id="alert_level_stop_wander" type="FLOAT" value="-1" />
+    <node id="alert_level_start_investigate_noise" type="FLOAT" value="75" />
+    <node id="alert_level_stop_chase" type="FLOAT" value="1" />
+    <node id="alert_level_increase_speed" type="FLOAT" value="5" />
+    <node id="alert_level_decrease_speed" type="FLOAT" value="5" />
+    <node id="alert_level_max_distance_from_home" type="FLOAT" value="800" />
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleAvoidFriends" />
+  </array>
+
+  <array id="ANIMATIONS">
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node id="die"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_die1.anim"
+     fade_out_duration="0"
+     pause_at_end="true"
+     key_values="{{FLOAT,|Q|fall_angle|Q|,|Q|180|Q|}}"
+    />
+
+    <node id="die2"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_die2.anim"
+     fade_out_duration="0"
+     pause_at_end="true"
+     key_values="{{FLOAT,|Q|fall_angle|Q|,|Q|180|Q|}}"
+    />
+
+    <node id="die3"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_die3.anim"
+     fade_out_duration="0"
+     pause_at_end="true"
+     key_values="{{FLOAT,|Q|fall_angle|Q|,|Q|0|Q|}}"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node id="drown"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-volunteer_drowning.anim"
+     playback_speed="0.75"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0.966997"
+     event_0_id="drown"
+     event_0_command_word="self_destruct"
+    />
+
+    <node id="fall" animation_controller="Playback" skeleton_animation="models/animations/humanoid-zombie_female_falling.anim" wrap_mode="LOOP" />
+    <node id="hit"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_hit1-additive.anim"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/stalker-hurt-01|SC|sfx/enemies/stalker-hurt-02|Q|}}"
+    />
+
+    <node id="investigate_lure" animation_controller="Playback" skeleton_animation="models/animations/humanoid-zombie_stalker_lured.anim" wrap_mode="LOOP" />
+    <node id="landing" animation_controller="Playback" skeleton_animation="models/animations/humanoid-zombie_female_landing_soft.anim" />
+    <node id="landing_damage" animation_controller="Playback" skeleton_animation="models/animations/humanoid-zombie_female_landing_hard.anim" />
+    <node id="melee.hands_free"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_melee.anim"
+     playback_speed="1.1"
+     tags="MELEE"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/stalker-attack-01|SC|sfx/enemies/stalker-attack-02|SC|sfx/enemies/stalker-attack-03|Q|}}"
+     event_1_trigger_time="0.5"
+     event_1_id="turn"
+     event_1_command_word="turn_towards_target"
+     event_2_trigger_time="0.77"
+     event_2_id="id1"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/zombie-swing-horizontal-180.xml"
+     event_2_spawn_effect_offset_x="21.74"
+     event_2_spawn_effect_offset_z="-65.07"
+     event_3_trigger_time="0.8"
+     event_3_id="attack"
+     event_3_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/player-power-fist-punch-01|SC|sfx/player-power-fist-punch-02|Q|}}"
+     event_3_spawn_effect_offset_x="55.00"
+     event_3_spawn_effect_offset_y="-10.00"
+     event_3_command_word="melee_attack"
+     event_3_command_word_key_values="{{FLOAT,|Q|angle|Q|,|Q|120|Q|}}"
+    />
+
+    <node id="melee.hands_free-2"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-volunteer_melee_powerfist_1.anim"
+     playback_speed="0.5"
+     tags="MELEE"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     forced_animation_length_in_seconds="1.00"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/stalker-attack-01|SC|sfx/enemies/stalker-attack-02|SC|sfx/enemies/stalker-attack-03|Q|}}"
+     event_1_trigger_time="0.0685"
+     event_1_id="sound2"
+     event_1_bone_id="hand.R"
+     event_1_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/player-power-fist-sparks-01|SC|sfx/player-power-fist-sparks-02|Q|}}"
+     event_1_spawn_effect_scale="0.4"
+     event_1_spawn_effect_offset_x="1.00"
+     event_2_trigger_time="0.31"
+     event_2_id="id1"
+     event_2_bone_id="hand.R"
+     event_2_effect="effects/electric-discharge-small.xml"
+     event_2_spawn_effect_scale="0.4"
+     event_2_spawn_effect_offset_x="1.00"
+     event_3_trigger_time="0.346"
+     event_3_id="sound"
+     event_3_bone_id="hand.R"
+     event_3_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.96,0.96|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/player-power-fist-punch-01|SC|sfx/player-power-fist-punch-02|Q|}}"
+     event_3_spawn_effect_scale="0.4"
+     event_3_spawn_effect_offset_x="1.00"
+     event_4_trigger_time="0.366"
+     event_4_id="attack"
+     event_4_spawn_effect_offset_x="45.00"
+     event_4_spawn_effect_offset_y="25.00"
+     event_4_command_word="melee_attack"
+     event_4_command_word_key_values="{{FLOAT,|Q|angle|Q|,|Q|120|Q|}}"
+     event_5_trigger_time="0.45"
+     event_5_id="turn"
+     event_5_command_word="turn_towards_target"
+    />
+
+    <node id="unused_melee.hands_free-areal"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_melee-areal.anim"
+     tags="MELEE"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/stalker-attack-01|SC|sfx/enemies/stalker-attack-02|SC|sfx/enemies/stalker-attack-03|Q|}}"
+     event_1_trigger_time="1.1"
+     event_1_id="turn"
+     event_1_command_word="turn_towards_target"
+     event_2_trigger_time="1.48"
+     event_2_id="woosh1"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/zombie-swing-horizontal-180.xml"
+     event_2_spawn_effect_offset_z="-65.00"
+     event_3_trigger_time="1.49"
+     event_3_id="attack1"
+     event_3_spawn_effect_offset_x="60.00"
+     event_3_command_word="melee_attack"
+     event_4_trigger_time="1.92"
+     event_4_id="attack2"
+     event_4_spawn_effect_offset_x="60.00"
+     event_4_command_word="melee_attack"
+     event_5_trigger_time="1.93"
+     event_5_id="woosh2"
+     event_5_spawn_effect_to_local_particle_system="true"
+     event_5_effect="effects/zombie-swing-horizontal-180-ccw.xml"
+     event_5_spawn_effect_angle_z="33.00"
+     event_5_spawn_effect_offset_x="2.97"
+     event_5_spawn_effect_offset_y="-4.75"
+     event_5_spawn_effect_offset_z="-58.79"
+     event_6_trigger_time="2.23"
+     event_6_id="woosh3"
+     event_6_spawn_effect_to_local_particle_system="true"
+     event_6_effect="effects/zombie-swing-horizontal-180.xml"
+     event_6_spawn_effect_offset_x="1.00"
+     event_6_spawn_effect_offset_z="-44.02"
+     event_7_trigger_time="2.24"
+     event_7_id="attack3"
+     event_7_spawn_effect_offset_x="-60.00"
+     event_7_command_word="melee_attack"
+     event_8_trigger_time="2.98"
+     event_8_id="woosh4"
+     event_8_spawn_effect_to_local_particle_system="true"
+     event_8_effect="effects/zombie-swing-horizontal-180-ccw.xml"
+     event_8_spawn_effect_angle_z="180.00"
+     event_8_spawn_effect_offset_x="2.97"
+     event_8_spawn_effect_offset_y="-4.75"
+     event_8_spawn_effect_offset_z="-58.79"
+     event_9_trigger_time="3.01"
+     event_9_id="attack4"
+     event_9_spawn_effect_offset_x="-60.00"
+     event_9_command_word="melee_attack"
+     event_10_trigger_time="3.42943"
+     event_10_id="woosh5"
+     event_10_spawn_effect_to_local_particle_system="true"
+     event_10_effect="effects/zombie-swing-horizontal-180.xml"
+     event_10_spawn_effect_angle_z="180.00"
+     event_10_spawn_effect_offset_x="-5.60"
+     event_10_spawn_effect_offset_z="-65.07"
+     event_11_trigger_time="3.44"
+     event_11_id="attack5"
+     event_11_spawn_effect_offset_x="60.00"
+     event_11_command_word="melee_attack"
+    />
+
+    <node id="melee_moving.hands_free"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_melee.anim"
+     bone_group_id="TorsoOnly"
+     playback_speed="1.1"
+     tags="MELEE"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/stalker-attack-01|SC|sfx/enemies/stalker-attack-02|SC|sfx/enemies/stalker-attack-03|Q|}}"
+     event_1_trigger_time="0.5"
+     event_1_id="turn"
+     event_1_command_word="turn_towards_target"
+     event_2_trigger_time="0.77"
+     event_2_id="id1"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/zombie-swing-horizontal-180.xml"
+     event_2_spawn_effect_offset_x="21.74"
+     event_2_spawn_effect_offset_z="-65.07"
+     event_3_trigger_time="0.8"
+     event_3_id="attack"
+     event_3_spawn_effect_offset_x="55.00"
+     event_3_spawn_effect_offset_y="-10.00"
+     event_3_command_word="melee_attack"
+     event_3_command_word_key_values="{{FLOAT,|Q|angle|Q|,|Q|120|Q|}}"
+    />
+
+    <node id="move.hands_free.idle.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_idle-2.anim"
+     bone_group_id="NoRootMovement"
+     sound_scape="sound-scapes/stalker-breath-walking.xml"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     start_playing_at_random_time_key="true"
+    />
+
+    <node id="move.hands_free.jog.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_run_forward.anim"
+     sound_scape="sound-scapes/stalker-breath-running.xml"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0.0577"
+     event_0_id="footstep"
+     event_0_bone_id="ankle.R"
+     event_0_command_word="footstep"
+     event_1_trigger_time="0.512945"
+     event_1_id="footstep2"
+     event_1_bone_id="ankle.L"
+     event_1_command_word="footstep"
+    />
+
+    <node id="move.hands_free.run.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_run_forward.anim"
+     sound_scape="sound-scapes/stalker-breath-running.xml"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0.0577"
+     event_0_id="footstep"
+     event_0_bone_id="ankle.R"
+     event_0_command_word="footstep"
+     event_1_trigger_time="0.512945"
+     event_1_id="footstep2"
+     event_1_bone_id="ankle.L"
+     event_1_command_word="footstep"
+    />
+
+    <node id="move.hands_free.walk.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_walk_forward.anim"
+     sound_scape="sound-scapes/stalker-breath-walking.xml"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0.0577"
+     event_0_id="footstep"
+     event_0_bone_id="ankle.R"
+     event_0_command_word="footstep"
+     event_1_trigger_time="0.512945"
+     event_1_id="footstep2"
+     event_1_bone_id="ankle.L"
+     event_1_command_word="footstep"
+    />
+
+    <node id="spot_enemy"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-volunteer_alert.anim"
+     playback_speed="0.7"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_trigger_if_actor_is_dead="false"
+     event_0_effect="effects/sfx-stalker-alert.xml"
+    />
+
+    <node id="stun"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_stunned.anim"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_bone_id="head"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/stun-stars.xml"
+     event_1_trigger_time="0.63"
+     event_1_id="id1"
+     event_1_bone_id="head"
+     event_1_ignore_bone_orientation="true"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/stun-stars.xml"
+     event_2_trigger_time="1.38"
+     event_2_id="id2"
+     event_2_bone_id="head"
+     event_2_ignore_bone_orientation="true"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/stun-stars.xml"
+     event_3_trigger_time="2.03"
+     event_3_id="id3"
+     event_3_bone_id="head"
+     event_3_ignore_bone_orientation="true"
+     event_3_spawn_effect_to_local_particle_system="true"
+     event_3_effect="effects/stun-stars.xml"
+    />
+
+    <node id="inside_mana_chamber"
+     wrap_mode="LOOP"
+     keep_on_stack_top="true"
+     forced_animation_length_in_seconds="0.50"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_bone_id="head"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/enemy-inside-mana-chamber.xml"
+     event_0_spawn_effect_angle_z="180.00"
+     event_1_trigger_time="0.184"
+     event_1_id="id1"
+     event_1_bone_id="head"
+     event_1_ignore_bone_orientation="true"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/enemy-inside-mana-chamber.xml"
+     event_1_spawn_effect_angle_z="180.00"
+     event_2_trigger_time="0.377"
+     event_2_id="id3"
+     event_2_bone_id="head"
+     event_2_ignore_bone_orientation="true"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/enemy-inside-mana-chamber.xml"
+     event_2_spawn_effect_angle_z="180.00"
+    />
+
+    <node id="effect"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     forced_animation_length_in_seconds="0.50"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_bone_id="chest"
+     event_0_ignore_bone_orientation="true"
+     event_0_effect="effects/electric-discharge-medium.xml"
+     event_0_spawn_effect_scale="0.61"
+     event_0_spawn_effect_offset_x="13.86"
+     event_0_spawn_effect_offset_y="-0.89"
+     event_0_spawn_effect_offset_z="1.04"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="0.4" />
+    <node id="shadow_alpha" value="0.3" />
+    <node id="shadow_drawn_for_each_bone" value="true" />
+    <node id="receive_shadows" value="false" />
+    <node id="model" value="models/enemies/spirit-skeleton.model" />
+  </array>
+
+  <array id="PROPS">
+    <node id="mana_prop_1" mount_bone_id="chest" actor_type="actors/objects/mana-prop-1.xml" mount_scale="0.45" />
+    <node id="mana_prop_2" mount_bone_id="shoulder.L" actor_type="actors/objects/mana-prop-1.xml" mount_scale="0.45" />
+    <node id="mana_prop_3" mount_bone_id="shoulder.R" actor_type="actors/objects/mana-prop-1.xml" mount_scale="0.45" />
+    <node id="mana_prop_4" mount_bone_id="spine-2" actor_type="actors/objects/mana-prop-2.xml" mount_scale="0.45" />
+    <node id="mana_prop_5" mount_bone_id="hip" actor_type="actors/objects/mana-prop-2.xml" mount_scale="0.45" />
+    <node id="mana_prop_6" mount_bone_id="arm-1.L" actor_type="actors/objects/mana-prop-1.xml" mount_scale="0.57" />
+    <node id="mana_prop_7" mount_bone_id="arm-2.L" actor_type="actors/objects/mana-prop-2.xml" mount_scale="0.68" />
+    <node id="mana_prop_8" mount_bone_id="arm-1.R" actor_type="actors/objects/mana-prop-1.xml" mount_scale="0.64" />
+    <node id="mana_prop_9" mount_bone_id="head" actor_type="actors/objects/mana-prop-1.xml" mount_scale="0.91" />
+    <node id="mana_prop_10" mount_bone_id="neck" actor_type="actors/objects/mana-prop-1.xml" mount_scale="0.89" />
+    <node id="mana_prop_11" mount_bone_id="leg-2.L" actor_type="actors/objects/mana-prop-2.xml" mount_scale="0.6" />
+    <node id="mana_prop_12" mount_bone_id="ankle.R" actor_type="actors/objects/mana-prop-2.xml" mount_scale="0.6" />
+    <node id="mana_prop_13" mount_bone_id="tool" actor_type="actors/objects/mana-prop-2.xml" mount_scale="0.6" />
+    <node id="mana_prop_14"
+     mount_bone_id="leg-1.R"
+     actor_type="actors/objects/mana-prop-2.xml"
+     mount_scale="0.8"
+     mount_offset_x="0"
+     mount_offset_y="5.01"
+     mount_offset_z="0"
+     mount_rotation_angles_x="-1.91969"
+     mount_rotation_angles_y="0"
+     mount_rotation_angles_z="0"
+    />
+
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_peaceful_mode_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-peaceful-mode-on-game-start.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="CAPSULE" />
+    <node id="radius" value="10.0" />
+    <node id="height" value="60.0" />
+    <node id="offset_z" value="-40.0" />
+  </array>
+
+</root>

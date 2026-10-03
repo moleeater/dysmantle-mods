@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="INFO">
+    <node id="load_priority" value="0" />
+    <node id="tags" value="LOCALIZATION" />
+    <node id="author" value="EmOo" />
+    <node id="title" value="Hungarian translation" />
+    <node id="description" value="A fordítás a Deepl fordító automatikus fordító használatával készült. Ez egy lektorálatlan gépi fordítás! Tartalmazhat félrefordításokat, helyesírási hibákat angolul maradt szöveg részeket! (Ne feledjétek! A mi célunk nem a versengés, vagy a hagyományos módszerekkel készült fordítások háttérbe szorítása! Egyetlen célunk, hogy az angolul nem, vagy nem megfelelo mértékben tudó játékosok számára jobbá tegyük a játékélményt!)
+Készült: 2025.07.09.
+Csatlakozz a gépi magyarítások discord közösségéhez! https://discord.gg/PPUfHzSRms
+Gépi fordítás weboldal: https://gep.monster/" />
+  </array>
+</root>

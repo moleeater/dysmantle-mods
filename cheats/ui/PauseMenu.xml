@@ -1,0 +1,3459 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="IMAGE"
+     inherit="DefaultImage"
+     position.x="0.5"
+     position.y="0.5"
+     scale_type="FIT_TO_COVER_SCREEN"
+     align="VCENTER,HCENTER"
+     image.bitmap="ui/gfx/bg-blurred.jpg"
+    />
+
+    <node
+     name="panel"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanel"
+     position.x="0.49936"
+     position.y="0.52761"
+     color="0.5,0.2,0.4,0.65"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="1137"
+     ninepatch.rectangle_height="563"
+    />
+
+    <node
+     name="Tab_System"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="panel"
+     position.x="8.89546e-05"
+     position.y="-0.476083"
+     visible="false"
+     align="HCENTER"
+     marker.area_width="1096"
+     marker.area_height="530"
+    />
+
+    <node
+     name="aligner_system_tab_panels"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="Tab_System"
+     position.x="-0.000425236"
+     position.y="0.0206538"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="957.727"
+     aligner.area_height="515.039"
+     aligner.fixed_num_rows="1"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="Tab_Map"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="panel"
+     position.x="-6.63489e-05"
+     position.y="-0.478937"
+     visible="false"
+     align="HCENTER"
+     marker.area_width="1096"
+     marker.area_height="537.778"
+    />
+
+    <node
+     name="Tab_Inventory"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="panel"
+     position.x="-0.00025882"
+     position.y="-0.477693"
+     visible="false"
+     align="HCENTER"
+     marker.area_width="1096"
+     marker.area_height="530"
+    />
+
+    <node
+     name="Tab_Quests"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="panel"
+     position.x="-0.00025882"
+     position.y="-0.477693"
+     scale="0.862451"
+     align="HCENTER"
+     marker.area_width="1096"
+     marker.area_height="571.575"
+    />
+
+    <node
+     name="aligner_quest_tab_panels"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="Tab_Quests"
+     position.x="0.0106906"
+     position.y="0.0360725"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_height="587.572"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="10"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="Tab_Collection"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="panel"
+     position.x="-4.32342e-05"
+     position.y="-0.475524"
+     visible="false"
+     align="HCENTER"
+     marker.area_width="1096"
+     marker.area_height="511.11"
+    />
+
+    <node
+     name="collection_panel"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanelInner"
+     parent="Tab_Collection"
+     position.x="-0.182623"
+     position.y="0.525425"
+     color="0.5,0.2,0.4,0.5"
+     scale="0.922589"
+     ui_scale_modifier="0.05"
+     align="VCENTER"
+     ninepatch.rectangle_width="703"
+     ninepatch.rectangle_height="526"
+    />
+
+    <node
+     name="CollectionScrollBar"
+     type="SLIDER"
+     inherit="SliderScrollbar"
+     parent="collection_panel"
+     position.x="0.968331"
+     position.y="0.00187886"
+     localize="true"
+     color="1,1,1,0.5"
+     scale="0.503545"
+     slider.ninepatch_height="975"
+     slider.linked_view="TF_Collection"
+     slider.hide_full_scrollbars="true"
+    />
+
+    <node
+     name="TF_Collection"
+     type="TOUCHFIELD"
+     inherit="DefaultTouchField"
+     parent="collection_panel"
+     position.x="0.0187079"
+     position.y="-0.46435"
+     touchfield.automatic_content_height="true"
+     touchfield.content_width="640"
+     touchfield.area_width="661.74"
+     touchfield.area_height="490.959"
+     touchfield.clip_children="true"
+     touchfield.axis_x_enabled="false"
+     touchfield.gamepad_scroll_speed="500"
+    />
+
+    <node
+     name="aligner_tabs"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel"
+     position.x="-1.93174e-05"
+     position.y="-0.533821"
+     scale="0.656101"
+     ui_scale_modifier="0.1"
+     aligner.layout="STACK"
+     aligner.area_height="59.552"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.min_padding="30"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="ToolTipTabLeft"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_tabs"
+     localize="false"
+     visible_for_control_interface="GAMEPAD"
+     align="VCENTER,HCENTER"
+     textbox.text="|img scale=1 src='controller-art/gamepad/left-shoulder.png'|"
+    />
+
+    <node
+     name="aligner"
+     type="ALIGNER"
+     inherit="DefaultAligner"
+     parent="aligner_system_tab_panels"
+     position.y="0.5"
+     scale="0.890857"
+     ui_scale_modifier="0.05"
+     aligner.layout="STACK"
+     aligner.area_width="340"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="15"
+    />
+
+    <node
+     name="panel2"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanelTransparent"
+     parent="aligner_system_tab_panels"
+     position.y="0.5"
+     color="0.5,0.2,0.4,0.35"
+     scale="0.907708"
+     ui_scale_modifier="0.05"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="665"
+     ninepatch.automatic_content_height="true"
+     ninepatch.automatic_content_padding="18"
+    />
+
+    <node
+     name="aligner_dlc_banners"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel2"
+     position.x="-0.482065"
+     position.y="-0.469859"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="25.0082"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="1"
+     aligner.min_padding="0"
+     aligner.align_x_axis="false"
+    />
+
+    <node
+     name="marker_dlc12_banners"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_dlc_banners"
+     position.x="0.119338"
+     marker.area_width="634"
+     marker.area_height="403.225"
+    />
+
+    <node
+     name="Resume"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner"
+     button.text="RESUME"
+     button.ninepatch_width="340"
+    />
+
+    <node
+     name="JoinCoopPlayer"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner"
+     required_features="COOP"
+     button.text="CO-OP"
+     button.ninepatch_width="340"
+    />
+
+    <node
+     name="DropCoopPlayer"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner"
+     visible="false"
+     button.text="END CO-OP"
+     button.ninepatch_width="340"
+    />
+
+    <node
+     name="image_dlc1_banner"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="marker_dlc12_banners"
+     position.x="0.252653"
+     position.y="0.5"
+     required_features="IN_APP_PURCHASES"
+     scale="0.889973"
+     align="VCENTER,HCENTER"
+     shader_effect="MaskedPanned"
+     image.bitmap="ui/gfx/banner-dlc1-half.png"
+    />
+
+    <node
+     name="image_dlc2_banner"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="marker_dlc12_banners"
+     position.x="0.747348"
+     position.y="0.5"
+     required_features="IN_APP_PURCHASES"
+     scale="0.889973"
+     align="VCENTER,HCENTER"
+     shader_effect="MaskedPanned"
+     image.bitmap="ui/gfx/banner-dlc2-half.png"
+    />
+
+    <node
+     name="image_dlc3_banner"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="aligner_dlc_banners"
+     position.x="12.8272"
+     required_features="IN_APP_PURCHASES"
+     scale="0.889973"
+     align="VCENTER,HCENTER"
+     shader_effect="MaskedPanned"
+     image.bitmap="ui/gfx/banner-dlc3-wide.png"
+    />
+
+    <node
+     name="RestartPuzzle"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner"
+     visible="false"
+     button.text="RESTART TOMB"
+     button.ninepatch_width="340"
+    />
+
+    <node
+     name="SetTab_System"
+     type="BUTTON"
+     inherit="TabButton"
+     parent="aligner_tabs"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     button.ninepatch_width="208"
+     button.ninepatch_height="60"
+     button.adjust_ninepatch_width_based_on_text_length="true"
+    />
+
+    <node
+     name="SetTab_Inventory"
+     type="BUTTON"
+     inherit="TabButton"
+     parent="aligner_tabs"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     button.ninepatch_width="258"
+     button.ninepatch_height="60"
+     button.adjust_ninepatch_width_based_on_text_length="true"
+    />
+
+    <node
+     name="SetTab_Quests"
+     type="BUTTON"
+     inherit="TabButton"
+     parent="aligner_tabs"
+     save_dynamic_content_to_ui_xml="false"
+     active="false"
+     localize="false"
+     button.ninepatch_width="201"
+     button.ninepatch_height="60"
+     button.adjust_ninepatch_width_based_on_text_length="true"
+    />
+
+    <node
+     name="SetTab_Map"
+     type="BUTTON"
+     inherit="TabButton"
+     parent="aligner_tabs"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     button.ninepatch_width="156"
+     button.ninepatch_height="60"
+     button.adjust_ninepatch_width_based_on_text_length="true"
+    />
+
+    <node
+     name="SetTab_Collection"
+     type="BUTTON"
+     inherit="TabButton"
+     parent="aligner_tabs"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     button.ninepatch_width="264"
+     button.ninepatch_height="60"
+     button.adjust_ninepatch_width_based_on_text_length="true"
+    />
+
+    <node
+     name="TouchClose"
+     type="BUTTON"
+     inherit="TabButton"
+     position.x="0.998514"
+     position.y="-0.00431289"
+     visible="false"
+     localize="false"
+     visible_for_control_interface="TOUCH"
+     on_click_script_call="UI_PopScreen()"
+     scale="1.44716"
+     align="RIGHT"
+     button.text="X"
+     button.ninepatch_width="53"
+     button.ninepatch_height="60"
+     button.adjust_ninepatch_width_based_on_text_length="true"
+    />
+
+    <node
+     name="Log"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner"
+     visible="false"
+     on_click_script_call="UI_PushScreen(\"Log\")"
+     button.text="TEXT LOG"
+     button.ninepatch_width="340"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node parent="aligner" name="mod_unstuck"
+      type="BUTTON" inherit="DefaultButton"
+      button.ninepatch_width="340"
+      localize="false"
+      visible="false"
+      />
+
+    <node parent="aligner" name="mod_code_editor"
+      type="BUTTON" inherit="DefaultButton"
+      required_features="SHADEGROWN_DEVELOPMENT_ENVIRONMENT"
+      button.ninepatch_width="340"
+      can_be_accessed_with_gamepads="false"
+      localize="false"
+      visible="false"
+      />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="Options"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner"
+     on_click_script_call="UI_PushScreen(\"OptionsUnified\")"
+     button.text="OPTIONS"
+     button.ninepatch_width="340"
+    />
+
+    <node
+     name="SaveAndExit"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner"
+     button.text="SAVE & EXIT"
+     button.ninepatch_width="340"
+    />
+
+    <node
+     name="spacer_WEBSITE_LINK"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner"
+     required_features="WEBSITE_LINK"
+     align="VCENTER,HCENTER"
+     marker.area_height="25.9514"
+    />
+
+    <node
+     name="Website"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner"
+     required_features="WEBSITE_LINK"
+     button.text="Website"
+     button.ninepatch_width="250"
+     button.ninepatch_height="60"
+    />
+
+    <node
+     name="tf_map"
+     type="TOUCHFIELD"
+     inherit="DefaultTouchField"
+     parent="Tab_Map"
+     position.x="-0.494804"
+     position.y="0.0252488"
+     scale="8"
+     touchfield.content_width="1024"
+     touchfield.content_height="512"
+     touchfield.area_width="1088"
+     touchfield.area_height="516.066"
+     touchfield.clip_children="true"
+     touchfield.max_zoom_factor="16"
+     touchfield.value_x="294.895"
+     touchfield.value_y="190.134"
+     touchfield.zoom_factor="8"
+    />
+
+    <node
+     name="marker_map_holder"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="tf_map"
+     marker.area_width="230"
+     marker.area_height="230"
+    />
+
+    <node
+     name="Map"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="marker_map_holder"
+     position.x="0.00306675"
+     position.y="0.00610997"
+     custom_draw="true"
+     scale="0.99506"
+     marker.area_width="1024"
+     marker.area_height="512"
+    />
+
+    <node
+     name="marker_inventory"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Tab_Inventory"
+     position.x="0.50162"
+     position.y="0.516618"
+     scale="0.959524"
+     ui_scale_modifier="0.075"
+     align="RIGHT,VCENTER"
+     marker.area_width="384.958"
+     marker.area_height="511.784"
+    />
+
+    <node
+     name="marker_stats"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Tab_Inventory"
+     position.x="-0.487489"
+     position.y="0.483363"
+     scale="0.946164"
+     ui_scale_modifier="0.05"
+     align="VCENTER"
+     marker.area_width="318.951"
+     marker.area_height="511.784"
+    />
+
+    <node
+     name="marker_player"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Tab_Inventory"
+     position.x="-0.0274699"
+     position.y="0.0785742"
+     align="HCENTER"
+     marker.area_width="312.889"
+     marker.area_height="440.889"
+    />
+
+    <node
+     name="light_1"
+     type="LIGHT"
+     inherit="DefaultLight"
+     parent="marker_player"
+     position.x="1.14217"
+     position.y="0.0497313"
+     position.z="-0.912484"
+     light.radius="2725.93"
+    />
+
+    <node
+     name="Scene"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="marker_player"
+     position.x="-0.0255098"
+     position.y="0.927076"
+     angle.x="1.5708"
+     angle.y="-0.019635"
+     angle.z="-5.07238"
+     align="VCENTER,HCENTER"
+     marker.area_width="60"
+     marker.area_height="60"
+    />
+
+    <node
+     name="PlayerModel"
+     type="MODEL"
+     inherit="DefaultModel"
+     parent="Scene"
+     save_dynamic_content_to_ui_xml="false"
+     color="0.3,0.4,0.5,1"
+     scale="3.86478"
+     ui_scale_modifier="0.15"
+     align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="PlayerPetModel"
+     type="MODEL"
+     inherit="DefaultModel"
+     parent="Scene"
+     position.x="0.0546891"
+     position.y="-1.59457"
+     angle.x="0.0174569"
+     angle.y="0.0132421"
+     angle.z="-6.4928"
+     save_dynamic_content_to_ui_xml="false"
+     color="0.3,0.4,0.5,1"
+     scale="3.86478"
+     ui_scale_modifier="0.15"
+     align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="GrassModel1"
+     type="MODEL"
+     inherit="DefaultModel"
+     parent="Scene"
+     position.x="-1.47162"
+     position.y="1.34415"
+     position.z="0.004"
+     color="0.3,0.4,0.5,1"
+     scale="0.909"
+     align="VCENTER,HCENTER"
+     model.model="models/objects/autumn-grass-patch.model"
+    />
+
+    <node
+     name="GrassModel2"
+     type="MODEL"
+     inherit="DefaultModel"
+     parent="Scene"
+     position.x="-0.476187"
+     position.y="1.76656"
+     position.z="0.013"
+     angle.z="5.27978"
+     color="0.3,0.4,0.5,1"
+     scale="0.909"
+     align="VCENTER,HCENTER"
+     model.model="models/objects/autumn-grass-patch.model"
+    />
+
+    <node
+     name="GrassModel3"
+     type="MODEL"
+     inherit="DefaultModel"
+     parent="Scene"
+     position.x="-1.37538"
+     position.y="-1.21744"
+     position.z="0.013"
+     angle.z="0.656016"
+     color="0.3,0.4,0.5,1"
+     scale="0.909"
+     align="VCENTER,HCENTER"
+     model.model="models/objects/autumn-grass-patch.model"
+    />
+
+    <node
+     name="GrassModel4"
+     type="MODEL"
+     inherit="DefaultModel"
+     parent="Scene"
+     position.x="1.0512"
+     position.y="-1.06164"
+     position.z="0.013"
+     angle.z="6.48271"
+     color="0.3,0.4,0.5,1"
+     scale="0.909"
+     align="VCENTER,HCENTER"
+     model.model="models/objects/autumn-grass-patch.model"
+    />
+
+    <node
+     name="GrassModel5"
+     type="MODEL"
+     inherit="DefaultModel"
+     parent="Scene"
+     position.x="1.92687"
+     position.y="0.809305"
+     position.z="0.013"
+     angle.z="4.17902"
+     color="0.3,0.4,0.5,1"
+     scale="0.909"
+     align="VCENTER,HCENTER"
+     model.model="models/objects/autumn-grass-patch.model"
+    />
+
+    <node
+     name="touchfield_inv_stats"
+     type="TOUCHFIELD"
+     inherit="DefaultTouchField"
+     parent="marker_stats"
+     position.x="-0.0876819"
+     position.y="-0.486631"
+     touchfield.automatic_content_height="true"
+     touchfield.content_width="287.202"
+     touchfield.area_width="357.579"
+     touchfield.area_height="525.023"
+     touchfield.clip_children="true"
+     touchfield.axis_x_enabled="false"
+     touchfield.gamepad_scroll_speed="500"
+     touchfield.bm_scroll_indicator="ui/gfx/scroll-indicator.png"
+    />
+
+    <node
+     name="light_2"
+     type="LIGHT"
+     inherit="DefaultLight"
+     parent="marker_player"
+     position.x="-1.31738"
+     position.y="0.79301"
+     position.z="0.424433"
+     color="1,0.5,0,1.5"
+     light.radius="1075.56"
+    />
+
+    <node
+     name="ToolTipTabRight2"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_tabs"
+     visible="false"
+     localize="false"
+     visible_for_control_interface="GAMEPAD"
+     align="VCENTER,HCENTER"
+     textbox.text="|img scale=1 src='controller-art/gamepad/right-shoulder.png'|"
+    />
+
+    <node
+     name="textbox_3"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="marker_inventory"
+     position.x="-0.0355569"
+     position.y="-0.483976"
+     color="1,1,1,0.5"
+     scale="0.945919"
+     align="RIGHT,VCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="192"
+     textbox.text="EQUIPPED GEAR"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="aligner_collection_categories"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="Tab_Collection"
+     position.x="-0.458362"
+     position.y="0.528323"
+     ui_scale_modifier="0.05"
+     aligner.area_width="35.1652"
+     aligner.area_height="447.274"
+     aligner.fixed_num_columns="1"
+     aligner.min_padding="14"
+    />
+
+    <node
+     name="SetCollectionCategory_MATERIALS"
+     type="BUTTON"
+     inherit="QuestButton"
+     parent="aligner_collection_categories"
+     align="VCENTER"
+     button.text="Materials"
+     button.text_color_idle="1,1,1,1"
+     button.bitmap_color_idle="0.95,0,0,1"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="SetCollectionCategory_MEDALS"
+     type="BUTTON"
+     inherit="QuestButton"
+     parent="aligner_collection_categories"
+     align="VCENTER"
+     button.text="Medals"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="SetCollectionCategory_RECIPES"
+     type="BUTTON"
+     inherit="QuestButton"
+     parent="aligner_collection_categories"
+     align="VCENTER"
+     button.text="Recipes"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="SetCollectionCategory_SKILLS"
+     type="BUTTON"
+     inherit="QuestButton"
+     parent="aligner_collection_categories"
+     align="VCENTER"
+     button.text="Skills"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="SetCollectionCategory_POINTS_OF_INTEREST"
+     type="BUTTON"
+     inherit="QuestButton"
+     parent="aligner_collection_categories"
+     align="VCENTER"
+     button.text="Points of Interest"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="SetCollectionCategory_CREATURES"
+     type="BUTTON"
+     inherit="QuestButton"
+     parent="aligner_collection_categories"
+     required_features="!CHINA_ISBN"
+     align="VCENTER"
+     button.text="Creatures"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="SetCollectionCategory_KEYS"
+     type="BUTTON"
+     inherit="QuestButton"
+     parent="aligner_collection_categories"
+     align="VCENTER"
+     button.text="Keys"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="SetCollectionCategory_COLLECTIBLES"
+     type="BUTTON"
+     inherit="QuestButton"
+     parent="aligner_collection_categories"
+     visible="false"
+     align="VCENTER"
+     button.text="Collectibles"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="SetCollectionCategory_PROGRESS"
+     type="BUTTON"
+     inherit="QuestButton"
+     parent="aligner_collection_categories"
+     required_features="!CHINA_ISBN"
+     align="VCENTER"
+     button.text="Total Progress"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="collection_panels"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="TF_Collection"
+     position.x="0.502702"
+     position.y="0.0224429"
+     align="VCENTER,HCENTER"
+     marker.area_width="100"
+     marker.area_height="14.963"
+    />
+
+    <node
+     name="CollectionCategory_RECIPES"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="collection_panels"
+     visible="false"
+     align="HCENTER"
+     marker.area_width="636.444"
+     marker.area_height="401.111"
+    />
+
+    <node
+     name="CollectionCategory_MEDALS"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="collection_panels"
+     visible="false"
+     align="HCENTER"
+     marker.area_width="636.444"
+     marker.area_height="430"
+    />
+
+    <node
+     name="CollectionCategory_MATERIALS"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="collection_panels"
+     align="HCENTER"
+     marker.area_width="636.444"
+     marker.area_height="430"
+    />
+
+    <node
+     name="CollectionCategory_CREATURES"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="collection_panels"
+     visible="false"
+     align="HCENTER"
+     marker.area_width="636.444"
+     marker.area_height="401.111"
+    />
+
+    <node
+     name="StationaryCreatureInfo"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="collection_panel"
+     position.x="0.77735"
+     position.y="-0.466547"
+     visible="false"
+     scale="0.968245"
+     align="HCENTER"
+     marker.area_width="232.603"
+     marker.area_height="489.995"
+    />
+
+    <node
+     name="CollectionCategory_PROGRESS"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="collection_panels"
+     visible="false"
+     ui_scale_modifier="0.1"
+     align="HCENTER"
+     marker.area_width="636.444"
+     marker.area_height="401.111"
+    />
+
+    <node
+     name="CollectionCategory_SKILLS"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="collection_panels"
+     visible="false"
+     align="HCENTER"
+     marker.area_width="636.444"
+     marker.area_height="401.111"
+    />
+
+    <node
+     name="CollectionCategory_KEYS"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="collection_panels"
+     visible="false"
+     align="HCENTER"
+     marker.area_width="636.444"
+     marker.area_height="401.111"
+    />
+
+    <node
+     name="CollectionCategory_COLLECTIBLES"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="collection_panels"
+     visible="false"
+     align="HCENTER"
+     marker.area_width="636.444"
+     marker.area_height="401.111"
+    />
+
+    <node
+     name="aligner_progress"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="CollectionCategory_PROGRESS"
+     position.x="-0.087821"
+     position.y="0.208341"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="16"
+    />
+
+    <node
+     name="CollectionCategory_POINTS_OF_INTEREST"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="collection_panels"
+     visible="false"
+     align="HCENTER"
+     marker.area_width="640"
+     marker.area_height="401.111"
+    />
+
+    <node
+     name="ToDoText2"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="CollectionCategory_PROGRESS"
+     position.x="0.00324112"
+     position.y="0.0885332"
+     scale="1.08252"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="409"
+     textbox.text="Overall Progress"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="ToDoText3"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_progress"
+     scale="0.9"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="290"
+     textbox.text="Time Played:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="ToDoText5"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_progress"
+     scale="0.9"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="290"
+     textbox.text="Medals:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="ToDoText6"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_progress"
+     scale="0.9"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="290"
+     textbox.text="Main Quest:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="ToDoText7"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_progress"
+     scale="0.9"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="290"
+     textbox.text="Side Quests:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="ToDoText8"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_progress"
+     scale="0.9"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="290"
+     textbox.text="Points of Interest:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="aligner_progress_poi_sub"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_progress"
+     scale="0.85"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="10"
+    />
+
+    <node
+     name="progress_poi_title_MainIsland"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_progress_poi_sub"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="310"
+     textbox.text="Main Island:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="progress_poi_title_Undercrown"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_progress_poi_sub"
+     visible="false"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="310"
+     textbox.text="Undercrown:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="progress_poi_title_DLC1"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_progress_poi_sub"
+     visible="false"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="310"
+     textbox.text="Underworld:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="progress_poi_title_DLC2"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_progress_poi_sub"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="310"
+     textbox.text="Hidden Archipelago:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="progress_poi_title_DLC3"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_progress_poi_sub"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="310"
+     textbox.text="Pet Island:"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="TimePlayed"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="ToDoText3"
+     position.x="0.05"
+     position.y="0.04"
+     localize="false"
+     scale="0.879878"
+     align="VCENTER"
+     textbox.textbox_width="380"
+     textbox.text="8 hours 14 minutes"
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="PlayerProgressDesc"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="ToDoText3"
+     position.x="0.217968"
+     position.y="-1.48526"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.637219"
+     align="VCENTER,HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="1033"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="aligner_inventory_slots"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="marker_inventory"
+     position.x="-0.936284"
+     position.y="0.00339162"
+     scale="0.887286"
+     aligner.layout="STACK"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="36"
+    />
+
+    <node
+     name="aligner_inventory_stats"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="touchfield_inv_stats"
+     position.x="0.483831"
+     position.y="-0.00992935"
+     scale="0.932083"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="343.09"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="-10"
+    />
+
+    <node
+     name="aligner_slot_head"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_inventory_slots"
+     align="VCENTER"
+     aligner.layout="STACK"
+     aligner.area_height="82"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="6"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="aligner_slot_outfit"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_inventory_slots"
+     align="VCENTER"
+     aligner.layout="STACK"
+     aligner.area_height="82"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="6"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="aligner_slot_tool"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_inventory_slots"
+     align="VCENTER"
+     aligner.layout="STACK"
+     aligner.area_height="82"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="6"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="aligner_slot_special"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_inventory_slots"
+     align="VCENTER"
+     aligner.layout="STACK"
+     aligner.area_height="82"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="6"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="aligner_slot_trinkets"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_inventory_slots"
+     align="VCENTER"
+     aligner.layout="STACK"
+     aligner.area_height="82"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="6"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="ninepatch_1"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanel"
+     parent="aligner_inventory_stats"
+     color="0.5,0.2,0.4,0.35"
+     align="HCENTER"
+     ninepatch.rectangle_width="360"
+     ninepatch.automatic_content_height="true"
+     ninepatch.automatic_content_padding="24"
+     ninepatch.upper_left_corner_position_in_bitmap="40,40"
+    />
+
+    <node
+     name="aligner_inventory_stats4"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="ninepatch_1"
+     position.x="0.00212431"
+     position.y="0.132083"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="195.395"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="10"
+    />
+
+    <node
+     name="ninepatch_inv_modifiers"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanel"
+     parent="aligner_inventory_stats"
+     color="0.5,0.2,0.4,0.35"
+     align="HCENTER"
+     ninepatch.rectangle_width="360"
+     ninepatch.automatic_content_height="true"
+     ninepatch.automatic_content_padding="34"
+     ninepatch.upper_left_corner_position_in_bitmap="40,40"
+    />
+
+    <node
+     name="ninepatch_inv_features"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanel"
+     parent="aligner_inventory_stats"
+     color="0.5,0.2,0.4,0.35"
+     align="HCENTER"
+     ninepatch.rectangle_width="360"
+     ninepatch.automatic_content_height="true"
+     ninepatch.automatic_content_padding="24"
+     ninepatch.upper_left_corner_position_in_bitmap="40,40"
+    />
+
+    <node
+     name="aligner_inventory_stats2"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="ninepatch_inv_modifiers"
+     position.x="0.00252698"
+     position.y="-0.0010318"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="195.395"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="10"
+    />
+
+    <node
+     name="aligner_inventory_stats3"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="ninepatch_inv_features"
+     position.x="0.000443649"
+     position.y="0.00256532"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="195.395"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="10"
+    />
+
+    <node
+     name="marker_title_holder_0"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_slot_head"
+     align="VCENTER,HCENTER"
+     marker.area_width="18.963"
+     marker.area_height="50"
+    />
+
+    <node
+     name="marker_title_holder_2"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_slot_tool"
+     align="VCENTER,HCENTER"
+     marker.area_width="18.963"
+     marker.area_height="50"
+    />
+
+    <node
+     name="marker_title_holder_3"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_slot_special"
+     align="VCENTER,HCENTER"
+     marker.area_width="18.963"
+     marker.area_height="50"
+    />
+
+    <node
+     name="marker_title_holder_4"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_slot_trinkets"
+     align="VCENTER,HCENTER"
+     marker.area_width="18.963"
+     marker.area_height="50"
+    />
+
+    <node
+     name="marker_title_holder_1"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_slot_outfit"
+     align="VCENTER,HCENTER"
+     marker.area_width="18.963"
+     marker.area_height="50"
+    />
+
+    <node
+     name="InventorySlot_OUTFITS_0"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_outfit"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="aligner_slot_pets"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_slot_outfit"
+     align="VCENTER"
+     aligner.layout="STACK"
+     aligner.area_height="82"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="6"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="marker_title_holder_5"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_slot_pets"
+     align="VCENTER,HCENTER"
+     marker.area_width="70"
+     marker.area_height="50"
+    />
+
+    <node
+     name="category_title_0"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="marker_title_holder_0"
+     position.x="1.14566"
+     position.y="-0.69443"
+     scale="0.7"
+     align="BOTTOM"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="209"
+     textbox.text="HEADGEAR"
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="item_effects_title2"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_inventory_stats4"
+     scale="0.85052"
+     align="VCENTER,HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="335"
+     textbox.text="|#ffaa11|STATS"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="PlayerStats"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_inventory_stats4"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.616782"
+     ui_scale_modifier="0.12"
+     align="HCENTER"
+     textbox.textbox_width="470"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="marker_5"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_inventory_stats2"
+     align="VCENTER,HCENTER"
+     marker.area_width="137.927"
+     marker.area_height="16.0908"
+    />
+
+    <node
+     name="marker_7"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_inventory_stats3"
+     align="VCENTER,HCENTER"
+     marker.area_width="137.927"
+     marker.area_height="14.6632"
+    />
+
+    <node
+     name="item_effects_title"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_inventory_stats2"
+     scale="0.937767"
+     align="VCENTER,HCENTER"
+     textbox.text="|#ffaa11|MODIFIERS"
+    />
+
+    <node
+     name="ModifiersList"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_inventory_stats2"
+     custom_draw="true"
+     align="VCENTER,HCENTER"
+     marker.area_width="313.855"
+     marker.area_height="866.38"
+    />
+
+    <node
+     name="marker_6"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_inventory_stats"
+     align="VCENTER,HCENTER"
+     marker.area_width="209.304"
+     marker.area_height="2"
+    />
+
+    <node
+     name="item_effects_title3"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_inventory_stats3"
+     scale="0.85052"
+     align="VCENTER,HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="335"
+     textbox.text="|#ffaa11| FEATURES"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="aligner_1"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_inventory_stats3"
+     scale="0.684608"
+     aligner.automatic_area_width="true"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="5"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="0.25"
+    />
+
+    <node
+     name="category_title_1"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="marker_title_holder_2"
+     position.x="1.15145"
+     position.y="-0.721448"
+     scale="0.7"
+     align="BOTTOM"
+     textbox.text="TOOL"
+    />
+
+    <node
+     name="category_title_2"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="marker_title_holder_3"
+     position.x="1.21707"
+     position.y="-0.704042"
+     scale="0.7"
+     align="BOTTOM"
+     textbox.text="SPECIAL ITEM"
+    />
+
+    <node
+     name="category_title_3"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="marker_title_holder_4"
+     position.x="1.1164"
+     position.y="-0.689711"
+     scale="0.7"
+     align="BOTTOM"
+     textbox.text="TRINKETS"
+    />
+
+    <node
+     name="category_title_5"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="marker_title_holder_1"
+     position.x="1.04169"
+     position.y="-0.819858"
+     scale="0.7"
+     align="BOTTOM"
+     textbox.text="OUTFIT"
+    />
+
+    <node
+     name="InventorySlot_HEADGEARS_0"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_head"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_PETS_0"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_pets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node
+     name="InventorySlot_PETS_1"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_pets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_PETS_2"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_pets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_PETS_3"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_pets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_PETS_4"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_pets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_PETS_5"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_pets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_PETS_6"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_pets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_PETS_7"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_pets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_PETS_8"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_pets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_PETS_9"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_pets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="category_title_6"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="marker_title_holder_5"
+     position.x="0.733413"
+     position.y="-0.819858"
+     scale="0.7"
+     align="BOTTOM"
+     textbox.text="PET"
+    />
+
+    <node
+     name="InventorySlot_TOOLS_0"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_tool"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+     selection_priority="15"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="InventorySlot_TOOLS_1"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_tool"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_TOOLS_2"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_tool"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_TOOLS_3"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_tool"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node
+     name="InventorySlot_TOOLS_4"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_tool"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+     visible="false"
+    />
+
+    <node
+     name="InventorySlot_TOOLS_5"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_tool"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+     visible="false"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="InventorySlot_SPECIALS_0"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_special"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_SPECIALS_1"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_special"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_SPECIALS_2"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_special"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_SPECIALS_3"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_special"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_SPECIALS_4"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_special"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node
+     name="InventorySlot_SPECIALS_5"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_special"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+     visible="false"
+    />
+
+    <node
+     name="InventorySlot_TRINKETS_9"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_trinkets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+     visible="false"
+    />
+
+    <node
+     name="InventorySlot_TRINKETS_8"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_trinkets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+     visible="false"
+    />
+
+    <node
+     name="InventorySlot_TRINKETS_7"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_trinkets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+     visible="false"
+    />
+
+    <node
+     name="InventorySlot_TRINKETS_6"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_trinkets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+     visible="false"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="InventorySlot_TRINKETS_0"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_trinkets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_TRINKETS_1"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_trinkets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_TRINKETS_2"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_trinkets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_TRINKETS_3"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_trinkets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="InventorySlot_TRINKETS_4"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_trinkets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+     name="InventorySlot_TRINKETS_5"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_slot_trinkets"
+     localize="false"
+     custom_draw="true"
+     button.ninepatch_width="70"
+     button.ninepatch_height="70"
+     visible="false"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="MapHUD"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Tab_Map"
+     position.x="-0.456627"
+     position.y="0.0623143"
+     custom_draw="true"
+    />
+
+    <node
+     name="panel_quest_left"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanel"
+     parent="aligner_quest_tab_panels"
+     position.y="0.5"
+     color="0.5,0.2,0.4,0.35"
+     ui_scale_modifier="0.05"
+     align="VCENTER"
+     ninepatch.rectangle_width="413"
+     ninepatch.rectangle_height="590"
+    />
+
+    <node
+     name="tf_quest_list"
+     type="TOUCHFIELD"
+     inherit="DefaultTouchField"
+     parent="panel_quest_left"
+     position.x="0.533472"
+     position.y="-0.473"
+     align="HCENTER"
+     touchfield.automatic_content_height="true"
+     touchfield.area_width="406.569"
+     touchfield.area_height="558.302"
+     touchfield.clip_children="true"
+     touchfield.axis_x_enabled="false"
+    />
+
+    <node
+     name="aligner_quest_list"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="tf_quest_list"
+     position.x="-0.0371088"
+     position.y="0.0344458"
+     ui_scale_modifier="0.075"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="4"
+    />
+
+    <node
+     name="quest_category_MAIN_QUEST"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="aligner_quest_list"
+     align="VCENTER,HCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.text="MAIN QUESTS"
+    />
+
+    <node
+     name="aligner_main_quests"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_quest_list"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="123.366"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="4"
+    />
+
+    <node
+     name="Quest_0"
+     type="BUTTON"
+     inherit="QuestButton"
+     parent="aligner_side_quests"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     custom_draw="true"
+     button.text_offset="14,2"
+     button.ninepatch_width="360"
+     button.text_padding_horizontal="30"
+    />
+
+    <node
+     name="marker_11"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_quest_list"
+     align="VCENTER,HCENTER"
+     marker.area_width="48.6039"
+     marker.area_height="10"
+    />
+
+    <node
+     name="quest_category_SIDE_QUEST"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="aligner_quest_list"
+     align="VCENTER,HCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.text="SIDE QUESTS"
+    />
+
+    <node
+     name="aligner_side_quests"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_quest_list"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="123.366"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="4"
+    />
+
+    <node
+     name="marker_9"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_quest_list"
+     align="VCENTER,HCENTER"
+     marker.area_width="48.6039"
+     marker.area_height="10"
+    />
+
+    <node
+     name="marker_12"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_side_quests"
+     align="VCENTER,HCENTER"
+     marker.area_width="48.6039"
+     marker.area_height="2.27819"
+    />
+
+    <node
+     name="quest_category_COMPLETED"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="aligner_quest_list"
+     align="VCENTER,HCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.text="COMPLETED"
+    />
+
+    <node
+     name="aligner_completed_quests"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_quest_list"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="123.366"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="4"
+    />
+
+    <node
+     name="panel_quest_right"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanel"
+     parent="aligner_quest_tab_panels"
+     position.y="0.5"
+     color="0.5,0.2,0.4,0.35"
+     ui_scale_modifier="0.05"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="625"
+     ninepatch.rectangle_height="590"
+    />
+
+    <node
+     name="aligner_quest_desc"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel_quest_right"
+     position.x="-0.49193"
+     position.y="-0.21292"
+     align=""
+     aligner.layout="STACK"
+     aligner.area_width="55.5115"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="1"
+     aligner.min_padding="8"
+    />
+
+    <node
+     name="QuestImage"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="panel_quest_right"
+     position.x="-0.471345"
+     position.y="-0.468785"
+     save_dynamic_content_to_ui_xml="false"
+     scale="0.663979"
+     shader_effect="MaskedPanned"
+    />
+
+    <node
+     name="QuestName"
+     type="TEXTBOX"
+     inherit="MediumTextbox"
+     parent="QuestImage"
+     position.x="0.499377"
+     position.y="0.511473"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.787321"
+     align="VCENTER,HCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="1055"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="QuestMainDescription"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="aligner_quest_desc"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.85"
+     align="BOTTOM"
+     shader_effect="FontBlackShadowOutline"
+     textbox.textbox_width="670"
+     textbox.text_align="BOTTOM"
+    />
+
+    <node
+     name="QuestMoreInfo"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_quest_desc"
+     visible="false"
+     localize="false"
+     scale="0.838199"
+     align="VCENTER"
+     button.text="Show The Letter"
+     button.ninepatch_width="440"
+    />
+
+    <node
+     name="marker_spacer"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_quest_desc"
+     align="VCENTER"
+     marker.area_width="121.557"
+     marker.area_height="3.6924"
+    />
+
+    <node
+     name="QuestCompletedDescription"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="aligner_quest_desc"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     scale="0.85"
+     align="BOTTOM"
+     shader_effect="FontBlackShadowOutline"
+     textbox.textbox_width="617"
+     textbox.text_align="BOTTOM"
+    />
+
+    <node
+     name="QuestPhaseDescription"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="aligner_quest_desc"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     scale="0.85"
+     shader_effect="FontBlackShadowOutline"
+     textbox.textbox_width="670"
+    />
+
+    <node
+     name="aligner_quest_goals"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="aligner_quest_desc"
+     scale="0.8"
+     align="VCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="26.9386"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="1"
+     aligner.min_padding="14"
+    />
+
+    <node
+     name="QuestGoal_0"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="aligner_quest_goals"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     align="VCENTER"
+     checkbox.textbox_width="600"
+    />
+
+    <node
+     name="marker_spacer2"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_quest_desc"
+     align="VCENTER"
+     marker.area_width="121.557"
+     marker.area_height="4.9804"
+    />
+
+    <node
+     name="QuestGoal_1"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="aligner_quest_goals"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     align="VCENTER"
+     checkbox.textbox_width="600"
+    />
+
+    <node
+     name="QuestGoal_2"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="aligner_quest_goals"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     align="VCENTER"
+     checkbox.textbox_width="600"
+    />
+
+    <node
+     name="QuestGoal_3"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="aligner_quest_goals"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     align="VCENTER"
+     checkbox.textbox_width="600"
+    />
+
+    <node
+     name="QuestGoal_4"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="aligner_quest_goals"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     align="VCENTER"
+     checkbox.textbox_width="600"
+    />
+
+    <node
+     name="QuestRewardTitle"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="aligner_quest_desc"
+     scale="1.06838"
+     align="VCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.text="REWARD"
+    />
+
+    <node
+     name="QuestReward"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="aligner_quest_desc"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.880361"
+     align="VCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.textbox_width="596"
+    />
+
+    <node
+     name="TrackQuest_0"
+     type="CHECKBOX"
+     inherit="TrackingCheckbox"
+     parent="Quest_0"
+     position.x="-0.43"
+     position.y="0.0165"
+     custom_draw="true"
+     can_be_accessed_with_gamepads="false"
+     scale="0.75"
+     checkbox.value="1"
+    />
+
+    <node
+     name="TotalProgress_Medal"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="ToDoText5"
+     position.x="0.0495698"
+     position.y="0.0489426"
+     custom_draw="true"
+     color="1,1,1,0"
+     scale="0.797421"
+     align="VCENTER"
+     slider.ninepatch_width="370"
+     slider.value="0.270847"
+     slider.bm_marker="!NONE"
+    />
+
+    <node
+     name="TotalProgress_MainQuest"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="ToDoText6"
+     position.x="0.0495698"
+     position.y="0.0489426"
+     custom_draw="true"
+     color="1,1,1,0"
+     scale="0.797421"
+     align="VCENTER"
+     slider.ninepatch_width="370"
+     slider.value="0.0740741"
+     slider.bm_marker="!NONE"
+    />
+
+    <node
+     name="TotalProgress_SideQuest"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="ToDoText7"
+     position.x="0.0495698"
+     position.y="0.0489426"
+     custom_draw="true"
+     color="1,1,1,0"
+     scale="0.797421"
+     align="VCENTER"
+     slider.ninepatch_width="370"
+     slider.value="0.373874"
+     slider.bm_marker="!NONE"
+    />
+
+    <node
+     name="TotalProgress_POI"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="ToDoText8"
+     position.x="0.0487909"
+     position.y="0.00870521"
+     active="false"
+     localize="false"
+     custom_draw="true"
+     color="1,1,1,0"
+     scale="0.797421"
+     align="VCENTER"
+     slider.ninepatch_width="370"
+     slider.value="0.0639535"
+     slider.bm_marker="!NONE"
+    />
+
+    <node
+     name="TotalProgress_POI_Island"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="progress_poi_title_MainIsland"
+     position.x="0.0619771"
+     position.y="0.0074179"
+     active="false"
+     localize="false"
+     custom_draw="true"
+     color="1,1,1,0"
+     scale="0.797421"
+     align="VCENTER"
+     slider.value="0.127907"
+     slider.bm_marker="!NONE"
+    />
+
+    <node
+     name="TotalProgress_POI_Undercrown"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="progress_poi_title_Undercrown"
+     position.x="0.0619771"
+     position.y="0.0074179"
+     active="false"
+     localize="false"
+     custom_draw="true"
+     color="1,1,1,0"
+     scale="0.797421"
+     align="VCENTER"
+     slider.value="0"
+     slider.bm_marker="!NONE"
+    />
+
+    <node
+     name="TotalProgress_POI_DLC1"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="progress_poi_title_DLC1"
+     position.x="0.0619771"
+     position.y="0.0074179"
+     active="false"
+     localize="false"
+     custom_draw="true"
+     color="1,1,1,0"
+     scale="0.797421"
+     align="VCENTER"
+     slider.value="0"
+     slider.bm_marker="!NONE"
+    />
+
+    <node
+     name="TotalProgress_POI_DLC2"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="progress_poi_title_DLC2"
+     position.x="0.0619771"
+     position.y="0.0074179"
+     active="false"
+     localize="false"
+     custom_draw="true"
+     color="1,1,1,0"
+     scale="0.797421"
+     align="VCENTER"
+     slider.value="0.0243902"
+     slider.bm_marker="!NONE"
+    />
+
+    <node
+     name="TotalProgress_POI_DLC3"
+     type="SLIDER"
+     inherit="DefaultSlider"
+     parent="progress_poi_title_DLC3"
+     position.x="0.0619771"
+     position.y="0.0074179"
+     active="false"
+     localize="false"
+     custom_draw="true"
+     color="1,1,1,0"
+     scale="0.797421"
+     align="VCENTER"
+     slider.value="0.111111"
+     slider.bm_marker="!NONE"
+    />
+
+    <node
+     name="CheatMedals"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="Tab_Collection"
+     position.x="-0.330487"
+     position.y="1.07672"
+     localize="false"
+     required_features="DEVELOPER_MODE"
+     can_be_accessed_with_gamepads="false"
+     scale="0.348746"
+     button.text="Cheat Medals"
+     button.ninepatch_width="228"
+     button.ninepatch_height="63"
+    />
+
+    <node
+     name="InventoryTooltip"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="Tab_Inventory"
+     position.x="0.000556411"
+     position.y="1.06992"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.769205"
+     align="BOTTOM,HCENTER"
+     textbox.textbox_width="1222"
+     textbox.text_align="HCENTER"
+    />
+
+    <node
+     name="EditQuestScript"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_quest_desc"
+     localize="false"
+     required_features="DEVELOPER_MODE"
+     can_be_accessed_with_gamepads="false"
+     scale="0.73801"
+     align="VCENTER"
+     button.text="Edit Script"
+    />
+
+    <node
+     name="CheatUndoQuest"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="EditQuestScript"
+     position.x="1.07437"
+     position.y="-0.00359434"
+     localize="false"
+     required_features="DEVELOPER_MODE"
+     can_be_accessed_with_gamepads="false"
+     align="VCENTER"
+     button.text="Undo Whole Quest"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="CheatUndoQuestPhase"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="EditQuestScript"
+     position.x="1.08204"
+     position.y="1.16347"
+     localize="false"
+     required_features="DEVELOPER_MODE"
+     can_be_accessed_with_gamepads="false"
+     align="VCENTER"
+     button.text="Undo Quest Phase"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="CheatCompleteQuest"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="EditQuestScript"
+     position.x="2.36813"
+     position.y="0.00755008"
+     localize="false"
+     required_features="DEVELOPER_MODE"
+     can_be_accessed_with_gamepads="false"
+     align="VCENTER"
+     button.text="Complete Quest"
+     button.ninepatch_width="220"
+    />
+
+    <node
+     name="cat_aligner_CREATURES"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="CollectionCategory_CREATURES"
+     position.x="-0.225842"
+     scale="0.620336"
+     align="HCENTER"
+     aligner.automatic_area_width="true"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="4"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="0.18"
+    />
+
+    <node
+     name="CreatureImageMarker"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="StationaryCreatureInfo"
+     position.x="-0.0109128"
+     position.y="0.578619"
+     custom_draw="true"
+     scale="0.892731"
+     align="BOTTOM,HCENTER"
+     marker.area_width="217.604"
+     marker.area_height="295.788"
+    />
+
+    <node
+     name="CreatureName"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="StationaryCreatureInfo"
+     position.x="-0.0146092"
+     position.y="0.63506"
+     localize="false"
+     ui_scale_modifier="0.2"
+     align="BOTTOM,HCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="217"
+     textbox.text="The Survivor"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="CreatureDesc"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="StationaryCreatureInfo"
+     position.x="-0.0128089"
+     position.y="0.649035"
+     localize="false"
+     scale="0.621745"
+     ui_scale_modifier="0.2"
+     align="HCENTER"
+     textbox.textbox_width="362"
+     textbox.text="After spending years upon years in his underground shelter he has resurfaced with the aim of finding a way off the island."
+     textbox.text_align="HCENTER"
+    />
+
+    <node
+     name="CollectibleShowAll"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="Tab_Collection"
+     position.x="-0.429752"
+     position.y="1.08485"
+     localize="false"
+     required_features="DEVELOPER_MODE"
+     can_be_accessed_with_gamepads="false"
+     scale="0.525295"
+     checkbox.text="Cheat Show All"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="Feature_0"
+     type="BUTTON"
+     inherit="MaterialFrameButton"
+     parent="aligner_1"
+     save_dynamic_content_to_ui_xml="false"
+     button.icon_scale="0.65"
+    />
+
+    <node
+     name="cat_aligner_recipes_all"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="CollectionCategory_RECIPES"
+     position.x="-0.00121047"
+     position.y="-0.00023084"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.automatic_area_width="true"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="1"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="12"
+    />
+
+    <node
+     name="textbox_1"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="cat_aligner_recipes_all"
+     align="VCENTER,HCENTER"
+     textbox.text="Crafting Recipes"
+    />
+
+    <node
+     name="textbox_4"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="CollectionCategory_SKILLS"
+     position.x="0.000651724"
+     position.y="0.0479224"
+     align="VCENTER,HCENTER"
+     textbox.text="Skills"
+    />
+
+    <node
+     name="textbox_5"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="CollectionCategory_KEYS"
+     position.x="-0.00196224"
+     position.y="0.041154"
+     align="VCENTER,HCENTER"
+     textbox.text="Keys"
+    />
+
+    <node
+     name="textbox_8"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="CollectionCategory_COLLECTIBLES"
+     position.x="-0.00196224"
+     position.y="0.041154"
+     align="VCENTER,HCENTER"
+     textbox.text="Collectibles"
+    />
+
+    <node
+     name="cat_aligner_crafting"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="cat_aligner_recipes_all"
+     align="HCENTER"
+     aligner.automatic_area_width="true"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="8"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="0.1"
+    />
+
+    <node
+     name="cat_aligner_skills"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="CollectionCategory_SKILLS"
+     position.x="0.000651724"
+     position.y="0.090721"
+     scale="0.98039"
+     align="HCENTER"
+     aligner.automatic_area_width="true"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="6"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="0.12"
+     aligner.end_padding_y="20"
+    />
+
+    <node
+     name="cat_aligner_keys"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="CollectionCategory_KEYS"
+     position.x="-0.399866"
+     position.y="0.0939706"
+     ui_scale_modifier="0.1"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="72"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="1"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="6"
+    />
+
+    <node
+     name="cat_aligner_collectibles"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="CollectionCategory_COLLECTIBLES"
+     position.x="0.00119461"
+     position.y="0.0939706"
+     scale="0.98039"
+     align="HCENTER"
+     aligner.automatic_area_width="true"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="5"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="0.5"
+    />
+
+    <node
+     name="textbox_2"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="cat_aligner_recipes_all"
+     align="VCENTER,HCENTER"
+     textbox.text="Cooking Recipes"
+    />
+
+    <node
+     name="cat_aligner_cooking"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="cat_aligner_recipes_all"
+     align="HCENTER"
+     aligner.automatic_area_width="true"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="8"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="0.1"
+    />
+
+    <node
+     name="textbox_pet_recipe_category"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="cat_aligner_recipes_all"
+     align="VCENTER,HCENTER"
+     textbox.text="Pets"
+    />
+
+    <node
+     name="cat_aligner_pets"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="cat_aligner_recipes_all"
+     align="HCENTER"
+     aligner.automatic_area_width="true"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="8"
+     aligner.center_last_row_in_grid_layout="false"
+     aligner.min_padding="0.1"
+    />
+
+    <node
+     name="button_scroll_helper_hack"
+     type="BUTTON"
+     inherit="TextButton"
+     parent="touchfield_inv_stats"
+     position.x="0.680277"
+     position.y="0.10261"
+     scale="0.605873"
+     button.text=""
+     button.ninepatch_width="40"
+     button.ninepatch_height="40"
+    />
+
+    <node
+     name="LogName"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="BugReport"
+     position.x="-0.000713708"
+     position.y="1.24003"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     color="1,1,1,0.25"
+     scale="0.639092"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="627"
+     textbox.text_align="HCENTER"
+    />
+
+    <node
+     name="aligner_map_tips"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="Tab_Map"
+     position.x="0.000249136"
+     position.y="1.06247"
+     scale="0.618461"
+     align="BOTTOM,HCENTER"
+     aligner.layout="STACK"
+     aligner.area_height="50.5856"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.min_padding="30"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="TooltipsMap"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="aligner_map_tips"
+     position.y="-0.5"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="1.20824"
+     ui_scale_modifier="0.25"
+     align="VCENTER"
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="MapFilters"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_map_tips"
+     position.y="-0.5"
+     visible_for_control_interface="MOUSE"
+     can_be_accessed_with_gamepads="false"
+     scale="1.06673"
+     ui_scale_modifier="0.1"
+     button.font="fonts/small.mft"
+     button.text="Filters |#ffffff||img scale=0.6 y_offset=4 src='controller-art/wasdmouse/button-f.png'|"
+     button.text_scale_idle="1"
+     button.text_scale_over="1.01"
+     button.text_scale_pressed="0.99"
+     button.text_scale_disabled="1"
+     button.ninepatch_height="46"
+    />
+
+    <node
+     name="CollectionSelectorBracket"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="SetCollectionCategory_MATERIALS"
+     position.x="-0.0364059"
+     angle.z="1.5708"
+     scale="0.683909"
+     align="VCENTER,HCENTER"
+     shader_effect="DecayPanel"
+     image.bitmap="ui/gfx/dot-white.png"
+    />
+
+    <node
+     name="marker_10"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_quest_list"
+     align="VCENTER,HCENTER"
+     marker.area_width="48.6039"
+     marker.area_height="10"
+    />
+
+    <node
+     name="marker_13"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_completed_quests"
+     align="VCENTER,HCENTER"
+     marker.area_width="48.6039"
+     marker.area_height="0.733825"
+    />
+
+    <node
+     name="marker_8"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_quest_list"
+     align="VCENTER,HCENTER"
+     marker.area_width="299.259"
+     marker.area_height="6.51852"
+    />
+
+    <node
+     name="textbox_6"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="BugReport"
+     position.x="0.00200892"
+     position.y="0.540188"
+     localize="false"
+     scale="0.855886"
+     align="HCENTER"
+     textbox.text="Press F1 any time to open the Issue Reporter"
+    />
+
+    <node
+     name="SaveGameDisabled"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="SaveAndExit"
+     position.x="0.00250153"
+     position.y="0.505266"
+     visible="false"
+     color="1,1,1,0.5"
+     scale="0.855886"
+     align="HCENTER"
+     textbox.textbox_width="370"
+     textbox.text="Can't save right now"
+     textbox.text_align="HCENTER"
+    />
+
+    <node
+     name="panel_inv_players"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanel"
+     parent="marker_player"
+     position.x="0.0237669"
+     position.y="0.0719536"
+     visible="false"
+     color="0.3,0.3,0.3,0.5"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="378"
+     ninepatch.rectangle_height="63"
+    />
+
+    <node
+     name="aligner_2"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel_inv_players"
+     position.x="-0.00103616"
+     position.y="0.00922775"
+     scale="0.769464"
+     aligner.area_width="449.9"
+     aligner.area_height="57.8389"
+    />
+
+    <node
+     name="InventoryPlayerButton_0"
+     type="BUTTON"
+     inherit="TabButton"
+     parent="aligner_2"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     can_be_accessed_with_gamepads="true"
+     scale="0.797454"
+    />
+
+    <node
+     name="InventoryPlayerButton_1"
+     type="BUTTON"
+     inherit="TabButton"
+     parent="aligner_2"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     can_be_accessed_with_gamepads="true"
+     scale="0.797454"
+    />
+
+    <node
+     name="InvPlayerArrow"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="InventoryPlayerButton_0"
+     position.x="-0.00467804"
+     position.y="-0.740713"
+     align="VCENTER,HCENTER"
+     image.bitmap="emojis/crown.png"
+    />
+
+    <node
+     name="NoPOIsInfoText"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="CollectionCategory_POINTS_OF_INTEREST"
+     position.x="0.000529988"
+     position.y="0.0620906"
+     visible="false"
+     scale="0.85"
+     align="HCENTER"
+     textbox.textbox_width="652"
+     textbox.text="No Points of Interest in current location."
+     textbox.text_align="HCENTER"
+    />
+
+    <node
+     name="marker_spacer3"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner"
+     required_features="BUG_REPORTS"
+     align="HCENTER"
+     marker.area_height="48.9159"
+    />
+
+    <node
+     name="BugReport"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner"
+     localize="false"
+     required_features="BUG_REPORTS"
+     scale="0.815871"
+     button.text="REPORT AN ISSUE"
+     button.ninepatch_width="340"
+     button.ninepatch_height="60"
+    />
+
+    <node
+     name="Upsell_DLC1"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="image_dlc1_banner"
+     position.y="0.399445"
+     visible="false"
+     on_click_script_call="UI_PushScreen(\"UpsellDLC1\")"
+     button.text="More info"
+     button.ninepatch_width="190"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="Upsell_DLC2"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="image_dlc2_banner"
+     position.y="0.399445"
+     visible="false"
+     on_click_script_call="UI_PushScreen(\"UpsellDLC2\")"
+     button.text="More info"
+     button.ninepatch_width="190"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="Upsell_DLC3"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="image_dlc3_banner"
+     position.x="0.467943"
+     position.y="0.31384"
+     visible="false"
+     on_click_script_call="UI_PushScreen(\"UpsellDLC3\")"
+     align="RIGHT,BOTTOM"
+     button.text="More info"
+     button.ninepatch_width="190"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="Upsell_DLC4"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="image_dlc3_banner"
+     position.y="0.399445"
+     visible="false"
+     on_click_script_call="UI_PushScreen(\"UpsellDLC2\")"
+     button.text="More info"
+     button.ninepatch_width="190"
+     button.ninepatch_height="70"
+    />
+
+    <node
+     name="PurchaseStatus"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="Tab_System"
+     position.x="-0.301196"
+     position.y="0.953285"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     required_features="DEVELOPER_MODE"
+     scale="1.00539"
+     align="HCENTER"
+    />
+
+    <node
+     name="CollectionScrollBar_Creatures"
+     type="SLIDER"
+     inherit="SliderScrollbar"
+     parent="collection_panel"
+     position.x="0.567568"
+     position.y="0.00368369"
+     visible="false"
+     localize="true"
+     color="1,1,1,0.5"
+     scale="0.503545"
+     slider.ninepatch_height="975"
+     slider.linked_view="TF_Collection"
+     slider.hide_full_scrollbars="true"
+    />
+
+    <node
+     name="MapFiltersTouch"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="Tab_Map"
+     position.x="0.494734"
+     position.y="0.978988"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     can_be_accessed_with_gamepads="false"
+     ui_scale_modifier="0.2"
+     align="RIGHT,BOTTOM"
+     button.ninepatch_height="54"
+    />
+
+    <node
+     name="QuestSelectArrow"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="Quest_0"
+     position.x="0.487441"
+     position.y="0.00429303"
+     scale="0.412782"
+     align="VCENTER"
+     image.bitmap="ui/gfx/arrow.png"
+    />
+
+    <node
+     name="textbox_dlc1"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="image_dlc1_banner"
+     position.y="-0.472017"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     color="0.94,1,0,1"
+     scale="0.993602"
+     align="HCENTER"
+     shader_effect="FontBlackShadowOutline"
+    />
+
+    <node
+     name="textbox_dlc2"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="image_dlc2_banner"
+     position.y="-0.472018"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     color="0.54,1,0.54,1"
+     scale="0.993602"
+     align="HCENTER"
+     shader_effect="FontBlackShadowOutline"
+    />
+
+    <node
+     name="textbox_dlc3"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="image_dlc3_banner"
+     position.x="-0.263752"
+     position.y="-0.387927"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     color="0.85,0.1,0.1,1"
+     scale="0.993602"
+     align="HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="269"
+     textbox.text_align="VCENTER,HCENTER"
+     textbox.shadow_alpha="0.5"
+     textbox.shadow_offset="1,1"
+    />
+
+    <node
+     name="Installed_DLC1"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="image_dlc1_banner"
+     position.y="0.483246"
+     active="false"
+     scale="0.779287"
+     align="BOTTOM,HCENTER"
+     checkbox.value="1"
+     checkbox.text="Installed"
+    />
+
+    <node
+     name="Installed_DLC2"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="image_dlc2_banner"
+     position.y="0.480721"
+     active="false"
+     scale="0.779287"
+     align="BOTTOM,HCENTER"
+     checkbox.value="1"
+     checkbox.text="Installed"
+    />
+
+    <node
+     name="Installed_DLC3"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="image_dlc3_banner"
+     position.x="0.481069"
+     position.y="0.44151"
+     active="false"
+     scale="0.779287"
+     align="RIGHT,BOTTOM"
+     checkbox.value="1"
+     checkbox.text="Installed"
+    />
+
+    <node
+     name="QRCode"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="aligner"
+     save_dynamic_content_to_ui_xml="false"
+     required_features="LINE_QR_CODE"
+     scale="0.378824"
+     align="BOTTOM,HCENTER"
+    />
+
+    <node
+     name="QRCodeText"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="QRCode"
+     position.x="-0.00149108"
+     position.y="0.0441469"
+     scale="2.50805"
+     align="HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="281"
+     textbox.text="QR Code Text"
+     textbox.text_align="HCENTER"
+    />
+
+    <node
+     name="image_logo_dlc1"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="image_dlc1_banner"
+     position.y="-0.399825"
+     color="0.94,1,0,1"
+     scale="0.737771"
+     align="HCENTER"
+     image.bitmap="ui/gfx/logo-text-underworld.png"
+    />
+
+    <node
+     name="image_logo_dlc2"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="image_dlc2_banner"
+     position.y="-0.410418"
+     scale="0.853705"
+     align="HCENTER"
+     image.bitmap="ui/gfx/logo-text-dlc2.png"
+    />
+
+    <node
+     name="image_logo_dlc3"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="image_dlc3_banner"
+     position.x="-0.462004"
+     position.y="0.328731"
+     scale="0.66222"
+     align="BOTTOM"
+     image.bitmap="ui/gfx/logo-text-pets.png"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node parent="Tab_Map" name="mod_stage_info_title"
+      type="TEXTBOX" inherit="DefaultTextbox"
+      align="RIGHT,VCENTER"
+      scale="0.9"
+      ui_scale_modifier="0.25"
+      position.x="0.49"
+      position.y="0.955"
+      textbox.text_align="RIGHT,VCENTER"
+      textbox.textbox_width="550"
+      shader_effect="FontBlackShadowOutline"
+      localize="false"
+      />
+
+    <node parent="aligner_progress" name="mod_event_log"
+      type="BUTTON" inherit="DefaultButton"
+      required_features="!MOBILE_UI"
+      align=""
+      scale="0.6"
+      button.ninepatch_height="60"
+      button.bitmap_color_over="0.75,0.75,0.75,1"
+      button.bitmap_color_pressed="0.5,0.5,0.5,1"
+      button.adjust_ninepatch_width_based_on_text_length="true"
+      button.fit_text_inside="false"
+      button.text_padding_horizontal="30"
+      can_be_accessed_with_gamepads="false"
+      localize="false"
+      visible="false"
+      />
+
+    <node parent="aligner_progress" name="mod_show_statistics"
+      type="BUTTON" inherit="DefaultButton"
+      align=""
+      scale="0.6"
+      position_offset.x="-2"
+      button.ninepatch_height="60"
+      button.bitmap_color_over="0.75,0.75,0.75,1"
+      button.bitmap_color_pressed="0.5,0.5,0.5,1"
+      button.adjust_ninepatch_width_based_on_text_length="true"
+      button.fit_text_inside="false"
+      button.text_padding_horizontal="30"
+      can_be_accessed_with_gamepads="false"
+      localize="false"
+      visible="false"
+      />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

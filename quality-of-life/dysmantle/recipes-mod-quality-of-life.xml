@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="RECIPES">
+
+    <node category="CRAFTING" id="MOD_BULLET_TIME"
+      tags="HIDE_IN_COLLECTION"
+      output_item_id="items/specials/mod-bullet-time.nut"
+      />
+
+    <node category="CRAFTING" id="MOD_MARK_CHUNK"
+      tags="HIDE_IN_COLLECTION"
+      output_item_id="items/tools/mod-mark-chunk.nut"
+      />
+
+    <node category="CRAFTING" id="MOD_MARK_CHUNK_SPECIAL"
+      tags="HIDE_IN_COLLECTION"
+      output_item_id="items/specials/mod-mark-chunk.nut"
+      />
+
+    <node category="CRAFTING" id="MOD_BIOWEAPON"
+      tags="HIDE_IN_COLLECTION"
+      output_item_id="items/tools/mod-bioweapon.nut"
+      />
+
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="DEFAULT">
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node enabled="true"
+     sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.33,0.33|Q|},{BOOLEAN,|Q|play_as_positional|Q|,|Q|false|Q|},{FLOAT,|Q|play_duration|Q|,|Q|2.5|Q|},{FLOAT,|Q|fade_out_duration|Q|,|Q|0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1.1|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|500,3000|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/mana-rift-teleport|Q|}}"
+     class="BITMAP"
+     bitmaps="effects/gfx/electric discharge-1.png;effects/gfx/electric discharge-2.png;effects/gfx/electric discharge-3.png"
+     line_length="500"
+     number_of_particles="1"
+     initial_age="0;0.3"
+     age_to_die="0.3"
+     time="0"
+     blend_mode="ADDITIVE"
+     lighting_mode="NONE"
+     align_to_camera="true"
+     position_offset="0,0,-60"
+     move_speed="0"
+     move_direction="0,0,0"
+     move_angle_spread="0"
+     move_angle_z="0"
+     move_angle_y="0"
+     move_angle_x="0"
+     dampening_factor="1"
+     restitution_coefficient="0.5"
+     gravity_multiplier="0"
+     alpha_curve="0,1;1,0"
+     scale_curve="0,1;1,1"
+     alpha_multiplier="1"
+     scale_multiplier="1;1.5"
+     rotation_angles="0,0,0;360,360,360"
+     angular_velocity="0,0,0"
+    />
+
+    <node enabled="true"
+     sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.33,0.33|Q|},{BOOLEAN,|Q|play_as_positional|Q|,|Q|false|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|500,3000|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/player-teleport-appear|Q|}}"
+     class="BITMAP"
+     bitmaps="effects/gfx/flash-1.png"
+     number_of_particles="1"
+     initial_age="0"
+     age_to_die="0.3"
+     time="0"
+     blend_mode="ADDITIVE"
+     lighting_mode="NONE"
+     align_to_camera="true"
+     position_offset="0,0,-60"
+     move_speed="0"
+     move_direction="0,0,-1"
+     move_angle_spread="0"
+     move_angle_z="0"
+     move_angle_y="0"
+     move_angle_x="0"
+     dampening_factor="1"
+     restitution_coefficient="0.5"
+     gravity_multiplier="0"
+     alpha_curve="0,0;0.031,1;1,0"
+     scale_curve="0,0.42;1,0.11"
+     color_curve="0,0,0.62,1;1,0.03,0.41,1"
+     alpha_multiplier="1"
+     scale_multiplier="10"
+     rotation_angles="0,0,0"
+     angular_velocity="0,0,0"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

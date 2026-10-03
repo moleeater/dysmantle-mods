@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="CLIFF" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,INDESTRUCTIBLE,WALL,DELETE_ACTOR_AFTER_DEATH,CAN_BE_STOOD_ON,IGNORE_COLLIDER_WHEN_PICKING" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="0.32" g="0.27" b="0.27" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES">
+    <node id="water_ripples" type="PATH" flags="PERSISTENT,NO_REPLICATION" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}};0,0,0" />
+    <node id="water_ripple_scale" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="1" />
+    <node id="water_ripple_actor_type" type="ACTOR_TYPE" flags="PERSISTENT,NO_REPLICATION" value="actors/objects/water-ripple-shore-corner-in.xml" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="Null">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death" category="DEATH" animation_controller="PhysicsMaterialBasedDeath" forced_animation_length_in_seconds="0.20" force_update_visual_bounds="true" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="shadow_method" value="NONE" />
+    <node id="model" value="models/tiles/cliff-960-corner-in.model" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_auto_climb_on_collided_into"
+        interaction_0_trigger="ON_COLLIDED_INTO"
+        interaction_0_disable_after_interaction="0"
+        interaction_0_external_script="scripts/interactions/mods/mod-auto-climb-on-collided-into.nut"
+      interaction_1_id="mod_dodge_cliffs_on_collided_into"
+        interaction_1_trigger="ON_COLLIDED_INTO"
+        interaction_1_disable_after_interaction="0"
+        interaction_1_external_script="scripts/interactions/mods/mod-dodge-cliffs-on-collided-into.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="MESH" />
+    <node id="model" value="models/tiles/cliff-960-corner-in-collider.model" />
+    <node id="min_z" value="-960.0" />
+    <node id="max_z" value="0.0" />
+  </array>
+
+  <array id="COLLIDER_EDGES">
+    <node px0="60.00" py0="34.00" px1="34.00" py1="60.00" />
+  </array>
+</root>

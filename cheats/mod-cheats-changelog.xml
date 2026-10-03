@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="title" value="Cheats" />
+    <node id="thumb" value="|img src='achievements/FIGHTER_BASIC.png' scale=0.4 offset=2| " />
+  </array>
+  <array id="CHANGELOG">
+
+
+    <node epoch="1790224724" id="119"
+      value="
+- removed Foraging mod
+- removed Stunning pets mod
+- removed Hypercritical mod, functionality separated to One hit objects mod and One hit enemies mod
+- new One hit enemies mod: (optional) Kill everything in just one hit: monsters, minions, bosses, mechanical turrets, animals, deer.
+- added compressors to Bigger backpack mod, now 1 notch covers 3 materials, increasing capacity another 3x
+- added animal friend effect to the Stealth mod
+- added stars for mods for DLCs to the Options screen, and hidding mods for unpurchased DLCs
+" />
+
+
+    <node epoch="1786733075" id="118"
+      value="
+- added pets to More item slots mod, now you can have 10 pets running around
+" />
+
+
+    <node epoch="1785350000" id="114"
+      value="
+- fixed Give keys mod unicode characters not showing, by changing the list box to a drop down box
+" />
+
+
+    <node epoch="1784001648" id="112"
+      value="
+- fixed sleep speed when World time multiplier mod is used
+" />
+
+
+    <node epoch="1782918447" id="111"
+      value="
+- removed Tips mod from Cheats modpack
+" />
+
+
+    <node epoch="1776769782" id="108"
+      value="
+- fixed bug in Automatic attack mod on mobile touchscreen devices
+- new Ignore death counter mod: (optional) Bypass the number of deaths check when opening the sarcophage in the King's Tomb pyramid.
+- new Break spirits mod: (optional) Make mana spirits vulnerable by default, no need for mana-infused tools.
+" />
+
+
+    <node epoch="1774288385" id="105"
+      value="
+- added a check to Automatic attack mod to only show up on stages where you can attack
+- changed number of targetted monsters and objects in More targets from 90 to 900
+- changed Material Magnet+ maximum radius from 4000 to 5000
+" />
+
+
+    <node epoch="1770887954" id="103"
+      value="
+- fixed display compability a tiny bit of Bigger backpack mod with CE hacks
+" />
+
+
+    <node epoch="1769818141" id="95.1.0"
+      value="
+- fixed a bug in several mods which used player modifiers was not activating for the co-op player
+- added a huge material magnet range for the tombs when Crack tombs mod is enabled
+- modified Automatic attack mod to hide the icon on Android until the Cheats are not activated
+- changed Speedhack mod to deactivate on tomb, dungeon and unarmed stages
+" />
+
+
+    <node epoch="1769634522" id="94.2.0"
+      value="
+- added a checkbox for Crack tombs mod to the Options menu
+" />
+
+
+    <node epoch="1769529808" id="94.1.0"
+      value="
+- added a confirmation screen to Bigger backpack mod, because users won't or can't read
+- added a checkbox for Beat Gembine mod to the Options menu
+- added an activation process to the Cheats, options are hidden until the player intentionally wants to cheat
+- modified the scrollbar size on some interfaces to make it more comfortable on Android
+" />
+
+
+    <node epoch="1768939138" id="93.1.0"
+      value="
+- new Bigger backpack mod: (optional) Get +24 backpack notches per material slots, increasing the backpack capacity by 300%.
+- new More item slots mod: (optional) Carry +2 weapons and +5 trinkets, additional slots open in your inventory. You also get +1 special after you crafted the Special Item Slot.
+" />
+
+
+    <node epoch="1768646096" id="92.1.0"
+      value="
+- fixed a bug in Level up mod, it now calculates with your xp buffs
+" />
+
+
+    <node epoch="1768118723" id="91.7.0"
+      value="
+- new Tips mod: Showing tips for the mods on the loading screens.
+" />
+
+
+    <node epoch="1767435270" id="91.3.0"
+      value="
+- moved Event Log mod to Quality of life modpack
+" />
+
+
+    <node epoch="1766693109" id="91.1.0"
+      value="
+- changed maximum value of Material magnet+ to 4000
+" />
+
+
+    <node epoch="1764100656" id="90.3.0"
+      value="
+- fixed bug in Boost refiner mod duplicating materials
+- fixed bug in Boost refiner mod button not showing up on Refiner screen on Android
+- fixed gamepad controls on Android for Boost refiner and Crack tombs mods
+- changed Automatic attack mod icon on Android is hidden when gamepad is used
+" />
+
+
+    <node epoch="1753730509" id="88.1.0"
+      value="
+- new Loot drop bonus mod: (optional) Extra materials dropped from objects, gatherables, mana beads.
+- changed Material magnet+ mod from fixed checkbox to a slider with a higher max value
+" />
+
+
+    <node epoch="1753021482" id="87.2.0"
+      value="
+- new Level up mod: (optional) Add experience points to level up your player.
+- changed World time multiplier mod value display to read easier
+- changed Hypercritical mod damage from 10x to 50x
+" />
+
+
+    <node epoch="1752630736" id="87.1.0"
+      value="
+- new World time multiplier mod: (optional) Adjust how many in-game seconds pass during a real life second. Vanilla value is 20.
+" />
+
+
+    <node epoch="1752506210" id="86.6.1"
+      value="
+- added Doomsday DLC2 overground tomb altar support to the Crack tombs mod
+" />
+
+
+    <node epoch="1752330407" id="86.4.2"
+      value="
+- removed Walk on water mod as sometimes the player clipped below the protecting cover actor into the water, and still got drown
+" />
+
+
+    <node epoch="1752268307" id="86.4.0"
+      value="
+- new Walk on water mod: (optional) Cross the lakes and seas without drowning. Use Automatic climbing mod or Rift forwards mod to climb out.
+" />
+
+
+    <node epoch="1751674944" id="86.3.0"
+      value="
+- new Infinite items mod: (optional) Replenish ammo, throwables and item uses continuously to get unlimited consumables.
+" />
+
+
+    <node epoch="1749458156" id="85.1.0"
+      value="
+- added DLC keys to Give keys mod
+" />
+
+
+    <node epoch="1745809293" id="84.2.1"
+      value="
+- fixed a bug in Crack tombs mod where it gave an interaction on non-tomb stages too
+" />
+
+
+    <node epoch="1745559431" id="84.1.2"
+      value="
+- fixed bug in Electrifying grenade mod changed the max throw distance for all throwables
+- changed Electrifying grenade to not use up the item if the cheat is active
+" />
+
+
+    <node epoch="1745204080" id="84.1.1"
+      value="
+- fixed bug in Rift forwards mod was hidden in the Options
+" />
+
+
+    <node epoch="1744745084" id="83.3.0"
+      value="
+- added animation and particle effects to Crack tombs mod
+- changed 9 mods that used recipes to use temporary modifiers, works better with other mods and coop players
+" />
+
+
+    <node epoch="1744577753" id="83.2.1"
+      value="
+- fixed a bug in Spawn materials mod when it spawned +1 material
+" />
+
+
+    <node epoch="1741670810" id="82.5.0"
+      value="
+- added in-game event logging to some of the mods to help 10tons know why strange things happened in modded save files
+" />
+
+
+    <node epoch="1740620875" id="81.3.0"
+      value="
+- new Temperature protection mod: (optional) Ignore temperature changes, both hot and cold, without equipping anything.
+" />
+
+
+    <node epoch="1739905847" id="81.1.0"
+      value="
+- new Electrifying grenade mod: (optional) Power on circuit components with the Electric Grenade to skip Doomsday DLC2 puzzles.
+" />
+
+
+    <node epoch="1739647700" id="80.3.0"
+      value="
+- new Speedhack mod: (optional) Maximize game speed to make everything happen faster.
+- new Stealth mod: (optional) Minimize enemy aggro distance so you can casually walk past the monsters.
+- fixed a bug in Power walking mod when the HUD slider stayed on screen during a cutscene
+" />
+
+
+    <node epoch="1737653795" id="80.1.0"
+      value="
+- new Light Souls mod: (optional) Keep materials in your backpack upon death. Nothing lost when you die.
+" />
+
+
+    <node epoch="1735606670" id="79.4.0"
+      value="
+- added hard blocking for incompatible mods
+" />
+
+
+    <node epoch="1734205439" id="79.3.0"
+      value="
+- added DLC3 pet dungeons to the Crack tombs mod, now you can skip pet puzzles too
+" />
+
+
+    <node epoch="1734114555" id="79.2.0"
+      value="
+- fixed bugs in Spawn materials mod when you listed multiple materials in a comma separated list
+- added safety checks for using DLC items with Craft recipes mod when you do not have the DLC
+- added safety checks for using DLC items with Spawn materials mod when you do not have the DLC
+" />
+
+
+    <node epoch="1731105065" id="79.1.0"
+      value="
+- new Give keys mod: (optional) Get any collectible keys without finding them or completing quests.
+- added scrollbars for the scrollable lists of Craft recipes mod and Spawn materials mod
+" />
+
+
+    <node epoch="1729980396" id="77.8.2"
+      value="
+- fixed compatibility with DLCX mod by XYB88
+- fixed bugs with chinese localized labels sometimes not translating
+" />
+
+
+    <node epoch="1729632755" id="77.8.0"
+      value="
+- added support for additional materials from mods into the Spawn materials mod
+" />
+
+
+    <node epoch="1728869948" id="77.1.0"
+      value="
+- added support for comma-separated list of multiple materials in the Spawn materials mod input text box
+" />
+
+
+    <node epoch="1728846769" id="77.0.0"
+      value="
+- new Spawn materials mod: (optional) Create any material, wood, metal, crop, mushroom, fish, mana using the vanilla Cheats UI.
+" />
+
+
+    <node epoch="1727635980" id="76.0.0"
+      value="
+- new Craft recipes mod: (optional) Unlock, craft and upgrade all recipes, items, tools, weapons, specials, trinkets, outfits, headgears, features, transmitters, buildables, dishes, skills, obelisks using the vanilla Cheats UI.
+" />
+
+
+    <node epoch="1720269448" id="73.2.0"
+      value="
+- added UI rescale for Event Log mod on Mobile UI, so you can read the text on Android too
+- added UI rescale for Mobile UI
+" />
+
+
+    <node epoch="1719916164" id="70.4.0"
+      value="
+- new Defeat shelter hordes mod: (optional) Cheat shelter defense minigames, you auto-win the fight on activation.
+" />
+
+
+    <node epoch="1719862789" id="70.3.0"
+      value="
+- new Crack tomb puzzles mod: (optional) Cheat the tomb stage you are in, if you want. Long press the Target Lock button when near the exit. Or on mobile UI, it also shows a button on the Entryway POI on the map screen.
+" />
+
+
+    <node epoch="1719731405" id="70.2.0"
+      value="
+- new Automatic attack mod: (optional) Enable continuous attack with a custom keypress. Accessibility mod if you have repetitive strain injury or a mobility impairment.
+" />
+
+
+    <node epoch="1719476621" id="70.1.0"
+      value="
+- moved Scripting mod to Developer tools modpack under Code editor name
+- removed Resource visualizer mod, as i realized, it does not work without developer mode enabled, and it is already accessible with it
+- changed Change time mod to not allow going back in time to prevent bugging out refiners and all
+" />
+
+
+    <node epoch="1719305256" id="69.6.0"
+      value="
+- new Change time mod: Set time of the current day on a popup slider.
+" />
+
+
+    <node epoch="1719244794" id="69.5.0"
+      value="
+- new Event Log mod: Replay the path you walked from the start with the vanilla Game Event Log on the Collection tab.
+- new Scripting mod: Execute scripts with the help of a built-in code editor and documentation of the vanilla game.
+- added package box icon to distinguish modded tools, buttons, interactions
+- added another button to access the Change Log from the Options screen
+" />
+
+
+    <node epoch="1719198822" id="69.4.0"
+      value="
+- changed Resource visualizer mod button placement
+" />
+
+
+    <node epoch="1719075600" id="69.3.0"
+      value="
+- new Resource visualizer mod: View all materials, recipes of the stage on a map with the vanilla Resource Visualizer on the Collection tab.
+" />
+
+
+    <node epoch="1718145290" id="68.8.0"
+      value="
+- added collapsible groupings to the Options page for the mods
+" />
+
+
+    <node epoch="1717753880" id="68.5.0"
+      value="
+- new Free wells mod: (optional) Make your wishes come true for free at the Wishing Wells, you don't have to pay.
+" />
+
+
+    <node epoch="1717125972" id="68.4.0"
+      value="
+- modified Material magnet+ radius from +9000% to +900%
+- modified Hypercritical damage from +5000% to +900%
+" />
+
+
+    <node epoch="1716569520" id="67.9.0"
+      value="
+- added alternate method to trigger Boost refiner mod on mobile UI
+" />
+
+
+    <node epoch="1716768185" id="67.8.1"
+      value="
+- added mobile UI to the Change Log, and removed vanilla block on all platforms, so you can see the changes on Android too
+" />
+
+
+    <node epoch="1716438695" id="67.8.0"
+      value="
+- mod change logs are listed on the Change Log page accessible from the main menu
+" />
+
+
+    <node epoch="1716293160" id="67.6.0"
+      value="
+- new Sleep anytime mod: (optional) Remove sleep limitation, you don't have to wait hours between sleeps.
+" />
+
+
+    <node epoch="1715688540" id="66.0.0"
+      value="
+- updated to use Steam Workshop load priority system in v1.4.0.32
+" />
+
+
+    <node epoch="1715214180" id="64.0.0"
+      value="
+- modified Plenty of fish mod to be compatible with DarthNemesis's Fishing Shovel mod
+- modified Power walking mod to reset walk speed when entering tombs and dungeons
+- modified Rift forwards mod to move slower in tombs and dungeons
+- changed Rift forwards mod cursor to be more visible
+- changed Speed fishing mod to be even faster
+" />
+
+
+    <node epoch="1714857960" id="61.0.0"
+      value="
+- updated to game version 1.4.0.29
+- updated to be compatible with Steam Workshop
+- new More melee targets mod
+- uploaded to Steam Workshop
+" />
+
+
+    <node epoch="1714756440" id="60"
+      value="
+- changed tooltips and youtube links to a nice popup
+" />
+
+
+    <node epoch="1714631040" id="59"
+      value="
+- fixed a bug in Predator mod from Quality of life modpack
+- fixed a bug in Camera heading mod from Quality of life modpack
+- fixed the lag spike in Automatic material transporter mod, will work in v1.4 only
+- added teleport destination cursor for Rift forwards mod
+- added checks for mobile user interfaces
+" />
+
+
+    <node epoch="1714460700" id="58"
+      value="
+- increased compatibility with other modders
+" />
+
+
+    <node epoch="1714392240" id="57"
+      value="
+- added save file flagging to help 10tons with debugging save files sent with bug reports
+" />
+
+
+    <node epoch="1713743400" id="52"
+      value="
+- fixed Plenty of fish mod to complete the POI
+" />
+
+
+    <node epoch="1713513180" id="51"
+      value="
+- merged Demigod mod with God mod into one, less potent middle ground
+" />
+
+
+    <node epoch="1713094380" id="50"
+      value="
+- fixed Beat Gembine mod UI
+" />
+
+
+    <node epoch="1712974440" id="49"
+      value="
+- new Plenty of fish mod
+- new Beat Gembine mod
+" />
+
+
+    <node epoch="1712951400" id="48"
+      value="
+- added HUD UI button for Automatic material transporter mod
+" />
+
+
+    <node epoch="1712538000" id="45"
+      value="
+- new No fall damage mod
+- added links to demo videos for the mods on the Options page
+" />
+
+
+    <node epoch="1711160760" id="42"
+      value="
+- new Automatic climbing mod
+- new Demigod mode mod
+" />
+
+
+    <node epoch="1710976620" id="41"
+      value="
+- fixing Boost refiner interaction appeared even when it was disabled
+- changed some tooltips for the Mods Options UI page
+" />
+
+
+    <node epoch="1708785120" id="40"
+      value="
+- added HUD UI slider for Power walking mod
+- changed base Rift forwards distance a little shorter
+" />
+
+
+    <node epoch="1707785040" id="37"
+      value="
+- new Disable killzones mod
+" />
+
+
+    <node epoch="1707177480" id="36"
+      value="
+- removed Bullet time mod and moved it to Quality of life modpack
+" />
+
+
+    <node epoch="1706456460" id="35"
+      value="
+- new Speed fishing mod
+- changed Instant farming to be even faster
+- changed critical hit damage to 4000 in Hypercritical mod, as it was not enough
+" />
+
+
+    <node epoch="1705887660" id="34"
+      value="
+- new Stunning pets mod
+- new Foraging mod
+- removed damage evading from God mode mod, as it is not needed
+- changed critical hit damage to only 900 in Hypercritical mod, as it is enough
+- removed strafe modifier from Power walking mod
+" />
+
+
+    <node epoch="1705185840" id="33"
+      value="
+- modified Power walking mod from a fixed 2x recipe to dynamic 1x-10x slider
+- modified Bullet time mod to support coop
+" />
+
+
+    <node epoch="1704857820" id="31"
+      value="
+- added Automatic material transporter mod
+- added Boost refiner mod
+- added Bullet time mod
+- added Faster melee mod
+- added Fertilizer mod
+- added God mode mod
+- added Hypercritical mod
+- added Instant farming mod
+- added Material magnet+ mod
+- added Power walking mod
+- added Rift forwards mod
+- added Safer chasms mod
+- added Well prepared mod
+" />
+
+
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

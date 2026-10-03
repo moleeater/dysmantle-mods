@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="INFO">
+		<node id="version" value="1" />
+		<node id="tags" value="HIDE_IN_EDITOR_PALETTE" />
+	</array>
+
+	<array id="ATTRIBUTES">
+		<node id="actor_flags" value="STATIC" />
+		<node id="physics_material" value="PLASTIC" />
+		<node id="mass" value="100" />
+		<node id="gravity_multiplier" value="1" />
+		<node id="turn_speed" value="1" />
+		<node id="move_acceleration" value="200" />
+		<node id="max_move_speed" value="1" />
+		<node id="dampening_factor_on_ground" value="0" />
+		<node id="dampening_factor_on_air" value="0" />
+		<node id="restitution_coefficient" value="0.5" />
+		<node id="friction" value="0.2" />
+		<node id="minimum_damage_threshold" value="0" />
+		<node id="aggro_radius" value="128" />
+		<node id="friend_avoidance_radius" value="10" />
+		<node id="initial_scale" value="1" />
+		<node id="damage" value="0" />
+		<node id="range" value="400" />
+		<node id="max_hit_points" value="100" />
+		<node id="friend_group" value="OBSTACLES" />
+		<node id="color" r="1" g="1" b="1" a="1" />
+	</array>
+
+	<array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+		<node id="color_material_jpg" type="COLOR" value="0.74503,0.79505,1,1" />
+	</array>
+
+	<array id="AI_PARAMETERS" ai="ObstacleAnimated">
+	</array>
+
+	<array id="ANIMATIONS">
+		<node id="pose.shoot"
+		 animation_controller="SingleAnimationFrame"
+		 skeleton_animation="models/animations/humanoid-volunteer_shoot_rifle.anim"
+		 fade_in_duration="0"
+		 fade_out_duration="0"
+		 key_values="{{FLOAT,|Q|t|Q|,|Q|0.516|Q|}}"
+		/>
+
+		<node id="pose.melee"
+		 animation_controller="SingleAnimationFrame"
+		 skeleton_animation="models/animations/humanoid-zombie_female_melee.anim"
+		 fade_in_duration="0"
+		 fade_out_duration="0"
+		 key_values="{{FLOAT,|Q|t|Q|,|Q|0.33|Q|}}"
+		/>
+
+	</array>
+
+	<array id="RENDERER_PARAMETERS">
+		<node id="renderer" value="ModelSkinned" />
+		<node id="shadow_drawn_for_each_bone" value="true" />
+		<node id="shadow_method" value="NONE" />
+		<node id="model" value="models/enemies/shelter-dweller.model" />
+	</array>
+
+	<array id="PROPS">
+		<node id="melee_weapon"
+		 mount_bone_id="tool"
+		 handle_bone_id="handle"
+		 actor_type="actors/tools/shotgun-sawed-off.xml"
+		 mount_offset_x="0"
+		 mount_offset_y="0"
+		 mount_offset_z="4"
+		 mount_rotation_angles_x="1.5708"
+		 mount_rotation_angles_y="0"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="hand-wart"
+		 mount_bone_id="hand.R"
+		 actor_type="actors/objects/corruption-prop-warts.xml"
+		 mount_scale="1.3"
+		 mount_offset_x="0"
+		 mount_offset_y="5"
+		 mount_offset_z="0"
+		/>
+
+		<node id="mana_prop_0"
+		 mount_bone_id="chest"
+		 actor_type="actors/objects/mana-prop-1.xml"
+		 mount_scale="0.75"
+		 mount_offset_x="6"
+		 mount_offset_y="10"
+		 mount_offset_z="0"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="0.523599"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="mana_prop_1"
+		 mount_bone_id="spine-2"
+		 actor_type="actors/objects/mana-prop-2.xml"
+		 mount_scale="0.7"
+		 mount_offset_x="-5"
+		 mount_offset_y="5"
+		 mount_offset_z="5"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="0"
+		 mount_rotation_angles_z="0.872665"
+		/>
+
+		<node id="mana_prop_2"
+		 mount_bone_id="chest"
+		 actor_type="actors/objects/mana-prop-1.xml"
+		 mount_scale="0.75"
+		 mount_offset_x="-6"
+		 mount_offset_y="10"
+		 mount_offset_z="0"
+		 mount_rotation_angles_x="-0"
+		 mount_rotation_angles_y="-1.22173"
+		 mount_rotation_angles_z="0"
+		/>
+
+		<node id="hat"
+		 mount_bone_id="head"
+		 actor_type="actors/headgear/cowboy-hat.xml"
+		 mount_scale="1.1"
+		 mount_offset_x="0"
+		 mount_offset_y="2"
+		 mount_offset_z="3"
+		 mount_rotation_angles_x="-1.5708"
+		 mount_rotation_angles_y="0"
+		 mount_rotation_angles_z="1.5708"
+		/>
+
+		<node id="tool"
+		 mount_bone_id="hand.L"
+		 actor_type="actors/tools/sickle.xml"
+		 mount_scale="1.3"
+		 mount_offset_x="0"
+		 mount_offset_y="8"
+		 mount_offset_z="-3"
+		 mount_rotation_angles_x="0"
+		 mount_rotation_angles_y="0"
+		 mount_rotation_angles_z="1.0472"
+		/>
+
+	</array>
+
+	<array id="COLLIDER">
+		<node id="type" value="NONE" />
+	</array>
+</root>

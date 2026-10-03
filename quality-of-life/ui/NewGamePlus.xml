@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="SHADERFILTER"
+     inherit="FaderBlurFilter"
+     on_click_script_call="UI_PopScreen();"
+     shaderfilter.cache_results="true"
+    />
+
+    <node
+     name="panel"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanel"
+     position.x="0.499145"
+     position.y="0.498799"
+     ui_scale_modifier="0.2"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="570"
+     ninepatch.automatic_content_height="true"
+    />
+
+    <node
+     name="aligner_2"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel"
+     position.x="0.000392715"
+     position.y="-0.499269"
+     scale="0.813396"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="673.294"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="10"
+    />
+
+    <node
+     name="marker_1"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_2"
+     align="VCENTER,HCENTER"
+     marker.area_width="99.1286"
+     marker.area_height="23.6992"
+    />
+
+    <node
+     name="Title2"
+     type="TEXTBOX"
+     inherit="MediumTextbox"
+     parent="aligner_2"
+     scale="0.557903"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="1088"
+     textbox.text="Activate the Pale Protocol?"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="marker_5"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_2"
+     align="VCENTER,HCENTER"
+     marker.area_width="99.1286"
+     marker.area_height="1.84296"
+    />
+
+    <node
+     name="Title3"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_2"
+     color="1,0.1,0.1,1"
+     scale="0.894242"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="650"
+     textbox.text="WARNING: This will reset your save game and you will start over from DAY 1."
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="panel2"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanelInner"
+     parent="aligner_2"
+     align="HCENTER"
+     ninepatch.rectangle_width="651"
+     ninepatch.automatic_content_height="true"
+     ninepatch.automatic_content_padding="0"
+    />
+
+    <node
+     name="aligner_3"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel2"
+     position.y="0.00131294"
+     scale="0.903379"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="526.795"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="24"
+     aligner.align_x_axis="false"
+    />
+
+    <node
+     name="marker_3"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_3"
+     align="VCENTER,HCENTER"
+     marker.area_width="99.1286"
+     marker.area_height="20"
+    />
+
+    <node
+     name="EmojiExample7"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_3"
+     position.x="-0.45799"
+     active="true"
+     color="1,1,1,0.75"
+     scale="0.971506"
+     align="VCENTER"
+     textbox.textbox_width="570"
+     textbox.text="You will get to keep all your Experience Points and Skills."
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="EmojiExample4"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_3"
+     position.x="-0.459265"
+     active="true"
+     color="1,1,1,0.75"
+     scale="0.971506"
+     align="VCENTER"
+     textbox.textbox_width="570"
+     textbox.text="The materials you have now stored in the Ark will be in your |#ff9922|Storage Box|#ffffff|."
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="EmojiExample9"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_3"
+     position.x="-0.459019"
+     active="true"
+     color="1,1,1,0.75"
+     scale="0.971506"
+     align="VCENTER"
+     textbox.textbox_width="570"
+     textbox.text="You will get to keep certain |#11ff11|special items|#ffffff| you may have found during your journey, but you will lose all other items and recipes."
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="EmojiExample8"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_3"
+     position.x="-0.457744"
+     active="true"
+     color="1,1,1,0.75"
+     scale="0.971506"
+     align="VCENTER"
+     textbox.textbox_width="570"
+     textbox.text="Everything else will be reset as if you'd start a completely new game."
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="StartNewGame"
+     type="BUTTON"
+     inherit="WideButton"
+     parent="aligner_2"
+     user_string="OK"
+     button.text="Start New Adventure"
+     button.ninepatch_width="450"
+    />
+
+    <node
+     name="Cancel"
+     type="BUTTON"
+     inherit="WideButton"
+     parent="aligner_2"
+     on_click_script_call="UI_PopScreen()"
+     user_string="OK"
+     button.text="Cancel"
+     button.ninepatch_width="330"
+    />
+
+    <node
+     name="marker_2"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_2"
+     align="VCENTER,HCENTER"
+     marker.area_width="99.1286"
+     marker.area_height="2.17603"
+    />
+
+    <node
+     name="Button_1"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_2"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     user_string="AfterSuburb"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="marker_4"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_3"
+     align="VCENTER,HCENTER"
+     marker.area_width="99.1286"
+     marker.area_height="20"
+    />
+
+    <node
+     name="image_1"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="EmojiExample4"
+     position.x="-0.07"
+     scale="0.881276"
+     align="VCENTER,HCENTER"
+     image.bitmap="ui/gfx/dot-white.png"
+    />
+
+    <node
+     name="image_2"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="EmojiExample7"
+     position.x="-0.07"
+     scale="0.881276"
+     align="VCENTER,HCENTER"
+     image.bitmap="ui/gfx/dot-white.png"
+    />
+
+    <node
+     name="image_4"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="EmojiExample9"
+     position.x="-0.07"
+     scale="0.881276"
+     align="VCENTER,HCENTER"
+     image.bitmap="ui/gfx/dot-white.png"
+    />
+
+    <node
+     name="image_3"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="EmojiExample8"
+     position.x="-0.07"
+     scale="0.881276"
+     align="VCENTER,HCENTER"
+     image.bitmap="ui/gfx/dot-white.png"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node parent="panel" name="mod_new_game_plus_plus_aligner"
+      type="ALIGNER" inherit="EditorAligner"
+      align="HCENTER"
+      position.x="0.28"
+      position.y="-0.358"
+      scale="0.8134"
+      aligner.layout="STACK"
+      aligner.area_width="485"
+      aligner.area_height="540"
+      aligner.min_padding="10"
+      />
+
+    <node parent="mod_new_game_plus_plus_aligner" name="mod_new_game_plus_plus_desc"
+      type="TEXTBOX" inherit="SmallTextbox"
+      align="VCENTER,HCENTER"
+      scale="0.894"
+      textbox.textbox_width="450"
+      textbox.text_align="VCENTER,HCENTER"
+      localize="false"
+      />
+
+    <node parent="mod_new_game_plus_plus_aligner" name="mod_new_game_plus_plus_panel"
+      type="NINEPATCH" inherit="DecayNinePatchPanelInner"
+      align="HCENTER"
+      ninepatch.rectangle_width="460"
+      ninepatch.rectangle_height="435"
+      />
+
+    <node parent="mod_new_game_plus_plus_panel" name="mod_new_game_plus_plus_touch"
+      type="TOUCHFIELD" inherit="DefaultTouchField"
+      align="HCENTER"
+      position.y="0.035"
+      touchfield.area_width="430"
+      touchfield.area_height="405"
+      touchfield.automatic_content_height="true"
+      touchfield.content_width="430"
+      touchfield.clip_children="true"
+      touchfield.axis_x_enabled="false"
+      touchfield.bm_scroll_indicator="ui/gfx/scroll-indicator.png"
+      />
+
+    <node parent="mod_new_game_plus_plus_panel" name="mod_new_game_plus_plus_scrollbar"
+      type="SLIDER" inherit="SliderScrollbar"
+      align="HCENTER,VCENTER"
+      scale="1.18"
+      position.x="0.45"
+      position.y="0.5"
+      slider.linked_view="mod_new_game_plus_plus_touch"
+      slider.ninepatch_height="340"
+      slider.hide_full_scrollbars="true"
+      />
+
+    <node parent="mod_new_game_plus_plus_touch" name="mod_new_game_plus_plus_recipes"
+      type="ALIGNER" inherit="EditorAligner"
+      align=""
+      position.x="-0.46"
+      position.y="0.035"
+      aligner.area_width="1"
+      aligner.layout="STACK"
+      aligner.min_padding="15"
+      aligner.end_padding_y="20"
+      aligner.automatic_area_height="true"
+      />
+
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_dishes"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_DISH_CATFISH_KABAYAKI"
+      align="VCENTER" checkbox.toggle_value_on_click="true" checkbox.value="1" user_string="vanilla" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_CROWN"
+      align="VCENTER" checkbox.toggle_value_on_click="true" checkbox.value="1" active="false" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_GAS_MASK"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_OLD_POCKET_WATCH"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_DIGITAL_WRIST_WATCH"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_RIFT_TOOLKIT"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_KHOPESH"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_POWER_FIST"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_TRANSMITTER_CAMP_FAST_TRAVEL"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_GOLDEN_FERRY_TOKENS"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_FAST_TRAVEL_IN_WORLD_MAP"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_flowers"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_PLAGUE_MASK"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_WOOLLY_HAT"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_HORSE_MASK"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_REFINER_SPEED_UPGRADE_1"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_FIFTH_SPECIALS_SLOT"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+    <node type="CHECKBOX" inherit="DefaultCheckbox" parent="mod_new_game_plus_plus_recipes" name="mod_new_game_plus_plus_MANAGUN"
+      align="VCENTER" checkbox.toggle_value_on_click="true" localize="false" visible="false" />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

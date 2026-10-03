@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="POINT_OF_INTEREST" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SEETHROUGH,INDESTRUCTIBLE,NO_MOMENTUM_FROM_COLLISIONS,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="0" />
+    <node id="move_acceleration" value="0" />
+    <node id="max_move_speed" value="500" />
+    <node id="dampening_factor_on_ground" value="6" />
+    <node id="dampening_factor_on_air" value="0.1" />
+    <node id="restitution_coefficient" value="0" />
+    <node id="friction" value="0" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="100" />
+    <node id="damage_type_accept_mask" value="" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="0.41" g="1" b="0.41" a="0.6" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENTRYWAY" />
+    <node id="stage" type="STAGE" value="stages/special/the-ark.stage" />
+    <node id="travel_to_entrance_id" type="STRING" value="entrance_1" />
+    <node id="path_go_in" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|0|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}};-0,-0,0;2,121,0" />
+    <node id="path_come_out" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|0|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}};-0,76,0;-4,-95,0" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="ObstacleAnimated">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death" category="DEATH" animation_controller="PhysicsMaterialBasedDeath" forced_animation_length_in_seconds="0.20" force_update_visual_bounds="true" />
+    <node id="idle" script="function OnStart(so_self, length)&#10;{&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;KeyValueStore_SetKeyValueFloat3(kvs, &#34;base_pos&#34;, pos[0], pos[1], pos[2]);&#10;&#9;Actor_SetActorFlag(so_self, &#34;STATIC&#34;, false);&#10;}&#10;&#10;function OnUpdate(so_actor, time_key, length)&#10;{&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_actor);&#10;&#9;local base_pos = KeyValueStore_GetKeyValue(kvs, &#34;base_pos&#34;);&#10;&#9;StageObject_SetPosition(so_actor, base_pos[0], base_pos[1], base_pos[2]);&#10;&#10;&#9;local offset = cos(2 * PI * time_key / length);&#10;&#9;offset *= offset;&#10;&#9;local new_pos = StageObject_GetPositionWithOffset(so_actor, 0, 10 * offset, 0);&#10;&#9;StageObject_SetPosition(so_actor, new_pos[0], new_pos[1], new_pos[2]);&#10;}" wrap_mode="LOOP" forced_animation_length_in_seconds="3.00" />
+    <node id="portal"
+     forced_animation_length_in_seconds="1.00"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/myth-tablet-revealed.xml"
+     event_0_spawn_effect_angle_z="-90.00"
+     event_0_spawn_effect_offset_y="40.00"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="Bitmap" />
+    <node id="shadow_method" value="NONE" />
+    <node id="blend_mode" value="ADDITIVE" />
+    <node id="render_offset_x" value="0" />
+    <node id="render_offset_y" value="0" />
+    <node id="render_offset_z" value="-5" />
+    <node id="cast_shadows" value="false" />
+    <node id="receive_shadows" value="false" />
+    <node id="allow_static_caching" value="false" />
+    <node id="initial_bitmap_a" value="actors/interactives/gfx/arrow.png" />
+  </array>
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="stage_enter"
+        interaction_0_disable_after_interaction="0"
+        interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Game_SetCinemaMode(true, true);&#10;&#10;&#9;local script_start = @&#34;&#10;&#9;Game_SetCinemaMode(true);&#10;&#9;Actor_SetActorFlag($so_activator, &#34;&#34;SOLID &#34;&#34;, false);&#10;&#9;&#34;;&#10;&#10;&#9;script_start = string_replace(script_start, &#34;$so_activator&#34;, so_activator.tostring());&#10;&#10;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#10;&#9;Actor_QueueActionRunScript(so_activator, script_start);&#10;&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_unequip&#34;, false);&#10;&#10;&#9;if (Actor_HasInteraction(so_self, &#34;custom_stage_enter&#34;))&#10;&#9;&#9;Actor_InteractWithInteraction(so_self, so_activator, &#34;custom_stage_enter&#34;);&#10;&#10;&#9;// end cinematic hack&#10;&#9;local is_quest_end = Game_GetWorldState(&#34;UNDERWORLD&#34;, &#34;QUEST_END_CINEMATIC&#34;);&#10;&#10;&#9;if (is_quest_end == &#34;1&#34;) {&#10;&#9;&#9;Game_SetWorldState(&#34;UNDERWORLD&#34;, &#34;QUEST_END_CINEMATIC&#34;, &#34;0&#34;);&#10;&#9;&#9;return;&#10;&#9;}&#10;&#10;&#9;local player_index = Game_GetPlayerIndexByActor(so_activator);&#10;&#9;local secs = 0.7*player_index;&#10;&#9;if (secs &#62; 0)&#10;&#9;&#9;Actor_QueueActionWait(so_activator, secs);&#10;&#10;   // local pos_from = StageObject_GetPositionWithOffset(so_self, 0, 0, 0);&#10;   // local pos_to = StageObject_GetPositionWithOffset(so_self, 0, -120, 0);&#10;   // StageObject_SetPosition(so_activator, pos_from[0], pos_from[1], pos_from[2]);&#10;&#10;&#9;// TODO: should set the first position of the path.&#10;&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#9;Actor_QueueActionMoveAlongKeyValueStorePath(so_activator, kvs, &#34;path_come_out&#34;);&#10;&#9;//Actor_QueueActionMove(so_activator, pos_to[0]+player_index*15, pos_to[1]+player_index*35, pos_to[2]);&#10;&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_equip&#34;, true);&#10;&#10;&#9;local script_end = @&#34;&#10;&#9;&#9;Game_SetCinemaMode(false);&#10;&#9;&#9;Actor_SetActorFlag($so_activator, &#34;&#34;SOLID&#34;&#34;, true);&#10;&#9;&#9;&#34;;&#10;&#10;&#9;script_end = string_replace(script_end, &#34;$so_activator&#34;, so_activator.tostring());&#10;&#10;&#9;Actor_QueueActionRunScript(so_activator, script_end);&#10;}"
+        interaction_0_trigger="NONE"
+        interaction_0_attach_offset="150,0,81"
+      interaction_1_id="enter"
+        interaction_1_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;return !Actor_HasActorFlag(so_self, &#34;ONLY_VISIBLE_IN_EDITOR&#34;);&#10;}"
+        interaction_1_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Game_SetCinemaMode(true);&#10;&#10;&#9;local script_start = @&#34;&#10;&#9;&#9;Game_SetCinemaMode(true);&#10;&#9;&#9;Actor_SetActorFlag($so_activator, &#34;&#34;SOLID&#34;&#34;, false);&#10;&#9;&#9;&#34;;&#10;&#10;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#10;&#9;script_start = string_replace(script_start, &#34;$so_activator&#34;, so_activator.tostring());&#10;&#10;&#9;Actor_QueueActionRunScript(so_activator, script_start);&#10;&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_unequip&#34;, false);&#10;&#10;&#9;local kvs = StageObject_GetKeyValueStore(so_self);&#10;&#9;Actor_QueueActionMoveAlongKeyValueStorePath(so_activator, kvs, &#34;path_go_in&#34;);&#10;&#9;//local pos_from = StageObject_GetPositionWithOffset(so_self, 160, 0, 0);&#10;&#9;//local pos_to = StageObject_GetPositionWithOffset(so_self, 60, 0, 0);&#10;&#9;//Actor_QueueActionMove(so_activator, pos_from[0], pos_from[1], pos_from[2]);&#10;&#9;//Actor_QueueActionMove(so_activator, pos_to[0], pos_to[1], pos_to[2]);&#10;&#10;&#9;local script_end = @&#34;&#10;&#9;&#9;//Game_SetCinemaMode(false);&#10;&#9;&#9;//Actor_SetActorFlag($so_activator, &#34;&#34;SOLID&#34;&#34;, true);&#10;&#9;&#9;&#34;;&#10;&#10;&#9;script_end = string_replace(script_end, &#34;$so_activator&#34;, so_activator.tostring());&#10;&#10;&#9;Actor_QueueActionRunScript(so_activator, script_end);&#10;&#9;if (Actor_HasInteraction(so_self, &#34;custom_enter&#34;))&#10;&#9;&#9;Actor_InteractWithInteraction(so_self, so_activator, &#34;custom_enter&#34;);&#10;&#10;&#9;Game_SetScreenFadeOutWithCommand(0.6, &#34;travel_to_stage&#34;, so_self, 0.65);&#10;}"
+        interaction_1_trigger="PRESS_BUTTON"
+        interaction_1_controller_button="USE"
+        interaction_1_text="Enter"
+        interaction_1_radius="70"
+      interaction_2_id="mod_bypass_catacomb_on_game_start"
+        interaction_2_trigger="ON_GAME_START"
+        interaction_2_external_script="scripts/interactions/mods/mod-bypass-catacomb-on-game-start.nut"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="CYLINDER" />
+    <node id="radius_xy" value="16.0" />
+    <node id="min_z" value="-120.0" />
+    <node id="max_z" value="0.0" />
+  </array>
+
+</root>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+<array id="INFO">
+ <node id="enabled" value="true" />
+ <node id="name" value="Thai" />
+ <node id="name_localized" value="ภาษาไทย" />
+ <node id="author" value="NodNuatTranslator" />
+</array>
+</root>

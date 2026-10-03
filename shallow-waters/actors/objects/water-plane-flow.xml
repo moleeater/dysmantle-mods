@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="tags" value="FISHABLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,NO_2D_COLLISIONS,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="physics_material" value="WATER" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="fishing_probability_id" type="STRING" value="WATER" />
+    <node id="flowing" type="BOOLEAN" value="true" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="AI_PARAMETERS" ai="DysmantleObstacleAnimated">
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="cast_shadows" value="false" />
+    <node id="model" value="models/objects/water-plane.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+    <node interaction_0_id="water_flow_check"
+     interaction_0_localize="0"
+     interaction_0_disable_after_interaction="0"
+     interaction_0_script_to_run_on_interaction="function SetActorAndChildrenVisible(so_self, is_visible)&#10;{&#10;&#9;StageObject_SetVisible(so_self, is_visible);&#10;&#9;local num_children = StageObject_GetNumberOfChildren(so_self);&#10;&#9;for (local i = 0; i &#60; num_children; i++)&#10;&#9;{&#10;&#9;&#9;local so = StageObject_GetChildByIndex(so_self, i);&#10;&#9;&#9;StageObject_SetVisible(so, is_visible);&#10;&#9;}&#10;}&#10;&#10;function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;SetActorAndChildrenVisible(so_self, StageObject_GetKeyValue(so_self, &#34;flowing&#34;));&#10;}"
+     interaction_0_trigger="ON_INTERVAL"
+     interaction_0_trigger_parameter_float="0.5"
+     interaction_1_id="init"
+     interaction_1_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Actor_InteractWithInteraction(so_self, so_self, &#34;water_flow_check&#34;);&#10;}"
+     interaction_1_trigger="ON_GAME_START"
+    />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="BOX" />
+    <node id="size_x" value="120.0" />
+    <node id="size_y" value="120.0" />
+    <node id="size_z" value="1.0" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="offset_z" value="3.0" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+</root>

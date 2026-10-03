@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+<!-- NOTES:
+
+  Ambient sound scape selection is defined by several factors:
+   1) the actors that are near the ambient sound scape player radius,
+   2) the ground tile the actor with player is standing on. This can be used to alter soundscapes when the player enters a building,
+   3) the time of day, and
+   4) the weather conditions.
+  
+  1) Actor types that want to affect the ambience selection need to:
+   1.1) Have tag AFFECTS_AMBIENCE
+   1.2) Have string key value "ambience_id" that refers to one of the array ids in this file.
+  
+  2) The ground tile type near the player can affet the sound scape if the ground tile type has string key value "ambience_id" that refers to one of the array ids in this file.
+  <array id="KEY_VALUES">
+  <node 
+     key.STRING.ambience_id="INDOORS"
+  />
+  </array>
+  
+  3) Current time of day needs to fall into time_of_day_range defind in one of the array nodes.
+  
+  4) (Not defined nor implemented yet) The weather conditions as defined by tags such as WEATHER_SUNNY, WEATHER_CLOUDY, WEATHER_RAIN_LIGHT could also have an effect on sound scape selection.
+
+
+  Array id defines the ambience id. Array parameter 'radius' defines the trigger radius when the sound scapes start playing.
+
+  Array node attributes define hints when the sound scape defined should be playing:
+   time_of_day_range  Time when this ambience can be selected if the time is between given range. For full day use "00:00..24:00" or do not define the attribute at all.
+   radius      Override array trigger radius for this node sound scape. This needs to be less than array 'radius'.
+   required_weather_tags  List any weather tags that need to be present for this to be selected.
+
+-->
+  
+  <array id="SUBURBAN" radius="600">
+    <node time_of_day_range="06:00..21:00" sound_scape="sound-scapes/ambience/suburban-day.xml" />
+    <node time_of_day_range="21:00..06:00" sound_scape="sound-scapes/ambience/suburban-night.xml" />
+  </array>
+  
+  <array id="FOREST_DECIDUOUS" radius="600">
+    <node time_of_day_range="06:00..21:00" sound_scape="sound-scapes/ambience/forest-deciduous-day.xml" />
+    <node time_of_day_range="21:00..06:00" sound_scape="sound-scapes/ambience/forest-deciduous-night.xml" />
+  </array>
+  
+  <array id="FOREST_CONIFEROUS" radius="600">
+    <node time_of_day_range="06:00..21:00" sound_scape="sound-scapes/ambience/forest-coniferous-day.xml" />
+    <node time_of_day_range="21:00..06:00" sound_scape="sound-scapes/ambience/forest-coniferous-night.xml" />
+  </array>
+  
+  <array id="FOREST_WINTER" radius="600">
+    <node time_of_day_range="06:00..21:00" sound_scape="sound-scapes/ambience/forest-winter-day.xml" />
+    <node time_of_day_range="21:00..06:00" sound_scape="sound-scapes/ambience/forest-winter-night.xml" />
+  </array>
+  
+  <array id="FOREST_TROPICAL" radius="600">
+    <node time_of_day_range="06:00..21:00" sound_scape="sound-scapes/ambience/forest-tropical-day.xml" />
+    <node time_of_day_range="21:00..06:00" sound_scape="sound-scapes/ambience/forest-tropical-night.xml" />
+  </array>
+  
+  <array id="PRAIRIE" radius="600">
+    <node time_of_day_range="06:00..21:00" sound_scape="sound-scapes/ambience/prairie-day.xml" />
+    <node time_of_day_range="21:00..06:00" sound_scape="sound-scapes/ambience/prairie-night.xml" />
+  </array>
+  
+  <array id="INDOORS_HOUSE" radius="300">
+    <node time_of_day_range="06:00..21:00" sound_scape="sound-scapes/ambience/indoors-house-day.xml" />
+    <node time_of_day_range="21:00..06:00" sound_scape="sound-scapes/ambience/indoors-house-night.xml" />
+  </array>
+  
+  <array id="INDOORS_INDUSTRIAL" radius="300">
+    <node time_of_day_range="06:00..21:00" sound_scape="sound-scapes/ambience/indoors-industrial-day.xml" />
+    <node time_of_day_range="21:00..06:00" sound_scape="sound-scapes/ambience/indoors-industrial-night.xml" />
+  </array>
+  
+  <array id="TOMB" radius="600">
+    <node sound_scape="sound-scapes/ambience/tomb.xml" />
+  </array>
+  
+  <array id="UNDERGROUND" radius="600">
+    <node sound_scape="sound-scapes/ambience/underground.xml" />
+  </array>
+  
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="MOD_SNOWFALL" radius="600">
+    <node sound_scape="sound-scapes/ambience/mods/mod-snowfall.xml" />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+</root>

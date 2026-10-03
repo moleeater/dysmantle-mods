@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="POINT_OF_INTEREST,NO_BUILDING_ZONE" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="100" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="800" />
+    <node id="damage_type_accept_mask" value="BLUNT,EXPLOSIVE,SELF_DESTRUCT" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="0.32" g="0.34" b="0.39" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="MANA_CHAMBER" />
+    <node id="cost" type="STRING" value="TOMB_ORB" />
+    <node id="no_building_zone_radius" type="FLOAT" value="350" />
+    <node id="time_activated" type="INTEGER" flags="PERSISTENT,SAVE_STATE" value="0" />
+    <node id="duration" type="FLOAT" value="30" />
+    <node id="path" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|false|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}}" />
+    <node id="investigated" type="BOOLEAN" flags="PERSISTENT,SAVE_STATE" value="false" />
+    <node id="powered" type="BOOLEAN" flags="PERSISTENT,SAVE_STATE" value="false" />
+    <node id="enemy_drops" type="STRING" />
+    <node id="enemy_drops_random" type="STRING" />
+    <node id="cooldown" type="FLOAT" value="10" />
+    <node id="radius" type="FLOAT" value="1000" />
+    <node id="raise_dead" type="BOOLEAN" value="true" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleObstacleAnimated">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="activate" event_0_trigger_time="0" event_0_id="fx" event_0_effect="effects/arena-obelisk-complete-pillar.xml" />
+    <node id="active"
+     wrap_mode="LOOP"
+     forced_animation_length_in_seconds="1.00"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/circuit-puzzle-beam-gun-node-light.xml"
+     event_0_spawn_effect_offset_z="-123.05"
+     event_1_trigger_time="0"
+     event_1_id="id1"
+     event_1_effect="effects/mana-chamber-active-base.xml"
+     event_1_spawn_effect_offset_z="-121.44"
+     event_2_trigger_time="0"
+     event_2_id="wave1"
+     event_2_effect="effects/mana-chamber-wave.xml"
+     event_2_spawn_effect_offset_z="-150.00"
+     event_3_trigger_time="0.499"
+     event_3_id="wave2"
+     event_3_effect="effects/mana-chamber-wave.xml"
+     event_3_spawn_effect_offset_z="-150.00"
+    />
+
+    <node id="inactive"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     forced_animation_length_in_seconds="1.00"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/electric-discharge-mana-chamber-inactive.xml"
+     event_0_spawn_effect_offset_z="-132.26"
+     event_1_trigger_time="0"
+     event_1_id="id1"
+     event_1_effect="effects/yellow-sparks-mana-chamber.xml"
+     event_1_spawn_effect_angle_z="-11.94"
+     event_1_spawn_effect_offset_z="-109.75"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="shadow_scale" value="3" />
+    <node id="shadow_alpha" value="0.56" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="ground_decal_angle" value="90" />
+    <node id="model" value="models/interactives/mana-chamber.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="use"
+        interaction_0_disable_after_interaction="0"
+        interaction_0_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#10;&#9;local num_investigated = Game_GetWorldStateAsInteger(&#34;MANA_CHAMBERS&#34;, &#34;num_investigated&#34;, 0);&#10;&#9;local powered = StageObject_GetKeyValue(so_self, &#34;powered&#34;, false);&#10;&#10;&#9;// debug&#10;&#9;//num_investigated = !;&#10;&#10;&#9;if (num_investigated &#62;= 1 &#38;&#38; powered)&#10;&#9;{&#10;&#10;&#9;&#9;local duration = StageObject_GetKeyValue(so_self, &#34;duration&#34;, 0);&#10;&#9;&#9;local cooldown = StageObject_GetKeyValue(so_self, &#34;cooldown&#34;, 0);&#10;&#9;&#9;local time_activated = StageObject_GetKeyValue(so_self, &#34;time_activated&#34;, 0);&#10;&#9;&#9;local world_time = Game_GetWorldTimeSecondsAsRealTimeSeconds();&#10;&#10;&#9;&#9;if (time_activated == 0 || world_time &#62; time_activated + duration + cooldown)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;return true;&#10;&#9;&#9;}&#10;&#9;}&#10;&#10;&#9;return false;&#10;}"
+        interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;if(!Game_IsStagePointOfInterestCompleted(so_self))&#10;&#9;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#10;&#9;local duration = StageObject_GetKeyValue(so_self, &#34;duration&#34;, 0);&#10;&#9;local cooldown = StageObject_GetKeyValue(so_self, &#34;cooldown&#34;, 0);&#10;&#9;local time_activated = StageObject_GetKeyValue(so_self, &#34;time_activated&#34;, 0);&#10;&#9;local world_time = Game_GetWorldTimeSecondsAsRealTimeSeconds();&#10;&#10;&#9;local quest_id = &#34;quests/mana-chamber-intro.nut&#34;;&#10;&#9;Game_SendQuestPhaseCommandWord(quest_id, &#34;PHASE_USE&#34;, &#34;activate&#34;);&#10;&#10;&#9;if (time_activated == 0 || world_time &#62; time_activated + duration + cooldown)&#10;&#9;{&#10;&#9;&#9;StageObject_SetKeyValueInteger(so_self, &#34;time_activated&#34;, world_time);&#10;&#9;&#9;Actor_PlayAnimation(so_self, &#34;activate&#34;);&#10;&#9;&#9;Game_ActivateManaChamber(so_self);&#10;&#10;&#9;&#9;//Raise the dead&#10;&#9;&#9;if(StageObject_GetKeyValue(so_self,&#34;raise_dead&#34;) == false)&#10;&#9;&#9;&#9;return;&#10;&#10;&#10;&#9;&#9;local radius = StageObject_GetKeyValue(so_self,&#34;radius&#34;);&#10;&#9;&#9;local pos = StageObject_GetPosition(so_self);&#10;&#9;&#9;local arr_so = Stage_QueryStageObjectsInRadius(pos[0],pos[1],pos[2],radius)&#10;&#10;&#10;&#9;&#9;if (arr_so != null)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;foreach (so in arr_so)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;if(StageObject_HasTag(so, &#34;BOSS&#34;))&#10;&#9;&#9;&#9;&#9;&#9;  continue;&#10;&#10;&#9;&#9;&#9;&#9;if(StageObject_HasTag(so, &#34;NO_RESURRECTION&#34;))&#10;&#9;&#9;&#9;&#9;&#9;  continue;&#10;&#10;&#10;&#10;&#9;&#9;&#9;&#9;if(StageObject_HasTag(so, &#34;MONSTER&#34;)){&#10;&#10;&#9;&#9;&#9;&#9;&#9;local hitpoints = Actor_GetAttributeHitPoints(so)&#10;&#10;&#9;&#9;&#9;&#9;&#9;//is alive&#10;&#9;&#9;&#9;&#9;&#9;if(hitpoints &#62; 0){&#10;&#9;&#9;&#9;&#9;&#9;&#9;continue;&#10;&#9;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;&#9;else{&#10;&#10;&#9;&#9;&#9;&#9;&#9;&#9;local pos_enemy = StageObject_GetPosition(so);&#10;&#9;&#9;&#9;&#9;&#9;&#9;local puid = StageObject_GetPersistentUniqueId(so)&#10;&#9;&#9;&#9;&#9;&#9;&#9;StageObject_SetVisible(so, false)&#10;&#10;&#9;&#9;&#9;&#9;&#9;&#9;//respawn&#10;&#9;&#9;&#9;&#9;&#9;&#9;local actor_type = Actor_GetActorType(so)&#10;&#9;&#9;&#9;&#9;&#9;&#9;local new_enemy = Stage_CreateActor(actor_type, pos_enemy[0], pos_enemy[1], pos_enemy[2], true);&#10;&#10;&#9;&#9;&#9;&#9;&#9;&#9;StageObject_SetGlobal(new_enemy, false)&#10;&#10;&#10;&#9;&#9;&#9;&#9;&#9;&#9;Stage_SpawnEffect(&#34;effects/dead-rising.xml&#34;, pos_enemy[0], pos_enemy[1], pos_enemy[2] - 90, 0);&#10;&#10;&#9;&#9;&#9;&#9;&#9;&#9;//quest check&#10;&#9;&#9;&#9;&#9;&#9;&#9;if(Game_IsQuestCurrent(quest_id) &#38;&#38; Game_GetQuestPhaseId(quest_id) == &#34;PHASE_FIGHT&#34;)&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Game_SendQuestPhaseGoalCommandWord(quest_id, &#34;PHASE_FIGHT&#34;, &#34;GOAL_RISE&#34;, &#34;activate&#34;)&#10;&#10;&#10;&#9;&#9;&#9;&#9;&#9;&#9;Actor_QueueActionPlayAnimationWithParameters(new_enemy, &#34;landing_damage&#34;, 0.6, 0.4, true);&#10;&#9;&#9;&#9;&#9;&#9;&#9;Actor_QueueActionPlayAnimationWithParameters(new_enemy, &#34;spot_enemy&#34;, 0.6, 0.0, true);&#10;&#9;&#9;&#9;&#9;&#9;&#9;//Actor_QueueActionTurnTowardsPosition(new_enemy, pos[0],pos[1]);&#10;&#10;&#10;&#10;&#9;&#9;&#9;&#9;&#9;&#9;//remove corpse&#10;&#9;&#9;&#9;&#9;&#9;&#9;Stage_DeleteStageObject(so);&#10;&#10;&#9;&#9;&#9;&#9;&#9;}&#10;&#10;&#10;&#10;&#9;&#9;&#9;&#9;}&#10;&#10;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#10;&#10;&#10;&#10;&#9;}&#10;&#10;}"
+        interaction_0_trigger="PRESS_BUTTON"
+        interaction_0_controller_button="USE"
+        interaction_0_text="Use"
+        interaction_0_command_to_send_to_actor_attached_to="activate"
+        interaction_1_id="init"
+        interaction_1_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#10;&#9;local duration = StageObject_GetKeyValue(so_self, &#34;duration&#34;, 0);&#10;&#9;local time_activated = StageObject_GetKeyValue(so_self, &#34;time_activated&#34;, 0);&#10;&#9;local world_time = Game_GetWorldTimeSecondsAsRealTimeSeconds();&#10;&#10;&#9;if (time_activated &#62; 0 &#38;&#38; world_time &#60; time_activated + duration)&#10;&#9;{&#10;&#9;&#9;Game_ActivateManaChamber(so_self);&#10;&#9;&#9;Actor_PlayAnimationWithDelayPlaybackSpeedAndPosition(so_self, &#34;activate&#34;, 0, 1, 1);&#10;&#9;}&#10;&#10;&#9;local cost = StageObject_GetKeyValue(so_self, &#34;cost&#34;);&#10;&#10;&#9;local text = &#34;&#34;;&#10;&#9;local substrings = split(cost, &#34;x, &#34;);&#10;&#9;foreach (str in substrings)&#10;&#9;{&#10;&#9;&#9;if (str.len() &#60;= 2)&#10;&#9;&#9;{&#10;&#9;&#9;&#9;text += str + &#34;x&#34;;&#10;&#9;&#9;}&#10;&#9;&#9;else&#10;&#9;&#9;{&#10;&#9;&#9;&#9;text += &#34;[MATERIAL_ICON=&#34; + str + &#34;]  &#34;;&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;rstrip(text);&#10;&#10;&#9;Actor_SetInteractionText(so_self, &#34;power&#34;, Game_GetConvertedString(text));&#10;}"
+        interaction_1_trigger="ON_GAME_START"
+      interaction_2_id="inspect"
+        interaction_2_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#10;&#9;//debug&#10;&#9;//return false;&#10;&#10;&#9;local quest_id = &#34;quests/mana-chamber-intro.nut&#34;;&#10;&#10;&#9;if (Game_IsQuestGoalCompleted(quest_id, &#34;INVESTIGATE&#34;, &#34;INVESTIGATE&#34;))&#10;&#9;&#9;return false;&#10;&#10;&#9;return !Game_IsShowingActorNotification(so_activator) &#38;&#38;&#10;&#9;&#9;!StageObject_GetKeyValue(so_self, &#34;investigated&#34;, false);&#10;}"
+        interaction_2_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;local quest_id = &#34;quests/mana-chamber-intro.nut&#34;;&#10;&#9;local num_investigated = Game_GetWorldStateAsInteger(&#34;MANA_CHAMBERS&#34;, &#34;num_investigated&#34;, 0);&#10;&#10;&#9;if (!StageObject_GetKeyValue(so_self, &#34;investigated&#34;, false))&#10;&#9;{&#10;&#9;&#9;StageObject_SetKeyValueBoolean(so_self, &#34;investigated&#34;, true);&#10;&#9;&#9;Game_SendQuestPhaseCommandWord(quest_id, &#34;INVESTIGATE&#34;, &#34;activate&#34;);&#10;&#10;&#9;&#9;num_investigated++;&#10;&#9;&#9;Game_SetWorldState(&#34;MANA_CHAMBERS&#34;, &#34;num_investigated&#34;, num_investigated.tostring());&#10;&#10;&#9;}&#10;&#10;&#9;if (num_investigated == 1)&#10;&#9;{&#10;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;It has some instructions written on it.&#34;));&#10;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;The device can help in fighting the monsters and gaining materials when it&#39;s active.&#34;));&#10;&#9;}&#10;}"
+        interaction_2_trigger="PRESS_BUTTON"
+        interaction_2_controller_button="USE"
+        interaction_2_text="Inspect"
+        interaction_2_radius="100"
+      interaction_3_id="quest_start"
+        interaction_3_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#10;&#9;local quest_id = &#34;quests/mana-chamber-intro.nut&#34;;&#10;&#10;&#9;if(Game_IsQuestCompleted(quest_id))&#10;&#9;   return false;&#10;&#10;&#9;if (!(Game_IsQuestCurrent(quest_id) &#38;&#38; Game_IsQuestCompleted(quest_id)))&#10;&#9;{&#10;&#10;&#9;&#9;//Game_SetQuestAvailable(quest_id);&#10;&#9;&#9;Game_ShowQuestStartDialog(quest_id,true);&#10;&#10;&#10;&#9;}&#10;&#10;&#10;}"
+        interaction_3_trigger="ENTER_RADIUS"
+        interaction_3_radius="120"
+      interaction_4_id="power"
+        interaction_4_localize="0"
+        interaction_4_disable_after_interaction="0"
+        interaction_4_external_script="scripts/interactions/mana-chamber-hold-down-button.nut"
+        interaction_4_trigger="HOLD_DOWN_BUTTON"
+        interaction_4_trigger_parameter_float="1"
+        interaction_4_controller_button="USE"
+        interaction_4_text="Power"
+      interaction_5_id="update"
+        interaction_5_disable_after_interaction="0"
+        interaction_5_script_to_run_on_interaction="function GetDrop(so_actor, kv_string_drops){&#10;&#10;  local kv_drops =  StageObject_GetKeyValue(so_actor, kv_string_drops);&#10;&#10;  if(kv_drops == null)&#10;&#9;  return;&#10;&#10;  local drops = string_tokenize(kv_drops);&#10;&#10;  if(drops.len() == 0)&#10;&#9;  return;&#10;&#10;  local roll = (((1.0 * rand()) / RAND_MAX) * drops.len()).tointeger();&#10;  //local roll = m_randf(0,drops.len()).tointeger();&#10;&#10;  return drops[roll];&#10;&#10;}&#10;&#10;function OnInteraction(so_self, so_activator)&#10;{&#10;&#10;&#10;&#9;if(Game_IsManaChamberActive()){&#10;&#10;&#10;&#9;&#9;local so_actors = Stage_QueryStageObjectsWithTag(STAGE_OBJECT_TYPE_ACTOR, &#34;INSIDE_MANA_CHAMBER&#34;);&#10;&#10;&#10;&#9;&#9;foreach (idx, so_actor in so_actors) {&#10;&#10;&#9;&#9;&#9;local kv_drops = StageObject_GetKeyValue(so_actor, &#34;mana_chamber_drops_material_id&#34;);&#10;&#9;&#9;&#9;local kv_random_drops = StageObject_GetKeyValue(so_actor, &#34;mana_chamber_drops_random_material_id&#34;);&#10;&#10;&#10;&#9;&#9;&#9;if(kv_drops == null){&#10;&#9;&#9;&#9;  local drop = GetDrop(so_self, &#34;enemy_drops&#34;);&#10;&#9;&#9;&#9;  StageObject_SetKeyValueString(so_actor,&#34;mana_chamber_drops_material_id&#34;, drop);&#10;&#9;&#9;&#9;}&#10;&#10;&#10;&#9;&#9;&#9;if(kv_random_drops == null){&#10;&#9;&#9;&#9;  local drop = GetDrop(so_self, &#34;enemy_drops_random&#34;);&#10;&#9;&#9;&#9;  StageObject_SetKeyValueString(so_actor,&#34;mana_chamber_drops_random_material_id&#34;, drop);&#10;&#10;&#9;&#9;&#9;}&#10;&#10;&#9;&#9;}&#10;&#10;&#10;&#9;}&#10;&#10;}"
+        interaction_5_trigger="ON_INTERVAL"
+        interaction_5_trigger_parameter_float="1"
+      interaction_6_id="cooldown"
+        interaction_6_disable_after_interaction="0"
+        interaction_6_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;local duration = StageObject_GetKeyValue(so_self, &#34;duration&#34;, 0);&#10;&#9;local cooldown = StageObject_GetKeyValue(so_self, &#34;cooldown&#34;, 0);&#10;&#9;local time_activated = StageObject_GetKeyValue(so_self, &#34;time_activated&#34;, 0);&#10;&#9;local world_time = Game_GetWorldTimeSecondsAsRealTimeSeconds();&#10;&#10;&#9;if (time_activated == 0 || world_time &#62; time_activated + duration + cooldown || world_time &#60; time_activated + duration + 1)&#10;&#9;{&#10;&#9;&#9;return false;&#10;&#9;}&#10;&#10;&#9;return true;&#10;}"
+        interaction_6_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;if (Game_IsShowingActorNotification(so_self))&#10;&#9;&#9;return;&#10;&#10;&#9;local duration = StageObject_GetKeyValue(so_self, &#34;duration&#34;, 0);&#10;&#9;local cooldown = StageObject_GetKeyValue(so_self, &#34;cooldown&#34;, 0);&#10;&#9;local time_activated = StageObject_GetKeyValue(so_self, &#34;time_activated&#34;, 0);&#10;&#9;local world_time = Game_GetWorldTimeSecondsAsRealTimeSeconds();&#10;&#10;&#9;local time_left = time_activated + duration + cooldown - world_time;&#10;&#10;&#9;if (time_left &#62; 0)&#10;&#9;{&#10;&#10;&#9;&#9;local minutes = floor(time_left / 60);&#10;&#9;&#9;local seconds = time_left - minutes * 60;&#10;&#9;&#9;local time_string = format(&#34;%.2d:%.2d&#34;, minutes, seconds);&#10;&#9;&#9;Game_AddActorNotification(so_self, &#34;[EMOJI=hourglass not done] &#34; + time_string);&#10;&#10;&#9;}&#10;&#10;&#10;&#10;&#10;&#10;}"
+        interaction_6_trigger="PRESS_BUTTON"
+        interaction_6_controller_button="USE"
+        interaction_6_text="Use"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="MESH" />
+    <node id="model" value="models/interactives/mana-chamber-collider.model" />
+    <node id="min_z" value="-171.3" />
+    <node id="max_z" value="0.0" />
+    <node id="is_closed" value="1" />
+  </array>
+
+  <array id="COLLIDER_EDGES">
+    <node px0="-40.69" py0="-12.58" px1="-26.84" py1="-33.07" />
+    <node px0="-26.84" py0="-33.07" px1="-3.95" py1="-42.41" />
+    <node px0="-3.95" py0="-42.41" px1="20.28" py1="-37.45" />
+    <node px0="39.54" py0="16.38" px1="19.87" py1="37.67" />
+    <node px0="19.87" py0="37.67" px1="-4.40" py1="42.36" />
+    <node px0="-4.40" py0="42.36" px1="-27.20" py1="32.77" />
+    <node px0="-27.20" py0="32.77" px1="-41.97" py1="8.35" />
+    <node px0="-41.97" py0="8.35" px1="-40.69" py1="-12.58" />
+    <node px0="74.74" py0="-16.38" px1="74.74" py1="16.38" />
+    <node px0="39.54" py0="-16.38" px1="74.74" py1="-16.38" />
+    <node px0="20.28" py0="-37.45" px1="39.54" py1="-16.38" />
+    <node px0="74.74" py0="16.38" px1="39.54" py1="16.38" />
+  </array>
+
+</root>

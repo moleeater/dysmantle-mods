@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="POINT_OF_INTEREST,MONSTER" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SOLID,FRIEND_OR_FOE,AFFECTED_BY_GRAVITY,COLLIDE_AGAINST_STATIC_EDGES,SET_NONSOLID_ON_DEATH_END" />
+    <node id="persistency_flags" value="TEMPORARY_DEATH_STATE,TEMPORARY_TRANSFORM,TEMPORARY_ATTRIBUTES" />
+    <node id="physics_material" value="FLESH" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="5" />
+    <node id="move_acceleration" value="0" />
+    <node id="max_move_speed" value="75" />
+    <node id="dampening_factor_on_ground" value="8" />
+    <node id="dampening_factor_on_air" value="0.5" />
+    <node id="restitution_coefficient" value="0.15" />
+    <node id="friction" value="0" />
+    <node id="minimum_damage_threshold" value="1" />
+    <node id="aggro_radius" value="360" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="10" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="60" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="color_material_1" type="COLOR" value="0.74,0.76,0.81,1" />
+    <node id="color_material_2" type="COLOR" value="0.51,0.54,0.55,1" />
+    <node id="default_running_speed_multiplier" type="FLOAT" value="2.5" />
+    <node id="default_strafing_speed_multiplier" type="FLOAT" value="1.25" />
+    <node id="default_knockback_strength" type="FLOAT" value="200" />
+    <node id="script_file" type="FILE" value="actors/enemies/scripts/tomb-guard.nut" />
+    <node id="stance" type="STRING" value="hands_free" />
+    <node id="FollowPath_start_automatically" type="BOOLEAN" value="false" />
+    <node id="FollowPath_path" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|false|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}}" />
+    <node id="Wander_start_automatically" type="BOOLEAN" value="false" />
+    <node id="Wander_radius" type="FLOAT" value="300" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENEMY_NORMAL" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleEnemyScripted">
+    <node id="max_aggro_range" type="FLOAT" value="500" />
+    <node id="max_field_of_view" type="FLOAT" value="90" />
+    <node id="allow_flanking" type="BOOLEAN" value="false" />
+    <node id="react_to_enemy_collisions" type="BOOLEAN" value="true" />
+    <node id="roadmap_requires_activation" type="BOOLEAN" value="false" />
+    <node id="alert_system_enabled" type="BOOLEAN" value="false" />
+    <node id="alert_level_start_wander" type="FLOAT" value="50" />
+    <node id="alert_level_stop_wander" type="FLOAT" value="1" />
+    <node id="alert_level_start_investigate_noise" type="FLOAT" value="75" />
+    <node id="alert_level_stop_chase" type="FLOAT" value="20" />
+    <node id="alert_level_increase_speed" type="FLOAT" value="5" />
+    <node id="alert_level_decrease_speed" type="FLOAT" value="5" />
+    <node id="alert_level_max_distance_from_home" type="FLOAT" value="600" />
+    <node id="script_enemy_radius" type="FLOAT" value="120" />
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleAvoidFriends" />
+  </array>
+
+  <array id="ANIMATIONS">
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="die"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_die1.anim"
+     fade_out_duration="0"
+     pause_at_end="true"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node id="drown"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-volunteer_falling.anim"
+     playback_speed="0.75"
+     event_0_trigger_time="0.966997"
+     event_0_id="drown"
+     event_0_command_word="self_destruct"
+    />
+
+    <node id="fall" animation_controller="Playback" skeleton_animation="models/animations/humanoid-volunteer_falling.anim" />
+    <node id="hit"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_hit1-additive.anim"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_effect="effects/sfx-ex-female-hurt.xml"
+    />
+
+    <node id="landing" animation_controller="Playback" skeleton_animation="models/animations/humanoid-volunteer_sitting-on-ground.anim" playback_speed="6" />
+    <node id="landing_damage" animation_controller="Playback" skeleton_animation="models/animations/humanoid-volunteer_sitting-on-ground-fishing.anim" playback_speed="6" />
+    <node id="melee.hands_free"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_melee.anim"
+     tags="MELEE"
+     fade_in_duration="0.1"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_effect="effects/sfx-ex-female-attack.xml"
+     event_1_trigger_time="0.77"
+     event_1_id="id1"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/zombie-swing-horizontal-180.xml"
+     event_1_spawn_effect_offset_x="21.74"
+     event_1_spawn_effect_offset_z="-65.07"
+     event_2_trigger_time="0.81"
+     event_2_id="attack"
+     event_2_command_word="melee_attack"
+    />
+
+    <node id="move.hands_free.idle.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_idle.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     play_on_create="true"
+    />
+
+    <node id="move.hands_free.walk.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_walk_forward.anim"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0.0577"
+     event_0_id="footstep"
+     event_0_command_word="footstep"
+     event_1_trigger_time="0.513"
+     event_1_id="footstep2"
+     event_1_command_word="footstep"
+    />
+
+    <node id="stalk" animation_controller="Playback" skeleton_animation="models/animations/humanoid-zombie_female_stalk.anim" wrap_mode="LOOP" start_playing_at_random_time_key="true" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="0.4" />
+    <node id="shadow_alpha" value="0.3" />
+    <node id="shadow_drawn_for_each_bone" value="true" />
+    <node id="model" value="models/enemies/zombie-female-1.model" />
+  </array>
+
+  <array id="PROPS">
+    <node id="new"
+     mount_bone_id="head"
+     actor_type="actors/enemies/zombie-female-head-1.xml"
+     mount_rotation_angles_x="-1.5708"
+     mount_rotation_angles_y="0"
+     mount_rotation_angles_z="-1.5708"
+    />
+
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_peaceful_mode_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-peaceful-mode-on-game-start.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="CAPSULE" />
+    <node id="radius" value="12.0" />
+    <node id="height" value="60.0" />
+    <node id="offset_z" value="-42.0" />
+  </array>
+
+</root>

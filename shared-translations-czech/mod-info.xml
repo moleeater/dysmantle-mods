@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="INFO">
+    <node id="load_priority" value="0" />
+    <node id="mod_version" value="0.8.0" />
+    <node id="tags" value="LOCALIZATION" />
+    <node id="author" value="Lukyn92" />
+    <node id="title" value="Czech translation" />
+    <node id="description" value="Ceský preklad" />
+  </array>
+</root>

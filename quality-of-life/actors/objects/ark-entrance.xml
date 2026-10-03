@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="Ark" />
+    <node id="tags" value="POINT_OF_INTEREST,BRIDGE" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,INDESTRUCTIBLE,WALL,DELETE_ACTOR_AFTER_DEATH,CAN_BE_STOOD_ON,IGNORE_COLLIDER_WHEN_PICKING" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="0.32" g="0.27" b="0.27" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="stage" type="STAGE" value="stages/special/the-ark.stage" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENTRYWAY" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="AI_PARAMETERS" ai="DysmantleObstacleAnimated">
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death" category="DEATH" animation_controller="PhysicsMaterialBasedDeath" forced_animation_length_in_seconds="0.20" force_update_visual_bounds="true" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="bm_shadow" value="shadows/shadow-rectangle-thinner.png" />
+    <node id="shadow_scale" value="8.95" />
+    <node id="shadow_offset_x" value="22.19" />
+    <node id="shadow_alpha" value="0.82" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="model" value="models/objects/seed-vault.model" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="PROPS">
+    <node id="mod_ark_progress"
+      actor_type="actors/interactives/floating-text.xml"
+      mount_offset_x="184"
+      mount_offset_z="-153"
+      mount_rotation_angles_y="1.5708"
+      mount_rotation_angles_z="1.5708"
+      mount_scale="0.14"
+      />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="stage_enter"
+        interaction_0_disable_after_interaction="0"
+        interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Game_SetCinemaMode(true, true);&#10;&#10;&#9;local script_start = @&#34;&#10;&#9;&#9;Game_SetCinemaMode(true);&#10;&#9;&#9;Actor_SetActorFlag($so_activator, &#34;&#34;SOLID&#34;&#34;, false);&#10;&#9;&#9;&#34;;&#10;&#10;&#9;script_start = string_replace(script_start, &#34;$so_activator&#34;, so_activator.tostring());&#10;&#10;&#9;Actor_QueueActionRunScript(so_activator, script_start);&#10;&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_unequip&#34;, false);&#10;&#10;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#10;&#9;local player_index = Game_GetPlayerIndexByActor(so_activator);&#10;&#9;local secs = 0.7*player_index;&#10;&#9;if (secs &#62; 0)&#10;&#9;&#9;Actor_QueueActionWait(so_activator, secs);&#10;&#10;&#9;local pos_from = StageObject_GetPositionWithOffset(so_self, 60, 0, 0);&#10;&#9;local pos_to = StageObject_GetPositionWithOffset(so_self, 280, 0, 0);&#10;&#9;StageObject_SetPosition(so_activator, pos_from[0], pos_from[1], pos_from[2]);&#10;&#9;Actor_QueueActionMove(so_activator, pos_to[0]+player_index*15, pos_to[1]+player_index*35, pos_to[2]);&#10;//    Actor_QueueActionMoveToBone(so_activator, so_self, &#34;snap&#34;);&#10;&#10;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_equip&#34;, true);&#10;&#10;&#9;local script_end = @&#34;&#10;&#9;&#9;Game_SetCinemaMode(false);&#10;&#9;&#9;Actor_SetActorFlag($so_activator, &#34;&#34;SOLID&#34;&#34;, true);&#10;&#9;&#9;&#34;;&#10;&#10;&#9;script_end = string_replace(script_end, &#34;$so_activator&#34;, so_activator.tostring());&#10;&#10;&#9;Actor_QueueActionRunScript(so_activator, script_end);&#10;}"
+        interaction_0_trigger="NONE"
+        interaction_0_attach_offset="150,0,81"
+      interaction_1_id="enter"
+        interaction_1_external_script="scripts/interactions/ark-entrance-press-button.nut"
+        interaction_1_trigger="PRESS_BUTTON"
+        interaction_1_controller_button="USE"
+        interaction_1_text="Enter"
+        interaction_1_radius="70"
+        interaction_1_attach_offset="150,0,80"
+      interaction_2_id="mod_ark_progress_on_interval"
+        interaction_2_trigger="ON_INTERVAL"
+        interaction_2_trigger_parameter_float="5"
+        interaction_2_disable_after_interaction="0"
+        interaction_2_external_script="scripts/interactions/mods/mod-ark-progress-on-interval.nut"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="MESH" />
+    <node id="model" value="models/objects/seed-vault-collider.model" />
+    <node id="min_z" value="-360.0" />
+    <node id="max_z" value="0.0" />
+    <node id="is_closed" value="1" />
+  </array>
+
+  <array id="COLLIDER_EDGES">
+    <node px0="72.00" py0="160.67" px1="-72.00" py1="160.67" />
+    <node px0="-72.00" py0="160.67" px1="-72.00" py1="-180.00" />
+    <node px0="-60.00" py0="-180.00" px1="-60.00" py1="-176.02" />
+    <node px0="-72.00" py0="-180.00" px1="-60.00" py1="-180.00" />
+    <node px0="60.00" py0="-180.00" px1="72.00" py1="-180.00" />
+    <node px0="-60.00" py0="-176.02" px1="60.00" py1="-176.02" />
+    <node px0="60.00" py0="-176.02" px1="60.00" py1="-180.00" />
+    <node px0="72.00" py0="-180.00" px1="72.00" py1="160.67" />
+  </array>
+
+</root>

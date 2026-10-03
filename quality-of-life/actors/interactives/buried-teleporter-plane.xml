@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="NO_EXPERIENCE_REWARD_ON_DEATH,BRIDGE,IGNORE" />
+  </array>
+
+  <array id="ATTRIBUTES">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="actor_flags" value="STATIC,SOLID,NO_2D_COLLISIONS,DELETE_ACTOR_AFTER_DEATH,CAN_BE_STOOD_ON,INDESTRUCTIBLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+    <node id="physics_material" value="DIRT" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="10000" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1" />
+    <node id="damage_type_accept_mask" value="" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="ObstacleAnimated">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death"
+     category="DEATH"
+     animation_controller="ScaleDown"
+     forced_animation_length_in_seconds="0.25"
+     event_0_trigger_time="0"
+     event_0_id="dirt1"
+     event_0_effect="effects/digging-teleporter-hole.xml"
+     event_0_spawn_effect_scale="0.3"
+     event_1_trigger_time="0"
+     event_1_id="particles"
+     event_1_effect="effects/digging-teleporter-up-particles.xml"
+     event_1_spawn_effect_scale="0.4"
+     event_2_trigger_time="0.0993"
+     event_2_id="dirt2"
+     event_2_effect="effects/digging-teleporter-hole.xml"
+     event_2_spawn_effect_scale="0.2"
+     event_3_trigger_time="0.119"
+     event_3_id="fx"
+     event_3_effect="effects/digging-teleporter-waves.xml"
+     event_3_spawn_effect_scale="0.5"
+    />
+
+    <node id="found"
+     model="models/objects/plane-pit.model"
+     switch_model_on_animation_start="true"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/digging-teleporter-hole-small.xml"
+     event_0_spawn_effect_scale="0.4"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="Model" />
+    <node id="shadow_method" value="NONE" />
+    <node id="model" value="models/objects/floor-plane.model" />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="BOX" />
+    <node id="size_x" value="60.0" />
+    <node id="size_y" value="60.0" />
+    <node id="size_z" value="0.0" />
+  </array>
+
+</root>

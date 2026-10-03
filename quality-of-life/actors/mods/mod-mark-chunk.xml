@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="HIDE_IN_EDITOR_PALETTE,MOD_MARK_CHUNK,PERSISTENT_CREATED_ACTOR,PERSISTENT_STATE,SKIP_RENDERING" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="physics_material" value="NO_DAMAGE" />
+    <node id="actor_flags" value="ONLY_VISIBLE_IN_EDITOR,PERMANENT,STATIC" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE,PERMANENT_TRANSFORM,TEMPORARY_ATTRIBUTES,TEMPORARY_KEY_VALUES" />
+    <node id="time_awake_after_leaving_view_in_secs" value="-1" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="Null">
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="Null" />
+  </array>
+
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-mark-chunk-on-game-start.nut"
+      interaction_1_id="on_death_start"
+        interaction_1_trigger="ON_DEATH_START"
+        interaction_1_external_script="scripts/interactions/mods/mod-mark-chunk-on-death-start.nut"
+    />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="NONE" />
+  </array>
+
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="TOMB_ENTRANCE,POINT_OF_INTEREST" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH,CAN_BE_STOOD_ON" />
+    <node id="persistency_flags" value="PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="stage" type="STAGE" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="TOMB" />
+    <node id="unlocked" type="BOOLEAN" flags="PERSISTENT,SAVE_STATE" value="false" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleBehavioral">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="completed"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/tomb-altar-completed.anim"
+     event_0_trigger_time="0.218"
+     event_0_id="id0"
+     event_0_effect="effects/tomb-opening-floating-particles.xml"
+    />
+
+    <node id="locked" animation_controller="Playback" skeleton_animation="models/animations/tomb-altar-locked.anim" fade_in_duration="0.5" fade_out_duration="0.5" />
+    <node id="unlock"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/tomb-altar-unlocking.anim"
+     playback_speed="3"
+     event_0_trigger_time="0"
+     event_0_id="id6"
+     event_0_effect="effects/tomb-opening-floating-particles.xml"
+     event_1_trigger_time="0"
+     event_1_id="ring small"
+     event_1_effect="effects/shock-wave-tomb-small.xml"
+     event_1_spawn_effect_offset_z="-2.88"
+     event_2_trigger_time="0"
+     event_2_id="sfx-outer"
+     event_2_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.8,0.8|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|500,3000|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/tomb-entrance-open-long|Q|}}"
+     event_3_trigger_time="0"
+     event_3_id="sfx-middle"
+     event_3_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|500,3000|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/tomb-entrance-open-short|Q|}}"
+     event_4_trigger_time="0"
+     event_4_id="sfx-rumble"
+     event_4_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|500,3000|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/tomb-entrance-open-rumble|Q|}}"
+     event_5_trigger_time="0.96"
+     event_5_id="ring medium"
+     event_5_effect="effects/shock-wave-tomb-medium.xml"
+     event_5_spawn_effect_offset_z="-2.88"
+     event_6_trigger_time="1.6"
+     event_6_id="sfx-middle2"
+     event_6_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|500,3000|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/tomb-entrance-open-short|Q|}}"
+     event_7_trigger_time="1.8"
+     event_7_id="sfx-latch"
+     event_7_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.6,0.6|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.6,0.6|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|500,3000|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/tomb-entrance-open-latch|Q|}}"
+     event_8_trigger_time="2.06"
+     event_8_id="ring large"
+     event_8_effect="effects/shock-wave-tomb-large.xml"
+     event_9_trigger_time="2.16"
+     event_9_id="dot"
+     event_9_effect="effects/tomb-openig-dot.xml"
+     event_9_spawn_effect_offset_z="-3.79"
+     event_10_trigger_time="3.8"
+     event_10_id="sfx-latch2"
+     event_10_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.6,0.6|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.8,0.8|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|500,3000|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/tomb-entrance-open-latch|Q|}}"
+     event_11_trigger_time="4.4"
+     event_11_id="sfx-stop"
+     event_11_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|500,3000|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/tomb-entrance-open-clunk|Q|}}"
+     event_12_trigger_time="5"
+     event_12_id="sfx-center-open"
+     event_12_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.8,0.8|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.8,0.8|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|500,3000|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/tomb-entrance-open-center|Q|}}"
+     event_13_trigger_time="14.6"
+     event_13_id="id5"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="shadow_angle" value="-90" />
+    <node id="shadow_scale" value="1.41" />
+    <node id="shadow_method" value="NONE" />
+    <node id="ground_decal_type" value="tomb-altar" />
+    <node id="ground_decal_angle" value="-90" />
+    <node id="ground_decal_scale" value="1.41" />
+    <node id="allow_static_caching" value="false" />
+    <node id="model" value="models/interactives/tomb-altar.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+      interaction_0_id="descend"
+        interaction_0_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;return StageObject_GetKeyValue(so_self, &#34;unlocked&#34;) &#38;&#38;&#10;&#9;&#9;   !Game_IsShowingActorNotification(so_activator);&#10;}"
+        interaction_0_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;if (Game_IsRecipeCrafted(&#34;ROPE_AND_HOOK&#34;))&#10;&#9;{&#10;&#9;&#9;// This is added here to make old saves work properly. Can be removed later.&#10;&#9;&#9;Game_SetWorldState(&#34;TOMBS&#34;, &#34;activated&#34;, &#34;1&#34;);&#10;&#10;&#9;&#9;Actor_QueueActionWaitForCommandWord(so_self, &#34;wait&#34;);&#10;&#9;&#9;Actor_QueueActionMoveToDistanceFromActor(so_activator, so_self, 25);&#10;&#9;&#9;Actor_QueueActionSendCommandWord(so_activator, so_self, &#34;wait&#34;);&#10;&#9;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;tool_unequip&#34;, true);&#10;&#9;&#9;Actor_QueueActionPlayAnimation(so_activator, &#34;enter_tomb_outside&#34;, false);&#10;&#9;&#9;Game_SetCinemaMode(true);&#10;&#9;&#9;Game_SetScreenFadeOutWithCommand(3, &#34;travel_to_stage&#34;, so_self, 3.0);&#10;&#9;}&#10;&#9;else&#10;&#9;{&#10;&#9;&#9;Game_AddActorNotification(so_activator, LOC_TEXT(&#34;That looks deep. I need to invent and craft a [GREEN]Rope and Hook[WHITE] to climb down there! [EMOJI=thinking face].&#34;));&#10;&#9;&#9;Game_SetRecipeUnlocked(&#34;ROPE_AND_HOOK&#34;, true, true);&#10;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;descend&#34;, true);&#10;&#9;}&#10;}"
+        interaction_0_trigger="PRESS_BUTTON"
+        interaction_0_controller_button="USE"
+        interaction_0_text="Descend"
+        interaction_0_radius="150"
+        interaction_0_bone_id="mid-rim"
+        interaction_0_attach_offset="0,0,-15"
+      interaction_1_id="unlock"
+        interaction_1_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;local activated = Game_GetWorldState(&#34;TOMBS&#34;, &#34;activated&#34;) != null;&#10;&#9;return activated &#38;&#38; //Game_IsQuestCompleted(&#34;quests/tombs-investigate.nut&#34;) &#38;&#38;&#10;&#9;&#9;!StageObject_GetKeyValue(so_self, &#34;unlocked&#34;);&#10;}"
+        interaction_1_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;//Actor_QueueActionPlayAnimation(so_self, &#34;unlock&#34;, true);&#10;&#10;&#9;Game_LogEvent(&#34;TOMB_UNLOCK&#34;);&#10;&#9;Actor_QueueActionPlayAnimation(so_self, &#34;unlock&#34;, false);&#10;&#9;Actor_QueueActionWait(so_self, 3.5);&#10;&#10;&#9;local script = @&#34;&#10;&#9; Actor_SetInteractionEnabled($so_self, &#34;&#34;descend&#34;&#34;, true);&#10;&#9; StageObject_SetKeyValueBoolean($so_self, &#34;&#34;unlocked&#34;&#34;, true);&#10;&#9;&#34;;&#10;&#9;script = string_replace(script, &#34;$so_self&#34;, so_self);&#10;&#9;Actor_QueueActionRunScript(so_self, script);&#10;}"
+        interaction_1_trigger="PRESS_BUTTON"
+        interaction_1_controller_button="USE"
+        interaction_1_text="Unlock"
+        interaction_1_radius="150"
+        interaction_1_bone_id="mid-rim"
+      interaction_2_id="investigate"
+        interaction_2_disable_after_interaction="0"
+        interaction_2_external_script="scripts/interactions/tomb-entrance-on-ground-press-button.nut"
+        interaction_2_trigger="PRESS_BUTTON"
+        interaction_2_controller_button="USE"
+        interaction_2_text="Investigate"
+        interaction_2_radius="150"
+        interaction_2_bone_id="mid-rim"
+      interaction_3_id="quest_accepted"
+        interaction_3_enabled="0"
+        interaction_3_trigger="NONE"
+      interaction_4_id="init"
+        interaction_4_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;if (StageObject_GetKeyValue(so_self, &#34;unlocked&#34;))&#10;&#9;{&#10;&#9;&#9;if (Game_IsStagePointOfInterestCompleted(so_self))&#10;&#9;&#9;{&#10;&#9;&#9;&#9;Actor_PlayAnimationWithDelayPlaybackSpeedAndPosition(so_self, &#34;completed&#34;, 0, 1, 1);&#10;&#9;&#9;&#9;Actor_SetInteractionEnabled(so_self, &#34;descend&#34;, false);&#10;&#9;&#9;}&#10;&#9;&#9;else&#10;&#9;&#9;{&#10;&#9;&#9;&#9;Actor_PlayAnimationWithDelayPlaybackSpeedAndPosition(so_self, &#34;unlock&#34;, 0, 1, 1);&#10;&#9;&#9;}&#10;&#9;}&#10;}"
+        interaction_4_trigger="ON_GAME_START"
+      interaction_5_id="check_completed"
+        interaction_5_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;if (Game_IsStagePointOfInterestCompleted(so_self))&#10;&#9;&#9;return;&#10;&#10;&#9;local tomb_id = StageObject_GetKeyValue(so_self, &#34;stage&#34;);&#10;&#9;if (!Game_IsTombCompleted(tomb_id))&#10;&#9;&#9;return;&#10;&#10;&#9;Game_SetStagePointOfInterestCompleted(so_self);&#10;&#9;Actor_QueueActionPlayAnimation(so_self, &#34;completed&#34;, true);&#10;}"
+        interaction_5_trigger="ENTER_RADIUS"
+        interaction_5_radius="150"
+        interaction_5_bone_id="root"
+      interaction_6_id="reopen"
+        interaction_6_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;if (StageObject_GetKeyValue(so_self, &#34;unlocked&#34;) &#38;&#38;&#10;&#9;&#9;Game_IsStagePointOfInterestCompleted(so_self))&#10;&#9;{&#10;&#9;&#9;return true;&#10;&#9;}&#10;&#10;&#9;return false;&#10;}"
+        interaction_6_script_to_run_on_interaction="function OnInteraction(so_self, so_activator)&#10;{&#10;&#9;Game_LogEvent(&#34;TOMB_UNLOCK&#34;);&#10;&#9;Actor_QueueActionPlayAnimation(so_self, &#34;unlock&#34;, false);&#10;&#9;Actor_QueueActionWait(so_self, 3.5);&#10;&#10;&#9;local script = @&#34;&#10;&#9; Actor_SetInteractionEnabled($so_self, &#34;&#34;descend&#34;&#34;, true);&#10;&#9; StageObject_SetKeyValueBoolean($so_self, &#34;&#34;unlocked&#34;&#34;, true);&#10;&#9;&#34;;&#10;&#9;script = string_replace(script, &#34;$so_self&#34;, so_self);&#10;&#9;Actor_QueueActionRunScript(so_self, script);&#10;&#9;Game_AddActorNotificationWithDelay(so_activator, LOC_TEXT(&#34;I guess I could revisit the tomb.&#34;), 0.3);&#10;}"
+        interaction_6_trigger="PRESS_BUTTON"
+        interaction_6_controller_button="USE"
+        interaction_6_text="Reopen"
+        interaction_6_radius="150"
+        interaction_6_bone_id="mid-rim"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="NONE" />
+  </array>
+
+</root>

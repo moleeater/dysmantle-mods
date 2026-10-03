@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="title" value="Developer tools" />
+    <node id="thumb" value="|img src='medals/gfx/RECIPES_INVENTED.png' scale=0.35 offset=2|  " />
+  </array>
+  <array id="CHANGELOG">
+
+
+    <node epoch="1744859311" id="84.1.0"
+      value="
+- added coloring to messages, options, buttons on Publish Mod screen to help understanding problems at a glance
+- added handling ESC key to Publish Mod screen
+" />
+
+
+    <node epoch="1735606670" id="79.4.0"
+      value="
+- added hard blocking for incompatible mods
+" />
+
+
+    <node epoch="1729980396" id="77.8.2"
+      value="
+- fixed compatibility with DLCX mod by XYB88
+- fixed bugs with chinese localized labels sometimes not translating
+" />
+
+
+    <node epoch="1720269448" id="73.2.0"
+      value="
+- added UI text rescale for Code editor mod on Mobile UI, so you can read the code on Android too
+- added a default script for the Code editor mod, it saves to the user data folder
+" />
+
+
+    <node epoch="1719446566" id="70.1.0"
+      value="
+- first release
+" />
+
+
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

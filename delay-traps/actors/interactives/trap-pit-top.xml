@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="interactives/trap pit top" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="physics_material" value="CONCRETE" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="200" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1000" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantlePuzzleComponent">
+    <node id="trigger_when_actor_enters" type="BOOLEAN" value="true" />
+    <node id="trigger_when_actor_leaves" type="BOOLEAN" value="false" />
+    <node id="trigger_when_damaged" type="BOOLEAN" value="false" />
+    <node id="trigger_with_light_ray" type="BOOLEAN" value="false" />
+    <node id="trigger_one_time" type="BOOLEAN" value="true" />
+    <node id="trigger_only_for_pets" type="BOOLEAN" value="false" />
+    <node id="trigger_circle_radius" type="FLOAT" value="60" />
+    <node id="trigger_rectangle_width" type="FLOAT" value="70" />
+    <node id="trigger_rectangle_height" type="FLOAT" value="70" />
+    <node id="trigger_offset_x" type="FLOAT" value="0" />
+    <node id="trigger_offset_y" type="FLOAT" value="0" />
+    <node id="trigger_sound" type="SOUND" />
+    <node id="timer_enabled" type="BOOLEAN" value="false" />
+    <node id="timer_start_automatically" type="BOOLEAN" value="false" />
+    <node id="timer_one_shot" type="BOOLEAN" value="false" />
+    <node id="timer_interval" type="FLOAT" value="1" />
+    <node id="timer_interval_2" type="FLOAT" value="1" />
+    <node id="timer_offset" type="FLOAT" value="0" />
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleBreakingFloor" />
+  </array>
+
+  <array id="ANIMATIONS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="break"
+      animation_controller="Playback"
+      skeleton_animation="models/animations/trap-pit-top-rig-triggererd.anim"
+      fade_in_duration="0"
+      fade_out_duration="0"
+      forced_animation_length_in_seconds="21.3"
+      event_0_trigger_time="0"
+        event_0_id="initial crack"
+        event_0_effect="effects/breaking-floor-initial-crack.xml"
+      event_1_trigger_time= "0"
+        event_1_id="cracking"
+        event_1_effect="effects/breaking-floor-cracking.xml"
+      event_2_trigger_time="0"
+        event_2_id="initial sound"
+        event_2_sound_event="{{STRING,|Q|sounds|Q|,|Q|sfx/physics/footstep-dirt-01|SC|sfx/physics/footstep-dirt-02|SC|sfx/physics/footstep-dirt-03|Q|}}"
+      event_7_trigger_time = "4" event_7_id ="cracking 2" event_7_effect ="effects/breaking-floor-cracking.xml"
+      event_8_trigger_time = "8" event_8_id ="cracking 3" event_8_effect ="effects/breaking-floor-cracking.xml"
+      event_9_trigger_time ="12" event_9_id ="cracking 4" event_9_effect ="effects/breaking-floor-cracking.xml"
+      event_10_trigger_time="16" event_10_id="cracking 5" event_10_effect="effects/breaking-floor-cracking.xml"
+      event_11_trigger_time= "1.01" event_11_id="timed flash 1"  event_11_effect="effects/breaking-floor-timed-flash.xml"
+      event_12_trigger_time= "2.02" event_12_id="timed flash 2"  event_12_effect="effects/breaking-floor-timed-flash.xml"
+      event_13_trigger_time= "3.03" event_13_id="timed flash 3"  event_13_effect="effects/breaking-floor-timed-flash.xml"
+      event_14_trigger_time= "4.04" event_14_id="timed flash 4"  event_14_effect="effects/breaking-floor-timed-flash.xml"
+      event_15_trigger_time= "5.05" event_15_id="timed flash 5"  event_15_effect="effects/breaking-floor-timed-flash.xml"
+      event_16_trigger_time= "6.06" event_16_id="timed flash 6"  event_16_effect="effects/breaking-floor-timed-flash.xml"
+      event_17_trigger_time= "7.07" event_17_id="timed flash 7"  event_17_effect="effects/breaking-floor-timed-flash.xml"
+      event_18_trigger_time= "8.08" event_18_id="timed flash 8"  event_18_effect="effects/breaking-floor-timed-flash.xml"
+      event_19_trigger_time= "9.09" event_19_id="timed flash 9"  event_19_effect="effects/breaking-floor-timed-flash.xml"
+      event_20_trigger_time="10.10" event_20_id="timed flash 10" event_20_effect="effects/breaking-floor-timed-flash.xml"
+      event_21_trigger_time="11.11" event_21_id="timed flash 11" event_21_effect="effects/breaking-floor-timed-flash.xml"
+      event_22_trigger_time="12.12" event_22_id="timed flash 12" event_22_effect="effects/breaking-floor-timed-flash.xml"
+      event_23_trigger_time="13.13" event_23_id="timed flash 13" event_23_effect="effects/breaking-floor-timed-flash.xml"
+      event_24_trigger_time="14.14" event_24_id="timed flash 14" event_24_effect="effects/breaking-floor-timed-flash.xml"
+      event_25_trigger_time="15.15" event_25_id="timed flash 15" event_25_effect="effects/breaking-floor-timed-flash.xml"
+      event_26_trigger_time="16.16" event_26_id="timed flash 16" event_26_effect="effects/breaking-floor-timed-flash.xml"
+      event_27_trigger_time="17.17" event_27_id="timed flash 17" event_27_effect="effects/breaking-floor-timed-flash.xml"
+      event_28_trigger_time="18.18" event_28_id="timed flash 18" event_28_effect="effects/breaking-floor-timed-flash.xml"
+      event_29_trigger_time="19.19" event_29_id="timed flash 19" event_29_effect="effects/breaking-floor-timed-flash.xml"
+      event_3_trigger_time="20"
+        event_3_id="falling-pieces"
+        event_3_ignore_bone_orientation="true"
+        event_3_spawn_effect_to_local_particle_system="true"
+        event_3_effect="effects/tomb-floor-1x1-break.xml"
+      event_4_trigger_time="20"
+        event_4_id="sound of breaking"
+        event_4_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/physics/stone-break-01|SC|sfx/physics/stone-break-02|SC|sfx/physics/stone-break-03|Q|}}"
+      event_5_trigger_time="20"
+        event_5_id="2D rubble in the end"
+        event_5_effect="effects/breaking-floor-crumble.xml"
+      event_6_trigger_time="20"
+        event_6_id="break"
+        event_6_command_word="puzzle_animation_trigger"
+      wrap_mode="LOOP"
+      pause_at_end="true"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="shadow_angle" value="-90" />
+    <node id="shadow_scale" value="1.41" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="allow_static_caching" value="false" />
+    <node id="model" value="models/interactives/trap-pit-top.model" />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="NONE" />
+  </array>
+</root>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="stages/undercrown/index.xml">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node puid="3164101" chunk="1582" pos="55978;20381;0" area="0" so_id="TOXIC_DESTROYER" type="ENEMY_BOSS" actor_type="actors/enemies/boss-destroyer.xml" />
+    <node puid="3168234" chunk="1584" pos="58693;19999;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-leaper.xml" />
+    <node puid="3168235" chunk="1584" pos="57739;20019;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3168236" chunk="1584" pos="57934;19981;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3168240" chunk="1584" pos="57917;20155;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3174126" chunk="1587" pos="61931;20337;0" area="0" so_id="quest_under_and_out" type="QUEST" parm="quests/under-route.nut" actor_type="actors/interactives/quest-trigger.xml" />
+    <node puid="3356265" chunk="1678" pos="55687;21339;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3356266" chunk="1678" pos="55610;21304;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-fast-chaser.xml" />
+    <node puid="3356283" chunk="1678" pos="55579;21440;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3356308" chunk="1678" pos="55568;21218;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3358338" chunk="1679" pos="57156;21419;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-fast-chaser.xml" />
+    <node puid="3358339" chunk="1679" pos="56961;21443;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3358340" chunk="1679" pos="57209;21562;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3358341" chunk="1679" pos="56677;21444;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3362005" chunk="1681" pos="58920;21090;0" area="0" so_id="crown_station_elevator" type="ENTRYWAY" parm="stages/island/index.xml" actor_type="actors/interactives/elevator-lift-platform.xml" />
+    <node puid="3362222" chunk="1681" pos="59234;21246;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="3362225" chunk="1681" pos="59662;21424;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="3362226" chunk="1681" pos="59699;21520;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3362227" chunk="1681" pos="59566;21429;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3362281" chunk="1681" pos="59622;20728;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-fast-chaser.xml" />
+    <node puid="3362282" chunk="1681" pos="59261;20706;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="3364252" chunk="1682" pos="60409;21167;0" area="0" so_id="puid3364252" type="CAMPFIRE" parm="Elevator Bridge Campfire" actor_type="actors/objects/campfire.xml" />
+    <node puid="3364304" chunk="1682" pos="60517;20630;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="3364374" chunk="1682" pos="60600;20790;-60" area="0" so_id="elevator_room_gate_terminal" type="TERMINAL" actor_type="actors/interactives/interaction-terminal.xml" />
+    <node puid="3366302" chunk="1683" pos="61861;20559;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-leaper.xml" />
+    <node puid="3366303" chunk="1683" pos="62123;20806;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-leaper.xml" />
+    <node puid="3366340" chunk="1683" pos="61254;20941;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-fast-chaser.xml" />
+    <node puid="3366341" chunk="1683" pos="61230;20712;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" />
+    <node puid="3368148" chunk="1684" pos="63503;21286;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="3368159" chunk="1684" pos="62513;21105;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-fast-chaser.xml" />
+    <node puid="3368160" chunk="1684" pos="62595;21173;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="3370128" chunk="1685" pos="64397;21366;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="3370129" chunk="1685" pos="64354;20995;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3370130" chunk="1685" pos="64247;21052;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3544013" chunk="1772" pos="53400;22350;0" area="0" so_id="entrance_undercrown_west" type="ENTRYWAY" parm="stages/island/index.xml" actor_type="actors/interactives/stage-leave-enter-trigger.xml" />
+    <node puid="3546215" chunk="1773" pos="54304;22301;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="3546216" chunk="1773" pos="54410;22482;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" />
+    <node puid="3546217" chunk="1773" pos="55095;22074;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="3548132" chunk="1774" pos="55799;22241;0" area="0" so_id="puid3548132" type="CAMPFIRE" parm="Tunnel West Entrance Campfire" actor_type="actors/objects/campfire.xml" />
+    <node puid="3552099" chunk="1776" pos="58289;22104;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="3552102" chunk="1776" pos="58296;22031;0" area="0" so_id="puid3552102" type="BURIED_TREASURE" parm="UNDERCROWN_4" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="3556252" chunk="1778" pos="61036;22476;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="3556253" chunk="1778" pos="60709;22432;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-fast-chaser.xml" />
+    <node puid="3558287" chunk="1779" pos="62142;22413;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" />
+    <node puid="3558288" chunk="1779" pos="61906;22371;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3558295" chunk="1779" pos="61366;22535;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3560186" chunk="1780" pos="62498;22490;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3560234" chunk="1780" pos="62595;22306;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3560235" chunk="1780" pos="63263;22446;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3560236" chunk="1780" pos="63104;22062;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="3560238" chunk="1780" pos="63282;22342;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3562002" chunk="1781" pos="64560;22350;0" area="0" so_id="entrance_undercrown_east" type="ENTRYWAY" parm="stages/island/index.xml" actor_type="actors/interactives/stage-leave-enter-trigger.xml" />
+    <node puid="3562201" chunk="1781" pos="63944;22228;-0" area="0" so_id="puid3562201" type="CAMPFIRE" parm="Tunnel East Entrance" actor_type="actors/objects/campfire.xml" />
+    <node puid="3736064" chunk="1868" pos="53279;23171;-60" area="0" so_id="puid3736064" type="TIMED_CHEST" actor_type="actors/interactives/timed-crate.xml" />
+    <node puid="3736120" chunk="1868" pos="53156;22925;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-leaper.xml" />
+    <node puid="3736121" chunk="1868" pos="53552;23016;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="3740072" chunk="1870" pos="56040;23402;2" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" />
+    <node puid="3740073" chunk="1870" pos="55768;23243;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3742083" chunk="1871" pos="56580;23298;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3742084" chunk="1871" pos="56494;23145;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3744071" chunk="1872" pos="58108;23090;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" />
+    <node puid="3744072" chunk="1872" pos="57803;23093;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3744073" chunk="1872" pos="57886;23239;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3746068" chunk="1873" pos="59387;22973;8" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="3746082" chunk="1873" pos="59427;23192;14" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="3746083" chunk="1873" pos="59241;23859;-6" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3748072" chunk="1874" pos="60655;23605;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="3748091" chunk="1874" pos="60542;23789;7" area="0" so_id="puid3748091" type="BURIED_TREASURE" parm="UNDERCROWN_1" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="3752236" chunk="1876" pos="62988;23505;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-puker.xml" />
+    <node puid="3752237" chunk="1876" pos="62854;23234;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="3752238" chunk="1876" pos="63060;23973;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3752239" chunk="1876" pos="62674;23978;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3752240" chunk="1876" pos="62610;23414;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3754124" chunk="1877" pos="64146;23086;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee.xml" />
+    <node puid="3754126" chunk="1877" pos="64007;23677;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="3754127" chunk="1877" pos="63901;23146;-60" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3934047" chunk="1967" pos="57164;24899;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" />
+    <node puid="3934049" chunk="1967" pos="57109;24958;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3934050" chunk="1967" pos="57207;25058;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3936166" chunk="1968" pos="58523;24333;-2" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="3936167" chunk="1968" pos="58696;24617;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-female-melee.xml" />
+    <node puid="3938092" chunk="1969" pos="59470;24055;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" />
+    <node puid="3938093" chunk="1969" pos="59314;24209;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" />
+    <node puid="3940061" chunk="1970" pos="60479;24846;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="4126048" chunk="2063" pos="57239;25702;0" area="0" so_id="puid4126048" type="BURIED_TREASURE" parm="UNDERCROWN_3" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="4128024" chunk="2064" pos="58502;25684;0" area="0" so_id="puid4128024" type="CAMPFIRE" parm="Old Mines campfire" actor_type="actors/objects/campfire.xml" />
+    <node puid="4130064" chunk="2065" pos="59330;25295;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="4130076" chunk="2065" pos="59511;25408;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-stalker.xml" />
+    <node puid="4130092" chunk="2065" pos="59511;25556;0" area="0" so_id="puid4130092" type="BURIED_TREASURE" parm="UNDERCROWN_2" actor_type="actors/interactives/buried-treasure.xml" />
+    <node puid="4132081" chunk="2066" pos="60681;25641;0" area="0" type="ENEMY_NORMAL" actor_type="actors/enemies/ex-human-leaper.xml" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+</root>

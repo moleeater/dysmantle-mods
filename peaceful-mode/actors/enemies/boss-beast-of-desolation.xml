@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="The Beast of Desolation" localize="true" />
+    <node id="tags" value="BOSS,POINT_OF_INTEREST,MECH,MONSTER" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SOLID,FRIEND_OR_FOE,AFFECTED_BY_GRAVITY,COLLIDE_AGAINST_STATIC_EDGES,NO_MOMENTUM_FROM_COLLISIONS,CAN_STAND_ON_ACTORS,SEND_COMMANDS_TO_PROPS,PROCESS_COMMANDS_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE,TEMPORARY_TRANSFORM,TEMPORARY_ATTRIBUTES" />
+    <node id="physics_material" value="METAL" />
+    <node id="mass" value="200" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="1" />
+    <node id="move_acceleration" value="0" />
+    <node id="max_move_speed" value="140" />
+    <node id="dampening_factor_on_ground" value="8" />
+    <node id="dampening_factor_on_air" value="0.5" />
+    <node id="restitution_coefficient" value="0.15" />
+    <node id="friction" value="0" />
+    <node id="minimum_damage_threshold" value="1" />
+    <node id="aggro_radius" value="240" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="0.65" />
+    <node id="damage" value="1" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="4800" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="name" type="STRING" flags="PERSISTENT,LOCALIZED" value="The Beast of Desolation" />
+    <node id="script_file" type="FILE" value="actors/enemies/scripts/boss-mini-law.nut" />
+    <node id="default_running_speed_multiplier" type="FLOAT" value="3" />
+    <node id="default_strafing_speed_multiplier" type="FLOAT" value="1.25" />
+    <node id="default_knockback_strength" type="FLOAT" value="200" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENEMY_BOSS" />
+    <node id="stay_near_birth_position" type="BOOLEAN" value="true" />
+    <node id="missile" type="ACTOR_TYPE" value="actors/projectiles/boss-main-law-missile.xml" />
+    <node id="stomp_radius" type="FLOAT" value="100" />
+    <node id="stomp_damage" type="FLOAT" value="20" />
+    <node id="description" type="STRING" flags="PERSISTENT,NO_REPLICATION" />
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="TOMB_ORB,1xTITANIUM,5xSTEEL,5xSCRAP_ELECTRONICS" />
+    <node id="drops_key" type="STRING" />
+    <node id="mtl_tex_diffuse_legs-law" type="BITMAP" value="models/textures/boss-beast-legs-pink-diffuse.jpg" />
+    <node id="mtl_tex_diffuse_torso-law" type="BITMAP" value="models/textures/boss-beast-torso-pink-diffuse.jpg" />
+    <node id="color_material_torso-law" type="COLOR" value="1,1,1,1" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleEnemyScripted">
+    <node id="max_aggro_range" type="FLOAT" value="500" />
+    <node id="max_field_of_view" type="FLOAT" value="90" />
+    <node id="allow_flanking" type="BOOLEAN" value="false" />
+    <node id="react_to_enemy_collisions" type="BOOLEAN" value="true" />
+    <node id="roadmap_requires_activation" type="BOOLEAN" value="true" />
+    <node id="alert_system_enabled" type="BOOLEAN" value="false" />
+    <node id="alert_level_start_wander" type="FLOAT" value="-1" />
+    <node id="alert_level_stop_wander" type="FLOAT" value="-1" />
+    <node id="alert_level_start_investigate_noise" type="FLOAT" value="-1" />
+    <node id="alert_level_stop_chase" type="FLOAT" value="-1" />
+    <node id="alert_level_increase_speed" type="FLOAT" value="5" />
+    <node id="alert_level_decrease_speed" type="FLOAT" value="5" />
+    <node id="alert_level_max_distance_from_home" type="FLOAT" value="1000" />
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="fire_arm_left"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_1_trigger_time="0"
+     event_1_id="id1"
+     event_1_bone_id="arm-attach.L"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/muzzle-flash-boss-law.xml"
+     event_1_spawn_effect_offset_x="23.00"
+     event_1_spawn_effect_offset_y="-40.00"
+     event_1_spawn_effect_offset_z="88.22"
+    />
+
+    <node id="fire_arm_right"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_1_trigger_time="0"
+     event_1_id="id1"
+     event_1_bone_id="arm-attach.R"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/muzzle-flash-boss-law.xml"
+     event_1_spawn_effect_offset_x="-22.66"
+     event_1_spawn_effect_offset_y="-40.00"
+     event_1_spawn_effect_offset_z="80.80"
+    />
+
+    <node id="fire_missile"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_spawn_effect_offset_x="-50.00"
+     event_0_spawn_effect_offset_z="-290.00"
+     event_0_command_word="trigger_special_item"
+    />
+
+    <node id="fire_turret"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_bone_id="turret-attach"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/muzzle-flash-boss-law.xml"
+     event_0_spawn_effect_offset_y="20.69"
+     event_0_spawn_effect_offset_z="130.44"
+    />
+
+    <node id="idle"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/robot-boss-rig-idle.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     play_on_create="true"
+    />
+
+    <node id="squat-down"
+     animation_controller="DysmantleBossSquat"
+     skeleton_animation="models/animations/robot-boss-rig-squat-down.anim"
+     playback_speed="0.6"
+     fade_in_duration="1"
+     fade_out_duration="0"
+     pause_at_end="true"
+     event_0_trigger_time="0"
+     event_0_id="sfx-servo"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-kneel-servo|Q|}}"
+     event_1_trigger_time="0.2"
+     event_1_id="sfx-screech"
+     event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.95,1.05|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/shelter-hatch-lock|Q|}}"
+     event_2_trigger_time="0.22"
+     event_2_id="knee"
+     event_2_bone_id="leg-2.L"
+     event_2_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-footstep|Q|}}"
+     event_3_trigger_time="0.65"
+     event_3_id="sfx-impact"
+     event_3_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-squat-impact|Q|}}"
+    />
+
+    <node id="stomp-left"
+     animation_controller="DysmantleBossSquat"
+     skeleton_animation="models/animations/robot-boss-rig-stomp-left.anim"
+     event_0_trigger_time="0"
+     event_0_id="sfx-servo"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-stomp-servo|Q|}}"
+     event_1_trigger_time="0.2"
+     event_1_id="sfx-screech"
+     event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.95,1.05|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/shelter-hatch-lock|Q|}}"
+     event_2_trigger_time="1"
+     event_2_id="sfx-impact"
+     event_2_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-stomp-impact|Q|}}"
+     event_3_trigger_time="1.32"
+     event_3_id="wave"
+     event_3_bone_id="heel.L"
+     event_3_ignore_bone_orientation="true"
+     event_3_spawn_effect_to_local_particle_system="true"
+     event_3_effect="effects/robot-boss-stomp-wave.xml"
+     event_3_spawn_effect_offset_x="45.00"
+     event_3_command_word="stomp"
+    />
+
+    <node id="stomp-right"
+     animation_controller="DysmantleBossSquat"
+     skeleton_animation="models/animations/robot-boss-rig-stomp-right.anim"
+     event_0_trigger_time="0"
+     event_0_id="sfx-servo"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-stomp-servo|Q|}}"
+     event_1_trigger_time="0.2"
+     event_1_id="sfx-screech"
+     event_1_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.95,1.05|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/shelter-hatch-lock|Q|}}"
+     event_2_trigger_time="1"
+     event_2_id="sfx-impact"
+     event_2_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-stomp-impact|Q|}}"
+     event_3_trigger_time="1.32"
+     event_3_id="wave"
+     event_3_bone_id="heel.R"
+     event_3_ignore_bone_orientation="true"
+     event_3_spawn_effect_to_local_particle_system="true"
+     event_3_effect="effects/robot-boss-stomp-wave.xml"
+     event_3_spawn_effect_offset_x="45.00"
+     event_3_command_word="stomp"
+    />
+
+    <node id="walk"
+     animation_controller="DysmantleBossMove"
+     skeleton_animation="models/animations/robot-boss-rig-walk-forward.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     event_0_trigger_time="0.0392"
+     event_0_id="footstep"
+     event_0_bone_id="ankle.L"
+     event_0_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-footstep|Q|}}"
+     event_0_command_word="footstep"
+     event_1_trigger_time="0.516"
+     event_1_id="footstep2"
+     event_1_bone_id="ankle.R"
+     event_1_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-footstep|Q|}}"
+     event_1_command_word="footstep"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node id="die"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/robot-boss-rig-die.anim"
+     playback_speed="0.5"
+     fade_out_duration="0"
+     pause_at_end="true"
+     event_0_trigger_time="0"
+     event_0_id="explosion1"
+     event_0_bone_id="turret-attach"
+     event_0_effect="effects/dynamite-blast.xml"
+     event_1_trigger_time="0"
+     event_1_id="electric discharge5"
+     event_1_bone_id="turret-attach"
+     event_1_ignore_bone_orientation="true"
+     event_1_effect="effects/electric-discharge-large.xml"
+     event_2_trigger_time="0"
+     event_2_id="stop-engine-sfx"
+     event_2_command_word="stop_animation"
+     event_2_command_word_key_values="{{STRING,|Q|animation_id|Q|,|Q|engine-sfx-loop|Q|},{FLOAT,|Q|fade_out_duration|Q|,|Q|0.1|Q|}}"
+     event_3_trigger_time="0.13"
+     event_3_id="dust"
+     event_3_effect="effects/dust-rise-from-impact.xml"
+     event_3_spawn_effect_offset_x="82.46"
+     event_3_spawn_effect_offset_y="46.98"
+     event_4_trigger_time="0.16"
+     event_4_id="electric discharge"
+     event_4_bone_id="arm-attach.R"
+     event_4_ignore_bone_orientation="true"
+     event_4_effect="effects/electric-discharge-large.xml"
+     event_5_trigger_time="0.17"
+     event_5_id="explosion2"
+     event_5_ignore_bone_orientation="true"
+     event_5_effect="effects/dynamite-blast.xml"
+     event_5_spawn_effect_offset_x="60.00"
+     event_5_spawn_effect_offset_y="-30.73"
+     event_5_spawn_effect_offset_z="-120.00"
+     event_6_trigger_time="0.23"
+     event_6_id="dust3"
+     event_6_effect="effects/dust-rise-from-impact.xml"
+     event_6_spawn_effect_offset_x="-26.43"
+     event_6_spawn_effect_offset_y="-11.13"
+     event_7_trigger_time="0.23"
+     event_7_id="dust2"
+     event_7_effect="effects/dust-rise-from-impact.xml"
+     event_7_spawn_effect_offset_x="93.73"
+     event_7_spawn_effect_offset_y="-51.92"
+     event_8_trigger_time="0.29"
+     event_8_id="electric discharge2"
+     event_8_bone_id="torso-pivot"
+     event_8_ignore_bone_orientation="true"
+     event_8_effect="effects/electric-discharge-medium.xml"
+     event_9_trigger_time="0.31"
+     event_9_id="explosion3"
+     event_9_effect="effects/dynamite-blast.xml"
+     event_9_spawn_effect_angle_z="-3.15"
+     event_9_spawn_effect_offset_x="-19.84"
+     event_9_spawn_effect_offset_y="77.74"
+     event_9_spawn_effect_offset_z="-127.72"
+     event_10_trigger_time="0.34"
+     event_10_id="dust4"
+     event_10_effect="effects/dust-rise-from-impact.xml"
+     event_10_spawn_effect_offset_x="-69.50"
+     event_10_spawn_effect_offset_y="-49.14"
+     event_11_trigger_time="0.47"
+     event_11_id="electric discharge6"
+     event_11_bone_id="arm-attach.L"
+     event_11_ignore_bone_orientation="true"
+     event_11_effect="effects/electric-discharge-small.xml"
+     event_12_trigger_time="0.49"
+     event_12_id="electric discharge3"
+     event_12_bone_id="leg-2.L"
+     event_12_ignore_bone_orientation="true"
+     event_12_effect="effects/electric-discharge-small.xml"
+     event_13_trigger_time="0.53"
+     event_13_id="electric discharge4"
+     event_13_bone_id="arm-attach.R"
+     event_13_ignore_bone_orientation="true"
+     event_13_effect="effects/electric-discharge-small.xml"
+     event_14_trigger_time="0.65"
+     event_14_id="slam"
+     event_14_spawn_effect_to_local_particle_system="true"
+     event_14_effect="effects/dust-rise-from-impact.xml"
+     event_14_spawn_effect_offset_x="-12.90"
+     event_14_spawn_effect_offset_y="107.76"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node id="damage-phase-3"
+     wrap_mode="LOOP"
+     forced_animation_length_in_seconds="1.00"
+     event_0_trigger_time="0"
+     event_0_id="smoke"
+     event_0_bone_id="turret-attach"
+     event_0_ignore_bone_orientation="true"
+     event_0_effect="effects/black-smoke-rising-large.xml"
+     event_0_spawn_effect_offset_x="-29.55"
+     event_1_trigger_time="0"
+     event_1_id="sparks right arm"
+     event_1_bone_id="arm-attach.R"
+     event_1_ignore_bone_orientation="true"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/boss-sparks-small.xml"
+     event_1_spawn_effect_angle_z="180.00"
+     event_2_trigger_time="0"
+     event_2_id="electric discharge torso"
+     event_2_bone_id="torso-tilt"
+     event_2_effect="effects/electric-discharge-small.xml"
+     event_3_trigger_time="0"
+     event_3_id="sparks right knee"
+     event_3_bone_id="leg-2.R"
+     event_3_effect="effects/boss-sparks-small.xml"
+     event_4_trigger_time="0"
+     event_4_id="sparks left knee"
+     event_4_bone_id="leg-2.L"
+     event_4_effect="effects/boss-sparks-small.xml"
+     event_5_trigger_time="0.26"
+     event_5_id="sparks left arm"
+     event_5_bone_id="arm-attach.L"
+     event_5_ignore_bone_orientation="true"
+     event_5_spawn_effect_to_local_particle_system="true"
+     event_5_effect="effects/boss-sparks-small.xml"
+     event_6_trigger_time="0.5"
+     event_6_id="smoke"
+     event_6_bone_id="turret-attach"
+     event_6_ignore_bone_orientation="true"
+     event_6_effect="effects/black-smoke-rising-large.xml"
+     event_6_spawn_effect_offset_x="-29.55"
+    />
+
+    <node id="damage-phase-2"
+     wrap_mode="LOOP"
+     forced_animation_length_in_seconds="1.00"
+     event_0_trigger_time="0"
+     event_0_id="id3"
+     event_0_bone_id="arm-attach.R"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/boss-sparks-small.xml"
+     event_0_spawn_effect_angle_z="180.00"
+     event_1_trigger_time="0"
+     event_1_id="id2"
+     event_1_bone_id="arm-attach.L"
+     event_1_ignore_bone_orientation="true"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/boss-sparks-small.xml"
+     event_2_trigger_time="0"
+     event_2_id="id4"
+     event_2_bone_id="torso-tilt"
+     event_2_ignore_bone_orientation="true"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/boss-sparks-small.xml"
+     event_2_spawn_effect_offset_z="-27.40"
+     event_3_trigger_time="0"
+     event_3_id="id3"
+     event_3_bone_id="leg-2.R"
+     event_3_effect="effects/boss-sparks-small.xml"
+     event_4_trigger_time="0"
+     event_4_id="id5"
+     event_4_bone_id="leg-2.L"
+     event_4_effect="effects/boss-sparks-small.xml"
+    />
+
+    <node id="extract_fuel_cell"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/robot-boss-rig-extract_fuel_cell.anim"
+     forced_animation_length_in_seconds="2.50"
+     event_0_trigger_time="0"
+     event_0_id="sfx-turret-pop"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-turret-pop|Q|}}"
+     event_1_trigger_time="0"
+     event_1_id="sfx-explosion"
+     event_1_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/explosion-large-02|Q|}}"
+     event_2_trigger_time="0.05"
+     event_2_id="turret_pop"
+     event_2_bone_id="turret-attach"
+     event_2_ignore_bone_orientation="true"
+     event_2_effect="effects/explosion-dark.xml"
+     event_2_command_word="remove_actor_prop"
+     event_2_command_word_key_values="{{STRING,|Q|prop_id|Q|,|Q|turret|Q|}}"
+     event_3_trigger_time="0.1"
+     event_3_id="spawn_cell"
+     event_3_bone_id="turret-attach"
+     event_3_command_word="run_script"
+     event_3_command_word_key_values="{{SCRIPT,|Q|script|Q|,|Q|local so_target = Game_GetPrimaryPlayerActor()|SC||BS|nif (so_target == null)|BS|n|BS|tso_target = so_self|SC||BS|nGame_SpawnMaterials(so_self, so_target, |BS||Q|FUEL_CELL|BS||Q|)|SC||Q|}}"
+    />
+
+    <node id="phase_change"
+     animation_controller="DysmantleBossSquat"
+     skeleton_animation="models/animations/robot-boss-rig-phase-change.anim"
+     event_0_trigger_time="0"
+     event_0_id="electric discharge"
+     event_0_bone_id="turret-attach"
+     event_0_ignore_bone_orientation="true"
+     event_0_effect="effects/electric-discharge-large.xml"
+     event_1_trigger_time="0"
+     event_1_id="explosion"
+     event_1_bone_id="torso-pivot"
+     event_1_effect="effects/dynamite-blast.xml"
+     event_1_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/explosion-small-01|SC|sfx/explosion-small-02|SC|sfx/explosion-small-03|Q|}}"
+     event_1_spawn_effect_offset_y="18.43"
+     event_1_spawn_effect_offset_z="-30.91"
+     event_2_trigger_time="0"
+     event_2_id="screetch"
+     event_2_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.95,1.05|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/shelter-hatch-lock|Q|}}"
+     event_3_trigger_time="0"
+     event_3_id="explosion-electric"
+     event_3_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/explosion-electric|Q|}}"
+     event_4_trigger_time="0"
+     event_4_id="sfx-electric-discharge"
+     event_4_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,0.9|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-electric-discharge|Q|}}"
+     event_5_trigger_time="0.3"
+     event_5_id="electric discharge2"
+     event_5_bone_id="torso-tilt"
+     event_5_ignore_bone_orientation="true"
+     event_5_effect="effects/electric-discharge-large.xml"
+     event_6_trigger_time="1"
+     event_6_id="thump"
+     event_6_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/shelter-hatch-slam|Q|}}"
+     event_7_trigger_time="1.04"
+     event_7_id="electric discharge3"
+     event_7_bone_id="turret-attach"
+     event_7_ignore_bone_orientation="true"
+     event_7_effect="effects/electric-discharge-large.xml"
+     event_8_trigger_time="1.95"
+     event_8_id="sfx-servo"
+     event_8_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-kneel-servo|Q|}}"
+     event_9_trigger_time="2.12"
+     event_9_id="electric discharge4"
+     event_9_bone_id="turret-attach"
+     event_9_ignore_bone_orientation="true"
+     event_9_effect="effects/electric-discharge-medium.xml"
+    />
+
+    <node id="sleeping" animation_controller="Playback" skeleton_animation="models/animations/robot-boss-rig-squat.anim" wrap_mode="LOOP" fade_out_duration="0" />
+    <node id="wake_up"
+     animation_controller="DysmantleBossSquat"
+     skeleton_animation="models/animations/robot-boss-rig-stand-up.anim"
+     playback_speed="0.4"
+     event_0_trigger_time="0"
+     event_0_id="humming"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-kneel-servo|Q|}}"
+     event_1_trigger_time="0.32"
+     event_1_id="step-1"
+     event_1_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-footstep|Q|}}"
+     event_2_trigger_time="0.369"
+     event_2_id="screech"
+     event_2_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.95,1.05|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/shelter-hatch-lock|Q|}}"
+     event_3_trigger_time="0.77"
+     event_3_id="step-2"
+     event_3_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-footstep|Q|}}"
+    />
+
+    <node id="squat" event_0_trigger_time="0" event_0_id="id0" />
+    <node id="pre-death"
+     animation_controller="DysmantleBossSquat"
+     skeleton_animation="models/animations/robot-boss-rig-phase-change.anim"
+     event_0_trigger_time="0"
+     event_0_id="electric discharge"
+     event_0_bone_id="turret-attach"
+     event_0_ignore_bone_orientation="true"
+     event_0_effect="effects/electric-discharge-large.xml"
+     event_1_trigger_time="0"
+     event_1_id="explosion"
+     event_1_bone_id="torso-pivot"
+     event_1_effect="effects/dynamite-blast.xml"
+     event_1_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/explosion-small-01|SC|sfx/explosion-small-02|SC|sfx/explosion-small-03|Q|}}"
+     event_1_spawn_effect_offset_y="18.43"
+     event_1_spawn_effect_offset_z="-30.91"
+     event_2_trigger_time="0"
+     event_2_id="screetch"
+     event_2_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.95,1.05|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/shelter-hatch-lock|Q|}}"
+     event_3_trigger_time="0"
+     event_3_id="sfx-electric-discharge"
+     event_3_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,0.9|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-electric-discharge|Q|}}"
+     event_4_trigger_time="0.3"
+     event_4_id="electric discharge2"
+     event_4_bone_id="torso-tilt"
+     event_4_ignore_bone_orientation="true"
+     event_4_effect="effects/electric-discharge-large.xml"
+     event_5_trigger_time="0.38"
+     event_5_id="explosion2"
+     event_5_bone_id="turret-attach"
+     event_5_effect="effects/dynamite-blast.xml"
+     event_5_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/explosion-small-01|SC|sfx/explosion-small-02|SC|sfx/explosion-small-03|Q|}}"
+     event_5_spawn_effect_offset_x="17.74"
+     event_5_spawn_effect_offset_y="26.29"
+     event_6_trigger_time="0.88"
+     event_6_id="explosion3"
+     event_6_bone_id="torso-tilt"
+     event_6_effect="effects/dynamite-blast.xml"
+     event_6_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/explosion-small-01|SC|sfx/explosion-small-02|SC|sfx/explosion-small-03|Q|}}"
+     event_6_spawn_effect_offset_x="-34.80"
+     event_6_spawn_effect_offset_y="40.27"
+     event_6_spawn_effect_offset_z="-48.94"
+     event_7_trigger_time="1"
+     event_7_id="thump"
+     event_7_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/shelter-hatch-slam|Q|}}"
+     event_8_trigger_time="1.04"
+     event_8_id="electric discharge3"
+     event_8_bone_id="turret-attach"
+     event_8_ignore_bone_orientation="true"
+     event_8_effect="effects/electric-discharge-large.xml"
+     event_9_trigger_time="1.35"
+     event_9_id="explosion6"
+     event_9_bone_id="arm-attach.L"
+     event_9_effect="effects/dynamite-blast.xml"
+     event_9_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/explosion-small-01|SC|sfx/explosion-small-02|SC|sfx/explosion-small-03|Q|}}"
+     event_10_trigger_time="1.6"
+     event_10_id="electric discharge5"
+     event_10_bone_id="turret-attach"
+     event_10_ignore_bone_orientation="true"
+     event_10_effect="effects/electric-discharge-large.xml"
+     event_11_trigger_time="1.95"
+     event_11_id="sfx-servo"
+     event_11_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-kneel-servo|Q|}}"
+     event_12_trigger_time="2.12"
+     event_12_id="electric discharge4"
+     event_12_bone_id="turret-attach"
+     event_12_ignore_bone_orientation="true"
+     event_12_effect="effects/electric-discharge-medium.xml"
+     event_13_trigger_time="2.35"
+     event_13_id="explosion5"
+     event_13_bone_id="torso-tilt"
+     event_13_effect="effects/dynamite-blast.xml"
+     event_13_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/explosion-small-01|SC|sfx/explosion-small-02|SC|sfx/explosion-small-03|Q|}}"
+     event_13_spawn_effect_offset_x="-43.23"
+     event_13_spawn_effect_offset_y="57.37"
+     event_13_spawn_effect_offset_z="6.08"
+     event_14_trigger_time="2.68"
+     event_14_id="explosion4"
+     event_14_bone_id="torso-tilt"
+     event_14_effect="effects/dynamite-blast.xml"
+     event_14_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/explosion-small-01|SC|sfx/explosion-small-02|SC|sfx/explosion-small-03|Q|}}"
+     event_14_spawn_effect_offset_x="39.27"
+     event_14_spawn_effect_offset_y="102.16"
+     event_14_spawn_effect_offset_z="-48.94"
+    />
+
+    <node id="wake_up_initial"
+     animation_controller="DysmantleBossSquat"
+     skeleton_animation="models/animations/robot-boss-rig-stand-up.anim"
+     playback_speed="0.4"
+     forced_animation_length_in_seconds="1.30"
+     event_0_trigger_time="0"
+     event_0_id="humming"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-kneel-servo|Q|}}"
+     event_1_trigger_time="0"
+     event_1_id="power-on"
+     event_1_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-power-on|Q|}}"
+     event_2_trigger_time="0"
+     event_2_id="smoke.L"
+     event_2_bone_id="turret-attach"
+     event_2_effect="effects/black-smoke-rising-large.xml"
+     event_2_spawn_effect_offset_z="-45.00"
+     event_3_trigger_time="0.1"
+     event_3_id="smoke.L2"
+     event_3_bone_id="turret-attach"
+     event_3_effect="effects/black-smoke-rising-large.xml"
+     event_3_spawn_effect_offset_z="-45.00"
+     event_4_trigger_time="0.2"
+     event_4_id="smoke.L3"
+     event_4_bone_id="turret-attach"
+     event_4_effect="effects/black-smoke-rising-large.xml"
+     event_4_spawn_effect_offset_z="-45.00"
+     event_5_trigger_time="0.3"
+     event_5_id="smoke.L4"
+     event_5_bone_id="turret-attach"
+     event_5_effect="effects/black-smoke-rising-large.xml"
+     event_5_spawn_effect_offset_z="-45.00"
+     event_6_trigger_time="0.32"
+     event_6_id="step-1"
+     event_6_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-footstep|Q|}}"
+     event_7_trigger_time="0.369"
+     event_7_id="screech"
+     event_7_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.7,0.7|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.95,1.05|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/shelter-hatch-lock|Q|}}"
+     event_8_trigger_time="0.4"
+     event_8_id="smoke.L5"
+     event_8_bone_id="turret-attach"
+     event_8_effect="effects/black-smoke-rising-large.xml"
+     event_8_spawn_effect_offset_z="-45.00"
+     event_9_trigger_time="0.5"
+     event_9_id="smoke.L6"
+     event_9_bone_id="turret-attach"
+     event_9_effect="effects/black-smoke-rising-large.xml"
+     event_9_spawn_effect_offset_z="-45.00"
+     event_10_trigger_time="0.6"
+     event_10_id="smoke.L7"
+     event_10_bone_id="turret-attach"
+     event_10_effect="effects/black-smoke-rising-large.xml"
+     event_10_spawn_effect_offset_z="-45.00"
+     event_11_trigger_time="0.77"
+     event_11_id="step-2"
+     event_11_sound_event="{{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-footstep|Q|}}"
+     event_12_trigger_time="0.8"
+     event_12_id="smoke.L8"
+     event_12_bone_id="turret-attach"
+     event_12_effect="effects/black-smoke-rising-large.xml"
+     event_12_spawn_effect_offset_z="-45.00"
+     event_13_trigger_time="0.9"
+     event_13_id="play-engine-loop-anim"
+     event_13_command_word="play_animation"
+     event_13_command_word_key_values="{{STRING,|Q|animation_id|Q|,|Q|engine-sfx-loop|Q|}}"
+    />
+
+    <node id="engine-sfx-loop" sound_scape="sound-scapes/mech-engine-loop.xml" wrap_mode="LOOP" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="0.4" />
+    <node id="shadow_alpha" value="0.3" />
+    <node id="shadow_drawn_for_each_bone" value="true" />
+    <node id="model" value="models/enemies/boss-main-law-body.model" />
+  </array>
+
+  <array id="PROPS">
+    <node id="turret" mount_bone_id="turret-attach" actor_type="actors/enemies/boss-beast-turret-pink.xml" mount_scale="2" />
+    <node id="arm-left"
+     mount_bone_id="arm-attach.L"
+     actor_type="actors/enemies/boss-beast-arm.L-pink.xml"
+     mount_scale="1.5"
+     mount_offset_x="5"
+     mount_offset_y="-10"
+     mount_offset_z="0"
+    />
+
+    <node id="arm-right"
+     mount_bone_id="arm-attach.R"
+     actor_type="actors/enemies/boss-beast-arm.R-pink.xml"
+     mount_scale="1.5"
+     mount_offset_x="-5"
+     mount_offset_y="-10"
+     mount_offset_z="0"
+    />
+
+    <node id="bubble-torso-tilt"
+     mount_bone_id="torso-tilt"
+     actor_type="actors/objects/corruption-prop-bubbles.xml"
+     mount_scale="3"
+     mount_offset_x="0"
+     mount_offset_y="20"
+     mount_offset_z="-20"
+    />
+
+    <node id="bubble-torso-tilt2"
+     mount_bone_id="torso-tilt"
+     actor_type="actors/objects/corruption-prop-bubbles.xml"
+     mount_scale="3"
+     mount_offset_x="8"
+     mount_offset_y="20"
+     mount_offset_z="9"
+    />
+
+    <node id="bubble-torso-tilt22"
+     mount_bone_id="torso-tilt"
+     actor_type="actors/objects/corruption-prop-bubbles.xml"
+     mount_scale="3"
+     mount_offset_x="0"
+     mount_offset_y="47"
+     mount_offset_z="-50"
+     mount_rotation_angles_x="2.00713"
+     mount_rotation_angles_y="0"
+     mount_rotation_angles_z="0"
+    />
+
+    <node id="bubble-torso-tilt222"
+     mount_bone_id="torso-tilt"
+     actor_type="actors/objects/corruption-prop-bubbles.xml"
+     mount_scale="3"
+     mount_offset_x="-30"
+     mount_offset_y="80"
+     mount_offset_z="-52"
+     mount_rotation_angles_x="2.00713"
+     mount_rotation_angles_y="0"
+     mount_rotation_angles_z="0"
+    />
+
+    <node id="bubble-torso-tilt2222"
+     mount_bone_id="torso-tilt"
+     actor_type="actors/objects/corruption-prop-bubbles.xml"
+     mount_scale="3"
+     mount_offset_x="-30"
+     mount_offset_y="80"
+     mount_offset_z="30"
+     mount_rotation_angles_x="3.52557"
+     mount_rotation_angles_y="0"
+     mount_rotation_angles_z="0"
+    />
+
+    <node id="bubble-torso-tilt22222"
+     mount_bone_id="torso-tilt"
+     actor_type="actors/objects/corruption-prop-bubbles.xml"
+     mount_scale="2"
+     mount_offset_x="-18"
+     mount_offset_y="80"
+     mount_offset_z="38"
+     mount_rotation_angles_x="4.81711"
+     mount_rotation_angles_y="1.0472"
+     mount_rotation_angles_z="0"
+    />
+
+    <node id="bubble-torso-tilt222222"
+     mount_bone_id="torso-tilt"
+     actor_type="actors/objects/corruption-prop-bubbles.xml"
+     mount_scale="2"
+     mount_offset_x="-14"
+     mount_offset_y="124"
+     mount_offset_z="-15"
+     mount_rotation_angles_x="4.81711"
+     mount_rotation_angles_y="1.0472"
+     mount_rotation_angles_z="0"
+    />
+
+    <node id="bubble-torso-tilt2222222"
+     mount_bone_id="torso-tilt"
+     actor_type="actors/objects/corruption-prop-bubbles.xml"
+     mount_scale="3"
+     mount_offset_x="-19"
+     mount_offset_y="124"
+     mount_offset_z="-35"
+     mount_rotation_angles_x="5.74213"
+     mount_rotation_angles_y="2.58309"
+     mount_rotation_angles_z="0"
+    />
+
+    <node id="prop-spine"
+     mount_bone_id="torso-tilt"
+     actor_type="actors/objects/corruption-prop-spine.xml"
+     mount_scale="3"
+     mount_offset_x="-6"
+     mount_offset_y="84"
+     mount_offset_z="-40"
+    />
+
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_peaceful_mode_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-peaceful-mode-on-game-start.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="CAPSULE" />
+    <node id="radius" value="60.0" />
+    <node id="height" value="140.0" />
+    <node id="offset_z" value="-130.0" />
+  </array>
+
+</root>

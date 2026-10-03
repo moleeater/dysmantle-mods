@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" localize="true" />
+    <node id="tags" value="BOSS,POINT_OF_INTEREST,MONSTER" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,PERMANENT,SOLID,FRIEND_OR_FOE,SET_NONSOLID_ON_DEATH_END,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="TEMPORARY_DEATH_STATE,TEMPORARY_TRANSFORM,TEMPORARY_ATTRIBUTES" />
+    <node id="physics_material" value="FLESH" />
+    <node id="mass" value="100" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="1" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="200" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.5" />
+    <node id="minimum_damage_threshold" value="0" />
+    <node id="aggro_radius" value="500" />
+    <node id="friend_avoidance_radius" value="30" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="10" />
+    <node id="range" value="100" />
+    <node id="max_hit_points" value="800" />
+    <node id="damage_type_accept_mask" value="UNSPECIFIED,BLUNT,SLASHING,PIERCING,FIRE,COLD,EXPLOSIVE,SELF_DESTRUCT,HIT_GROUND,PROJECTILE" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="actor_type_1" type="ACTOR_TYPE" value="actors/enemies/doomsquito.xml" />
+    <node id="interval" type="FLOAT" value="5" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENEMY_BOSS" />
+    <node id="max_simultaneous_spawns" type="INTEGER" value="6" />
+    <node id="active" type="BOOLEAN" value="true" />
+    <node id="description" type="STRING" flags="PERSISTENT,LOCALIZED,NO_REPLICATION" value="A partly sentient biological structure spawning different breeds of the Doomsquito." />
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="2xCHITIN,6xPLANTS" />
+    <node id="max_total_spawns" type="INTEGER" value="30" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleHive">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="idle"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomhive-rig-idle-1.anim"
+     sound_scape="sound-scapes/doomhive-buzz-loop.xml"
+     playback_speed="0.5"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     start_playing_at_random_time_key="true"
+     event_0_trigger_time="0"
+     event_0_id="mosquitos"
+     event_0_trigger_if_animation_is_fading_out="false"
+     event_0_effect="effects/mosquitos.xml"
+     event_0_spawn_effect_offset_z="-89.04"
+     event_1_trigger_time="0.21"
+     event_1_id="steam"
+     event_1_effect="effects/doomhive-steam.xml"
+     event_1_spawn_effect_offset_z="-68.44"
+     event_2_trigger_time="0.45"
+     event_2_id="steam2"
+     event_2_effect="effects/doomhive-steam.xml"
+     event_2_spawn_effect_offset_z="-68.44"
+     event_3_trigger_time="0.66"
+     event_3_id="mosquitos2"
+     event_3_trigger_if_animation_is_fading_out="false"
+     event_3_effect="effects/mosquitos.xml"
+     event_3_spawn_effect_offset_z="-89.04"
+     event_4_trigger_time="1.31"
+     event_4_id="mosquitos3"
+     event_4_trigger_if_animation_is_fading_out="false"
+     event_4_effect="effects/mosquitos.xml"
+     event_4_spawn_effect_offset_z="-89.04"
+     event_5_trigger_time="1.8"
+     event_5_id="mosquitos4"
+     event_5_trigger_if_animation_is_fading_out="false"
+     event_5_effect="effects/mosquitos.xml"
+     event_5_spawn_effect_offset_z="-89.04"
+     event_6_trigger_time="1.84"
+     event_6_id="inhale"
+     event_6_effect="effects/doomhive-inhale.xml"
+     event_6_spawn_effect_offset_z="-155.56"
+     event_7_trigger_time="2.07"
+     event_7_id="inhale"
+     event_7_effect="effects/doomhive-inhale.xml"
+     event_7_spawn_effect_offset_z="-155.56"
+     event_8_trigger_time="2.32"
+     event_8_id="inhale"
+     event_8_effect="effects/doomhive-inhale.xml"
+     event_8_spawn_effect_offset_z="-155.56"
+     event_9_trigger_time="2.46"
+     event_9_id="mosquitos5"
+     event_9_trigger_if_animation_is_fading_out="false"
+     event_9_effect="effects/mosquitos.xml"
+     event_9_spawn_effect_offset_z="-89.04"
+    />
+
+    <node id="attack"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/spikeball-rig-attack.anim"
+     fade_in_duration="0"
+     event_0_trigger_time="0"
+     event_0_id="sfx-attack"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/spikeball-attack-01|SC|sfx/enemies/spikeball-attack-02|Q|}}"
+     event_1_trigger_time="0.065"
+     event_1_id="id0"
+     event_1_command_word="fire_weapon"
+     event_2_trigger_time="0.53"
+     event_2_id="sfx-retract"
+     event_2_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/spikeball-retract-01|Q|}}"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="die"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/spikeball-rig-die.anim"
+     switch_model_on_animation_start="true"
+     delete_all_decals_on_model_switch="true"
+     event_0_trigger_time="0"
+     event_0_id="splash"
+     event_0_effect="effects/mortarpod-death-splash.xml"
+     event_0_spawn_effect_offset_z="-37.74"
+     event_1_trigger_time="0"
+     event_1_id="lingering cloud"
+     event_1_effect="effects/puke-puddle-death.xml"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node id="hit" animation_controller="Playback" skeleton_animation="models/animations/doomhive-rig-hit-additive.anim" fade_in_duration="0.1" fade_out_duration="0.1" />
+    <node id="stun" animation_controller="Playback" skeleton_animation="models/animations/spikeball-rig-stunned.anim" wrap_mode="LOOP" />
+    <node id="inside_mana_chamber"
+     wrap_mode="LOOP"
+     keep_on_stack_top="true"
+     forced_animation_length_in_seconds="0.50"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_bone_id="body"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/enemy-inside-mana-chamber.xml"
+     event_0_spawn_effect_angle_z="180.00"
+     event_0_spawn_effect_offset_z="-30.00"
+     event_1_trigger_time="0.184"
+     event_1_id="id1"
+     event_1_bone_id="body"
+     event_1_ignore_bone_orientation="true"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/enemy-inside-mana-chamber.xml"
+     event_1_spawn_effect_angle_z="180.00"
+     event_1_spawn_effect_offset_z="-30.00"
+     event_2_trigger_time="0.377"
+     event_2_id="id3"
+     event_2_bone_id="body"
+     event_2_ignore_bone_orientation="true"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/enemy-inside-mana-chamber.xml"
+     event_2_spawn_effect_angle_z="180.00"
+     event_2_spawn_effect_offset_z="-30.00"
+    />
+
+    <node id="spawn"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomhive-rig-spawn.anim"
+     event_0_trigger_time="0"
+     event_0_id="sfx-charge"
+     event_0_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/doomhive-spawn-charge-01|SC|sfx/enemies/doomhive-spawn-charge-02|Q|}}"
+     event_1_trigger_time="1.2"
+     event_1_id="sfx-spit"
+     event_1_sound_event="{{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/doomhive-spawn-spit-01|SC|sfx/enemies/doomhive-spawn-spit-02|Q|}}"
+     event_2_trigger_time="1.21"
+     event_2_id="spawn"
+     event_2_command_word="activate"
+    />
+
+    <node id="idle-2" animation_controller="Playback" skeleton_animation="models/animations/doomhive-rig-idle-2.anim" wrap_mode="LOOP" />
+    <node id="invulnerable" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="shadow_method" value="NONE" />
+    <node id="ground_decal_type" value="mortarpod-veins" />
+    <node id="ground_decal_scale" value="1.25" />
+    <node id="model" value="models/enemies/doomhive.model" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_peaceful_mode_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-peaceful-mode-on-game-start.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="SPHERE" />
+    <node id="radius" value="35.0" />
+    <node id="offset_z" value="-35.0" />
+  </array>
+
+</root>

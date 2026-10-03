@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+	<array id="DEFAULT">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+		<node enabled="true"
+      sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.33,0.33|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1.1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/physics/metal-hollow-hit-01|SC|sfx/physics/metal-hollow-hit-02|SC|sfx/physics/metal-hollow-hit-03|Q|}}"
+      sound_is_attached_to_stage_object="true"
+      class="BITMAP"
+      bitmaps="effects/gfx/spark-glow-line.png"
+      number_of_particles="12"
+      initial_age="-0.1;0"
+      age_to_die="0.15;0.2"
+      time="0"
+      blend_mode="ADDITIVE"
+      lighting_mode="POINT"
+      position_offset="0,0,-1"
+      move_speed="300;400"
+      move_direction="1,0,0"
+      move_angle_spread="20"
+      move_angle_z="0"
+      move_angle_y="0"
+      move_angle_x="0"
+      dampening_factor="1"
+      restitution_coefficient="0.5"
+      gravity_multiplier="0"
+      alpha_curve="0,1;0.4,1;1,0"
+      scale_curve="0,0.8;0.1,1;1,0.5"
+      alpha_multiplier="0.7;1"
+      scale_multiplier="0.3;0.5"
+      velocity_based_rotation="true"
+      rotation_angles="0,0,0"
+      angular_velocity="0,0,0"
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+	</array>
+</root>

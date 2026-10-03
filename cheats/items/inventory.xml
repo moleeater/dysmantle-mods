@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <array id="INVENTORY">
+
+    <node category="HEADGEARS"
+      num_slots="1"
+      slot_unlock_item_requirements="1"
+      initial_item_ids=""
+      />
+
+    <node category="OUTFITS"
+      num_slots="1"
+      slot_unlock_item_requirements="1"
+      initial_item_ids="items/outfits/jeans-and-jersey.nut"
+      />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node category="TOOLS"
+      num_slots="6"
+      slot_unlock_item_requirements="1,2,5,10,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS"
+      trigger_button_1="TOOL_1"
+      trigger_button_2="TOOL_1_SECONDARY"
+      tags="ONLY_EQUIP_ACTIVE_ITEMS,CANT_EQUIP_NONE"
+      initial_item_ids="items/tools/crowbar.nut"
+      />
+
+    <node category="SPECIALS"
+      num_slots="6"
+      slot_unlock_item_requirements="1,4,6,8,RECIPE=FIFTH_SPECIALS_SLOT,RECIPE=FIFTH_SPECIALS_SLOT"
+      trigger_button_1="TOOL_2"
+      tags="ONLY_EQUIP_ACTIVE_ITEMS,NO_ITEM_EQUIPPED_AT_START"
+      initial_item_ids="items/specials/amber-pills.nut"
+      />
+
+    <node category="TRINKETS"
+      num_slots="10"
+      slot_unlock_item_requirements="0,5,10,15,20,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS"
+      initial_item_ids=""
+      />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node category="BACKPACKS"
+      num_slots="1"
+      slot_unlock_item_requirements="0"
+      initial_item_ids="items/backpacks/basic-backpack.nut"
+      />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node category="PETS"
+      num_slots="10"
+      slot_unlock_item_requirements="0,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS,RECIPE=MOD_MORE_ITEM_SLOTS"
+      initial_item_ids=""
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

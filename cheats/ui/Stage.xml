@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="aligner_upper_right_corner"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     position.x="0.999479"
+     position.y="0.00277778"
+     align="RIGHT"
+     aligner.area_height="22.5185"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+     aligner.min_padding="0.1"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="Stage"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.266863"
+     position.y="0.364133"
+     custom_draw="true"
+     align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="Overlays"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.265822"
+     position.y="0.47617"
+     custom_draw="true"
+     align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="BossInfo"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.5"
+     position.y="0.0138883"
+     custom_draw="true"
+     scale="0.670249"
+     align="HCENTER"
+     marker.area_width="547.222"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node parent="BossInfo" name="mod_compass"
+      type="MARKER" inherit="DefaultMarker"
+      align="HCENTER"
+      position.y="0.25"
+      marker.area_width="400"
+      marker.area_height="30"
+      active="false" interactive="false" ignore_cursors="true" can_be_accessed_with_gamepads="false"
+      visible="false"
+      />
+
+    <node parent="mod_compass" name="mod_compass_axis"
+      type="PATH" inherit="DefaultPath"
+      position.x="-0.5"
+      position.y="0.5"
+      alpha="0.25"
+      path.bm_line_tripatch="ui/gfx/tripatch-line.png"
+      path.line_thickness="0.3"
+      path.points="0,0;400,0"
+      />
+    <node parent="mod_compass" name="mod_compass_origo"
+      type="PATH"
+      inherit="DefaultPath"
+      position.y="0.58"
+      alpha="0.25"
+      path.bm_line_tripatch="ui/gfx/tripatch-line.png"
+      path.line_thickness="0.4"
+      path.points="0,0;0,4"
+      />
+
+    <node type="PATH" inherit="DefaultPath" parent="mod_compass" name="mod_compass_predator_gatherable" position.y="0.4"
+      path.bm_line_tripatch="hud/mods/mod-predator-green.png" path.line_thickness="0.8" path.points="0,0;0,10" visible="false" />
+    <node type="PATH" inherit="DefaultPath" parent="mod_compass" name="mod_compass_predator_bead" position.y="0.4"
+      path.bm_line_tripatch="hud/mods/mod-predator-blue.png" path.line_thickness="0.8" path.points="0,0;0,10" visible="false" />
+    <node type="PATH" inherit="DefaultPath" parent="mod_compass" name="mod_compass_predator_animal" position.y="0.4"
+      path.bm_line_tripatch="hud/mods/mod-predator-yellow.png" path.line_thickness="0.8" path.points="0,0;0,10" visible="false" />
+    <node type="PATH" inherit="DefaultPath" parent="mod_compass" name="mod_compass_predator_enemy" position.y="0.4"
+      path.bm_line_tripatch="hud/mods/mod-predator-red.png" path.line_thickness="0.8" path.points="0,0;0,10" visible="false" />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="DeveloperPanelToggle"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     position.x="0.990468"
+     position.y="0.691229"
+     required_features="DEVELOPER_MODE"
+     on_click_script_call="local is_visible = UI_GetProperty(\"DeveloperPanel\", \"visible\");\nUI_SetVisibleWithAnimation(\"DeveloperPanel\", !is_visible);"
+     align="RIGHT,BOTTOM"
+     button.text="Dev"
+     button.ninepatch_width="30"
+     button.ninepatch_height="25"
+    />
+
+    <node
+     name="Player_0_Tools"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="1"
+     position.y="1"
+     scale="0.808142"
+     ui_scale_modifier="0.25"
+     align="RIGHT,BOTTOM"
+     marker.area_width="86"
+     marker.area_height="86"
+    />
+
+    <node
+     name="Build_Info"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.0153646"
+     position.y="0.982407"
+     visible="false"
+     custom_draw="true"
+     ui_scale_modifier="0.15"
+     visibility_animation_time_multiplier="1.75"
+     align="BOTTOM"
+     marker.area_width="488.359"
+     marker.area_height="110.931"
+    />
+
+    <node
+     name="Build_Limit"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.49974"
+     position.y="0.0435181"
+     visible="false"
+     custom_draw="true"
+     visibility_animation_time_multiplier="1.75"
+     align="HCENTER"
+     marker.area_width="250.136"
+     marker.area_height="38.931"
+    />
+
+    <node
+     name="marker_attributes"
+     type="MARKER"
+     inherit="DefaultMarker"
+     marker.area_width="300"
+     marker.area_height="149.333"
+    />
+
+    <node
+     name="Buildups"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.46927"
+     position.y="0.875"
+     custom_draw="true"
+     scale="0.791635"
+     visibility_animation_time_multiplier="1.75"
+     align="BOTTOM,HCENTER"
+     marker.area_width="505.764"
+     marker.area_height="67.3317"
+    />
+
+    <node
+     name="Power"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="marker_attributes"
+     position.x="0.2"
+     position.y="0.485973"
+     visible="false"
+     custom_draw="true"
+     visibility_animation_time_multiplier="1.75"
+     align="VCENTER"
+     marker.area_width="230"
+     marker.area_height="32"
+    />
+
+    <node
+     name="icon_power"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="Power"
+     position.x="-0.117915"
+     position.y="0.0343418"
+     scale="0.75"
+     align="VCENTER,HCENTER"
+     image.bitmap="hud/icon-power.png"
+    />
+
+    <node
+     name="marker_map"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.y="1"
+     ui_scale_modifier="0.2"
+     visibility_animation_time_multiplier="1.75"
+     align="BOTTOM"
+     marker.area_width="160.593"
+     marker.area_height="174.815"
+    />
+
+    <node
+     name="Minimap"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="marker_map"
+     position.x="0.556131"
+     position.y="-0.552914"
+     custom_draw="true"
+     align="VCENTER,HCENTER"
+     marker.area_width="146.519"
+     marker.area_height="145.333"
+    />
+
+    <node
+     name="DeveloperPanel"
+     type="NINEPATCH"
+     inherit="EditorNinePatch"
+     parent="DeveloperPanelToggle"
+     position.x="-0.00485754"
+     position.y="-1.1931"
+     visible="false"
+     align="RIGHT,BOTTOM"
+     ninepatch.rectangle_width="357"
+     ninepatch.rectangle_height="301"
+    />
+
+    <node
+     name="DeveloperPanel2"
+     type="NINEPATCH"
+     inherit="EditorNinePatchBevel"
+     parent="DeveloperPanel"
+     position.x="-0.971053"
+     position.y="-0.965437"
+     ninepatch.rectangle_width="336"
+     ninepatch.rectangle_height="203"
+    />
+
+    <node
+     name="aligner_2"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="DeveloperPanel"
+     position.x="-0.494696"
+     position.y="-0.271416"
+     scale="0.903659"
+     align="HCENTER"
+     aligner.area_width="378.183"
+     aligner.area_height="79.9696"
+     aligner.fixed_num_columns="3"
+    />
+
+    <node
+     name="SaveTimeOfDayFile"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="DeveloperPanel2"
+     position.x="0.740332"
+     position.y="0.880122"
+     button.text="Save to File"
+     button.ninepatch_width="98"
+    />
+
+    <node
+     name="AddTimeOfDaySnapshot"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="DeveloperPanel2"
+     position.x="0.259082"
+     position.y="0.87749"
+     button.text="Add Snapshot"
+     button.ninepatch_width="98"
+    />
+
+    <node
+     name="ReloadTimeOfDayDefinitions"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="DeveloperPanel2"
+     position.x="0.944892"
+     position.y="0.0921572"
+     scale="0.651194"
+     button.text=""
+     button.bm_icon="editor/ui/gfx/reload-icon.png"
+     button.icon_scale="0.65"
+     button.ninepatch_width="34"
+     button.ninepatch_height="38"
+    />
+
+    <node
+     name="CheatsMenu"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_2"
+     on_click_script_call="UI_PushScreen(\"Cheats\");\nUI_SetVisibleWithAnimation(\"DeveloperPanel\", false);"
+     button.text="Cheats Menu"
+     button.ninepatch_width="111"
+    />
+
+    <node
+     name="RefillHitPoints"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_2"
+     button.text="Refill Hit Points"
+     button.ninepatch_width="111"
+    />
+
+    <node
+     name="RefillUses"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_2"
+     button.text="Refill Uses"
+     button.ninepatch_width="111"
+    />
+
+    <node
+     name="CheatSaveGame"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_2"
+     button.text="Force Save Game"
+     button.ninepatch_width="111"
+    />
+
+    <node
+     name="CheatAddExperience"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_2"
+     button.text="Add Experience"
+     button.ninepatch_width="111"
+    />
+
+    <node
+     name="TimeOfDay"
+     type="SLIDER"
+     inherit="EditorSliderNinepatch"
+     parent="DeveloperPanel2"
+     position.x="0.0339241"
+     position.y="0.333824"
+     align="VCENTER"
+     slider.ninepatch_width="308"
+     slider.value="0.507056"
+    />
+
+    <node
+     name="WorldAge"
+     type="SLIDER"
+     inherit="EditorSliderNinepatch"
+     parent="DeveloperPanel2"
+     position.x="0.0308938"
+     position.y="0.555797"
+     align="VCENTER"
+     slider.ninepatch_width="310"
+     slider.value="0.914785"
+    />
+
+    <node
+     name="TimeOfDayTitle"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="TimeOfDay"
+     position.x="-3.72529e-08"
+     position.y="-1.56545"
+     save_dynamic_content_to_ui_xml="false"
+     scale="0.918244"
+    />
+
+    <node
+     name="WorldAgeTitle"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="WorldAge"
+     position.x="0.00322002"
+     position.y="-1.60565"
+     scale="0.918244"
+     textbox.text="World Age: 20 years since Calamity"
+    />
+
+    <node
+     name="OverrideTimeOfDay"
+     type="CHECKBOX"
+     inherit="EditorCheckbox"
+     parent="DeveloperPanel2"
+     position.x="0.0324774"
+     position.y="0.0511391"
+     scale="0.900775"
+     align=""
+     checkbox.value="1"
+     checkbox.text="Override Time of Day"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="TimeOfDaySamples"
+     type="DROPDOWNLIST"
+     inherit="EditorDropDownList"
+     parent="DeveloperPanel2"
+     position.x="0.0311559"
+     position.y="0.657966"
+     scale="0.903666"
+     drop_down_list.ninepatch_width="342"
+     drop_down_list.lines="0:00,0:00;6:00,6:00;7:00,7:00;9:00,9:00;12:00,12:00;16:00,16:00;17:00,17:00;20:00,20:00;21:00,21:00;24:00,24:00"
+    />
+
+    <node
+     name="Tool_0"
+     type="NINEPATCH"
+     inherit="DefaultNinePatch"
+     parent="Player_0_Tools"
+     position.x="-1.21351"
+     position.y="-1"
+     custom_draw="true"
+     color="1,1,1,0"
+     visibility_animation_time_multiplier="1.75"
+     align="RIGHT"
+     ninepatch.bitmap="ui/gfx/ninepatch-material-slot.png"
+     ninepatch.rectangle_width="74"
+     ninepatch.rectangle_height="74"
+     ninepatch.upper_left_corner_position_in_bitmap="10,10"
+     ninepatch.lower_right_corner_position_in_bitmap="52,52"
+    />
+
+    <node
+     name="Tool_1"
+     type="NINEPATCH"
+     inherit="DefaultNinePatch"
+     parent="Player_0_Tools"
+     position.x="-1.0612"
+     position.y="-0.145976"
+     visible="false"
+     custom_draw="true"
+     color="1,1,1,0"
+     visibility_animation_time_multiplier="1.75"
+     align="BOTTOM"
+     ninepatch.bitmap="ui/gfx/ninepatch-material-slot.png"
+     ninepatch.rectangle_width="74"
+     ninepatch.rectangle_height="74"
+     ninepatch.upper_left_corner_position_in_bitmap="10,10"
+     ninepatch.lower_right_corner_position_in_bitmap="52,52"
+    />
+
+    <node
+     name="icon_hit_points"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="HitPoints"
+     position.x="-0.0955822"
+     position.y="-0.0565503"
+     scale="0.525815"
+     align="VCENTER,HCENTER"
+     image.bitmap="hud/icon-hit-points.png"
+    />
+
+    <node
+     name="HitPoints"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="marker_attributes"
+     position.x="0.2"
+     position.y="0.19391"
+     custom_draw="true"
+     scale="1.08576"
+     ui_scale_modifier="0.2"
+     visibility_animation_time_multiplier="1.75"
+     align="VCENTER"
+     marker.area_width="230"
+     marker.area_height="12.5943"
+    />
+
+    <node
+     name="Experience"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_upper_right_corner"
+     position.y="0.822919"
+     custom_draw="true"
+     scale="0.657753"
+     ui_scale_modifier="0.25"
+     visibility_animation_time_multiplier="1.75"
+     align="HCENTER"
+     marker.area_width="358.527"
+    />
+
+    <node
+     name="Materials"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     position.x="0.515334"
+     position.y="0.980926"
+     visible="false"
+     scale="0.645048"
+     visibility_animation_time_multiplier="1.75"
+     align="BOTTOM,HCENTER"
+     aligner.area_height="83.1047"
+     aligner.automatic_area_width="true"
+     aligner.fixed_num_rows="1"
+    />
+
+    <node
+     name="icon_level"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="Experience"
+     position.x="-0.616943"
+     position.y="0.162314"
+     scale="0.800404"
+     align="VCENTER,HCENTER"
+     image.bitmap="hud/icon-level.png"
+    />
+
+    <node
+     name="LevelText"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="icon_level"
+     position.x="-0.00849068"
+     position.y="0.0283846"
+     localize="false"
+     color="0,0,0,0.9"
+     scale="1.63082"
+     align="VCENTER,HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="31"
+     textbox.text="10"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="Slot_0"
+     type="NINEPATCH"
+     inherit="DefaultNinePatch"
+     parent="Materials"
+     custom_draw="true"
+     can_be_accessed_with_gamepads="false"
+     interactive="true"
+     align="VCENTER,HCENTER"
+     ninepatch.bitmap="ui/gfx/ninepatch-material-slot.png"
+     ninepatch.rectangle_width="74"
+     ninepatch.rectangle_height="74"
+     ninepatch.upper_left_corner_position_in_bitmap="10,10"
+     ninepatch.lower_right_corner_position_in_bitmap="52,52"
+    />
+
+    <node
+     name="Temperature"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Minimap"
+     position.x="0.613077"
+     position.y="-0.110702"
+     custom_draw="true"
+     scale="0.437709"
+     ui_scale_modifier="0.2"
+     visibility_animation_time_multiplier="1.75"
+     align="HCENTER"
+     marker.area_width="45.0814"
+     marker.area_height="49.768"
+    />
+
+    <node
+     name="Coordinates"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="Minimap"
+     position.x="0.0147656"
+     position.y="0.564208"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.474841"
+     align="VCENTER,HCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="125"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="Clock"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="Minimap"
+     position.x="-0.00692305"
+     position.y="-0.651953"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.627776"
+     align="VCENTER,HCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="AreaMonsterCount"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="Minimap"
+     position.x="-0.422847"
+     position.y="0.440251"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     scale="0.428446"
+     align="VCENTER,HCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="Quests"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.0157563"
+     position.y="0.0962967"
+     custom_draw="true"
+     scale="1.27981"
+     ui_scale_modifier="0.35"
+     visibility_animation_time_multiplier="1.75"
+     marker.area_width="265.886"
+     marker.area_height="195.746"
+    />
+
+    <node
+     name="Day"
+     type="TEXTBOX"
+     inherit="DefaultTextbox"
+     parent="Minimap"
+     position.x="-0.00287858"
+     position.y="-0.570398"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.483628"
+     align="VCENTER,HCENTER"
+     shader_effect="FontBlackShadowOutline"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node parent="Minimap" name="mod_thick_gridlines"
+      type="MARKER" inherit="DefaultMarker"
+      align="HCENTER,VCENTER"
+      marker.area_width="150"
+      marker.area_height="150"
+      alpha="0.33"
+      active="false" interactive="false" ignore_cursors="true" can_be_accessed_with_gamepads="false"
+      visible="false"
+      />
+    <node type="PATH" inherit="DefaultPath" parent="mod_thick_gridlines" name="mod_thick_gridlines_y1" path.bm_line_tripatch="ui/gfx/tripatch-line.png" path.line_thickness="0.12" />
+    <node type="PATH" inherit="DefaultPath" parent="mod_thick_gridlines" name="mod_thick_gridlines_y2" path.bm_line_tripatch="ui/gfx/tripatch-line.png" path.line_thickness="0.12" />
+    <node type="PATH" inherit="DefaultPath" parent="mod_thick_gridlines" name="mod_thick_gridlines_y3" path.bm_line_tripatch="ui/gfx/tripatch-line.png" path.line_thickness="0.12" />
+    <node type="PATH" inherit="DefaultPath" parent="mod_thick_gridlines" name="mod_thick_gridlines_x1" path.bm_line_tripatch="ui/gfx/tripatch-line.png" path.line_thickness="0.12" />
+    <node type="PATH" inherit="DefaultPath" parent="mod_thick_gridlines" name="mod_thick_gridlines_x2" path.bm_line_tripatch="ui/gfx/tripatch-line.png" path.line_thickness="0.12" />
+    <node type="PATH" inherit="DefaultPath" parent="mod_thick_gridlines" name="mod_thick_gridlines_x3" path.bm_line_tripatch="ui/gfx/tripatch-line.png" path.line_thickness="0.12" />
+
+    <node parent="Minimap" name="mod_camera_heading"
+      type="IMAGE" inherit="DefaultImage"
+      image.bitmap="hud/mods/mod-camera-heading.png"
+      align="VCENTER,HCENTER"
+      color="0,0,1,1"
+      scale="0.246"
+      active="false" interactive="false" ignore_cursors="true" can_be_accessed_with_gamepads="false"
+      visible="false"
+      />
+
+    <node parent="Minimap" name="mod_hide_minimap_compass"
+      type="IMAGE" inherit="DefaultImage"
+      image.bitmap="hud/mods/mod-hide-minimap.png"
+      align="VCENTER,HCENTER"
+      scale="0.247"
+      active="false" interactive="false" ignore_cursors="true" can_be_accessed_with_gamepads="false"
+      visible="false"
+      />
+    <node parent="Minimap" name="mod_hide_minimap_interactive"
+      type="MARKER" inherit="DefaultMarker"
+      align="VCENTER,HCENTER"
+      marker.area_width="150"
+      marker.area_height="150"
+      active="true" interactive="true" ignore_cursors="false" can_be_accessed_with_gamepads="false"
+      visible="false"
+      />
+
+    <node type="MARKER" inherit="DefaultMarker" parent="Minimap" name="mod_predator_minimap_gatherable" align="VCENTER,HCENTER"
+      marker.area_width="150" marker.area_height="150"
+      active="false" interactive="false" ignore_cursors="true" can_be_accessed_with_gamepads="false" visible="false" />
+    <node type="PATH" inherit="DefaultPath" parent="mod_predator_minimap_gatherable" name="mod_predator_minimap_gatherable_tick" position.y="-0.5"
+      path.bm_line_tripatch="hud/mods/mod-predator-green.png" path.line_thickness="0.5" path.points="0,0;0,7" />
+
+    <node type="MARKER" inherit="DefaultMarker" parent="Minimap" name="mod_predator_minimap_bead" align="VCENTER,HCENTER"
+      marker.area_width="150" marker.area_height="150"
+      active="false" interactive="false" ignore_cursors="true" can_be_accessed_with_gamepads="false" visible="false" />
+    <node type="PATH" inherit="DefaultPath" parent="mod_predator_minimap_bead" name="mod_predator_minimap_bead_tick" position.y="-0.5"
+      path.bm_line_tripatch="hud/mods/mod-predator-blue.png" path.line_thickness="0.5" path.points="0,0;0,7" />
+
+    <node type="MARKER" inherit="DefaultMarker" parent="Minimap" name="mod_predator_minimap_animal" align="VCENTER,HCENTER"
+      marker.area_width="150" marker.area_height="150"
+      active="false" interactive="false" ignore_cursors="true" can_be_accessed_with_gamepads="false" visible="false" />
+    <node type="PATH" inherit="DefaultPath" parent="mod_predator_minimap_animal" name="mod_predator_minimap_animal_tick" position.y="-0.5"
+      path.bm_line_tripatch="hud/mods/mod-predator-yellow.png" path.line_thickness="0.5" path.points="0,0;0,7" />
+
+    <node type="MARKER" inherit="DefaultMarker" parent="Minimap" name="mod_predator_minimap_enemy" align="VCENTER,HCENTER"
+      marker.area_width="150" marker.area_height="150"
+      active="false" interactive="false" ignore_cursors="true" can_be_accessed_with_gamepads="false" visible="false" />
+    <node type="PATH" inherit="DefaultPath" parent="mod_predator_minimap_enemy" name="mod_predator_minimap_enemy_tick" position.y="-0.5"
+      path.bm_line_tripatch="hud/mods/mod-predator-red.png" path.line_thickness="0.5" path.points="0,0;0,7" />
+
+    <node parent="Coordinates" name="mod_grid_info"
+      type="TEXTBOX" inherit="DefaultTextbox"
+      align="HCENTER,BOTTOM"
+      position.y="1.25"
+      textbox.text_align="HCENTER,VCENTER"
+      shader_effect="FontBlackShadowOutline"
+      localize="false"
+      />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="Post"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.265821"
+     position.y="0.592837"
+     custom_draw="true"
+     align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="MaterialTracking"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.992187"
+     position.y="0.0990745"
+     active="false"
+     custom_draw="true"
+     scale="1.27981"
+     ui_scale_modifier="0.35"
+     visibility_animation_time_multiplier="1.75"
+     align="RIGHT"
+     marker.area_width="174.175"
+     marker.area_height="236.65"
+    />
+
+    <node
+     name="Notification_TOP"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.50052"
+     position.y="0.14537"
+     active="false"
+     custom_draw="true"
+     scale="0.889274"
+     ui_scale_modifier="0.2"
+     align="VCENTER,HCENTER"
+     marker.area_width="655.478"
+     marker.area_height="169.137"
+    />
+
+    <node
+     name="Notification_RIGHT"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.991145"
+     position.y="0.102777"
+     active="false"
+     custom_draw="true"
+     scale="0.922289"
+     ui_scale_modifier="0.2"
+     align="RIGHT"
+     marker.area_width="347.238"
+     marker.area_height="98.8354"
+    />
+
+    <node
+     name="Notification_LEFT"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.0119783"
+     position.y="0.0953699"
+     active="false"
+     custom_draw="true"
+     scale="0.922289"
+     ui_scale_modifier="0.2"
+     marker.area_width="362.658"
+     marker.area_height="98.8354"
+    />
+
+    <node
+     name="Notification_BOTTOM"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.499479"
+     position.y="0.883333"
+     active="false"
+     custom_draw="true"
+     ui_scale_modifier="0.2"
+     align="BOTTOM,HCENTER"
+     marker.area_width="488.611"
+     marker.area_height="78.6606"
+    />
+
+    <node
+     name="LocationTitle"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.955208"
+     position.y="0.685185"
+     active="false"
+     custom_draw="true"
+     scale="0.670249"
+     align="RIGHT,BOTTOM"
+     marker.area_width="459.429"
+    />
+
+    <node
+     name="StartPerformanceMeasurementFast"
+     type="BUTTON"
+     inherit="EditorTinyButton"
+     parent="aligner_2"
+     on_click_script_call="UI_SetVisibleWithAnimation(\"DeveloperPanel\", false);"
+     button.text="Stage Perf (Shorter)"
+     button.ninepatch_width="111"
+     button.ninepatch_height="28"
+    />
+
+    <node
+     name="MaterialsLimitLeft"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="marker_map"
+     position.x="1.23793"
+     position.y="-0.475914"
+     align="RIGHT,VCENTER"
+     marker.area_width="10.8434"
+     marker.area_height="156.798"
+    />
+
+    <node
+     name="MaterialsLimitRight"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="Tool_0"
+     position.x="-1.08864"
+     position.y="-0.1252"
+     align="RIGHT,VCENTER"
+     marker.area_width="10.8434"
+     marker.area_height="156.798"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node parent="marker_attributes" name="mod_ark_progress"
+      type="TEXTBOX" inherit="DefaultTextbox"
+      align=""
+      scale="0.55"
+      ui_scale_modifier="-0.16"
+      position.x="0.21"
+      position.y="0.015"
+      textbox.text_align="HCENTER,VCENTER"
+      shader_effect="FontBlackShadowOutline"
+      localize="false"
+      />
+
+    <node parent="marker_map" name="mod_camera_distance"
+      type="SLIDER" inherit="DefaultSlider"
+      align=""
+      scale="0.3"
+      position.x="0.07"
+      position.y="-0.9"
+      angle.z="1.57"
+      slider.ninepatch_width="350"
+      visible="false"
+      />
+
+    <node parent="MaterialsLimitRight" name="mod_power_walking"
+      type="SLIDER" inherit="DefaultSlider"
+      align=""
+      scale="0.45"
+      position.x="0.795"
+      position.y="0.533"
+      slider.ninepatch_width="345"
+      visible="false"
+      />
+
+    <node parent="MaterialsLimitLeft" name="mod_auto_material_transporter"
+      type="BUTTON" inherit="DefaultButton"
+      align="BOTTOM,RIGHT"
+      scale="0.12"
+      position.x="-1"
+      position.y="0.54"
+      button.draw_mode="FIXED_SIZE"
+      button.bm_idle="!NONE"
+      button.bm_over="!NONE"
+      button.bm_pressed="!NONE"
+      button.bm_disabled="!NONE"
+      button.bm_icon="hud/mods/mod-auto-material-transporter-disabled.png"
+      button.icon_color="1,1,1,0.5"
+      visible="false"
+      />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

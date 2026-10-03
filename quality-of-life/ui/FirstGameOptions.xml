@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="SHADERFILTER"
+     inherit="FaderBlurFilter"
+     shaderfilter.cache_results="true"
+    />
+
+    <node
+     name="panel"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanel"
+     position.x="0.499145"
+     position.y="0.498799"
+     ui_scale_modifier="0.2"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="570"
+     ninepatch.automatic_content_height="true"
+    />
+
+    <node
+     name="aligner_2"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel"
+     position.x="0.000392715"
+     position.y="-0.499269"
+     scale="0.813396"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="673.294"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="10"
+    />
+
+    <node
+     name="marker_1"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_2"
+     align="VCENTER,HCENTER"
+     marker.area_width="99.1286"
+     marker.area_height="23.6992"
+    />
+
+    <node
+     name="Title2"
+     type="TEXTBOX"
+     inherit="MediumTextbox"
+     parent="aligner_2"
+     scale="0.557903"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="1088"
+     textbox.text="Initial Settings"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node parent="aligner_2" name="mods_panel"
+      type="NINEPATCH" inherit="DecayNinePatchPanelInner"
+      align="HCENTER"
+      ninepatch.rectangle_width="650"
+      ninepatch.automatic_content_padding="0"
+      ninepatch.automatic_content_height="true"
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="panel2"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanelInner"
+     parent="aligner_2"
+     align="HCENTER"
+     ninepatch.rectangle_width="651"
+     ninepatch.automatic_content_height="true"
+     ninepatch.automatic_content_padding="0"
+    />
+
+    <node
+     name="aligner_3"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel2"
+     position.y="0.00131294"
+     scale="0.903379"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="526.795"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="24"
+    />
+
+    <node
+     name="marker_3"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_3"
+     align="VCENTER,HCENTER"
+     marker.area_width="99.1286"
+     marker.area_height="10"
+    />
+
+    <node
+     name="EmojiExample4"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_3"
+     active="true"
+     color="1,1,1,0.75"
+     scale="0.971506"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="313"
+     textbox.text="Show Emojis"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_show_emojis"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="EmojiExample4"
+     position.x="0.028"
+     position.y="0.000296436"
+     align="VCENTER"
+     checkbox.value="1"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="EmojiExample"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="KeyValue_BOOLEAN_show_emojis"
+     position.x="1.48714"
+     position.y="0.00104266"
+     save_dynamic_content_to_ui_xml="false"
+     active="true"
+     localize="false"
+     color="1,1,1,0.75"
+     scale="0.78076"
+     align="VCENTER"
+     textbox.textbox_width="314"
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="EmojiExample2"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_3"
+     active="true"
+     color="1,1,1,0.75"
+     scale="0.971506"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="313"
+     textbox.text="Temperature units"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="EmojiExample3"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_3"
+     active="true"
+     color="1,1,1,0.75"
+     scale="0.971506"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="313"
+     textbox.text="Clock format"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="EmojiExample5"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_3"
+     active="true"
+     color="1,1,1,0.75"
+     scale="0.971506"
+     align="RIGHT,VCENTER"
+     textbox.textbox_width="313"
+     textbox.text="Color blind mode"
+     textbox.text_align="RIGHT,VCENTER"
+    />
+
+    <node
+     name="KeyValue_STRING_temperature_units"
+     type="DROPDOWNLIST"
+     inherit="DefaultDropDownList"
+     parent="EmojiExample2"
+     position.x="0.037"
+     position.y="-0.00403059"
+     scale="0.9"
+     align="VCENTER"
+     drop_down_list.ninepatch_width="330"
+     drop_down_list.lines="CELSIUS,Celsius;FAHRENHEIT,Fahrenheit"
+    />
+
+    <node
+     name="KeyValue_STRING_clock_format"
+     type="DROPDOWNLIST"
+     inherit="DefaultDropDownList"
+     parent="EmojiExample3"
+     position.x="0.037"
+     position.y="0.0243768"
+     scale="0.9"
+     align="VCENTER"
+     drop_down_list.ninepatch_width="330"
+     drop_down_list.lines="24H,24 hours;AMPM,AM PM"
+    />
+
+    <node
+     name="KeyValue_BOOLEAN_color_blind_mode"
+     type="CHECKBOX"
+     inherit="DefaultCheckbox"
+     parent="EmojiExample5"
+     position.x="0.028"
+     position.y="-0.0249664"
+     align="VCENTER"
+     checkbox.toggle_value_on_click="true"
+    />
+
+    <node
+     name="Title3"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_2"
+     color="0.9,0.9,0.9,1"
+     scale="0.894242"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="725"
+     textbox.text="Note that you can change these any time in the options menu."
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node parent="mods_panel" name="mods_aligner"
+      type="ALIGNER" inherit="EditorAligner"
+      align="HCENTER"
+      scale="0.9"
+      aligner.layout="STACK"
+      aligner.automatic_area_height="true"
+      aligner.min_padding="24"
+      />
+
+    <node parent="mods_aligner" name="mods_spacer_top"
+      type="MARKER" inherit="DefaultMarker"
+      align="VCENTER,HCENTER"
+      marker.area_height="10"
+      />
+
+    <node parent="mods_aligner" name="mod_starting_stage_title"
+      type="TEXTBOX" inherit="SmallTextbox"
+      active="true"
+      color="1,1,1,0.75"
+      scale="0.9715"
+      align="RIGHT,VCENTER"
+      textbox.textbox_width="313"
+      textbox.text_align="RIGHT,VCENTER"
+      />
+
+    <node parent="mod_starting_stage_title" name="mod_starting_stage"
+      type="DROPDOWNLIST" inherit="DefaultDropDownList"
+      scale="0.9"
+      position.x="0.037"
+      align="VCENTER"
+      drop_down_list.ninepatch_width="330"
+      drop_down_list.max_list_height="21"
+      />
+
+    <node parent="mods_aligner" name="mod_preserve_nature_title"
+      type="TEXTBOX" inherit="SmallTextbox"
+      active="true"
+      color="1,1,1,0.75"
+      scale="0.9715"
+      align="RIGHT,VCENTER"
+      textbox.textbox_width="313"
+      textbox.text_align="RIGHT,VCENTER"
+      />
+
+    <node parent="mod_preserve_nature_title" name="mod_preserve_nature"
+      type="CHECKBOX" inherit="DefaultCheckbox"
+      position.x="0.028"
+      align="VCENTER"
+      checkbox.toggle_value_on_click="true"
+      />
+
+    <node parent="mods_aligner" name="mod_difficulty_title"
+      type="TEXTBOX" inherit="SmallTextbox"
+      active="true"
+      color="1,1,1,0.75"
+      scale="0.9715"
+      align="RIGHT,VCENTER"
+      textbox.textbox_width="313"
+      textbox.text_align="RIGHT,VCENTER"
+      />
+
+    <node parent="mod_difficulty_title" name="KeyValue_FLOAT_mod_difficulty"
+      type="SLIDER" inherit="DefaultSlider"
+      position.x="0.036"
+      align="VCENTER"
+      slider.ninepatch_width="210"
+      slider.max_value="100"
+      slider.linked_value_ui_property="mod_difficulty_number:editbox.text"
+      />
+
+    <node parent="KeyValue_FLOAT_mod_difficulty" name="mod_difficulty_number"
+      type="EDITBOX" inherit="DefaultEditbox"
+      color="0.75,0.75,0.75,1"
+      position.x="1.05"
+      align="VCENTER"
+      editbox.padding="15"
+      editbox.ninepatch_width="70"
+      editbox.accepts_numbers_only="true"
+      editbox.number_value_decimals="0"
+      editbox.text="0"
+      editbox.is_read_only="true"
+      active="false"
+      />
+
+    <node parent="mods_aligner" name="mod_difficulty_reload"
+      type="TEXTBOX" inherit="SmallTextbox"
+      color="1,1,0,1"
+      align="HCENTER,VCENTER"
+      textbox.text_align="HCENTER,VCENTER"
+      textbox.textbox_width="670"
+      localize="false"
+      visible="false"
+      />
+
+    <node parent="mods_aligner" name="mods_spacer_bottom"
+      type="MARKER" inherit="DefaultMarker"
+      align="VCENTER,HCENTER"
+      marker.area_height="10"
+      />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="StartGame"
+     type="BUTTON"
+     inherit="WideButton"
+     parent="aligner_2"
+     user_string="OK"
+     button.text="Start Adventure"
+     button.ninepatch_width="390"
+    />
+
+    <node
+     name="marker_2"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_2"
+     align="VCENTER,HCENTER"
+     marker.area_width="99.1286"
+     marker.area_height="5"
+    />
+
+    <node
+     name="Button_1"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_2"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     user_string="AfterSuburb"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="marker_4"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_3"
+     align="VCENTER,HCENTER"
+     marker.area_width="99.1286"
+     marker.area_height="10"
+    />
+
+  </array>
+</root>

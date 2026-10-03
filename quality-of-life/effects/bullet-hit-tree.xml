@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+	<array id="DEFAULT">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+		<node enabled="true"
+      sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.33,0.33|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1.1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/physics/tree-hit-01|SC|sfx/physics/tree-hit-02|SC|sfx/physics/tree-hit-03|Q|}}"
+      sound_is_attached_to_stage_object="true"
+      class="BITMAP"
+      bitmaps="effects/gfx/wood-1.png"
+      number_of_particles="4"
+      initial_age="0"
+      age_to_die="0.3;0.8"
+      time="0"
+      blend_mode="NORMAL"
+      lighting_mode="GPU_LIT"
+      position_offset="0,0,0"
+      move_speed="50;120"
+      move_direction="1,0,0"
+      move_angle_spread="60"
+      move_angle_z="0"
+      move_angle_y="0"
+      move_angle_x="0"
+      dampening_factor="1"
+      restitution_coefficient="0.5"
+      gravity_multiplier="0"
+      alpha_curve="0,1;0.8,1;1,0"
+      scale_curve="0,3;0.6,0"
+      alpha_multiplier="1"
+      scale_multiplier="0.5;0.7"
+      rotation_angles="0,0,45;0,0,-45"
+      angular_velocity="0,0,0"
+      randomize_angular_velocity_sign="true"
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+	</array>
+</root>

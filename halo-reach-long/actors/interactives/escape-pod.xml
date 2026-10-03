@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="METAL" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="200" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="5000" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="damage_type_accept_mask" value="PIERCING" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="flying" type="BOOLEAN" value="false" />
+    <node id="time_flying" type="FLOAT" value="0" />
+    <node id="camera_path_0" type="PATH" flags="PERSISTENT,NO_REPLICATION" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|20|Q|}};422,242,-599,{{QUATERNION,|Q|rotation|Q|,|Q|-0.802591,-0.296612,0.179412,0.485469|Q|},{FLOAT,|Q|fov|Q|,|Q|40|Q|}};451,107,-577,{{QUATERNION,|Q|rotation|Q|,|Q|-0.712043,-0.272088,0.231046,0.604633|Q|},{FLOAT,|Q|fov|Q|,|Q|40|Q|},{BOOLEAN,|Q|ease_in|Q|,|Q|false|Q|},{BOOLEAN,|Q|ease_out|Q|,|Q|false|Q|},{FLOAT,|Q|pause_in_seconds|Q|,|Q|0|Q|}}" />
+    <node id="camera_path_1" type="PATH" flags="PERSISTENT,NO_REPLICATION" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|true|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|20|Q|}};532,3,-475,{{QUATERNION,|Q|rotation|Q|,|Q|-0.635285,-0.3207,0.316615,0.627153|Q|},{FLOAT,|Q|fov|Q|,|Q|40|Q|}};474,2,-433,{{QUATERNION,|Q|rotation|Q|,|Q|-0.635285,-0.3207,0.316615,0.627153|Q|},{FLOAT,|Q|fov|Q|,|Q|40|Q|},{BOOLEAN,|Q|ease_in|Q|,|Q|false|Q|},{BOOLEAN,|Q|ease_out|Q|,|Q|false|Q|},{FLOAT,|Q|pause_in_seconds|Q|,|Q|0|Q|}}" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="Scriptable">
+  </array>
+
+  <array id="SCRIPTS">
+    <node id="embedded_ai_script" ><![CDATA[
+
+function OnThink(so_actor, tdelta)
+{
+  local flying = StageObject_GetKeyValue(so_actor, "flying");
+  if (flying == null)
+    return;
+  if (!flying)
+    return;
+
+  local time_flying = StageObject_GetKeyValue(so_actor, "time_flying");
+  time_flying += tdelta;
+  StageObject_SetKeyValueFloat(so_actor, "time_flying", time_flying);
+
+  local pos = StageObject_GetPosition(so_actor);
+  pos[2] -= 10 * time_flying * tdelta;
+  StageObject_SetPosition(so_actor, pos[0], pos[1], pos[2]);
+
+  if (pos[2] < -2000)
+  {
+    if (UI_PeekScreen(0) == "Stage")
+      UI_SwitchScreen("Credits");
+  }
+}
+
+]]></node>
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death"
+     category="DEATH"
+     animation_controller="PhysicsMaterialBasedDeath"
+     forced_animation_length_in_seconds="0.20"
+     force_update_visual_bounds="true"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/flash-ground-large.xml"
+     event_1_trigger_time="0"
+     event_1_id="id1"
+     event_1_effect="effects/carbage-container-break.xml"
+     event_1_spawn_effect_offset_z="-39.48"
+    />
+
+    <node id="enter_escapepod"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/escapepod-rig-volunteer_enter-escapepod.anim"
+     event_0_trigger_time="1.2"
+     event_0_id="liftoff"
+     event_0_command_word="play_animation"
+     event_0_command_word_key_values="{{STRING,|Q|animation_id|Q|,|Q|liftoff|Q|}}"
+     event_1_trigger_time="1.5"
+     event_1_id="sfx-door-open"
+     event_1_sound_event="{{BOOLEAN,|Q|play_as_positional|Q|,|Q|false|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/escape-pod-door-open|Q|}}"
+     event_2_trigger_time="4.4"
+     event_2_id="sfx-door-close"
+     event_2_sound_event="{{BOOLEAN,|Q|play_as_positional|Q|,|Q|false|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/escape-pod-door-open|Q|}}"
+     event_3_trigger_time="5.5"
+     event_3_id="sfx-servo"
+     event_3_sound_event="{{BOOLEAN,|Q|play_as_positional|Q|,|Q|false|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|800,1600|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/escape-pod-flap-servo|Q|}}"
+    />
+
+    <node id="liftoff" forced_animation_length_in_seconds="30.00" event_0_trigger_time="0" event_0_id="sfx-liftoff" event_0_sound_event="{{BOOLEAN,|Q|play_as_positional|Q|,|Q|false|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/escape-pod-liftoff|Q|}}" />
+    <node id="disappear"
+     forced_animation_length_in_seconds="2.00"
+     event_0_trigger_time="0"
+     event_0_id="zap1"
+     event_0_effect="effects/teleport-actor-disappears.xml"
+     event_0_spawn_effect_offset_x="77.87"
+     event_0_spawn_effect_offset_y="89.52"
+     event_1_trigger_time="0.0753"
+     event_1_id="zap2"
+     event_1_effect="effects/teleport-actor-disappears.xml"
+     event_1_spawn_effect_offset_x="-78.64"
+     event_1_spawn_effect_offset_y="89.52"
+     event_2_trigger_time="0.125"
+     event_2_id="zap_top1"
+     event_2_effect="effects/teleport-actor-disappears.xml"
+     event_2_spawn_effect_offset_z="-251.13"
+     event_3_trigger_time="0.159"
+     event_3_id="zap3"
+     event_3_effect="effects/teleport-actor-disappears.xml"
+     event_3_spawn_effect_offset_x="-78.64"
+     event_3_spawn_effect_offset_y="-89.52"
+     event_4_trigger_time="0.257"
+     event_4_id="zap4"
+     event_4_effect="effects/teleport-actor-disappears.xml"
+     event_4_spawn_effect_offset_x="78.64"
+     event_4_spawn_effect_offset_y="-89.52"
+     event_5_trigger_time="0.89"
+     event_5_id="zap_huge"
+     event_5_effect="effects/teleport-actor-disappears.xml"
+     event_5_sound_event="{{BOOLEAN,|Q|play_as_positional|Q|,|Q|false|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/drop-the-bass|Q|}}"
+     event_5_spawn_effect_scale="3.01"
+     event_5_spawn_effect_offset_z="-79.96"
+     event_5_command_word="run_script"
+     event_5_command_word_key_values="{{SCRIPT,|Q|script|Q|,|Q|Actor_SetActorFlag(so_self, |BS||Q|ONLY_VISIBLE_IN_EDITOR|BS||Q|, true)|SC||Q|}}"
+     event_6_trigger_time="1.12"
+     event_6_id="zap_top2"
+     event_6_effect="effects/teleport-actor-disappears.xml"
+     event_6_spawn_effect_offset_z="-103.97"
+     event_7_trigger_time="1.72"
+     event_7_id="zap_top3"
+     event_7_effect="effects/teleport-actor-disappears.xml"
+     event_7_spawn_effect_scale="0.5"
+     event_7_spawn_effect_offset_z="-57.47"
+    />
+
+    <node id="appear"
+     forced_animation_length_in_seconds="2.00"
+     event_0_trigger_time="0"
+     event_0_id="zap1"
+     event_0_effect="effects/teleport-actor-disappears.xml"
+     event_0_spawn_effect_offset_x="77.87"
+     event_0_spawn_effect_offset_y="89.52"
+     event_1_trigger_time="0"
+     event_1_id="hide"
+     event_1_effect="effects/teleport-actor-disappears.xml"
+     event_1_spawn_effect_scale="3.01"
+     event_1_spawn_effect_offset_z="-79.96"
+     event_1_command_word="run_script"
+     event_1_command_word_key_values="{{SCRIPT,|Q|script|Q|,|Q|Actor_SetActorFlag(so_self, |BS||Q|ONLY_VISIBLE_IN_EDITOR|BS||Q|, true)|SC||Q|}}"
+     event_2_trigger_time="0.0753"
+     event_2_id="zap2"
+     event_2_effect="effects/teleport-actor-disappears.xml"
+     event_2_spawn_effect_offset_x="-78.64"
+     event_2_spawn_effect_offset_y="89.52"
+     event_3_trigger_time="0.125"
+     event_3_id="zap_top1"
+     event_3_effect="effects/teleport-actor-disappears.xml"
+     event_3_spawn_effect_offset_z="-251.13"
+     event_4_trigger_time="0.159"
+     event_4_id="zap3"
+     event_4_effect="effects/teleport-actor-disappears.xml"
+     event_4_spawn_effect_offset_x="-78.64"
+     event_4_spawn_effect_offset_y="-89.52"
+     event_5_trigger_time="0.257"
+     event_5_id="zap4"
+     event_5_effect="effects/teleport-actor-disappears.xml"
+     event_5_spawn_effect_offset_x="78.64"
+     event_5_spawn_effect_offset_y="-89.52"
+     event_6_trigger_time="0.89"
+     event_6_id="zap_huge"
+     event_6_effect="effects/teleport-actor-appears.xml"
+     event_6_sound_event="{{BOOLEAN,|Q|play_as_positional|Q|,|Q|false|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/drop-the-bass|Q|}}"
+     event_6_spawn_effect_scale="3.01"
+     event_6_spawn_effect_offset_z="-79.96"
+     event_6_command_word="run_script"
+     event_6_command_word_key_values="{{SCRIPT,|Q|script|Q|,|Q|Actor_SetActorFlag(so_self, |BS||Q|ONLY_VISIBLE_IN_EDITOR|BS||Q|, false)|SC||Q|}}"
+     event_7_trigger_time="1.12"
+     event_7_id="zap_top2"
+     event_7_effect="effects/teleport-actor-disappears.xml"
+     event_7_spawn_effect_offset_z="-103.97"
+     event_8_trigger_time="1.72"
+     event_8_id="zap_top3"
+     event_8_effect="effects/teleport-actor-disappears.xml"
+     event_8_spawn_effect_scale="0.5"
+     event_8_spawn_effect_offset_z="-57.47"
+    />
+
+    <node id="door_open" animation_controller="Playback" skeleton_animation="models/animations/escapepod-rig-volunteer_enter-escapepod.anim" />
+    <node id="door_close" animation_controller="PlaybackReversed" skeleton_animation="models/animations/escapepod-rig-volunteer_enter-escapepod.anim" />
+    <node id="engine_warmup" script="function OnUpdate(so_actor, time_key, length)&#10;{&#10;&#9;local so = StageObject_GetKeyValue(so_actor, &#34;light_0&#34;);&#10;&#9;if (so == null)&#10;&#9;&#9;return;&#10;&#9;Light_SetIntensity(so, 2+2*cos(2*PI*time_key/length));&#10;}" wrap_mode="LOOP" forced_animation_length_in_seconds="1.00" />
+    <node id="engine_warmup_start"
+     script="function OnUpdate(so_actor, time_key, length)&#10;{&#10;&#9;local so = StageObject_GetKeyValue(so_actor, &#34;light_0&#34;);&#10;&#9;if (so == null)&#10;&#9;&#9;return;&#10;&#9;Light_SetIntensity(so, 2*(time_key/length));&#10;}"
+     keep_on_stack_top="true"
+     forced_animation_length_in_seconds="5.00"
+     event_0_trigger_time="0"
+     event_0_id="sfx-liftoff"
+     event_0_sound_event="{{FLOAT,|Q|play_duration|Q|,|Q|4|Q|},{FLOAT,|Q|fade_out_duration|Q|,|Q|1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/escape-pod-liftoff|Q|}}"
+     event_1_trigger_time="0.0407"
+     event_1_id="blast_start_1"
+     event_1_ignore_bone_orientation="true"
+     event_1_effect="effects/steam-burst.xml"
+     event_1_spawn_effect_offset_z="-20.00"
+     event_2_trigger_time="0.0608"
+     event_2_id="blast_start_2"
+     event_2_ignore_bone_orientation="true"
+     event_2_effect="effects/steam-burst.xml"
+     event_2_spawn_effect_angle_z="90.00"
+     event_2_spawn_effect_offset_z="-20.00"
+     event_3_trigger_time="0.0855"
+     event_3_id="blast_start_3"
+     event_3_ignore_bone_orientation="true"
+     event_3_effect="effects/steam-burst.xml"
+     event_3_spawn_effect_angle_z="180.00"
+     event_3_spawn_effect_offset_z="-20.00"
+     event_4_trigger_time="0.1"
+     event_4_id="sfx-air"
+     event_4_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.6,0.6|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.6,0.6|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/fuel-cell-install-air|Q|}}"
+     event_5_trigger_time="0.115"
+     event_5_id="blast_start_4"
+     event_5_ignore_bone_orientation="true"
+     event_5_effect="effects/steam-burst.xml"
+     event_5_spawn_effect_angle_z="270.00"
+     event_5_spawn_effect_offset_z="-20.00"
+     event_6_trigger_time="3.6"
+     event_6_id="sfx-sparks"
+     event_6_sound_event="{{FLOAT,|Q|play_duration|Q|,|Q|1.4|Q|},{FLOAT,|Q|fade_out_duration|Q|,|Q|1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-electric-discharge|Q|}}"
+     event_7_trigger_time="3.6"
+     event_7_id="sfx-explosion"
+     event_7_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/explosion-electric|Q|}}"
+    />
+
+    <node id="engine_warmup_fail"
+     wrap_mode="LOOP"
+     forced_animation_length_in_seconds="1.00"
+     event_0_trigger_time="0"
+     event_0_id="sfx-power-sparks"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1.1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/mech-electric-discharge|Q|}}"
+     event_1_trigger_time="0.0407"
+     event_1_id="spark"
+     event_1_ignore_bone_orientation="true"
+     event_1_effect="effects/boss-sparks-small.xml"
+     event_1_sound_event="{{FLOAT,|Q|delay_random|Q|,|Q|0.3|Q|},{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|1,1.1|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|600,1400|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/power-spark-01|Q|}}"
+     event_1_spawn_effect_scale="0.55"
+     event_1_spawn_effect_offset_x="-2.37"
+     event_1_spawn_effect_offset_y="65.87"
+     event_1_spawn_effect_offset_z="-78.94"
+     event_2_trigger_time="0.129"
+     event_2_id="spark2"
+     event_2_ignore_bone_orientation="true"
+     event_2_effect="effects/boss-sparks-small.xml"
+     event_2_spawn_effect_scale="0.66"
+     event_2_spawn_effect_offset_x="-2.37"
+     event_2_spawn_effect_offset_y="64.58"
+     event_2_spawn_effect_offset_z="-86.03"
+     event_3_trigger_time="0.689"
+     event_3_id="spark4"
+     event_3_ignore_bone_orientation="true"
+     event_3_effect="effects/boss-sparks-small.xml"
+     event_3_sound_event="{{FLOAT,|Q|delay_random|Q|,|Q|0.3|Q|},{FLOAT2,|Q|volume_range|Q|,|Q|0.5,0.5|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|1,1.1|Q|},{FLOAT2,|Q|radius_inner_outer|Q|,|Q|600,1400|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/power-spark-01|SC|sfx/power-spark-02|SC|sfx/power-spark-03|Q|}}"
+     event_3_spawn_effect_scale="0.55"
+     event_3_spawn_effect_offset_x="-2.37"
+     event_3_spawn_effect_offset_y="65.87"
+     event_3_spawn_effect_offset_z="-78.94"
+     event_4_trigger_time="0.889"
+     event_4_id="spark3"
+     event_4_ignore_bone_orientation="true"
+     event_4_effect="effects/boss-sparks-small.xml"
+     event_4_spawn_effect_scale="0.56"
+     event_4_spawn_effect_offset_x="-2.37"
+     event_4_spawn_effect_offset_y="66.24"
+     event_4_spawn_effect_offset_z="-62.21"
+    />
+
+    <node id="engine_liftoff"
+     script="function OnUpdate(so_actor, time_key, length)&#10;{&#10;&#9;local so = StageObject_GetKeyValue(so_actor, &#34;light_0&#34;);&#10;&#9;if (so == null)&#10;&#9;&#9;return;&#10;&#9;Light_SetIntensity(so, 2+2*cos(2*PI*time_key/length));&#10;}"
+     wrap_mode="LOOP"
+     forced_animation_length_in_seconds="1.00"
+     event_0_trigger_time="0"
+     event_0_id="thrust_1"
+     event_0_effect="effects/escape-pod-engine-thrust.xml"
+     event_1_trigger_time="0.522"
+     event_1_id="thrust_2"
+     event_1_effect="effects/escape-pod-engine-thrust.xml"
+    />
+
+    <node id="engine_liftoff_start"
+     script="function OnUpdate(so_actor, time_key, length)&#10;{&#10;&#9;local so = StageObject_GetKeyValue(so_actor, &#34;light_0&#34;);&#10;&#9;if (so == null)&#10;&#9;&#9;return;&#10;&#9;Light_SetIntensity(so, 2*(time_key/length));&#10;}"
+     keep_on_stack_top="true"
+     forced_animation_length_in_seconds="2.00"
+     event_0_trigger_time="0"
+     event_0_id="sfx-air"
+     event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.6,0.6|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.6,0.6|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/fuel-cell-install-air|Q|}}"
+     event_1_trigger_time="0.0407"
+     event_1_id="blast_start_1"
+     event_1_ignore_bone_orientation="true"
+     event_1_effect="effects/steam-burst.xml"
+     event_1_spawn_effect_offset_z="-20.00"
+     event_2_trigger_time="0.0608"
+     event_2_id="blast_start_2"
+     event_2_ignore_bone_orientation="true"
+     event_2_effect="effects/steam-burst.xml"
+     event_2_spawn_effect_angle_z="90.00"
+     event_2_spawn_effect_offset_z="-20.00"
+     event_3_trigger_time="0.0855"
+     event_3_id="blast_start_3"
+     event_3_ignore_bone_orientation="true"
+     event_3_effect="effects/steam-burst.xml"
+     event_3_spawn_effect_angle_z="180.00"
+     event_3_spawn_effect_offset_z="-20.00"
+     event_4_trigger_time="0.115"
+     event_4_id="blast_start_4"
+     event_4_ignore_bone_orientation="true"
+     event_4_effect="effects/steam-burst.xml"
+     event_4_spawn_effect_angle_z="270.00"
+     event_4_spawn_effect_offset_z="-20.00"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacleSkinned" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="8" />
+    <node id="shadow_alpha" value="0.4" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="model" value="models/interactives/escapepod.model" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_quest_fixes_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-quest-fixes-on-game-start-escape-pod.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="MESH" />
+    <node id="model" value="models/interactives/escapepod-collider.model" />
+    <node id="min_z" value="-234.0" />
+    <node id="max_z" value="0.0" />
+    <node id="is_closed" value="1" />
+  </array>
+
+  <array id="COLLIDER_EDGES">
+    <node px0="35.02" py0="-48.00" px1="77.77" py1="-82.98" />
+    <node px0="82.98" py0="77.77" px1="77.77" py1="82.98" />
+    <node px0="-82.98" py0="77.77" px1="-48.00" py1="35.02" />
+    <node px0="-48.00" py0="-35.02" px1="-82.98" py1="-77.77" />
+    <node px0="-77.77" py0="82.98" px1="-82.98" py1="77.77" />
+    <node px0="-82.98" py0="-77.77" px1="-77.77" py1="-82.98" />
+    <node px0="77.77" py0="-82.98" px1="82.98" py1="-77.77" />
+    <node px0="82.98" py0="-77.77" px1="48.00" py1="-35.02" />
+    <node px0="-35.02" py0="48.00" px1="-77.77" py1="82.98" />
+    <node px0="48.00" py0="35.02" px1="82.98" py1="77.77" />
+    <node px0="-77.77" py0="-82.98" px1="-35.02" py1="-48.00" />
+    <node px0="77.77" py0="82.98" px1="35.02" py1="48.00" />
+    <node px0="-48.00" py0="35.02" px1="-60.00" py1="10.61" />
+    <node px0="-60.00" py0="10.61" px1="-60.00" py1="-10.61" />
+    <node px0="-60.00" py0="-10.61" px1="-48.00" py1="-35.02" />
+    <node px0="35.02" py0="48.00" px1="10.61" py1="60.00" />
+    <node px0="10.61" py0="60.00" px1="-10.61" py1="60.00" />
+    <node px0="-10.61" py0="60.00" px1="-35.02" py1="48.00" />
+    <node px0="-35.02" py0="-48.00" px1="-10.61" py1="-60.00" />
+    <node px0="-10.61" py0="-60.00" px1="10.61" py1="-60.00" />
+    <node px0="10.61" py0="-60.00" px1="35.02" py1="-48.00" />
+    <node px0="48.00" py0="-35.02" px1="60.00" py1="-10.61" />
+    <node px0="60.00" py0="-10.61" px1="60.00" py1="10.61" />
+    <node px0="60.00" py0="10.61" px1="48.00" py1="35.02" />
+  </array>
+
+</root>

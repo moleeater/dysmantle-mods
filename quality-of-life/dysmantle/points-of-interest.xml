@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="TYPES">
+    <node id="ACTOR_MARKER" name="" icon="map/icon-lock.png" show_in_map="false" discover_range="0" show_in_collection="false" />
+    <node id="QUEST" name="Quest" icon="map/icon-quest.png" default_actor_type="actors/interactives/quest-trigger.xml" hide_on_map_when_completed="true" />
+    <node id="CAMPFIRE" name="Campfire" icon="map/icon-campfire.png" default_actor_type="actors/objects/campfire.xml" />
+    <node id="WISHING_WELL" name="Wishing Well" icon="map/icon-wishing-well.png" default_actor_type="actors/interactives/wishing-well.xml" />
+    <node id="LINK_TOWER" name="Link Tower" icon="map/icon-link-tower.png" default_actor_type="actors/interactives/link-tower.xml" />
+    <node id="LINK_RELAY" name="Link Relay" icon="map/icon-link-relay.png" default_actor_type="actors/interactives/link-relay.xml" />
+    <node id="SHELTER_LOUDSPEAKER" name="Shelter Loudspeaker" icon="map/icon-shelter-loudspeaker.png" default_actor_type="actors/interactives/evac-shelter-loudspeaker.xml" />
+    <node id="TERMINAL" name="Terminal" icon="map/icon-terminal.png" default_actor_type="actors/interactives/interaction-terminal.xml" />
+    <node id="RADIO" name="Radio" icon="map/icon-radio.png" default_actor_type="actors/objects/home-radio-portable.xml" hide_on_map_when_completed="true" />
+    <node id="AUDIO_LOG" name="Audio Log" icon="map/icon-audio-log.png" default_actor_type="actors/interactives/tape-recorder.xml" hide_on_map_when_completed="true" />
+    <node id="TOMB" name="Tomb" icon="map/icon-tomb.png" default_actor_type="actors/objects/tomb-entrance-on-ground.xml" />
+    <node id="MYTH_TABLET" name="Myth Tablet" icon="map/icon-myth-tablet.png" default_actor_type="actors/interactives/myth-stone-tablet.xml" />
+    <node id="ARENA_OBELISK" name="Obelisk" icon="map/icon-arena-obelisk.png" default_actor_type="actors/interactives/arena-obelisk.xml" />
+    <node id="TIMED_CHEST" name="Timed Crate" icon="map/icon-chest.png" default_actor_type="actors/interactives/timed-crate.xml" />
+    <node id="FABRICATOR" name="Fabricator" icon="map/icon-fabricator.png" default_actor_type="actors/interactives/fabricator.xml" />
+    <node id="SHELTER" name="Shelter" icon="map/icon-hatch.png" default_actor_type="actors/objects/shelter-entry-hatch.xml" />
+    <node id="LOCKED_DOOR" name="Locked Door" icon="map/icon-lock.png" hide_on_map_when_completed="true" />
+    <node id="BURIED_TREASURE" name="Buried Treasure" icon="map/icon-buried-treasure.png" default_actor_type="actors/interactives/buried-treasure.xml" discover_range="0" />
+    <node id="FISHING_SPOT" name="Fishing Spot" icon="map/icon-fishing-spot.png" default_actor_type="actors/interactives/fishing-spot.xml" discover_range="180" />
+    <node id="FUEL_CELL" name="Fuel Cell" icon="map/icon-fuel-cell.png" default_actor_type="actors/interactives/fuel-storage.xml" hide_on_map_when_completed="true" />
+    <node id="ENEMY_NORMAL" name="Enemy" icon="map/icon-enemy.png" default_actor_type="actors/enemies/ex-human-female-melee.xml" show_in_collection="false" show_only_as_dynamic="true" />
+    <node id="ENEMY_STATIONARY" name="Enemy Stationary" icon="map/icon-enemy-stationary.png" default_actor_type="actors/enemies/spikeball.xml" show_in_collection="false" show_only_as_dynamic="true" />
+    <node id="ENEMY_BOSS" name="Enemy Tough" icon="map/icon-boss.png" default_actor_type="actors/enemies/boss-suburb-gatekeeper.xml" show_only_as_dynamic="true" />
+    <node id="ANIMAL" name="Animal" icon="map/icon-enemy.png" default_actor_type="actors/animals/deer.xml" show_in_collection="false" show_only_as_dynamic="true" />
+    <node id="FIXABLE" name="Fixable" icon="map/icon-fixable.png" show_in_collection="true" />
+    <node id="RIFT" name="Mana Rift" icon="map/icon-rift.png" />
+    <node id="ENTRYWAY" name="Entryway" icon="map/icon-entryway.png" />
+    <node id="FARMABLE" name="Farm Plant" icon="map/icon-farmable.png" show_in_collection="false" />
+    <node id="TURRET" name="Turret" icon="map/icon-turret.png" show_in_collection="false" />
+    <node id="BUILT_OBJECT" name="Built Object" icon="map/icon-built-object.png" show_in_collection="false" show_actor_type_name_in_map="true" />
+    <node id="BUILT_OBJECT_WALL" name="Built Object" icon="map/icon-built-object-wall.png" show_in_collection="false" show_actor_type_name_in_map="true" />
+    <node id="BUILT_OBJECT_PLATFORM" name="Built Object" icon="map/icon-built-object-platform.png" show_in_collection="false" show_actor_type_name_in_map="true" />
+    <node id="ENERGY_RELAY" name="Energy Relay" icon="map/icon-energy-relay.png" />
+    <node id="STASH" name="Stash" icon="map/icon-stash.png" discover_range="0" />
+    <node id="MANA_CHAMBER" name="Mana Chamber" icon="map/icon-mana-chamber.png" />
+    <node id="SIGNAL_SOURCE" name="Anomalous Signal" icon="map/icon-unknown.png" show_in_collection="false" hide_on_map_when_completed="true" />
+    <node id="BURIED_TELEPORTER" name="Teleporter" icon="map/icon-teleporter.png" discover_range="0" reveal_only_after_completed="true" show_in_collection="true" requires_iap="DLC3" />
+    <node id="DOGHOUSE" name="Doghouse" icon="map/icon-unknown.png" discover_range="0" show_in_collection="false" requires_iap="DLC3" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="DISMANTLABLE" name="Dismantlable" icon="map/mods/icon-dot-aqua.png" default_actor_type="actors/objects/suburb-grill.xml" show_in_collection="false" show_only_as_dynamic="true" discover_range="1500" hide_on_map_when_completed="true" />
+    <node id="SEARCHABLE" name="Searchable" icon="map/mods/icon-dot-aqua.png" default_actor_type="actors/objects/tomb-chest.xml" show_in_collection="false" show_only_as_dynamic="true" discover_range="1500" />
+    <node id="EXPLOSIVE" name="Explosive" icon="map/mods/icon-dot-aqua.png" default_actor_type="actors/objects/exploding-barrel.xml" show_in_collection="false" show_only_as_dynamic="true" discover_range="1500" hide_on_map_when_completed="true" />
+    <node id="GATHERABLE" name="Gatherable" icon="map/mods/icon-dot-fuchsia.png" default_actor_type="actors/interactives/birdnest.xml" show_in_collection="false" show_only_as_dynamic="true" discover_range="1500" hide_on_map_when_completed="true" />
+    <node id="USABLE" name="Usable" icon="map/mods/icon-dot-aqua.png" default_actor_type="actors/objects/home-kitchen-stove.xml" show_in_collection="false" show_only_as_dynamic="true" discover_range="1500" />
+    <node id="DIGGABLE" name="Diggable" icon="map/mods/icon-dot-fuchsia.png" default_actor_type="actors/objects/gold-ore.xml" show_in_collection="false" show_only_as_dynamic="true" discover_range="1500" hide_on_map_when_completed="true" />
+    <node id="FLOWER_HELICONIA" name="Amber Lily" icon="map/mods/icon-flower-heliconia.png" default_actor_type="actors/objects/tropic-plant-heliconia.xml" show_in_collection="false" discover_range="1000" hide_on_map_when_completed="true" requires_iap="DLC2" />
+    <node id="FLOWER_LILI" name="Frost Lily" icon="map/mods/icon-flower-lili.png" default_actor_type="actors/objects/tropic-plant-lili.xml" show_in_collection="false" discover_range="1000" hide_on_map_when_completed="true" requires_iap="DLC2" />
+    <node id="FLOWER_TIGERLILY" name="Tiger Lily" icon="map/mods/icon-flower-tigerlily.png" default_actor_type="actors/objects/tropic-plant-tigerlily.xml" show_in_collection="false" discover_range="1000" hide_on_map_when_completed="true" requires_iap="DLC2" />
+    <node id="REFINER_SAWMILL" name="Sawmill" icon="map/mods/icon-refiner-sawmill.png" default_actor_type="actors/interactives/sawmill.xml" show_in_collection="false" discover_range="1000" />
+    <node id="REFINER_SMELTER" name="Smelter" icon="map/mods/icon-refiner-smelter.png" default_actor_type="actors/interactives/smelter.xml" show_in_collection="false" discover_range="1000" />
+    <node id="WORKBENCH" name="Workbench" icon="map/icon-workbench.png" default_actor_type="actors/interactives/workbench.xml" show_in_collection="false" show_only_as_dynamic="true" discover_range="1500" />
+    <node id="TRAP" name="Trap" icon="map/mods/icon-dot-orange.png" default_actor_type="actors/tiles/trap-pit-bottom.xml" show_in_collection="false" show_only_as_dynamic="true" discover_range="1500" />
+    <node id="X" name="X" icon="map/mods/icon-x.png" default_actor_type="actors/mods/mod-mark-chunk-poi.xml" show_in_collection="false" show_only_as_dynamic="true" discover_range="2500" />
+    <node id="VORTEX_BLUE" name="Vortex" icon="map/mods/icon-vortex-blue.png" default_actor_type="actors/mods/mod-rift-forwards-cursor.xml" show_in_collection="false" show_only_as_dynamic="true" discover_range="2500" />
+    <node id="FAKE_ENTRYWAY" name="Entryway" icon="map/icon-entryway.png" default_actor_type="actors/interactives/stage-leave-enter-trigger.xml" show_in_collection="false" />
+    <node id="FAKE_FIXABLE" name="Fixable" icon="map/icon-fixable.png" default_actor_type="actors/objects/drawbridge.xml" show_in_collection="false" />
+    <node id="ENEMY_NIGHTTERROR" name="Night Terror" icon="map/mods/icon-enemy-nightterror.png" default_actor_type="actors/enemies/night-terror-mana-spirit.xml" show_in_collection="false" discover_range="1000" />
+    <node id="RECIPE_DISH" name="Dish recipe" icon="map/mods/icon-recipe-dish.png" default_actor_type="actors/objects/suburb-plastic-box.xml" show_in_collection="false" hide_on_map_when_completed="true" discover_range="1000" />
+    <node id="RECIPE" name="Recipe" icon="map/mods/icon-recipe.png" default_actor_type="actors/objects/car_van.xml" show_in_collection="false" hide_on_map_when_completed="true" discover_range="1000" />
+    <node id="KEY" name="Key" icon="map/mods/icon-key.png" default_actor_type="actors/objects/home-toilet-seat.xml" show_in_collection="false" hide_on_map_when_completed="true" discover_range="1000" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="stages/tombs/tomb-hiding-in-the-shadows.xml">
+    <node type="ENTRYWAY" puid="28" actor_type="actors/objects/tomb-exit.xml" pos="660;1200;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="214" actor_type="actors/enemies/tomb-guard.xml" pos="575;1591;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="321" actor_type="actors/enemies/tomb-guard.xml" pos="1620;1737;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="322" actor_type="actors/enemies/tomb-guard.xml" pos="1377;2038;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="405" actor_type="actors/enemies/tomb-guard.xml" pos="1025;783;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="437" actor_type="actors/enemies/tomb-guard.xml" pos="715;537;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="473" actor_type="actors/enemies/tomb-guard.xml" pos="1259;778;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="474" actor_type="actors/enemies/tomb-guard.xml" pos="1733;599;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="475" actor_type="actors/enemies/tomb-guard.xml" pos="1740;300;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/tombs/unused/tomb-guardian-dodge.xml">
+    <node type="ENTRYWAY" puid="50" actor_type="actors/objects/tomb-exit.xml" pos="660;1200;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="440" actor_type="actors/enemies/tomb-guard.xml" pos="550;1960;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="441" actor_type="actors/enemies/tomb-guard.xml" pos="642;1917;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="442" actor_type="actors/enemies/tomb-guard.xml" pos="854;1889;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="443" actor_type="actors/enemies/tomb-guard.xml" pos="967;1939;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="444" actor_type="actors/enemies/tomb-guard.xml" pos="1000;1734;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="445" actor_type="actors/enemies/tomb-guard.xml" pos="1119;1668;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="446" actor_type="actors/enemies/tomb-guard.xml" pos="900;1530;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="447" actor_type="actors/enemies/tomb-guard.xml" pos="543;1621;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="448" actor_type="actors/enemies/tomb-guard.xml" pos="620;1520;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="449" actor_type="actors/enemies/tomb-guard.xml" pos="809;873;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="450" actor_type="actors/enemies/tomb-guard.xml" pos="546;854;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="451" actor_type="actors/enemies/tomb-guard.xml" pos="630;673;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="452" actor_type="actors/enemies/tomb-guard.xml" pos="546;507;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="453" actor_type="actors/enemies/tomb-guard.xml" pos="709;434;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="454" actor_type="actors/enemies/tomb-guard.xml" pos="852;603;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="455" actor_type="actors/enemies/tomb-guard.xml" pos="1001;636;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="456" actor_type="actors/enemies/tomb-guard.xml" pos="954;563;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="457" actor_type="actors/enemies/tomb-guard.xml" pos="974;412;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="458" actor_type="actors/enemies/tomb-guard.xml" pos="1162;486;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-arcturus.xml">
+    <node type="ENEMY_NORMAL" puid="22604" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1819;1799;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22605" pos="2084;513;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22606" pos="1913;438;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22607" pos="548;664;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22608" pos="635;1217;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22609" actor_type="actors/enemies/ex-human-male-melee.xml" pos="909;1412;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22611" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2084;2088;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22612" actor_type="actors/enemies/ex-human-stalker.xml" pos="2011;966;53" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22631" actor_type="actors/enemies/ex-human-puker.xml" pos="996;1646;0" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="shelter_arcturus_underground" puid="22632" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/island/index.xml" pos="240;1200;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-borealis.xml">
+    <node type="ENEMY_NORMAL" puid="20573" actor_type="actors/enemies/ex-human-puker.xml" pos="1389;429;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="20577" pos="888;1617;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="20578" pos="994;1980;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="20579" pos="1305;1898;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="20581" pos="1834;1127;120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="20582" pos="1397;1146;120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="20583" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1799;1250;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="20584" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1907;514;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="20586" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="793;1987;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="20587" pos="1030;547;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="20588" pos="1157;349;0" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="shelter_borealis_underground" puid="20602" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/island/index.xml" pos="480;240;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-everglade.xml">
+    <node type="ENEMY_STATIONARY" puid="5167" actor_type="actors/enemies/mortarpod.xml" pos="1249;866;0" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="5168" actor_type="actors/enemies/mortarpod.xml" pos="1871;477;0" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="5169" pos="1273;1065;0" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="5171" actor_type="actors/enemies/mortarpod.xml" pos="1158;1770;240" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="5172" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1483;1104;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="5174" actor_type="actors/enemies/ex-human-stalker.xml" pos="1543;1747;240" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="5175" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1032;1752;240" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="5180" actor_type="actors/enemies/ex-human-male-melee.xml" pos="717;592;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="5181" pos="1907;191;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="5182" pos="2121;397;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="5183" pos="1790;435;0" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="shelter_everglade_underground" puid="5196" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/island/index.xml" pos="240;1260;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="5198" actor_type="actors/enemies/ex-human-puker.xml" pos="1127;1252;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-frore.xml">
+    <node type="ENTRYWAY" so_id="shelter_frore_underground" puid="377" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/island/index.xml" pos="1260;120;0" chunk="0" area="-1" />
+    <node type="RADIO" puid="616" pos="1537;1106;-47" chunk="0" area="-1" />
+    <node type="RADIO" puid="682" pos="1112;1709;-48" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="906" pos="277;1647;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="907" pos="451;1643;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="908" pos="396;1973;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="909" actor_type="actors/enemies/ex-human-puker.xml" pos="1329;1915;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="910" actor_type="actors/enemies/ex-human-puker.xml" pos="387;714;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="911" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" pos="1903;822;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="912" actor_type="actors/enemies/ex-human-male-melee.xml" pos="353;1145;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="913" pos="314;332;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="914" pos="629;414;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="915" pos="2047;1968;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="916" pos="1643;1859;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="917" pos="1789;1633;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="918" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="747;1529;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-hedgefield.xml">
+    <node type="ENTRYWAY" so_id="shelter_hedgefield_underground" puid="31883" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/island/index.xml" pos="1200;240;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-polaris.xml">
+    <node type="RADIO" puid="32510" pos="561;672;-47" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="32655" actor_type="actors/enemies/ex-human-stalker.xml" pos="1487;627;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="32656" actor_type="actors/enemies/ex-human-stalker.xml" pos="651;1180;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="32657" actor_type="actors/enemies/ex-human-stalker.xml" pos="1223;1588;120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="32658" actor_type="actors/enemies/ex-human-puker.xml" pos="797;1574;120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="32659" actor_type="actors/enemies/ex-human-puker.xml" pos="1075;1973;120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="32660" actor_type="actors/enemies/ex-human-male-melee.xml" pos="544;957;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="32661" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1549;1270;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="32662" pos="965;683;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="32663" pos="626;796;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="32664" pos="1338;1266;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="32665" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1076;1167;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="32666" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1778;1629;0" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="shelter_polaris_underground" puid="32668" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/island/index.xml" pos="1200;240;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-sunburn-desert.xml">
+    <node type="ENEMY_NORMAL" puid="12698" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1714;631;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="12699" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="488;1078;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="12700" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1773;1421;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="12701" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" pos="1394;1178;120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="12702" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" pos="1074;1174;120" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="shelter_sunburn-desert_undergorund" puid="12713" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/island/index.xml" pos="1230;240;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-vulcan.xml">
+    <node type="ENEMY_NORMAL" puid="29515" actor_type="actors/enemies/ex-human-stalker.xml" pos="825;2530;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29516" pos="1364;1870;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29517" pos="2014;831;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29518" pos="656;1237;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29519" pos="1588;1436;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29520" pos="601;1718;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29521" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1021;1625;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29522" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1031;2068;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29524" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="720;1134;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29525" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1620;2586;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29526" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1479;2344;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29527" pos="1635;1575;0" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="shelter_vulcan_underground" puid="29530" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/island/index.xml" pos="1200;600;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="res://data/stages/shelters/shelter-arcturus.xml">
+    <node type="ENEMY_NORMAL" puid="22604" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1819;1799;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22605" pos="2084;513;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22606" pos="1913;438;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22607" pos="548;664;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22608" pos="635;1217;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22609" actor_type="actors/enemies/ex-human-male-melee.xml" pos="909;1412;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22611" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2084;2088;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22612" actor_type="actors/enemies/ex-human-stalker.xml" pos="2011;966;53" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22631" actor_type="actors/enemies/ex-human-puker.xml" pos="994;1656;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-arcturus_2.xml">
+    <node type="ENEMY_NORMAL" puid="22604" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1819;1799;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22605" pos="2084;513;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22606" pos="1913;438;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22607" pos="548;664;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22608" pos="635;1217;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22609" actor_type="actors/enemies/ex-human-male-melee.xml" pos="909;1412;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22611" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2084;2088;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22612" actor_type="actors/enemies/ex-human-stalker.xml" pos="2011;966;53" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="22631" actor_type="actors/enemies/ex-human-puker.xml" pos="994;1656;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/special/pyramid-tomb.stage">
+    <node type="ENTRYWAY" so_id="pyramid_tomb_entrance" puid="33" actor_type="actors/objects/tomb-exit.xml" pos="1800;1980;-180" chunk="0" area="-1" />
+    <node type="MYTH_TABLET" puid="1832" parm="MYTH_TOMB_01" pos="1800;3030;-60" chunk="0" area="-1" />
+    <node type="MYTH_TABLET" puid="1833" parm="MYTH_TOMB_02" pos="2190;3600;60" chunk="0" area="-1" />
+    <node type="MYTH_TABLET" puid="1834" parm="MYTH_TOMB_03" pos="1413;3602;56" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/special/the-ark-level-2.stage">
+    <node type="ENTRYWAY" so_id="entrance_1" puid="97" actor_type="actors/interactives/elevator-lift-platform.xml" parm="stages/special/the-ark.stage" pos="540;2340;0" chunk="0" area="-1" />
+    <node type="LOCKED_DOOR" puid="819" actor_type="actors/tiles/wall-powerplant-outer-door.xml" parm="ARK_LAB_KEY" pos="1560;600;0" chunk="0" area="-1" />
+    <node type="LOCKED_DOOR" puid="898" actor_type="actors/tiles/wall-powerplant-outer-door.xml" parm="ARK_LAB_KEY" pos="1680;1260;0" chunk="0" area="-1" />
+    <node type="FABRICATOR" puid="954" pos="1829;221;0" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="entrance_level_2_secret" puid="72976" actor_type="actors/interactives/elevator-lift-platform.xml" parm="stages/special/the-ark-level-3.stage" pos="1860;1920;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/special/launchpad-tunnel.xml">
+    <node type="ENTRYWAY" so_id="entrance_launchpad_tunnel_south" puid="243" actor_type="actors/interactives/stage-leave-enter-trigger.xml" parm="stages/island/index.xml" pos="1440;1800;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="382" actor_type="actors/enemies/ex-human-leaper.xml" pos="2303;737;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="383" actor_type="actors/enemies/ex-human-leaper.xml" pos="2198;1057;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="384" actor_type="actors/enemies/ex-human-stalker.xml" pos="2565;893;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="394" actor_type="actors/enemies/ex-human-puker.xml" pos="1611;397;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="395" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" pos="1623;484;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="427" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1118;1004;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="428" actor_type="actors/enemies/ex-human-male-melee.xml" pos="982;1168;0" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="entrance_launchpad_tunnel_west" puid="454" actor_type="actors/interactives/stage-leave-enter-trigger.xml" parm="stages/island/index.xml" pos="390;1019;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/special/catacombs-2.stage">
+    <node type="ENTRYWAY" so_id="catacombs_doorway" puid="333" actor_type="actors/interactives/stage-leave-enter-trigger.xml" parm="stages/dlc1/index.xml" pos="3847;4145;236" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="catacombs_entrance" puid="571" actor_type="actors/objects/tomb-exit.xml" parm="stages/special/catacombs-midway-1.stage" pos="1200;3900;-420" chunk="0" area="-1" />
+    <node type="MYTH_TABLET" so_id="CATACOMBS_TABLET_01" puid="573" parm="MYTH_CATACOMBS_01" pos="2340;300;240" chunk="0" area="-1" />
+    <node type="MYTH_TABLET" so_id="CATACOMBS_TABLET_02" puid="574" parm="MYTH_CATACOMBS_02" pos="3720;1050;0" chunk="0" area="-1" />
+    <node type="MYTH_TABLET" so_id="CATACOMBS_TABLET_03" puid="575" parm="MYTH_CATACOMBS_03" pos="5250;1890;0" chunk="0" area="-1" />
+    <node type="SIGNAL_SOURCE" puid="579" actor_type="actors/interactives/mana-portal.xml" pos="3841;4277;-70" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/special/catacombs-1.stage">
+    <node type="ENTRYWAY" so_id="catacombs_doorway" puid="377" actor_type="actors/interactives/stage-leave-enter-trigger.xml" parm="stages/dlc1/index.xml" pos="2767;4566;236" chunk="0" area="-1" />
+    <node type="QUEST" puid="1328" parm="quests/dlc_1_main.nut" pos="2400;1920;0" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="catacombs_entrance" puid="1372" actor_type="actors/objects/tomb-exit.xml" parm="stages/special/catacombs-midway-1.stage" pos="2372;2066;0" chunk="0" area="-1" />
+    <node type="MYTH_TABLET" so_id="CATACOMBS_TABLET_01" puid="1374" parm="MYTH_CATACOMBS_01" pos="779;1801;60" chunk="0" area="-1" />
+    <node type="MYTH_TABLET" so_id="CATACOMBS_TABLET_02" puid="1375" parm="MYTH_CATACOMBS_02" pos="2550;180;0" chunk="0" area="-1" />
+    <node type="MYTH_TABLET" so_id="CATACOMBS_TABLET_03" puid="1376" parm="MYTH_CATACOMBS_03" pos="4350;2010;0" chunk="0" area="-1" />
+    <node type="SIGNAL_SOURCE" puid="1386" actor_type="actors/interactives/mana-portal.xml" pos="2762;4697;-70" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/special/catacombs-midway-1.stage">
+    <node type="SIGNAL_SOURCE" so_id="catacombs_midway_entrance" puid="16" actor_type="actors/objects/tomb-entrance-catacombs.xml" pos="1350;1530;150" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="catacombs_entrance" puid="233" actor_type="actors/objects/tomb-exit.xml" parm="stages/island/index.xml" pos="420;1410;-240" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-underworld.stage">
+    <node type="TERMINAL" puid="673" pos="2100;2790;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1023" actor_type="actors/enemies/mana-spirit.xml" pos="548;1687;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1024" actor_type="actors/enemies/mana-spirit.xml" pos="1056;1744;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1404" pos="1215;2888;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1405" pos="731;2459;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1406" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1059;2698;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1407" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2648;1801;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1408" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="3113;2256;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1409" actor_type="actors/enemies/ex-human-male-mana-melee.xml" pos="3195;1936;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1410" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2807;1330;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1411" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="1760;464;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1412" actor_type="actors/enemies/ex-human-mana-puker.xml" pos="2195;995;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1413" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="3369;264;120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1425" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2263;713;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1426" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="1145;696;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1427" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1134;402;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1428" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="1890;2309;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1429" actor_type="actors/enemies/ex-human-mana-stalker.xml" pos="2718;3067;120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1513" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2403;2618;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1514" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2019;2024;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1515" actor_type="actors/enemies/ex-human-male-melee.xml" pos="2326;2315;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1516" actor_type="actors/enemies/ex-human-male-mana-melee.xml" pos="3005;2718;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1517" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="1334;2713;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1518" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="882;2149;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1519" pos="2001;1376;60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1520" actor_type="actors/enemies/ex-human-male-melee.xml" pos="2473;442;60" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="shelter_underworld_underground" puid="1786" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/dlc1/index.xml" pos="300;120;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-nona.stage">
+    <node type="ENTRYWAY" so_id="shelter_nona_underground" puid="662" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/dlc2/index.xml" pos="1380;480;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/tests/antti_test.stage">
+    <node type="RADIO" puid="78176" pos="1539;1160;-66" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="49256914" pos="1199;1190;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="147774351" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1489;1503;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="147774352" pos="1646;1319;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/tests/antti_brokenjungleroad.stage">
+    <node type="ENEMY_NORMAL" puid="29552" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="3358;2461;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29553" pos="2375;3761;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29555" pos="3045;3390;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="29557" pos="3769;670;-0" chunk="0" area="-1" />
+    <node type="RADIO" puid="31271" pos="3516;2640;-103" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="29930" pos="2338;2864;-60" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="29931" pos="3211;3474;-60" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="29932" pos="3353;1759;0" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="29933" pos="2526;1875;0" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="29934" pos="1632;1414;0" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="29935" pos="2215;4138;0" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="30653" pos="3213;3803;-60" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="30654" pos="3583;3846;-60" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="30655" pos="1674;2707;-60" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="30656" pos="1453;2632;-60" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="30657" pos="1854;1745;0" chunk="0" area="-1" />
+    <node type="ENEMY_STATIONARY" puid="30658" pos="2476;1333;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="30660" pos="2568;2845;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="30661" pos="2515;2307;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="493941557" pos="3965;1107;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="493941558" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1622;3797;-0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-decima.stage">
+    <node type="ENTRYWAY" so_id="shelter_nona_underground" puid="411" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/dlc2/index.xml" pos="300;2640;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-morta.stage">
+    <node type="ENTRYWAY" so_id="SHELTER_MORTA_LADDER" puid="290" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/dlc2/index.xml" pos="1320;2520;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/surreal-shelter.stage">
+    <node type="RADIO" puid="30" actor_type="actors/objects/home-radio-surreal-shelter.xml" pos="715;915;14" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="shelter_surreal" puid="149" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/island/index.xml" pos="360;630;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/special/the-ark-level-3.stage">
+    <node type="ENTRYWAY" so_id="entrance_1" puid="40" actor_type="actors/interactives/elevator-lift-platform.xml" parm="stages/special/the-ark-level-2.stage" pos="1680;2640;0" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="entrance_level_4" puid="1591" actor_type="actors/interactives/elevator-lift-platform.xml" parm="stages/special/the-ark-level-4.stage" pos="960;2640;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-placeholder.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="22" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="1170;2310;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-1-tomb.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="22" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="1080;1890;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-tomb-3-runandbox-long.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="22" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="480;930;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-shelter-2-light.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="17" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="1140;2790;60" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="34" actor_type="actors/objects/dog-house.xml" pos="1033;2632;60" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-outside-2-box-shoot-fight.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="22" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2280;3150;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="1469" actor_type="actors/objects/drawbridge.xml" pos="2280;2550;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="140964" actor_type="actors/objects/drawbridge.xml" pos="3030;1680;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146249" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2090;2277;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146292" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1647;1731;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146293" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2179;1099;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146294" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2193;1052;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146297" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2157;1073;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146376" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2151;2280;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146390" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1660;1669;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146391" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1698;1725;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146392" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2235;1073;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146406" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2595;2307;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146407" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2500;2300;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146408" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2603;2262;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146409" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2551;2253;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146410" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2541;2284;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="146411" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2492;2256;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-shelter-3-light.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="8" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="1320;2310;60" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="25" actor_type="actors/objects/dog-house.xml" pos="1213;2152;60" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-outside-3-box-doors-fight_v2.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="22" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="1170;3150;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="1469" actor_type="actors/objects/drawbridge.xml" pos="1650;3030;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="145125" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2421;3330;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="145126" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2245;3390;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="145127" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2601;3389;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="145128" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2750;3398;-0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="2271" actor_type="actors/objects/drawbridge.xml" pos="1140;2580;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="4814" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1740;2070;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="4815" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1975;2133;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="4816" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1709;2229;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="4817" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2156;2316;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="4818" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1918;2268;-0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-hub.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="24" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="3360;3600;-60" chunk="0" area="-1" />
+    <node type="FABRICATOR" so_id="BT_PET_HUB" puid="25" actor_type="actors/interactives/pet-fabricator.xml" pos="3360;3240;-120" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWEREISLAND_1" puid="27" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-fight-3-4doors.stage" pos="3240;4680;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERMIDHILL_1" puid="28" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-fight-4.stage" pos="3360;4740;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERE_2" puid="29" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-petpark-2-box-shoot-fight.stage" pos="3240;2280;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERMIDSE_1" puid="30" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-shelter-6-light-and-treatpath.stage" pos="4320;3600;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERSEMID_1" puid="31" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-fight-1-3doors.stage" pos="3360;4500;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERNWISLAND_1" puid="32" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-fight-6.stage" pos="3480;4560;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERMIDWEST_1" puid="33" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-shelter-3-light.stage" pos="4560;3482;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERSETIP_1" puid="34" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-shelter-1-light-brokensteps.stage" pos="4320;3480;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERSWTIP_1" puid="35" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-shelter-2-light.stage" pos="4440;3420;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERESHORE_1" puid="36" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-petpark-1-box-and-shoot.stage" pos="3479;2279;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERMIDNE_1" puid="37" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-shelter-4-light-box-shoot.stage" pos="4560;3600;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERMIDSW_2" puid="38" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-tomb-1-run-and-box-snow.stage" pos="2280;3420;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERSTIP_1" puid="39" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-tomb-2-brokensteps-and-shoot-hard-snow.stage" pos="2159;3480;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERNWTIP_1" puid="40" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-tomb-3-runandbox-long-snow.stage" pos="2160;3598;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERE_1" puid="41" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-tutorial.stage" pos="2400;3480;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERNETIP_1" puid="42" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-tomb-4-boxmaze-snow.stage" pos="2280;3660;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERNWMID_1" puid="43" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-tomb-6-treatpath-and-boxes.stage" pos="2400;3600;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERNEMID_1" puid="44" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-fight-2-4doors.stage" pos="3240;4560;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERNEISLAND_1" puid="45" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-petpark-4-rotatesnakes-and-box.stage" pos="3360;2460;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERMIDSW_1" puid="46" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-fight-5.stage" pos="3480;4680;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_DLC2_DLC2TOWERB_1" puid="475" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-DLC2-1.stage" pos="4440;2700;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_DLC1_DLC1TOWERA_1" puid="476" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-DLC1-1.stage" pos="4440;4380;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_DLC2_DLC2TOWERC_1" puid="543" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-DLC2-4.stage" pos="4320;2580;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_DLC2_DLC2TOWERD_1" puid="544" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-DLC2-3.stage" pos="4440;2460;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_DLC2_DLC2TOWERA_1" puid="545" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-DLC2-2.stage" pos="4560;2580;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_DLC1_DLC1TOWERC_1" puid="546" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-DLC1-2-mid-maze.stage" pos="4320;4500;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_DLC1_DLC1TOWERB_1" puid="547" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-DLC1-3.stage" pos="4560;4500;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERNEMID_2" puid="967" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-petpark-5-rotatesnakes.stage" pos="3240;2400;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERESHORE_2" puid="985" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-petpark-3-box-doors-fight.stage" pos="3480;2400;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERSEMID_2" puid="986" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-petpark-6-treatpath.stage" pos="3360;2220;-60" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="ENTRY_REWARD_ROOM" puid="1082" actor_type="actors/interactives/elevator-lift-platform.xml" parm="stages/pet-stages/pet-stage-hub-rewardroom.stage" pos="5340;3540;0" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_DLC1_DLC1TOWERC_2" puid="1550" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-DLC1-4.stage" pos="4440;4620;-60" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="entrance_winter" puid="1560" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/dlc3/index.xml" pos="2280;3540;-60" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="entrance_desert" puid="1561" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/dlc3/index.xml" pos="3360;4620;-60" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="entrance_forest" puid="1562" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/dlc3/index.xml" pos="3360;2340;-60" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="entrance_ancient" puid="1563" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/dlc3/index.xml" pos="4440;3540;-60" chunk="0" area="-1" />
+    <node type="BURIED_TELEPORTER" so_id="BT_ISLAND_TOWERMIDNW_1" puid="1605" actor_type="actors/interactives/buried-teleporter.xml" parm="stages/pet-stages/pet-stage-shelter-5-light-box.stage" pos="4440;3660;-60" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="entrance_dlc2" puid="1606" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/dlc3/index.xml" pos="4441;2580;-60" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="entrance_dlc1" puid="1607" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/dlc3/index.xml" pos="4440;4500;-60" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="entrance_pet_portal" puid="1616" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="3180;3780;-60" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-fight-4.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="11" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="3810;4710;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="12" actor_type="actors/objects/dog-house.xml" pos="3645;4466;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="479" actor_type="actors/animals/vulture.xml" pos="4364;4537;-520" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="480" actor_type="actors/animals/vulture.xml" pos="4731;4943;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="481" actor_type="actors/animals/vulture.xml" pos="4277;5766;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="482" actor_type="actors/animals/vulture.xml" pos="2540;5667;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="483" actor_type="actors/animals/vulture.xml" pos="2723;4340;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="484" actor_type="actors/animals/vulture.xml" pos="2880;2820;-314" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="485" actor_type="actors/animals/vulture.xml" pos="3521;2459;-280" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="486" actor_type="actors/animals/vulture.xml" pos="4693;2185;-148" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="487" actor_type="actors/animals/vulture.xml" pos="4921;3222;-298" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="488" actor_type="actors/animals/vulture.xml" pos="6345;3362;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="489" actor_type="actors/animals/vulture.xml" pos="2557;1515;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="490" actor_type="actors/animals/vulture.xml" pos="1489;3585;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="491" actor_type="actors/animals/vulture.xml" pos="917;6116;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="492" actor_type="actors/animals/vulture.xml" pos="5774;5435;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="543" pos="4296;2561;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="544" pos="3828;2588;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="545" pos="4256;2542;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="546" pos="3896;2584;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="547" pos="3811;2482;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="548" pos="3236;2564;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="549" pos="4192;2588;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="550" pos="3366;2547;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="551" pos="3776;2528;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="552" actor_type="actors/enemies/ex-human-male-melee.xml" pos="4266;2494;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="553" actor_type="actors/enemies/ex-human-male-melee.xml" pos="3319;3777;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="554" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="3648;2580;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="555" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="3723;2578;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="556" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="4240;3783;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="557" actor_type="actors/enemies/ex-human-male-melee.xml" pos="3307;2466;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="558" pos="3905;2500;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="559" pos="3639;2505;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="560" pos="3335;2565;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="561" pos="3280;2558;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="562" pos="4188;2552;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1205" actor_type="actors/animals/vulture.xml" pos="4800;3780;-314" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1506" actor_type="actors/animals/vulture.xml" pos="3886;3140;-280" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1605" pos="3817;2534;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1606" pos="3707;2471;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1607" pos="3701;2535;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1608" pos="3767;2587;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1609" pos="3372;3771;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1610" pos="3270;3769;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1611" pos="3420;3752;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1612" pos="4124;3755;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1613" pos="4279;3756;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1614" pos="4191;3800;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1765" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="3358;3867;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-fight-1-3doors.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="7" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2730;3750;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="8" actor_type="actors/objects/dog-house.xml" pos="2565;3506;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="579" actor_type="actors/animals/vulture.xml" pos="3276;3551;-13" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="580" actor_type="actors/animals/vulture.xml" pos="3317;4188;-13" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="581" actor_type="actors/animals/vulture.xml" pos="3778;3817;-13" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="582" actor_type="actors/animals/vulture.xml" pos="1881;4188;-13" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="583" actor_type="actors/animals/vulture.xml" pos="1325;3105;-13" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="584" actor_type="actors/animals/vulture.xml" pos="716;2216;-13" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="585" actor_type="actors/animals/vulture.xml" pos="1560;1684;-13" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="586" actor_type="actors/animals/vulture.xml" pos="2601;1085;-13" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="587" actor_type="actors/animals/vulture.xml" pos="2503;1461;-115" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="588" actor_type="actors/animals/vulture.xml" pos="3916;1559;-13" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="589" actor_type="actors/animals/vulture.xml" pos="2719;5209;-13" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="590" actor_type="actors/animals/vulture.xml" pos="3926;2669;-13" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="643" actor_type="actors/animals/vulture.xml" pos="483;4314;-13" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="843" actor_type="actors/animals/vulture.xml" pos="2268;2611;-120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="854" actor_type="actors/enemies/ex-human-male-melee.xml" pos="3047;2461;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="855" pos="3060;2575;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="856" pos="3033;2209;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="857" pos="3079;2365;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="858" pos="3034;2354;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="859" actor_type="actors/enemies/ex-human-male-melee.xml" pos="3072;2274;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="860" actor_type="actors/enemies/ex-human-male-melee.xml" pos="3047;2102;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="861" actor_type="actors/enemies/ex-human-male-melee.xml" pos="3038;1962;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="862" actor_type="actors/enemies/ex-human-male-melee.xml" pos="3087;2046;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-fight-2-4doors.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="9" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="3810;4710;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="10" actor_type="actors/objects/dog-house.xml" pos="3645;4466;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="485" actor_type="actors/animals/vulture.xml" pos="4368;4537;-160" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="486" actor_type="actors/animals/vulture.xml" pos="4731;4943;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="487" actor_type="actors/animals/vulture.xml" pos="4277;5766;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="488" actor_type="actors/animals/vulture.xml" pos="2540;5667;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="489" actor_type="actors/animals/vulture.xml" pos="2723;4340;-160" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="490" actor_type="actors/animals/vulture.xml" pos="2580;2910;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="491" actor_type="actors/animals/vulture.xml" pos="3434;2090;-160" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="492" actor_type="actors/animals/vulture.xml" pos="4694;2186;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="493" actor_type="actors/animals/vulture.xml" pos="5029;3439;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="494" actor_type="actors/animals/vulture.xml" pos="6345;3362;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="495" actor_type="actors/animals/vulture.xml" pos="2557;1515;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="496" actor_type="actors/animals/vulture.xml" pos="1489;3585;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="497" actor_type="actors/animals/vulture.xml" pos="917;6116;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="498" actor_type="actors/animals/vulture.xml" pos="5774;5435;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="942" actor_type="actors/animals/vulture.xml" pos="3342;2780;-160" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="943" actor_type="actors/animals/vulture.xml" pos="3206;2743;-160" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="944" actor_type="actors/animals/vulture.xml" pos="3227;2942;-160" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1057" actor_type="actors/enemies/ex-human-male-melee.xml" pos="3416;3244;-18" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1058" actor_type="actors/enemies/ex-human-male-melee.xml" pos="3305;3244;-18" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1059" actor_type="actors/enemies/ex-human-male-melee.xml" pos="3290;3360;-18" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1060" actor_type="actors/enemies/ex-human-male-melee.xml" pos="3303;3489;-18" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1062" pos="3408;3362;-1" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1063" pos="3397;3505;-34" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1064" pos="3425;3430;-3" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1066" pos="3295;3417;-1" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1067" pos="3055;3828;-30" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1068" pos="2945;3881;-26" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1069" pos="2883;4020;-1" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1070" pos="2979;4032;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1403" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2690;3431;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1526" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="4020;3420;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1590" pos="3367;3247;-1" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-DLC2-2.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="7" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="3420;4440;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="8" actor_type="actors/objects/dog-house.xml" pos="3300;4140;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-fight-3-4doors.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="12" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="3810;4710;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="13" actor_type="actors/objects/dog-house.xml" pos="3645;4466;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="467" actor_type="actors/animals/vulture.xml" pos="4368;4537;-116" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="468" actor_type="actors/animals/vulture.xml" pos="4725;4946;-156" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="469" actor_type="actors/animals/vulture.xml" pos="4277;5766;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="470" actor_type="actors/animals/vulture.xml" pos="2540;5667;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="471" actor_type="actors/animals/vulture.xml" pos="2723;4340;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="472" actor_type="actors/animals/vulture.xml" pos="2279;2756;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="473" actor_type="actors/animals/vulture.xml" pos="3534;3037;-240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="474" actor_type="actors/animals/vulture.xml" pos="4711;2180;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="475" actor_type="actors/animals/vulture.xml" pos="5029;3439;-120" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="476" actor_type="actors/animals/vulture.xml" pos="6345;3362;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="477" actor_type="actors/animals/vulture.xml" pos="2557;1515;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="478" actor_type="actors/animals/vulture.xml" pos="1489;3585;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="479" actor_type="actors/animals/vulture.xml" pos="917;6116;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="480" actor_type="actors/animals/vulture.xml" pos="5774;5435;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="769" actor_type="actors/animals/vulture.xml" pos="4257;3603;-240" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="819" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" pos="3212;3374;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="820" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" pos="3229;3336;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="821" actor_type="actors/enemies/ex-human-male-melee.xml" pos="4340;3461;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="822" pos="4311;3505;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="823" actor_type="actors/enemies/ex-human-male-melee.xml" pos="4312;3468;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="824" pos="4444;3166;-120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="825" actor_type="actors/enemies/ex-human-male-melee.xml" pos="4465;3137;-120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="826" actor_type="actors/enemies/ex-human-male-melee.xml" pos="4422;3070;-120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="827" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" pos="4421;3118;-120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="828" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" pos="3769;2512;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="829" pos="3832;2517;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="830" actor_type="actors/enemies/ex-human-male-melee.xml" pos="3720;2509;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="831" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" pos="3835;2491;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="832" pos="3748;2497;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-fight-6.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="17" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="3810;4710;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="18" actor_type="actors/objects/dog-house.xml" pos="3645;4466;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="414" actor_type="actors/animals/vulture.xml" pos="5504;5328;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="415" actor_type="actors/animals/vulture.xml" pos="5347;5508;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="416" actor_type="actors/animals/vulture.xml" pos="4277;5766;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="417" actor_type="actors/animals/vulture.xml" pos="2540;5667;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="418" actor_type="actors/animals/vulture.xml" pos="3059;4520;-242" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="419" actor_type="actors/animals/vulture.xml" pos="3014;3230;-282" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="420" actor_type="actors/animals/vulture.xml" pos="3434;2090;-474" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="421" actor_type="actors/animals/vulture.xml" pos="4694;2186;-1022" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="422" actor_type="actors/animals/vulture.xml" pos="5029;3439;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="423" actor_type="actors/animals/vulture.xml" pos="4764;3291;-282" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="424" actor_type="actors/animals/vulture.xml" pos="2557;1515;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="425" actor_type="actors/animals/vulture.xml" pos="1489;3585;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="426" actor_type="actors/animals/vulture.xml" pos="917;6116;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="427" actor_type="actors/animals/vulture.xml" pos="5774;5435;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="478" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="3475;3009;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="479" actor_type="actors/enemies/ex-human-female-melee-advanced.xml" pos="3488;3042;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="480" actor_type="actors/enemies/ex-human-female-melee-advanced.xml" pos="3493;3068;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="831" actor_type="actors/enemies/ex-human-female-melee-advanced.xml" pos="4181;3179;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="832" actor_type="actors/enemies/ex-human-female-melee-advanced.xml" pos="4144;3180;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="833" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="4097;3184;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1037" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="4171;3534;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1038" actor_type="actors/enemies/ex-human-female-melee-advanced.xml" pos="4198;3491;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1039" actor_type="actors/enemies/ex-human-female-melee-advanced.xml" pos="4216;3528;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1040" actor_type="actors/enemies/ex-human-female-melee-advanced.xml" pos="4178;3442;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1041" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="4207;3444;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1075" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="4452;3671;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1076" actor_type="actors/enemies/ex-human-female-melee-advanced.xml" pos="4565;3667;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1077" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="4511;3679;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1209" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="4633;2746;-22" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1210" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="4778;2934;-22" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1755" actor_type="actors/animals/vulture.xml" pos="4167;2732;-420" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1756" actor_type="actors/animals/vulture.xml" pos="3842;4337;-420" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-petpark-1-box-and-shoot.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="15" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2373;3155;0" chunk="0" area="-1" />
+    <node type="FIXABLE" so_id="PET_CONTROL_BRIDGE" puid="50" actor_type="actors/objects/drawbridge.xml" pos="2220;2519;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="70" actor_type="actors/objects/dog-house.xml" pos="2085;2906;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="154" actor_type="actors/objects/drawbridge.xml" pos="3030;2190;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="281" actor_type="actors/objects/drawbridge.xml" pos="3030;1260;-0" chunk="0" area="-1" />
+    <node type="QUEST" puid="1072" parm="quests/pet_control.nut" pos="2271;2872;0" chunk="0" area="-1" />
+    <node type="FABRICATOR" so_id="BT_PET_HUB" puid="1093" actor_type="actors/interactives/pet-fabricator.xml" pos="2143;3147;-0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-petpark-2-box-shoot-fight.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="25" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2280;3150;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="56" actor_type="actors/objects/drawbridge.xml" pos="2280;2550;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="76" actor_type="actors/objects/dog-house.xml" pos="2100;2910;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="154" actor_type="actors/objects/drawbridge.xml" pos="3030;1680;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="354" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2162;1078;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="367" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2595;2307;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="368" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2492;2256;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1348" pos="2082;2285;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1349" pos="2166;2283;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1350" pos="1661;1650;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1351" pos="1664;1751;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1352" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1700;1703;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1353" pos="2218;1076;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-petpark-3-box-doors-fight.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="10" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="1170;3150;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="42" actor_type="actors/objects/drawbridge.xml" pos="1680;3030;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="57" actor_type="actors/objects/dog-house.xml" pos="1005;2906;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="153" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2421;3330;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="154" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2245;3390;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="155" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="3013;3027;-0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="191" actor_type="actors/objects/drawbridge.xml" pos="1140;2580;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="222" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2995;2946;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1421" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1697;2273;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1422" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="2165;1930;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1423" actor_type="actors/enemies/ex-human-fast-chaser.xml" pos="1387;1921;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-petpark-4-rotatesnakes-and-box.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="22" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2250;3150;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="1469" actor_type="actors/objects/drawbridge.xml" pos="2250;2550;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="1691" actor_type="actors/objects/dog-house.xml" pos="2085;2906;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="140928" actor_type="actors/objects/drawbridge.xml" pos="2730;3060;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-petpark-5-rotatesnakes.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="10" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2250;3150;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="25" actor_type="actors/objects/drawbridge.xml" pos="2160;2550;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="35" actor_type="actors/objects/dog-house.xml" pos="2420;2838;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="89" actor_type="actors/objects/drawbridge.xml" pos="1740;2940;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-shelter-4-light-box-shoot.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="11" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="1140;2310;60" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="28" actor_type="actors/objects/dog-house.xml" pos="1033;2152;60" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-shelter-5-light-box.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="11" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="1140;2490;60" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="28" actor_type="actors/objects/dog-house.xml" pos="1033;2332;60" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-tomb-1-run-and-box-snow.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="22" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2220;2970;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="35" actor_type="actors/objects/dog-house.xml" pos="1976;2840;-4" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1062" actor_type="actors/animals/caribou.xml" pos="2679;3220;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1063" actor_type="actors/animals/caribou.xml" pos="2740;3278;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1064" actor_type="actors/animals/caribou-baby-calf.xml" pos="2744;3158;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1065" actor_type="actors/animals/caribou.xml" pos="2475;1753;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1066" actor_type="actors/animals/caribou.xml" pos="2542;1825;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1067" actor_type="actors/animals/caribou-baby-calf.xml" pos="1892;2099;240" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-tomb-2-brokensteps-and-shoot-hard-snow.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="17" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2640;3150;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="43" actor_type="actors/objects/dog-house.xml" pos="2419;2938;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="914" actor_type="actors/animals/caribou-baby-calf.xml" pos="2445;3518;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="915" actor_type="actors/animals/caribou.xml" pos="2421;3476;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="916" actor_type="actors/animals/caribou.xml" pos="3247;2907;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="917" actor_type="actors/animals/caribou.xml" pos="3450;2967;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="918" actor_type="actors/animals/caribou-baby-calf.xml" pos="3434;2890;240" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-tomb-3-runandbox-long-snow.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="26" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="1980;2730;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="32" actor_type="actors/objects/dog-house.xml" pos="1819;2518;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1133" actor_type="actors/animals/caribou.xml" pos="3067;2146;237" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1134" actor_type="actors/animals/caribou.xml" pos="1641;2973;237" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1135" actor_type="actors/animals/caribou.xml" pos="1864;3109;237" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1136" actor_type="actors/animals/caribou-baby-calf.xml" pos="1587;2108;240" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-tomb-4-boxmaze-snow.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="15" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2280;3090;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="19" actor_type="actors/objects/dog-house.xml" pos="2102;2768;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="902" actor_type="actors/animals/caribou.xml" pos="3083;2391;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="903" actor_type="actors/animals/caribou.xml" pos="1843;2216;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="904" actor_type="actors/animals/caribou.xml" pos="1786;2127;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="905" actor_type="actors/animals/caribou-baby-calf.xml" pos="1875;2163;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="906" actor_type="actors/animals/caribou-baby-calf.xml" pos="1798;2332;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="907" actor_type="actors/animals/caribou-baby-calf.xml" pos="1775;2238;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="908" actor_type="actors/animals/caribou-baby-calf.xml" pos="2582;3376;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="909" actor_type="actors/animals/caribou.xml" pos="2661;3332;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1061" actor_type="actors/animals/caribou.xml" pos="3075;2307;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1105" actor_type="actors/animals/caribou.xml" pos="2277;3430;240" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-tomb-5-box-and-brokensteps-snow.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="23" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2940;3030;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="44" actor_type="actors/objects/dog-house.xml" pos="2719;2818;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="964" actor_type="actors/animals/caribou-baby-calf.xml" pos="2698;1688;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="965" actor_type="actors/animals/caribou.xml" pos="2558;1984;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="966" actor_type="actors/animals/caribou.xml" pos="2592;1693;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="967" actor_type="actors/animals/caribou.xml" pos="3125;1823;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="968" actor_type="actors/animals/caribou.xml" pos="3277;1821;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="969" actor_type="actors/animals/caribou-baby-calf.xml" pos="3255;1726;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="970" actor_type="actors/animals/caribou-baby-calf.xml" pos="3212;1896;240" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-DLC2-template.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="22" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="3420;4320;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-DLC1-2-mid-maze.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="22" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2220;3150;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="38" actor_type="actors/objects/dog-house.xml" pos="2025;2871;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1417" actor_type="actors/enemies/tomb-guard-mana.xml" pos="2136;1006;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1625" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2609;2415;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1626" actor_type="actors/enemies/ex-human-male-mana-melee.xml" pos="2465;2327;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1627" actor_type="actors/enemies/ex-human-male-mana-melee.xml" pos="2428;1618;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1628" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2167;1258;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1629" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2237;1383;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-DLC1-3-.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="17" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2220;3060;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="569" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="2433;3561;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="570" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="1738;3464;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="571" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="2163;3722;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="572" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="1544;3110;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="596" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="1939;2758;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="597" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="1743;3061;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="629" actor_type="actors/enemies/tomb-guard-mana.xml" pos="2381;2398;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="630" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="2202;2768;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="632" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="1929;3005;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="633" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="2888;3390;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="644" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="2873;2687;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="645" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="2194;2564;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="646" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="2625;2587;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-DLC2-4.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="5" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="3420;4440;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="6" actor_type="actors/objects/dog-house.xml" pos="3300;4140;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-hub-rewardroom.stage">
+    <node type="ENTRYWAY" so_id="DEFAULT_ENTRY" puid="17" actor_type="actors/interactives/elevator-lift-platform.xml" parm="stages/pet-stages/pet-hub.stage" pos="1860;2460;0" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="entrance_altar" puid="1015" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/dlc3/index.xml" pos="1860;1680;-60" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-petpark-6-treatpath.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="9" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2460;3900;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="14" actor_type="actors/objects/dog-house.xml" pos="2614;3683;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="29" actor_type="actors/objects/drawbridge.xml" pos="3120;3900;0" chunk="0" area="-1" />
+    <node type="FIXABLE" puid="30" actor_type="actors/objects/drawbridge.xml" pos="2790;3420;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-fight-5.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="4" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="3810;4710;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="5" actor_type="actors/objects/dog-house.xml" pos="3645;4466;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="402" actor_type="actors/animals/vulture.xml" pos="4368;4537;-154" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="403" actor_type="actors/animals/vulture.xml" pos="4731;4943;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="404" actor_type="actors/animals/vulture.xml" pos="4277;5766;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="405" actor_type="actors/animals/vulture.xml" pos="2540;5667;-0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="406" actor_type="actors/animals/vulture.xml" pos="2723;4340;-500" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="407" actor_type="actors/animals/vulture.xml" pos="3404;1523;-122" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="408" actor_type="actors/animals/vulture.xml" pos="5263;1371;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="409" actor_type="actors/animals/vulture.xml" pos="4740;3570;-530" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="410" actor_type="actors/animals/vulture.xml" pos="6345;3362;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="411" actor_type="actors/animals/vulture.xml" pos="2557;1515;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="412" actor_type="actors/animals/vulture.xml" pos="1489;3585;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="413" actor_type="actors/animals/vulture.xml" pos="917;6116;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="414" actor_type="actors/animals/vulture.xml" pos="5774;5435;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1222" actor_type="actors/animals/vulture.xml" pos="2910;3240;-530" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="1223" actor_type="actors/animals/vulture.xml" pos="3878;2956;-654" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1494" pos="4581;3381;-120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1495" pos="4949;3216;-240" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1496" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" pos="2684;2503;-120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1497" pos="3521;3753;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1498" pos="3682;2934;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1499" pos="3536;3197;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1500" actor_type="actors/enemies/ex-human-male-melee.xml" pos="4183;2845;-0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1501" pos="4832;2520;-120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1502" pos="4942;2670;-120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1624" actor_type="actors/enemies/ex-human-male-melee-advanced.xml" pos="2744;3823;-120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1638" pos="3474;3234;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1753" pos="2915;2555;-120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1754" pos="2729;3315;-180" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1755" pos="2936;3808;-120" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1931" pos="2905;3342;-120" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/DLC3-Island-Reward.stage">
+    <node type="ENTRYWAY" so_id="south_entrance" puid="8" actor_type="actors/interactives/elevator-lift-platform.xml" parm="stages/dlc3/index.xml" pos="1260;2040;0" chunk="0" area="-1" />
+    <node type="FABRICATOR" puid="753" pos="303;341;60" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-DLC1-1.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="19" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2220;3150;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="37" actor_type="actors/objects/dog-house.xml" pos="2025;2871;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1190" actor_type="actors/enemies/tomb-guard-mana.xml" pos="2635;1842;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1262" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2215;2131;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1263" actor_type="actors/enemies/ex-human-male-mana-melee.xml" pos="2227;1736;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1264" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2226;1989;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-DLC1-3.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="15" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2220;3060;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="16" actor_type="actors/objects/dog-house.xml" pos="2096;2927;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="624" actor_type="actors/enemies/tomb-guard-mana.xml" pos="2381;2398;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="628" actor_type="actors/enemies/tomb-melee-enemy.xml" pos="2888;3390;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="569" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="1912;3010;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="594" actor_type="actors/enemies/ex-human-male-mana-melee.xml" pos="1741;3038;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="627" actor_type="actors/enemies/ex-human-male-mana-melee.xml" pos="1554;3061;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="566" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2394;3543;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="568" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2160;3731;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="641" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2674;2460;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="639" actor_type="actors/enemies/ex-human-mana-female-melee.xml" pos="2887;2690;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-DLC1-4.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="20" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2220;3060;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="21" actor_type="actors/objects/dog-house.xml" pos="2107;2835;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="427" actor_type="actors/enemies/tomb-guard.xml" pos="2679;3551;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="428" actor_type="actors/enemies/tomb-guard.xml" pos="1867;3003;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="429" actor_type="actors/enemies/tomb-guard-mana.xml" pos="1915;2637;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1090" actor_type="actors/enemies/ex-human-male-mana-melee.xml" pos="1799;3140;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="1091" actor_type="actors/enemies/ex-human-mana-puker.xml" pos="2581;3463;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-shelter-6-light-and-treatpath.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="10" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="1680;2160;60" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="27" actor_type="actors/objects/dog-house.xml" pos="1560;2018;60" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-DLC2-1.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="8" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="3420;4380;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="9" actor_type="actors/objects/dog-house.xml" pos="3259;4149;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-DLC2-3.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="7" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="3540;4380;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="8" actor_type="actors/objects/dog-house.xml" pos="3300;4140;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-tomb-6-treatpath-and-boxes.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="15" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2340;2970;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="17" actor_type="actors/objects/dog-house.xml" pos="2119;2772;0" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="723" actor_type="actors/animals/caribou.xml" pos="3260;1917;240" chunk="0" area="-1" />
+    <node type="ANIMAL" puid="748" actor_type="actors/animals/caribou.xml" pos="3402;2075;240" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-tutorial.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="18" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="2340;3120;0" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="19" actor_type="actors/objects/dog-house.xml" pos="2131;2996;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/pet-stages/pet-stage-shelter-1-light-brokensteps.stage">
+    <node type="ENTRYWAY" so_id="entrance_default" puid="22" actor_type="actors/interactives/pet-stage-exit.xml" parm="stages/island/index.xml" pos="1140;2310;60" chunk="0" area="-1" />
+    <node type="DOGHOUSE" puid="903" actor_type="actors/objects/dog-house.xml" pos="1033;2152;60" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelter/shelter-of-desolatum.stage">
+    <node type="FABRICATOR" puid="12" pos="1260;480;0" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="SHELTER_DESOLATUM_LADDER" puid="13" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/dlc3/index.xml" pos="1290;1860;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelter/shelter-desolatum.stage">
+    <node type="FABRICATOR" puid="13" pos="1260;480;0" chunk="0" area="-1" />
+    <node type="ENTRYWAY" so_id="SHELTER_DESOLATUM_LADDER" puid="14" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/dlc3/index.xml" pos="1260;1860;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="563" pos="1213;652;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="564" pos="1604;1216;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="565" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1467;622;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="566" pos="846;1145;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="567" pos="915;1595;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="568" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1103;1124;-60" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/shelters/shelter-desolatum.stage">
+    <node type="ENTRYWAY" so_id="SHELTER_DESOLATUM_LADDER" puid="13" actor_type="actors/interactives/underground-exit-ladder.xml" parm="stages/dlc3/index.xml" pos="1260;1860;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="557" pos="1213;652;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="558" pos="1604;1216;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="559" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1467;622;0" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="560" pos="846;1145;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="561" pos="915;1595;-60" chunk="0" area="-1" />
+    <node type="ENEMY_NORMAL" puid="562" actor_type="actors/enemies/ex-human-male-melee.xml" pos="1103;1124;-60" chunk="0" area="-1" />
+    <node type="FABRICATOR" puid="601" actor_type="actors/interactives/fabricator-30s.xml" pos="1260;480;0" chunk="0" area="-1" />
+  </array>
+
+  <array id="res://data/stages/special/the-ark-level-4.stage">
+    <node type="ENTRYWAY" so_id="entrance_1" puid="28" actor_type="actors/interactives/elevator-lift-platform.xml" parm="stages/special/the-ark-level-4.stage" pos="1800;3360;-60" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/special/the-ark-level-4.stage">
+    <node type="ENTRYWAY" so_id="entrance_1" puid="42" actor_type="actors/interactives/elevator-lift-platform.xml" parm="stages/special/the-ark-level-3.stage" pos="1800;3360;-60" chunk="0" area="-1" />
+  </array>
+
+  <array id="stages/tombs/tomb-align-rays-switches-snowy.stage">
+    <node type="ENTRYWAY" puid="17" actor_type="actors/objects/tomb-exit.xml" parm="stages/island/index.xml" pos="1050;1050;0" chunk="0" area="-1" />
+  </array>
+
+</root>

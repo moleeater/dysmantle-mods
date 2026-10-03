@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="INFO">
+    <node 
+      size="480"
+      diffuse="ground-tiles/textures/snow-moss-diffuse.jpg"
+      normals="ground-tiles/textures/evergreen-moss-normals.jpg"
+      specular="ground-tiles/textures/black.jpg"
+      physics_material="GRASS"
+      temperature_modifier="-10"
+      forced_tile_pattern_marker="G"
+      />
+  </array>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="KEY_VALUES">
+    <node key.STRING.ambience_id="MOD_SNOWFALL" />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+</root>

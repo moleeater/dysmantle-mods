@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="INFO">
+    <node id="mod_version" value="1.0.100" />
+    <node id="load_priority" value="0" />
+    <node id="tags" value="LOCALIZATION" />
+    <node id="author" value="AgeNTsGame & Hamsterka" />
+    <node id="title" value="Ukrainian translation" />
+    <node id="description" value="Free ukrainian localization
+  by creative union \"People's translation\"
+  Translation status: 100%
+  It was created with the support of the viewers
+  of the AgeNTsGame & GAME_EMOTION_ twitch channels.
+  Thanks to everyone who helped, corrected, tested.
+  UPD: To activate MOD by adding settings:
+  DYSMANTLE.exe --features MODS" />
+  </array>
+</root>

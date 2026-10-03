@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="bg"
+     type="IMAGE"
+     inherit="DefaultImage"
+     position.x="0.5"
+     position.y="0.5"
+     scale_type="FIT_TO_COVER_SCREEN"
+     align="VCENTER,HCENTER"
+     image.bitmap="!NONE"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node name="mod_tips"
+      type="TEXTBOX" inherit="MediumTextbox"
+      align="HCENTER,BOTTOM"
+      scale="0.5"
+      ui_scale_modifier="0.2"
+      position.x="0.5"
+      position.y="0.85"
+      textbox.textbox_width="1400"
+      shader_effect="FontBlackShadowOutline"
+      textbox.shadow_offset="4,4"
+      localize="false"
+      />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

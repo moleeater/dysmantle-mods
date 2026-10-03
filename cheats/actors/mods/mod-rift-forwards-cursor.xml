@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="HIDE_IN_EDITOR_PALETTE,POINT_OF_INTEREST" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="physics_material" value="NO_DAMAGE" />
+    <node id="actor_flags" value="SEETHROUGH" />
+    <node id="time_awake_after_leaving_view_in_secs" value="-1" />
+    <node id="initial_scale" value="0.35" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="bitmap" type="BITMAP" value="actors/mods/gfx/mod-rift-forwards-cursor.png" />
+    <node id="poi_type" type="STRING" value="VORTEX_BLUE" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="Null">
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="FloatingBitmap" />
+    <node id="shadow_method" value="NONE" />
+    <node id="cast_shadows" value="false" />
+    <node id="receive_shadows" value="false" />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="NONE" />
+  </array>
+
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

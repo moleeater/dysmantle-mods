@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="INFO">
+    <node id="load_priority" value="0" />
+    <node id="author" value="MoleEater" />
+    <node id="title" value="Turrets everywhere" />
+    <node id="description" value="A silly mod, which replaces most minion monsters with turret enemies.
+
+NEEDS DEVELOPER MODE ENABLED! https://dysmantle.fandom.com/wiki/Dysmantle/Developer_Mode
+
+Melee monsters become machine gun turrets, and ranged monsters become rocket launcher turrets. Bosses, the shelter horde, night terrors, and chitin droppers remain unchanged.
+Because turrets are not made of flesh and, to follow the lore, mana beads are not dropped by turrets. Instead, they are obtained when solving the tombs. While, this is a one-time reward, since there is no ascending in the tombs, the Search Efficiency and Gathering Double Chance modifiers compensate for this. With everything maxed out, you can obtain 3x beads for 1 turret.
+On the Underground DLC1 stage, there are no drops because of mana farming. On the Doomsday DLC2 and Pets and Dungeons DLC3 stages, bosses and the overground tomb drops.
+The turrets face the same direction as the monsters would upon spawning.
+
+I played through all the base game and could complete every quest. For Everlasting Duty tomb, you will need to temporarily disable the mod.
+Underworld DLC1 Mana Chambers temporal quest will not work.
+
+The game is surprisingly still playable and enjoyable, feels different, requires more planning to run around.
+
+Check out 150 more serious and complex mods on the NexusMods website! https://www.nexusmods.com/dysmantle/mods/76
+
+Troubleshooting: https://dysmantle.fandom.com/wiki/Modding
+" />
+  </array>
+</root>

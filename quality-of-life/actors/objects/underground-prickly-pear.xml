@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="tags" value="MOD_OCPD_MINIMAP,MOD_ONE_HIT_OBJECTS" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,SET_NONSOLID_ON_DEATH_END,DELETE_ACTOR_AFTER_DEATH" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE" />
+    <node id="physics_material" value="CACTUS" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="25" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="130" />
+    <node id="damage_type_accept_mask" value="UNSPECIFIED,BLUNT,SLASHING,FIRE,COLD,POISON,ELECTRIC,EXPLOSIVE,SELF_DESTRUCT,HIT_GROUND,PROJECTILE,HEAT" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="0.37" g="0.45" b="0.17" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES">
+    <node id="ambience_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="PRAIRIE" />
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="CACTUS" />
+    <node id="mtl_tex_diffuse_0" type="BITMAP" value="models/textures/underground-prickly-pear-diffuse.jpg" />
+    <node id="color_material_0" type="COLOR" value="0.958618,0.986887,0.96859,1" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="DISMANTLABLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="AI_PARAMETERS" ai="Obstacle">
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death"
+     category="DEATH"
+     switch_model_on_animation_start="true"
+     delete_all_decals_on_model_switch="true"
+     forced_animation_length_in_seconds="0.20"
+     force_update_visual_bounds="true"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/cactus-die.xml"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_angle" value="-90" />
+    <node id="shadow_scale" value="2.12" />
+    <node id="shadow_alpha" value="0.25" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="model" value="models/objects/cactus-prickly-pear.model" />
+  </array>
+
+  <array id="PROPS">
+    <node id="new"
+     mount_bone_id="root"
+     actor_type="actors/objects/corruption-prop-spike.xml"
+     mount_scale="1.6"
+     mount_offset_x="-2.13"
+     mount_offset_y="0"
+     mount_offset_z="0"
+     mount_rotation_angles_x="0"
+     mount_rotation_angles_y="-0.375769"
+     mount_rotation_angles_z="0"
+    />
+
+    <node id="new2"
+     mount_bone_id="root"
+     actor_type="actors/objects/corruption-prop-spike.xml"
+     mount_scale="2.18"
+     mount_offset_x="-1.77"
+     mount_offset_y="-4.1"
+     mount_offset_z="0"
+     mount_rotation_angles_x="0.277682"
+     mount_rotation_angles_y="0.372628"
+     mount_rotation_angles_z="0"
+    />
+
+    <node id="new3"
+     mount_bone_id="root"
+     actor_type="actors/objects/corruption-prop-spike.xml"
+     mount_scale="1.07"
+     mount_offset_x="4.02"
+     mount_offset_y="0"
+     mount_offset_z="0"
+     mount_rotation_angles_x="-0.332834"
+     mount_rotation_angles_y="0.431794"
+     mount_rotation_angles_z="0"
+    />
+
+    <node id="new_26291"
+     mount_bone_id="root"
+     actor_type="actors/objects/corruption-prop-warts-glow.xml"
+     mount_scale="2.01"
+     mount_offset_x="-1.95"
+     mount_offset_y="-6.51"
+     mount_offset_z="-50.92"
+     mount_rotation_angles_x="1.80432"
+     mount_rotation_angles_y="-0.315206"
+     mount_rotation_angles_z="0"
+    />
+
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="CYLINDER" />
+    <node id="radius_xy" value="9.9" />
+    <node id="min_z" value="-46.9" />
+    <node id="max_z" value="0.0" />
+  </array>
+</root>

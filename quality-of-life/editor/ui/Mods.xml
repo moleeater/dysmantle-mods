@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="RECTANGLE"
+     inherit="EditorFaderRectangle"
+     color="0,0,0,0.55"
+     scale_type="RELATIVE_TO_SCREEN_SIZE"
+    />
+
+    <node
+     name="panel"
+     type="MARKER"
+     inherit="DefaultMarker"
+     position.x="0.499219"
+     position.y="0.498611"
+     align="VCENTER,HCENTER"
+     marker.area_width="951.111"
+     marker.area_height="577.778"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+     name="panel_left"
+     type="NINEPATCH"
+     inherit="EditorNinePatchRoundedPanel"
+     parent="panel"
+     position.x="-0.215042"
+     position.y="0.006"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="530"
+     ninepatch.rectangle_height="665"
+     color="1,1,1,1"
+     shader_effect=""
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="panel_right"
+     type="NINEPATCH"
+     inherit="EditorNinePatchRoundedPanel"
+     parent="panel"
+     position.x="0.287795"
+     position.y="-0.00132983"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="400"
+     ninepatch.rectangle_height="600"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node
+     name="panel_mods"
+     type="NINEPATCH"
+     inherit="EditorNinePatchBevel"
+     parent="panel_left"
+     position.x="-0.000414337"
+     position.y="-0.41"
+     align="HCENTER"
+     ninepatch.rectangle_width="510"
+     ninepatch.rectangle_height="510"
+    />
+
+    <node
+     name="aligner_3"
+     type="ALIGNER"
+     inherit="DefaultAligner"
+     parent="panel_left"
+     position.x="-0.04"
+     position.y="0.445"
+     scale="1.00429"
+     aligner.area_width="400"
+     aligner.area_height="105.186"
+     aligner.fixed_num_rows="1"
+     aligner.align_y_axis="false"
+    />
+
+    <node
+     name="touchfield_1"
+     type="TOUCHFIELD"
+     inherit="DefaultTouchField"
+     parent="panel_mods"
+     position.x="0.0312893"
+     position.y="0.01"
+     align="HCENTER"
+     touchfield.automatic_content_width="true"
+     touchfield.automatic_content_height="true"
+     touchfield.area_width="529.726"
+     touchfield.area_height="500"
+     touchfield.clip_children="true"
+     touchfield.axis_x_enabled="false"
+    />
+
+    <node
+     name="aligner_mods"
+     type="ALIGNER"
+     inherit="DefaultAligner"
+     parent="touchfield_1"
+     position.x="-0.0292489"
+     position.y="0"
+     align="HCENTER"
+     aligner.layout="STACK"
+     aligner.area_width="493.333"
+     aligner.automatic_area_height="true"
+     aligner.fixed_num_columns="1"
+    />
+
+    <node
+     name="Mod_0"
+     type="NINEPATCH"
+     inherit="EditorNinePatchBevel"
+     parent="aligner_mods"
+     color="0.8,0.8,0.8,1"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="494"
+     ninepatch.rectangle_height="39"
+     ninepatch.automatic_content_padding="4"
+     ninepatch.automatic_content_height="true"
+     ninepatch.bitmap="!NONE"
+    />
+
+    <node
+     name="Mod_0_enabled"
+     type="CHECKBOX"
+     inherit="EditorCheckbox"
+     parent="Mod_0"
+     position.x="-0.455"
+     position.y="-0.0122752"
+     checkbox.toggle_value_on_click="true"
+     scale="0.75"
+    />
+
+    <node
+     name="Mod_0_title"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="Mod_0"
+     position.x="-0.37"
+     position.y="-0.00662468"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER"
+     textbox.textbox_width="320"
+     textbox.text_align="VCENTER"
+    />
+
+    <node
+     name="Mod_0_tags"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="Mod_0"
+     position.x="0.39"
+     position.y="-0.018023"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="90"
+     textbox.text_align="VCENTER,RIGHT"
+     scale="0.8"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="PreviewPanel2"
+     type="NINEPATCH"
+     inherit="EditorNinePatchBevel"
+     parent="panel_right"
+     position.x="0.00146319"
+     position.y="-0.0589863"
+     align="HCENTER"
+     ninepatch.rectangle_width="373"
+     ninepatch.rectangle_height="262"
+    />
+
+    <node
+     name="touchfield_2"
+     type="TOUCHFIELD"
+     inherit="DefaultTouchField"
+     parent="PreviewPanel2"
+     position.x="-0.00380661"
+     position.y="0.0345009"
+     align="HCENTER"
+     touchfield.automatic_content_width="true"
+     touchfield.automatic_content_height="true"
+     touchfield.area_width="359.111"
+     touchfield.area_height="208.889"
+     touchfield.clip_children="true"
+     touchfield.axis_x_enabled="false"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+     name="Title"
+     type="TEXTBOX"
+     inherit="EditorMediumTextbox"
+     parent="panel_left"
+     position.x="-0.472292"
+     position.y="-0.481501"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="500"
+     textbox.text="Subscribed Mods"
+     textbox.text_align="HCENTER"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="ModTitle"
+     type="TEXTBOX"
+     inherit="EditorMediumTextbox"
+     parent="panel_right"
+     position.x="0.000704626"
+     position.y="-0.452937"
+     scale="0.903001"
+     align="VCENTER,HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="421"
+     textbox.text="[LOCAL] Finnish Language"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="ModAuthor"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="panel_right"
+     position.x="-0.00221188"
+     position.y="-0.397005"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="380"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="ModDesc"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="touchfield_2"
+     position.x="-0.0015415"
+     position.y="0.0217023"
+     save_dynamic_content_to_ui_xml="false"
+     align="HCENTER"
+     textbox.textbox_width="353"
+    />
+
+    <node
+     name="ModFolder"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="PreviewPanel2"
+     position.x="-0.0077991"
+     position.y="0.897136"
+     save_dynamic_content_to_ui_xml="false"
+     color="1,1,1,0.25"
+     align="HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="356"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="ModVersion"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="PreviewPanel2"
+     position.x="0.0135612"
+     position.y="-0.118325"
+     save_dynamic_content_to_ui_xml="false"
+     color="1,1,1,0.25"
+     align="HCENTER"
+     textbox.textbox_width="338"
+     textbox.text_align="HCENTER"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node
+     name="headerenabled"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="panel_mods"
+     position.x="-0.486572"
+     position.y="-0.04"
+     textbox.text="Enabled"
+    />
+
+    <node
+     name="headertitle"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="panel_mods"
+     position.x="-0.36"
+     position.y="-0.04"
+     textbox.text="Title"
+    />
+
+    <node
+     name="headertype"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="panel_mods"
+     position.x="0.4"
+     position.y="-0.04"
+     align="HCENTER"
+     textbox.text="Main Tag"
+    />
+
+    <node
+     name="aligner_1"
+     type="ALIGNER"
+     inherit="DefaultAligner"
+     parent="panel_left"
+     position.x="-0.00320499"
+     position.y="0.39"
+     scale="1.0219"
+     aligner.area_width="519.333"
+     aligner.area_height="45.1855"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="RefreshList"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_1"
+     button.text="Refresh List"
+     button.ninepatch_width="140"
+    />
+
+    <node
+     name="BrowseMods"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_1"
+     button.text="Browse Mods..."
+     button.ninepatch_width="140"
+    />
+
+    <node
+     name="DeactivateAll"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_1"
+     button.text="Deactivate All Mods"
+     button.ninepatch_width="140"
+    />
+
+    <node
+     name="ModdingTools"
+     type="BUTTON"
+     inherit="EditorSmallSquareButton"
+     parent="panel_left"
+     position.x="0.426748"
+     position.y="0.444119"
+     scale="0.811075"
+     button.bm_icon="editor/ui/gfx/tab-tools.png"
+     button.ninepatch_width="40"
+     button.ninepatch_height="40"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+     name="ApplyMods"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_3"
+     button.text="Apply Mods*"
+     button.ninepatch_width="160"
+     alpha="0.33"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="Back"
+     type="BUTTON"
+     inherit="EditorWideThinButton"
+     parent="aligner_3"
+     button.text="Back"
+     button.ninepatch_width="160"
+    />
+
+    <node
+     name="SelectNone"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_1"
+     visible="false"
+     button.text="Select None"
+    />
+
+    <node
+     name="aligner_2"
+     type="ALIGNER"
+     inherit="DefaultAligner"
+     parent="panel_right"
+     position.x="-0.00657923"
+     position.y="0.430148"
+     aligner.area_width="376.889"
+    />
+
+    <node
+     name="Unsubscribe"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_2"
+     button.text="Unsubscribe"
+    />
+
+    <node
+     name="DeleteMod"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_2"
+     visible="false"
+     button.text="|#ff2222|Delete Mod"
+    />
+
+    <node
+     name="Play"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_2"
+     button.text="Play"
+    />
+
+    <node
+     name="ModPreview"
+     type="IMAGE"
+     inherit="DefaultImage"
+     parent="panel_right"
+     position.x="0.00769185"
+     position.y="-0.238973"
+     save_dynamic_content_to_ui_xml="false"
+     align="VCENTER,HCENTER"
+     image.force_width="140"
+     image.force_height="140"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node
+     name="PublishMod"
+     type="BUTTON"
+     inherit="EditorSmallButton"
+     parent="aligner_2"
+     visible="false"
+     button.text="Publish..."
+     required_features="STEAM"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node
+     name="apply_info_text"
+     type="TEXTBOX"
+     inherit="EditorSmallTextbox"
+     parent="ApplyMods"
+     position.x="-0.00476832"
+     position.y="0.513582"
+     save_dynamic_content_to_ui_xml="false"
+     color="1,1,1,0.3"
+     scale="0.764244"
+     align="HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="356"
+     textbox.text_align="HCENTER"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node
+     name="slider_1"
+     type="SLIDER"
+     inherit="EditorSliderScrollbar"
+     parent="panel_left"
+     position.x="0.471"
+     position.y="-0.0275"
+     slider.ninepatch_height="513"
+     slider.linked_view="touchfield_1"
+     slider.hide_full_scrollbars="true"
+    />
+
+    <node name="mod_mods_ui"
+      type="SCRIPTABLE" inherit="DefaultScriptable"
+      scriptable.script_file="editor/ui/scripts/mods/mod-mods-ui-mods.nut"
+      />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

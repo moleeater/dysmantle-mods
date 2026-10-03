@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="length_in_seconds" value="18" />
+  </array>
+  <array id="wind-snow-loop">
+    <node id="time_key" type="FLOAT" value="0.1" />
+    <node id="id" type="STRING" value="wind-snow-loop" />
+    <node id="play_as_positional" type="BOOLEAN" value="false" />
+    <node id="looping" type="BOOLEAN" value="true" />
+    <node id="volume_range" type="FLOAT2" value="0.5,0.55" />
+    <node id="sounds" type="STRING" value="sfx/ambience/wind-snow-loop" />
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

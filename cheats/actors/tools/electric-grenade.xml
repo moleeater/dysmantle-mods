@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="NO_EXPERIENCE_REWARD_ON_DEATH,EXPLODING,THROWABLE_WEAPON" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SOLID,AFFECTED_BY_GRAVITY,INDESTRUCTIBLE,DELETE_ACTOR_AFTER_DEATH,CAN_STAND_ON_ACTORS" />
+    <node id="physics_material" value="PLASTIC" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="1" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="20" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1" />
+    <node id="friend_group" value="GRENADES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="explosion_delay" type="FLOAT" value="1.5" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="ScriptableBehavioral">
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleExplode"
+     key.BOOLEAN.Explode_explode_on_death="true"
+     key.BOOLEAN.Explode_explode_on_enemy_impact="true"
+     key.FLOAT.Explode_radius="120"
+     key.PARTICLE_EFFECT.Explode_effect="effects/flash-1.xml"
+     key.BITMAP.Explode_shockwave_bitmap="effects/gfx/smoothwave.png"
+     key.FLOAT.Explode_shockwave_bitmap_alpha="0.3"
+     key.FLOAT.Explode_shockwave_speed="300"
+     key.FLOAT.Explode_shockwave_delay="0"
+     key.INTEGER.Explode_num_shrapnels="0"
+     key.ACTOR_TYPE.Explode_shrapnel_actor_type="actors/projectiles/shrapnel.xml"
+     key.BOOLEAN.Explode_cause_damage_to_owner="true"
+     key.BOOLEAN.Explode_cause_damage_to_owner_friends="true"
+     key.STRING.Explode_damage_type="ELECTRIC"
+     key.FLOAT.Explode_friendly_damage_multiplier="0.1"
+     key.FLOAT.Explode_stun_enemies_duration="10"
+    />
+
+    <node id="DysmantleRotate"
+     key.BOOLEAN.Rotate_start_automatically="true"
+     key.FLOAT.Rotate_start_angle="0"
+     key.FLOAT.Rotate_end_angle="0"
+     key.FLOAT.Rotate_turn_speed="8"
+     key.BOOLEAN.Rotate_backwards="false"
+     key.BOOLEAN.Rotate_stop_when_not_moving="true"
+    />
+
+  </array>
+
+  <array id="SCRIPTS">
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="embedded_ai_script" >
+      <![CDATA[
+        Include ("actors/tools/scripts/electric-grenade.nut");
+      ]]>
+    </node>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death"
+     category="DEATH"
+     forced_animation_length_in_seconds="0.10"
+     event_0_trigger_time="0"
+     event_0_id="id1"
+     event_0_effect="effects/electric-grenade-blast.xml"
+     event_0_spawn_effect_offset_z="-36.29"
+     event_1_trigger_time="0.083"
+     event_1_id="id2"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="0.69" />
+    <node id="shadow_alpha" value="0.26" />
+    <node id="model" value="models/secondarys/electric-grenade.model" />
+  </array>
+
+  <array id="RENDERABLES">
+    <node id="DysmantleExplosion" />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="SPHERE" />
+    <node id="radius" value="7.0" />
+  </array>
+</root>

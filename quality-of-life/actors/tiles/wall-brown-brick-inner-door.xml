@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="tags" value="MOD_OCPD_MINIMAP,MOD_ONE_HIT_OBJECTS" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="STATIC,SOLID,SET_NONSOLID_ON_DEATH_END,WALL,DOOR,DELETE_ACTOR_AFTER_DEATH,IGNORE_COLLIDER_WHEN_PICKING" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE,PERMANENT_KEY_VALUES" />
+    <node id="physics_material" value="WOOD" />
+    <node id="mass" value="80" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="2.5" />
+    <node id="move_acceleration" value="200" />
+    <node id="max_move_speed" value="10" />
+    <node id="dampening_factor_on_ground" value="0" />
+    <node id="dampening_factor_on_air" value="0" />
+    <node id="restitution_coefficient" value="0.5" />
+    <node id="friction" value="0.2" />
+    <node id="minimum_damage_threshold" value="100" />
+    <node id="aggro_radius" value="128" />
+    <node id="friend_avoidance_radius" value="10" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="0" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="300" />
+    <node id="damage_type_accept_mask" value="BLUNT,SLASHING,EXPLOSIVE,SELF_DESTRUCT" />
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="WOOD" />
+    <node id="Door_is_closed" type="BOOLEAN" flags="PERSISTENT,SAVE_STATE" value="true" />
+    <node id="Door_required_key_id" type="STRING" />
+    <node id="Door_can_be_closed" type="BOOLEAN" value="true" />
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="DISMANTLABLE" />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleBehavioral">
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleDoor"
+     key.BOOLEAN.Door_is_closed="true"
+     key.STRING.Door_required_key_id=""
+     key.BOOLEAN.Door_can_be_closed="true"
+     key.STRING.Door_type="HINGED"
+     key.INTEGER.Door_predefined_opening_direction="0"
+     key.SOUND.Door_snd_open=""
+     key.SOUND.Door_snd_close=""
+    />
+
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="death"
+     category="DEATH"
+     animation_controller="PhysicsMaterialBasedDeath"
+     forced_animation_length_in_seconds="0.20"
+     force_update_visual_bounds="true"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_effect="effects/puff-1.xml"
+     event_0_spawn_effect_offset_z="-100.00"
+     event_1_trigger_time="0"
+     event_1_id="id1"
+     event_1_effect="effects/door-wood-break.xml"
+    />
+
+    <node id="open"
+     fade_in_duration="0"
+     fade_out_duration="0"
+     forced_animation_length_in_seconds="0.30"
+     event_0_trigger_time="0"
+     event_0_id="sfx-lock"
+     event_0_command_word="play_sound_positional"
+     event_0_command_word_key_values="{{SOUND,|Q|sound|Q|,|Q|sfx/door-small-wooden-open-lock|Q|},{FLOAT,|Q|volume|Q|,|Q|1|Q|},{FLOAT,|Q|frequency_multiplier|Q|,|Q|1|Q|}}"
+     event_1_trigger_time="0"
+     event_1_id="sfx-open"
+     event_1_command_word="play_sound_positional"
+     event_1_command_word_key_values="{{SOUND,|Q|sound|Q|,|Q|sfx/door-small-wooden-open|Q|},{FLOAT,|Q|volume|Q|,|Q|1|Q|},{FLOAT,|Q|frequency_multiplier|Q|,|Q|1|Q|}}"
+    />
+
+    <node id="close"
+     fade_in_duration="0"
+     fade_out_duration="0"
+     forced_animation_length_in_seconds="0.30"
+     event_0_trigger_time="0"
+     event_0_id="sfx-close"
+     event_0_command_word="play_sound_positional"
+     event_0_command_word_key_values="{{SOUND,|Q|sound|Q|,|Q|sfx/door-small-wooden-close|Q|},{FLOAT,|Q|volume|Q|,|Q|1|Q|},{FLOAT,|Q|frequency_multiplier|Q|,|Q|1|Q|}}"
+     event_1_trigger_time="0.25"
+     event_1_id="sfx-slam"
+     event_1_command_word="play_sound_positional"
+     event_1_command_word_key_values="{{SOUND,|Q|sound|Q|,|Q|sfx/door-small-wooden-close-slam|Q|},{FLOAT,|Q|volume|Q|,|Q|1|Q|},{FLOAT,|Q|frequency_multiplier|Q|,|Q|1|Q|}}"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="DysmantleObstacle" />
+    <node id="shadow_alpha" value="0.15" />
+    <node id="shadow_method" value="WRAP_ON_SURFACE" />
+    <node id="allow_static_caching" value="false" />
+    <node id="model" value="models/tiles/wall-brown-brick-inner-door.model" />
+  </array>
+
+  <array id="INTERACTIONS">
+    <node interaction_0_id="open"
+     interaction_0_disable_after_interaction="0"
+     interaction_0_script_to_test_if_interaction_is_available="function IsInteractionAvailable(so_self, so_activator)&#10;{&#10;&#9;return StageObject_GetNumberOfChildren(so_self) == 0;&#10;}"
+     interaction_0_trigger="PRESS_BUTTON"
+     interaction_0_controller_button="USE"
+     interaction_0_text="Open"
+     interaction_0_command_to_send_to_actor_attached_to="activate"
+     interaction_1_id="close"
+     interaction_1_disable_after_interaction="0"
+     interaction_1_trigger="PRESS_BUTTON"
+     interaction_1_controller_button="USE"
+     interaction_1_text="Close"
+     interaction_1_command_to_send_to_actor_attached_to="activate"
+    />
+
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="BOX" />
+    <node id="size_x" value="3.2" />
+    <node id="size_y" value="48.8" />
+    <node id="size_z" value="102.4" />
+    <node id="offset_z" value="-51.2" />
+  </array>
+
+</root>

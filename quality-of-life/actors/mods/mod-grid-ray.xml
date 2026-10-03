@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="tags" value="HIDE_IN_EDITOR_PALETTE,MOD_GRID_RAY" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="friend_group" value="OBSTACLES" />
+    <node id="physics_material" value="NO_DAMAGE" />
+    <node id="actor_flags" value="SEETHROUGH" />
+    <node id="color" r="1" g="1" b="1" a="0.5" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="Null">
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="Model" />
+    <node id="model" value="models/mods/mod-grid-ray.model" />
+    <node id="shadow_method" value="NONE" />
+    <node id="cast_shadows" value="false" />
+    <node id="receive_shadows" value="false" />
+  </array>
+
+  <array id="COLLIDER">
+    <node id="type" value="NONE" />
+  </array>
+
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

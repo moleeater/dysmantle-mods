@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<root>
+  <array id="INFO">
+    <node id="title" value="Quality of life" />
+    <node id="thumb" value="|img src='ui/gfx/mods/mod-quality-of-life.png' scale=0.06 offset=2|  " />
+  </array>
+  <array id="CHANGELOG">
+
+
+    <node epoch="1790224725" id="120"
+      value="
+- fixed a bug in the Cut gatherables mod allowing cutting flowers without the Doomsday DLC2, sorry
+- new Walkable Ark mod: Clear the walkable path of Ark containers on completion.
+- added another missing object to OCPD minimap mod and One hit objects mod
+- added Wolf death, Power Fist, Khopesh, Laser Sword to Sound muffler mod
+- changed Sound muffler mod to use volume values in xml files instead of a new audio file, when possible
+- changed all cliff vines to be indestructible and removed them from OCPD minimap mod and One hit objects mod
+" />
+
+
+    <node epoch="1790224724" id="119"
+      value="
+- added a missing object to OCPD minimap mod and One hit objects mod
+- added stars for mods for DLCs to the Options screen, and hidden mods for unpurchased DLCs
+" />
+
+
+    <node epoch="1786733075" id="118"
+      value="
+- fixed exploit in Restless crates mod
+" />
+
+
+    <node epoch="1786531691" id="117"
+      value="
+- fixed Reveal POIs mod showed POIs for DLCs you do not own, sorry
+" />
+
+
+    <node epoch="1786439523" id="116"
+      value="
+- fixed Mods UI prevented scrolling in the mod description
+" />
+
+
+    <node epoch="1786080515" id="115"
+      value="
+- fixed Bioweapon mod giving the correct amount calculated with the Material drop modifier
+- fixed a bug in Bioweapon mod not giving mana beads for stationary monsters
+- modified Bridge islands mod to use less way cpu
+" />
+
+
+    <node epoch="1785350000" id="114"
+      value="
+- changed Restless crates mod to only activate after the first crate opened, so the player gets what to do
+- changed Minimap extra mod to only show Night terrors after day 24
+- modified the scale of Options UI to fit more content on the screen
+" />
+
+
+    <node epoch="1784468747" id="113"
+      value="
+- new Tabula Rasa farms mod: Adds 2 farmlands in the northwest and southeast corner of Tabula Rasa.
+" />
+
+
+    <node epoch="1784001648" id="112"
+      value="
+- new Big inventions mod: Enlarge icons on campfire invention screen to fill the empty space.
+- added 8 missing readables to the Second playthrough mod
+- modified Snowfall mod to spawn fewer particles, because other types of particles could not be drawn
+" />
+
+
+    <node epoch="1782918447" id="110"
+      value="
+- changed file format of xml file for Tips mod, added more support for translations
+" />
+
+
+    <node epoch="1782902125" id="109"
+      value="
+- fixed bug in mod UIs showing a message about OnEnter error
+- fixed a bug in Starting stage mod not giving pet control items when starting in Desolatum
+- changed damage threshold of the concrete bunker object from 95 to 96, so it aligns with all other concrete objects
+" />
+
+
+    <node epoch="1776769782" id="108"
+      value="
+- new Planter basics mod: Unlocks the Planter buildable and the Builder's Kit when completing the Farming Basics quest.
+- new Quest fixes mod: Various bugfixes for the quests.
+- new Did i dieded? mod: Keeps showing your death counter even if you did not die yet.
+- new Link gas leaks mod: Parent orphan gas clouds to their nearby pipes or barrels, so they will disappear.
+" />
+
+
+    <node epoch="1774933095" id="107"
+      value="
+- fixed Hide corpses mod for Underworld DLC1, it works with Mana Chambers now
+- fixed bug in Ostrich nests mod for nests overriding the default size
+- fixed a bug in Mark chunk mod did not allow to unmark
+- new Explode shards mod: Apply explosive damage to all mana prop shard objects in the world.
+- added some bosses to the Roll attack mod
+- added instant activation for enabling No stumps mod, no need to reload
+- added instant activation for Hide corpses mod, no need to reload
+- added all missing maps to Stage info mod
+- added readable signs to Second playthrough mod, all non-quest related signs are destructible by default
+" />
+
+
+    <node epoch="1774469394" id="106"
+      value="
+- fixed bug in Predator mod showing your own pets as animals
+- new Restless crates mod: Skip resting at the campfires to open timed crates, going near one is enough to reset the timer.
+- new Ostrich nests mod: Enlarge bird nests to make them more visible.
+- new Extract barrier mod: Blocks you from leaving the Law and Sword mech boss arenas without extracting the Fuel Cell.
+- added barrier and warning notification into Extract barrier mod for The First Expedition quest to investigate the pyramid
+- added a check for Wild crops mod to ignore newly tilled plant beds
+" />
+
+
+    <node epoch="1774288385" id="105"
+      value="
+- fixed bug in Reveal POIs mod and Yawning mod not remembering mod status in save
+- fixed bug in Predator mod when minimap rotation was on
+- fixed bug in Sleep timer mod and Automatic gasmask mod calculating with world time
+- added more checks for Flower Power mod to make the flowers gatherable as soon as possible
+- added starting the main DLC quest for Starting stage mod when the random location is in the DLC1/DLC2 map
+" />
+
+
+    <node epoch="1772333147" id="104"
+      value="
+- fixed bug in Hide corpses mod was still active in Underworld DLC1
+- fixed Predator mod to not include Night Terrors
+- fixed a bug in Starting stage mod in the tomb with the link relay
+- fixed a bug in Ark elevator mod when you start the game in the Ark
+- fixed animal script overhead, Clone deer mod lag should be smaller
+- added a bit more randomness to the Snowfall mod
+" />
+
+
+    <node epoch="1770887954" id="103"
+      value="
+- removed Fall guardian mod, as it was never really up to quality
+- fixed a major bug in Ark single deposit mod
+- fixed bug in Predator mod, included flowers even without DLC2
+- added a bush and the mushroom to the One hit objects mod
+- added farmables and generic searchable objects to the Easier gathering mod
+- added limiting Dog Houses to the Starting stage mod, to prevent break-out
+- changed Pickup mines mod to require item upgrade +2
+- changed Flower Power mod to require Gathering skill
+- changed Snowfall mod to be always active
+- changed Keep running mod, now it is always disabled when touch controls are used, as that does not have the bug
+" />
+
+
+    <node epoch="1770320507" id="102"
+      value="
+- modified the volume of a lot of sounds in the Sound muffler mod, most got louder, but hitting sounds are even quieter
+- removed footsteps and generic ambient sounds from Sound muffler mod
+" />
+
+
+    <node epoch="1770178081" id="99.1.0"
+      value="
+- new Sound muffler mod: Lowers the volume of annoying or triggering sound effects by 5 to 20 dB, like object hitting sounds.
+" />
+
+
+    <node epoch="1770090975" id="98.2.0"
+      value="
+- new Snowfall mod: (optional) Immerse yourself in the winter landscape with drifting snow and howling winds.
+- new Capernaum shortcut mod: Open up the path to south by exploding the shipping container with barrels.
+- new Ark single deposit mod: Bulk dump the required number of materials into an Ark container.
+- added keys to the Minimap extra mod
+" />
+
+
+    <node epoch="1770006409" id="98.1.0"
+      value="
+- new Heavy keys mod: Ground flying key collectibles by increasing the gravity affecting it, so it won't get stuck at unreachable places.
+- new Bypass catacomb mod: Skip tracking back through the catacombs when you go from the Underworld to the main island.
+- merged Traps on minimap mod into Trap warning mod
+- merged Link Tower POI info mod + Obelisk POI info mod + Fishing Spot POI info mod + Buried Teleporter POI info mod into POI info mod
+- merged Compact statistics mod into Show statistics mod
+- merged Ark POI progress mod into Ark progress mod
+- changed Thick grid lines mod to be optional
+- added animation for Starting stage mod weapon collectable pick up
+- added mouse scroll wheel support to the Camera distance mod
+" />
+
+
+    <node epoch="1769953718" id="97.0.2"
+      value="
+- fixed bug that locked your save file because of DLC problems in Flower Power mod, i am so sorry. If you have a corrupted save file, DM it to me on Discord and i will fix it, you will not lose progress.
+" />
+
+
+    <node epoch="1769818141" id="95.1.0"
+      value="
+- fixed a bug in Minimap extra mod not hiding the destroyed searchables and picked flowers on the world map
+- fixed Yawning mod, now should only display the notification every 45 minutes
+- fixed a bug in several mods which used player modifiers was not activating for the co-op player
+- fixed a small bug in Starting stage mod was keep showing the tomb chest in the Fortress as searchable
+- changed Minimap extra mod to keep show Night Terrors on the world map after killed
+" />
+
+
+    <node epoch="1769634522" id="94.2.0"
+      value="
+- fixed a bug in Minimap extra mod, icons now hide on the world map on completion
+- added The Ark to the Starting stage mod with instant access to the Power Fist
+" />
+
+
+    <node epoch="1769529808" id="94.1.0"
+      value="
+- added King's Study on top of Crown to the Starting stage mod with instant access to the Escape Pod. Or not?
+- changed discovery radius of all objects in Minimap extra mod to 1000
+- changed discovery radius of searchables with recipes to 500 in Minimap extra mod
+- modified the scrollbar size on some interfaces to make it more comfortable on Android
+" />
+
+
+    <node epoch="1769202087" id="93.2.0"
+      value="
+- added Night Terrors to the Minimap extra mod, they will now show up on the world map too
+- added recipes to the Minimap extra mod, objects with a recipe reward inside will now show up on the maps
+- added refiners to the world map
+- added flowers to the world map
+- added flowers back to Minimap extra mod
+- added diggables to Minimap extra mod
+- removed diggables from OCPD minimap mod
+" />
+
+
+    <node epoch="1768899419" id="93.1.0"
+      value="
+- fixed bug in Cut gatherables mod, made DLC2 quest flowers uncuttable
+- changed random location in Starting stage mod to be a random POI instead of just any map cell
+- changed Pet pointer mod to require crafting the Subterrean Sonar Toolkit
+- changed Pocket pets forever mod to scale with the upgrade level
+- changed Hunting knives mod to scale with upgrade level
+" />
+
+
+    <node epoch="1768732177" id="92.1.1"
+      value="
+- fixed bug in Wild crops mod
+" />
+
+
+    <node epoch="1768727673" id="92.1.0"
+      value="
+- new Trophies mod: Get a trophy after defeating bosses. You can place it your house as a buildable 3D object.
+- new Loudspeaker no friendly fire mod: No more accidental drive-by from your melee weapons, they cannot damage the Shelter loudspeakers.
+- new Hunting knives mod: Increases the damage dealt by knives against animals, to one-shot deer.
+- new Cut gatherables mod: Slash mushrooms, all berry bushes and flowers with melee weapons, don't have to pick them manually.
+- changed Easier gathering mod to be always active
+- added spice jars to Easier gathering mod
+- changed Target pets mod to be always active
+- changed Thick grid lines mod to be always active
+- changed Dodge cliffs mod to be always active
+- changed Wild crops mod to be always active
+- changed Fix from storage mod to be always active
+- removed Buried Teleporter icon mod, because not needed since Reveal teleports mod
+- changed Minimap extra mod to be always active
+- removed flowers from Minimap extra mod
+- added flowers to OCPD minimap mod
+- removed flowers from Predator mod
+- added gatherables to Predator mod
+- removed eggs from OCPD minimap mod
+- added eggs to Minimap extra mod
+- added mana beads to Predator mod
+" />
+
+
+    <node epoch="1768546228" id="91.8.0"
+      value="
+- added some protection to prevent publishing the sample mod to Steam
+- modified Track more mod to hide when on mobile UI
+" />
+
+
+    <node epoch="1768118723" id="91.7.0"
+      value="
+- fixed a bug in displaying Collector pets setting
+- new Booksmart pets mod: Ignore readable objects when pets are looking for what to attack.
+- new Fast weapon switch mod: Cycle your primary weapon tools without that short lag, switch to your 3rd tool faster.
+- new Tips mod: Showing tips for the mods on the loading screens.
+- added quests to the Track more mod
+- added a random location option for Starting stage mod, it might drop you in the sea, into the walls, or into unwinnable circumstances. You get 1 hour of temperature-immunity.
+- added Beam Gun in Pet Hub to Desolatum in Starting stage mod
+- changed how the Khopesh is given to the player in Starting stage mod
+" />
+
+
+    <node epoch="1767745782" id="91.6.0"
+      value="
+- new Reveal teleports mod: Break the ground where the Buried Teleporters are without the pets having to find them.
+- added the Tomb of the Immortal King to the Starting stage mod
+- fixed the pets vs the Keep running mod, probably?
+" />
+
+
+    <node epoch="1767675780" id="91.5.0"
+      value="
+- new Pocket pets forever mod: Upgrade the pocket ball to increase the time spawned pets are alive. To despawn them, rest at a campfire.
+- new Allow 99% POIs mod: Ignore the Underworld completion POIs when counting towards 100% achievement.
+- new Tall mushrooms mod: Raise mushroom gatherables higher above the ground to be more noticable.
+- fixed a bug in Indestructible buildables mod when disabling the mod flagged vanilla objects as destructible
+" />
+
+
+    <node epoch="1767562128" id="91.4.0"
+      value="
+- new Touchable refiner mod: Fix the add/remove buttons on the refiner UI being too small for mobile screens.
+- new Pet pointer mod: Shows the reward pet, recipe or dish for the Buried Teleports in the Pet Hub.
+- added Pets and Dungeons DLC3 Desolatum shelter to the Starting stage mod, you are locked in the pet maps until you complete the pet main quest
+- removed pets from the One hit objects mod, as turns out, pets work differently
+" />
+
+
+    <node epoch="1767435270" id="91.3.0"
+      value="
+- fixed the bug somewhat in Keep running mod with the pets using a workaround: re-equip the pet after loading
+- new Build on ground mod: Build Workbenches, Kitchen Stoves, Planters directly on the ground, without a platform.
+- new Code editor mod: Execute scripts with the help of a built-in code editor and documentation of the vanilla game.
+- new Mods UI tweaks mod: Better workflow for mod developers with a few small changes on the Mods UI. More compact and highlights important info.
+- new Console duplicates mod: Developer console does not hide duplicate lines any more, saving you to put NX_GetTime().tostring() on every line.
+- new Event Log mod: Replay the path you walked from the start with the vanilla Game Event Log on the Collection tab.
+- modified Event Log mod to not show on mobile UI, as the log is empty on Android
+- added support for mobile UI to the always-on section list, now using larger text
+- added support for mobile UI of the Camera distance modifier slider, now using smaller maximum
+- added warning text for Camera distance modifier mod when the Disable fog mod is not installed
+- added skulls and bones to the Thinner bushes mod
+- modified Map the shores mod to not run on small stages
+- modified OCPD minimap mod to not run on stages where the player is unarmed
+" />
+
+
+    <node epoch="1767396064" id="91.2.0"
+      value="
+- added pets to the One hit objects mod
+- modified Petting heals player mod to only apply for tamed deer and never pets
+- changed Petting heals player mod to be always active
+- changed Healing treat mod to be always active
+- changed Pick up mines mod to be always active
+- changed Grab material mod to be always active
+- changed Ark progress mod to be always active
+- changed Visible bushes mod to be always active
+- changed Thinner bushes mod to be always active
+- changed Walk over mortar pods mod to be always active
+- changed Automatic gas mask mod to be always active
+- changed Flower power mod to be always active
+" />
+
+
+    <node epoch="1767031524" id="91.1.1"
+      value="
+- fixed bug in OCPD minimap mod not showing gatherables, was a side effect of change introduced in v90.3.0
+" />
+
+
+    <node epoch="1766693109" id="91.1.0"
+      value="
+- new Reveal all POIs mod: (optional) Spoil the exploration and show all the points of interests on the current map.
+" />
+
+
+    <node epoch="1764100656" id="90.3.0"
+      value="
+- fixed bugs in new game mod options when closing and reopening the dialog did not activate the options
+- added check in OCPD minimap mod for skipping indestrucible and non-solid objects
+" />
+
+
+    <node epoch="1761703190" id="90.2.0"
+      value="
+- new Track more mod: (optional) Monitor more recipes on screen for the materials required.
+" />
+
+
+    <node epoch="1757728424" id="90.1.1"
+      value="
+- fixed Ark progress not showing until you do 1 collection
+" />
+
+
+    <node epoch="1757517630" id="90.1.0"
+      value="
+- new Accessible ramps mod: Walk onto Drawbridges and Piers from the side too.
+" />
+
+
+    <node epoch="1753241577" id="87.2.1"
+      value="
+- fixed bug in Ascend shelters mod where vanilla Loudspeaker would not react
+" />
+
+
+    <node epoch="1753021482" id="87.2.0"
+      value="
+- changed Collector pets mod area from a box to a sphere
+" />
+
+
+    <node epoch="1752536478" id="86.7.0"
+      value="
+- new Ascend shelter mod: Replay shelter horde mini-games with a buffed monster count after victory.
+" />
+
+
+    <node epoch="1752515756" id="86.6.2"
+      value="
+- added a short bullet time slow down to the Trap warning mod
+" />
+
+
+    <node epoch="1752506210" id="86.6.1"
+      value="
+- new Remind to extract mod: Notifies you to get the fuel cell after killing the mech bosses.
+- added Bear Traps support to Pickup mines mod
+- fixed Ark progress overlay was showing during cutscenes
+- changed Hide corpses mod to not run on Underworld DLC1 because of Mana Chambers
+" />
+
+
+    <node epoch="1752335908" id="86.4.3"
+      value="
+- added warning text for Keep running mod being incompatible with pets
+" />
+
+
+    <node epoch="1752268307" id="86.4.0"
+      value="
+- new Instant death mod: (optional) One hit kills you, you have 1 HP, so anyone can one-shot you.
+" />
+
+
+    <node epoch="1751577774" id="86.2.0"
+      value="
+- new Home Game+ mod: Starting shelter has a New Game+ respawner device when you are already in a New Game+, so you can restart easier.
+" />
+
+
+    <node epoch="1750629471" id="85.3.3"
+      value="
+- fixed some bugs in the Starting stage mod
+" />
+
+
+    <node epoch="1750545829" id="85.3.0"
+      value="
+- new Sane fabricator mod: Flower Power fabricator POI only requires the first level recipes to complete in Doomsday DLC2.
+- added some plants/rocks which blocked paths to an auto-destroy list for Preserve nature mod
+" />
+
+
+    <node epoch="1748942125" id="84.4.0"
+      value="
+- new Preserve nature mod: (optional) Keep all plants, bones and rocks indestructible when you start a new game.
+" />
+
+
+    <node epoch="1748892295" id="84.3.0"
+      value="
+- added shelters to Starting stage mod, you can begin your new game at other shelters
+- added info popups for the mods affecting new game, to the game start dialog
+" />
+
+
+    <node epoch="1745708935" id="84.2.0"
+      value="
+- new Starting stage mod: (optional) Begin your adventure right on the DLC1 Underworld or DLC2 Doomsday map, to increase challenge.
+" />
+
+
+    <node epoch="1745204080" id="84.1.1"
+      value="
+- fixed bug in One hit objects mod was hidden in the Options
+- changed Camera distance maximum value to farther
+- modified OCPD minimap mod to decrease lag spikes
+" />
+
+
+    <node epoch="1744745084" id="83.3.0"
+      value="
+- new Bioweapon mod: (optional) Exterminate all minions in a tower area if the tower is over +1 ascension level. Costs 50 potatoes. Helps with ascending all towers to +3.
+- changed interaction radius of Second playthrough mod to be smaller
+- changed a mod that used recipes to use temporary modifiers, works better with other mods and coop players
+" />
+
+
+    <node epoch="1744567845" id="83.2.0"
+      value="
+- new Second playthrough mod: (optional) Skip waiting for radios and audio logs to play, they are marked as listened just by getting near them.
+- new Don't track dishes mod: Disable tracking materials for dish recipes by default.
+" />
+
+
+    <node epoch="1742281122" id="82.6.1"
+      value="
+- added check for Dodge cliffs mod to not intervene when you are dodging into the bottom of a cliff
+- changed the color of interactable POIs that are also be destroyable in OCPD minimap mod
+" />
+
+
+    <node epoch="1741750543" id="82.6.0"
+      value="
+- new Dodge cliffs mod: (optional) Stop accidentally dodge rolling into the water off the cliffs because of the auto-targetting.
+" />
+
+
+    <node epoch="1741670810" id="82.5.0"
+      value="
+- added in-game event logging to some of the mods to help 10tons know why strange things happened in modded save files
+" />
+
+
+    <node epoch="1741559794" id="82.4.0"
+      value="
+- new Collapsible POIs mod: Hide link tower areas you are not interested in by clicking on the title on the Points of Interest screen of Collection tab.
+" />
+
+
+    <node epoch="1741460687" id="82.3.1"
+      value="
+- fixed a bug in Difficulty mod when starting New Game+ would not increase the difficult level by 1
+" />
+
+
+    <node epoch="1741395436" id="82.3.0"
+      value="
+- new Difficulty mod: Starting a new game allows you to set the cycle number, affecting enemy health, speed, damage and XP.
+" />
+
+
+    <node epoch="1741374838" id="82.2.0"
+      value="
+- new Wiki mod: Link wiki articles to a new button on information panels, etc. Playing in English gives you more specific links.
+" />
+
+
+    <node epoch="1740636178" id="82.1.0"
+      value="
+- new Show statistics mod: View your game statistics any time, not just after you completed the game.
+- new Compact statistics mod: Screenshot game statistics screen to one image to show off.
+" />
+
+
+    <node epoch="1740620875" id="81.3.0"
+      value="
+- new Unlimited builds mod: (optional) Increase build limit by 10000 objects to help you build your dream home.
+- fixed a bug in Collector pets mod where ignored materials were collected
+" />
+
+
+    <node epoch="1740451187" id="81.2.0"
+      value="
+- new Keys to home mod: Unlocks the starting shelter in New Game+ if you have the Crown from the previous run.
+" />
+
+
+    <node epoch="1739647700" id="80.3.0"
+      value="
+- new Grab material mod: (optional) Pick up ignored materials manually when auto-collect is disabled on them.
+- removed Friendly doors mod, as sometimes you could pass closed doors, and i couldn't fix it
+- fixed a bug in Camera distance mod when it would not initialize if the HUD was disabled
+- added warning text for Clone deer mod, because it causes lag spikes
+" />
+
+
+    <node epoch="1735606670" id="79.4.0"
+      value="
+- added hard blocking for incompatible mods
+" />
+
+
+    <node epoch="1731081762" id="79.0.0"
+      value="
+- new Free camera mod: (optional) Move the main camera freely to take screenshots from any perspective.
+" />
+
+
+    <node epoch="1730415617" id="78.1.1"
+      value="
+- new Flower Power mod: (optional) Enables collecting exotic flowers.
+" />
+
+
+    <node epoch="1729980396" id="77.8.2"
+      value="
+- fixed compatibility with DLCX mod by XYB88
+- fixed bugs with chinese localized labels sometimes not translating
+" />
+
+
+    <node epoch="1720269448" id="73.2.0"
+      value="
+- added UI rescale for Mobile UI
+" />
+
+
+    <node epoch="1720207670" id="73.1.0"
+      value="
+- new Fix from storage mod: (optional) Activate Ropebridges, Terminals, Obelisks, Mana Chambers, Wishing Wells with materials from your Campfire Storage Box.
+" />
+
+
+    <node epoch="1720082687" id="72.0.1"
+      value="
+- fixed a bug in Friendly doors mod
+" />
+
+
+    <node epoch="1719731405" id="70.2.0"
+      value="
+- new One hit objects mod: (optional) Dismantle everything in just one hit using any weapon passing the damage threshold of the object.
+- moved Automatic attack mod to Cheats modpack, as it turns out, it might attack faster than the normal button hold does.
+- fixed a bug in OCPD minimap mod, when the POIs disappeared
+" />
+
+
+    <node epoch="1719476621" id="70.1.0"
+      value="
+- fixed a bug in Controller shared library
+- moved Mods UI mod to Developer tools modpack
+" />
+
+
+    <node epoch="1719244794" id="69.5.0"
+      value="
+- added package box icon to distinguish modded tools, buttons, interactions
+- added another button to access the Change Log from the Options screen
+" />
+
+
+    <node epoch="1719198822" id="69.4.0"
+      value="
+- renamed Toggle attack mod to Automatic attack mod, because the attack speed is not vanilla
+" />
+
+
+    <node epoch="1718963677" id="69.2.0"
+      value="
+- added Cooking Recipes and Flower Power recipes to the New game++ mod
+" />
+
+
+    <node epoch="1718940787" id="69.1.0"
+      value="
+- new New game++ mod: Pick additional tools, weapons, features you want to carry over to your New Game Plus.
+" />
+
+
+    <node epoch="1718145290" id="68.8.0"
+      value="
+- added collapsible groupings to the Options page for the mods
+" />
+
+
+    <node epoch="1718063101" id="68.7.0"
+      value="
+- new OCPD minimap mod: (optional) Remaining destroyable/searchable/usable/gatherable/diggable objects are marked on the minimap. Accessibility mod for people having OCPD Obsessive-compulsive personality disorder.
+" />
+
+
+    <node epoch="1717873344" id="68.6.0"
+      value="
+- new Friendly doors mod: (optional) Opened doors are less annoying, you won't get stuck behind them when you try to exit a room.
+" />
+
+
+    <node epoch="1717778069" id="68.5.0"
+      value="
+- new Wild crops mod: (optional) Neglected plant beds have a chance to get a wild crop grow randomly, so you can not lock yourself out of inventing dishes.
+- new Remember the seed mod: Re-equiping your seed bags restores your last selected farming seed.
+" />
+
+
+    <node epoch="1717049317" id="68.3.0"
+      value="
+- added Ark level 4 material collection to Ark progress mods
+- changed Ark progress mods to hide undiscovered material types
+- changed Fishing spot POI mod to hide undiscovered fish types and hide all for unfished spots
+- modified Petting heals player mod to require Animal Friend level 3 skill
+- updated to game version 1.4.0.38
+" />
+
+
+    <node epoch="1716884465" id="68.2.1"
+      value="
+- fixed bugs in Yawning mod
+" />
+
+
+    <node epoch="1716875030" id="68.2.0"
+      value="
+- new Ark elevator mod: Save walking all the way down and up in the Ark, you can select the destination floor in elevators.
+" />
+
+
+    <node epoch="1716569520" id="68.1.0"
+      value="
+- removed DLC fast travel mod, as since Confirm pills mod exists, it is not needed anymore
+- changed Yawning mod notification cooldown from 45 real world seconds to 9 real world minutes
+- modified Yawning mod to be an always active mod
+- changed Predator mod compass sizes
+" />
+
+
+    <node epoch="1716569520" id="67.9.0"
+      value="
+- new Save material transporter mod: Do not use up your Material Transporter item when your backpack is empty.
+- added mobile UI button for Toggle attack mod
+- added confirm popup for Unstuck mod
+- modified Sleep timer mod to calculate with time modifier trinkets
+" />
+
+
+    <node epoch="1716768185" id="67.8.1"
+      value="
+- added mobile UI to the Change Log, and removed vanilla block on all platforms, so you can see the changes on Android too
+" />
+
+
+    <node epoch="1716438695" id="67.8.0"
+      value="
+- mod change logs are listed on the Change Log page accessible from the main menu
+" />
+
+
+    <node epoch="1716307380" id="67.7.0"
+      value="
+- new Yawning mod: (optional) Yawn when you are ready to sleep, remembers you every 15 in-game minutes. 
+- new Sleep timer mod: Shows remaining real world time until you can sleep again, on the campfire screen.
+" />
+
+
+    <node epoch="1716293220" id="67.6.0"
+      value="
+- updated to game version 1.4.0.35
+" />
+
+
+    <node epoch="1716176880" id="67.5.0"
+      value="
+- added list of always active mods to the options page with info popups
+" />
+
+
+    <node epoch="1716161280" id="67.4.0"
+      value="
+- new Thinner bushes mod: (optional) Pass over every type of undergrowth, skulls and bones, you won't get stuck in a bushy area.
+" />
+
+
+    <node epoch="1716070080" id="67.2.0"
+      value="
+- new Mods UI tweaks mod: Better workflow for mod developers with a few small changes on the Mods UI. More compact and highlights important info.
+- modified Bullet time mod to be compatible with DarthNemesis's Timed Crate Cheat mod
+" />
+
+
+    <node epoch="1716009000" id="67.0.0"
+      value="
+- new Toggle attack mod: (optional) Enable continuous attack with a custom keypress. Accessibility mod if you have repetitive strain injury or a mobility impairment.
+" />
+
+
+    <node epoch="1715688600" id="66.0.0"
+      value="
+- updated to use Steam Workshop load priority system in v1.4.0.32
+" />
+
+
+    <node epoch="1715214780" id="64.0.0"
+      value="
+- added a special item for Mark chunk mod
+- added Common rifts mod teleport destination animation
+- added a new rift for Common rifts mod because of v1.4 changes
+- changed Easier gathering mod radius to be larger
+" />
+
+
+    <node epoch="1715085240" id="63.0.0"
+      value="
+- fixed game crashes caused by Mark chunk mod 1.4 update
+" />
+
+
+    <node epoch="1714909320" id="62.0.0"
+      value="
+- updated to game version 1.4.0.29
+- removed Calm pets mod, because v1.4 has no more pet collision
+- removed Quest POI mod, because v1.4 includes it in vanilla
+- updated to be compatible with Steam Workshop
+- uploaded to Steam Workshop
+" />
+
+
+    <node epoch="1714756440" id="60"
+      value="
+- changed tooltips and youtube links to a nice popup
+" />
+
+
+    <node epoch="1714631040" id="59"
+      value="
+- added checks for mobile user interfaces
+" />
+
+
+    <node epoch="1714460700" id="58"
+      value="
+- increased compatibility with other modders
+" />
+
+
+    <node epoch="1714392300" id="57"
+      value="
+- new Ark progress mod
+- renamed previous Ark progress mod to Ark progress HUD mod
+- added save file flagging to help 10tons with debugging save files sent with bug reports
+" />
+
+
+    <node epoch="1714270200" id="56"
+      value="
+- changed Fall guardian mod to require Rubber Duck crafted
+- changed Predator mod to require Monster Scanner crafted and Scanner Radar installed for the area
+- modified Predator mod to show animals and flowers too
+" />
+
+
+    <node epoch="1714144500" id="55"
+      value="
+- new Predator mod
+- modified Mark chunk mod to show both coop players on the map
+" />
+
+
+    <node epoch="1713952500" id="54"
+      value="
+- new Hide minimap mod
+- changed Mark chunk mod to allow using the item even when the mod is disabled
+- fixed an Ark progress mod bug
+- fixed a Thick gridlines mod bug
+- modified north marker in Colored markers mod
+" />
+
+
+    <node epoch="1713770820" id="53"
+      value="
+- new Confirm pills mod
+" />
+
+
+    <node epoch="1713743400" id="52"
+      value="
+- new Fall guardian mod
+" />
+
+
+    <node epoch="1713513180" id="51"
+      value="
+- new Map the shores mod
+- modified Camera distance mod to reset to your setting after boss fights
+" />
+
+
+    <node epoch="1713094380" id="50"
+      value="
+- renamed Automatic running mod to Keep running
+" />
+
+
+    <node epoch="1712951580" id="48"
+      value="
+- new Traps on minimap mod
+" />
+
+
+    <node epoch="1712866080" id="47"
+      value="
+- new Automatic running mod
+- new Trap warning mod
+" />
+
+
+    <node epoch="1712763600" id="46"
+      value="
+- new Fishing spot POI info mod
+- new Centered teleporter icon mod
+" />
+
+
+    <node epoch="1712538000" id="45"
+      value="
+- added links to demo videos for the mods on the Options page
+" />
+
+
+    <node epoch="1712270760" id="44"
+      value="
+- fixed a bug in Healing treat mod
+" />
+
+
+    <node epoch="1711505040" id="43"
+      value="
+- new Buried Teleporters POI info mod
+" />
+
+
+    <node epoch="1711160760" id="42"
+      value="
+- new Grid rays mod
+" />
+
+
+    <node epoch="1710976620" id="41"
+      value="
+- fixing Boost refiner interaction appeared even when Cheats modpack was not installed
+- fixed Quest POI font size enlargement was not working
+- changed some tooltips for the Mods Options UI page
+" />
+
+
+    <node epoch="1708785180" id="40"
+      value="
+- fixed a Bullet time bug
+- changed critical hit damage to 5000 in Hypercritical mod, as it was not enough
+- changed Mark chunk mod map icons
+- changed Camera distance modifier mod to revert to default zoom on small stages
+" />
+
+
+    <node epoch="1708424820" id="39"
+      value="
+- fixed a bug in Camera distance UI mod
+- fixed a Mark chunk mod bug
+- added player position on Mark chunk mod map
+- changed Mark chunk mod map icons
+" />
+
+
+    <node epoch="1708232640" id="38"
+      value="
+- fixed a Bridge islands bug, hopefully it is good now
+- added overworld map for Mark chunk mod
+" />
+
+
+    <node epoch="1707785100" id="37"
+      value="
+- new Easier gathering mod
+- new Unstuck mod
+- fixed another Ark progress bug
+- fixed a Bridge islands bug, but it is still buggy
+- added Boomsquito to Hide corpses mod
+" />
+
+
+    <node epoch="1707177540" id="36"
+      value="
+- fixed a Mark chunk mod bug freezing the game with an animation
+- fixed Bridge islands bug not rotating the bridge in place
+- changed Healing treat mod to scale radius by the Animal Treat upgrade level
+- changed Roll attack mod to scale damage by the Dodge Roll Speed
+- added 3 bridges and changed 4 bridges for Bridge islands mod
+- added animation for Automatic gas mask mod
+- added particle effects for Bridge islands mod
+- added particle effect to Healing treat mod
+- added particle effect for Pickup mines mod
+- added floater notification for Petting heals player mod
+- added sanity checks to multiple mods
+- added Bullet time mod from Cheats modpack
+- changed Bullet time mod to scale duration and effect by the number of Timed Crates opened
+- changed Bullet time mod from unlimited to 6 uses
+- changed Bullet time mod to prevent opening Timed Crates after use
+" />
+
+
+    <node epoch="1706456520" id="35"
+      value="
+- new Collector pets mod
+- new Bridge islands mod
+- modified Moonlight mod to ease in in 4 steps
+" />
+
+
+    <node epoch="1705887540" id="34"
+      value="
+- fixed another Ark progress bug
+- changed the minimal value in Camera distance modifier mod
+" />
+
+
+    <node epoch="1705185840" id="33"
+      value="
+- new Thick gridlines mod
+" />
+
+
+    <node epoch="1705076040" id="32"
+      value="
+- new Clone deer mod
+- new Roll attack mod
+- fixed bugs in Target pets mod
+- fixed bug on option UI: enabling Pick up mines
+- added incompatiblity checks for Mark chunk mod
+- added incompatiblity checks for Boost refiner mod
+" />
+
+
+    <node epoch="1704857760" id="31"
+      value="
+- moved Automatic material transporter mod to Cheats modpack
+- moved Boost refiner mod to Cheats modpack
+- moved Bullet time mod to Cheats modpack
+- moved Faster melee mod to Cheats modpack
+- moved Fertilizer mod to Cheats modpack
+- moved God mode mod to Cheats modpack
+- moved Hypercritical mod to Cheats modpack
+- moved Instant farming mod to Cheats modpack
+- moved Material magnet+ mod to Cheats modpack
+- moved Power walking mod to Cheats modpack
+- moved Rift forwards mod to Cheats modpack
+- moved Safer chasms mod to Cheats modpack
+- moved Well prepared mod to Cheats modpack
+" />
+
+
+    <node epoch="1704839640" id="30"
+      value="
+- new Target pets mod
+- new Healing treat mod
+- new Petting heals player mod
+- modified Hide corpses mod to affect deer too
+- fixed Indestructible buildables were healing turrets too
+" />
+
+
+    <node epoch="1704328740" id="29"
+      value="
+- new Mark chunk mod
+- fixed another Ark progress bug
+- fixed Power walking bug
+" />
+
+
+    <node epoch="1704110280" id="28"
+      value="
+- new Indestructible buildables mod
+- new Well prepared mod
+- new input focus priority for tools on the inventory screen
+- fixed Ark progress mod bug
+- removed Heal buildables mod
+- modified Moonlight mod to have half of the max brightness
+- modified Common rifts mod to only create rifts close to the player
+- added Hide corpses mod UI help
+- added tooltips for the options
+- added buttons on the options UI to open web links
+- changed small UI optimizations
+" />
+
+
+    <node epoch="1703802300" id="27"
+      value="
+- new Hide corpses mod
+" />
+
+
+    <node epoch="1703762100" id="26"
+      value="
+- new Common rifts mod
+- new UI extra mod: show player health on eating interface
+- modified UI to be compatible with the largest UI zoom
+" />
+
+
+    <node epoch="1703337660" id="25"
+      value="
+- new Camera distance modifier slider on HUD UI
+- new Ark progress mod
+- new Show FPS mod
+- new Photo mode mod
+" />
+
+
+    <node epoch="1703084220" id="23"
+      value="
+- modified Boost refiner mod from an item to an interaction
+- modified Camera distance mod to allow 3x the zoom out
+- added Camera distance vanilla slider next to the Camera distance modifier slider
+- modified Calm pets mod to affect deer too
+" />
+
+
+    <node epoch="1702893120" id="22"
+      value="
+- new Pick up mines mod
+- new Camera distance modifier mod
+- new Calm pets mod
+- new No petting mod
+- new Minimap grid info mod
+- new POI card popup addition: quest name is in large text area
+- modified God mode mod: increased stat so you can equip Berserker Charm
+- modified Hypercritical mod: increased critical damage 2x
+- changed some minimap colors
+- changed Text Log to be always visible
+- modified UI, small fixes
+" />
+
+
+    <node epoch="1701799680" id="20"
+      value="
+- new Hypercritical mod
+- changed inner workings of the code, so needed to change mod packaging, to avoid incompatibility issues
+" />
+
+
+    <node epoch="1701551820" id="9"
+      value="
+- new Boost refiner mod
+- new Tomb info mod
+- renamed Mana material magnet repel mod to Automatic material transporter
+- renamed Mana material magnet attract mod to Material magnet+
+- changed item recipes auto-crafting to manual crafting in settings menu
+- updated for game v1.3.0.65
+- changed Visible bushes a little lighter
+- added incompatibility checks for Minimap extra mod
+" />
+
+
+    <node epoch="1701140460" id="8"
+      value="
+- new Fertilizer and Instant farming mod
+- added Mana builder's kit buildables healing routine
+- modified Mana material magnet mod to 2 separated settings: attract (to backpack) and repel (to storage)
+- changed UI position of Mods tab in the Options menu to the first place
+- changed UI paddings, highlights, texts
+" />
+
+
+    <node epoch="1700964600" id="7"
+      value="
+- added Minimap extra mod without the increased POI discovery range
+- added UI help text for Mana material magnet setting
+- unified UI warning text of 'You must be in a game world'
+- added UI help text to clarify the settings are per save file
+" />
+
+
+    <node epoch="1700830440" id="6"
+      value="
+- added No stumps mod
+- added Walk over mortar pods mod
+- changed Mana material magnet mod to run more frequently
+- edited code of Camera heading mod
+" />
+
+
+    <node epoch="1700758860" id="5"
+      value="
+- added Rift forwards mod
+- added Bullet time mod
+- added UI warning text for Visible bushes mod
+- fixed a bug with Minimap extra mod
+" />
+
+
+    <node epoch="1699939620" id="4"
+      value="
+- added Safer chasms mod
+- added Visible bushes mod
+" />
+
+
+    <node epoch="1699834020" id="3"
+      value="
+- added God mode mod
+- added Faster melee mod
+- added Power walking mod
+- added Mana material magnet mod
+" />
+
+
+    <node epoch="1699753680" id="2"
+      value="
+- added Wheat is not corn mod
+- changed hidden UI elements to inactive UI elements when the action is not applicable
+- added ??? placeholder when info is not yet available
+" />
+
+
+    <node epoch="1699497360" id="1"
+      value="
+- first release
+" />
+
+
+  </array>
+</root>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->

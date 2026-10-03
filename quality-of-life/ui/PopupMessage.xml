@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+  <array id="COMPONENTS">
+
+    <node
+     name="fader"
+     type="SHADERFILTER"
+     inherit="FaderBlurFilter"
+     shaderfilter.cache_results="true"
+    />
+
+    <node
+     name="panel"
+     type="NINEPATCH"
+     inherit="DecayNinePatchPanel"
+     position.x="0.499145"
+     position.y="0.498799"
+     ui_scale_modifier="0.2"
+     align="VCENTER,HCENTER"
+     ninepatch.rectangle_width="794"
+     ninepatch.rectangle_height="273"
+     ninepatch.automatic_content_height="true"
+    />
+
+    <node
+     name="aligner_2"
+     type="ALIGNER"
+     inherit="EditorAligner"
+     parent="panel"
+     position.x="0.00248036"
+     position.y="-0.0402438"
+     scale="0.903379"
+     aligner.layout="STACK"
+     aligner.area_width="841.744"
+     aligner.area_height="297.368"
+     aligner.automatic_area_height="true"
+     aligner.min_padding="16"
+    />
+
+    <node
+     name="marker_1"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_2"
+     position.y="-0.441243"
+     align="VCENTER,HCENTER"
+     marker.area_width="99.1286"
+     marker.area_height="34.9449"
+    />
+
+    <node
+     name="Title"
+     type="TEXTBOX"
+     inherit="MediumTextbox"
+     parent="aligner_2"
+     position.y="-0.235086"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     scale="0.843395"
+     align="VCENTER,HCENTER"
+     textbox.fit_inside_textbox="true"
+     textbox.textbox_width="752"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="Text"
+     type="TEXTBOX"
+     inherit="SmallTextbox"
+     parent="aligner_2"
+     position.y="0.0485086"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     color="1,1,1,0.8"
+     align="VCENTER,HCENTER"
+     textbox.textbox_width="705"
+     textbox.text_align="VCENTER,HCENTER"
+    />
+
+    <node
+     name="aligner_1"
+     type="ALIGNER"
+     inherit="DefaultAligner"
+     parent="aligner_2"
+     position.y="0.338693"
+     scale="0.920036"
+     aligner.area_width="814.243"
+     aligner.area_height="64.7617"
+     aligner.fixed_num_rows="1"
+     aligner.min_padding="0.1"
+    />
+
+    <node
+     name="Button_0"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_1"
+     position.x="-0.25"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     expanded_hit_area="20"
+     user_string="QUIT"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="marker_2"
+     type="MARKER"
+     inherit="DefaultMarker"
+     parent="aligner_2"
+     position.y="0.496341"
+     align="VCENTER,HCENTER"
+     marker.area_width="99.1286"
+     marker.area_height="2.17603"
+    />
+
+    <node
+     name="Button_1"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_1"
+     position.x="0.25"
+     save_dynamic_content_to_ui_xml="false"
+     localize="false"
+     user_string="Cancel"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="Button_2"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_1"
+     position.x="0.333333"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     user_string="North"
+     button.ninepatch_width="250"
+    />
+
+    <node
+     name="Button_3"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_1"
+     position.x="0.375"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     button.ninepatch_width="250"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node
+     name="Button_4"
+     type="BUTTON"
+     inherit="DefaultButton"
+     parent="aligner_1"
+     position.x="0.4"
+     save_dynamic_content_to_ui_xml="false"
+     visible="false"
+     localize="false"
+     button.ninepatch_width="250"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  </array>
+</root>

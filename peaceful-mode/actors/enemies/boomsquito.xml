@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" localize="true" />
+    <node id="tags" value="FLYING,POINT_OF_INTEREST,MONSTER" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="PERMANENT,SOLID,FRIEND_OR_FOE,AFFECTED_BY_GRAVITY,SET_NONSOLID_ON_DEATH_END,CAN_STAND_ON_ACTORS" />
+    <node id="persistency_flags" value="TEMPORARY_DEATH_STATE,TEMPORARY_TRANSFORM,TEMPORARY_ATTRIBUTES" />
+    <node id="physics_material" value="FLESH" />
+    <node id="mass" value="100" />
+    <node id="gravity_multiplier" value="0.5" />
+    <node id="turn_speed" value="3" />
+    <node id="move_acceleration" value="0" />
+    <node id="max_move_speed" value="55" />
+    <node id="dampening_factor_on_ground" value="8" />
+    <node id="dampening_factor_on_air" value="8" />
+    <node id="restitution_coefficient" value="0.15" />
+    <node id="friction" value="0" />
+    <node id="minimum_damage_threshold" value="1" />
+    <node id="aggro_radius" value="500" />
+    <node id="friend_avoidance_radius" value="150" />
+    <node id="initial_scale" value="1" />
+    <node id="damage" value="100" />
+    <node id="range" value="100" />
+    <node id="max_hit_points" value="500" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="script_file" type="FILE" flags="PERSISTENT,NO_REPLICATION" value="actors/enemies/scripts/boomsquito.nut" />
+    <node id="stance" type="STRING" value="fly" />
+    <node id="default_running_speed_multiplier" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="1.5" />
+    <node id="default_knockback_strength" type="FLOAT" flags="PERSISTENT,NO_REPLICATION" value="200" />
+    <node id="explosion_radius" type="FLOAT" value="120" />
+    <node id="description" type="STRING" flags="PERSISTENT,LOCALIZED,NO_REPLICATION" value="A bulbous and volatile breed of the Doomsquito that incapacitates prey so others can feed. " />
+    <node id="prevent_death" type="BOOLEAN" value="true" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENEMY_NORMAL" />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleEnemyScripted">
+    <node id="max_aggro_range" type="FLOAT" value="500" />
+    <node id="max_field_of_view" type="FLOAT" value="270" />
+    <node id="allow_flanking" type="BOOLEAN" value="true" />
+    <node id="react_to_enemy_collisions" type="BOOLEAN" value="true" />
+    <node id="roadmap_requires_activation" type="BOOLEAN" value="false" />
+    <node id="alert_system_enabled" type="BOOLEAN" value="true" />
+    <node id="alert_level_start_wander" type="FLOAT" value="50" />
+    <node id="alert_level_stop_wander" type="FLOAT" value="0" />
+    <node id="alert_level_start_investigate_noise" type="FLOAT" value="75" />
+    <node id="alert_level_stop_chase" type="FLOAT" value="10" />
+    <node id="alert_level_increase_speed" type="FLOAT" value="5" />
+    <node id="alert_level_decrease_speed" type="FLOAT" value="5" />
+    <node id="alert_level_max_distance_from_home" type="FLOAT" value="800" />
+    <node id="stay_near_birth_position" type="BOOLEAN" value="true" />
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleAvoidFriends" />
+  </array>
+
+  <array id="ANIMATIONS">
+    <node id="charging_up"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/boomsquito-rig-charging-up.anim"
+     bone_group_id="NoWings"
+     playback_speed="1.4"
+     event_0_trigger_time="0"
+     event_0_id="id2"
+     event_0_bone_id="gut"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/boomsquito-charge-up-glow.xml"
+     event_0_spawn_effect_scale="1.5"
+     event_1_trigger_time="0"
+     event_1_id="sfx-charge-up"
+     event_1_effect="effects/sfx-boomsquito-charge-up.xml"
+     event_2_trigger_time="2.18"
+     event_2_id="splash"
+     event_2_effect="effects/boomsquito-explosion.xml"
+     event_3_trigger_time="2.18"
+     event_3_id="explosion"
+     event_3_effect="effects/exploding-barrel-blast.xml"
+     event_3_spawn_effect_scale="0.7"
+     event_3_command_word="switch_model"
+     event_4_trigger_time="2.18"
+     event_4_id="explode"
+     event_4_command_word="fire_weapon"
+     event_4_command_word_key_values="{{MODEL,|Q|model|Q|,|Q||Q|}}"
+    />
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+    <node id="die-1"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomsquito-rig-die-1.anim"
+     pause_at_end="true"
+    />
+
+    <node id="die-2"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomsquito-rig-die-2.anim"
+     pause_at_end="true"
+    />
+
+    <node id="die-3"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomsquito-rig-die-3.anim"
+     pause_at_end="true"
+    />
+
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node id="drown"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/boomsquito-rig-idle.anim"
+     wrap_mode="LOOP"
+     event_0_trigger_time="2"
+     event_0_id="drown"
+     event_0_command_word="self_destruct"
+    />
+
+    <node id="move.fly.idle.default" animation_controller="DysmantleMove" skeleton_animation="models/animations/boomsquito-rig-idle.anim" wrap_mode="LOOP" play_on_create="true" />
+    <node id="move.fly.jog.default" animation_controller="DysmantleMove" skeleton_animation="models/animations/boomsquito-rig-flying-forward.anim" wrap_mode="LOOP" />
+    <node id="move.fly.turning.left" animation_controller="DysmantleMove" skeleton_animation="models/animations/boomsquito-rig-strafe-left.anim" wrap_mode="LOOP" />
+    <node id="move.fly.turning.right" animation_controller="DysmantleMove" skeleton_animation="models/animations/boomsquito-rig-strafe-right.anim" bone_group_id="NoRootMovement" wrap_mode="LOOP" />
+    <node id="spawn" animation_controller="ScaleUp" forced_animation_length_in_seconds="0.50" />
+    <node id="stun"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/boomsquito-rig-idle.anim"
+     bone_group_id="NoWings"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0"
+     event_0_id="stars"
+     event_0_bone_id="head"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/stun-stars.xml"
+     event_1_trigger_time="0.69"
+     event_1_id="stars2"
+     event_1_bone_id="head"
+     event_1_ignore_bone_orientation="true"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/stun-stars.xml"
+     event_2_trigger_time="1.38"
+     event_2_id="stars3"
+     event_2_bone_id="head"
+     event_2_ignore_bone_orientation="true"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/stun-stars.xml"
+     event_3_trigger_time="2.07"
+     event_3_id="stars4"
+     event_3_bone_id="head"
+     event_3_ignore_bone_orientation="true"
+     event_3_spawn_effect_to_local_particle_system="true"
+     event_3_effect="effects/stun-stars.xml"
+    />
+
+    <node id="wings_flapping"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/doomsquito-rig-wings-flapping-additive.anim"
+     bone_group_id="WingsOnly"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_sound_event="{{BOOLEAN,|Q|looping|Q|,|Q|true|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/enemies/boomsquito-flapping-loop|Q|}}"
+    />
+
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="model" value="models/enemies/boomsquito.model" />
+  </array>
+
+  <array id="RENDERABLES">
+    <node id="DysmantleExplosion" />
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_peaceful_mode_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-peaceful-mode-on-game-start.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="CAPSULE" />
+    <node id="radius" value="20.0" />
+    <node id="height" value="40.0" />
+    <node id="offset_z" value="-60.0" />
+  </array>
+
+</root>

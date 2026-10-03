@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+  <array id="INFO">
+    <node id="version" value="1" />
+    <node id="name" value="The Old Loyal Champion" localize="true" />
+    <node id="tags" value="BOSS,POINT_OF_INTEREST,MONSTER" />
+  </array>
+
+  <array id="ATTRIBUTES">
+    <node id="actor_flags" value="SOLID,FRIEND_OR_FOE,AFFECTED_BY_GRAVITY,COLLIDE_AGAINST_STATIC_EDGES,SET_NONSOLID_ON_DEATH_END,NO_MOMENTUM_FROM_COLLISIONS,CAN_STAND_ON_ACTORS" />
+    <node id="persistency_flags" value="PERMANENT_DEATH_STATE,TEMPORARY_TRANSFORM,TEMPORARY_ATTRIBUTES" />
+    <node id="physics_material" value="FLESH" />
+    <node id="mass" value="100" />
+    <node id="gravity_multiplier" value="1" />
+    <node id="turn_speed" value="5" />
+    <node id="move_acceleration" value="0" />
+    <node id="max_move_speed" value="110" />
+    <node id="dampening_factor_on_ground" value="8" />
+    <node id="dampening_factor_on_air" value="0.5" />
+    <node id="restitution_coefficient" value="0.15" />
+    <node id="friction" value="0" />
+    <node id="minimum_damage_threshold" value="1" />
+    <node id="aggro_radius" value="360" />
+    <node id="friend_avoidance_radius" value="30" />
+    <node id="initial_scale" value="1.5" />
+    <node id="damage" value="55" />
+    <node id="range" value="0" />
+    <node id="max_hit_points" value="1200" />
+    <node id="time_awake_after_leaving_view_in_secs" value="-1" />
+    <node id="friend_group" value="ENEMIES" />
+    <node id="color" r="1" g="1" b="1" a="1" />
+  </array>
+
+  <array id="CUSTOM_KEY_VALUES" copy_key_values_to_actor_on_allocate="true">
+    <node id="default_running_speed_multiplier" type="FLOAT" value="2.5" />
+    <node id="default_strafing_speed_multiplier" type="FLOAT" value="1" />
+    <node id="default_knockback_strength" type="FLOAT" value="200" />
+    <node id="script_file" type="FILE" value="actors/enemies/scripts/tomb-guard-boss.nut" />
+    <node id="stance" type="STRING" value="melee_1h" />
+    <node id="FollowPath_start_automatically" type="BOOLEAN" value="false" />
+    <node id="FollowPath_path" type="PATH" value="{{BOOLEAN,|Q|looping|Q|,|Q|false|Q|},{BOOLEAN,|Q|relative_coordinates|Q|,|Q|false|Q|},{STRING,|Q|spline_type|Q|,|Q|CENTRIPETAL|Q|},{FLOAT,|Q|tension|Q|,|Q|1|Q|},{FLOAT,|Q|playback_speed|Q|,|Q|120|Q|}}" />
+    <node id="Wander_start_automatically" type="BOOLEAN" value="false" />
+    <node id="Wander_radius" type="FLOAT" value="300" />
+    <node id="poi_type" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="ENEMY_BOSS" />
+    <node id="drops_material_id" type="STRING" flags="PERSISTENT,NO_REPLICATION" value="TOMB_ORB" />
+    <node id="color_material_1" type="COLOR" value="1,1,1,1" />
+    <node id="color_material_0" type="COLOR" value="1,0.795,0.650514,1" />
+    <node id="description" type="STRING" flags="PERSISTENT,LOCALIZED,NO_REPLICATION" value="Towering above his compatriots, the captain of the guard is a ferocious adversary." />
+  </array>
+
+  <array id="AI_PARAMETERS" ai="DysmantleEnemyScripted">
+    <node id="max_aggro_range" type="FLOAT" value="500" />
+    <node id="max_field_of_view" type="FLOAT" value="90" />
+    <node id="allow_flanking" type="BOOLEAN" value="true" />
+    <node id="react_to_enemy_collisions" type="BOOLEAN" value="true" />
+    <node id="roadmap_requires_activation" type="BOOLEAN" value="false" />
+    <node id="alert_system_enabled" type="BOOLEAN" value="true" />
+    <node id="alert_level_start_wander" type="FLOAT" value="50" />
+    <node id="alert_level_stop_wander" type="FLOAT" value="1" />
+    <node id="alert_level_start_investigate_noise" type="FLOAT" value="75" />
+    <node id="alert_level_stop_chase" type="FLOAT" value="20" />
+    <node id="alert_level_increase_speed" type="FLOAT" value="5" />
+    <node id="alert_level_decrease_speed" type="FLOAT" value="5" />
+    <node id="alert_level_max_distance_from_home" type="FLOAT" value="10000" />
+  </array>
+
+  <array id="AI_BEHAVIORS">
+    <node id="DysmantleAvoidFriends" />
+  </array>
+
+  <array id="ANIMATIONS">
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+    <node id="die"
+     category="DEATH"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-volunteer_die-2.anim"
+     fade_out_duration="0"
+     pause_at_end="true"
+    />
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <node id="dodge_roll.backward"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-volunteer_dodge_backward_1h.anim"
+     bone_group_id="NoRootMovement"
+     playback_speed="1.2"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_effect="effects/sfx-player-roll.xml"
+    />
+
+    <node id="dodge_roll.forward"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-volunteer_dodge_forward_1h.anim"
+     bone_group_id="NoRootMovement"
+     playback_speed="1.2"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_effect="effects/sfx-player-roll.xml"
+    />
+
+    <node id="dodge_roll.left"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-volunteer_dodge_left_1h.anim"
+     bone_group_id="NoRootMovement"
+     playback_speed="1.2"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_effect="effects/sfx-player-roll.xml"
+    />
+
+    <node id="dodge_roll.right"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-volunteer_dodge_right_1h.anim"
+     bone_group_id="NoRootMovement"
+     playback_speed="1.2"
+     event_0_trigger_time="0"
+     event_0_id="sfx"
+     event_0_effect="effects/sfx-player-roll.xml"
+    />
+
+    <node id="drown"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-volunteer_falling.anim"
+     playback_speed="0.75"
+     event_0_trigger_time="0.966997"
+     event_0_id="drown"
+     event_0_command_word="self_destruct"
+    />
+
+    <node id="fall" animation_controller="Playback" skeleton_animation="models/animations/humanoid-volunteer_falling.anim" />
+    <node id="hit"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_hit1-additive.anim"
+     event_0_trigger_time="0"
+     event_0_id="sfx-hit"
+     event_0_effect="effects/sfx-tomb-guard-hurt.xml"
+    />
+
+    <node id="landing" animation_controller="Playback" skeleton_animation="models/animations/humanoid-volunteer_landing_soft.anim" />
+    <node id="landing_damage" animation_controller="Playback" skeleton_animation="models/animations/humanoid-zombie_male_landing_hard.anim" />
+    <node id="melee.melee_1h.idle"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-tomb-guard_melee_1h.anim"
+     tags="MELEE"
+     fade_in_duration="0.5"
+     fade_out_duration="0.1"
+     event_0_trigger_time="0"
+     event_0_id="sfx-attack"
+     event_0_effect="effects/sfx-tomb-guard-attack.xml"
+     event_1_trigger_time="0.65"
+     event_1_id="attack"
+     event_1_effect="effects/tomb-guard-kopesh-swing-horizontal-180-ccw.xml"
+     event_1_spawn_effect_offset_x="22.00"
+     event_1_spawn_effect_offset_z="-60.00"
+     event_2_trigger_time="0.68"
+     event_2_id="melee-attack"
+     event_2_spawn_effect_offset_x="60.00"
+     event_2_command_word="melee_attack"
+    />
+
+    <node id="melee.melee_1h.moving"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-tomb-guard_melee_jogging-1h.anim"
+     bone_group_id="TorsoOnly"
+     tags="MELEE"
+     event_0_trigger_time="0"
+     event_0_id="sfx-attack"
+     event_0_effect="effects/sfx-tomb-guard-attack.xml"
+     event_1_trigger_time="0.1"
+     event_1_id="attack"
+     event_1_effect="effects/tomb-guard-kopesh-swing-horizontal-180-ccw.xml"
+     event_1_spawn_effect_offset_x="22.00"
+     event_1_spawn_effect_offset_z="-60.00"
+     event_2_trigger_time="0.2"
+     event_2_id="melee_attack"
+     event_2_spawn_effect_offset_x="60.00"
+     event_2_command_word="melee_attack"
+    />
+
+    <node id="move.melee_1h.idle.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-tomb-guard_idle.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     play_on_create="true"
+     start_playing_at_random_time_key="true"
+    />
+
+    <node id="move.melee_1h.jog.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-tomb-guard_jog_forward_1h.anim"
+     playback_speed="0.8"
+     wrap_mode="LOOP"
+     start_playing_at_random_time_key="true"
+     event_0_trigger_time="0.1"
+     event_0_id="sfx-footstep"
+     event_0_effect="effects/sfx-tomb-guard-footstep.xml"
+     event_1_trigger_time="0.54"
+     event_1_id="sfx-footstep2"
+     event_1_effect="effects/sfx-tomb-guard-footstep.xml"
+    />
+
+    <node id="move.melee_1h.jog.strafe_left"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-volunteer_strafe_left_1h.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0.102452"
+     event_0_id="footstep1"
+     event_0_bone_id="ankle.R"
+     event_0_command_word="footstep"
+     event_1_trigger_time="0.607081"
+     event_1_id="footstep2"
+     event_1_bone_id="ankle.L"
+     event_1_command_word="footstep"
+    />
+
+    <node id="move.melee_1h.jog.strafe_right"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-volunteer_strafe_right_1h.anim"
+     bone_group_id="NoRootMovement"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0.102452"
+     event_0_id="footstep1"
+     event_0_bone_id="ankle.L"
+     event_0_command_word="footstep"
+     event_1_trigger_time="0.607081"
+     event_1_id="footstep2"
+     event_1_bone_id="ankle.R"
+     event_1_command_word="footstep"
+    />
+
+    <node id="move.melee_1h.walk.default"
+     animation_controller="DysmantleMove"
+     skeleton_animation="models/animations/humanoid-zombie_female_walk_forward.anim"
+     wrap_mode="LOOP"
+     start_playing_at_random_time_key="true"
+     event_0_trigger_time="0"
+     event_0_id="sfx-footstep"
+     event_0_effect="effects/sfx-tomb-guard-footstep.xml"
+     event_1_trigger_time="0.5"
+     event_1_id="sfx-footstep2"
+     event_1_effect="effects/sfx-tomb-guard-footstep.xml"
+    />
+
+    <node id="stalk" animation_controller="Playback" skeleton_animation="models/animations/humanoid-zombie_female_stalk.anim" start_playing_at_random_time_key="true" />
+    <node id="spot_enemy" event_0_trigger_time="0" event_0_id="sfx" event_0_effect="effects/sfx-tomb-guard-alert.xml" />
+    <node id="stun"
+     animation_controller="Playback"
+     skeleton_animation="models/animations/humanoid-zombie_female_stunned.anim"
+     wrap_mode="LOOP"
+     event_0_trigger_time="0"
+     event_0_id="id0"
+     event_0_bone_id="head"
+     event_0_ignore_bone_orientation="true"
+     event_0_spawn_effect_to_local_particle_system="true"
+     event_0_effect="effects/stun-stars.xml"
+     event_1_trigger_time="0.68"
+     event_1_id="id1"
+     event_1_bone_id="head"
+     event_1_ignore_bone_orientation="true"
+     event_1_spawn_effect_to_local_particle_system="true"
+     event_1_effect="effects/stun-stars.xml"
+     event_2_trigger_time="1.37"
+     event_2_id="id2"
+     event_2_bone_id="head"
+     event_2_ignore_bone_orientation="true"
+     event_2_spawn_effect_to_local_particle_system="true"
+     event_2_effect="effects/stun-stars.xml"
+     event_3_trigger_time="2.04"
+     event_3_id="id3"
+     event_3_bone_id="head"
+     event_3_ignore_bone_orientation="true"
+     event_3_spawn_effect_to_local_particle_system="true"
+     event_3_effect="effects/stun-stars.xml"
+    />
+
+    <node id="block_with_shield" animation_controller="Playback" skeleton_animation="models/animations/humanoid-volunteer_block_with_shield.anim" />
+  </array>
+
+  <array id="RENDERER_PARAMETERS">
+    <node id="renderer" value="ModelSkinned" />
+    <node id="bm_shadow" value="shadows/shadow-circle.png" />
+    <node id="shadow_scale" value="0.4" />
+    <node id="shadow_alpha" value="0.3" />
+    <node id="shadow_drawn_for_each_bone" value="true" />
+    <node id="model" value="models/enemies/tomb-guard.model" />
+  </array>
+
+  <array id="PROPS">
+    <node id="melee_weapon" mount_bone_id="tool" actor_type="actors/tools/guard_boss_khopesh.xml" mount_scale="0.75" />
+    <node id="blob_1"
+     mount_bone_id="shoulder.R"
+     actor_type="actors/objects/corruption-prop-bubbles.xml"
+     mount_scale="1.44"
+     mount_offset_x="-1.98"
+     mount_offset_y="5.14"
+     mount_offset_z="-3.13"
+    />
+
+    <node id="shield"
+     mount_bone_id="arm-2.L"
+     actor_type="actors/objects/archeology-shield.xml"
+     mount_offset_x="-0.14"
+     mount_offset_y="9.89"
+     mount_offset_z="4"
+     mount_rotation_angles_x="3.18016"
+     mount_rotation_angles_y="0.0572468"
+     mount_rotation_angles_z="1.85738"
+    />
+
+  </array>
+
+<!-- MODS by MoleEater vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+  <array id="INTERACTIONS">
+    <node
+      interaction_0_id="mod_peaceful_mode_on_game_start"
+        interaction_0_trigger="ON_GAME_START"
+        interaction_0_external_script="scripts/interactions/mods/mod-peaceful-mode-on-game-start.nut"
+    />
+  </array>
+<!-- MODS by MoleEater ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+  <array id="COLLIDER">
+    <node id="type" value="CAPSULE" />
+    <node id="radius" value="8.0" />
+    <node id="height" value="80.0" />
+    <node id="offset_z" value="-48.0" />
+  </array>
+
+</root>
